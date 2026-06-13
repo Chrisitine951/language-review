@@ -110,6 +110,169 @@ const ENGLISH_VOCABULARY = [
   { id: "en088", word: "brought (bring)", meaning: "帶來（bring 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I brought my camera on the trip." },
   { id: "en089", word: "rode (ride)", meaning: "乘坐（ride 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I rode many rides at Universal Studios." },
   { id: "en090", word: "had (have)", meaning: "有／吃（have 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I had lunch with my brother yesterday." },
+
+  // === 第23堂補充（Uzma）===
+  { id: "en091", word: "carbon dioxide", meaning: "二氧化碳", partOfSpeech: "n.", source: "cambly", example: "Heavy industries emit large amounts of carbon dioxide." },
+  { id: "en092", word: "filter", meaning: "過濾器／過濾", partOfSpeech: "n./v.", source: "cambly", example: "This material can act as a filter to purify water." },
+
+  // === 第22堂補充（TJ 歐洲）===
+  { id: "en093", word: "historic", meaning: "具有歷史意義的", partOfSpeech: "adj.", source: "cambly", example: "Florence has many historic buildings." },
+  { id: "en094", word: "hike", meaning: "健行", partOfSpeech: "n.", source: "cambly", example: "You need waterproof shoes for this hike." },
+  { id: "en095", word: "sight", meaning: "景點", partOfSpeech: "n.", source: "cambly", example: "She showed me the sights in Sydney." },
+  { id: "en096", word: "complain", meaning: "抱怨", partOfSpeech: "v.", source: "cambly", example: "My friend is constantly complaining about her boyfriend." },
+  { id: "en097", word: "continent", meaning: "洲、大陸", partOfSpeech: "n.", source: "cambly", example: "Europe is the world's most visited continent." },
+  { id: "en098", word: "German / Germany", meaning: "德國人的／德國", partOfSpeech: "adj./n.", source: "cambly", example: "German culture is very interesting." },
+  { id: "en099", word: "British / the UK", meaning: "英國人的／英國", partOfSpeech: "adj./n.", source: "cambly", example: "British people drink a lot of tea." },
+  { id: "en100", word: "Italian / Italy", meaning: "義大利人的／義大利", partOfSpeech: "adj./n.", source: "cambly", example: "Italian food is very popular worldwide." },
+
+  // === 第21堂補充（TJ 熊鷹）===
+  { id: "en101", word: "professor", meaning: "教授", partOfSpeech: "n.", source: "cambly", example: "A university teacher is called a professor." },
+  { id: "en102", word: "feather", meaning: "羽毛", partOfSpeech: "n.", source: "cambly", example: "The feather is just a symbol of royalty." },
+  { id: "en103", word: "proceeds", meaning: "收益", partOfSpeech: "n.", source: "cambly", example: "All proceeds will be used to protect these eagles." },
+  { id: "en104", word: "lifespan", meaning: "壽命", partOfSpeech: "n.", source: "cambly", example: "The documentary covers the eagle's lifespan." },
+  { id: "en105", word: "flying squirrel", meaning: "飛鼠", partOfSpeech: "n.", source: "cambly", example: "Eagles in Taiwan eat flying squirrels." },
+  { id: "en106", word: "Muntjac", meaning: "山羌（台灣特有）", partOfSpeech: "n.", source: "cambly", example: "The Muntjac is a deer species found mainly in Taiwan." },
+
+  // === 第20堂補充（Lelo MBTI）===
+  { id: "en107", word: "king oyster mushroom", meaning: "杏鮑菇", partOfSpeech: "n.", source: "cambly", example: "King oyster mushrooms have a meaty texture." },
+  { id: "en108", word: "Buddhist", meaning: "佛教徒的", partOfSpeech: "adj./n.", source: "cambly", example: "My grandma is Buddhist and eats vegetarian food." },
+  { id: "en109", word: "vegetarian diet", meaning: "素食飲食", partOfSpeech: "n.", source: "cambly", example: "I mostly follow a vegetarian diet." },
+  { id: "en110", word: "plant-based diet", meaning: "植物性飲食", partOfSpeech: "n.", source: "cambly", example: "A plant-based diet means less meat, more vegetables." },
+  { id: "en111", word: "observant", meaning: "觀察型的", partOfSpeech: "adj.", source: "cambly", example: "Observant people describe exactly what they see." },
+  { id: "en112", word: "abstract thinking", meaning: "抽象思維", partOfSpeech: "n.", source: "cambly", example: "N types in MBTI are known for abstract thinking." },
+  { id: "en113", word: "Type A / Type B", meaning: "A型（計畫型）/ B型（隨性型）人格", partOfSpeech: "n.", source: "cambly", example: "Type A people plan every detail of their trips." },
+
+  // === 第19堂補充（Lelo 感官）===
+  { id: "en114", word: "outline", meaning: "大綱", partOfSpeech: "n.", source: "cambly", example: "Write an outline before starting your report." },
+  { id: "en115", word: "summary", meaning: "摘要", partOfSpeech: "n.", source: "cambly", example: "Give me a summary of the main points." },
+  { id: "en116", word: "seminar", meaning: "研討會（小型）", partOfSpeech: "n.", source: "cambly", example: "We had a seminar about chemical recycling." },
+  { id: "en117", word: "conference", meaning: "會議（大型）", partOfSpeech: "n.", source: "cambly", example: "I presented at an international conference." },
+  { id: "en118", word: "experiments", meaning: "實驗", partOfSpeech: "n.", source: "cambly", example: "In university, I did many experiments in the lab." },
+  { id: "en119", word: "resume", meaning: "履歷", partOfSpeech: "n.", source: "cambly", example: "I sent my resume to the HR department." },
+  { id: "en120", word: "heightened senses", meaning: "感官增強", partOfSpeech: "phrase", source: "cambly", example: "When you close your eyes, your other senses are heightened." },
+  { id: "en121", word: "locs", meaning: "編髮（dreadlocks）", partOfSpeech: "n.", source: "cambly", example: "He has locs down to his shoulders." },
+  { id: "en122", word: "beard", meaning: "鬍子（下巴）", partOfSpeech: "n.", source: "cambly", example: "He has a beard and a mustache." },
+  { id: "en123", word: "mustache", meaning: "鬍子（上唇）", partOfSpeech: "n.", source: "cambly", example: "A mustache is the hair above the upper lip." },
+  { id: "en124", word: "stud earring", meaning: "耳釘", partOfSpeech: "n.", source: "cambly", example: "It's not a dangly earring, it's a stud earring." },
+  { id: "en125", word: "boiled water", meaning: "煮沸的水", partOfSpeech: "n.", source: "cambly", example: "In Taiwan, we drink boiled and filtered tap water." },
+  { id: "en126", word: "survey", meaning: "調查、問卷", partOfSpeech: "n.", source: "cambly", example: "According to a survey, 70% prefer bottled water." },
+  { id: "en127", word: "sip", meaning: "小口喝", partOfSpeech: "n./v.", source: "cambly", example: "I took a sip of water at the start of class." },
+
+  // === 第18堂補充（Lisa 醫美）===
+  { id: "en128", word: "microneedles", meaning: "微針", partOfSpeech: "n.", source: "cambly", example: "Some beauty treatments use microneedles on the face." },
+  { id: "en129", word: "toner", meaning: "化妝水", partOfSpeech: "n.", source: "cambly", example: "Apply toner before using a face mask." },
+  { id: "en130", word: "acne", meaning: "痘痘", partOfSpeech: "n.", source: "cambly", example: "RLT is claimed to help reduce acne." },
+  { id: "en131", word: "wrinkle", meaning: "皺紋", partOfSpeech: "n.", source: "cambly", example: "Fine lines and wrinkles can be reduced with RLT." },
+  { id: "en132", word: "follicle", meaning: "毛囊", partOfSpeech: "n.", source: "cambly", example: "RLT can protect hair follicles and reduce hair loss." },
+  { id: "en133", word: "pores", meaning: "毛孔", partOfSpeech: "n.", source: "cambly", example: "Cleanse your face to open up your pores." },
+  { id: "en134", word: "infrared", meaning: "紅外線", partOfSpeech: "adj./n.", source: "cambly", example: "Near-infrared light can penetrate deeper into skin." },
+  { id: "en135", word: "cosmetics", meaning: "化妝品", partOfSpeech: "n.", source: "cambly", example: "K-pop stars use a lot of cosmetics." },
+
+  // === 第17堂補充（Lisa Marie 文化）===
+  { id: "en136", word: "gemstones", meaning: "寶石", partOfSpeech: "n.", source: "cambly", example: "They decorated the temple with gemstones." },
+  { id: "en137", word: "glistens", meaning: "閃閃發亮", partOfSpeech: "v.", source: "cambly", example: "The temple glistens when the sunlight hits it." },
+  { id: "en138", word: "ornate", meaning: "裝飾華麗的", partOfSpeech: "adj.", source: "cambly", example: "The temples in Thailand are very ornate." },
+  { id: "en139", word: "equator", meaning: "赤道", partOfSpeech: "n.", source: "cambly", example: "Countries near the equator are always hot." },
+  { id: "en140", word: "monsoon", meaning: "季風", partOfSpeech: "n.", source: "cambly", example: "Taiwan is affected by the monsoon season." },
+  { id: "en141", word: "cold front", meaning: "冷鋒", partOfSpeech: "n.", source: "cambly", example: "A cold front is moving in this week." },
+  { id: "en142", word: "humidity", meaning: "濕度", partOfSpeech: "n.", source: "cambly", example: "The humidity in Taiwan is very high in summer." },
+  { id: "en143", word: "bless", meaning: "保佑", partOfSpeech: "v.", source: "cambly", example: "We pray for our ancestors to bless us." },
+  { id: "en144", word: "national holiday", meaning: "國定假日", partOfSpeech: "n.", source: "cambly", example: "October 10th is Taiwan's national holiday." },
+  { id: "en145", word: "life updates", meaning: "近況分享", partOfSpeech: "n.", source: "cambly", example: "We share life updates during family gatherings." },
+  { id: "en146", word: "pagoda", meaning: "塔（佛塔）", partOfSpeech: "n.", source: "cambly", example: "The Thai temple has a beautiful pagoda." },
+
+  // === 第16堂補充（Nintendo Museum）===
+  { id: "en147", word: "halls of residence", meaning: "宿舍", partOfSpeech: "n.", source: "cambly", example: "I stay in my company's halls of residence during the week." },
+  { id: "en148", word: "interactive", meaning: "互動的", partOfSpeech: "adj.", source: "cambly", example: "The Nintendo Museum has many interactive exhibits." },
+  { id: "en149", word: "exhibit", meaning: "展覽品", partOfSpeech: "n.", source: "cambly", example: "You can find exhibits from the NES to the Switch there." },
+  { id: "en150", word: "influential", meaning: "有影響力的", partOfSpeech: "adj.", source: "cambly", example: "Nintendo is one of the most influential gaming companies." },
+  { id: "en151", word: "console", meaning: "遊戲主機", partOfSpeech: "n.", source: "cambly", example: "Nintendo has made many different consoles over the years." },
+  { id: "en152", word: "lottery system", meaning: "抽籤制度", partOfSpeech: "n.", source: "cambly", example: "You need to enter a lottery three months before visiting." },
+  { id: "en153", word: "south of Taipei", meaning: "在台北南方（方位說法）", partOfSpeech: "phrase", source: "cambly", example: "Hsinchu is south of Taipei, not southern Taiwan." },
+
+  // === 第15堂補充（Robin Lea 首爾）===
+  { id: "en154", word: "host", meaning: "主持人", partOfSpeech: "n.", source: "cambly", example: "The host of the fan event spoke in Korean." },
+  { id: "en155", word: "fun vs funny", meaning: "fun=好玩 vs funny=好笑", partOfSpeech: "—", source: "cambly", example: "The event was fun (enjoyable), not just funny (humorous)." },
+  { id: "en156", word: "sensitive to smells", meaning: "對氣味敏感", partOfSpeech: "phrase", source: "cambly", example: "I'm sensitive to smells, so I can't have pets." },
+  { id: "en157", word: "ferret", meaning: "雪貂", partOfSpeech: "n.", source: "cambly", example: "Ferrets are cute but have a very strong smell." },
+  { id: "en158", word: "vulnerable", meaning: "脆弱的", partOfSpeech: "adj.", source: "cambly", example: "Fish are vulnerable to temperature changes." },
+
+  // === 第14堂補充（Lyn Rose 韓劇）===
+  { id: "en159", word: "versatile", meaning: "多才多藝的", partOfSpeech: "adj.", source: "cambly", example: "IU is a versatile actress who can play many different roles." },
+  { id: "en160", word: "actress", meaning: "女演員", partOfSpeech: "n.", source: "cambly", example: "A woman actor is called an actress." },
+  { id: "en161", word: "autism", meaning: "自閉症", partOfSpeech: "n.", source: "cambly", example: "The Extraordinary Lawyer Woo features a character with autism." },
+  { id: "en162", word: "adolescent", meaning: "青少年", partOfSpeech: "n.", source: "cambly", example: "Justin Bieber was an adolescent when he became famous." },
+  { id: "en163", word: "familiarise yourself with", meaning: "熟悉某事", partOfSpeech: "phrase", source: "cambly", example: "I'd better familiarise myself with the bus route first." },
+
+  // === 第13堂補充（Anita 台灣食物）===
+  { id: "en164", word: "chit chat", meaning: "閒聊", partOfSpeech: "n.", source: "cambly", example: "We can just have some chit chat today." },
+  { id: "en165", word: "handshake drink", meaning: "手搖飲", partOfSpeech: "n.", source: "cambly", example: "Taiwanese handshake drinks are freshly shaken each time." },
+  { id: "en166", word: "public transportation", meaning: "大眾運輸", partOfSpeech: "n.", source: "cambly", example: "Hsinchu's public transportation isn't very convenient." },
+  { id: "en167", word: "limited seats", meaning: "名額有限", partOfSpeech: "n.", source: "cambly", example: "Students must study hard because of limited school seats." },
+  { id: "en168", word: "compassionate", meaning: "富同情心的", partOfSpeech: "adj.", source: "cambly", example: "Taiwanese people are known for being kind and compassionate." },
+  { id: "en169", word: "northern lights / aurora", meaning: "北極光", partOfSpeech: "n.", source: "cambly", example: "You can see the aurora borealis in Yellowknife, Canada." },
+
+  // === 第11堂補充（Kat 日本）===
+  { id: "en170", word: "world-class", meaning: "世界頂級的", partOfSpeech: "adj.", source: "cambly", example: "Japan has a world-class railway system." },
+  { id: "en171", word: "welfare", meaning: "福利（政府補助）", partOfSpeech: "n.", source: "cambly", example: "Finland has one of the best welfare systems in the world." },
+  { id: "en172", word: "equality", meaning: "平等", partOfSpeech: "n.", source: "cambly", example: "Sweden ranks highly in terms of gender equality." },
+  { id: "en173", word: "high cost of living", meaning: "高生活費", partOfSpeech: "phrase", source: "cambly", example: "Sweden has a very high cost of living." },
+  { id: "en174", word: "defense", meaning: "國防", partOfSpeech: "n.", source: "cambly", example: "Military measures for protecting a country are called defense." },
+  { id: "en175", word: "desire", meaning: "渴望", partOfSpeech: "n.", source: "cambly", example: "My biggest desire is to travel to Europe someday." },
+  { id: "en176", word: "pension", meaning: "退休金", partOfSpeech: "n.", source: "cambly", example: "The government pays a pension to retired workers." },
+  { id: "en177", word: "jealous", meaning: "嫉妒的", partOfSpeech: "adj.", source: "cambly", example: "I feel jealous that my parents went to Japan for cherry blossoms." },
+  { id: "en178", word: "considering my options", meaning: "考慮我的選擇", partOfSpeech: "phrase", source: "cambly", example: "I'm still considering my options for studying abroad." },
+
+  // === 第10堂補充（Kay + TJ）===
+  { id: "en179", word: "chemist", meaning: "化學師", partOfSpeech: "n.", source: "cambly", example: "A person who works with chemistry is called a chemist." },
+  { id: "en180", word: "arcade", meaning: "電玩遊樂場", partOfSpeech: "n.", source: "cambly", example: "After lunch, we went to an arcade to play games." },
+  { id: "en181", word: "pick up", meaning: "接（某人）", partOfSpeech: "phrasal v.", source: "cambly", example: "I picked up my brother at 1 PM." },
+
+  // === 第9堂補充（Kristina 歐洲）===
+  { id: "en182", word: "integrated into the culture", meaning: "融入文化", partOfSpeech: "phrase", source: "cambly", example: "Different cultures have been integrated into Taiwanese society." },
+  { id: "en183", word: "hygiene", meaning: "衛生習慣", partOfSpeech: "n.", source: "cambly", example: "Good hygiene is important for health and social situations." },
+  { id: "en184", word: "bidet", meaning: "坐浴桶", partOfSpeech: "n.", source: "cambly", example: "European countries commonly have bidets in bathrooms." },
+  { id: "en185", word: "crepe", meaning: "可麗餅（發音 /krɛp/）", partOfSpeech: "n.", source: "cambly", example: "In France, say crepe correctly or French people will correct you." },
+  { id: "en186", word: "mille-feuille", meaning: "千層酥（法式甜點）", partOfSpeech: "n.", source: "cambly", example: "Mille-feuille is a delicious French custard layered pastry." },
+  { id: "en187", word: "art therapy", meaning: "藝術治療", partOfSpeech: "n.", source: "cambly", example: "Art therapy helps people express emotions through creativity." },
+  { id: "en188", word: "rapidly collect data", meaning: "快速收集資料", partOfSpeech: "phrase", source: "cambly", example: "We need to rapidly collect data for our industry reports." },
+  { id: "en189", word: "HD brows", meaning: "高清眉毛（美容）", partOfSpeech: "n.", source: "cambly", example: "HD brows is a beauty treatment to enhance eyebrow shape." },
+
+  // === 第8堂補充（Craig 政治）===
+  { id: "en190", word: "vaccine", meaning: "疫苗", partOfSpeech: "n.", source: "cambly", example: "The government bought vaccines for all Taiwanese citizens." },
+  { id: "en191", word: "speech", meaning: "演講", partOfSpeech: "n.", source: "cambly", example: "I need to give a speech to our industry clients." },
+  { id: "en192", word: "stressful", meaning: "有壓力的", partOfSpeech: "adj.", source: "cambly", example: "Giving presentations to customers is stressful." },
+  { id: "en193", word: "refreshing flavor", meaning: "清爽的口味", partOfSpeech: "phrase", source: "cambly", example: "I like refreshing flavors, not heavy or thick ones." },
+
+  // === 第7堂補充（Robin Lea LOL）===
+  { id: "en194", word: "characteristics", meaning: "特徵、特性", partOfSpeech: "n.", source: "cambly", example: "The game has certain characteristics that make it unique." },
+  { id: "en195", word: "former president", meaning: "前總統", partOfSpeech: "n.", source: "cambly", example: "Our former president also uses Threads every day." },
+  { id: "en196", word: "traffic statistics", meaning: "流量統計", partOfSpeech: "n.", source: "cambly", example: "Taiwan has the highest Threads usage according to statistics." },
+
+  // === 第6堂補充（Lisa Marie 飲水）===
+  { id: "en197", word: "jet lag", meaning: "時差感", partOfSpeech: "n.", source: "cambly", example: "I had terrible jet lag after flying from Taiwan to the US." },
+  { id: "en198", word: "toxin", meaning: "毒素", partOfSpeech: "n.", source: "cambly", example: "Water helps remove toxins from your body." },
+  { id: "en199", word: "regulate", meaning: "調節", partOfSpeech: "v.", source: "cambly", example: "Water helps regulate body temperature." },
+  { id: "en200", word: "mouthful", meaning: "一口（份量）", partOfSpeech: "n.", source: "cambly", example: "I took two mouthfuls of water after finishing each task." },
+
+  // === 第5堂補充（Zoe 台灣地理）===
+  { id: "en201", word: "geographical features", meaning: "地理特徵", partOfSpeech: "n.", source: "cambly", example: "Taiwan has many different geographical features." },
+  { id: "en202", word: "a variety of", meaning: "各種各樣的", partOfSpeech: "phrase", source: "cambly", example: "The mountains have a variety of trees due to the altitude." },
+
+  // === 第4堂補充（Sabina 半導體）===
+  { id: "en203", word: "highly educated", meaning: "高學歷的", partOfSpeech: "adj.", source: "cambly", example: "Hsinchu has many highly educated engineers." },
+  { id: "en204", word: "euthanasia", meaning: "安樂死", partOfSpeech: "n.", source: "cambly", example: "Switzerland offers euthanasia legally, known as death tourism." },
+
+  // === 第3堂補充（Denisse 廟宇）===
+  { id: "en205", word: "nightmare", meaning: "惡夢", partOfSpeech: "n.", source: "cambly", example: "I had a nightmare that my mom passed away." },
+  { id: "en206", word: "vivid", meaning: "生動逼真的", partOfSpeech: "adj.", source: "cambly", example: "The nightmare was so vivid it felt completely real." },
+
+  // === 第2堂補充（Sabina + Sarah）===
+  { id: "en207", word: "software developer", meaning: "軟體開發師", partOfSpeech: "n.", source: "cambly", example: "My teacher used to be a software developer." },
+  { id: "en208", word: "hallucination (AI)", meaning: "AI幻覺（錯誤答案）", partOfSpeech: "n.", source: "cambly", example: "Sometimes AI gives hallucinations—wrong answers that sound confident." },
+
+  // === 第1堂補充（初次上課）===
+  { id: "en209", word: "exhibition", meaning: "展覽", partOfSpeech: "n.", source: "cambly", example: "I went to the US for a business trip to attend an exhibition." },
 ];
 
 // ============================================================
