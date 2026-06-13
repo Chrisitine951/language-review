@@ -1,0 +1,328 @@
+// ============================================================
+// data.js — Language Review App 資料檔
+// 最後更新：2026-06-13
+// 更新方式：直接修改此檔案對應區塊，主程式 app.html 不需動
+// ============================================================
+
+// ============================================================
+// 英文單字庫（從24堂 Cambly 課程完整整理）
+// 格式：{ id, word, meaning, partOfSpeech, source, example }
+// ============================================================
+const ENGLISH_VOCABULARY = [
+  // === 工作 / 產業 ===
+  { id: "en001", word: "industrial analyst", meaning: "產業分析師", partOfSpeech: "n.", source: "cambly", example: "I am an industrial analyst researching the chemical industry." },
+  { id: "en002", word: "semiconductor", meaning: "半導體", partOfSpeech: "n.", source: "cambly", example: "Taiwan is a global leader in semiconductor production." },
+  { id: "en003", word: "non-profit organization", meaning: "非營利組織", partOfSpeech: "n.", source: "cambly", example: "Our company is a non-profit research organization." },
+  { id: "en004", word: "consortium", meaning: "財團法人", partOfSpeech: "n.", source: "cambly", example: "We are a consortium that bridges industry and government." },
+  { id: "en005", word: "supply chain", meaning: "供應鏈", partOfSpeech: "n.", source: "cambly", example: "The global supply chain was disrupted by COVID-19." },
+  { id: "en006", word: "revenue", meaning: "營收", partOfSpeech: "n.", source: "cambly", example: "The company's revenue grew by 20% last year." },
+  { id: "en007", word: "stakeholder", meaning: "利害關係人", partOfSpeech: "n.", source: "cambly", example: "We need to update all stakeholders on the project status." },
+  { id: "en008", word: "redundant", meaning: "被取代的（AI）", partOfSpeech: "adj.", source: "cambly", example: "AI might make some jobs redundant in the future." },
+  { id: "en009", word: "rewarding", meaning: "有成就感的", partOfSpeech: "adj.", source: "cambly", example: "Teaching is a very rewarding job." },
+  { id: "en010", word: "headquarters", meaning: "總部", partOfSpeech: "n.", source: "cambly", example: "Many companies have their headquarters in Taipei." },
+  // === 環境 / 科技 ===
+  { id: "en011", word: "emission", meaning: "排放（廢氣）", partOfSpeech: "n.", source: "cambly", example: "The factory has high carbon emission levels." },
+  { id: "en012", word: "carbon capture", meaning: "碳捕捉", partOfSpeech: "n.", source: "cambly", example: "Carbon capture technology is used to reduce CO2 emissions." },
+  { id: "en013", word: "metal-organic framework", meaning: "金屬有機框架（MOF）", partOfSpeech: "n.", source: "cambly", example: "Metal-organic frameworks won the Nobel Prize last year." },
+  { id: "en014", word: "heavy industry", meaning: "重工業", partOfSpeech: "n.", source: "cambly", example: "Cement and steel are considered heavy industries." },
+  { id: "en015", word: "renewable energy", meaning: "再生能源", partOfSpeech: "n.", source: "cambly", example: "The Netherlands is famous for renewable energy." },
+  { id: "en016", word: "composite", meaning: "複合材料", partOfSpeech: "n.", source: "cambly", example: "A composite of carbon fiber and polymer is lighter than metal." },
+  { id: "en017", word: "carbon fiber", meaning: "碳纖維", partOfSpeech: "n.", source: "cambly", example: "Carbon fiber is strong but much lighter than steel." },
+  { id: "en018", word: "prototype", meaning: "原型", partOfSpeech: "n.", source: "cambly", example: "Rapid prototyping is one advantage of 3D printing." },
+  { id: "en019", word: "orbit", meaning: "軌道", partOfSpeech: "n.", source: "cambly", example: "The rocket failed to reach orbit and crashed into the ocean." },
+  { id: "en020", word: "microplastics", meaning: "微塑膠", partOfSpeech: "n.", source: "cambly", example: "Bottled water may contain microplastics." },
+  { id: "en021", word: "continental plates", meaning: "板塊", partOfSpeech: "n.", source: "cambly", example: "Taiwan sits between two continental plates, causing earthquakes." },
+  { id: "en022", word: "terrain", meaning: "地形", partOfSpeech: "n.", source: "cambly", example: "Taiwan has diverse terrain: ocean, mountains, and plains." },
+  // === 旅遊 / 交通 ===
+  { id: "en023", word: "itinerary", meaning: "行程表", partOfSpeech: "n.", source: "cambly", example: "I always plan a detailed itinerary before traveling." },
+  { id: "en024", word: "accommodation", meaning: "住宿", partOfSpeech: "n.", source: "cambly", example: "We booked accommodation near the city center." },
+  { id: "en025", word: "tourist attraction", meaning: "觀光景點", partOfSpeech: "n.", source: "cambly", example: "That hot spring village is a popular tourist attraction." },
+  { id: "en026", word: "shuttle bus", meaning: "接駁車", partOfSpeech: "n.", source: "cambly", example: "You have to take a shuttle bus to reach the mountain restaurant." },
+  { id: "en027", word: "road trip", meaning: "公路旅行", partOfSpeech: "n.", source: "cambly", example: "We planned a road trip across the US." },
+  { id: "en028", word: "overtourism", meaning: "過度觀光", partOfSpeech: "n.", source: "cambly", example: "Overtourism has become a problem in Venice." },
+  { id: "en029", word: "resort", meaning: "度假村", partOfSpeech: "n.", source: "cambly", example: "We stayed at a beach resort in Mexico." },
+  { id: "en030", word: "ski resort", meaning: "滑雪場", partOfSpeech: "n.", source: "cambly", example: "Zao is a famous ski resort in northeastern Japan." },
+  { id: "en031", word: "ferry boat", meaning: "渡船", partOfSpeech: "n.", source: "cambly", example: "We took a ferry boat to Nami Island." },
+  // === 文化 / 台灣 ===
+  { id: "en032", word: "tomb sweeping day", meaning: "清明節", partOfSpeech: "n.", source: "cambly", example: "Tomb Sweeping Day is on April 4th in Taiwan." },
+  { id: "en033", word: "folk beliefs", meaning: "民間信仰", partOfSpeech: "n.", source: "cambly", example: "Going to the temple is part of folk beliefs." },
+  { id: "en034", word: "ancestor", meaning: "祖先", partOfSpeech: "n.", source: "cambly", example: "We pray for our ancestors to bless us." },
+  { id: "en035", word: "indigenous people", meaning: "原住民", partOfSpeech: "n.", source: "cambly", example: "Indigenous people use feathers to show their royalty." },
+  { id: "en036", word: "multicultural", meaning: "多元文化的", partOfSpeech: "adj.", source: "cambly", example: "Taiwan is a multicultural country." },
+  { id: "en037", word: "colonisation", meaning: "殖民", partOfSpeech: "n.", source: "cambly", example: "Taiwan has a history of colonisation by Spain and Japan." },
+  { id: "en038", word: "Chinese fortune sticks", meaning: "籤詩", partOfSpeech: "n.", source: "cambly", example: "In temples, people draw fortune sticks to get answers from gods." },
+  { id: "en039", word: "fortune-telling", meaning: "算命", partOfSpeech: "n.", source: "cambly", example: "Fortune-telling is a common practice in Taiwan." },
+  { id: "en040", word: "born and raised", meaning: "土生土長", partOfSpeech: "phrase", source: "cambly", example: "I'm Taiwanese, born and raised in Hsinchu." },
+  { id: "en041", word: "carnation", meaning: "康乃馨", partOfSpeech: "n.", source: "cambly", example: "Carnations are the traditional Mother's Day flower." },
+  // === 自然 / 科學 ===
+  { id: "en042", word: "wingspan", meaning: "翼展", partOfSpeech: "n.", source: "cambly", example: "The wingspan of this eagle is almost 116 cm." },
+  { id: "en043", word: "endangered", meaning: "瀕危的", partOfSpeech: "adj.", source: "cambly", example: "These eagles are an endangered species." },
+  { id: "en044", word: "species", meaning: "物種", partOfSpeech: "n.", source: "cambly", example: "This documentary is about an endangered species." },
+  { id: "en045", word: "raise awareness", meaning: "提高大眾意識", partOfSpeech: "phrase", source: "cambly", example: "The film's goal is to raise awareness about eagles." },
+  { id: "en046", word: "documentary", meaning: "紀錄片", partOfSpeech: "n.", source: "cambly", example: "It's a documentary about eagles in Taiwan." },
+  // === 健康 / 醫美 ===
+  { id: "en047", word: "medical aesthetics", meaning: "醫療美容", partOfSpeech: "n.", source: "cambly", example: "I went to Korea for some medical aesthetics treatment." },
+  { id: "en048", word: "collagen", meaning: "膠原蛋白", partOfSpeech: "n.", source: "cambly", example: "RLT improves collagen production for smoother skin." },
+  { id: "en049", word: "inflammation", meaning: "發炎", partOfSpeech: "n.", source: "cambly", example: "RLT helps reduce skin inflammation." },
+  { id: "en050", word: "regenerate", meaning: "再生", partOfSpeech: "v.", source: "cambly", example: "Red light therapy helps the skin regenerate." },
+  { id: "en051", word: "skeptical", meaning: "懷疑的", partOfSpeech: "adj.", source: "cambly", example: "I'm skeptical about whether RLT really works." },
+  { id: "en052", word: "hydrated", meaning: "補充水分的", partOfSpeech: "adj.", source: "cambly", example: "Try to stay hydrated by drinking water throughout the day." },
+  { id: "en053", word: "flush out", meaning: "排出（毒素）", partOfSpeech: "v.", source: "cambly", example: "Drinking water helps flush out toxins from the body." },
+  // === 地緣政治 ===
+  { id: "en054", word: "geopolitics", meaning: "地緣政治", partOfSpeech: "n.", source: "cambly", example: "Taiwan plays a key role in global geopolitics." },
+  { id: "en055", word: "sanction", meaning: "制裁", partOfSpeech: "n./v.", source: "cambly", example: "The US imposed sanctions on several countries." },
+  { id: "en056", word: "sovereignty", meaning: "主權", partOfSpeech: "n.", source: "cambly", example: "Taiwan's sovereignty is a sensitive issue." },
+  { id: "en057", word: "precarious", meaning: "不穩定的", partOfSpeech: "adj.", source: "cambly", example: "The geopolitical situation in the Taiwan Strait is precarious." },
+  { id: "en058", word: "drone", meaning: "無人機", partOfSpeech: "n.", source: "cambly", example: "Drones are now used in both military and civilian settings." },
+  { id: "en059", word: "anchor", meaning: "核心支柱", partOfSpeech: "n.", source: "cambly", example: "Taiwan is an anchor for global semiconductor production." },
+  // === MBTI / 心理 ===
+  { id: "en060", word: "intuitive", meaning: "直覺型的", partOfSpeech: "adj.", source: "cambly", example: "Intuitive people tend to think abstractly." },
+  { id: "en061", word: "empathy", meaning: "同理心", partOfSpeech: "n.", source: "cambly", example: "F types tend to have strong empathy for others." },
+  { id: "en062", word: "predestination", meaning: "命中注定", partOfSpeech: "n.", source: "cambly", example: "Do you believe in predestination or free will?" },
+  { id: "en063", word: "parallel universe", meaning: "平行宇宙", partOfSpeech: "n.", source: "cambly", example: "In a parallel universe, another version of you exists." },
+  { id: "en064", word: "set in stone", meaning: "不可改變的", partOfSpeech: "phrase", source: "cambly", example: "Nothing is set in stone — things can always change." },
+  { id: "en065", word: "codependency", meaning: "過度依賴", partOfSpeech: "n.", source: "cambly", example: "Codependency means you can't function without someone." },
+  { id: "en066", word: "FOMO", meaning: "錯失恐懼", partOfSpeech: "n.", source: "cambly", example: "I feel FOMO knowing another me might be a billionaire." },
+  // === 飲食 ===
+  { id: "en067", word: "pescatarian", meaning: "海鮮素食者", partOfSpeech: "n.", source: "cambly", example: "Someone who eats seafood but not meat is pescatarian." },
+  { id: "en068", word: "vegan", meaning: "純素者", partOfSpeech: "n./adj.", source: "cambly", example: "Vegans don't eat any animal products, including eggs." },
+  { id: "en069", word: "bubble tea", meaning: "珍珠奶茶", partOfSpeech: "n.", source: "cambly", example: "Bubble tea was invented in Taiwan." },
+  { id: "en070", word: "broth", meaning: "湯底（清湯）", partOfSpeech: "n.", source: "cambly", example: "The Taiwanese soup has a Chinese medicine broth." },
+  { id: "en071", word: "savory", meaning: "鹹味的", partOfSpeech: "adj.", source: "cambly", example: "Thai food has both sweet and savory flavors." },
+  { id: "en072", word: "raclette", meaning: "瑞士起司烤盤料理", partOfSpeech: "n.", source: "cambly", example: "Raclette is like cheese fondue but you grill the cheese yourself." },
+  // === 電競 ===
+  { id: "en073", word: "e-sports", meaning: "電競", partOfSpeech: "n.", source: "cambly", example: "League of Legends is one of the biggest e-sports in the world." },
+  { id: "en074", word: "global champion", meaning: "全球冠軍", partOfSpeech: "n.", source: "cambly", example: "T1 has won six global championships." },
+  { id: "en075", word: "roster", meaning: "陣容名單", partOfSpeech: "n.", source: "cambly", example: "The team announced a new roster for the season." },
+  { id: "en076", word: "tournament", meaning: "錦標賽", partOfSpeech: "n.", source: "cambly", example: "The LCK tournament is held in Korea." },
+  // === 不規則動詞過去式（重點！）===
+  { id: "en077", word: "went (go)", meaning: "去（go 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I went to Japan last year." },
+  { id: "en078", word: "came (come)", meaning: "來（come 的過去式）", partOfSpeech: "v.", source: "cambly", example: "She came to my office this morning." },
+  { id: "en079", word: "saw (see)", meaning: "看見（see 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I saw a beautiful temple yesterday." },
+  { id: "en080", word: "took (take)", meaning: "搭乘（take 的過去式）", partOfSpeech: "v.", source: "cambly", example: "We took the MRT to Taipei." },
+  { id: "en081", word: "bought (buy)", meaning: "買（buy 的過去式）", partOfSpeech: "v.", source: "cambly", example: "She bought a lot of souvenirs in Korea." },
+  { id: "en082", word: "told (tell)", meaning: "告訴（tell 的過去式）", partOfSpeech: "v.", source: "cambly", example: "She told me the news." },
+  { id: "en083", word: "made (make)", meaning: "製作（make 的過去式）", partOfSpeech: "v.", source: "cambly", example: "She made a presentation last week." },
+  { id: "en084", word: "thought (think)", meaning: "認為（think 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I thought it was a good idea." },
+  { id: "en085", word: "found (find)", meaning: "發現（find 的過去式）", partOfSpeech: "v.", source: "cambly", example: "We found a nice café near the temple." },
+  { id: "en086", word: "chose (choose)", meaning: "選擇（choose 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I chose to go to Universal Studios." },
+  { id: "en087", word: "woke up (wake up)", meaning: "醒來（wake up 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I just woke up when you called." },
+  { id: "en088", word: "brought (bring)", meaning: "帶來（bring 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I brought my camera on the trip." },
+  { id: "en089", word: "rode (ride)", meaning: "乘坐（ride 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I rode many rides at Universal Studios." },
+  { id: "en090", word: "had (have)", meaning: "有／吃（have 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I had lunch with my brother yesterday." },
+];
+
+// ============================================================
+// 英文文法題庫（從課程錯誤整理，24堂課老師修正）
+// 格式：{ id, category, rule, wrong, correct, explanation, mastered }
+// ============================================================
+const ENGLISH_GRAMMAR = [
+  // === 過去式（你最常犯的錯誤）===
+  { id: "gr001", category: "past_tense", rule: "go → went", wrong: "I go to Japan last year.", correct: "I went to Japan last year.", explanation: "go 的過去式是 went。有 last year 就是過去式信號。", mastered: false },
+  { id: "gr002", category: "past_tense", rule: "wake up → woke up", wrong: "I just wake up.", correct: "I just woke up.", explanation: "wake up 的過去式是 woke up。這是你很常犯的錯誤！", mastered: false },
+  { id: "gr003", category: "past_tense", rule: "come → came", wrong: "I just come back from Japan.", correct: "I just came back from Japan.", explanation: "come 的過去式是 came。", mastered: false },
+  { id: "gr004", category: "past_tense", rule: "bring → brought", wrong: "I bring my camera.", correct: "I brought my camera.", explanation: "bring 的過去式是 brought。描述旅行時帶了什麼，用過去式。", mastered: false },
+  { id: "gr005", category: "past_tense", rule: "will + 原形（不是過去式）", wrong: "I will told her.", correct: "I will tell her.", explanation: "will 後面接原形動詞，不是過去式。told 是 tell 的過去式，這裡不適用。", mastered: false },
+  { id: "gr006", category: "past_tense", rule: "choose → chose + to + 原形", wrong: "I choose to, to went to Universal.", correct: "I chose to go to Universal.", explanation: "choose 的過去式是 chose，後面接 to + 原形動詞 go。", mastered: false },
+  { id: "gr007", category: "past_tense", rule: "ride → rode（遊樂設施）", wrong: "I play many facilities at Universal.", correct: "I rode many rides at Universal.", explanation: "遊樂設施用 ride（乘坐），而且要過去式 rode。設施叫 rides，不是 facilities。", mastered: false },
+  { id: "gr008", category: "past_tense", rule: "現在完成進行式：I've been doing", wrong: "I already do this work past two years.", correct: "I've been doing this work for the past two years.", explanation: "從過去一直持續到現在，用 have been + V-ing。", mastered: false },
+  { id: "gr009", category: "past_tense", rule: "went shopping（不是 just shopping）", wrong: "We just shopping.", correct: "We went shopping.", explanation: "shopping 前面要有動詞，正確說法是 went shopping。", mastered: false },
+  { id: "gr010", category: "past_tense", rule: "plan to travel（不是 traveling）", wrong: "I plan to traveling to Korea.", correct: "I planned to travel to Korea.", explanation: "plan to 後接原形動詞 travel，不是 traveling。描述過去計畫用 planned。", mastered: false },
+  // === 主詞動詞一致 ===
+  { id: "gr011", category: "subject_verb", rule: "one team has（單數）", wrong: "So, one team have five people.", correct: "So, one team has five people.", explanation: "one team 是第三人稱單數，have 要改成 has。", mastered: false },
+  { id: "gr012", category: "subject_verb", rule: "my company has", wrong: "My company have many clients.", correct: "My company has many clients.", explanation: "My company 是單數，have → has。", mastered: false },
+  { id: "gr013", category: "subject_verb", rule: "she plans（第三人稱加 s）", wrong: "she plan to change her work.", correct: "She plans to change her job.", explanation: "第三人稱單數現在式加 -s。", mastered: false },
+  { id: "gr014", category: "subject_verb", rule: "It also has（第三人稱單數）", wrong: "It also have the stock in US.", correct: "It also has stock in the US.", explanation: "It 是第三人稱單數，have → has。", mastered: false },
+  { id: "gr015", category: "subject_verb", rule: "my parents are staying（複數進行式）", wrong: "my parents is stay in Hsinchu.", correct: "My parents are staying in Hsinchu.", explanation: "parents 是複數，is → are，進行中的狀態用 are staying。", mastered: false },
+  { id: "gr016", category: "subject_verb", rule: "Taiwan has many mountains", wrong: "because Taiwan have many mountains.", correct: "because Taiwan has many mountains.", explanation: "Taiwan 是第三人稱單數，have → has。", mastered: false },
+  { id: "gr017", category: "subject_verb", rule: "speaking and writing are harder", wrong: "speaking and write is more hard.", correct: "Speaking and writing are harder.", explanation: "兩個動名詞當主詞，用複數 are。比較級用 harder，不是 more hard。", mastered: false },
+  // === 介系詞 ===
+  { id: "gr018", category: "preposition", rule: "in the car（不是 on）", wrong: "Right now, it's on the car.", correct: "Right now, I'm in the car.", explanation: "在車子裡用 in，不用 on。on 是用在大型交通工具：on the bus, on the train。", mastered: false },
+  { id: "gr019", category: "preposition", rule: "in the chemical industry（工作領域用 in）", wrong: "I'm an industry analyst about chemical industry.", correct: "I'm an industrial analyst in the chemical industry.", explanation: "在某個產業工作用 in the + industry。", mastered: false },
+  { id: "gr020", category: "preposition", rule: "different from（不是 different to）", wrong: "it's very different to right now's work.", correct: "It's very different from my work right now.", explanation: "different 後面接 from。", mastered: false },
+  { id: "gr021", category: "preposition", rule: "south of Taipei（方位用 south of）", wrong: "it's a city south than Taipei.", correct: "Hsinchu is south of Taipei.", explanation: "描述相對位置用 south of，不是 south than。", mastered: false },
+  { id: "gr022", category: "preposition", rule: "in March（月份用 in）", wrong: "I applied to go at March.", correct: "I applied to go in March.", explanation: "月份前用 in，不用 at。", mastered: false },
+  { id: "gr023", category: "preposition", rule: "sensitive to（不是 for）", wrong: "sensitive for the smell.", correct: "sensitive to the smell.", explanation: "sensitive 後面固定搭配 to。", mastered: false },
+  { id: "gr024", category: "preposition", rule: "famous for（不是 about）", wrong: "famous about renewable energy.", correct: "famous for renewable energy.", explanation: "famous 後面接 for，表示以某事聞名。", mastered: false },
+  { id: "gr025", category: "preposition", rule: "in front of（不是 before）", wrong: "cry before your friend.", correct: "cry in front of your friends.", explanation: "在某人面前用 in front of，before 是時間上的之前。", mastered: false },
+  // === 冠詞 / 其他 ===
+  { id: "gr026", category: "other", rule: "I was born（不是 I'm born）", wrong: "I'm born in Taiwan.", correct: "I was born in Taiwan.", explanation: "出生是過去發生的事，用過去式 was born。", mastered: false },
+  { id: "gr027", category: "other", rule: "the most famous（最高級加 the）", wrong: "It's most famous company.", correct: "It's the most famous company.", explanation: "最高級前面要加定冠詞 the。", mastered: false },
+  { id: "gr028", category: "other", rule: "I'm an analyst（職業用 a/an）", wrong: "I'm the industry analyst.", correct: "I'm an industrial analyst.", explanation: "初次介紹職業用不定冠詞 a/an。analyst 以母音開頭，用 an。", mastered: false },
+  { id: "gr029", category: "other", rule: "better（不是 more better）", wrong: "It's more better.", correct: "It's better.", explanation: "比較級已經有 -er，不需要再加 more。", mastered: false },
+  { id: "gr030", category: "other", rule: "another（不是 an other）", wrong: "an other master's degree.", correct: "another master's degree.", explanation: "another 是一個字，不是 an + other。", mastered: false },
+  { id: "gr031", category: "other", rule: "a lot of research（不是 many）", wrong: "I need to do many research.", correct: "I need to do a lot of research.", explanation: "research 是不可數名詞，不能用 many，要用 a lot of 或 much。", mastered: false },
+  { id: "gr032", category: "other", rule: "listen to（不是 hear/will）", wrong: "I will hear that song.", correct: "I will listen to that song.", explanation: "主動去聽用 listen to，hear 是被動聽到。", mastered: false },
+  { id: "gr033", category: "other", rule: "gain experience（不是 do）", wrong: "Do many experience.", correct: "Gain a lot of experience.", explanation: "experience 要用 gain 或 get，不用 do。", mastered: false },
+  { id: "gr034", category: "other", rule: "communicate in Chinese（不是 communication use）", wrong: "we communication use Chinese.", correct: "We communicate in Chinese.", explanation: "communication 是名詞，這裡需要動詞 communicate。語言前用介系詞 in。", mastered: false },
+  { id: "gr035", category: "other", rule: "go on a business trip（不是 got）", wrong: "I got a business trip.", correct: "I went on a business trip.", explanation: "出差的固定說法是 go on a business trip。", mastered: false },
+];
+
+// ============================================================
+// 德文單字庫（含定冠詞）
+// ============================================================
+const GERMAN_VOCABULARY = [
+  // 問候
+  { id: "de001", article: "", word: "Hallo", meaning: "你好", category: "greeting", example: "Hallo, ich bin Christine!" },
+  { id: "de002", article: "", word: "Tschüss", meaning: "再見", category: "greeting", example: "Tschüss! Bis morgen!" },
+  { id: "de003", article: "", word: "Danke", meaning: "謝謝", category: "greeting", example: "Danke, das ist sehr nett." },
+  { id: "de004", article: "", word: "Bitte", meaning: "請／不客氣", category: "greeting", example: "Kaffee, bitte." },
+  { id: "de005", article: "", word: "Freut mich", meaning: "很高興認識你", category: "greeting", example: "Freut mich, David!" },
+  { id: "de006", article: "", word: "Ja", meaning: "是", category: "greeting", example: "Ja, ich komme aus Taiwan." },
+  { id: "de007", article: "", word: "Nein", meaning: "不", category: "greeting", example: "Nein, das stimmt nicht." },
+  { id: "de008", article: "", word: "und", meaning: "和", category: "greeting", example: "Tee und Kekse, bitte!" },
+  { id: "de009", article: "", word: "oder", meaning: "或是", category: "greeting", example: "Kaffee oder Tee?" },
+  // 人物
+  { id: "de010", article: "der", word: "der Mann", meaning: "男人", category: "people", example: "Der Mann heißt David." },
+  { id: "de011", article: "die", word: "die Frau", meaning: "女人／太太", category: "people", example: "Die Frau kommt aus Japan." },
+  { id: "de012", article: "der", word: "der Vater", meaning: "父親", category: "people", example: "Mein Vater heißt Thomas." },
+  { id: "de013", article: "die", word: "die Mutter", meaning: "母親", category: "people", example: "Meine Mutter kommt aus Taipeh." },
+  { id: "de014", article: "der", word: "der Name", meaning: "名字", category: "people", example: "Mein Name ist Christine." },
+  { id: "de015", article: "die", word: "die Katze", meaning: "貓", category: "people", example: "Die Katze ist süß." },
+  { id: "de016", article: "der", word: "der Vogel", meaning: "鳥", category: "nature", example: "Der Vogel singt schön." },
+  // 食物飲料
+  { id: "de017", article: "der", word: "der Kaffee", meaning: "咖啡", category: "food", example: "Kaffee mit Zucker, bitte." },
+  { id: "de018", article: "der", word: "der Tee", meaning: "茶", category: "food", example: "Ich möchte Tee." },
+  { id: "de019", article: "das", word: "das Wasser", meaning: "水", category: "food", example: "Wasser und Kekse, bitte." },
+  { id: "de020", article: "der", word: "der Zucker", meaning: "糖", category: "food", example: "Kaffee mit Zucker." },
+  { id: "de021", article: "die", word: "die Kekse", meaning: "餅乾（複數）", category: "food", example: "Tee und Kekse, bitte!" },
+  { id: "de022", article: "die", word: "die Tasse", meaning: "杯子", category: "food", example: "Eine Tasse Kaffee, bitte." },
+  { id: "de023", article: "der", word: "der Salat", meaning: "沙拉", category: "food", example: "Der Salat ist frisch." },
+  { id: "de024", article: "die", word: "die Tomate", meaning: "番茄", category: "food", example: "Die Tomate ist rot." },
+  { id: "de025", article: "die", word: "die Olive", meaning: "橄欖", category: "food", example: "Die Olive ist grün." },
+  { id: "de026", article: "die", word: "die Milch", meaning: "牛奶", category: "food", example: "Ich trinke Milch." },
+  // 物品
+  { id: "de027", article: "das", word: "das Messer", meaning: "刀子", category: "objects", example: "Das Messer ist scharf." },
+  { id: "de028", article: "die", word: "die Lampe", meaning: "燈", category: "objects", example: "Die Lampe ist neu." },
+  { id: "de029", article: "die", word: "die Hose", meaning: "褲子", category: "objects", example: "Die Hose ist blau." },
+  { id: "de030", article: "das", word: "das Bett", meaning: "床", category: "objects", example: "Das Bett ist groß." },
+  { id: "de031", article: "das", word: "das Buch", meaning: "書", category: "objects", example: "Das Buch ist interessant." },
+  { id: "de032", article: "der", word: "der Ofen", meaning: "烤箱", category: "objects", example: "Der Ofen ist heiß." },
+  { id: "de033", article: "die", word: "die Vase", meaning: "花瓶", category: "objects", example: "Die Vase ist schön." },
+  { id: "de034", article: "das", word: "das Video", meaning: "影片", category: "objects", example: "Das Video ist interessant." },
+  { id: "de035", article: "der", word: "der Spiegel", meaning: "鏡子", category: "objects", example: "Der Spiegel ist groß." },
+  // 身體
+  { id: "de036", article: "die", word: "die Hand", meaning: "手", category: "body", example: "Die Hand ist sauber." },
+  { id: "de037", article: "die", word: "die Nase", meaning: "鼻子", category: "body", example: "Meine Nase ist kalt." },
+  { id: "de038", article: "das", word: "das Auge", meaning: "眼睛", category: "body", example: "Das Auge ist blau." },
+  { id: "de039", article: "das", word: "das Haar", meaning: "頭髮（單根）", category: "body", example: "Das Haar ist lang." },
+  { id: "de040", article: "der", word: "der Finger", meaning: "手指", category: "body", example: "Der Finger ist lang." },
+  // 地點
+  { id: "de041", article: "die", word: "die Schule", meaning: "學校", category: "places", example: "Die Schule ist groß." },
+  { id: "de042", article: "die", word: "die Stadt", meaning: "城市", category: "places", example: "Die Stadt ist schön." },
+  { id: "de043", article: "das", word: "das Zimmer", meaning: "房間", category: "places", example: "Das Zimmer ist klein." },
+  { id: "de044", article: "das", word: "das Haus", meaning: "房子", category: "places", example: "Das Haus ist groß." },
+  { id: "de045", article: "die", word: "die Straße", meaning: "街道", category: "places", example: "Die Straße ist lang." },
+  { id: "de046", article: "die", word: "die Zeit", meaning: "時間", category: "time", example: "Die Zeit vergeht schnell." },
+  // 自然
+  { id: "de047", article: "das", word: "das Meer", meaning: "海洋", category: "nature", example: "Das Meer ist tief." },
+  { id: "de048", article: "das", word: "das Boot", meaning: "船", category: "nature", example: "Das Boot ist klein." },
+  { id: "de049", article: "die", word: "die Sonne", meaning: "太陽", category: "nature", example: "Die Sonne scheint." },
+  { id: "de050", article: "die", word: "die Rose", meaning: "玫瑰", category: "nature", example: "Die Rose ist rot." },
+  // 動詞
+  { id: "de051", article: "", word: "heißen", meaning: "叫做（名字）", category: "verb", example: "Ich heiße Christine." },
+  { id: "de052", article: "", word: "kommen", meaning: "來自", category: "verb", example: "Ich komme aus Taiwan." },
+  { id: "de053", article: "", word: "sein", meaning: "是（be 動詞）", category: "verb", example: "Ich bin Anna." },
+  { id: "de054", article: "", word: "sehen", meaning: "看見", category: "verb", example: "Ich sehe die Lampe." },
+  { id: "de055", article: "", word: "trinken", meaning: "喝", category: "verb", example: "Ich trinke Tee." },
+  { id: "de056", article: "", word: "spielen", meaning: "玩", category: "verb", example: "Die Kinder spielen." },
+  { id: "de057", article: "", word: "lernen", meaning: "學習", category: "verb", example: "Ich lerne Deutsch." },
+  { id: "de058", article: "", word: "gehen", meaning: "去、走", category: "verb", example: "Ich gehe zur Schule." },
+  { id: "de059", article: "", word: "müssen", meaning: "必須", category: "verb", example: "Ich muss lernen." },
+  // 形容詞 / 時間
+  { id: "de060", article: "", word: "schön", meaning: "漂亮的", category: "adjective", example: "Das ist sehr schön!" },
+  { id: "de061", article: "", word: "gut", meaning: "好的", category: "adjective", example: "Das Buch ist gut." },
+  { id: "de062", article: "", word: "groß", meaning: "大的", category: "adjective", example: "Das Haus ist groß." },
+  { id: "de063", article: "", word: "klein", meaning: "小的", category: "adjective", example: "Das Zimmer ist klein." },
+  { id: "de064", article: "", word: "neu", meaning: "新的", category: "adjective", example: "Die Lampe ist neu." },
+  { id: "de065", article: "", word: "alt", meaning: "舊的、年老的", category: "adjective", example: "Das Buch ist alt." },
+  { id: "de066", article: "", word: "heute", meaning: "今天", category: "time", example: "Heute ist Montag." },
+  { id: "de067", article: "", word: "morgen", meaning: "明天", category: "time", example: "Bis morgen!" },
+  { id: "de068", article: "der", word: "der Tag", meaning: "日子、天", category: "time", example: "Der Tag ist schön." },
+  { id: "de069", article: "das", word: "das Jahr", meaning: "年", category: "time", example: "Das Jahr 2026." },
+  { id: "de070", article: "der", word: "der Monat", meaning: "月份", category: "time", example: "Der Monat Mai ist schön." },
+];
+
+// ============================================================
+// 德文發音規則（從 PDF 講義與手寫筆記整理）
+// ============================================================
+const GERMAN_PRONUNCIATION = [
+  { id: "pr001", title: "Ä ä — 發「欸」", rule: "類似中文「欸」的音，嘴巴略開。", examples: [{ word: "Mädchen", pronunciation: "欸-tchen", meaning: "女生" }, { word: "spät", pronunciation: "speh-t", meaning: "晚的" }], notes: "想像說「欸？」時的嘴型。" },
+  { id: "pr002", title: "Ö ö — 圓唇發「ㄝ」", rule: "嘴巴保持「喔」的圓唇形狀，但發「ㄝ」的音。", examples: [{ word: "schön", pronunciation: "sh-ö-n", meaning: "漂亮的" }, { word: "Österreich", pronunciation: "Ö-sterreich", meaning: "奧地利" }], notes: "先說「喔」，嘴唇保持圓，但改發「ㄝ」。" },
+  { id: "pr003", title: "Ü ü — 圓唇發「衣」（即注音ㄩ）", rule: "嘴型像「衣」，但發「烏」的音。", examples: [{ word: "müde", pronunciation: "mü-de", meaning: "累的" }, { word: "München", pronunciation: "Mün-chen", meaning: "慕尼黑" }], notes: "和中文注音ㄩ幾乎相同！" },
+  { id: "pr004", title: "ß — 永遠發 [s]，前面是長音", rule: "ß 永遠發清音 [s]，且前面母音一定是長音或複合母音。", examples: [{ word: "Straße", pronunciation: "Strah-se", meaning: "街道" }, { word: "heißen", pronunciation: "hei-sen", meaning: "叫做" }], notes: "ß 和 ss 的差別：ß 前是長音；ss 前是短音。" },
+  { id: "pr005", title: "長音①：母音 + 單子音", rule: "母音後面只有一個子音，通常發長音。", examples: [{ word: "Name", pronunciation: "Nah-me", meaning: "名字" }, { word: "Ofen", pronunciation: "Oh-fen", meaning: "烤箱" }], notes: "長音要拉長。" },
+  { id: "pr006", title: "長音②：母音 + h（h 不發音）", rule: "母音後面跟著 h，h 不發音，只負責把前面母音拉長。", examples: [{ word: "sehen", pronunciation: "ze-en", meaning: "看見" }, { word: "Zahl", pronunciation: "tsahl", meaning: "數字" }], notes: "這個 h 叫「延長 h」，千萬不要把 h 發出來！" },
+  { id: "pr007", title: "長音③：雙母音（aa / ee / oo）", rule: "aa、ee、oo 都是長音。", examples: [{ word: "Haar", pronunciation: "Hahr", meaning: "頭髮" }, { word: "Meer", pronunciation: "Mehr", meaning: "海洋" }, { word: "Boot", pronunciation: "Boht", meaning: "船" }], notes: "這類字比較少，背起來就好。" },
+  { id: "pr008", title: "長音④：ie 永遠是長 i", rule: "ie 永遠發長音 [iː]，類似中文「衣」拉長。", examples: [{ word: "Liebe", pronunciation: "Lee-be", meaning: "愛" }, { word: "Wien", pronunciation: "Veen", meaning: "維也納" }, { word: "spielen", pronunciation: "Shpee-len", meaning: "玩" }], notes: "ie 裡面有 e，e 讓 i 變長。" },
+  { id: "pr009", title: "短音①：母音 + 雙子音", rule: "母音後面有雙子音，通常發短音。", examples: [{ word: "Mann", pronunciation: "Man（短a）", meaning: "男人" }, { word: "Bett", pronunciation: "Bet（短e）", meaning: "床" }, { word: "Mutter", pronunciation: "Mu-ter（短u）", meaning: "母親" }], notes: "短音要短促有力，不要拖。" },
+  { id: "pr010", title: "短音②：ck 和 tz 前必短音", rule: "母音後面跟著 ck 或 tz，前面的母音一定是短音。", examples: [{ word: "backen", pronunciation: "ba-ken（短a）", meaning: "烘焙" }, { word: "Katze", pronunciation: "Kat-se（短a）", meaning: "貓" }], notes: "ck 前面一定短！" },
+  { id: "pr011", title: "ss vs ß：短音 vs 長音", rule: "ss 前面的母音是短音；ß 前面的母音是長音或複合母音。", examples: [{ word: "müssen", pronunciation: "mü-sen（短ü）", meaning: "必須" }, { word: "Straße", pronunciation: "Strah-se（長a）", meaning: "街道" }], notes: "這是分辨 ss 和 ß 的最重要規則！" },
+  { id: "pr012", title: "複合母音 ei → [ai]", rule: "ei 發 [ai]，類似英文 eye 的音。", examples: [{ word: "mein", pronunciation: "main", meaning: "我的" }, { word: "heißen", pronunciation: "hai-sen", meaning: "叫做" }], notes: "最常見的複合母音！" },
+  { id: "pr013", title: "複合母音 eu / äu → [ɔy]", rule: "eu 和 äu 都發 [ɔy]，類似英文 boy 的音。", examples: [{ word: "heute", pronunciation: "hoy-te", meaning: "今天" }, { word: "Häuser", pronunciation: "Hoy-zer", meaning: "房子複數" }], notes: "äu 是 au 的變音版，但發音和 eu 一樣。" },
+  { id: "pr014", title: "複合母音 au → [au]", rule: "au 發 [au]，類似英文 how 的音。", examples: [{ word: "Haus", pronunciation: "House（短）", meaning: "房子" }, { word: "laufen", pronunciation: "lau-fen", meaning: "跑" }], notes: "au 要短促。" },
+  { id: "pr015", title: "W → 發英文 V 的音 [v]", rule: "德文的 W 不發英文 W，而是發英文 V 的音。", examples: [{ word: "Wasser", pronunciation: "Va-ser", meaning: "水" }, { word: "Wien", pronunciation: "Veen", meaning: "維也納" }], notes: "台灣人最容易發錯！W 要咬唇發 [v]。" },
+  { id: "pr016", title: "V → 通常發 [f]，外來語發 [v]", rule: "德文原生詞的 V 發 [f]；外來語的 V 發 [v]。", examples: [{ word: "Vater", pronunciation: "Fah-ter", meaning: "父親" }, { word: "Vase", pronunciation: "Vah-ze（外來語）", meaning: "花瓶" }], notes: "外來語通常可以從詞義猜測。" },
+  { id: "pr017", title: "Z → 永遠發 [ts]（注音ㄘ）", rule: "德文 Z 永遠發 [ts]，類似中文注音的「ㄘ」。", examples: [{ word: "Zeit", pronunciation: "Tsait", meaning: "時間" }, { word: "zehn", pronunciation: "Tsen", meaning: "十" }, { word: "Zimmer", pronunciation: "Tsi-mer", meaning: "房間" }], notes: "絕對不要發英文 Z 的音！" },
+  { id: "pr018", title: "S：字首+母音=濁音，字尾=清音", rule: "S 在字首接母音時發濁音 [z]；在字尾時發清音 [s]。", examples: [{ word: "Sonne", pronunciation: "Zo-ne（字首）", meaning: "太陽" }, { word: "Bus", pronunciation: "Buss（字尾）", meaning: "公車" }], notes: "字首的 S 像英文 Z；字尾的 S 像注音ㄙ。" },
+  { id: "pr019", title: "SCH → 永遠發 [ʃ]（英文 sh）", rule: "sch 這個組合永遠發 [ʃ]，類似英文 sh 的音。", examples: [{ word: "Schule", pronunciation: "Shoo-le", meaning: "學校" }, { word: "schön", pronunciation: "Shö-n", meaning: "漂亮的" }], notes: "SCH = SH，這個規則很固定。" },
+  { id: "pr020", title: "ST / SP 字首 → [ʃt] / [ʃp]", rule: "st 和 sp 在字首時，s 要發 [ʃ]。", examples: [{ word: "Stadt", pronunciation: "Shtadt", meaning: "城市" }, { word: "spielen", pronunciation: "Shpee-len", meaning: "玩" }], notes: "只有在字首才這樣！" },
+  { id: "pr021", title: "CH①：ich 音 [ç]（e/i/ä/ö/ü/ei/ie 後）", rule: "ch 出現在 e、i、ä、ö、ü、ei、ie 之後，發軟摩擦音 [ç]。", examples: [{ word: "ich", pronunciation: "ikh（軟）", meaning: "我" }, { word: "nicht", pronunciation: "nikht（軟）", meaning: "不" }, { word: "Milch", pronunciation: "Milkh（軟）", meaning: "牛奶" }], notes: "有人說像貓咪嘶嘶聲，舌頭往前。" },
+  { id: "pr022", title: "CH②：ach 音 [x]（a/o/u/au 後）", rule: "ch 出現在 a、o、u、au 之後，發喉嚨後方的摩擦音 [x]。", examples: [{ word: "Bach", pronunciation: "Bakh（硬）", meaning: "小溪" }, { word: "machen", pronunciation: "ma-khen（硬）", meaning: "做" }], notes: "有點像清嗓子的聲音。" },
+  { id: "pr023", title: "CH③：外來語 ch → [k] 或 [ʃ]", rule: "外來語中 ch 可能發 [k]（希臘文）或 [ʃ]（法文）。", examples: [{ word: "Chaos", pronunciation: "Ka-os", meaning: "混亂" }, { word: "Chef", pronunciation: "Shef", meaning: "老闆" }], notes: "Chef 是法文外來語，Chaos 是希臘文外來語。" },
+  { id: "pr024", title: "重音：大部分德文字重音在第一音節", rule: "德文大多數詞的重音在第一個音節。外來語後綴重音在後面。", examples: [{ word: "MUTter", pronunciation: "MU-ter", meaning: "母親（重MU）" }, { word: "naTION", pronunciation: "na-TION", meaning: "國家（重TION）" }], notes: "外來語後綴（-tion/-sion）重音在後面，其他大部分重音在第一音節。" },
+];
+
+// ============================================================
+// Cambly 課程記錄（完整 24 堂歷史）
+// ============================================================
+const SPEAKING_RECORDS = [
+  { id: 1,  date: "2026/01/20", tutor: "Daniel / Jessie Mae / Mik", topic: "初次上課，自我介紹、Universal Studios" },
+  { id: 2,  date: "2026/01/22", tutor: "Sabina / Sarah",             topic: "歐洲留學計劃、工作面試話題" },
+  { id: 3,  date: "2026/01/27", tutor: "Denisse",                    topic: "夢境、台灣民間信仰、算命" },
+  { id: 4,  date: "2026/01/29", tutor: "Sabina",                     topic: "世界局勢、台灣半導體、克羅埃西亞" },
+  { id: 5,  date: "2026/02/08", tutor: "Zoe Campbell x2",            topic: "台灣地理、新竹、登山、電玩" },
+  { id: 6,  date: "2026/02/15", tutor: "Lisa Marie / Charlene",      topic: "台灣食物、飲用水、健康話題" },
+  { id: 7,  date: "2026/02/22", tutor: "Robin Lea / Palmaria / Vicki", topic: "LOL 電競、初認識課程" },
+  { id: 8,  date: "2026/03/07", tutor: "Craig",                      topic: "台灣食物、飲用水、政治話題" },
+  { id: 9,  date: "2026/03/22", tutor: "Kristina x3",                topic: "眼睫毛、殖民歷史、歐洲旅遊建議" },
+  { id: 10, date: "2026/03/28", tutor: "Kay Sokolowski / TJ",        topic: "求職對談 + 過去式練習" },
+  { id: 11, date: "2026/04/05", tutor: "Kat x2",                     topic: "日本旅遊、台灣美食、各國比較" },
+  { id: 12, date: "2026/04/18", tutor: "Kay Sokolowski",             topic: "旅遊對談、交通方式" },
+  { id: 13, date: "2026/04/19", tutor: "Anita / Nikita",             topic: "台灣食物、軟球、新竹競爭環境" },
+  { id: 14, date: "2026/04/23", tutor: "Lyn Rose",                   topic: "韓劇推薦、音樂、等飛機" },
+  { id: 15, date: "2026/04/26", tutor: "Robin Lea",                  topic: "首爾旅遊、LOL 粉絲活動" },
+  { id: 16, date: "2026/05/03", tutor: "Juliet / Tiffany",           topic: "League of Legends + Nintendo Museum" },
+  { id: 17, date: "2026/05/10", tutor: "Lisa Marie",                 topic: "台灣文化、節日、旅遊、家庭" },
+  { id: 18, date: "2026/05/16", tutor: "Lisa Levine",                topic: "美容保養、Red Light Therapy" },
+  { id: 19, date: "2026/05/16", tutor: "Lelo",                       topic: "感官描述、身體特徵詞彙、飲用水文章" },
+  { id: 20, date: "2026/05/24", tutor: "Lelo",                       topic: "MBTI、飲食習慣、平行宇宙與人生哲學" },
+  { id: 21, date: "2026/06/01", tutor: "TJ",                         topic: "《飛吧！熊鷹》紀錄片 + 台灣原住民文化" },
+  { id: 22, date: "2026/06/01", tutor: "TJ",                         topic: "歐洲熱門旅遊國家 + 詞性複習" },
+  { id: 23, date: "2026/06/07", tutor: "Uzma",                       topic: "化工產業介紹、碳捕捉技術、MOF 材料" },
+  { id: 24, date: "2026/06/07", tutor: "Jen",                        topic: "3D 列印火箭（Terran 1）、複合材料與航太應用" },
+];
+
+// ============================================================
+// 日記記錄（新增區）
+// ============================================================
+const DIARY_ENTRIES = [];
+
+// ============================================================
+// Engoo 閱讀記錄（新增區）
+// ============================================================
+const READING_RECORDS = [];
+
+// ============================================================
+// 複習排程（由 App 自動管理，請勿手動修改）
+// ============================================================
+const REVIEW_SCHEDULE = [];
+
+// ============================================================
+// App 設定
+// ============================================================
+const APP_CONFIG = {
+  version: "1.0.0",
+  lastUpdated: "2026-06-13",
+  defaultLang: "en",
+};
