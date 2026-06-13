@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="語言複習">
+<title>Language Review</title>
+<script src="data.js"></script>
+<style>
+  /* ===== TOKENS ===== */
+  :root {
+    --bg: #F7F7F5;
+    --surface: #FFFFFF;
+    --surface2: #F0EFec;
+    --border: #E2E0DB;
+    --text: #1A1917;
+    --text2: #6B6860;
+    --text3: #9E9C96;
+    --en: #2D5BE3;
+    --en-light: #EBF0FD;
+    --de: #C0392B;
+    --de-light: #FDECEA;
+    --green: #1A7F4B;
+    --green-light: #E6F5EE;
+    --amber: #B45309;
+    --amber-light: #FEF3C7;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --shadow: 0 2px 12px rgba(0,0,0,0.08);
+    --shadow-card: 0 4px 24px rgba(0,0,0,0.12);
+    --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* ===== RESET ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+  }
+  button { border: none; cursor: pointer; font-family: var(--font); background: none; }
+  input, textarea { font-family: var(--font); outline: none; border: none; }
+
+  /* ===== LAYOUT ===== */
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 430px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  #content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: calc(72px + var(--safe-bottom));
+  }
+  #content::-webkit-scrollbar { display: none; }
+
+  /* ===== TOP BAR ===== */
+  .topbar {
+    background: var(--surface);
+    padding: 16px 20px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .topbar-title { font-size: 17px; font-weight: 600; letter-spacing: -0.3px; }
+  .topbar-sub { font-size: 12px; color: var(--text3); margin-top: 1px; }
+  .topbar-action {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--surface2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    transition: background 0.15s;
+  }
+  .topbar-action:active { background: var(--border); }
+
+  /* ===== BOTTOM NAV ===== */
+  #nav {
+    position: fixed;
+    bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 430px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border);
+    display: flex;
+    padding-bottom: var(--safe-bottom);
+    z-index: 100;
+  }
+  .nav-item {
+    flex: 1;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 10px 0 8px;
+    gap: 3px;
+    color: var(--text3);
+    transition: color 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .nav-item.active { color: var(--en); }
+  .nav-item svg { width: 22px; height: 22px; }
+  .nav-item span { font-size: 10px; font-weight: 500; letter-spacing: 0.2px; }
+
+  /* ===== PAGES ===== */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ===== SECTION HEADER ===== */
+  .section-header {
+    padding: 20px 20px 8px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .section-title { font-size: 13px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: 0.8px; }
+  .section-action { font-size: 13px; color: var(--en); font-weight: 500; }
+
+  /* ===== CARDS ===== */
+  .card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    margin: 0 16px 12px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+  }
+  .card-sm {
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    box-shadow: var(--shadow);
+  }
+
+  /* ===== TAGS ===== */
+  .tag {
+    display: inline-flex; align-items: center;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .tag-en { background: var(--en-light); color: var(--en); }
+  .tag-de { background: var(--de-light); color: var(--de); }
+  .tag-green { background: var(--green-light); color: var(--green); }
+  .tag-amber { background: var(--amber-light); color: var(--amber); }
+
+  /* ===== HOME PAGE ===== */
+  .home-hero {
+    padding: 24px 20px 20px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
+  .home-greeting { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+  .home-date { font-size: 13px; color: var(--text3); margin-top: 4px; }
+  .streak-row {
+    display: flex; gap: 10px; margin-top: 16px;
+  }
+  .streak-box {
+    flex: 1;
+    background: var(--surface2);
+    border-radius: var(--radius-sm);
+    padding: 12px;
+    text-align: center;
+  }
+  .streak-num { font-size: 24px; font-weight: 700; letter-spacing: -1px; }
+  .streak-label { font-size: 11px; color: var(--text3); margin-top: 2px; }
+  .quick-actions {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 10px; padding: 0 16px 8px;
+  }
+  .quick-btn {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 16px;
+    display: flex; flex-direction: column;
+    gap: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.1s;
+    text-align: left;
+  }
+  .quick-btn:active { transform: scale(0.97); }
+  .quick-btn-icon { font-size: 22px; }
+  .quick-btn-title { font-size: 14px; font-weight: 600; }
+  .quick-btn-sub { font-size: 11px; color: var(--text3); }
+
+  /* ===== FLASHCARD ===== */
+  .flashcard-container {
+    padding: 20px 20px 0;
+    position: relative;
+  }
+  .lang-toggle {
+    display: flex;
+    background: var(--surface2);
+    border-radius: 12px;
+    padding: 3px;
+    margin-bottom: 16px;
+  }
+  .lang-toggle-btn {
+    flex: 1; padding: 8px;
+    border-radius: 9px;
+    font-size: 13px; font-weight: 600;
+    transition: all 0.2s;
+    color: var(--text3);
+  }
+  .lang-toggle-btn.active {
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  .flashcard-area {
+    position: relative;
+    height: 260px;
+    user-select: none;
+  }
+  .flashcard {
+    position: absolute; inset: 0;
+    background: var(--surface);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 28px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    touch-action: pan-y;
+  }
+  .flashcard.flipped { background: var(--en-light); }
+  .flashcard.flipped-de { background: var(--de-light); }
+  .flashcard-top {
+    position: absolute; top: 16px; left: 0; right: 0;
+    display: flex; justify-content: center;
+  }
+  .flashcard-word {
+    font-size: 28px; font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+  .flashcard-article {
+    font-size: 16px; color: var(--de);
+    font-weight: 600; margin-bottom: 4px;
+  }
+  .flashcard-pos {
+    font-size: 12px; color: var(--text3);
+    margin-top: 6px; font-style: italic;
+  }
+  .flashcard-meaning {
+    font-size: 22px; font-weight: 600;
+    margin-top: 8px; color: var(--text);
+  }
+  .flashcard-example {
+    font-size: 12px; color: var(--text2);
+    margin-top: 10px; line-height: 1.5;
+    font-style: italic;
+  }
+  .flashcard-hint {
+    position: absolute; bottom: 14px;
+    font-size: 11px; color: var(--text3);
+  }
+  .swipe-indicators {
+    display: flex; justify-content: space-between;
+    padding: 10px 4px 0;
+    font-size: 12px; color: var(--text3);
+  }
+  .swipe-indicators .left { color: var(--amber); }
+  .swipe-indicators .right { color: var(--green); }
+  .flashcard-actions {
+    display: flex; gap: 12px; margin-top: 14px;
+  }
+  .fc-btn {
+    flex: 1; padding: 14px;
+    border-radius: 14px;
+    font-size: 15px; font-weight: 600;
+    transition: transform 0.1s;
+  }
+  .fc-btn:active { transform: scale(0.96); }
+  .fc-btn-forget { background: var(--amber-light); color: var(--amber); }
+  .fc-btn-know { background: var(--green-light); color: var(--green); }
+  .flashcard-progress {
+    margin: 14px 20px 0;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .progress-bar {
+    flex: 1; height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; background: var(--en);
+    border-radius: 2px;
+    transition: width 0.3s;
+  }
+  .progress-fill.de { background: var(--de); }
+  .progress-text { font-size: 12px; color: var(--text3); white-space: nowrap; }
+
+  /* typing mode */
+  .typing-mode {
+    padding: 20px;
+  }
+  .typing-card {
+    background: var(--surface);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+    padding: 28px 24px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .typing-prompt { font-size: 13px; color: var(--text3); margin-bottom: 8px; }
+  .typing-word { font-size: 26px; font-weight: 700; }
+  .typing-input-wrap {
+    display: flex; gap: 10px;
+    margin-top: 16px;
+  }
+  .typing-input {
+    flex: 1;
+    background: var(--surface2);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 16px;
+    color: var(--text);
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .typing-input:focus { border-color: var(--en); background: var(--surface); }
+  .typing-input.correct { border-color: var(--green); background: var(--green-light); }
+  .typing-input.wrong { border-color: var(--amber); background: var(--amber-light); }
+  .typing-submit {
+    background: var(--en);
+    color: white;
+    border-radius: 12px;
+    padding: 0 18px;
+    font-size: 15px; font-weight: 600;
+  }
+  .typing-submit:active { opacity: 0.85; }
+
+  /* ===== GRAMMAR PAGE ===== */
+  .grammar-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    margin: 0 16px 12px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+  .grammar-category {
+    font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.8px;
+    color: var(--text3); margin-bottom: 10px;
+  }
+  .grammar-question {
+    font-size: 16px; font-weight: 600; line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .grammar-choices {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .grammar-choice {
+    background: var(--surface2);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 14px;
+    text-align: left;
+    transition: background 0.15s;
+    border: 2px solid transparent;
+  }
+  .grammar-choice:active { background: var(--border); }
+  .grammar-choice.correct { background: var(--green-light); border-color: var(--green); color: var(--green); }
+  .grammar-choice.wrong { background: var(--de-light); border-color: var(--de); color: var(--de); }
+  .grammar-explanation {
+    display: none;
+    margin-top: 12px;
+    padding: 12px;
+    background: var(--surface2);
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text2);
+  }
+  .grammar-explanation.show { display: block; }
+  .grammar-nav-btn {
+    width: 100%; padding: 14px;
+    background: var(--en);
+    color: white;
+    border-radius: 12px;
+    font-size: 15px; font-weight: 600;
+    margin-top: 12px;
+    transition: opacity 0.15s;
+  }
+  .grammar-nav-btn:active { opacity: 0.85; }
+  .grammar-ai-btn {
+    width: 100%; padding: 12px;
+    background: var(--surface2);
+    color: var(--text2);
+    border-radius: 12px;
+    font-size: 13px; font-weight: 500;
+    margin-top: 8px;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  .grammar-stats {
+    display: flex; gap: 10px;
+    padding: 0 16px 12px;
+  }
+  .grammar-stat {
+    flex: 1; background: var(--surface);
+    border-radius: var(--radius-sm);
+    padding: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .grammar-stat-num { font-size: 22px; font-weight: 700; }
+  .grammar-stat-label { font-size: 11px; color: var(--text3); margin-top: 2px; }
+  .filter-row {
+    display: flex; gap: 8px;
+    padding: 0 16px 12px;
+    overflow-x: auto;
+  }
+  .filter-row::-webkit-scrollbar { display: none; }
+  .filter-chip {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px; font-weight: 600;
+    background: var(--surface2);
+    color: var(--text3);
+    white-space: nowrap;
+    transition: all 0.15s;
+  }
+  .filter-chip.active { background: var(--en); color: white; }
+
+  /* ===== DIARY / RECORDS PAGE ===== */
+  .diary-input-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    margin: 0 16px 12px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+  }
+  .diary-textarea {
+    width: 100%;
+    min-height: 120px;
+    background: var(--surface2);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 15px; line-height: 1.6;
+    resize: none;
+    color: var(--text);
+  }
+  .diary-textarea:focus { background: var(--surface); }
+  .diary-toolbar {
+    display: flex; gap: 8px; margin-top: 10px;
+  }
+  .diary-submit {
+    flex: 1; padding: 12px;
+    background: var(--en); color: white;
+    border-radius: 10px;
+    font-size: 14px; font-weight: 600;
+  }
+  .diary-submit:active { opacity: 0.85; }
+  .diary-ai-btn {
+    padding: 12px 14px;
+    background: var(--surface2);
+    border-radius: 10px;
+    font-size: 13px;
+  }
+  .diary-entry {
+    background: var(--surface);
+    border-radius: var(--radius);
+    margin: 0 16px 10px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+  }
+  .diary-entry-date { font-size: 11px; color: var(--text3); margin-bottom: 6px; }
+  .diary-entry-text { font-size: 14px; line-height: 1.6; color: var(--text); }
+  .diary-entry-corrections {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+  .correction-item { font-size: 12px; line-height: 1.5; margin-bottom: 4px; }
+  .correction-wrong { color: var(--de); text-decoration: line-through; }
+  .correction-right { color: var(--green); }
+
+  /* engoo record */
+  .record-input {
+    width: 100%;
+    background: var(--surface2);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .record-input:focus { background: var(--surface); }
+
+  /* cambly history */
+  .cambly-item {
+    background: var(--surface);
+    border-radius: var(--radius);
+    margin: 0 16px 10px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .cambly-item-header {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .cambly-item-date { font-size: 12px; color: var(--text3); }
+  .cambly-item-tutor { font-size: 12px; color: var(--en); font-weight: 500; }
+  .cambly-item-topic { font-size: 14px; font-weight: 500; line-height: 1.4; }
+
+  /* ===== GERMAN PAGE ===== */
+  .pr-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    margin: 0 16px 10px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+  }
+  .pr-title {
+    font-size: 15px; font-weight: 700; margin-bottom: 6px;
+    color: var(--de);
+  }
+  .pr-rule { font-size: 13px; line-height: 1.5; color: var(--text2); margin-bottom: 10px; }
+  .pr-examples { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pr-example {
+    background: var(--de-light);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  .pr-example-word { font-weight: 600; color: var(--de); }
+  .pr-example-pron { color: var(--text3); font-size: 11px; }
+  .pr-example-meaning { color: var(--text2); }
+  .pr-notes {
+    margin-top: 10px;
+    padding: 8px 10px;
+    background: var(--amber-light);
+    border-radius: 8px;
+    font-size: 12px; color: var(--amber);
+  }
+
+  /* ===== SETTINGS PAGE ===== */
+  .settings-section {
+    padding: 0 16px 8px;
+  }
+  .settings-item {
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+    padding: 14px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+    box-shadow: var(--shadow);
+  }
+  .settings-item-left { display: flex; flex-direction: column; gap: 2px; }
+  .settings-item-title { font-size: 15px; font-weight: 500; }
+  .settings-item-sub { font-size: 12px; color: var(--text3); }
+  .settings-input {
+    width: 100%;
+    background: var(--surface2);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: var(--text);
+    margin-top: 6px;
+  }
+  .settings-save-btn {
+    width: 100%; padding: 14px;
+    background: var(--en); color: white;
+    border-radius: 12px;
+    font-size: 15px; font-weight: 600;
+    margin-top: 8px;
+  }
+
+  /* ===== AI Loading ===== */
+  .ai-loading {
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 16px;
+    background: var(--surface2);
+    border-radius: 10px;
+    font-size: 13px; color: var(--text3);
+  }
+  .ai-dots {
+    display: flex; gap: 4px;
+  }
+  .ai-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--text3);
+    animation: bounce 1.2s infinite;
+  }
+  .ai-dot:nth-child(2) { animation-delay: 0.2s; }
+  .ai-dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes bounce {
+    0%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-6px); }
+  }
+
+  /* AI result box */
+  .ai-result {
+    background: var(--surface2);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text);
+    margin-top: 10px;
+    border-left: 3px solid var(--en);
+  }
+  .ai-result.de { border-left-color: var(--de); }
+
+  /* ===== TOAST ===== */
+  .toast {
+    position: fixed;
+    bottom: calc(80px + var(--safe-bottom));
+    left: 50%; transform: translateX(-50%) translateY(20px);
+    background: var(--text);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 13px; font-weight: 500;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* ===== MODAL ===== */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+    align-items: flex-end;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal {
+    background: var(--surface);
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-bottom: calc(20px + var(--safe-bottom));
+    animation: slideUp 0.3s ease;
+  }
+  @keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  .modal-handle {
+    width: 36px; height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    margin: 0 auto 16px;
+  }
+  .modal-title { font-size: 17px; font-weight: 700; margin-bottom: 16px; }
+
+  /* swipe animation */
+  @keyframes swipeRight {
+    to { transform: translateX(120%) rotate(15deg); opacity: 0; }
+  }
+  @keyframes swipeLeft {
+    to { transform: translateX(-120%) rotate(-15deg); opacity: 0; }
+  }
+  .swiping-right { animation: swipeRight 0.3s ease forwards; }
+  .swiping-left { animation: swipeLeft 0.3s ease forwards; }
+
+  /* empty state */
+  .empty-state {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--text3);
+  }
+  .empty-state-icon { font-size: 40px; margin-bottom: 12px; }
+  .empty-state-text { font-size: 15px; font-weight: 500; color: var(--text2); }
+  .empty-state-sub { font-size: 13px; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- ===== CONTENT ===== -->
+  <div id="content">
+
+    <!-- HOME -->
+    <div id="page-home" class="page active">
+      <div class="home-hero">
+        <div class="home-greeting">👋 嗨，Christine</div>
+        <div class="home-date" id="home-date">今天是學習的好日子</div>
+        <div class="streak-row">
+          <div class="streak-box">
+            <div class="streak-num" id="streak-en">—</div>
+            <div class="streak-label">英文已背</div>
+          </div>
+          <div class="streak-box">
+            <div class="streak-num" id="streak-de">—</div>
+            <div class="streak-label">德文已背</div>
+          </div>
+          <div class="streak-box">
+            <div class="streak-num" id="streak-grammar">—</div>
+            <div class="streak-label">文法練習</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <span class="section-title">今天要做什麼</span>
+      </div>
+      <div class="quick-actions">
+        <button class="quick-btn" onclick="goTo('vocab','en')">
+          <span class="quick-btn-icon">🇬🇧</span>
+          <span class="quick-btn-title">英文單字</span>
+          <span class="quick-btn-sub" id="home-en-count">載入中…</span>
+        </button>
+        <button class="quick-btn" onclick="goTo('vocab','de')">
+          <span class="quick-btn-icon">🇩🇪</span>
+          <span class="quick-btn-title">德文單字</span>
+          <span class="quick-btn-sub" id="home-de-count">載入中…</span>
+        </button>
+        <button class="quick-btn" onclick="goTo('grammar',null)">
+          <span class="quick-btn-icon">📝</span>
+          <span class="quick-btn-title">文法練習</span>
+          <span class="quick-btn-sub" id="home-grammar-count">載入中…</span>
+        </button>
+        <button class="quick-btn" onclick="goTo('diary',null)">
+          <span class="quick-btn-icon">📖</span>
+          <span class="quick-btn-title">日記 / 記錄</span>
+          <span class="quick-btn-sub">寫日記・課程</span>
+        </button>
+      </div>
+
+      <div class="section-header">
+        <span class="section-title">複習到期提醒</span>
+      </div>
+      <div id="due-list" style="padding: 0 16px 12px;">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- VOCABULARY -->
+    <div id="page-vocab" class="page">
+      <div class="topbar">
+        <div>
+          <div class="topbar-title" id="vocab-title">英文單字</div>
+          <div class="topbar-sub" id="vocab-mode-label">翻牌模式</div>
+        </div>
+        <button class="topbar-action" onclick="toggleVocabMode()" title="切換模式">⌨️</button>
+      </div>
+
+      <!-- lang toggle -->
+      <div style="padding: 16px 16px 0;">
+        <div class="lang-toggle">
+          <button class="lang-toggle-btn active" id="lang-en-btn" onclick="setVocabLang('en')">🇬🇧 英文</button>
+          <button class="lang-toggle-btn" id="lang-de-btn" onclick="setVocabLang('de')">🇩🇪 德文</button>
+        </div>
+      </div>
+
+      <!-- flashcard mode -->
+      <div id="flashcard-mode">
+        <div class="flashcard-container">
+          <div class="flashcard-area" id="flashcard-area">
+            <div class="flashcard" id="flashcard" onclick="flipCard()">
+              <div class="flashcard-top">
+                <span class="tag" id="fc-tag">翻牌</span>
+              </div>
+              <div id="fc-article" class="flashcard-article"></div>
+              <div class="flashcard-word" id="fc-word">載入中…</div>
+              <div class="flashcard-pos" id="fc-pos"></div>
+              <div id="fc-back" style="display:none; width:100%;">
+                <div class="flashcard-meaning" id="fc-meaning"></div>
+                <div class="flashcard-example" id="fc-example"></div>
+              </div>
+              <div class="flashcard-hint" id="fc-hint">點擊翻面</div>
+            </div>
+          </div>
+          <div class="swipe-indicators">
+            <span class="left">← 還需要再記</span>
+            <span class="right">認識了 →</span>
+          </div>
+          <div class="flashcard-actions">
+            <button class="fc-btn fc-btn-forget" onclick="swipeCard('left')">😅 還不熟</button>
+            <button class="fc-btn fc-btn-know" onclick="swipeCard('right')">✅ 認識了</button>
+          </div>
+          <div class="flashcard-progress">
+            <div class="progress-bar"><div class="progress-fill" id="fc-progress"></div></div>
+            <span class="progress-text" id="fc-progress-text">0 / 0</span>
+          </div>
+          <!-- AI example button -->
+          <div style="padding: 12px 0 0;">
+            <button class="grammar-ai-btn" onclick="getAIExample()" id="ai-example-btn">
+              ✨ AI 生成例句幫助記憶
+            </button>
+            <div id="ai-example-result"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- typing mode -->
+      <div id="typing-mode-view" style="display:none;">
+        <div class="typing-mode">
+          <div class="typing-card">
+            <div class="typing-prompt" id="typing-prompt">看中文，輸入英文</div>
+            <div class="typing-word" id="typing-word">載入中…</div>
+            <div id="typing-hint" style="font-size:12px; color:var(--text3); margin-top:6px;"></div>
+          </div>
+          <div class="typing-input-wrap">
+            <input class="typing-input" id="typing-input" placeholder="在這裡輸入答案…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <button class="typing-submit" onclick="checkTyping()">確認</button>
+          </div>
+          <div id="typing-feedback" style="margin-top:12px;"></div>
+          <div class="flashcard-progress" style="margin-top:16px;">
+            <div class="progress-bar"><div class="progress-fill" id="typing-progress"></div></div>
+            <span class="progress-text" id="typing-progress-text">0 / 0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRAMMAR -->
+    <div id="page-grammar" class="page">
+      <div class="topbar">
+        <div>
+          <div class="topbar-title">文法練習</div>
+          <div class="topbar-sub">英文文法 × AI 出題</div>
+        </div>
+        <button class="topbar-action" onclick="refreshGrammar()">🔄</button>
+      </div>
+
+      <div class="grammar-stats">
+        <div class="grammar-stat">
+          <div class="grammar-stat-num" id="gs-correct" style="color:var(--green);">0</div>
+          <div class="grammar-stat-label">答對</div>
+        </div>
+        <div class="grammar-stat">
+          <div class="grammar-stat-num" id="gs-wrong" style="color:var(--de);">0</div>
+          <div class="grammar-stat-label">答錯</div>
+        </div>
+        <div class="grammar-stat">
+          <div class="grammar-stat-num" id="gs-total">0</div>
+          <div class="grammar-stat-label">已練習</div>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <button class="filter-chip active" onclick="setGrammarFilter('all', this)">全部</button>
+        <button class="filter-chip" onclick="setGrammarFilter('past_tense', this)">過去式</button>
+        <button class="filter-chip" onclick="setGrammarFilter('subject_verb', this)">主詞一致</button>
+        <button class="filter-chip" onclick="setGrammarFilter('preposition', this)">介系詞</button>
+        <button class="filter-chip" onclick="setGrammarFilter('weak', this)">⚠️ 弱點</button>
+      </div>
+
+      <div id="grammar-card-container">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- DIARY / RECORDS -->
+    <div id="page-diary" class="page">
+      <div class="topbar">
+        <div>
+          <div class="topbar-title">日記 & 記錄</div>
+          <div class="topbar-sub">英文日記 · Engoo · Cambly</div>
+        </div>
+      </div>
+
+      <!-- sub tabs -->
+      <div class="lang-toggle" style="margin: 12px 16px 0;">
+        <button class="lang-toggle-btn active" id="diary-tab-diary" onclick="setDiaryTab('diary')">📔 日記</button>
+        <button class="lang-toggle-btn" id="diary-tab-engoo" onclick="setDiaryTab('engoo')">📰 Engoo</button>
+        <button class="lang-toggle-btn" id="diary-tab-cambly" onclick="setDiaryTab('cambly')">🎙️ Cambly</button>
+      </div>
+
+      <!-- diary sub -->
+      <div id="diary-sub-diary">
+        <div class="section-header"><span class="section-title">今日英文日記</span></div>
+        <div class="diary-input-card">
+          <textarea class="diary-textarea" id="diary-text" placeholder="用英文寫下今天發生的事… (3句以上)&#10;提示：試著用過去式！"></textarea>
+          <div class="diary-toolbar">
+            <button class="diary-submit" onclick="submitDiary()">儲存日記</button>
+            <button class="diary-ai-btn" onclick="checkDiaryAI()" title="AI 批改">✨ AI 批改</button>
+          </div>
+          <div id="diary-ai-result"></div>
+        </div>
+        <div class="section-header">
+          <span class="section-title">過去日記</span>
+          <button class="section-action" onclick="clearDiaries()">清除</button>
+        </div>
+        <div id="diary-list">
+          <div class="empty-state"><div class="empty-state-icon">📝</div><div class="empty-state-text">還沒有日記</div><div class="empty-state-sub">每天寫 3 句，練習過去式！</div></div>
+        </div>
+      </div>
+
+      <!-- engoo sub -->
+      <div id="diary-sub-engoo" style="display:none;">
+        <div class="section-header"><span class="section-title">新增閱讀記錄</span></div>
+        <div class="diary-input-card">
+          <input class="record-input" id="engoo-title" placeholder="文章標題 (e.g. A 3D-Printed Rocket…)">
+          <input class="record-input" id="engoo-date" type="date">
+          <textarea class="diary-textarea" id="engoo-words" style="min-height:80px;" placeholder="不懂的單字，一行一個：&#10;orbit / 軌道"></textarea>
+          <button class="diary-submit" style="width:100%; margin-top:8px;" onclick="submitEngoo()">儲存記錄</button>
+        </div>
+        <div class="section-header"><span class="section-title">閱讀紀錄</span></div>
+        <div id="engoo-list">
+          <div class="empty-state"><div class="empty-state-icon">📰</div><div class="empty-state-text">還沒有閱讀記錄</div><div class="empty-state-sub">每天讀一篇 Engoo 文章！</div></div>
+        </div>
+      </div>
+
+      <!-- cambly sub -->
+      <div id="diary-sub-cambly" style="display:none;">
+        <div class="section-header">
+          <span class="section-title">口語課歷史（共 <span id="cambly-count">0</span> 堂）</span>
+        </div>
+        <div id="cambly-list"><!-- filled by JS --></div>
+      </div>
+    </div>
+
+    <!-- GERMAN -->
+    <div id="page-german" class="page">
+      <div class="topbar">
+        <div>
+          <div class="topbar-title">德文基礎</div>
+          <div class="topbar-sub">A1 發音規則 & 文法（預留）</div>
+        </div>
+      </div>
+
+      <div class="lang-toggle" style="margin: 12px 16px 0;">
+        <button class="lang-toggle-btn active" id="de-tab-pr" onclick="setDeTab('pronunciation')">🔤 發音規則</button>
+        <button class="lang-toggle-btn" id="de-tab-grammar" onclick="setDeTab('grammar')">📚 文法（預留）</button>
+      </div>
+
+      <div id="de-sub-pronunciation">
+        <div class="section-header"><span class="section-title">德文發音規則</span></div>
+        <div id="pronunciation-list"><!-- filled by JS --></div>
+      </div>
+
+      <div id="de-sub-grammar" style="display:none;">
+        <div class="empty-state" style="padding-top: 60px;">
+          <div class="empty-state-icon">🚧</div>
+          <div class="empty-state-text">文法區塊建置中</div>
+          <div class="empty-state-sub">等你學到文法單元再來填！</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div id="page-settings" class="page">
+      <div class="topbar">
+        <div><div class="topbar-title">設定</div></div>
+      </div>
+      <div style="padding: 16px 0 0;">
+        <div class="section-header"><span class="section-title">AI 設定</span></div>
+        <div class="settings-section">
+          <div class="settings-item" style="flex-direction: column; align-items: stretch;">
+            <div class="settings-item-title">Gemini API Key</div>
+            <div class="settings-item-sub">用於 AI 批改日記、生成例句、自動出文法題</div>
+            <input class="settings-input" id="api-key-input" type="password" placeholder="貼上你的 Gemini API Key">
+            <button class="settings-save-btn" onclick="saveApiKey()">儲存 API Key</button>
+          </div>
+        </div>
+
+        <div class="section-header" style="margin-top:8px;"><span class="section-title">資料管理</span></div>
+        <div class="settings-section">
+          <div class="settings-item">
+            <div class="settings-item-left">
+              <div class="settings-item-title">英文單字數量</div>
+              <div class="settings-item-sub" id="settings-en-count">—</div>
+            </div>
+            <span class="tag tag-en">英文</span>
+          </div>
+          <div class="settings-item">
+            <div class="settings-item-left">
+              <div class="settings-item-title">德文單字數量</div>
+              <div class="settings-item-sub" id="settings-de-count">—</div>
+            </div>
+            <span class="tag tag-de">德文</span>
+          </div>
+          <div class="settings-item">
+            <div class="settings-item-left">
+              <div class="settings-item-title">文法題數量</div>
+              <div class="settings-item-sub" id="settings-grammar-count">—</div>
+            </div>
+            <span class="tag tag-green">文法</span>
+          </div>
+          <div class="settings-item">
+            <div class="settings-item-left">
+              <div class="settings-item-title">重置今日進度</div>
+              <div class="settings-item-sub">清除今天的翻牌記錄</div>
+            </div>
+            <button onclick="resetToday()" style="font-size:13px; color:var(--de); font-weight:600;">重置</button>
+          </div>
+          <div class="settings-item">
+            <div class="settings-item-left">
+              <div class="settings-item-title">清除所有複習排程</div>
+              <div class="settings-item-sub">重新開始間隔複習</div>
+            </div>
+            <button onclick="resetAllSchedule()" style="font-size:13px; color:var(--de); font-weight:600;">清除</button>
+          </div>
+        </div>
+
+        <div class="section-header" style="margin-top:8px;"><span class="section-title">每週更新格式</span></div>
+        <div class="settings-section">
+          <div class="card">
+            <div style="font-size:13px; line-height:1.8; color: var(--text2);">
+              每週把以下格式複製給 Claude 更新 data.js：<br><br>
+              <code style="background:var(--surface2); padding:8px; border-radius:8px; display:block; font-size:12px; line-height:1.7;">
+              【新增英文單字】<br>
+              word / 中文 / 詞性<br><br>
+              【新增文法錯誤】<br>
+              錯誤：...<br>
+              正確：...<br>
+              規則：...<br><br>
+              【新增德文單字】<br>
+              der/die/das Word / 中文
+              </code>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
+          Language Review App v1.0.0<br>最後更新：2026-06-13
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- ===== BOTTOM NAV ===== -->
+  <nav id="nav">
+    <button class="nav-item active" onclick="switchPage('home')" id="nav-home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>首頁</span>
+    </button>
+    <button class="nav-item" onclick="switchPage('vocab')" id="nav-vocab">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <span>單字卡</span>
+    </button>
+    <button class="nav-item" onclick="switchPage('grammar')" id="nav-grammar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      <span>文法</span>
+    </button>
+    <button class="nav-item" onclick="switchPage('diary')" id="nav-diary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      <span>記錄</span>
+    </button>
+    <button class="nav-item" onclick="switchPage('german')" id="nav-german">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span>德文</span>
+    </button>
+    <button class="nav-item" onclick="switchPage('settings')" id="nav-settings">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      <span>設定</span>
+    </button>
+  </nav>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+</div><!-- /app -->
+
+<script>
+// ============================================================
+// STATE
+// ============================================================
+let currentPage = 'home';
+let currentLang = 'en';
+let vocabMode = 'flip'; // 'flip' | 'type'
+let grammarFilter = 'all';
+let diaryTab = 'diary';
+let deTab = 'pronunciation';
+
+// vocab state
+let enDeck = [];
+let deDeck = [];
+let currentDeck = [];
+let currentCardIdx = 0;
+let cardFlipped = false;
+let sessionStats = { en: { known: 0, unknown: 0 }, de: { known: 0, unknown: 0 } };
+
+// grammar state
+let grammarItems = [];
+let currentGrammarIdx = 0;
+let grammarStats = { correct: 0, wrong: 0 };
+let grammarAnswered = false;
+
+// data
+let diaryEntries = [];
+let engooRecords = [];
+let reviewSchedule = {};
+let todayStats = { enFlipped: 0, deFlipped: 0, grammarPracticed: 0 };
+
+// touch state
+let touchStartX = 0;
+let touchStartY = 0;
+let isDragging = false;
+
+// ============================================================
+// STORAGE
+// ============================================================
+function saveData() {
+  try {
+    localStorage.setItem('lr_diary', JSON.stringify(diaryEntries));
+    localStorage.setItem('lr_engoo', JSON.stringify(engooRecords));
+    localStorage.setItem('lr_schedule', JSON.stringify(reviewSchedule));
+    localStorage.setItem('lr_today', JSON.stringify(todayStats));
+    localStorage.setItem('lr_gstats', JSON.stringify(grammarStats));
+  } catch(e) {}
+}
+function loadData() {
+  try {
+    const d = localStorage.getItem('lr_diary');
+    if (d) diaryEntries = JSON.parse(d);
+    const e = localStorage.getItem('lr_engoo');
+    if (e) engooRecords = JSON.parse(e);
+    const s = localStorage.getItem('lr_schedule');
+    if (s) reviewSchedule = JSON.parse(s);
+    const today = localStorage.getItem('lr_today');
+    if (today) {
+      const saved = JSON.parse(today);
+      const todayKey = new Date().toDateString();
+      if (saved.date === todayKey) {
+        todayStats = saved;
+      }
+    }
+    const gs = localStorage.getItem('lr_gstats');
+    if (gs) grammarStats = JSON.parse(gs);
+  } catch(e) {}
+}
+function getApiKey() {
+  return localStorage.getItem('lr_apikey') || '';
+}
+function saveApiKey() {
+  const k = document.getElementById('api-key-input').value.trim();
+  if (!k) { showToast('請輸入 API Key'); return; }
+  localStorage.setItem('lr_apikey', k);
+  showToast('✅ API Key 已儲存');
+}
+
+// ============================================================
+// NAVIGATION
+// ============================================================
+function switchPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  document.getElementById('nav-' + page).classList.add('active');
+  currentPage = page;
+  if (page === 'home') updateHome();
+  if (page === 'vocab') initVocab();
+  if (page === 'grammar') initGrammar();
+  if (page === 'diary') initDiary();
+  if (page === 'german') initGerman();
+  if (page === 'settings') initSettings();
+}
+function goTo(page, lang) {
+  if (lang) { currentLang = lang; }
+  switchPage(page);
+}
+
+// ============================================================
+// HOME
+// ============================================================
+function updateHome() {
+  const days = ['日','一','二','三','四','五','六'];
+  const now = new Date();
+  document.getElementById('home-date').textContent =
+    `${now.getFullYear()}/${now.getMonth()+1}/${now.getDate()} (週${days[now.getDay()]})`;
+
+  const dueEn = getDueWords('en').length;
+  const dueDE = getDueWords('de').length;
+  document.getElementById('home-en-count').textContent =
+    dueEn > 0 ? `${dueEn} 個到期複習` : `${ENGLISH_VOCABULARY.length} 個單字`;
+  document.getElementById('home-de-count').textContent =
+    dueDE > 0 ? `${dueDE} 個到期複習` : `${GERMAN_VOCABULARY.length} 個單字`;
+  document.getElementById('home-grammar-count').textContent =
+    `${ENGLISH_GRAMMAR.length} 道題目`;
+
+  document.getElementById('streak-en').textContent = todayStats.enFlipped || 0;
+  document.getElementById('streak-de').textContent = todayStats.deFlipped || 0;
+  document.getElementById('streak-grammar').textContent = todayStats.grammarPracticed || 0;
+
+  // due list
+  const dl = document.getElementById('due-list');
+  const dueWords = [...getDueWords('en').slice(0,3), ...getDueWords('de').slice(0,3)];
+  if (dueWords.length === 0) {
+    dl.innerHTML = `<div style="text-align:center; padding:16px; color:var(--text3); font-size:13px;">🎉 今天沒有到期複習，繼續保持！</div>`;
+  } else {
+    dl.innerHTML = dueWords.map(w => {
+      const lang = ENGLISH_VOCABULARY.find(x => x.id === w.wordId) ? 'en' : 'de';
+      const data = lang === 'en' ? ENGLISH_VOCABULARY.find(x => x.id === w.wordId) : GERMAN_VOCABULARY.find(x => x.id === w.wordId);
+      if (!data) return '';
+      return `<div class="cambly-item" style="margin-bottom:8px; cursor:pointer;" onclick="goTo('vocab','${lang}')">
+        <div class="cambly-item-header">
+          <span class="tag tag-${lang}">${lang === 'en' ? '🇬🇧 英文' : '🇩🇪 德文'}</span>
+          <span style="font-size:11px; color:var(--de);">到期複習</span>
+        </div>
+        <div class="cambly-item-topic">${data.article ? data.article + ' ' : ''}${data.word}</div>
+      </div>`;
+    }).join('');
+  }
+}
+
+// ============================================================
+// VOCABULARY – SCHEDULE
+// ============================================================
+// stage: 1=flip(due anytime) 2=7d 3=14d 4=30d
+function getScheduleKey(wordId, lang) { return `${lang}_${wordId}`; }
+function getSchedule(wordId, lang) {
+  const k = getScheduleKey(wordId, lang);
+  return reviewSchedule[k] || { stage: 1, nextReview: 0, correct: 0, incorrect: 0 };
+}
+function updateSchedule(wordId, lang, knew) {
+  const k = getScheduleKey(wordId, lang);
+  const s = getSchedule(wordId, lang);
+  const now = Date.now();
+  if (knew) {
+    s.correct++;
+    if (s.stage === 1) { s.stage = 2; s.nextReview = now + 7*24*60*60*1000; }
+    else if (s.stage === 2) { s.stage = 3; s.nextReview = now + 14*24*60*60*1000; }
+    else { s.stage = 4; s.nextReview = now + 30*24*60*60*1000; }
+  } else {
+    s.incorrect++;
+    s.stage = 1; s.nextReview = now + 24*60*60*1000;
+  }
+  reviewSchedule[k] = s;
+  saveData();
+}
+function getDueWords(lang) {
+  const vocab = lang === 'en' ? ENGLISH_VOCABULARY : GERMAN_VOCABULARY;
+  const now = Date.now();
+  return vocab.map(w => {
+    const s = getSchedule(w.id, lang);
+    return { wordId: w.id, stage: s.stage, nextReview: s.nextReview };
+  }).filter(w => w.nextReview <= now || w.stage === 1);
+}
+
+// ============================================================
+// VOCABULARY – UI
+// ============================================================
+function initVocab() {
+  setVocabLang(currentLang);
+}
+function setVocabLang(lang) {
+  currentLang = lang;
+  document.getElementById('lang-en-btn').classList.toggle('active', lang === 'en');
+  document.getElementById('lang-de-btn').classList.toggle('active', lang === 'de');
+  document.getElementById('vocab-title').textContent = lang === 'en' ? '英文單字' : '德文單字';
+  buildDeck(lang);
+  if (vocabMode === 'flip') renderFlashcard();
+  else renderTyping();
+}
+function buildDeck(lang) {
+  const vocab = lang === 'en' ? ENGLISH_VOCABULARY : GERMAN_VOCABULARY;
+  const now = Date.now();
+  // prioritise due words, then new/stage-1
+  let due = [], fresh = [];
+  vocab.forEach(w => {
+    const s = getSchedule(w.id, lang);
+    if (s.nextReview <= now) due.push(w);
+    else if (s.stage === 1 && s.nextReview === 0) fresh.push(w);
+  });
+  shuffle(due); shuffle(fresh);
+  currentDeck = [...due, ...fresh].slice(0, 30); // max 30 per session
+  if (currentDeck.length === 0) currentDeck = [...vocab];
+  currentCardIdx = 0;
+  cardFlipped = false;
+}
+function renderFlashcard() {
+  if (currentDeck.length === 0) return;
+  const w = currentDeck[currentCardIdx];
+  const card = document.getElementById('flashcard');
+  cardFlipped = false;
+  card.className = 'flashcard';
+  // front
+  document.getElementById('fc-article').textContent = w.article || '';
+  document.getElementById('fc-word').textContent = w.word;
+  document.getElementById('fc-pos').textContent = w.partOfSpeech || '';
+  document.getElementById('fc-back').style.display = 'none';
+  document.getElementById('fc-meaning').textContent = w.meaning || '';
+  document.getElementById('fc-example').textContent = w.example || '';
+  document.getElementById('fc-hint').textContent = '點擊翻面';
+  // tag
+  const tag = document.getElementById('fc-tag');
+  const s = getSchedule(w.id, currentLang);
+  const stageLabel = ['新單字','7天後','14天後','30天後'];
+  tag.className = 'tag ' + (currentLang === 'en' ? 'tag-en' : 'tag-de');
+  tag.textContent = stageLabel[s.stage - 1] || '新單字';
+  // progress
+  const pct = Math.round((currentCardIdx / currentDeck.length) * 100);
+  document.getElementById('fc-progress').style.width = pct + '%';
+  document.getElementById('fc-progress').className = 'progress-fill' + (currentLang === 'de' ? ' de' : '');
+  document.getElementById('fc-progress-text').textContent = `${currentCardIdx} / ${currentDeck.length}`;
+  // clear AI result
+  document.getElementById('ai-example-result').innerHTML = '';
+}
+function flipCard() {
+  const card = document.getElementById('flashcard');
+  if (!cardFlipped) {
+    cardFlipped = true;
+    card.className = 'flashcard ' + (currentLang === 'de' ? 'flipped-de' : 'flipped');
+    document.getElementById('fc-back').style.display = 'block';
+    document.getElementById('fc-hint').textContent = '左滑：不熟  右滑：認識';
+  }
+}
+function swipeCard(dir) {
+  if (!cardFlipped) { flipCard(); return; }
+  const card = document.getElementById('flashcard');
+  const w = currentDeck[currentCardIdx];
+  card.classList.add(dir === 'right' ? 'swiping-right' : 'swiping-left');
+  const knew = dir === 'right';
+  updateSchedule(w.id, currentLang, knew);
+  if (currentLang === 'en') todayStats.enFlipped++;
+  else todayStats.deFlipped++;
+  todayStats.date = new Date().toDateString();
+  saveData();
+  setTimeout(() => {
+    card.className = 'flashcard';
+    currentCardIdx++;
+    if (currentCardIdx >= currentDeck.length) {
+      showToast('🎉 本輪結束！重新開始');
+      currentCardIdx = 0;
+    }
+    renderFlashcard();
+  }, 320);
+}
+
+// touch swipe
+const fcArea = document.getElementById('flashcard-area');
+fcArea.addEventListener('touchstart', e => {
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+  isDragging = false;
+}, { passive: true });
+fcArea.addEventListener('touchmove', e => {
+  const dx = e.touches[0].clientX - touchStartX;
+  const dy = Math.abs(e.touches[0].clientY - touchStartY);
+  if (Math.abs(dx) > 10 && dy < 40) {
+    isDragging = true;
+    const card = document.getElementById('flashcard');
+    card.style.transform = `translateX(${dx}px) rotate(${dx * 0.05}deg)`;
+  }
+}, { passive: true });
+fcArea.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  const card = document.getElementById('flashcard');
+  card.style.transform = '';
+  if (isDragging && Math.abs(dx) > 60) {
+    swipeCard(dx > 0 ? 'right' : 'left');
+  } else if (!isDragging) {
+    flipCard();
+  }
+  isDragging = false;
+});
+
+// typing mode
+function toggleVocabMode() {
+  vocabMode = vocabMode === 'flip' ? 'type' : 'flip';
+  document.getElementById('flashcard-mode').style.display = vocabMode === 'flip' ? 'block' : 'none';
+  document.getElementById('typing-mode-view').style.display = vocabMode === 'type' ? 'block' : 'none';
+  document.getElementById('vocab-mode-label').textContent = vocabMode === 'flip' ? '翻牌模式' : '打字模式';
+  if (vocabMode === 'type') {
+    buildDeck(currentLang);
+    renderTyping();
+  }
+}
+function renderTyping() {
+  if (currentDeck.length === 0) return;
+  const w = currentDeck[currentCardIdx];
+  const input = document.getElementById('typing-input');
+  input.value = '';
+  input.className = 'typing-input';
+  document.getElementById('typing-feedback').innerHTML = '';
+  // show meaning, user types word
+  document.getElementById('typing-prompt').textContent = currentLang === 'en' ? '看中文，輸入英文' : '看中文，輸入德文（含定冠詞）';
+  document.getElementById('typing-word').textContent = w.meaning;
+  document.getElementById('typing-hint').textContent = w.article ? `提示：定冠詞 ${w.article}` : '';
+  const pct = Math.round((currentCardIdx / currentDeck.length) * 100);
+  document.getElementById('typing-progress').style.width = pct + '%';
+  document.getElementById('typing-progress-text').textContent = `${currentCardIdx} / ${currentDeck.length}`;
+}
+function checkTyping() {
+  if (currentDeck.length === 0) return;
+  const w = currentDeck[currentCardIdx];
+  const input = document.getElementById('typing-input');
+  const val = input.value.trim().toLowerCase();
+  const answer = (w.article ? w.article + ' ' : '') + w.word;
+  const correct = val === answer.toLowerCase() || val === w.word.toLowerCase();
+  input.className = 'typing-input ' + (correct ? 'correct' : 'wrong');
+  const fb = document.getElementById('typing-feedback');
+  if (correct) {
+    fb.innerHTML = `<div class="ai-result" style="background:var(--green-light); border-color:var(--green); color:var(--green);">✅ 正確！</div>`;
+    updateSchedule(w.id, currentLang, true);
+    if (currentLang === 'en') todayStats.enFlipped++;
+    else todayStats.deFlipped++;
+    todayStats.date = new Date().toDateString();
+    saveData();
+    setTimeout(() => { currentCardIdx++; if (currentCardIdx >= currentDeck.length) { showToast('🎉 本輪結束！'); currentCardIdx = 0; } renderTyping(); }, 1200);
+  } else {
+    fb.innerHTML = `<div class="ai-result" style="background:var(--de-light); border-color:var(--de); color:var(--de);">❌ 正確答案：<strong>${answer}</strong></div>`;
+    updateSchedule(w.id, currentLang, false);
+    saveData();
+    setTimeout(() => { currentCardIdx++; if (currentCardIdx >= currentDeck.length) { showToast('本輪結束！'); currentCardIdx = 0; } renderTyping(); }, 2000);
+  }
+}
+document.getElementById('typing-input').addEventListener('keydown', e => { if (e.key === 'Enter') checkTyping(); });
+
+// ============================================================
+// GRAMMAR
+// ============================================================
+function initGrammar() {
+  buildGrammarDeck();
+  renderGrammarCard();
+  updateGrammarStats();
+}
+function buildGrammarDeck() {
+  let pool = [...ENGLISH_GRAMMAR];
+  if (grammarFilter === 'weak') {
+    pool = pool.filter(g => !g.mastered);
+  } else if (grammarFilter !== 'all') {
+    pool = pool.filter(g => g.category === grammarFilter);
+  }
+  // weight mistakes more
+  shuffle(pool);
+  grammarItems = pool;
+  currentGrammarIdx = 0;
+}
+function setGrammarFilter(f, el) {
+  grammarFilter = f;
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  buildGrammarDeck();
+  renderGrammarCard();
+}
+function renderGrammarCard() {
+  const container = document.getElementById('grammar-card-container');
+  if (grammarItems.length === 0) {
+    container.innerHTML = `<div class="empty-state"><div class="empty-state-icon">✅</div><div class="empty-state-text">這個分類沒有題目</div></div>`;
+    return;
+  }
+  const g = grammarItems[currentGrammarIdx % grammarItems.length];
+  const catLabel = { past_tense:'過去式', subject_verb:'主詞一致', preposition:'介系詞', other:'其他' };
+  // create 3 choices (1 correct + 2 wrong from other items)
+  const others = grammarItems.filter((_, i) => i !== currentGrammarIdx % grammarItems.length);
+  shuffle(others);
+  const wrongChoices = others.slice(0, 2).map(x => x.correct);
+  const choices = shuffle([g.correct, ...wrongChoices]);
+  grammarAnswered = false;
+  container.innerHTML = `
+    <div class="grammar-card">
+      <div class="grammar-category">${catLabel[g.category] || g.category} · ${g.rule}</div>
+      <div class="grammar-question">哪一句是正確的？</div>
+      <div style="font-size:13px; color:var(--text2); margin-bottom:12px; font-style:italic;">"${g.wrong}"</div>
+      <div class="grammar-choices">
+        ${choices.map(c => `<button class="grammar-choice" onclick="answerGrammar(this, '${c.replace(/'/g,"&#39;")}', '${g.correct.replace(/'/g,"&#39;")}')">${c}</button>`).join('')}
+      </div>
+      <div class="grammar-explanation" id="grammar-exp">
+        <strong>📌 解析：</strong>${g.explanation}<br>
+        <span style="color:var(--green); font-weight:600;">✅ ${g.correct}</span>
+      </div>
+      <div id="grammar-ai-new" style="display:none;">
+        <button class="grammar-ai-btn" onclick="getAIGrammarExample('${g.id}')">✨ AI 生成新例句練習</button>
+        <div id="grammar-ai-result-${g.id}"></div>
+      </div>
+      <button class="grammar-nav-btn" id="grammar-next-btn" onclick="nextGrammar()" style="display:none;">下一題 →</button>
+    </div>`;
+}
+function answerGrammar(btn, chosen, correct) {
+  if (grammarAnswered) return;
+  grammarAnswered = true;
+  const isCorrect = chosen === correct;
+  // style all buttons
+  document.querySelectorAll('.grammar-choice').forEach(b => {
+    if (b.textContent === correct) b.classList.add('correct');
+    else if (b === btn && !isCorrect) b.classList.add('wrong');
+  });
+  // show explanation
+  document.getElementById('grammar-exp').classList.add('show');
+  document.getElementById('grammar-ai-new').style.display = 'block';
+  document.getElementById('grammar-next-btn').style.display = 'block';
+  // stats
+  if (isCorrect) grammarStats.correct++; else grammarStats.wrong++;
+  grammarStats.total = (grammarStats.total || 0) + 1;
+  todayStats.grammarPracticed++;
+  todayStats.date = new Date().toDateString();
+  saveData();
+  updateGrammarStats();
+}
+function nextGrammar() {
+  currentGrammarIdx = (currentGrammarIdx + 1) % grammarItems.length;
+  renderGrammarCard();
+}
+function refreshGrammar() { buildGrammarDeck(); renderGrammarCard(); showToast('🔄 題目已重新洗牌'); }
+function updateGrammarStats() {
+  document.getElementById('gs-correct').textContent = grammarStats.correct || 0;
+  document.getElementById('gs-wrong').textContent = grammarStats.wrong || 0;
+  document.getElementById('gs-total').textContent = grammarStats.total || 0;
+}
+
+// ============================================================
+// DIARY / RECORDS
+// ============================================================
+function initDiary() {
+  renderDiaryList();
+  renderEngooList();
+  renderCamblyList();
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('engoo-date').value = today;
+}
+function setDiaryTab(tab) {
+  diaryTab = tab;
+  ['diary','engoo','cambly'].forEach(t => {
+    document.getElementById('diary-sub-' + t).style.display = t === tab ? 'block' : 'none';
+    document.getElementById('diary-tab-' + t).classList.toggle('active', t === tab);
+  });
+}
+function submitDiary() {
+  const text = document.getElementById('diary-text').value.trim();
+  if (!text) { showToast('請先寫日記！'); return; }
+  const entry = { id: Date.now(), date: new Date().toLocaleDateString('zh-TW'), text, corrections: null };
+  diaryEntries.unshift(entry);
+  saveData();
+  document.getElementById('diary-text').value = '';
+  document.getElementById('diary-ai-result').innerHTML = '';
+  renderDiaryList();
+  showToast('✅ 日記已儲存！');
+}
+function renderDiaryList() {
+  const el = document.getElementById('diary-list');
+  if (diaryEntries.length === 0) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-icon">📝</div><div class="empty-state-text">還沒有日記</div><div class="empty-state-sub">每天寫 3 句，練習過去式！</div></div>`;
+    return;
+  }
+  el.innerHTML = diaryEntries.map(e => `
+    <div class="diary-entry">
+      <div class="diary-entry-date">${e.date}</div>
+      <div class="diary-entry-text">${escHtml(e.text)}</div>
+      ${e.corrections ? `<div class="diary-entry-corrections">${e.corrections}</div>` : ''}
+    </div>`).join('');
+}
+function submitEngoo() {
+  const title = document.getElementById('engoo-title').value.trim();
+  const date = document.getElementById('engoo-date').value;
+  const words = document.getElementById('engoo-words').value.trim();
+  if (!title) { showToast('請輸入文章標題'); return; }
+  const rec = { id: Date.now(), title, date, words };
+  engooRecords.unshift(rec);
+  saveData();
+  document.getElementById('engoo-title').value = '';
+  document.getElementById('engoo-words').value = '';
+  renderEngooList();
+  showToast('✅ 閱讀記錄已儲存！');
+}
+function renderEngooList() {
+  const el = document.getElementById('engoo-list');
+  if (engooRecords.length === 0) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-icon">📰</div><div class="empty-state-text">還沒有閱讀記錄</div></div>`;
+    return;
+  }
+  el.innerHTML = engooRecords.map(r => `
+    <div class="cambly-item">
+      <div class="cambly-item-header">
+        <span class="tag tag-en">Engoo</span>
+        <span class="cambly-item-date">${r.date}</span>
+      </div>
+      <div class="cambly-item-topic">${escHtml(r.title)}</div>
+      ${r.words ? `<div style="font-size:12px; color:var(--text3); margin-top:4px; white-space:pre-wrap;">${escHtml(r.words)}</div>` : ''}
+    </div>`).join('');
+}
+function renderCamblyList() {
+  const el = document.getElementById('cambly-list');
+  document.getElementById('cambly-count').textContent = SPEAKING_RECORDS.length;
+  el.innerHTML = [...SPEAKING_RECORDS].reverse().map(r => `
+    <div class="cambly-item">
+      <div class="cambly-item-header">
+        <span class="cambly-item-date">${r.date}</span>
+        <span class="cambly-item-tutor">${r.tutor}</span>
+      </div>
+      <div class="cambly-item-topic">${r.topic}</div>
+    </div>`).join('');
+}
+function clearDiaries() {
+  if (diaryEntries.length === 0) return;
+  if (!confirm('確定要清除所有日記嗎？')) return;
+  diaryEntries = [];
+  saveData();
+  renderDiaryList();
+}
+
+// ============================================================
+// GERMAN
+// ============================================================
+function initGerman() {
+  renderPronunciation();
+}
+function setDeTab(tab) {
+  deTab = tab;
+  document.getElementById('de-sub-pronunciation').style.display = tab === 'pronunciation' ? 'block' : 'none';
+  document.getElementById('de-sub-grammar').style.display = tab === 'grammar' ? 'block' : 'none';
+  document.getElementById('de-tab-pr').classList.toggle('active', tab === 'pronunciation');
+  document.getElementById('de-tab-grammar').classList.toggle('active', tab === 'grammar');
+}
+function renderPronunciation() {
+  const el = document.getElementById('pronunciation-list');
+  el.innerHTML = GERMAN_PRONUNCIATION.map(pr => `
+    <div class="pr-card">
+      <div class="pr-title">${pr.title}</div>
+      <div class="pr-rule">${pr.rule}</div>
+      <div class="pr-examples">
+        ${pr.examples.map(ex => `
+          <div class="pr-example">
+            <span class="pr-example-word">${ex.word}</span>
+            <span class="pr-example-pron"> [${ex.pronunciation}]</span>
+            <span class="pr-example-meaning"> ${ex.meaning}</span>
+          </div>`).join('')}
+      </div>
+      ${pr.notes ? `<div class="pr-notes">💡 ${pr.notes}</div>` : ''}
+    </div>`).join('');
+}
+
+// ============================================================
+// SETTINGS
+// ============================================================
+function initSettings() {
+  const k = getApiKey();
+  if (k) document.getElementById('api-key-input').value = k;
+  document.getElementById('settings-en-count').textContent = `共 ${ENGLISH_VOCABULARY.length} 個`;
+  document.getElementById('settings-de-count').textContent = `共 ${GERMAN_VOCABULARY.length} 個`;
+  document.getElementById('settings-grammar-count').textContent = `共 ${ENGLISH_GRAMMAR.length} 道`;
+}
+function resetToday() {
+  todayStats = { enFlipped: 0, deFlipped: 0, grammarPracticed: 0 };
+  saveData();
+  showToast('今日進度已重置');
+  updateHome();
+}
+function resetAllSchedule() {
+  if (!confirm('確定要清除所有複習排程嗎？')) return;
+  reviewSchedule = {};
+  saveData();
+  showToast('複習排程已清除');
+}
+
+// ============================================================
+// GEMINI AI
+// ============================================================
+async function callGemini(prompt) {
+  const key = getApiKey();
+  if (!key) { showToast('請先在設定中輸入 Gemini API Key'); return null; }
+  try {
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+    });
+    const data = await res.json();
+    if (data.candidates && data.candidates[0]) {
+      return data.candidates[0].content.parts[0].text;
+    }
+    return null;
+  } catch(e) {
+    console.error(e);
+    return null;
+  }
+}
+
+async function getAIExample() {
+  if (currentDeck.length === 0) return;
+  const w = currentDeck[currentCardIdx];
+  const resultEl = document.getElementById('ai-example-result');
+  resultEl.innerHTML = `<div class="ai-loading"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 生成中…</div>`;
+  const lang = currentLang === 'en' ? 'English' : 'German (A1 level)';
+  const prompt = `Generate 2 short, natural example sentences for the word "${w.word}" (${w.meaning}) in ${lang}. 
+Each sentence should be simple, practical, and help a Taiwanese learner remember this word.
+Format: 
+1. [sentence] → [Chinese translation]
+2. [sentence] → [Chinese translation]
+Only output the sentences, nothing else.`;
+  const result = await callGemini(prompt);
+  if (result) {
+    resultEl.innerHTML = `<div class="ai-result ${currentLang === 'de' ? 'de' : ''}">${result.replace(/\n/g, '<br>')}</div>`;
+  } else {
+    resultEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ 無法連線，請確認 API Key</div>`;
+  }
+}
+
+async function getAIGrammarExample(grammarId) {
+  const g = ENGLISH_GRAMMAR.find(x => x.id === grammarId);
+  if (!g) return;
+  const resultEl = document.getElementById(`grammar-ai-result-${grammarId}`);
+  resultEl.innerHTML = `<div class="ai-loading"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 生成新例句中…</div>`;
+  const prompt = `You are an English teacher for a Taiwanese learner named Christine (chemical industry analyst, ENTP, loves travel and K-pop).
+Grammar rule: "${g.rule}"
+Generate 3 NEW practice sentences related to her daily life (work/travel/food/LOL esports/skincare).
+Each sentence should be WRONG first, then show the correct version.
+Format:
+❌ [wrong sentence]
+✅ [correct sentence]
+→ [brief Chinese explanation in 1 line]
+
+Only output the 3 sets, nothing else.`;
+  const result = await callGemini(prompt);
+  if (result) {
+    resultEl.innerHTML = `<div class="ai-result">${result.replace(/\n/g, '<br>').replace(/❌/g, '<span style="color:var(--de)">❌</span>').replace(/✅/g, '<span style="color:var(--green)">✅</span>')}</div>`;
+  } else {
+    resultEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ 連線失敗</div>`;
+  }
+}
+
+async function checkDiaryAI() {
+  const text = document.getElementById('diary-text').value.trim();
+  if (!text) { showToast('請先寫日記再批改'); return; }
+  const resultEl = document.getElementById('diary-ai-result');
+  resultEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 批改中…</div>`;
+  const prompt = `You are an encouraging English teacher. A Taiwanese student named Christine wrote this diary entry:
+
+"${text}"
+
+Please:
+1. Point out grammar errors (especially past tense, subject-verb agreement, prepositions)
+2. Show correct version for each error
+3. Give 1-2 sentences of encouragement
+4. Keep response in Traditional Chinese (繁體中文) with English examples
+
+Format:
+【錯誤修正】
+❌ [wrong] → ✅ [correct] 原因：[brief explanation]
+(list all errors)
+
+【整體評價】
+[encouragement in Chinese]`;
+  const result = await callGemini(prompt);
+  if (result) {
+    resultEl.innerHTML = `<div class="ai-result">${result.replace(/\n/g, '<br>').replace(/❌/g, '<span style="color:var(--de)">❌</span>').replace(/✅/g, '<span style="color:var(--green)">✅</span>')}</div>`;
+  } else {
+    resultEl.innerHTML = `<div class="ai-result" style="color:var(--de); margin-top:10px;">❌ 連線失敗，請確認 API Key</div>`;
+  }
+}
+
+// ============================================================
+// UTILS
+// ============================================================
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
+}
+function showToast(msg, duration = 2000) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), duration);
+}
+
+// ============================================================
+// INIT
+// ============================================================
+loadData();
+updateHome();
+document.getElementById('page-vocab');
+</script>
+</body>
+</html>
