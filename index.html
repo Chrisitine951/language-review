@@ -1015,6 +1015,24 @@
           </div>
         </div>
 
+        <div class="section-header" style="margin-top:8px;"><span class="section-title">資料備份 & 轉移</span></div>
+        <div class="settings-section">
+          <div class="card" style="display:flex; flex-direction:column; gap:10px;">
+            <div style="font-size:13px; color:var(--text2); line-height:1.6;">
+              匯出後會下載一個 <strong>.json</strong> 檔案，存到 iCloud 或任何地方。<br>
+              換手機或換裝置時，用匯入還原所有資料。
+            </div>
+            <button class="settings-save-btn" onclick="exportData()" style="background:var(--green);">
+              📤 匯出所有資料
+            </button>
+            <button class="settings-save-btn" onclick="document.getElementById('import-file').click()" style="background:var(--surface2); color:var(--text);">
+              📥 匯入資料（從備份還原）
+            </button>
+            <input type="file" id="import-file" accept=".json" style="display:none;" onchange="importData(event)">
+            <div id="import-status"></div>
+          </div>
+        </div>
+
         <div class="section-header" style="margin-top:8px;"><span class="section-title">每週更新格式</span></div>
         <div class="settings-section">
           <div class="card">
@@ -1654,6 +1672,61 @@ function resetAllSchedule() {
   reviewSchedule = {};
   saveData();
   showToast('複習排程已清除');
+}
+function exportData() {
+  const exportObj = {
+    exportDate: new Date().toISOString(),
+    version: '1.0.0',
+    diaryEntries,
+    engooRecords,
+    reviewSchedule,
+    grammarStats,
+    todayStats,
+  };
+  const json = JSON.stringify(exportObj, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const dateStr = new Date().toISOString().split('T')[0];
+  a.href = url;
+  a.download = `language-review-backup-${dateStr}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('✅ 資料已匯出！');
+}
+function importData(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      // validate
+      if (!data.version || !data.exportDate) {
+        document.getElementById('import-status').innerHTML =
+          `<div style="color:var(--de); font-size:13px; margin-top:4px;">❌ 檔案格式不正確，請選擇正確的備份檔案</div>`;
+        return;
+      }
+      // restore
+      if (data.diaryEntries) diaryEntries = data.diaryEntries;
+      if (data.engooRecords) engooRecords = data.engooRecords;
+      if (data.reviewSchedule) reviewSchedule = data.reviewSchedule;
+      if (data.grammarStats) grammarStats = data.grammarStats;
+      if (data.todayStats) todayStats = data.todayStats;
+      saveData();
+      const exportDate = new Date(data.exportDate).toLocaleDateString('zh-TW');
+      document.getElementById('import-status').innerHTML =
+        `<div style="color:var(--green); font-size:13px; margin-top:4px;">✅ 匯入成功！備份日期：${exportDate}<br>日記 ${diaryEntries.length} 筆、Engoo ${engooRecords.length} 筆、複習排程已還原</div>`;
+      showToast('✅ 資料匯入成功！');
+      updateHome();
+    } catch(err) {
+      document.getElementById('import-status').innerHTML =
+        `<div style="color:var(--de); font-size:13px; margin-top:4px;">❌ 讀取失敗，請確認檔案是否正確</div>`;
+    }
+  };
+  reader.readAsText(file);
+  // reset input so same file can be selected again
+  event.target.value = '';
 }
 
 // ============================================================
