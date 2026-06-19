@@ -1272,30 +1272,55 @@ function getDueWords(lang) {
 // VOCABULARY – UI
 // ============================================================
 function initVocab() {
-  setVocabLang(currentLang);
+  const lang = currentLang;
+  document.getElementById('lang-en-btn').classList.toggle('active', lang === 'en');
+  document.getElementById('lang-de-btn').classList.toggle('active', lang === 'de');
+  document.getElementById('vocab-title').textContent = lang === 'en' ? '英文單字' : '德文單字';
+  // 只有牌組空的才重建，保留跳頁前的進度
+  if (currentDeck.length === 0) buildDeck(lang);
+  if (vocabMode === 'flip') renderFlashcard();
+  else renderTyping();
 }
 function setVocabLang(lang) {
   currentLang = lang;
   document.getElementById('lang-en-btn').classList.toggle('active', lang === 'en');
   document.getElementById('lang-de-btn').classList.toggle('active', lang === 'de');
   document.getElementById('vocab-title').textContent = lang === 'en' ? '英文單字' : '德文單字';
-  buildDeck(lang);
+  buildDeck(lang); // 語言切換一定重建
   if (vocabMode === 'flip') renderFlashcard();
   else renderTyping();
 }
 function buildDeck(lang) {
   const vocab = lang === 'en' ? ENGLISH_VOCABULARY : GERMAN_VOCABULARY;
   const now = Date.now();
-  // prioritise due words, then new/stage-1
   let due = [], fresh = [];
   vocab.forEach(w => {
     const s = getSchedule(w.id, lang);
-    if (s.nextReview <= now) due.push(w);
-    else if (s.stage === 1 && s.nextReview === 0) fresh.push(w);
+    if (s.nextReview === 0) {
+      // 全新單字，從未滑過
+      fresh.push(w);
+    } else if (s.nextReview <= now) {
+      // 已排程且到期
+      due.push(w);
+    }
   });
-  shuffle(due); shuffle(fresh);
-  currentDeck = [...due, ...fresh].slice(0, 30); // max 30 per session
-  if (currentDeck.length === 0) currentDeck = [...vocab];
+  shuffle(due);
+  shuffle(fresh);
+  // 到期的優先，新單字補到 20 張，每輪最多 20 張
+  const dueSlice = due.slice(0, 20);
+  const remaining = 20 - dueSlice.length;
+  const freshSlice = fresh.slice(0, remaining);
+  currentDeck = [...dueSlice, ...freshSlice];
+  // 如果完全沒有到期也沒有新單字，就拿最久沒複習的 20 張
+  if (currentDeck.length === 0) {
+    const allScheduled = vocab
+      .map(w => ({ w, s: getSchedule(w.id, lang) }))
+      .filter(x => x.s.nextReview > 0)
+      .sort((a, b) => a.s.nextReview - b.s.nextReview)
+      .slice(0, 20)
+      .map(x => x.w);
+    currentDeck = allScheduled.length > 0 ? allScheduled : [...vocab].slice(0, 20);
+  }
   currentCardIdx = 0;
   cardFlipped = false;
 }
@@ -1351,8 +1376,9 @@ function swipeCard(dir) {
     card.className = 'flashcard';
     currentCardIdx++;
     if (currentCardIdx >= currentDeck.length) {
-      showToast('🎉 本輪結束！重新開始');
-      currentCardIdx = 0;
+      // 本輪結束，重新建下一批（會拿到下一組新單字）
+      buildDeck(currentLang);
+      showToast('🎉 本輪結束！繼續下一批');
     }
     renderFlashcard();
   }, 320);
@@ -1472,11 +1498,21 @@ function renderGrammarCard() {
     return;
   }
   const g = grammarItems[currentGrammarIdx % grammarItems.length];
-  const catLabel = { past_tense:'過去式', subject_verb:'主詞一致', preposition:'介系詞', other:'其他' };
-  // create 3 choices (1 correct + 2 wrong from other items)
-  const others = grammarItems.filter((_, i) => i !== currentGrammarIdx % grammarItems.length);
-  shuffle(others);
-  const wrongChoices = others.slice(0, 2).map(x => x.correct);
+  const catLabel = { past_tense:'過去式', subject_verb:'主詞一致', preposition:'介系詞', other:'其他文法' };
+
+  // 優先從同類別取錯誤選項，確保選項都是完整句子
+  const sameCategory = ENGLISH_GRAMMAR.filter(x =>
+    x.id !== g.id && x.category === g.category
+  );
+  const otherCategory = ENGLISH_GRAMMAR.filter(x =>
+    x.id !== g.id && x.category !== g.category
+  );
+  shuffle(sameCategory);
+  shuffle(otherCategory);
+
+  // 同類別取2個，不夠才從其他類補
+  const wrongPool = [...sameCategory, ...otherCategory];
+  const wrongChoices = wrongPool.slice(0, 2).map(x => x.correct);
   const choices = shuffle([g.correct, ...wrongChoices]);
   grammarAnswered = false;
   container.innerHTML = `
