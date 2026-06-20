@@ -943,12 +943,40 @@
 
       <div class="lang-toggle" style="margin: 12px 16px 0;">
         <button class="lang-toggle-btn active" id="de-tab-pr" onclick="setDeTab('pronunciation')">🔤 發音規則</button>
+        <button class="lang-toggle-btn" id="de-tab-sentence" onclick="setDeTab('sentence')">💬 句型練習</button>
         <button class="lang-toggle-btn" id="de-tab-grammar" onclick="setDeTab('grammar')">📚 文法（預留）</button>
       </div>
 
       <div id="de-sub-pronunciation">
         <div class="section-header"><span class="section-title">德文發音規則</span></div>
         <div id="pronunciation-list"><!-- filled by JS --></div>
+      </div>
+
+      <div id="de-sub-sentence" style="display:none;">
+        <div class="flashcard-container" style="padding-top: 16px;">
+          <div class="flashcard-area" id="sentence-flashcard-area">
+            <div class="flashcard" id="sentence-flashcard" onclick="flipSentenceCard()">
+              <div class="flashcard-top">
+                <span class="tag tag-de" id="sentence-unit-tag">單元</span>
+              </div>
+              <div class="flashcard-word" id="sentence-de" style="font-size: 22px;">載入中…</div>
+              <div id="sentence-back" style="display:none; width:100%;">
+                <div class="flashcard-meaning" id="sentence-zh"></div>
+              </div>
+              <div class="flashcard-hint" id="sentence-hint">點擊翻面看中文</div>
+            </div>
+          </div>
+          <div class="flashcard-actions">
+            <button class="fc-btn" style="background:var(--surface2); color:var(--text2);" onclick="prevSentence()">← 上一句</button>
+            <button class="fc-btn fc-btn-know" onclick="nextSentence()">下一句 →</button>
+          </div>
+          <div class="flashcard-progress">
+            <div class="progress-bar"><div class="progress-fill de" id="sentence-progress"></div></div>
+            <span class="progress-text" id="sentence-progress-text">0 / 0</span>
+          </div>
+        </div>
+        <div class="section-header" style="margin-top: 8px;"><span class="section-title">依單元瀏覽全部句子</span></div>
+        <div id="sentence-list"><!-- filled by JS --></div>
       </div>
 
       <div id="de-sub-grammar" style="display:none;">
@@ -1052,7 +1080,7 @@
           </div>
         </div>
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Language Review App v1.0.0<br>最後更新：2026-06-13
+          Language Review App v1.1.0<br>最後更新：2026-06-20
         </div>
       </div>
     </div>
@@ -1102,6 +1130,11 @@ let vocabMode = 'flip'; // 'flip' | 'type'
 let grammarFilter = 'all';
 let diaryTab = 'diary';
 let deTab = 'pronunciation';
+
+// sentence practice state
+let sentenceDeck = [];
+let sentenceIdx = 0;
+let sentenceFlipped = false;
 
 // vocab state
 let enDeck = [];
@@ -1661,12 +1694,15 @@ function clearDiaries() {
 // ============================================================
 function initGerman() {
   renderPronunciation();
+  initSentencePractice();
 }
 function setDeTab(tab) {
   deTab = tab;
   document.getElementById('de-sub-pronunciation').style.display = tab === 'pronunciation' ? 'block' : 'none';
+  document.getElementById('de-sub-sentence').style.display = tab === 'sentence' ? 'block' : 'none';
   document.getElementById('de-sub-grammar').style.display = tab === 'grammar' ? 'block' : 'none';
   document.getElementById('de-tab-pr').classList.toggle('active', tab === 'pronunciation');
+  document.getElementById('de-tab-sentence').classList.toggle('active', tab === 'sentence');
   document.getElementById('de-tab-grammar').classList.toggle('active', tab === 'grammar');
 }
 function renderPronunciation() {
@@ -1684,6 +1720,89 @@ function renderPronunciation() {
           </div>`).join('')}
       </div>
       ${pr.notes ? `<div class="pr-notes">💡 ${pr.notes}</div>` : ''}
+    </div>`).join('');
+}
+
+// ============================================================
+// GERMAN SENTENCE PRACTICE
+// ============================================================
+function initSentencePractice() {
+  if (typeof GERMAN_SENTENCES === 'undefined' || GERMAN_SENTENCES.length === 0) {
+    sentenceDeck = [];
+    renderSentenceList();
+    return;
+  }
+  if (sentenceDeck.length === 0) {
+    sentenceDeck = [...GERMAN_SENTENCES];
+    sentenceIdx = 0;
+  }
+  renderSentenceCard();
+  renderSentenceList();
+}
+function renderSentenceCard() {
+  const area = document.getElementById('sentence-flashcard-area');
+  if (sentenceDeck.length === 0) {
+    document.getElementById('sentence-de').textContent = '尚無句型資料';
+    document.getElementById('sentence-hint').textContent = '';
+    return;
+  }
+  const s = sentenceDeck[sentenceIdx];
+  const card = document.getElementById('sentence-flashcard');
+  sentenceFlipped = false;
+  card.className = 'flashcard';
+  document.getElementById('sentence-unit-tag').textContent = s.unitTitle || `第${s.stage}階段`;
+  document.getElementById('sentence-de').textContent = s.german;
+  document.getElementById('sentence-back').style.display = 'none';
+  document.getElementById('sentence-zh').textContent = s.chinese;
+  document.getElementById('sentence-hint').textContent = '點擊翻面看中文';
+  const pct = Math.round(((sentenceIdx + 1) / sentenceDeck.length) * 100);
+  document.getElementById('sentence-progress').style.width = pct + '%';
+  document.getElementById('sentence-progress-text').textContent = `${sentenceIdx + 1} / ${sentenceDeck.length}`;
+}
+function flipSentenceCard() {
+  const card = document.getElementById('sentence-flashcard');
+  sentenceFlipped = !sentenceFlipped;
+  if (sentenceFlipped) {
+    card.className = 'flashcard flipped-de';
+    document.getElementById('sentence-back').style.display = 'block';
+    document.getElementById('sentence-hint').textContent = '點擊再翻回正面';
+  } else {
+    card.className = 'flashcard';
+    document.getElementById('sentence-back').style.display = 'none';
+    document.getElementById('sentence-hint').textContent = '點擊翻面看中文';
+  }
+}
+function nextSentence() {
+  if (sentenceDeck.length === 0) return;
+  sentenceIdx = (sentenceIdx + 1) % sentenceDeck.length;
+  renderSentenceCard();
+}
+function prevSentence() {
+  if (sentenceDeck.length === 0) return;
+  sentenceIdx = (sentenceIdx - 1 + sentenceDeck.length) % sentenceDeck.length;
+  renderSentenceCard();
+}
+function renderSentenceList() {
+  const el = document.getElementById('sentence-list');
+  if (typeof GERMAN_SENTENCES === 'undefined' || GERMAN_SENTENCES.length === 0) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-icon">💬</div><div class="empty-state-text">尚無句型資料</div></div>`;
+    return;
+  }
+  // group by unitTitle
+  const groups = {};
+  GERMAN_SENTENCES.forEach(s => {
+    const key = s.unitTitle || `第${s.stage}階段`;
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(s);
+  });
+  el.innerHTML = Object.keys(groups).map(unit => `
+    <div class="pr-card">
+      <div class="pr-title">${unit}</div>
+      ${groups[unit].map(s => `
+        <div style="padding: 8px 0; border-top: 1px solid var(--border);">
+          <div style="font-size: 14px; font-weight: 600;">${s.german}</div>
+          <div style="font-size: 13px; color: var(--text2); margin-top: 2px;">${s.chinese}</div>
+        </div>`).join('')}
     </div>`).join('');
 }
 
