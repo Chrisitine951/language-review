@@ -1,6 +1,6 @@
 // ============================================================
 // data.js — Language Review App 資料檔
-// 最後更新：2026-06-13
+// 最後更新：2026-06-20
 // 更新方式：直接修改此檔案對應區塊，主程式 app.html 不需動
 // ============================================================
 
@@ -274,21 +274,44 @@ const ENGLISH_VOCABULARY = [
   // === 第1堂補充（初次上課）===
   { id: "en209", word: "exhibition", meaning: "展覽", partOfSpeech: "n.", source: "cambly", example: "I went to the US for a business trip to attend an exhibition." },
 
-  // === 第25-26堂補充（Glynis - 家族介紹/工作介紹）===
-  { id: "en210", word: "transcript", meaning: "逐字稿", partOfSpeech: "n.", source: "cambly", example: "I read the transcript to understand the pronunciation better." },
-  { id: "en211", word: "close-knit family", meaning: "緊密團結的家庭", partOfSpeech: "phrase", source: "cambly", example: "We are a close-knit family who visit each other often." },
-  { id: "en212", word: "paternal grandmother", meaning: "父系祖母（爸爸的媽媽）", partOfSpeech: "n.", source: "cambly", example: "My paternal grandmother lives in Taipei." },
-  { id: "en213", word: "maternal grandmother", meaning: "母系祖母（媽媽的媽媽）", partOfSpeech: "n.", source: "cambly", example: "My maternal grandmother lives in Changhua." },
-  { id: "en214", word: "pass away", meaning: "過世（委婉說法）", partOfSpeech: "phrasal v.", source: "cambly", example: "My paternal grandfather passed away a long time ago." },
-  { id: "en215", word: "foster carer", meaning: "寄養家長", partOfSpeech: "n.", source: "cambly", example: "She became a foster carer to help children in need." },
-  { id: "en216", word: "assumption", meaning: "假設、臆測", partOfSpeech: "n.", source: "cambly", example: "Sorry, I made an assumption that you were from China." },
-  { id: "en217", word: "immigrate", meaning: "移民（遷入）", partOfSpeech: "v.", source: "cambly", example: "My parents immigrated to South Africa after the war." },
-  { id: "en218", word: "homesickness", meaning: "思鄉病", partOfSpeech: "n.", source: "cambly", example: "My homesickness started dwindling after I met new friends." },
-  { id: "en219", word: "presentation", meaning: "簡報、報告", partOfSpeech: "n.", source: "cambly", example: "We use PowerPoint to do the presentation for our customers." },
+  // === 第25堂補充（Glynis — 工作介紹與移民人生）===
+  { id: "en210", word: "routine report", meaning: "例行性報告", partOfSpeech: "n.", source: "cambly", example: "We need to write a routine report every month." },
+  { id: "en211", word: "annual report", meaning: "年度報告", partOfSpeech: "n.", source: "cambly", example: "The annual report summarizes the whole year's research." },
+  { id: "en212", word: "domain", meaning: "（研究）領域", partOfSpeech: "n.", source: "cambly", example: "I get excited when I research a new domain in the industry." },
+  { id: "en213", word: "immigrate", meaning: "移民", partOfSpeech: "v.", source: "cambly", example: "My parents immigrated to South Africa after the war." },
+
+  // === 第26堂補充（Glynis — 德文練習與家族介紹）===
+  { id: "en214", word: "paternal", meaning: "父系的", partOfSpeech: "adj.", source: "cambly", example: "My paternal grandmother lives in Taipei." },
+  { id: "en215", word: "maternal", meaning: "母系的", partOfSpeech: "adj.", source: "cambly", example: "My maternal grandmother lives in Changhua." },
+  { id: "en216", word: "close-knit family", meaning: "緊密的家庭關係", partOfSpeech: "phrase", source: "cambly", example: "We are a close-knit family because we grew up together." },
+  { id: "en217", word: "foster carer", meaning: "寄養家庭照顧者", partOfSpeech: "n.", source: "cambly", example: "She became a foster carer to help children whose parents can't look after them." },
+  { id: "en218", word: "trauma", meaning: "創傷", partOfSpeech: "n.", source: "cambly", example: "Many foster children have experienced trauma." },
+  { id: "en219", word: "charity", meaning: "慈善機構", partOfSpeech: "n.", source: "cambly", example: "She wants to volunteer for a charity that helps troubled teenagers." },
+  { id: "en220", word: "impulse", meaning: "衝動", partOfSpeech: "n.", source: "cambly", example: "Teenagers sometimes act on impulse without thinking it through." },
+  { id: "en221", word: "pass away", meaning: "過世（委婉說法）", partOfSpeech: "phrase", source: "cambly", example: "My paternal grandfather passed away a long time ago." },
+  { id: "en222", word: "transcript", meaning: "逐字稿、文字稿", partOfSpeech: "n.", source: "cambly", example: "Reading the transcript while listening really helps with pronunciation." },
+  { id: "en223", word: "siblings", meaning: "兄弟姊妹", partOfSpeech: "n.", source: "cambly", example: "My grandma's four children are all siblings." },
+
+  // === 第27堂補充（Lyn Rose — AI科技、杜拜旅遊、職涯與個性）===
+  { id: "en224", word: "flaunt", meaning: "炫耀、大肆展示", partOfSpeech: "v.", source: "cambly", example: "In Dubai, wealthy people flaunt their luxury cars and designer clothes." },
+  { id: "en225", word: "affordability", meaning: "負擔能力、可負擔性", partOfSpeech: "n.", source: "cambly", example: "Dubai attracts people who have the affordability to enjoy luxury." },
+  { id: "en226", word: "misinformation", meaning: "錯誤資訊（非惡意）", partOfSpeech: "n.", source: "cambly", example: "AI-powered misinformation is seen as the world's greatest short-term threat." },
+  { id: "en227", word: "verbatim", meaning: "逐字地、一字不差地", partOfSpeech: "adv./adj.", source: "cambly", example: "You can't copy AI's answer verbatim; you need to paraphrase it." },
+  { id: "en228", word: "paraphrase", meaning: "改寫、換句話說", partOfSpeech: "v./n.", source: "cambly", example: "Always paraphrase AI answers in your own words instead of copying them." },
+  { id: "en229", word: "sales pitch", meaning: "推銷話術（先打招呼再進入正題）", partOfSpeech: "n.", source: "cambly", example: "At the exhibition, I had to do a sales pitch to get companies to talk to me." },
+  { id: "en230", word: "extrovert / introvert", meaning: "外向者 / 內向者", partOfSpeech: "n.", source: "cambly", example: "I'm an extrovert by nature, but I was shy about speaking English." },
+  { id: "en231", word: "akin to", meaning: "類似於、近似", partOfSpeech: "phrase", source: "cambly", example: "My accent is more akin to American pronunciation." },
+  { id: "en232", word: "short-sighted", meaning: "短視的、目光短淺的", partOfSpeech: "adj.", source: "cambly", example: "Copying AI answers to get a good grade is very short-sighted." },
+  { id: "en233", word: "pros and cons", meaning: "優缺點、利弊", partOfSpeech: "phrase", source: "cambly", example: "There are pros and cons to using AI in your work." },
+  { id: "en234", word: "optimistic / pessimistic", meaning: "樂觀的 / 悲觀的", partOfSpeech: "adj.", source: "cambly", example: "38% of CEOs were optimistic about the global economy." },
+  { id: "en235", word: "inflation", meaning: "通貨膨脹", partOfSpeech: "n.", source: "cambly", example: "Last year the world was dealing with high inflation and rising interest rates." },
+  { id: "en236", word: "interest rate", meaning: "利率", partOfSpeech: "n.", source: "cambly", example: "Rising interest rates affect businesses and consumers." },
+  { id: "en237", word: "energy efficiency", meaning: "能源效率", partOfSpeech: "n.", source: "cambly", example: "More than 75% of executives have begun changes to increase energy efficiency." },
+  { id: "en238", word: "g'day", meaning: "嗨（澳洲口語問候，good day 的縮寫）", partOfSpeech: "phrase", source: "cambly", example: "Australians say 'g'day' instead of 'good day'." },
 ];
 
 // ============================================================
-// 英文文法題庫（從課程錯誤整理，24堂課老師修正）
+// 英文文法題庫（從課程錯誤整理，26堂課老師修正）
 // 格式：{ id, category, rule, wrong, correct, explanation, mastered }
 // ============================================================
 const ENGLISH_GRAMMAR = [
@@ -303,6 +326,8 @@ const ENGLISH_GRAMMAR = [
   { id: "gr008", category: "past_tense", rule: "現在完成進行式：I've been doing", wrong: "I already do this work past two years.", correct: "I've been doing this work for the past two years.", explanation: "從過去一直持續到現在，用 have been + V-ing。", mastered: false },
   { id: "gr009", category: "past_tense", rule: "went shopping（不是 just shopping）", wrong: "We just shopping.", correct: "We went shopping.", explanation: "shopping 前面要有動詞，正確說法是 went shopping。", mastered: false },
   { id: "gr010", category: "past_tense", rule: "plan to travel（不是 traveling）", wrong: "I plan to traveling to Korea.", correct: "I planned to travel to Korea.", explanation: "plan to 後接原形動詞 travel，不是 traveling。描述過去計畫用 planned。", mastered: false },
+  { id: "gr036", category: "past_tense", rule: "begin → began（不規則過去式）", wrong: "I just learned maybe two weeks, so I just begin.", correct: "I just learned maybe two weeks ago, so I just began.", explanation: "begin 的過去式是不規則變化 began，且需要加 ago 表示「幾週前」。", mastered: false },
+  { id: "gr037", category: "past_tense", rule: "現在完成進行式：have been doing（再加強練習）", wrong: "I already do this work two years.", correct: "I have already been doing this work for two years.", explanation: "從過去持續到現在的動作要用現在完成進行式 have been + V-ing，並加 for 表示期間長度。這和你 gr008 的錯誤是同一個模式，這個句型還需要多練習！", mastered: false },
   // === 主詞動詞一致 ===
   { id: "gr011", category: "subject_verb", rule: "one team has（單數）", wrong: "So, one team have five people.", correct: "So, one team has five people.", explanation: "one team 是第三人稱單數，have 要改成 has。", mastered: false },
   { id: "gr012", category: "subject_verb", rule: "my company has", wrong: "My company have many clients.", correct: "My company has many clients.", explanation: "My company 是單數，have → has。", mastered: false },
@@ -311,6 +336,8 @@ const ENGLISH_GRAMMAR = [
   { id: "gr015", category: "subject_verb", rule: "my parents are staying（複數進行式）", wrong: "my parents is stay in Hsinchu.", correct: "My parents are staying in Hsinchu.", explanation: "parents 是複數，is → are，進行中的狀態用 are staying。", mastered: false },
   { id: "gr016", category: "subject_verb", rule: "Taiwan has many mountains", wrong: "because Taiwan have many mountains.", correct: "because Taiwan has many mountains.", explanation: "Taiwan 是第三人稱單數，have → has。", mastered: false },
   { id: "gr017", category: "subject_verb", rule: "speaking and writing are harder", wrong: "speaking and write is more hard.", correct: "Speaking and writing are harder.", explanation: "兩個動名詞當主詞，用複數 are。比較級用 harder，不是 more hard。", mastered: false },
+  { id: "gr038", category: "subject_verb", rule: "grandma has（單數第三人稱）", wrong: "My grandma have seven grandchildren.", correct: "My grandma has seven grandchildren.", explanation: "grandma 是第三人稱單數，have 要改成 has。這是你重複出現的錯誤類型，務必多練習！", mastered: false },
+  { id: "gr039", category: "subject_verb", rule: "children are（複數動詞，注意跟上面相反方向）", wrong: "because his brother's children is also older than me.", correct: "because his brother's children are also older than me.", explanation: "children 是複數名詞，動詞要用 are，不是 is。這次方向相反——上一題是單數誤用 have，這題是複數誤用 is，要小心分辨主詞單複數。", mastered: false },
   // === 介系詞 ===
   { id: "gr018", category: "preposition", rule: "in the car（不是 on）", wrong: "Right now, it's on the car.", correct: "Right now, I'm in the car.", explanation: "在車子裡用 in，不用 on。on 是用在大型交通工具：on the bus, on the train。", mastered: false },
   { id: "gr019", category: "preposition", rule: "in the chemical industry（工作領域用 in）", wrong: "I'm an industry analyst about chemical industry.", correct: "I'm an industrial analyst in the chemical industry.", explanation: "在某個產業工作用 in the + industry。", mastered: false },
@@ -320,6 +347,9 @@ const ENGLISH_GRAMMAR = [
   { id: "gr023", category: "preposition", rule: "sensitive to（不是 for）", wrong: "sensitive for the smell.", correct: "sensitive to the smell.", explanation: "sensitive 後面固定搭配 to。", mastered: false },
   { id: "gr024", category: "preposition", rule: "famous for（不是 about）", wrong: "famous about renewable energy.", correct: "famous for renewable energy.", explanation: "famous 後面接 for，表示以某事聞名。", mastered: false },
   { id: "gr025", category: "preposition", rule: "in front of（不是 before）", wrong: "cry before your friend.", correct: "cry in front of your friends.", explanation: "在某人面前用 in front of，before 是時間上的之前。", mastered: false },
+  { id: "gr040", category: "preposition", rule: "study + 受詞（不加 about）", wrong: "I study about the chemical industry.", correct: "I study the chemical industry.", explanation: "study 是及物動詞，後面直接加受詞，不需要 about。", mastered: false },
+  { id: "gr041", category: "preposition", rule: "work as + 職稱（不是 work in）", wrong: "Actually, I work in an industrial analyst.", correct: "Actually, I work as an industrial analyst.", explanation: "描述職業要用 work as + 職稱，不是 work in。", mastered: false },
+  { id: "gr042", category: "preposition", rule: "live in + 地點", wrong: "and they are living Taipei.", correct: "and they are living in Taipei.", explanation: "live 後面接地點要加介系詞 in。", mastered: false },
   // === 冠詞 / 其他 ===
   { id: "gr026", category: "other", rule: "I was born（不是 I'm born）", wrong: "I'm born in Taiwan.", correct: "I was born in Taiwan.", explanation: "出生是過去發生的事，用過去式 was born。", mastered: false },
   { id: "gr027", category: "other", rule: "the most famous（最高級加 the）", wrong: "It's most famous company.", correct: "It's the most famous company.", explanation: "最高級前面要加定冠詞 the。", mastered: false },
@@ -331,20 +361,12 @@ const ENGLISH_GRAMMAR = [
   { id: "gr033", category: "other", rule: "gain experience（不是 do）", wrong: "Do many experience.", correct: "Gain a lot of experience.", explanation: "experience 要用 gain 或 get，不用 do。", mastered: false },
   { id: "gr034", category: "other", rule: "communicate in Chinese（不是 communication use）", wrong: "we communication use Chinese.", correct: "We communicate in Chinese.", explanation: "communication 是名詞，這裡需要動詞 communicate。語言前用介系詞 in。", mastered: false },
   { id: "gr035", category: "other", rule: "go on a business trip（不是 got）", wrong: "I got a business trip.", correct: "I went on a business trip.", explanation: "出差的固定說法是 go on a business trip。", mastered: false },
-
-  // === 第25-26堂補充（Glynis 課程）===
-  { id: "gr036", category: "subject_verb", rule: "grandma has（單數主詞）", wrong: "My grandma have seven grandchildren.", correct: "My grandma has seven grandchildren.", explanation: "grandma 是單數，have 要改成 has。這個錯誤你重複了好幾次，要特別注意！", mastered: false },
-  { id: "gr037", category: "subject_verb", rule: "she has（單數主詞）", wrong: "and she have one sister, older sister", correct: "and she has one sister, an older sister", explanation: "she 是單數，have 要改成 has。同時注意 an older sister 需要加冠詞。", mastered: false },
-  { id: "gr038", category: "subject_verb", rule: "children are（複數主詞）", wrong: "his brother's children is also older than me.", correct: "his brother's children are also older than me.", explanation: "children 是複數，is 要改成 are。", mastered: false },
-  { id: "gr039", category: "preposition", rule: "living in + 地點", wrong: "they are living Taipei.", correct: "they are living in Taipei.", explanation: "live 後面接地點要加介系詞 in，不能省略。", mastered: false },
-  { id: "gr040", category: "preposition", rule: "go back to + 地名（不加 the）", wrong: "So we will go back to the Taipei to meet them.", correct: "So we will go back to Taipei to meet them.", explanation: "城市名前面不需要加 the。", mastered: false },
-  { id: "gr041", category: "past_tense", rule: "現在進行式：I am staying（不是 I stay）", wrong: "I just finished my lunch and I stay in my grandma's house.", correct: "I just finished my lunch and I am staying in my grandma's house.", explanation: "暫時待在某處用現在進行式 am staying，和前面 finished（過去式）的時態要分清楚。", mastered: false },
-  { id: "gr042", category: "preposition", rule: "study + 受詞（不加 about）", wrong: "I study about the chemical industry.", correct: "I study the chemical industry.", explanation: "study 是及物動詞，後面直接加受詞，不需要 about。", mastered: false },
-  { id: "gr043", category: "other", rule: "work as + 職業（不加冠詞）", wrong: "Actually, I work in an industrial analyst.", correct: "Actually, I work as an industrial analyst.", explanation: "說明職業用 work as + 職業名稱，不是 work in an + 職業。", mastered: false },
-  { id: "gr044", category: "past_tense", rule: "現在完成進行式：I have been doing this for + 時間", wrong: "I already do this work two years.", correct: "I have been doing this work for two years.", explanation: "從過去持續到現在的動作，用現在完成進行式，並用 for 接時間長度。", mastered: false },
-  { id: "gr045", category: "other", rule: "graduating（動名詞，不是 graduate）", wrong: "Sometimes, because it's my first work after graduate.", correct: "Sometimes, because it's my first job after graduating.", explanation: "介系詞 after 後面要接動名詞 graduating，而且 work 改成 job 更自然。", mastered: false },
-  { id: "gr046", category: "other", rule: "for communication（不是 to communication）", wrong: "it's last chance to use English to communication.", correct: "it's the last chance to use English for communication.", explanation: "communication 是名詞，前面要用 for，且 last chance 前要加 the。", mastered: false },
-  { id: "gr047", category: "past_tense", rule: "were born（過去式被動）", wrong: "So, why are you born in South America?", correct: "So, why were you born in South Africa?", explanation: "出生是過去發生的事，be 動詞要用過去式 were。", mastered: false },
+  { id: "gr043", category: "other", rule: "被動過去式：were born（不是 are born）", wrong: "So, why are you born in South America?", correct: "So, why were you born in South America?", explanation: "be born 是被動語態，描述過去出生的事實要用過去式 were，不是現在式 are。這跟你 gr026 的「I was born」是同一個重點，這個句型反覆出現要特別注意！", mastered: false },
+  { id: "gr044", category: "other", rule: "after + 動名詞（graduating）", wrong: "Sometimes, because it's my first work after graduate.", correct: "Sometimes, because it's my first job after graduating.", explanation: "介系詞 after 後面要接動名詞（-ing），graduate 要改成 graduating；work 改成 job 更自然道地。", mastered: false },
+  { id: "gr045", category: "other", rule: "現在進行式：am staying（暫住狀態，不用現在簡單式）", wrong: "I just finished my lunch and I stay in my grandma's house.", correct: "I just finished my lunch and I am staying in my grandma's house.", explanation: "描述目前暫住、暫時的狀態要用現在進行式 am staying，而不是現在簡單式 stay。同一句中也不要混用過去式和現在式。", mastered: false },
+  { id: "gr046", category: "other", rule: "start/begin + 動名詞（-ing 形式）", wrong: "I started study for the English.", correct: "I started studying English.", explanation: "start 和 begin 後面接動詞時，要用動名詞形式（-ing），不用原形。另外 study English 不需要 'for'，直接接受詞即可。", mastered: false },
+  { id: "gr047", category: "past_tense", rule: "過去事件全程用過去式（feel→felt, it's→it was）", wrong: "At the beginning of that trip, I feel very nervous because it's my first time.", correct: "At the beginning of that trip, I felt very nervous because it was my first time.", explanation: "描述過去的經歷時，整個敘述都要維持過去式。feel→felt、it's→it was，不能中途換回現在式。這是你反覆出現的錯誤，請特別注意！", mastered: false },
+  { id: "gr048", category: "past_tense", rule: "過去的動作 + for + 時間長度（stay→stayed for）", wrong: "I went to America, stay 10 days.", correct: "I went to America and stayed for 10 days.", explanation: "stay 在這句是過去式要改 stayed；描述持續了多久的時間用 'for + 數字'（for 10 days），不能直接加數字。", mastered: false },
 ];
 
 // ============================================================
@@ -430,13 +452,50 @@ const GERMAN_VOCABULARY = [
   { id: "de068", article: "der", word: "der Tag", meaning: "日子、天", category: "time", example: "Der Tag ist schön." },
   { id: "de069", article: "das", word: "das Jahr", meaning: "年", category: "time", example: "Das Jahr 2026." },
   { id: "de070", article: "der", word: "der Monat", meaning: "月份", category: "time", example: "Der Monat Mai ist schön." },
-
-  // === 第25堂補充（Glynis 課程手寫筆記）===
-  { id: "de071", article: "", word: "Wie heißt du?", meaning: "你叫什麼名字？（非正式）", category: "greeting", example: "Wie heißt du? Ich heiße Christine." },
-  { id: "de072", article: "", word: "Wie heißen Sie?", meaning: "您叫什麼名字？（正式）", category: "greeting", example: "Wie heißen Sie? — 對長輩或第一次見面的人使用。" },
-  { id: "de073", article: "", word: "Wie geht's?", meaning: "你好嗎？", category: "greeting", example: "Wie geht's? Gut, danke!" },
-  { id: "de074", article: "", word: "Sehr gut", meaning: "非常好", category: "greeting", example: "Mir geht es sehr gut." },
-  { id: "de075", article: "das", word: "das Kind", meaning: "小孩", category: "people", example: "Das Kind spielt im Garten." },
+  // === 第26堂補充（Glynis — 德文練習）===
+  { id: "de071", article: "das", word: "das Kind", meaning: "小孩", category: "people", example: "Das Kind ist süß.", note: "中性名詞：德文歷史上小孩被視為「物」而非男/女性，所以是 das。" },
+  { id: "de072", article: "die", word: "die Häuser", meaning: "房子（複數）", category: "places", example: "Die Häuser sind groß.", note: "規則提示：德文名詞複數，定冠詞一律用 die，不論單數時是 der/die/das（單數是 das Haus）。" },
+  { id: "de073", article: "der", word: "der Umlaut", meaning: "變母音（ä, ö, ü）", category: "other", example: "Der Umlaut ist wichtig für die richtige Aussprache." },
+  // === 手寫筆記補充（CH/重音/前綴章節）===
+  { id: "de074", article: "der", word: "der Himmel", meaning: "天空", category: "nature", example: "Der Himmel ist blau." },
+  { id: "de075", article: "die", word: "die Chance", meaning: "機會", category: "other", example: "Das ist eine gute Chance." },
+  { id: "de076", article: "der", word: "der Charme", meaning: "魅力", category: "other", example: "Er hat viel Charme." },
+  { id: "de077", article: "der", word: "der Chef", meaning: "老闆", category: "people", example: "Der Chef ist nett.", note: "陰性：die Chefin（女老闆）" },
+  { id: "de078", article: "der", word: "der Chor", meaning: "合唱團", category: "other", example: "Der Chor singt schön." },
+  { id: "de079", article: "der", word: "der Charakter", meaning: "性格", category: "other", example: "Sein Charakter ist freundlich." },
+  { id: "de080", article: "der", word: "der Nationalismus", meaning: "國家主義", category: "other", example: "Nationalismus ist ein wichtiges Thema.", note: "字尾 -ismus：N. + ismus ⇒ XX主義" },
+  { id: "de081", article: "der", word: "der Lehrer", meaning: "老師", category: "people", example: "Der Lehrer ist freundlich.", note: "陰性：die Lehrerin（女老師）" },
+  { id: "de082", article: "der", word: "der Juli", meaning: "七月", category: "time", example: "Der Juli ist warm." },
+  { id: "de083", article: "", word: "haben", meaning: "有", category: "verb", example: "Ich habe ein Buch.", note: "ich 變化：ich habe（不規則動詞）" },
+  { id: "de084", article: "", word: "machen", meaning: "做", category: "verb", example: "Ich mache meine Hausaufgaben.", note: "也常用於：Urlaub machen（渡假）、Fotos machen（拍照）、Pause machen（休息）；做決定是用 treffen，不是 machen" },
+  { id: "de085", article: "", word: "lachen", meaning: "笑", category: "verb", example: "Die Kinder lachen." },
+  { id: "de086", article: "", word: "denken", meaning: "思考", category: "verb", example: "Ich denke nach." },
+  { id: "de087", article: "", word: "bringen", meaning: "帶來", category: "verb", example: "Ich bringe das Buch." },
+  { id: "de088", article: "", word: "verstehen", meaning: "理解", category: "verb", example: "Ich verstehe das nicht.", note: "不可分前綴 ver-，重音不在 ver- 上" },
+  { id: "de089", article: "", word: "beginnen", meaning: "開始", category: "verb", example: "Der Unterricht beginnt.", note: "不可分前綴 be-，重音不在 be- 上" },
+  { id: "de090", article: "", word: "aufstehen", meaning: "起床", category: "verb", example: "Ich stehe um 7 Uhr auf.", note: "可分前綴 auf-，重音在 auf- 上" },
+  { id: "de091", article: "", word: "einkaufen", meaning: "購物", category: "verb", example: "Ich gehe einkaufen.", note: "可分前綴 ein-，重音在 ein- 上" },
+  { id: "de092", article: "", word: "lang", meaning: "長的", category: "adjective", example: "Der Weg ist lang." },
+  { id: "de093", article: "", word: "nicht", meaning: "不", category: "other", example: "Ich verstehe das nicht." },
+  // === App 句型補充：家人與食物詞彙 ===
+  { id: "de094", article: "die", word: "die Tochter", meaning: "女兒", category: "people", example: "Das ist meine Tochter, Lisa." },
+  { id: "de095", article: "der", word: "der Bruder", meaning: "兄弟", category: "people", example: "Das ist mein Bruder, Max." },
+  { id: "de096", article: "der", word: "der Sohn", meaning: "兒子", category: "people", example: "Mein Sohn ist lustig!" },
+  { id: "de097", article: "der", word: "der Papa", meaning: "爸爸", category: "people", example: "Das ist mein Papa, David." },
+  { id: "de098", article: "die", word: "die Wurst", meaning: "香腸", category: "food", example: "Die Wurst ist lecker und billig!" },
+  { id: "de099", article: "das", word: "das Schnitzel", meaning: "炸肉排", category: "food", example: "Das Schnitzel ist frisch." },
+  { id: "de100", article: "die", word: "die Pizza", meaning: "披薩", category: "food", example: "Meine Pizza ist gut!" },
+  { id: "de101", article: "", word: "lustig", meaning: "有趣的", category: "adjective", example: "Mein Sohn ist lustig!" },
+  { id: "de102", article: "", word: "hungrig", meaning: "飢餓的", category: "adjective", example: "Ich bin hungrig." },
+  { id: "de103", article: "", word: "frisch", meaning: "新鮮的", category: "adjective", example: "Das Schnitzel ist frisch." },
+  { id: "de104", article: "", word: "lecker", meaning: "美味的", category: "adjective", example: "Die Wurst ist lecker!" },
+  { id: "de105", article: "", word: "billig", meaning: "便宜的", category: "adjective", example: "Die Wurst ist billig." },
+  // === 道別語（App 補充）===
+  { id: "de106", article: "", word: "Auf Wiedersehen", meaning: "再見（正式，期待下次相見）", category: "greeting", example: "Auf Wiedersehen, bis bald!" },
+  { id: "de107", article: "", word: "Bis bald", meaning: "不久後見（時間已確定，如下週）", category: "greeting", example: "Bis bald, nächste Woche!" },
+  { id: "de108", article: "", word: "Bis später", meaning: "待會見（時間不確定，可能幾小時後）", category: "greeting", example: "Bis später!" },
+  { id: "de109", article: "", word: "Bis morgen", meaning: "明天見", category: "greeting", example: "Bis morgen!" },
+  { id: "de110", article: "", word: "Bis dann", meaning: "到時候見", category: "greeting", example: "Bis dann!" },
 ];
 
 // ============================================================
@@ -463,14 +522,48 @@ const GERMAN_PRONUNCIATION = [
   { id: "pr018", title: "S：字首+母音=濁音，字尾=清音", rule: "S 在字首接母音時發濁音 [z]；在字尾時發清音 [s]。", examples: [{ word: "Sonne", pronunciation: "Zo-ne（字首）", meaning: "太陽" }, { word: "Bus", pronunciation: "Buss（字尾）", meaning: "公車" }], notes: "字首的 S 像英文 Z；字尾的 S 像注音ㄙ。" },
   { id: "pr019", title: "SCH → 永遠發 [ʃ]（英文 sh）", rule: "sch 這個組合永遠發 [ʃ]，類似英文 sh 的音。", examples: [{ word: "Schule", pronunciation: "Shoo-le", meaning: "學校" }, { word: "schön", pronunciation: "Shö-n", meaning: "漂亮的" }], notes: "SCH = SH，這個規則很固定。" },
   { id: "pr020", title: "ST / SP 字首 → [ʃt] / [ʃp]", rule: "st 和 sp 在字首時，s 要發 [ʃ]。", examples: [{ word: "Stadt", pronunciation: "Shtadt", meaning: "城市" }, { word: "spielen", pronunciation: "Shpee-len", meaning: "玩" }], notes: "只有在字首才這樣！" },
-  { id: "pr021", title: "CH①：ich 音 [ç]（e/i/ä/ö/ü/ei/ie 後）", rule: "ch 出現在 e、i、ä、ö、ü、ei、ie 之後，發軟摩擦音 [ç]。", examples: [{ word: "ich", pronunciation: "ikh（軟）", meaning: "我" }, { word: "nicht", pronunciation: "nikht（軟）", meaning: "不" }, { word: "Milch", pronunciation: "Milkh（軟）", meaning: "牛奶" }], notes: "有人說像貓咪嘶嘶聲，舌頭往前。" },
-  { id: "pr022", title: "CH②：ach 音 [x]（a/o/u/au 後）", rule: "ch 出現在 a、o、u、au 之後，發喉嚨後方的摩擦音 [x]。", examples: [{ word: "Bach", pronunciation: "Bakh（硬）", meaning: "小溪" }, { word: "machen", pronunciation: "ma-khen（硬）", meaning: "做" }], notes: "有點像清嗓子的聲音。" },
-  { id: "pr023", title: "CH③：外來語 ch → [k] 或 [ʃ]", rule: "外來語中 ch 可能發 [k]（希臘文）或 [ʃ]（法文）。", examples: [{ word: "Chaos", pronunciation: "Ka-os", meaning: "混亂" }, { word: "Chef", pronunciation: "Shef", meaning: "老闆" }], notes: "Chef 是法文外來語，Chaos 是希臘文外來語。" },
-  { id: "pr024", title: "重音：大部分德文字重音在第一音節", rule: "德文大多數詞的重音在第一個音節。外來語後綴重音在後面。", examples: [{ word: "MUTter", pronunciation: "MU-ter", meaning: "母親（重MU）" }, { word: "naTION", pronunciation: "na-TION", meaning: "國家（重TION）" }], notes: "外來語後綴（-tion/-sion）重音在後面，其他大部分重音在第一音節。" },
+  { id: "pr021", title: "CH①：ich 音 [ç]（e/i/ä/ö/ü/ei/ie 後）", rule: "ch 出現在 e、i、ä、ö、ü、ei、ie 之後，發軟摩擦音 [ç]。", examples: [{ word: "ich", pronunciation: "ikh（軟）", meaning: "我" }, { word: "nicht", pronunciation: "nikht（軟）", meaning: "不" }, { word: "Milch", pronunciation: "Milkh（軟）", meaning: "牛奶" }, { word: "leicht", pronunciation: "laikht（軟）", meaning: "容易的／輕的" }, { word: "siechen", pronunciation: "ziikhen（軟）", meaning: "因長期患病而日益虛弱" }], notes: "有人說像貓咪嘶嘶聲，舌頭往前。" },
+  { id: "pr022", title: "CH②：ach 音 [x]（a/o/u/au 後）", rule: "ch 出現在 a、o、u、au 之後，發喉嚨後方的摩擦音 [x]。", examples: [{ word: "Bach", pronunciation: "Bakh（硬）", meaning: "小溪" }, { word: "machen", pronunciation: "ma-khen（硬）", meaning: "做" }, { word: "lachen", pronunciation: "la-khen（硬）", meaning: "笑" }, { word: "Buch", pronunciation: "Bukh（硬）", meaning: "書" }], notes: "有點像清嗓子的聲音。" },
+  { id: "pr023", title: "CH③：外來語 ch → [k] 或 [ʃ]", rule: "外來語中 ch 可能發 [k]（希臘文）或 [ʃ]（法文）。", examples: [{ word: "Chaos", pronunciation: "Ka-os", meaning: "混亂" }, { word: "Chor", pronunciation: "Kor", meaning: "合唱團" }, { word: "Charakter", pronunciation: "Ka-rak-ter", meaning: "性格" }, { word: "Chef", pronunciation: "Shef", meaning: "老闆" }, { word: "Chance", pronunciation: "Shangs", meaning: "機會" }, { word: "Charme", pronunciation: "Sharm", meaning: "魅力" }], notes: "Chaos／Chor／Charakter 是希臘文外來語，發 [k]；Chef／Chance／Charme 是法文外來語，發 [ʃ]。重音通常延用外來語原本的重音位置。" },
+  { id: "pr024", title: "重音：大部分德文字重音在第一音節", rule: "德文大多數詞的重音在第一個音節。外來語後綴重音在後面。", examples: [{ word: "MUTter", pronunciation: "MU-ter", meaning: "母親（重MU）" }, { word: "LEHrer", pronunciation: "LEH-rer", meaning: "老師（重LEH）" }, { word: "SCHUle", pronunciation: "SHU-le", meaning: "學校（重SHU）" }, { word: "naTION", pronunciation: "na-TION", meaning: "國家（重TION）" }, { word: "reviSION", pronunciation: "re-vi-SION", meaning: "修訂（重SION）" }, { word: "NationaLISmus", pronunciation: "na-tsio-na-LIS-mus", meaning: "國家主義（重LIS）" }], notes: "外來語後綴（-tion/-sion/-ismus）重音在後面，其他大部分重音在第一音節。" },
+  { id: "pr025", title: "R — 喉音／小舌音的 R", rule: "德文的 R 多發小舌顫音（喉嚨後方摩擦音），和英文、中文的捲舌 R 完全不同，是台灣學習者公認最難的發音之一。", examples: [{ word: "sehr", pronunciation: "ze-eh（喉音R）", meaning: "非常" }, { word: "Tür", pronunciation: "tühr（喉音R）", meaning: "門" }], notes: "建議找德文母語人士的發音影片反覆模仿練習；不同地區（如德國南部、北部）發音也略有差異。初學重點：不要念成英文美式 R；不需要一開始就完全像德國人；可以先模仿清痰的喉嚨摩擦感覺來抓發音位置。" },
+  { id: "pr026", title: "tsch — 發 [tʃ]（接近英文 ch）", rule: "tsch 這個組合發 [tʃ]，接近英文 ch 的音。", examples: [{ word: "Deutsch", pronunciation: "doitch", meaning: "德文" }, { word: "tschüss", pronunciation: "tchüss", meaning: "再見" }], notes: "tschüss 是非正式但很通用的道別語，對任何人都能用，朋友、長輩都可以說。" },
+  { id: "pr027", title: "h①：字首的正常子音發音", rule: "h 出現在字首（不是接在母音後面延長母音時），要正常發音，類似中文的「ㄏ」。", examples: [{ word: "Haus", pronunciation: "house", meaning: "房子" }, { word: "haben", pronunciation: "hah-ben", meaning: "有（ich habe）" }], notes: "對比 pr006：h 出現在母音「後面」時不發音，只負責拉長母音（如 sehen）；但 h 在字首時是正常子音，要發出來。" },
+  { id: "pr028", title: "j — 發 [j]（接近英文 y）", rule: "j 發 [j]，接近英文字母 y 的音，不是英文 j（juice）的音。", examples: [{ word: "ja", pronunciation: "yah", meaning: "是" }, { word: "Jahr", pronunciation: "yahr", meaning: "年" }, { word: "Juli", pronunciation: "yoo-lee", meaning: "七月" }], notes: "千萬不要發成英文 j（像 juice 開頭）的音。" },
+  { id: "pr029", title: "ng — 發 [ŋ]（鼻音）", rule: "ng 整組發鼻音 [ŋ]，類似注音「ㄥ」的尾音，不要把 g 額外發出來。", examples: [{ word: "lang", pronunciation: "lung（鼻音）", meaning: "長的" }, { word: "Finger", pronunciation: "fing-er", meaning: "手指" }, { word: "bringen", pronunciation: "bring-en", meaning: "帶來" }], notes: "整個 ng 是一個鼻音單位，發音時舌根抵住軟顎。" },
+  { id: "pr030", title: "nk — 發 [ŋk]", rule: "nk 先發鼻音 [ŋ]，再接著清楚發出 [k]。", examples: [{ word: "trinken", pronunciation: "tring-ken", meaning: "喝" }, { word: "denken", pronunciation: "deng-ken", meaning: "思考" }], notes: "和 ng 的差別在於 nk 後面多了清楚的 k 音，要發出來。" },
+  { id: "pr031", title: "非重讀 e — 弱化成 [ə]", rule: "非重讀的 e（通常在字尾）會弱化成模糊的 [ə] 音，類似輕聲的「ㄜ」。", examples: [{ word: "bitte", pronunciation: "bit-tə", meaning: "請（來自 ich bitten + e 變化而來）" }, { word: "Lehrer", pronunciation: "lehr-ɐ（字尾 -er 發 /ɐ/）", meaning: "老師（陰性：die Lehrerin 女老師）" }, { word: "gehen", pronunciation: "geh-ən", meaning: "去" }], notes: "字尾 -er 常發成模糊的 /ɐ/ 音，不是英文捲舌的 er。職業名詞陰性常加 -in：der Lehrer → die Lehrerin。" },
+  { id: "pr032", title: "重音規則：不可分前綴（be-/ge-/ver-/zer-/ent-）不重讀", rule: "be-、ge-、ver-、zer-、ent- 這些不可分前綴通常不重讀，重音落在後面的字根上。", examples: [{ word: "verSTEhen", pronunciation: "fer-SHTEH-en", meaning: "理解" }, { word: "beGINnen", pronunciation: "be-GIN-nen", meaning: "開始" }], notes: "這些前綴是「不可分」的，動詞變化時前綴不會跟字根分開。" },
+  { id: "pr033", title: "重音規則：可分前綴要重讀", rule: "可分前綴（如 auf-、ein-）通常要重讀，和不可分前綴恰好相反。", examples: [{ word: "AUFstehen", pronunciation: "AUF-shteh-en", meaning: "起床" }, { word: "EINkaufen", pronunciation: "EIN-kau-fen", meaning: "購物" }], notes: "可分前綴在造句時還會分開、移到句尾，這部分等之後上到文法時會再詳細介紹。" },
 ];
 
 // ============================================================
-// Cambly 課程記錄（完整 24 堂歷史）
+// 德文句型庫（來自 App 截圖，依單元分組；單字已拆出放入 GERMAN_VOCABULARY）
+// 格式：{ id, stage, part, unitTitle, german, chinese }
+// ============================================================
+const GERMAN_SENTENCES = [
+  // === 第1階段，第2部分：介紹自己和問好 ===
+  { id: "s001", stage: 1, part: 2, unitTitle: "介紹自己和問好", german: "Hallo, ich komme aus Tokio!", chinese: "你好，我來自東京！" },
+  { id: "s002", stage: 1, part: 2, unitTitle: "介紹自己和問好", german: "Ich bin Anna, und du?", chinese: "我是安娜，你呢？" },
+  { id: "s003", stage: 1, part: 2, unitTitle: "介紹自己和問好", german: "Freut mich, David!", chinese: "很高興認識你，大衛！" },
+  { id: "s004", stage: 1, part: 2, unitTitle: "介紹自己和問好", german: "Toronto oder Paris?", chinese: "多倫多還是巴黎？" },
+  { id: "s005", stage: 1, part: 2, unitTitle: "介紹自己和問好", german: "Hallo, ich bin David!", chinese: "你好，我是大衛！" },
+  // === 第1階段，第3部分：介紹你的家人 ===
+  { id: "s006", stage: 1, part: 3, unitTitle: "介紹你的家人", german: "Das ist meine Tochter, Lisa.", chinese: "這是我的女兒，麗莎。" },
+  { id: "s007", stage: 1, part: 3, unitTitle: "介紹你的家人", german: "Hallo, das ist mein Bruder, Max.", chinese: "你好，這是我的兄弟，馬克斯。" },
+  { id: "s008", stage: 1, part: 3, unitTitle: "介紹你的家人", german: "Mein Sohn ist lustig!", chinese: "我的兒子很有趣！" },
+  { id: "s009", stage: 1, part: 3, unitTitle: "介紹你的家人", german: "Ich bin Mia.", chinese: "我是米婭。" },
+  { id: "s010", stage: 1, part: 3, unitTitle: "介紹你的家人", german: "Das ist mein Papa, David.", chinese: "這是我的爸爸，大衛。" },
+  // === 第1階段，第4部分：談論食物 ===
+  { id: "s011", stage: 1, part: 4, unitTitle: "談論食物", german: "Die Wurst ist lecker und billig!", chinese: "香腸很美味，也很便宜！" },
+  { id: "s012", stage: 1, part: 4, unitTitle: "談論食物", german: "Ich bin hungrig.", chinese: "我很餓。" },
+  { id: "s013", stage: 1, part: 4, unitTitle: "談論食物", german: "Das Schnitzel ist frisch.", chinese: "炸肉排很新鮮。" },
+  { id: "s014", stage: 1, part: 4, unitTitle: "談論食物", german: "Der Salat ist lecker!", chinese: "沙拉很美味！" },
+  { id: "s015", stage: 1, part: 4, unitTitle: "談論食物", german: "Meine Pizza ist gut!", chinese: "我的披薩很好吃！" },
+];
+
+// ============================================================
+// Cambly 課程記錄（完整 26 堂歷史）
 // ============================================================
 const SPEAKING_RECORDS = [
   { id: 1,  date: "2026/01/20", tutor: "Daniel / Jessie Mae / Mik", topic: "初次上課，自我介紹、Universal Studios" },
@@ -497,8 +590,9 @@ const SPEAKING_RECORDS = [
   { id: 22, date: "2026/06/01", tutor: "TJ",                         topic: "歐洲熱門旅遊國家 + 詞性複習" },
   { id: 23, date: "2026/06/07", tutor: "Uzma",                       topic: "化工產業介紹、碳捕捉技術、MOF 材料" },
   { id: 24, date: "2026/06/07", tutor: "Jen",                        topic: "3D 列印火箭（Terran 1）、複合材料與航太應用" },
-  { id: 25, date: "2026/06/XX", tutor: "Glynis Jaeschke",            topic: "自我介紹、家族介紹（父系/母系祖父母）、德文基礎問候複習" },
-  { id: 26, date: "2026/06/XX", tutor: "Glynis Jaeschke",            topic: "工作介紹（化工產業分析師）、Glynis 的德國/南非/英國跨國生活經歷" },
+  { id: 25, date: "2026/06/14", tutor: "Glynis Jaeschke",            topic: "工作介紹（產業分析師）、Glynis 的南非／德國／英國移民人生故事、天氣比較" },
+  { id: 26, date: "2026/06/20", tutor: "Glynis Jaeschke",            topic: "德文問候語練習、家族成員介紹（父系／母系）、Glynis 的寄養家庭照顧工作" },
+  { id: 27, date: "2026/06/21", tutor: "Lyn Rose",                   topic: "AI科技的利與弊、杜拜旅遊文化、赴美出差克服英語恐懼、個人性格（外向/內向）" },
 ];
 
 // ============================================================
@@ -521,6 +615,6 @@ const REVIEW_SCHEDULE = [];
 // ============================================================
 const APP_CONFIG = {
   version: "1.0.0",
-  lastUpdated: "2026-06-13",
+  lastUpdated: "2026-06-22",
   defaultLang: "en",
 };
