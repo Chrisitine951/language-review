@@ -1670,6 +1670,9 @@ function renderChoiceCard(g) {
   const choices = shuffle([g.correct, ...wrongChoices]);
 
   grammarAnswered = false;
+  // 把 choices 存到 window 讓 onclick 用 index 取值，避免引號衝突
+  window._grammarChoices = choices;
+  window._grammarCorrect = g.correct;
   container.innerHTML = `
     <div class="grammar-card">
       <div class="grammar-category-row" onclick="toggleRuleDetail('rule-${g.id}')">
@@ -1679,7 +1682,7 @@ function renderChoiceCard(g) {
       <div class="grammar-rule-detail" id="rule-${g.id}">${g.rule}</div>
       <div class="grammar-question">哪一句是正確的？</div>
       <div class="grammar-choices">
-        ${choices.map(c => `<button class="grammar-choice" onclick="answerGrammar(this, ${JSON.stringify(c)}, ${JSON.stringify(g.correct)})">${c}</button>`).join('')}
+        ${choices.map((c, i) => `<button class="grammar-choice" onclick="answerGrammarByIdx(this, ${i})">${c}</button>`).join('')}
       </div>
       <div class="grammar-explanation" id="grammar-exp">
         <strong>📌 解析：</strong>${g.explanation}<br>
@@ -1698,6 +1701,11 @@ function toggleRuleDetail(id) {
   if (el) el.classList.toggle('show');
 }
 
+function answerGrammarByIdx(btn, idx) {
+  const chosen = window._grammarChoices[idx];
+  const correct = window._grammarCorrect;
+  answerGrammar(btn, chosen, correct);
+}
 function answerGrammar(btn, chosen, correct) {
   if (grammarAnswered) return;
   grammarAnswered = true;
@@ -1958,12 +1966,17 @@ function renderFixStep() {
         <span class="error-word">${err.word}</span> 應該改成？
       </div>
       <div class="word-fix-choices">
-        ${choices.map(c => `<button class="word-fix-choice" onclick="answerFix(this, ${JSON.stringify(c)}, ${JSON.stringify(err.correctOptions[0])})">${c}</button>`).join('')}
+        ${(() => { window._fixChoices = choices; window._fixCorrect = err.correctOptions[0]; return choices.map((c, i) => `<button class="word-fix-choice" onclick="answerFixByIdx(this, ${i})">${c}</button>`).join(''); })()}
       </div>
       <div id="fix-feedback-${idx}"></div>
     </div>`;
 }
 
+function answerFixByIdx(btn, idx) {
+  const chosen = window._fixChoices[idx];
+  const correct = window._fixCorrect;
+  answerFix(btn, chosen, correct);
+}
 function answerFix(btn, chosen, correct) {
   if (!efState || efState.fixAnswered) return;
   efState.fixAnswered = true;
