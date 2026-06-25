@@ -356,11 +356,32 @@
     padding: 20px;
     box-shadow: var(--shadow);
   }
-  .grammar-category {
+  /* 類別標籤列：可點擊展開規則 */
+  .grammar-category-row {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .grammar-category-label {
     font-size: 11px; font-weight: 600;
     text-transform: uppercase; letter-spacing: 0.8px;
-    color: var(--text3); margin-bottom: 10px;
+    color: var(--text3);
   }
+  .grammar-rule-toggle {
+    font-size: 11px; color: var(--en);
+    font-weight: 500;
+  }
+  .grammar-rule-detail {
+    display: none;
+    font-size: 12px; color: var(--text2);
+    background: var(--en-light);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .grammar-rule-detail.show { display: block; }
   .grammar-question {
     font-size: 16px; font-weight: 600; line-height: 1.4;
     margin-bottom: 12px;
@@ -439,6 +460,101 @@
     transition: all 0.15s;
   }
   .filter-chip.active { background: var(--en); color: white; }
+
+  /* ===== 找錯誤題型樣式 ===== */
+  .error-find-badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px; font-weight: 600;
+    background: var(--amber-light); color: var(--amber);
+    margin-bottom: 10px;
+  }
+  .error-find-instruction {
+    font-size: 13px; color: var(--text2);
+    margin-bottom: 14px; line-height: 1.5;
+  }
+  .error-find-sentence {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    padding: 16px;
+    background: var(--surface2);
+    border-radius: 12px;
+    margin-bottom: 14px;
+    line-height: 1.8;
+  }
+  .word-token {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 15px; font-weight: 500;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.15s;
+    background: var(--surface);
+  }
+  .word-token:active { transform: scale(0.93); }
+  .word-token.found-error {
+    background: var(--de-light);
+    border-color: var(--de);
+    color: var(--de);
+    font-weight: 700;
+  }
+  .word-token.not-error {
+    opacity: 0.45;
+    cursor: default;
+  }
+  .word-token.punctuation {
+    background: none;
+    border: none;
+    cursor: default;
+    padding: 4px 2px;
+    color: var(--text3);
+    font-size: 15px;
+  }
+  .error-find-feedback {
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .error-find-feedback.hint {
+    background: var(--amber-light);
+    color: var(--amber);
+  }
+  .error-find-feedback.success {
+    background: var(--green-light);
+    color: var(--green);
+    font-weight: 600;
+  }
+  /* 第二步：選正確替換 */
+  .word-fix-section {
+    margin-top: 4px;
+  }
+  .word-fix-prompt {
+    font-size: 14px; font-weight: 600;
+    margin-bottom: 10px; color: var(--text);
+  }
+  .word-fix-prompt .error-word {
+    color: var(--de);
+    text-decoration: line-through;
+    margin-right: 4px;
+  }
+  .word-fix-choices {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .word-fix-choice {
+    background: var(--surface2);
+    border-radius: 10px;
+    padding: 11px 14px;
+    font-size: 14px;
+    text-align: left;
+    border: 2px solid transparent;
+    transition: all 0.15s;
+  }
+  .word-fix-choice:active { background: var(--border); }
+  .word-fix-choice.correct { background: var(--green-light); border-color: var(--green); color: var(--green); font-weight: 600; }
+  .word-fix-choice.wrong { background: var(--de-light); border-color: var(--de); color: var(--de); }
 
   /* ===== DIARY / RECORDS PAGE ===== */
   .diary-input-card {
@@ -1080,7 +1196,7 @@
           </div>
         </div>
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Language Review App v1.1.0<br>最後更新：2026-06-20
+          Language Review App v1.2.0<br>最後更新：2026-06-25
         </div>
       </div>
     </div>
@@ -1149,6 +1265,16 @@ let grammarItems = [];
 let currentGrammarIdx = 0;
 let grammarStats = { correct: 0, wrong: 0 };
 let grammarAnswered = false;
+
+// 找錯誤題型 state
+let efState = null;
+// efState = {
+//   grammarId, wrongSentence, correctSentence,
+//   errorWords: [{word, index, correctOptions:[str,...]}],
+//   foundErrors: Set of indices,
+//   currentFixIdx: number (which error we're fixing now),
+//   fixAnswered: boolean
+// }
 
 // data
 let diaryEntries = [];
@@ -1270,7 +1396,6 @@ function updateHome() {
 // ============================================================
 // VOCABULARY – SCHEDULE
 // ============================================================
-// stage: 1=flip(due anytime) 2=7d 3=14d 4=30d
 function getScheduleKey(wordId, lang) { return `${lang}_${wordId}`; }
 function getSchedule(wordId, lang) {
   const k = getScheduleKey(wordId, lang);
@@ -1309,7 +1434,6 @@ function initVocab() {
   document.getElementById('lang-en-btn').classList.toggle('active', lang === 'en');
   document.getElementById('lang-de-btn').classList.toggle('active', lang === 'de');
   document.getElementById('vocab-title').textContent = lang === 'en' ? '英文單字' : '德文單字';
-  // 只有牌組空的才重建，保留跳頁前的進度
   if (currentDeck.length === 0) buildDeck(lang);
   if (vocabMode === 'flip') renderFlashcard();
   else renderTyping();
@@ -1319,7 +1443,7 @@ function setVocabLang(lang) {
   document.getElementById('lang-en-btn').classList.toggle('active', lang === 'en');
   document.getElementById('lang-de-btn').classList.toggle('active', lang === 'de');
   document.getElementById('vocab-title').textContent = lang === 'en' ? '英文單字' : '德文單字';
-  buildDeck(lang); // 語言切換一定重建
+  buildDeck(lang);
   if (vocabMode === 'flip') renderFlashcard();
   else renderTyping();
 }
@@ -1329,22 +1453,15 @@ function buildDeck(lang) {
   let due = [], fresh = [];
   vocab.forEach(w => {
     const s = getSchedule(w.id, lang);
-    if (s.nextReview === 0) {
-      // 全新單字，從未滑過
-      fresh.push(w);
-    } else if (s.nextReview <= now) {
-      // 已排程且到期
-      due.push(w);
-    }
+    if (s.nextReview === 0) fresh.push(w);
+    else if (s.nextReview <= now) due.push(w);
   });
   shuffle(due);
   shuffle(fresh);
-  // 到期的優先，新單字補到 20 張，每輪最多 20 張
   const dueSlice = due.slice(0, 20);
   const remaining = 20 - dueSlice.length;
   const freshSlice = fresh.slice(0, remaining);
   currentDeck = [...dueSlice, ...freshSlice];
-  // 如果完全沒有到期也沒有新單字，就拿最久沒複習的 20 張
   if (currentDeck.length === 0) {
     const allScheduled = vocab
       .map(w => ({ w, s: getSchedule(w.id, lang) }))
@@ -1363,7 +1480,6 @@ function renderFlashcard() {
   const card = document.getElementById('flashcard');
   cardFlipped = false;
   card.className = 'flashcard';
-  // front
   document.getElementById('fc-article').textContent = w.article || '';
   document.getElementById('fc-word').textContent = w.word;
   document.getElementById('fc-pos').textContent = w.partOfSpeech || '';
@@ -1371,18 +1487,15 @@ function renderFlashcard() {
   document.getElementById('fc-meaning').textContent = w.meaning || '';
   document.getElementById('fc-example').textContent = w.example || '';
   document.getElementById('fc-hint').textContent = '點擊翻面';
-  // tag
   const tag = document.getElementById('fc-tag');
   const s = getSchedule(w.id, currentLang);
   const stageLabel = ['新單字','7天後','14天後','30天後'];
   tag.className = 'tag ' + (currentLang === 'en' ? 'tag-en' : 'tag-de');
   tag.textContent = stageLabel[s.stage - 1] || '新單字';
-  // progress
   const pct = Math.round((currentCardIdx / currentDeck.length) * 100);
   document.getElementById('fc-progress').style.width = pct + '%';
   document.getElementById('fc-progress').className = 'progress-fill' + (currentLang === 'de' ? ' de' : '');
   document.getElementById('fc-progress-text').textContent = `${currentCardIdx} / ${currentDeck.length}`;
-  // clear AI result
   document.getElementById('ai-example-result').innerHTML = '';
 }
 function flipCard() {
@@ -1409,7 +1522,6 @@ function swipeCard(dir) {
     card.className = 'flashcard';
     currentCardIdx++;
     if (currentCardIdx >= currentDeck.length) {
-      // 本輪結束，重新建下一批（會拿到下一組新單字）
       buildDeck(currentLang);
       showToast('🎉 本輪結束！繼續下一批');
     }
@@ -1451,10 +1563,7 @@ function toggleVocabMode() {
   document.getElementById('flashcard-mode').style.display = vocabMode === 'flip' ? 'block' : 'none';
   document.getElementById('typing-mode-view').style.display = vocabMode === 'type' ? 'block' : 'none';
   document.getElementById('vocab-mode-label').textContent = vocabMode === 'flip' ? '翻牌模式' : '打字模式';
-  if (vocabMode === 'type') {
-    buildDeck(currentLang);
-    renderTyping();
-  }
+  if (vocabMode === 'type') { buildDeck(currentLang); renderTyping(); }
 }
 function renderTyping() {
   if (currentDeck.length === 0) return;
@@ -1463,7 +1572,6 @@ function renderTyping() {
   input.value = '';
   input.className = 'typing-input';
   document.getElementById('typing-feedback').innerHTML = '';
-  // show meaning, user types word
   document.getElementById('typing-prompt').textContent = currentLang === 'en' ? '看中文，輸入英文' : '看中文，輸入德文（含定冠詞）';
   document.getElementById('typing-word').textContent = w.meaning;
   document.getElementById('typing-hint').textContent = w.article ? `提示：定冠詞 ${w.article}` : '';
@@ -1498,8 +1606,13 @@ function checkTyping() {
 document.getElementById('typing-input').addEventListener('keydown', e => { if (e.key === 'Enter') checkTyping(); });
 
 // ============================================================
-// GRAMMAR
+// GRAMMAR – 決定題型混合
 // ============================================================
+// 出題機率：60% 選正確句、40% 找錯誤（需要 API）
+function shouldUseErrorFind() {
+  return Math.random() < 0.4;
+}
+
 function initGrammar() {
   buildGrammarDeck();
   renderGrammarCard();
@@ -1512,7 +1625,6 @@ function buildGrammarDeck() {
   } else if (grammarFilter !== 'all') {
     pool = pool.filter(g => g.category === grammarFilter);
   }
-  // weight mistakes more
   shuffle(pool);
   grammarItems = pool;
   currentGrammarIdx = 0;
@@ -1524,6 +1636,10 @@ function setGrammarFilter(f, el) {
   buildGrammarDeck();
   renderGrammarCard();
 }
+
+// ============================================================
+// GRAMMAR – 選正確句（原有題型，改版）
+// ============================================================
 function renderGrammarCard() {
   const container = document.getElementById('grammar-card-container');
   if (grammarItems.length === 0) {
@@ -1531,30 +1647,39 @@ function renderGrammarCard() {
     return;
   }
   const g = grammarItems[currentGrammarIdx % grammarItems.length];
+
+  // 決定題型
+  const useErrorFind = shouldUseErrorFind() && getApiKey();
+  if (useErrorFind) {
+    renderErrorFindCard(g);
+  } else {
+    renderChoiceCard(g);
+  }
+}
+
+function renderChoiceCard(g) {
+  const container = document.getElementById('grammar-card-container');
   const catLabel = { past_tense:'過去式', subject_verb:'主詞一致', preposition:'介系詞', other:'其他文法' };
 
-  // 優先從同類別取錯誤選項，確保選項都是完整句子
-  const sameCategory = ENGLISH_GRAMMAR.filter(x =>
-    x.id !== g.id && x.category === g.category
-  );
-  const otherCategory = ENGLISH_GRAMMAR.filter(x =>
-    x.id !== g.id && x.category !== g.category
-  );
+  const sameCategory = ENGLISH_GRAMMAR.filter(x => x.id !== g.id && x.category === g.category);
+  const otherCategory = ENGLISH_GRAMMAR.filter(x => x.id !== g.id && x.category !== g.category);
   shuffle(sameCategory);
   shuffle(otherCategory);
-
-  // 同類別取2個，不夠才從其他類補
   const wrongPool = [...sameCategory, ...otherCategory];
   const wrongChoices = wrongPool.slice(0, 2).map(x => x.correct);
   const choices = shuffle([g.correct, ...wrongChoices]);
+
   grammarAnswered = false;
   container.innerHTML = `
     <div class="grammar-card">
-      <div class="grammar-category">${catLabel[g.category] || g.category} · ${g.rule}</div>
+      <div class="grammar-category-row" onclick="toggleRuleDetail('rule-${g.id}')">
+        <span class="grammar-category-label">${catLabel[g.category] || g.category}</span>
+        <span class="grammar-rule-toggle">規則 ▾</span>
+      </div>
+      <div class="grammar-rule-detail" id="rule-${g.id}">${g.rule}</div>
       <div class="grammar-question">哪一句是正確的？</div>
-      <div style="font-size:13px; color:var(--text2); margin-bottom:12px; font-style:italic;">"${g.wrong}"</div>
       <div class="grammar-choices">
-        ${choices.map(c => `<button class="grammar-choice" onclick="answerGrammar(this, '${c.replace(/'/g,"&#39;")}', '${g.correct.replace(/'/g,"&#39;")}')">${c}</button>`).join('')}
+        ${choices.map(c => `<button class="grammar-choice" onclick="answerGrammar(this, ${JSON.stringify(c)}, ${JSON.stringify(g.correct)})">${c}</button>`).join('')}
       </div>
       <div class="grammar-explanation" id="grammar-exp">
         <strong>📌 解析：</strong>${g.explanation}<br>
@@ -1567,20 +1692,23 @@ function renderGrammarCard() {
       <button class="grammar-nav-btn" id="grammar-next-btn" onclick="nextGrammar()" style="display:none;">下一題 →</button>
     </div>`;
 }
+
+function toggleRuleDetail(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.toggle('show');
+}
+
 function answerGrammar(btn, chosen, correct) {
   if (grammarAnswered) return;
   grammarAnswered = true;
   const isCorrect = chosen === correct;
-  // style all buttons
   document.querySelectorAll('.grammar-choice').forEach(b => {
     if (b.textContent === correct) b.classList.add('correct');
     else if (b === btn && !isCorrect) b.classList.add('wrong');
   });
-  // show explanation
   document.getElementById('grammar-exp').classList.add('show');
   document.getElementById('grammar-ai-new').style.display = 'block';
   document.getElementById('grammar-next-btn').style.display = 'block';
-  // stats
   if (isCorrect) grammarStats.correct++; else grammarStats.wrong++;
   grammarStats.total = (grammarStats.total || 0) + 1;
   todayStats.grammarPracticed++;
@@ -1590,13 +1718,278 @@ function answerGrammar(btn, chosen, correct) {
 }
 function nextGrammar() {
   currentGrammarIdx = (currentGrammarIdx + 1) % grammarItems.length;
+  efState = null;
   renderGrammarCard();
 }
-function refreshGrammar() { buildGrammarDeck(); renderGrammarCard(); showToast('🔄 題目已重新洗牌'); }
+function refreshGrammar() { buildGrammarDeck(); efState = null; renderGrammarCard(); showToast('🔄 題目已重新洗牌'); }
 function updateGrammarStats() {
   document.getElementById('gs-correct').textContent = grammarStats.correct || 0;
   document.getElementById('gs-wrong').textContent = grammarStats.wrong || 0;
   document.getElementById('gs-total').textContent = grammarStats.total || 0;
+}
+
+// ============================================================
+// GRAMMAR – 找錯誤題型
+// ============================================================
+async function renderErrorFindCard(g) {
+  const container = document.getElementById('grammar-card-container');
+  const catLabel = { past_tense:'過去式', subject_verb:'主詞一致', preposition:'介系詞', other:'其他文法' };
+
+  // 先顯示載入畫面
+  container.innerHTML = `
+    <div class="grammar-card">
+      <div class="grammar-category-row" onclick="toggleRuleDetail('ef-rule-${g.id}')">
+        <span class="grammar-category-label">${catLabel[g.category] || g.category}</span>
+        <span class="grammar-rule-toggle">規則 ▾</span>
+      </div>
+      <div class="grammar-rule-detail" id="ef-rule-${g.id}">${g.rule}</div>
+      <div class="error-find-badge">🔍 找錯誤模式</div>
+      <div class="ai-loading" style="margin: 8px 0 0;">
+        <div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>
+        AI 分析題目中…
+      </div>
+    </div>`;
+
+  // 呼叫 AI 分析錯誤
+  const aiData = await analyzeErrorsWithAI(g);
+
+  if (!aiData) {
+    // AI 失敗，fallback 到選正確句題型
+    renderChoiceCard(g);
+    return;
+  }
+
+  efState = {
+    grammarId: g.id,
+    grammar: g,
+    wrongSentence: g.wrong,
+    correctSentence: g.correct,
+    errorWords: aiData.errors, // [{word, index, correctOptions:[]}]
+    foundErrors: new Set(),
+    currentFixIdx: 0,
+    fixAnswered: false,
+    allFixed: false
+  };
+
+  renderErrorFindStep1(g, catLabel);
+}
+
+async function analyzeErrorsWithAI(g) {
+  const prompt = `You are analyzing grammar errors. Given a wrong sentence and its correct version, identify exactly which words are wrong and what they should be replaced with.
+
+Wrong sentence: "${g.wrong}"
+Correct sentence: "${g.correct}"
+
+Return ONLY valid JSON, no markdown, no explanation:
+{
+  "errors": [
+    {
+      "word": "the exact wrong word as it appears in the wrong sentence",
+      "index": 0,
+      "correctOptions": ["correct word", "plausible wrong option 1", "plausible wrong option 2"]
+    }
+  ]
+}
+
+Rules:
+- "index" is the 0-based position of the word in the wrong sentence (split by spaces, ignoring punctuation attached to words)
+- "correctOptions" must have exactly 3 items: first is the correct replacement, other 2 are plausible but wrong alternatives (same word type)
+- Only list words that are actually incorrect
+- If a word needs to be changed AND a different word needs to be added, treat as separate error entries
+- Return only the JSON object`;
+
+  try {
+    const key = getApiKey();
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+    });
+    const data = await res.json();
+    if (!data.candidates || !data.candidates[0]) return null;
+    let text = data.candidates[0].content.parts[0].text.trim();
+    // strip markdown fences if present
+    text = text.replace(/^```json\s*/,'').replace(/\s*```$/,'').trim();
+    const parsed = JSON.parse(text);
+    if (!parsed.errors || !Array.isArray(parsed.errors)) return null;
+    return parsed;
+  } catch(e) {
+    console.error('AI error find failed:', e);
+    return null;
+  }
+}
+
+function renderErrorFindStep1(g, catLabel) {
+  if (!efState) return;
+  const container = document.getElementById('grammar-card-container');
+  const cat = catLabel || { past_tense:'過去式', subject_verb:'主詞一致', preposition:'介系詞', other:'其他文法' };
+
+  // 把錯誤句子分詞，產生可點擊的 token
+  const sentence = efState.wrongSentence;
+  // 分割出 words 和 punctuation
+  const tokens = tokenizeSentence(sentence);
+
+  const tokensHTML = tokens.map((t, i) => {
+    if (t.isPunct) {
+      return `<span class="word-token punctuation">${t.text}</span>`;
+    }
+    return `<span class="word-token" id="wt-${i}" onclick="handleWordClick(${i}, '${escAttr(t.text)}')" data-word="${escAttr(t.text)}" data-wordidx="${t.wordIdx}">${t.text}</span>`;
+  }).join('');
+
+  const totalErrors = efState.errorWords.length;
+  const foundCount = efState.foundErrors.size;
+
+  container.innerHTML = `
+    <div class="grammar-card">
+      <div class="grammar-category-row" onclick="toggleRuleDetail('ef-rule2-${g.id}')">
+        <span class="grammar-category-label">${cat[g.category] || g.category}</span>
+        <span class="grammar-rule-toggle">規則 ▾</span>
+      </div>
+      <div class="grammar-rule-detail" id="ef-rule2-${g.id}">${g.rule}</div>
+      <div class="error-find-badge">🔍 找錯誤模式</div>
+      <div class="error-find-instruction">點擊句子中<strong>有問題的字</strong>，找出所有錯誤（共 ${totalErrors} 個）</div>
+      <div class="error-find-sentence" id="ef-sentence">${tokensHTML}</div>
+      <div id="ef-feedback"></div>
+      <div id="ef-fix-section"></div>
+      <div id="grammar-ai-new-ef" style="display:none;">
+        <button class="grammar-ai-btn" onclick="getAIGrammarExample('${g.id}')">✨ AI 生成新例句練習</button>
+        <div id="grammar-ai-result-ef-${g.id}"></div>
+      </div>
+      <button class="grammar-nav-btn" id="grammar-next-btn-ef" onclick="nextGrammar()" style="display:none;">下一題 →</button>
+    </div>`;
+}
+
+function tokenizeSentence(sentence) {
+  // Split sentence into word tokens and punctuation tokens
+  // Keep punctuation attached to words visible but separate for clicking
+  const raw = sentence.split(/(\s+)/);
+  const tokens = [];
+  let wordIdx = 0;
+  raw.forEach(part => {
+    if (/^\s+$/.test(part)) return; // skip pure whitespace
+    // Check if ends with punctuation
+    const match = part.match(/^(.*?)([.,!?;:'"()]+)$/);
+    if (match && match[1]) {
+      tokens.push({ text: match[1], isPunct: false, wordIdx: wordIdx++ });
+      tokens.push({ text: match[2], isPunct: true });
+    } else if (/^[.,!?;:'"()]+$/.test(part)) {
+      tokens.push({ text: part, isPunct: true });
+    } else {
+      tokens.push({ text: part, isPunct: false, wordIdx: wordIdx++ });
+    }
+  });
+  return tokens;
+}
+
+function handleWordClick(tokenIdx, word) {
+  if (!efState || efState.allFixed) return;
+  // 如果正在修正某個錯誤，不允許繼續點字
+  if (efState.foundErrors.size > 0 && efState.currentFixIdx < efState.errorWords.length && !efState.fixAnswered) {
+    // still fixing
+    return;
+  }
+
+  // 找這個 word 對應到哪個 errorWord
+  const wordLower = word.toLowerCase().replace(/[.,!?;:'"()]/g, '');
+  const errorMatch = efState.errorWords.find((e, idx) => {
+    return e.word.toLowerCase() === wordLower && !efState.foundErrors.has(idx);
+  });
+
+  const feedbackEl = document.getElementById('ef-feedback');
+
+  if (errorMatch) {
+    const errIdx = efState.errorWords.indexOf(errorMatch);
+    efState.foundErrors.add(errIdx);
+
+    // 標記這個 token 為已找到的錯誤
+    const tokenEl = document.getElementById(`wt-${tokenIdx}`);
+    if (tokenEl) tokenEl.classList.add('found-error');
+
+    const remaining = efState.errorWords.length - efState.foundErrors.size;
+    if (remaining > 0) {
+      feedbackEl.innerHTML = `<div class="error-find-feedback hint">✓ 找到一個錯誤！還有 ${remaining} 個，繼續找找看</div>`;
+    } else {
+      // 全找到了，進入第二步
+      feedbackEl.innerHTML = `<div class="error-find-feedback success">🎉 全部找到了！現在來修正每個錯誤</div>`;
+      // 標記所有非錯誤的字為灰色
+      document.querySelectorAll('.word-token:not(.punctuation):not(.found-error)').forEach(el => {
+        el.classList.add('not-error');
+      });
+      efState.currentFixIdx = 0;
+      efState.fixAnswered = false;
+      setTimeout(() => renderFixStep(), 400);
+    }
+  } else {
+    // 點錯了
+    feedbackEl.innerHTML = `<div class="error-find-feedback hint">這個字沒有問題，再試試看</div>`;
+    // 短暫閃爍提示
+    const tokenEl = document.getElementById(`wt-${tokenIdx}`);
+    if (tokenEl) {
+      tokenEl.style.background = 'var(--border)';
+      setTimeout(() => { tokenEl.style.background = ''; }, 600);
+    }
+  }
+}
+
+function renderFixStep() {
+  if (!efState) return;
+  const fixEl = document.getElementById('ef-fix-section');
+  const idx = efState.currentFixIdx;
+  if (idx >= efState.errorWords.length) {
+    // 全部修完，顯示解析和下一題
+    efState.allFixed = true;
+    fixEl.innerHTML = `
+      <div class="grammar-explanation show" style="margin-top:12px;">
+        <strong>📌 解析：</strong>${efState.grammar.explanation}<br>
+        <span style="color:var(--green); font-weight:600;">✅ ${efState.correctSentence}</span>
+      </div>`;
+    document.getElementById('grammar-ai-new-ef').style.display = 'block';
+    document.getElementById('grammar-next-btn-ef').style.display = 'block';
+    return;
+  }
+
+  const err = efState.errorWords[idx];
+  const choices = shuffle([...err.correctOptions]);
+  efState.fixAnswered = false;
+
+  fixEl.innerHTML = `
+    <div class="word-fix-section">
+      <div class="word-fix-prompt">
+        <span class="error-word">${err.word}</span> 應該改成？
+      </div>
+      <div class="word-fix-choices">
+        ${choices.map(c => `<button class="word-fix-choice" onclick="answerFix(this, ${JSON.stringify(c)}, ${JSON.stringify(err.correctOptions[0])})">${c}</button>`).join('')}
+      </div>
+      <div id="fix-feedback-${idx}"></div>
+    </div>`;
+}
+
+function answerFix(btn, chosen, correct) {
+  if (!efState || efState.fixAnswered) return;
+  efState.fixAnswered = true;
+
+  const isCorrect = chosen === correct;
+  document.querySelectorAll('.word-fix-choice').forEach(b => {
+    if (b.textContent === correct) b.classList.add('correct');
+    else if (b === btn && !isCorrect) b.classList.add('wrong');
+  });
+
+  if (isCorrect) {
+    grammarStats.correct++;
+  } else {
+    grammarStats.wrong++;
+  }
+  grammarStats.total = (grammarStats.total || 0) + 1;
+  todayStats.grammarPracticed++;
+  todayStats.date = new Date().toDateString();
+  saveData();
+  updateGrammarStats();
+
+  // 等一下進入下一個錯字修正
+  setTimeout(() => {
+    efState.currentFixIdx++;
+    renderFixStep();
+  }, 900);
 }
 
 // ============================================================
@@ -1788,7 +2181,6 @@ function renderSentenceList() {
     el.innerHTML = `<div class="empty-state"><div class="empty-state-icon">💬</div><div class="empty-state-text">尚無句型資料</div></div>`;
     return;
   }
-  // group by unitTitle
   const groups = {};
   GERMAN_SENTENCES.forEach(s => {
     const key = s.unitTitle || `第${s.stage}階段`;
@@ -1856,13 +2248,11 @@ function importData(event) {
   reader.onload = function(e) {
     try {
       const data = JSON.parse(e.target.result);
-      // validate
       if (!data.version || !data.exportDate) {
         document.getElementById('import-status').innerHTML =
           `<div style="color:var(--de); font-size:13px; margin-top:4px;">❌ 檔案格式不正確，請選擇正確的備份檔案</div>`;
         return;
       }
-      // restore
       if (data.diaryEntries) diaryEntries = data.diaryEntries;
       if (data.engooRecords) engooRecords = data.engooRecords;
       if (data.reviewSchedule) reviewSchedule = data.reviewSchedule;
@@ -1880,7 +2270,6 @@ function importData(event) {
     }
   };
   reader.readAsText(file);
-  // reset input so same file can be selected again
   event.target.value = '';
 }
 
@@ -1930,7 +2319,12 @@ Only output the sentences, nothing else.`;
 async function getAIGrammarExample(grammarId) {
   const g = ENGLISH_GRAMMAR.find(x => x.id === grammarId);
   if (!g) return;
-  const resultEl = document.getElementById(`grammar-ai-result-${grammarId}`);
+  // 找到對應的 result element（選正確句 or 找錯誤 各有不同 id）
+  const resultElId = document.getElementById(`grammar-ai-result-${grammarId}`)
+    ? `grammar-ai-result-${grammarId}`
+    : `grammar-ai-result-ef-${grammarId}`;
+  const resultEl = document.getElementById(resultElId);
+  if (!resultEl) return;
   resultEl.innerHTML = `<div class="ai-loading"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 生成新例句中…</div>`;
   const prompt = `You are an English teacher for a Taiwanese learner named Christine (chemical industry analyst, ENTP, loves travel and K-pop).
 Grammar rule: "${g.rule}"
@@ -1993,6 +2387,9 @@ function shuffle(arr) {
 function escHtml(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
 }
+function escAttr(s) {
+  return String(s).replace(/'/g,'&#39;').replace(/"/g,'&quot;');
+}
 function showToast(msg, duration = 2000) {
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -2005,7 +2402,6 @@ function showToast(msg, duration = 2000) {
 // ============================================================
 loadData();
 updateHome();
-document.getElementById('page-vocab');
 </script>
 </body>
 </html>
