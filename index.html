@@ -1084,12 +1084,21 @@
 
       <!-- engoo sub -->
       <div id="diary-sub-engoo" style="display:none;">
-        <div class="section-header"><span class="section-title">新增閱讀記錄</span></div>
+        <div class="section-header"><span class="section-title">✨ 貼上文章連結，AI 自動整理</span></div>
+        <div class="diary-input-card">
+          <div style="font-size:12px; color:var(--text3); line-height:1.6; margin-bottom:8px;">貼上 Engoo 文章連結 → AI 讀取文章，抽出值得學的單字與句型 → 進收集箱給你確認 → 儲存進資料庫，並自動建立閱讀記錄。</div>
+          <input class="record-input" id="engoo-url" placeholder="https://engoo.com/app/daily-news/article/…" autocapitalize="off" autocorrect="off">
+          <button class="diary-submit" style="width:100%; margin-top:4px;" onclick="analyzeEngooUrl()">✨ AI 分析文章</button>
+          <div id="engoo-analyze-status"></div>
+        </div>
+
+        <!-- 手動記錄（次要選項，收合） -->
+        <div class="section-header"><span class="section-title">或手動記錄</span></div>
         <div class="diary-input-card">
           <input class="record-input" id="engoo-title" placeholder="文章標題 (e.g. A 3D-Printed Rocket…)">
           <input class="record-input" id="engoo-date" type="date">
           <textarea class="diary-textarea" id="engoo-words" style="min-height:80px;" placeholder="不懂的單字，一行一個：&#10;orbit / 軌道"></textarea>
-          <button class="diary-submit" style="width:100%; margin-top:8px;" onclick="submitEngoo()">儲存記錄</button>
+          <button class="diary-submit" style="width:100%; margin-top:8px; background:var(--surface2); color:var(--text);" onclick="submitEngoo()">儲存手動記錄</button>
         </div>
         <div class="section-header"><span class="section-title">閱讀紀錄</span></div>
         <div id="engoo-list">
@@ -1371,7 +1380,7 @@
           </div>
         </div>
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Language Review App v1.4.0<br>最後更新：2026-07-09（雅思導向＋字根教室＋自動同步＋德文文法練習）
+          Language Review App v1.4.1<br>最後更新：2026-07-09（修正找錯誤卡死＋Engoo貼連結自動整理）
         </div>
       </div>
     </div>
@@ -2709,8 +2718,9 @@ function tokenizeSentence(sentence) {
 
 function handleWordClick(el) {
   if (!efState || efState.allFixed) return;
-  // 如果正在修正某個錯誤，不允許繼續點字
-  if (efState.foundErrors.size > 0 && efState.currentFixIdx < efState.errorWords.length && !efState.fixAnswered) {
+  // 修正階段（所有錯誤都已找到）才鎖定點字；還在找錯誤時可以繼續點
+  // ⚠️ 修過的 bug：之前的條件在「找到第一個錯誤後」就把後續點擊全擋掉了
+  if (efState.foundErrors.size >= efState.errorWords.length) {
     return;
   }
   const tokenIdx = parseInt(el.dataset.tokenidx, 10);
@@ -2865,6 +2875,82 @@ function renderDiaryList() {
       ${e.corrections ? `<div class="diary-entry-corrections">${e.corrections}</div>` : ''}
     </div>`).join('');
 }
+// ============================================================
+// Engoo：貼連結 → AI 讀文章自動整理單字與句型
+// 使用 Gemini 的 url_context 工具讓 AI 自己去讀網頁（瀏覽器直接抓會被 CORS 擋）
+// 流程：分析 → 結果進收集箱（可編輯確認）→ 儲存到 GitHub → 同時自動建立閱讀記錄
+// ============================================================
+async function analyzeEngooUrl() {
+  const urlInput = document.getElementById('engoo-url');
+  const url = urlInput.value.trim();
+  const statusEl = document.getElementById('engoo-analyze-status');
+  if (!url || !/^https?:\/\//.test(url)) { showToast('請貼上完整的文章網址（http 開頭）'); return; }
+
+  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 正在讀文章並整理，約需 15–30 秒…</div>`;
+
+  const prompt = `Read this article: ${url}
+
+You are helping Christine, a Taiwanese IELTS learner (target band 6.5-7.0, chemical industry analyst). Extract learning content from the article.
+
+Return ONLY valid JSON, no markdown fences:
+{
+  "title": "article title",
+  "vocab": [
+    { "word": "...", "meaning": "繁體中文意思", "partOfSpeech": "n./v./adj./adv./phrase", "example": "the sentence from the article containing this word" }
+  ],
+  "grammar": [
+    { "category": "past_tense/subject_verb/preposition/other", "rule": "這個句型的簡短名稱（繁體中文）", "wrong": "a plausible learner-error version of a sentence from the article", "correct": "the correct sentence from the article", "explanation": "繁體中文解釋這個句型為什麼值得學" }
+  ]
+}
+
+Rules:
+- vocab: pick 6-10 words/phrases worth learning at IELTS 6.0-7.0 level (skip basic words she'd already know; prefer academic words, collocations, and topic vocabulary)
+- grammar: pick 1-3 sentences with structures worth learning (e.g. passive voice, relative clauses, comparisons); create the "wrong" version by introducing a typical Taiwanese learner mistake
+- All meanings/explanations in Traditional Chinese
+- If you cannot access the URL, return {"title":"","vocab":[],"grammar":[]}`;
+
+  // url_context 工具：讓 Gemini 伺服器端去抓網頁內容
+  const result = await callGemini(prompt, { tools: [{ url_context: {} }] });
+  if (!result.ok) {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${escHtml(result.error)}<br><span style="color:var(--text3);">若一直失敗，可改用「收集箱」貼上文章內文分析。</span></div>`;
+    return;
+  }
+  let parsed;
+  try { parsed = JSON.parse(result.text.replace(/^```json\s*/,'').replace(/^```\s*/,'').replace(/\s*```$/,'').trim()); }
+  catch(e) {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ AI 回傳格式異常，請再按一次</div>`;
+    return;
+  }
+  const vocab = parsed.vocab || [];
+  const grammar = parsed.grammar || [];
+  if (vocab.length === 0 && grammar.length === 0) {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ AI 讀不到這個網址的內容（可能需要登入才能看）。可改用「收集箱」貼上文章內文分析。</div>`;
+    return;
+  }
+
+  // 1) 內容進收集箱（走既有的確認→儲存流程），標記來源 engoo
+  vocab.forEach(v => inboxItems.push({ type: 'en_vocab', word: v.word || '', meaning: v.meaning || '', partOfSpeech: v.partOfSpeech || '', example: v.example || '', source: 'engoo' }));
+  grammar.forEach(g => inboxItems.push({ type: 'en_grammar', category: g.category || 'other', rule: g.rule || '', wrong: g.wrong || '', correct: g.correct || '', explanation: g.explanation || '', source: 'engoo' }));
+
+  // 2) 自動建立閱讀記錄（標題＋日期＋單字摘要）
+  const rec = {
+    id: Date.now(),
+    title: parsed.title || url,
+    date: new Date().toISOString().split('T')[0],
+    words: vocab.map(v => `${v.word} / ${v.meaning}`).join('\n'),
+    url: url,
+  };
+  engooRecords.unshift(rec);
+  saveData();
+  renderEngooList();
+  renderInboxList();
+  urlInput.value = '';
+
+  statusEl.innerHTML = `<div class="ai-result" style="color:var(--green);">✅ 整理完成：${vocab.length} 個單字、${grammar.length} 個句型，已加入收集箱。<br>閱讀記錄也已自動建立。</div>
+    <button class="settings-save-btn" onclick="setDiaryTab('inbox')">📥 前往收集箱確認並儲存</button>`;
+  showToast('✅ 已加入收集箱，請確認後儲存');
+}
+
 function submitEngoo() {
   const title = document.getElementById('engoo-title').value.trim();
   const date = document.getElementById('engoo-date').value;
@@ -3477,17 +3563,19 @@ function importData(event) {
 // 回傳 { ok: true, text } 或 { ok: false, error }
 // 錯誤訊息會包含 Google 回傳的原因，方便除錯
 // ============================================================
-async function callGemini(parts) {
+async function callGemini(parts, extra) {
   const key = getApiKey();
   if (!key) return { ok: false, error: '請先在「設定」中輸入 Gemini API Key' };
   // 向下相容：如果傳進來是字串，包成 parts 格式
   if (typeof parts === 'string') parts = [{ text: parts }];
   const model = getGeminiModel();
+  // extra 可放額外的請求參數，例如 { tools: [{ url_context: {} }] } 讓 Gemini 自己去讀網址
+  const requestBody = Object.assign({ contents: [{ parts: parts }] }, extra || {});
   try {
     const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ contents: [{ parts: parts }] })
+      body: JSON.stringify(requestBody)
     });
     const data = await res.json();
     if (!res.ok) {
