@@ -1,6 +1,6 @@
 // ============================================================
 // data.js — Language Review App 資料檔
-// 最後更新：2026-06-20
+// 最後更新：2026-07-09
 // 更新方式：直接修改此檔案對應區塊，主程式 app.html 不需動
 // ============================================================
 
@@ -308,6 +308,31 @@ const ENGLISH_VOCABULARY = [
   { id: "en236", word: "interest rate", meaning: "利率", partOfSpeech: "n.", source: "cambly", example: "Rising interest rates affect businesses and consumers." },
   { id: "en237", word: "energy efficiency", meaning: "能源效率", partOfSpeech: "n.", source: "cambly", example: "More than 75% of executives have begun changes to increase energy efficiency." },
   { id: "en238", word: "g'day", meaning: "嗨（澳洲口語問候，good day 的縮寫）", partOfSpeech: "phrase", source: "cambly", example: "Australians say 'g'day' instead of 'good day'." },
+
+  // === 第28堂補充（TJ — AI 應用、Engoo 理財文章 Saving Money Is Easier With Goals）===
+  { id: "en239", word: "digital closet", meaning: "數位衣櫥（也可說 online closet）", partOfSpeech: "n.", source: "cambly", example: "I built a digital closet where I upload pictures of my clothes." },
+  { id: "en240", word: "prompt", meaning: "提示詞、給 AI 的指令", partOfSpeech: "n.", source: "cambly", example: "You have to write clear prompts to get what you want from AI." },
+  { id: "en241", word: "annual membership", meaning: "年費會員資格", partOfSpeech: "n.", source: "cambly", example: "I bought an annual membership for Claude." },
+  { id: "en242", word: "experienced", meaning: "有經驗的（不是 older）", partOfSpeech: "adj.", source: "cambly", example: "They are more experienced players, so they teach me how to play." },
+  { id: "en243", word: "finance", meaning: "金融、財務", partOfSpeech: "n.", source: "engoo", example: "The finance minister will announce the government's new project tomorrow." },
+  { id: "en244", word: "back up", meaning: "以事實或證據支持", partOfSpeech: "phrasal v.", source: "engoo", example: "There is no scientific evidence to back up your claims." },
+  { id: "en245", word: "proportion", meaning: "比例（整體中的一部分）", partOfSpeech: "n.", source: "engoo", example: "The proportion of those with clear goals who saved regularly was 75%." },
+  { id: "en246", word: "debt", meaning: "債務（b 不發音，唸 /dɛt/）", partOfSpeech: "n.", source: "engoo", example: "We had to take on a lot of debt to buy our house." },
+  { id: "en247", word: "owe", meaning: "欠（錢）", partOfSpeech: "v.", source: "cambly", example: "If I owe you money, I have to give you money.", note: "owe（欠）vs own（擁有）只差一個字母，意思完全不同！" },
+  { id: "en248", word: "own", meaning: "擁有", partOfSpeech: "v.", source: "cambly", example: "They own the house, but they still owe the bank money." },
+  { id: "en249", word: "mortgage", meaning: "房貸", partOfSpeech: "n.", source: "cambly", example: "When you buy a house, you have to pay the mortgage." },
+  { id: "en250", word: "expense", meaning: "開銷、花費", partOfSpeech: "n.", source: "engoo", example: "I live quite far from the office, so travel is a significant expense." },
+  { id: "en251", word: "automatic", meaning: "自動的", partOfSpeech: "adj.", source: "engoo", example: "She recommended setting up an automatic transfer to a savings account." },
+  { id: "en252", word: "configure", meaning: "設定（動詞；名詞是 configuration）", partOfSpeech: "v.", source: "cambly", example: "You just need to configure the amount, and it buys the stock automatically." },
+  { id: "en253", word: "strict", meaning: "嚴格的", partOfSpeech: "adj.", source: "engoo", example: "I am not strict when it comes to budgeting and saving." },
+  { id: "en254", word: "budgeting", meaning: "編列預算、控管開支", partOfSpeech: "n.", source: "engoo", example: "How strict are you when it comes to budgeting and saving?" },
+  { id: "en255", word: "emergency fund", meaning: "緊急預備金", partOfSpeech: "n.", source: "engoo", example: "An emergency fund is money for something unexpected, like a medical situation." },
+  { id: "en256", word: "financial literacy", meaning: "理財知識、金融素養", partOfSpeech: "n.", source: "engoo", example: "Do you think financial literacy should be taught in schools?" },
+  { id: "en257", word: "decade", meaning: "十年", partOfSpeech: "n.", source: "engoo", example: "The proportion of greenhouse gases has been rising over the last few decades." },
+  { id: "en258", word: "contraction", meaning: "縮寫形（如 weren't、I'm）", partOfSpeech: "n.", source: "cambly", example: "Don't forget contractions when reading: 'were not' becomes 'weren't'." },
+  { id: "en259", word: "pay yourself first", meaning: "先支付自己（先存錢再花錢的理財原則）", partOfSpeech: "phrase", source: "cambly", example: "The best money advice I've heard is: pay yourself first." },
+  { id: "en260", word: "achieve a goal", meaning: "達成目標（不是 attend）", partOfSpeech: "phrase", source: "cambly", example: "You need to save that money to achieve your goals." },
+  { id: "en261", word: "high-risk investing", meaning: "高風險投資", partOfSpeech: "n.", source: "cambly", example: "If you want to do some high-risk investing, you need to know you might lose money." },
 ];
 
 // ============================================================
@@ -367,6 +392,13 @@ const ENGLISH_GRAMMAR = [
   { id: "gr046", category: "other", rule: "start/begin + 動名詞（-ing 形式）", wrong: "I started study for the English.", correct: "I started studying English.", explanation: "start 和 begin 後面接動詞時，要用動名詞形式（-ing），不用原形。另外 study English 不需要 'for'，直接接受詞即可。", mastered: false },
   { id: "gr047", category: "past_tense", rule: "過去事件全程用過去式（feel→felt, it's→it was）", wrong: "At the beginning of that trip, I feel very nervous because it's my first time.", correct: "At the beginning of that trip, I felt very nervous because it was my first time.", explanation: "描述過去的經歷時，整個敘述都要維持過去式。feel→felt、it's→it was，不能中途換回現在式。這是你反覆出現的錯誤，請特別注意！", mastered: false },
   { id: "gr048", category: "past_tense", rule: "過去的動作 + for + 時間長度（stay→stayed for）", wrong: "I went to America, stay 10 days.", correct: "I went to America and stayed for 10 days.", explanation: "stay 在這句是過去式要改 stayed；描述持續了多久的時間用 'for + 數字'（for 10 days），不能直接加數字。", mastered: false },
+  // === 第28堂（TJ — AI 話題與理財文章）===
+  { id: "gr049", category: "other", rule: "I'm not surprised（be + 形容詞，不是 didn't）", wrong: "I didn't surprise because I am one of that many people.", correct: "I'm not surprised because I am one of those people.", explanation: "surprised 是形容詞，表達「我不驚訝」要用 be 動詞否定：I'm not surprised，不能用 didn't surprise（那會變成「我沒有使人驚訝」）。", mastered: false },
+  { id: "gr050", category: "other", rule: "avoid + 動名詞（不是 avoid to）", wrong: "If you want to make more money, you can't avoid to borrow money.", correct: "If you want to make more money, you can't avoid borrowing money.", explanation: "avoid 後面接動詞時固定用動名詞（-ing）：avoid borrowing。這和 gr046 的 start studying 是同一類規則（動詞 + V-ing）。", mastered: false },
+  { id: "gr051", category: "other", rule: "produce（動詞）vs product（名詞）", wrong: "I need to product many report.", correct: "I need to produce many reports.", explanation: "product 是名詞（產品），動詞是 produce（製作、產出）。另外 report 可數，many 後面要加複數 reports。這堂課你說了好幾次 product 當動詞，要特別注意！", mastered: false },
+  { id: "gr052", category: "other", rule: "spend a lot of time（time 不可數，不是 many times）", wrong: "I spend many times in Korea.", correct: "I spend a lot of time in Korea.", explanation: "表示「花很多時間」時 time 是不可數名詞，用 a lot of time 或 much time。times（複數）意思會變成「很多次」。", mastered: false },
+  { id: "gr053", category: "other", rule: "achieve your goals（不是 attend）", wrong: "You need to save your money to attend that goal.", correct: "You need to save that money to achieve your goals.", explanation: "「達成目標」的固定搭配是 achieve a goal。attend 是「出席、參加」（attend a meeting）。", mastered: false },
+  { id: "gr054", category: "other", rule: "buy/have + 名詞（membership），不是 pay the version", wrong: "I pay the annual version.", correct: "I bought an annual membership.", explanation: "訂閱制服務的說法是 buy/have a membership 或 subscription。描述已完成的購買用過去式 bought。", mastered: false },
 ];
 
 // ============================================================
@@ -496,6 +528,63 @@ const GERMAN_VOCABULARY = [
   { id: "de108", article: "", word: "Bis später", meaning: "待會見（時間不確定，可能幾小時後）", category: "greeting", example: "Bis später!" },
   { id: "de109", article: "", word: "Bis morgen", meaning: "明天見", category: "greeting", example: "Bis morgen!" },
   { id: "de110", article: "", word: "Bis dann", meaning: "到時候見", category: "greeting", example: "Bis dann!" },
+  // === 第28批補充（問路情境 + 格位文法練習 + 作文批改單字）===
+  { id: "de111", article: "der", word: "der Bahnhof", meaning: "火車站", category: "places", example: "Wo ist der Bahnhof?" },
+  { id: "de112", article: "der", word: "der Park", meaning: "公園", category: "places", example: "Der Park ist da drüben." },
+  { id: "de113", article: "das", word: "das Hotel", meaning: "酒店、飯店", category: "places", example: "Das Hotel ist klein und billig." },
+  { id: "de114", article: "das", word: "das Café", meaning: "咖啡館", category: "places", example: "Hallo, wo ist das Café?" },
+  { id: "de115", article: "", word: "da drüben", meaning: "在那邊", category: "other", example: "Der Park ist da drüben." },
+  { id: "de116", article: "das", word: "das Hobby", meaning: "興趣", category: "other", example: "Meine Hobbys sind Singen und Schwimmen.", note: "複數形式：Hobbys" },
+  { id: "de117", article: "das", word: "das Singen", meaning: "唱歌（動詞名詞化）", category: "verb", example: "Singen macht Spaß.", note: "動詞 singen 名詞化後首字大寫、加冠詞 das" },
+  { id: "de118", article: "das", word: "das Schwimmen", meaning: "游泳（動詞名詞化）", category: "verb", example: "Ich genieße das Schwimmen.", note: "動詞 schwimmen 名詞化後首字大寫、加冠詞 das" },
+  { id: "de119", article: "", word: "schwarz", meaning: "黑色的", category: "adjective", example: "Ich habe schwarze Haare." },
+  { id: "de120", article: "", word: "braun", meaning: "棕色的", category: "adjective", example: "Ich habe braune Augen." },
+  { id: "de121", article: "die", word: "die Forschung", meaning: "研究", category: "other", example: "Ich arbeite an einem Forschungsinstitut.", note: "動詞：forschen（做研究）" },
+  { id: "de122", article: "der", word: "der Forscher / die Forscherin", meaning: "研究員／女研究員", category: "people", example: "Ich bin Forscherin.", note: "女性說話者要用陰性形式 Forscherin，不能用 Forscher" },
+  { id: "de123", article: "das", word: "das Forschungsinstitut", meaning: "研究機構", category: "places", example: "Ich arbeite derzeit an einem Forschungsinstitut." },
+  { id: "de124", article: "der", word: "der Ingenieur / die Ingenieurin", meaning: "工程師／女工程師", category: "people", example: "Sie arbeitet als Ingenieurin." },
+  { id: "de125", article: "die", word: "die Qualitätssicherungsingenieurin", meaning: "品質保證工程師（女性）", category: "people", example: "Meine Mutter arbeitet als Qualitätssicherungsingenieurin." },
+  { id: "de126", article: "der", word: "der Kontakt", meaning: "聯絡", category: "other", example: "Wir haben weniger Kontakt.", note: "動詞：kontaktieren（聯絡某人）" },
+  { id: "de127", article: "das", word: "das Verhältnis", meaning: "關係", category: "other", example: "Früher hatten wir ein sehr gutes Verhältnis." },
+  { id: "de128", article: "", word: "ziehen", meaning: "搬家、移動", category: "verb", example: "Er ist nach Taipeh gezogen.", note: "衍生詞：umziehen（搬家）" },
+  { id: "de129", article: "der", word: "der Ruhestand", meaning: "退休生活", category: "other", example: "Mein Vater ist im Ruhestand." },
+  { id: "de130", article: "", word: "genießen", meaning: "享受", category: "verb", example: "Ich genieße das Wochenende." },
+  { id: "de131", article: "die", word: "die Eltern", meaning: "父母（複數名詞）", category: "people", example: "Meine Eltern leben in Hsinchu." },
+  { id: "de132", article: "", word: "Taiwaner / Taiwanerin", meaning: "台灣男性／台灣女性", category: "people", example: "Er ist Taiwaner. Sie ist Taiwanerin." },
+  { id: "de133", article: "die", word: "die Fuhoustraße", meaning: "福後街（街道名稱，陰性名詞）", category: "places", example: "Ihre Adresse ist Fuhoustraße 45." },
+  { id: "de134", article: "der", word: "der Affe / die Affen", meaning: "猴子（單數／複數）", category: "nature", example: "Es ist affenheiß!", note: "affen- 當形容詞前綴是誇飾用法（超級⋯），字面是「猴子的」" },
+  { id: "de135", article: "der", word: "der Weg", meaning: "路徑、路", category: "places", example: "Der Weg ist lang.", note: "注意：副詞 weg（消失、離開）拼法相同但詞性不同，如 Ich schmelze weg（我要融化了）" },
+  { id: "de136", article: "", word: "schmelzen", meaning: "融化", category: "verb", example: "Ich schmelze weg!" },
+  { id: "de137", article: "", word: "sterben", meaning: "死", category: "verb", example: "Ich sterbe vor Hitze." },
+  { id: "de138", article: "", word: "heiß", meaning: "熱的", category: "adjective", example: "Mir ist heiß." },
+  { id: "de139", article: "", word: "kalt", meaning: "冷的", category: "adjective", example: "Mir ist kalt." },
+  { id: "de140", article: "", word: "mir", meaning: "對我（ich 的 Dativ 第三格形式）", category: "other", example: "Mir ist heiß.", note: "表達身體/天氣感受時用 Dativ 代名詞 mir，因為「我」是接受感受的對象" },
+  { id: "de141", article: "", word: "nieder / niedrig", meaning: "低的", category: "adjective", example: "die Niederlande", note: "nieder 是 niedrig 的另一種說法，常見於複合詞（如 die Niederlande 荷蘭，字面「低地國」）" },
+];
+
+// ============================================================
+// 德文文法題庫（新增：格位 Akkusativ / Dativ / Genitiv、子句、作文批改重點）
+// 格式：{ id, category, rule, example, explanation, mastered }
+// ============================================================
+const GERMAN_GRAMMAR = [
+  { id: "gg001", category: "case_akkusativ", rule: "haben 後面接受詞要用 Akkusativ（第四格）", example: "Ich habe einen Freund. (Freund 是陽性名詞 der Freund → einen Freund)", explanation: "陽性名詞在 Akkusativ 格中，定冠詞 der→den，不定冠詞 ein→einen。", mastered: false },
+  { id: "gg002", category: "clause", rule: "nachdem + 子句，表示「在⋯之後」，是從屬連接詞", example: "Nachdem er nach Taipeh gezogen ist, haben wir weniger Kontakt.", explanation: "nachdem 帶出的從屬子句動詞要放在句尾（gezogen ist），後面的主要子句要用倒裝語序（動詞在主詞之前）。", mastered: false },
+  { id: "gg003", category: "case_genitiv", rule: "wegen + Genitiv（第二格），表示「因為⋯」", example: "wegen der Arbeit = 因為工作的關係", explanation: "wegen 後面接名詞要變成 Genitiv 格，陰性名詞 die Arbeit → der Arbeit。", mastered: false },
+  { id: "gg004", category: "case_dativ", rule: "von 後面固定接 Dativ（第三格）", example: "Er kommt von der Schule.", explanation: "介系詞 von 恆定要求 Dativ 格，陰性名詞 die → der。", mastered: false },
+  { id: "gg005", category: "case_dativ", rule: "陰性名詞在 Dativ 與 Genitiv 格時，冠詞 die 變成 der", example: "die Arbeit → wegen der Arbeit（Genitiv）；von der Schule（Dativ）", explanation: "這點容易混淆，因為 der 同時也是陽性主格冠詞，要依上下文判斷格位。", mastered: false },
+  { id: "gg006", category: "case_dativ", rule: "陽性／中性名詞在 Dativ 格時，冠詞 der/das 變成 dem", example: "Ich arbeite an einem Forschungsinstitut.（das Forschungsinstitut → einem Forschungsinstitut，Dativ）", explanation: "an + Dativ 表示「在某機構工作」，中性 das→dem，不定冠詞 ein→einem。", mastered: false },
+  { id: "gg007", category: "idiom", rule: "描述身體感受（冷、熱）用 Dativ 代名詞 + ist + 形容詞", example: "Mir ist heiß.（我覺得熱）／Mir ist kalt.（我覺得冷）", explanation: "Mir 是 ich 的 Dativ 形式。因為冷熱感受是外在環境作用在「我」身上，所以「我」是接受者（Dativ），而不是主動的主詞。", mastered: false },
+  { id: "gg008", category: "idiom", rule: "vor + Dativ 可表示「因為（強烈的感受）」，常用於誇飾表達", example: "Ich sterbe vor Hitze.（熱死了）", explanation: "這裡的 vor 不是「之前」而是表達被強烈感受淹沒，類似 vor Angst zittern（怕得發抖）。sterben（死）要做第一人稱變化 sterbe。", mastered: false },
+  { id: "gg009", category: "idiom", rule: "affen- 當形容詞前綴是誇飾用法（超級⋯）", example: "Es ist affenheiß!（超級熱！）／affenkalt（超級冷）", explanation: "字面意思是「猴子的」，但口語中是誇飾程度的用法。die Affen（複數猴子）、der Affe（單數猴子）。", mastered: false },
+  { id: "gg010", category: "idiom", rule: "schmelzen（融化）+ weg（消失、離開，副詞）", example: "Ich schmelze weg!（我要融化了！）", explanation: "der Weg（路徑，名詞）和 weg（消失、離開，副詞）拼法相同但詞性不同，要依上下文分辨。", mastered: false },
+  { id: "gg011", category: "essay_correction", rule: "兩個完整句子（各自有主詞和動詞）要用句號分開，不要只用逗號連接", example: "❌ Mein Vater heißt Cello, er ist... → ✅ Mein Vater heißt Cello. Er ist...", explanation: "這是常見的 run-on sentence 錯誤，德文寫作和英文一樣要避免只用逗號連接兩個完整句子。", mastered: false },
+  { id: "gg012", category: "essay_correction", rule: "描述過去的關係狀態，可用簡單過去式或 hatten + 名詞的簡化說法", example: "Früher standen wir uns sehr nahe. 或 Früher hatten wir ein sehr gutes Verhältnis.", explanation: "兩種說法都正確。gutes 的字尾 -es 是因為 Verhältnis 是中性名詞，在 Akkusativ 格且前面接不定冠詞 ein 時，形容詞字尾要加 -es（ein gutes Verhältnis）。", mastered: false },
+  { id: "gg013", category: "case_akkusativ", rule: "ziehen nach + 城市，或大部分無冠詞的國家名稱", example: "nach Berlin ziehen／nach Taipeh ziehen／nach Taiwan ziehen", explanation: "大部分國家名稱沒有冠詞（Deutschland, Japan, China, Taiwan, Frankreich, Österreich），直接用 nach + 國名，和搬去城市的用法一樣。", mastered: false },
+  { id: "gg014", category: "case_akkusativ", rule: "少數陰性冠詞的國家搬去時用 in + Akkusativ", example: "in die Schweiz ziehen（搬去瑞士）", explanation: "少數國家有陰性冠詞 die（die Schweiz, die Türkei, die USA, die Niederlande），這類國家不用 nach，而是用 in + Akkusativ（陰性 die 在 Akkusativ 格中維持不變）。", mastered: false },
+  { id: "gg015", category: "case_akkusativ", rule: "少數陽性冠詞國家搬去時，der 要變成 den", example: "in den Iran ziehen（搬去伊朗）", explanation: "der Iran 是少數有陽性冠詞的國家名稱，在 Akkusativ 格中冠詞 der 要變成 den。", mastered: false },
+  { id: "gg016", category: "vocab_pattern", rule: "als + 職業（不加冠詞）表示「擔任⋯」", example: "Sie arbeitet als Ingenieurin.", explanation: "als 後面接職業名稱時不加冠詞，且職業名詞要依主詞性別使用陽性或陰性形式。", mastered: false },
+  { id: "gg017", category: "vocab_pattern", rule: "女性從事某職業時，職業名詞字尾要加 -in 變成陰性形式", example: "❌ Ich bin Forscher. → ✅ Ich bin Forscherin.（說話者是女性）", explanation: "der Forscher（男研究員）→ die Forscherin（女研究員），這是德文職業名詞陰陽性變化的固定規則，和 der Lehrer → die Lehrerin 一樣。", mastered: false },
+  { id: "gg018", category: "vocab_pattern", rule: "nieder 是 niedrig（低的）的另一種說法，常見於複合詞", example: "die Niederlande（荷蘭，字面「低地國」）", explanation: "nieder- 前綴常用來構成表示「低、下」相關的複合詞。", mastered: false },
 ];
 
 // ============================================================
@@ -560,10 +649,25 @@ const GERMAN_SENTENCES = [
   { id: "s013", stage: 1, part: 4, unitTitle: "談論食物", german: "Das Schnitzel ist frisch.", chinese: "炸肉排很新鮮。" },
   { id: "s014", stage: 1, part: 4, unitTitle: "談論食物", german: "Der Salat ist lecker!", chinese: "沙拉很美味！" },
   { id: "s015", stage: 1, part: 4, unitTitle: "談論食物", german: "Meine Pizza ist gut!", chinese: "我的披薩很好吃！" },
+  // === 第1階段，第5部分：問路 ===
+  { id: "s016", stage: 1, part: 5, unitTitle: "問路", german: "Die Stadt ist groß und schön!", chinese: "城市很大，也很漂亮！" },
+  { id: "s017", stage: 1, part: 5, unitTitle: "問路", german: "Wo ist der Bahnhof?", chinese: "火車站在哪裡？" },
+  { id: "s018", stage: 1, part: 5, unitTitle: "問路", german: "Der Park ist da drüben.", chinese: "公園在那邊。" },
+  { id: "s019", stage: 1, part: 5, unitTitle: "問路", german: "Das Hotel ist klein und billig.", chinese: "酒店很小，也很便宜。" },
+  { id: "s020", stage: 1, part: 5, unitTitle: "問路", german: "Hallo, wo ist das Café?", chinese: "你好，咖啡館在哪裡？" },
+  // === 自我介紹（作文修正版，含格位文法練習）===
+  { id: "s021", stage: 1, part: 6, unitTitle: "自我介紹（作文修正版）", german: "Ich heiße Christine. Ich komme aus Taiwan und wohne jetzt in Hsinchu.", chinese: "我叫克莉絲汀。我來自台灣，現在住在新竹。" },
+  { id: "s022", stage: 1, part: 6, unitTitle: "自我介紹（作文修正版）", german: "Ich bin Forscherin. Ich arbeite derzeit an einem Forschungsinstitut.", chinese: "我是研究員。我目前在一間研究機構工作。" },
+  { id: "s023", stage: 1, part: 6, unitTitle: "自我介紹（作文修正版）", german: "Ich habe einen Freund namens Murray. Er ist Taiwaner.", chinese: "我有一個男朋友，名叫Murray。他是台灣人。" },
+  { id: "s024", stage: 1, part: 6, unitTitle: "自我介紹（作文修正版）", german: "Ich habe schwarze Haare und braune Augen.", chinese: "我有黑色頭髮和棕色眼睛。" },
+  { id: "s025", stage: 1, part: 6, unitTitle: "自我介紹（作文修正版）", german: "Meine Eltern leben in Hsinchu.", chinese: "我的父母住在新竹。" },
+  { id: "s026", stage: 1, part: 6, unitTitle: "自我介紹（作文修正版）", german: "Mein Vater heißt Cello. Er ist 59 Jahre alt und im Ruhestand.", chinese: "我爸爸叫Cello。他59歲，已經退休了。" },
+  { id: "s027", stage: 1, part: 6, unitTitle: "自我介紹（作文修正版）", german: "Früher standen wir uns sehr nahe, aber nachdem er wegen der Arbeit nach Taipeh gezogen ist, haben wir weniger Kontakt.", chinese: "以前我們感情很好，但自從他因為工作搬去台北之後，我們的聯絡變少了。" },
+  { id: "s028", stage: 1, part: 6, unitTitle: "自我介紹（作文修正版）", german: "Ich besuche ihn aber immer noch manchmal in Taipeh.", chinese: "但我仍然有時候會去台北看他。" },
 ];
 
 // ============================================================
-// Cambly 課程記錄（完整 26 堂歷史）
+// Cambly 課程記錄（完整 28 堂歷史）
 // ============================================================
 const SPEAKING_RECORDS = [
   { id: 1,  date: "2026/01/20", tutor: "Daniel / Jessie Mae / Mik", topic: "初次上課，自我介紹、Universal Studios" },
@@ -593,6 +697,7 @@ const SPEAKING_RECORDS = [
   { id: 25, date: "2026/06/14", tutor: "Glynis Jaeschke",            topic: "工作介紹（產業分析師）、Glynis 的南非／德國／英國移民人生故事、天氣比較" },
   { id: 26, date: "2026/06/20", tutor: "Glynis Jaeschke",            topic: "德文問候語練習、家族成員介紹（父系／母系）、Glynis 的寄養家庭照顧工作" },
   { id: 27, date: "2026/06/21", tutor: "Lyn Rose",                   topic: "AI科技的利與弊、杜拜旅遊文化、赴美出差克服英語恐懼、個人性格（外向/內向）" },
+  { id: 28, date: "2026/07/08", tutor: "TJ",                         topic: "用 Claude 打造數位衣櫥、Engoo 理財文章（存錢目標調查）、投資與理財觀念" }, // 日期為估計值，請 Christine 確認
 ];
 
 // ============================================================
@@ -615,6 +720,6 @@ const REVIEW_SCHEDULE = [];
 // ============================================================
 const APP_CONFIG = {
   version: "1.0.0",
-  lastUpdated: "2026-06-22",
+  lastUpdated: "2026-07-09",
   defaultLang: "en",
 };
