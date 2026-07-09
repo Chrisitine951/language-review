@@ -245,6 +245,28 @@
     position: absolute; top: 16px; left: 0; right: 0;
     display: flex; justify-content: center;
   }
+  /* 發音按鈕（卡片右上角） */
+  .speak-btn {
+    position: absolute; top: 10px; right: 10px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--surface2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    z-index: 5;
+  }
+  .speak-btn:active { background: var(--border); }
+  .speak-btn-inline {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--surface2);
+    font-size: 13px;
+    margin-left: 6px;
+    vertical-align: middle;
+    flex: none;
+  }
+  .speak-btn-inline:active { background: var(--border); }
   .flashcard-word {
     font-size: 28px; font-weight: 700;
     letter-spacing: -0.5px;
@@ -319,6 +341,7 @@
     padding: 28px 24px;
     text-align: center;
     margin-bottom: 16px;
+    position: relative;
   }
   .typing-prompt { font-size: 13px; color: var(--text3); margin-bottom: 8px; }
   .typing-word { font-size: 26px; font-weight: 700; }
@@ -637,6 +660,48 @@
   .cambly-item-tutor { font-size: 12px; color: var(--en); font-weight: 500; }
   .cambly-item-topic { font-size: 14px; font-weight: 500; line-height: 1.4; }
 
+  /* ===== 收集箱 (INBOX) ===== */
+  .inbox-photo-preview {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    max-height: 220px;
+    object-fit: contain;
+    background: var(--surface2);
+  }
+  .inbox-item {
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    margin: 0 16px 10px;
+    padding: 12px 14px;
+    box-shadow: var(--shadow);
+  }
+  .inbox-item-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .inbox-item-remove {
+    font-size: 13px; color: var(--de); font-weight: 600;
+    padding: 4px 8px;
+  }
+  .inbox-field {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 6px;
+  }
+  .inbox-field-label {
+    font-size: 11px; color: var(--text3);
+    width: 44px; flex: none;
+  }
+  .inbox-field-input {
+    flex: 1;
+    background: var(--surface2);
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: var(--text);
+  }
+  .inbox-field-input:focus { background: var(--en-light); }
+
   /* ===== GERMAN PAGE ===== */
   .pr-card {
     background: var(--surface);
@@ -752,42 +817,14 @@
     z-index: 999;
     pointer-events: none;
     white-space: nowrap;
+    max-width: 90vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .toast.show {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
   }
-
-  /* ===== MODAL ===== */
-  .modal-overlay {
-    display: none;
-    position: fixed; inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 200;
-    align-items: flex-end;
-  }
-  .modal-overlay.show { display: flex; }
-  .modal {
-    background: var(--surface);
-    border-radius: 20px 20px 0 0;
-    padding: 20px;
-    width: 100%;
-    max-height: 80vh;
-    overflow-y: auto;
-    padding-bottom: calc(20px + var(--safe-bottom));
-    animation: slideUp 0.3s ease;
-  }
-  @keyframes slideUp {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
-  }
-  .modal-handle {
-    width: 36px; height: 4px;
-    background: var(--border);
-    border-radius: 2px;
-    margin: 0 auto 16px;
-  }
-  .modal-title { font-size: 17px; font-weight: 700; margin-bottom: 16px; }
 
   /* swipe animation */
   @keyframes swipeRight {
@@ -856,10 +893,10 @@
           <span class="quick-btn-title">文法練習</span>
           <span class="quick-btn-sub" id="home-grammar-count">載入中…</span>
         </button>
-        <button class="quick-btn" onclick="goTo('diary',null)">
-          <span class="quick-btn-icon">📖</span>
-          <span class="quick-btn-title">日記 / 記錄</span>
-          <span class="quick-btn-sub">寫日記・課程</span>
+        <button class="quick-btn" onclick="goTo('diary',null); setDiaryTab('inbox')">
+          <span class="quick-btn-icon">📥</span>
+          <span class="quick-btn-title">收集箱</span>
+          <span class="quick-btn-sub">拍照上傳課堂紀錄</span>
         </button>
       </div>
 
@@ -894,6 +931,7 @@
         <div class="flashcard-container">
           <div class="flashcard-area" id="flashcard-area">
             <div class="flashcard" id="flashcard" onclick="flipCard()">
+              <button class="speak-btn" onclick="event.stopPropagation(); speakCurrentWord();" title="發音">🔊</button>
               <div class="flashcard-top">
                 <span class="tag" id="fc-tag">翻牌</span>
               </div>
@@ -903,6 +941,7 @@
               <div id="fc-back" style="display:none; width:100%;">
                 <div class="flashcard-meaning" id="fc-meaning"></div>
                 <div class="flashcard-example" id="fc-example"></div>
+                <button class="speak-btn-inline" onclick="event.stopPropagation(); speakCurrentExample();" title="唸例句">📢</button>
               </div>
               <div class="flashcard-hint" id="fc-hint">點擊翻面</div>
             </div>
@@ -933,6 +972,7 @@
       <div id="typing-mode-view" style="display:none;">
         <div class="typing-mode">
           <div class="typing-card">
+            <button class="speak-btn" onclick="speakCurrentWord()" title="發音">🔊</button>
             <div class="typing-prompt" id="typing-prompt">看中文，輸入英文</div>
             <div class="typing-word" id="typing-word">載入中…</div>
             <div id="typing-hint" style="font-size:12px; color:var(--text3); margin-top:6px;"></div>
@@ -980,6 +1020,7 @@
         <button class="filter-chip" onclick="setGrammarFilter('past_tense', this)">過去式</button>
         <button class="filter-chip" onclick="setGrammarFilter('subject_verb', this)">主詞一致</button>
         <button class="filter-chip" onclick="setGrammarFilter('preposition', this)">介系詞</button>
+        <button class="filter-chip" onclick="setGrammarFilter('other', this)">其他</button>
         <button class="filter-chip" onclick="setGrammarFilter('weak', this)">⚠️ 弱點</button>
       </div>
 
@@ -992,8 +1033,8 @@
     <div id="page-diary" class="page">
       <div class="topbar">
         <div>
-          <div class="topbar-title">日記 & 記錄</div>
-          <div class="topbar-sub">英文日記 · Engoo · Cambly</div>
+          <div class="topbar-title">記錄 & 收集</div>
+          <div class="topbar-sub">日記 · Engoo · Cambly · 收集箱</div>
         </div>
       </div>
 
@@ -1002,6 +1043,7 @@
         <button class="lang-toggle-btn active" id="diary-tab-diary" onclick="setDiaryTab('diary')">📔 日記</button>
         <button class="lang-toggle-btn" id="diary-tab-engoo" onclick="setDiaryTab('engoo')">📰 Engoo</button>
         <button class="lang-toggle-btn" id="diary-tab-cambly" onclick="setDiaryTab('cambly')">🎙️ Cambly</button>
+        <button class="lang-toggle-btn" id="diary-tab-inbox" onclick="setDiaryTab('inbox')">📥 收集</button>
       </div>
 
       <!-- diary sub -->
@@ -1046,6 +1088,36 @@
         </div>
         <div id="cambly-list"><!-- filled by JS --></div>
       </div>
+
+      <!-- 收集箱 sub -->
+      <div id="diary-sub-inbox" style="display:none;">
+        <div class="section-header"><span class="section-title">上傳課堂紀錄</span></div>
+        <div class="diary-input-card">
+          <div style="font-size:12px; color:var(--text3); line-height:1.6; margin-bottom:10px;">
+            拍照或貼上課堂內容 → AI 自動整理成單字/文法 → 確認後直接存進資料庫（GitHub）。
+          </div>
+          <textarea class="diary-textarea" id="inbox-text" style="min-height:90px;" placeholder="貼上文字內容（Cambly AI回饋、筆記…），或只上傳照片"></textarea>
+          <div class="diary-toolbar">
+            <button class="diary-ai-btn" style="flex:1;" onclick="document.getElementById('inbox-photo').click()">📷 選擇照片</button>
+            <button class="diary-submit" style="flex:1.6;" onclick="analyzeInbox()">✨ AI 分析內容</button>
+          </div>
+          <input type="file" id="inbox-photo" accept="image/*" style="display:none;" onchange="handleInboxPhoto(event)">
+          <img id="inbox-photo-preview" class="inbox-photo-preview" style="display:none;">
+          <div id="inbox-analyze-status"></div>
+        </div>
+
+        <div class="section-header">
+          <span class="section-title">待確認項目（<span id="inbox-count">0</span>）</span>
+          <button class="section-action" onclick="clearInbox()">全部清除</button>
+        </div>
+        <div id="inbox-list">
+          <div class="empty-state"><div class="empty-state-icon">📥</div><div class="empty-state-text">收集箱是空的</div><div class="empty-state-sub">上傳照片或文字，AI 幫你整理</div></div>
+        </div>
+        <div style="padding: 0 16px 20px;">
+          <button class="settings-save-btn" style="background:var(--green); margin-top:0;" onclick="saveInboxToGithub()">💾 儲存到資料庫（GitHub）</button>
+          <div id="inbox-save-status"></div>
+        </div>
+      </div>
     </div>
 
     <!-- GERMAN -->
@@ -1053,14 +1125,14 @@
       <div class="topbar">
         <div>
           <div class="topbar-title">德文基礎</div>
-          <div class="topbar-sub">A1 發音規則 & 文法（預留）</div>
+          <div class="topbar-sub">A1 發音 · 句型 · 文法</div>
         </div>
       </div>
 
       <div class="lang-toggle" style="margin: 12px 16px 0;">
-        <button class="lang-toggle-btn active" id="de-tab-pr" onclick="setDeTab('pronunciation')">🔤 發音規則</button>
-        <button class="lang-toggle-btn" id="de-tab-sentence" onclick="setDeTab('sentence')">💬 句型練習</button>
-        <button class="lang-toggle-btn" id="de-tab-grammar" onclick="setDeTab('grammar')">📚 文法（預留）</button>
+        <button class="lang-toggle-btn active" id="de-tab-pr" onclick="setDeTab('pronunciation')">🔤 發音</button>
+        <button class="lang-toggle-btn" id="de-tab-sentence" onclick="setDeTab('sentence')">💬 句型</button>
+        <button class="lang-toggle-btn" id="de-tab-grammar" onclick="setDeTab('grammar')">📚 文法</button>
       </div>
 
       <div id="de-sub-pronunciation">
@@ -1072,6 +1144,7 @@
         <div class="flashcard-container" style="padding-top: 16px;">
           <div class="flashcard-area" id="sentence-flashcard-area">
             <div class="flashcard" id="sentence-flashcard" onclick="flipSentenceCard()">
+              <button class="speak-btn" onclick="event.stopPropagation(); speakCurrentSentence();" title="發音">🔊</button>
               <div class="flashcard-top">
                 <span class="tag tag-de" id="sentence-unit-tag">單元</span>
               </div>
@@ -1096,11 +1169,8 @@
       </div>
 
       <div id="de-sub-grammar" style="display:none;">
-        <div class="empty-state" style="padding-top: 60px;">
-          <div class="empty-state-icon">🚧</div>
-          <div class="empty-state-text">文法區塊建置中</div>
-          <div class="empty-state-sub">等你學到文法單元再來填！</div>
-        </div>
+        <div class="section-header"><span class="section-title">德文文法重點</span></div>
+        <div id="de-grammar-list"><!-- filled by JS --></div>
       </div>
     </div>
 
@@ -1114,9 +1184,30 @@
         <div class="settings-section">
           <div class="settings-item" style="flex-direction: column; align-items: stretch;">
             <div class="settings-item-title">Gemini API Key</div>
-            <div class="settings-item-sub">用於 AI 批改日記、生成例句、自動出文法題</div>
+            <div class="settings-item-sub">用於 AI 批改日記、生成例句、收集箱辨識</div>
             <input class="settings-input" id="api-key-input" type="password" placeholder="貼上你的 Gemini API Key">
-            <button class="settings-save-btn" onclick="saveApiKey()">儲存 API Key</button>
+            <div class="settings-item-title" style="margin-top:12px;">Gemini 模型名稱</div>
+            <div class="settings-item-sub">模型退役時只要改這裡，不用改程式碼</div>
+            <input class="settings-input" id="gemini-model-input" placeholder="gemini-2.5-flash">
+            <button class="settings-save-btn" onclick="saveApiSettings()">儲存 AI 設定</button>
+          </div>
+        </div>
+
+        <div class="section-header" style="margin-top:8px;"><span class="section-title">GitHub 同步（收集箱用）</span></div>
+        <div class="settings-section">
+          <div class="settings-item" style="flex-direction: column; align-items: stretch;">
+            <div class="settings-item-title">GitHub Token</div>
+            <div class="settings-item-sub">Fine-grained token，只需這個 repo 的 Contents 讀寫權限</div>
+            <input class="settings-input" id="github-token-input" type="password" placeholder="github_pat_...">
+            <div class="settings-item-title" style="margin-top:12px;">Repo 擁有者（帳號名）</div>
+            <input class="settings-input" id="github-owner-input" placeholder="例如：christine-tw">
+            <div class="settings-item-title" style="margin-top:12px;">Repo 名稱</div>
+            <input class="settings-input" id="github-repo-input" placeholder="例如：language-review">
+            <div class="settings-item-title" style="margin-top:12px;">分支（通常是 main）</div>
+            <input class="settings-input" id="github-branch-input" placeholder="main">
+            <button class="settings-save-btn" onclick="saveGithubSettings()">儲存 GitHub 設定</button>
+            <button class="settings-save-btn" style="background:var(--surface2); color:var(--text);" onclick="testGithubConnection()">🔌 測試連線</button>
+            <div id="github-test-status"></div>
           </div>
         </div>
 
@@ -1177,26 +1268,17 @@
           </div>
         </div>
 
-        <div class="section-header" style="margin-top:8px;"><span class="section-title">每週更新格式</span></div>
+        <div class="section-header" style="margin-top:8px;"><span class="section-title">資料更新方式</span></div>
         <div class="settings-section">
           <div class="card">
             <div style="font-size:13px; line-height:1.8; color: var(--text2);">
-              每週把以下格式複製給 Claude 更新 data.js：<br><br>
-              <code style="background:var(--surface2); padding:8px; border-radius:8px; display:block; font-size:12px; line-height:1.7;">
-              【新增英文單字】<br>
-              word / 中文 / 詞性<br><br>
-              【新增文法錯誤】<br>
-              錯誤：...<br>
-              正確：...<br>
-              規則：...<br><br>
-              【新增德文單字】<br>
-              der/die/das Word / 中文
-              </code>
+              <strong>日常小更新</strong>：用「📥 收集箱」拍照上傳，AI 整理後直接存進 GitHub 的 data-user.json。<br><br>
+              <strong>大批整理</strong>：每隔一段時間把累積的內容交給 Claude，合併進 data.js 並重新分類、去重複。
             </div>
           </div>
         </div>
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Language Review App v1.2.0<br>最後更新：2026-06-25
+          Language Review App v1.3.0<br>最後更新：2026-07-08
         </div>
       </div>
     </div>
@@ -1268,13 +1350,12 @@ let grammarAnswered = false;
 
 // 找錯誤題型 state
 let efState = null;
-// efState = {
-//   grammarId, wrongSentence, correctSentence,
-//   errorWords: [{word, index, correctOptions:[str,...]}],
-//   foundErrors: Set of indices,
-//   currentFixIdx: number (which error we're fixing now),
-//   fixAnswered: boolean
-// }
+
+// 收集箱 state：待確認項目清單
+// 每筆 = { type: 'en_vocab'|'de_vocab'|'en_grammar'|'de_sentence', ...欄位 }
+let inboxItems = [];
+let inboxPhotoBase64 = null; // 目前選擇的照片（base64，不含前綴）
+let inboxPhotoMime = null;
 
 // data
 let diaryEntries = [];
@@ -1297,6 +1378,7 @@ function saveData() {
     localStorage.setItem('lr_schedule', JSON.stringify(reviewSchedule));
     localStorage.setItem('lr_today', JSON.stringify(todayStats));
     localStorage.setItem('lr_gstats', JSON.stringify(grammarStats));
+    localStorage.setItem('lr_inbox', JSON.stringify(inboxItems));
   } catch(e) {}
 }
 function loadData() {
@@ -1317,16 +1399,480 @@ function loadData() {
     }
     const gs = localStorage.getItem('lr_gstats');
     if (gs) grammarStats = JSON.parse(gs);
+    const inbox = localStorage.getItem('lr_inbox');
+    if (inbox) inboxItems = JSON.parse(inbox);
   } catch(e) {}
 }
 function getApiKey() {
   return localStorage.getItem('lr_apikey') || '';
 }
-function saveApiKey() {
+function getGeminiModel() {
+  return localStorage.getItem('lr_gemini_model') || 'gemini-2.5-flash';
+}
+function saveApiSettings() {
   const k = document.getElementById('api-key-input').value.trim();
-  if (!k) { showToast('請輸入 API Key'); return; }
-  localStorage.setItem('lr_apikey', k);
-  showToast('✅ API Key 已儲存');
+  const m = document.getElementById('gemini-model-input').value.trim();
+  if (k) localStorage.setItem('lr_apikey', k);
+  if (m) localStorage.setItem('lr_gemini_model', m);
+  showToast('✅ AI 設定已儲存');
+}
+
+// GitHub 設定
+function getGithubConfig() {
+  return {
+    token: localStorage.getItem('lr_gh_token') || '',
+    owner: localStorage.getItem('lr_gh_owner') || '',
+    repo: localStorage.getItem('lr_gh_repo') || '',
+    branch: localStorage.getItem('lr_gh_branch') || 'main',
+  };
+}
+function saveGithubSettings() {
+  const t = document.getElementById('github-token-input').value.trim();
+  const o = document.getElementById('github-owner-input').value.trim();
+  const r = document.getElementById('github-repo-input').value.trim();
+  const b = document.getElementById('github-branch-input').value.trim();
+  if (t) localStorage.setItem('lr_gh_token', t);
+  if (o) localStorage.setItem('lr_gh_owner', o);
+  if (r) localStorage.setItem('lr_gh_repo', r);
+  localStorage.setItem('lr_gh_branch', b || 'main');
+  showToast('✅ GitHub 設定已儲存');
+}
+
+// ============================================================
+// 使用者資料檔（data-user.json）：載入 & 合併
+// data.js 是穩定基底；data-user.json 存收集箱新增的內容
+// ============================================================
+async function loadUserData() {
+  try {
+    // 加時間戳避免快取到舊檔
+    const res = await fetch('data-user.json?t=' + Date.now());
+    if (!res.ok) return; // 檔案不存在就跳過（第一次使用）
+    const userData = await res.json();
+    mergeUserData(userData);
+  } catch(e) {
+    // 讀不到就當作沒有，app 照常運作
+    console.warn('data-user.json 載入失敗（可忽略）', e);
+  }
+}
+function mergeUserData(userData) {
+  if (!userData) return;
+  // 用 id 去重複後 push 進主陣列（data.js 的陣列是 const 但內容可以 push）
+  function mergeInto(target, items) {
+    if (!Array.isArray(items)) return;
+    const existingIds = new Set(target.map(x => x.id));
+    items.forEach(item => {
+      if (item && item.id && !existingIds.has(item.id)) {
+        target.push(item);
+        existingIds.add(item.id);
+      }
+    });
+  }
+  mergeInto(ENGLISH_VOCABULARY, userData.englishVocabulary);
+  mergeInto(GERMAN_VOCABULARY, userData.germanVocabulary);
+  mergeInto(ENGLISH_GRAMMAR, userData.englishGrammar);
+  if (typeof GERMAN_GRAMMAR !== 'undefined') mergeInto(GERMAN_GRAMMAR, userData.germanGrammar);
+  if (typeof GERMAN_SENTENCES !== 'undefined') mergeInto(GERMAN_SENTENCES, userData.germanSentences);
+}
+
+// ============================================================
+// GITHUB API：讀取 & 寫入 data-user.json
+// 文件：https://docs.github.com/rest/repos/contents
+// ============================================================
+const USER_DATA_PATH = 'data-user.json';
+
+function githubApiUrl(path) {
+  const cfg = getGithubConfig();
+  return `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${path}`;
+}
+// Base64 編碼/解碼（支援中文）
+function toBase64Unicode(str) {
+  return btoa(unescape(encodeURIComponent(str)));
+}
+function fromBase64Unicode(b64) {
+  return decodeURIComponent(escape(atob(b64)));
+}
+
+// 取得檔案內容與 sha（sha 是 GitHub 更新檔案時的必要參數）
+// 回傳 { exists, sha, json } 或 { error }
+async function githubGetUserData() {
+  const cfg = getGithubConfig();
+  try {
+    const res = await fetch(githubApiUrl(USER_DATA_PATH) + '?ref=' + cfg.branch, {
+      headers: {
+        'Authorization': 'Bearer ' + cfg.token,
+        'Accept': 'application/vnd.github+json',
+      }
+    });
+    if (res.status === 404) {
+      return { exists: false, sha: null, json: emptyUserData() };
+    }
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({}));
+      return { error: `GitHub 讀取失敗 (${res.status})：${body.message || '未知錯誤'}` };
+    }
+    const data = await res.json();
+    // content 是 base64（可能含換行）
+    const text = fromBase64Unicode(data.content.replace(/\n/g, ''));
+    let json;
+    try { json = JSON.parse(text); }
+    catch(e) { return { error: 'data-user.json 內容不是有效的 JSON，請檢查檔案' }; }
+    return { exists: true, sha: data.sha, json };
+  } catch(e) {
+    return { error: '網路錯誤：' + e.message };
+  }
+}
+
+// 寫入檔案（sha 為 null 表示建立新檔）
+async function githubPutUserData(json, sha) {
+  const cfg = getGithubConfig();
+  const content = JSON.stringify(json, null, 2);
+  const body = {
+    message: '收集箱更新 ' + new Date().toLocaleString('zh-TW'),
+    content: toBase64Unicode(content),
+    branch: cfg.branch,
+  };
+  if (sha) body.sha = sha;
+  try {
+    const res = await fetch(githubApiUrl(USER_DATA_PATH), {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'Bearer ' + cfg.token,
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) {
+      const resBody = await res.json().catch(() => ({}));
+      return { error: `GitHub 寫入失敗 (${res.status})：${resBody.message || '未知錯誤'}` };
+    }
+    return { ok: true };
+  } catch(e) {
+    return { error: '網路錯誤：' + e.message };
+  }
+}
+
+function emptyUserData() {
+  return {
+    englishVocabulary: [],
+    germanVocabulary: [],
+    englishGrammar: [],
+    germanGrammar: [],
+    germanSentences: [],
+  };
+}
+
+// 測試 GitHub 連線設定是否正確
+async function testGithubConnection() {
+  const cfg = getGithubConfig();
+  const statusEl = document.getElementById('github-test-status');
+  if (!cfg.token || !cfg.owner || !cfg.repo) {
+    statusEl.innerHTML = `<div style="color:var(--de); font-size:13px; margin-top:8px;">請先填寫並儲存 Token、擁有者、Repo 名稱</div>`;
+    return;
+  }
+  statusEl.innerHTML = `<div style="color:var(--text3); font-size:13px; margin-top:8px;">測試中…</div>`;
+  const result = await githubGetUserData();
+  if (result.error) {
+    statusEl.innerHTML = `<div style="color:var(--de); font-size:13px; margin-top:8px;">❌ ${result.error}</div>`;
+  } else if (!result.exists) {
+    statusEl.innerHTML = `<div style="color:var(--amber); font-size:13px; margin-top:8px;">✅ 連線成功！repo 中還沒有 data-user.json，第一次儲存時會自動建立</div>`;
+  } else {
+    statusEl.innerHTML = `<div style="color:var(--green); font-size:13px; margin-top:8px;">✅ 連線成功，data-user.json 已存在</div>`;
+  }
+}
+
+// ============================================================
+// 收集箱：照片處理
+// ============================================================
+function handleInboxPhoto(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    // e.target.result 格式：data:image/jpeg;base64,XXXX
+    const dataUrl = e.target.result;
+    const match = dataUrl.match(/^data:(.+?);base64,(.*)$/);
+    if (!match) { showToast('照片讀取失敗'); return; }
+    inboxPhotoMime = match[1];
+    inboxPhotoBase64 = match[2];
+    const preview = document.getElementById('inbox-photo-preview');
+    preview.src = dataUrl;
+    preview.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+  event.target.value = '';
+}
+
+// ============================================================
+// 收集箱：AI 分析
+// ============================================================
+async function analyzeInbox() {
+  const text = document.getElementById('inbox-text').value.trim();
+  if (!text && !inboxPhotoBase64) {
+    showToast('請先貼上文字或選擇照片');
+    return;
+  }
+  const statusEl = document.getElementById('inbox-analyze-status');
+  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 分析中，照片可能需要 10–20 秒…</div>`;
+
+  const prompt = `You are helping a Taiwanese language learner (Christine) organize her lesson notes into a study database.
+The content may include: English lesson feedback (您說/建議/解釋 format from Cambly), German lesson handouts, handwritten notes, or vocabulary lists.
+
+Analyze the content and extract items into this exact JSON structure. Only include items that are clearly present. Return ONLY valid JSON, no markdown fences, no explanation:
+
+{
+  "englishVocab": [
+    { "word": "...", "meaning": "中文意思", "partOfSpeech": "n./v./adj./phrase", "example": "example sentence" }
+  ],
+  "germanVocab": [
+    { "article": "der/die/das or empty string", "word": "das Wort (include article in word for nouns)", "meaning": "中文意思", "category": "greeting/people/food/objects/body/places/nature/verb/adjective/time/other", "example": "German example sentence" }
+  ],
+  "englishGrammar": [
+    { "category": "past_tense/subject_verb/preposition/other", "rule": "簡短規則名稱", "wrong": "wrong sentence", "correct": "correct sentence", "explanation": "繁體中文解釋" }
+  ],
+  "germanSentences": [
+    { "german": "German sentence", "chinese": "中文翻譯", "unitTitle": "單元名稱（若可辨識）" }
+  ]
+}
+
+Rules:
+- Meanings and explanations in Traditional Chinese (繁體中文)
+- For grammar: only include errors with clear learning value, not every small mistake
+- If content is unreadable or empty, return {"englishVocab":[],"germanVocab":[],"englishGrammar":[],"germanSentences":[]}`;
+
+  // 組合 Gemini 請求的 parts：文字 + 照片（如果有）
+  const parts = [{ text: prompt }];
+  if (text) parts.push({ text: '\n\n=== Content to analyze ===\n' + text });
+  if (inboxPhotoBase64) {
+    parts.push({ inline_data: { mime_type: inboxPhotoMime, data: inboxPhotoBase64 } });
+  }
+
+  const result = await callGemini(parts);
+  if (!result.ok) {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${result.error}</div>`;
+    return;
+  }
+
+  // 解析 AI 回傳的 JSON
+  let parsed;
+  try {
+    let jsonText = result.text.trim();
+    jsonText = jsonText.replace(/^```json\s*/,'').replace(/^```\s*/,'').replace(/\s*```$/,'').trim();
+    parsed = JSON.parse(jsonText);
+  } catch(e) {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ AI 回傳的格式無法解析，請再試一次</div>`;
+    return;
+  }
+
+  // 轉成收集箱項目
+  let added = 0;
+  (parsed.englishVocab || []).forEach(v => {
+    inboxItems.push({ type: 'en_vocab', word: v.word || '', meaning: v.meaning || '', partOfSpeech: v.partOfSpeech || '', example: v.example || '' });
+    added++;
+  });
+  (parsed.germanVocab || []).forEach(v => {
+    inboxItems.push({ type: 'de_vocab', article: v.article || '', word: v.word || '', meaning: v.meaning || '', category: v.category || 'other', example: v.example || '' });
+    added++;
+  });
+  (parsed.englishGrammar || []).forEach(g => {
+    inboxItems.push({ type: 'en_grammar', category: g.category || 'other', rule: g.rule || '', wrong: g.wrong || '', correct: g.correct || '', explanation: g.explanation || '' });
+    added++;
+  });
+  (parsed.germanSentences || []).forEach(s => {
+    inboxItems.push({ type: 'de_sentence', german: s.german || '', chinese: s.chinese || '', unitTitle: s.unitTitle || '' });
+    added++;
+  });
+
+  saveData();
+  renderInboxList();
+
+  if (added === 0) {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--amber);">AI 沒有辨識出可加入的內容，可以換張更清晰的照片試試</div>`;
+  } else {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 辨識出 ${added} 個項目！請往下確認、修改，再按儲存</div>`;
+    // 清空輸入區
+    document.getElementById('inbox-text').value = '';
+    inboxPhotoBase64 = null;
+    inboxPhotoMime = null;
+    document.getElementById('inbox-photo-preview').style.display = 'none';
+  }
+}
+
+// ============================================================
+// 收集箱：待確認清單（可編輯、可刪除）
+// ============================================================
+const INBOX_TYPE_LABEL = {
+  en_vocab: { label: '🇬🇧 英文單字', tag: 'tag-en' },
+  de_vocab: { label: '🇩🇪 德文單字', tag: 'tag-de' },
+  en_grammar: { label: '📝 英文文法', tag: 'tag-green' },
+  de_sentence: { label: '💬 德文句子', tag: 'tag-amber' },
+};
+// 每種類型顯示哪些欄位
+const INBOX_TYPE_FIELDS = {
+  en_vocab: [ ['word','單字'], ['meaning','中文'], ['partOfSpeech','詞性'], ['example','例句'] ],
+  de_vocab: [ ['article','冠詞'], ['word','單字'], ['meaning','中文'], ['category','分類'], ['example','例句'] ],
+  en_grammar: [ ['rule','規則'], ['category','分類'], ['wrong','錯誤句'], ['correct','正確句'], ['explanation','解釋'] ],
+  de_sentence: [ ['german','德文'], ['chinese','中文'], ['unitTitle','單元'] ],
+};
+
+function renderInboxList() {
+  const el = document.getElementById('inbox-list');
+  document.getElementById('inbox-count').textContent = inboxItems.length;
+  if (inboxItems.length === 0) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-icon">📥</div><div class="empty-state-text">收集箱是空的</div><div class="empty-state-sub">上傳照片或文字，AI 幫你整理</div></div>`;
+    return;
+  }
+  el.innerHTML = inboxItems.map((item, idx) => {
+    const meta = INBOX_TYPE_LABEL[item.type] || { label: item.type, tag: '' };
+    const fields = INBOX_TYPE_FIELDS[item.type] || [];
+    return `
+    <div class="inbox-item">
+      <div class="inbox-item-header">
+        <span class="tag ${meta.tag}">${meta.label}</span>
+        <button class="inbox-item-remove" onclick="removeInboxItem(${idx})">刪除</button>
+      </div>
+      ${fields.map(([key, label]) => `
+        <div class="inbox-field">
+          <span class="inbox-field-label">${label}</span>
+          <input class="inbox-field-input" value="${escAttr(item[key] || '')}" oninput="updateInboxField(${idx}, '${key}', this.value)">
+        </div>`).join('')}
+    </div>`;
+  }).join('');
+}
+function updateInboxField(idx, key, value) {
+  if (inboxItems[idx]) {
+    inboxItems[idx][key] = value;
+    saveData();
+  }
+}
+function removeInboxItem(idx) {
+  inboxItems.splice(idx, 1);
+  saveData();
+  renderInboxList();
+}
+function clearInbox() {
+  if (inboxItems.length === 0) return;
+  if (!confirm('確定要清除所有待確認項目嗎？')) return;
+  inboxItems = [];
+  saveData();
+  renderInboxList();
+}
+
+// ============================================================
+// 收集箱：儲存到 GitHub
+// ============================================================
+// 產生不重複的 id：u + 類型 + 時間戳 + 流水號
+function makeUserId(prefix, n) {
+  return 'u' + prefix + Date.now().toString(36) + n;
+}
+
+async function saveInboxToGithub() {
+  const statusEl = document.getElementById('inbox-save-status');
+  if (inboxItems.length === 0) { showToast('收集箱是空的'); return; }
+  const cfg = getGithubConfig();
+  if (!cfg.token || !cfg.owner || !cfg.repo) {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">請先到「設定」填寫 GitHub Token、擁有者和 Repo 名稱</div>`;
+    return;
+  }
+
+  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>正在讀取現有資料…</div>`;
+
+  // 1. 讀取現有的 data-user.json（拿到 sha 才能更新）
+  const current = await githubGetUserData();
+  if (current.error) {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${current.error}</div>`;
+    return;
+  }
+  const userData = current.json || emptyUserData();
+  // 確保各陣列存在
+  const defaults = emptyUserData();
+  Object.keys(defaults).forEach(k => { if (!Array.isArray(userData[k])) userData[k] = []; });
+
+  // 2. 把收集箱項目轉成資料庫格式並附加
+  let n = 0;
+  inboxItems.forEach(item => {
+    n++;
+    if (item.type === 'en_vocab') {
+      userData.englishVocabulary.push({
+        id: makeUserId('en', n),
+        word: item.word, meaning: item.meaning,
+        partOfSpeech: item.partOfSpeech, source: 'inbox', example: item.example,
+      });
+    } else if (item.type === 'de_vocab') {
+      userData.germanVocabulary.push({
+        id: makeUserId('de', n),
+        article: item.article, word: item.word, meaning: item.meaning,
+        category: item.category || 'other', example: item.example,
+      });
+    } else if (item.type === 'en_grammar') {
+      userData.englishGrammar.push({
+        id: makeUserId('gr', n),
+        category: item.category || 'other', rule: item.rule,
+        wrong: item.wrong, correct: item.correct,
+        explanation: item.explanation, mastered: false,
+      });
+    } else if (item.type === 'de_sentence') {
+      userData.germanSentences.push({
+        id: makeUserId('s', n),
+        stage: 0, part: 0,
+        unitTitle: item.unitTitle || '收集箱新增',
+        german: item.german, chinese: item.chinese,
+      });
+    }
+  });
+
+  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>正在寫入 GitHub…</div>`;
+
+  // 3. 寫回 GitHub
+  const putResult = await githubPutUserData(userData, current.sha);
+  if (putResult.error) {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${putResult.error}</div>`;
+    return;
+  }
+
+  // 4. 成功：清空收集箱、把新資料合併進目前的 app（不用等重新部署）
+  const savedCount = inboxItems.length;
+  inboxItems = [];
+  saveData();
+  mergeUserData(userData);
+  renderInboxList();
+  statusEl.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 已儲存 ${savedCount} 個項目到 GitHub！GitHub Pages 約 1 分鐘後更新，本機已即時生效</div>`;
+  showToast('✅ 儲存成功！');
+}
+
+// ============================================================
+// 發音（Web Speech API，iPhone Safari 內建，免費）
+// ============================================================
+function speak(text, lang) {
+  if (!text) return;
+  if (!('speechSynthesis' in window)) {
+    showToast('此裝置不支援語音功能');
+    return;
+  }
+  speechSynthesis.cancel(); // 停掉還在唸的
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang; // 'en-US' 或 'de-DE'
+  u.rate = 0.9;  // 稍慢一點，方便學習
+  speechSynthesis.speak(u);
+}
+function speakCurrentWord() {
+  if (currentDeck.length === 0) return;
+  const w = currentDeck[currentCardIdx];
+  const text = (w.article ? w.article + ' ' : '') + w.word;
+  speak(text, currentLang === 'de' ? 'de-DE' : 'en-US');
+}
+function speakCurrentExample() {
+  if (currentDeck.length === 0) return;
+  const w = currentDeck[currentCardIdx];
+  if (w.example) speak(w.example, currentLang === 'de' ? 'de-DE' : 'en-US');
+}
+function speakCurrentSentence() {
+  if (sentenceDeck.length === 0) return;
+  speak(sentenceDeck[sentenceIdx].german, 'de-DE');
+}
+function speakSentenceById(id) {
+  const s = GERMAN_SENTENCES.find(x => x.id === id);
+  if (s) speak(s.german, 'de-DE');
 }
 
 // ============================================================
@@ -1417,13 +1963,15 @@ function updateSchedule(wordId, lang, knew) {
   reviewSchedule[k] = s;
   saveData();
 }
+// 到期複習 = 曾經排程過（nextReview > 0）且時間到了
+// 修正：以前把所有 stage 1 都算到期，連剛答錯明天才要複習的字也算進去
 function getDueWords(lang) {
   const vocab = lang === 'en' ? ENGLISH_VOCABULARY : GERMAN_VOCABULARY;
   const now = Date.now();
   return vocab.map(w => {
     const s = getSchedule(w.id, lang);
     return { wordId: w.id, stage: s.stage, nextReview: s.nextReview };
-  }).filter(w => w.nextReview <= now || w.stage === 1);
+  }).filter(w => w.nextReview > 0 && w.nextReview <= now);
 }
 
 // ============================================================
@@ -1552,6 +2100,8 @@ fcArea.addEventListener('touchend', e => {
   if (isDragging && Math.abs(dx) > 60) {
     swipeCard(dx > 0 ? 'right' : 'left');
   } else if (!isDragging) {
+    // 點到發音按鈕時不翻牌
+    if (e.target.closest && e.target.closest('.speak-btn, .speak-btn-inline')) return;
     flipCard();
   }
   isDragging = false;
@@ -1579,13 +2129,23 @@ function renderTyping() {
   document.getElementById('typing-progress').style.width = pct + '%';
   document.getElementById('typing-progress-text').textContent = `${currentCardIdx} / ${currentDeck.length}`;
 }
+// 德文寬容比對：手機鍵盤打變音字母不方便，允許 ae=ä、oe=ö、ue=ü、ss=ß
+function normalizeGerman(s) {
+  return s.toLowerCase()
+    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss');
+}
 function checkTyping() {
   if (currentDeck.length === 0) return;
   const w = currentDeck[currentCardIdx];
   const input = document.getElementById('typing-input');
   const val = input.value.trim().toLowerCase();
   const answer = (w.article ? w.article + ' ' : '') + w.word;
-  const correct = val === answer.toLowerCase() || val === w.word.toLowerCase();
+  let correct = val === answer.toLowerCase() || val === w.word.toLowerCase();
+  // 德文模式再用寬容比對檢查一次
+  if (!correct && currentLang === 'de') {
+    const nv = normalizeGerman(val);
+    correct = nv === normalizeGerman(answer) || nv === normalizeGerman(w.word);
+  }
   input.className = 'typing-input ' + (correct ? 'correct' : 'wrong');
   const fb = document.getElementById('typing-feedback');
   if (correct) {
@@ -1638,7 +2198,7 @@ function setGrammarFilter(f, el) {
 }
 
 // ============================================================
-// GRAMMAR – 選正確句（原有題型，改版）
+// GRAMMAR – 選正確句（原有題型）
 // ============================================================
 function renderGrammarCard() {
   const container = document.getElementById('grammar-card-container');
@@ -1682,11 +2242,11 @@ function renderChoiceCard(g) {
       <div class="grammar-rule-detail" id="rule-${g.id}">${g.rule}</div>
       <div class="grammar-question">哪一句是正確的？</div>
       <div class="grammar-choices">
-        ${choices.map((c, i) => `<button class="grammar-choice" onclick="answerGrammarByIdx(this, ${i})">${c}</button>`).join('')}
+        ${choices.map((c, i) => `<button class="grammar-choice" onclick="answerGrammarByIdx(this, ${i})">${escHtml(c)}</button>`).join('')}
       </div>
       <div class="grammar-explanation" id="grammar-exp">
         <strong>📌 解析：</strong>${g.explanation}<br>
-        <span style="color:var(--green); font-weight:600;">✅ ${g.correct}</span>
+        <span style="color:var(--green); font-weight:600;">✅ ${escHtml(g.correct)}</span>
       </div>
       <div id="grammar-ai-new" style="display:none;">
         <button class="grammar-ai-btn" onclick="getAIGrammarExample('${g.id}')">✨ AI 生成新例句練習</button>
@@ -1806,18 +2366,12 @@ Rules:
 - If a word needs to be changed AND a different word needs to be added, treat as separate error entries
 - Return only the JSON object`;
 
+  const result = await callGemini([{ text: prompt }]);
+  if (!result.ok) return null;
   try {
-    const key = getApiKey();
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-    });
-    const data = await res.json();
-    if (!data.candidates || !data.candidates[0]) return null;
-    let text = data.candidates[0].content.parts[0].text.trim();
+    let text = result.text.trim();
     // strip markdown fences if present
-    text = text.replace(/^```json\s*/,'').replace(/\s*```$/,'').trim();
+    text = text.replace(/^```json\s*/,'').replace(/^```\s*/,'').replace(/\s*```$/,'').trim();
     const parsed = JSON.parse(text);
     if (!parsed.errors || !Array.isArray(parsed.errors)) return null;
     return parsed;
@@ -1837,15 +2391,16 @@ function renderErrorFindStep1(g, catLabel) {
   // 分割出 words 和 punctuation
   const tokens = tokenizeSentence(sentence);
 
+  // 修正：不再把單字塞進 onclick 字串（含撇號的字會讓 JS 壞掉）
+  // 改用 data-* 屬性，點擊時從 dataset 讀取
   const tokensHTML = tokens.map((t, i) => {
     if (t.isPunct) {
-      return `<span class="word-token punctuation">${t.text}</span>`;
+      return `<span class="word-token punctuation">${escHtml(t.text)}</span>`;
     }
-    return `<span class="word-token" id="wt-${i}" onclick="handleWordClick(${i}, '${escAttr(t.text)}')" data-word="${escAttr(t.text)}" data-wordidx="${t.wordIdx}">${t.text}</span>`;
+    return `<span class="word-token" id="wt-${i}" data-tokenidx="${i}" onclick="handleWordClick(this)">${escHtml(t.text)}</span>`;
   }).join('');
 
   const totalErrors = efState.errorWords.length;
-  const foundCount = efState.foundErrors.size;
 
   container.innerHTML = `
     <div class="grammar-card">
@@ -1865,11 +2420,13 @@ function renderErrorFindStep1(g, catLabel) {
       </div>
       <button class="grammar-nav-btn" id="grammar-next-btn-ef" onclick="nextGrammar()" style="display:none;">下一題 →</button>
     </div>`;
+
+  // 把 token 文字記在 efState，供點擊時查詢
+  efState.tokens = tokens;
 }
 
 function tokenizeSentence(sentence) {
   // Split sentence into word tokens and punctuation tokens
-  // Keep punctuation attached to words visible but separate for clicking
   const raw = sentence.split(/(\s+)/);
   const tokens = [];
   let wordIdx = 0;
@@ -1889,13 +2446,16 @@ function tokenizeSentence(sentence) {
   return tokens;
 }
 
-function handleWordClick(tokenIdx, word) {
+function handleWordClick(el) {
   if (!efState || efState.allFixed) return;
   // 如果正在修正某個錯誤，不允許繼續點字
   if (efState.foundErrors.size > 0 && efState.currentFixIdx < efState.errorWords.length && !efState.fixAnswered) {
-    // still fixing
     return;
   }
+  const tokenIdx = parseInt(el.dataset.tokenidx, 10);
+  const token = efState.tokens[tokenIdx];
+  if (!token) return;
+  const word = token.text;
 
   // 找這個 word 對應到哪個 errorWord
   const wordLower = word.toLowerCase().replace(/[.,!?;:'"()]/g, '');
@@ -1910,8 +2470,7 @@ function handleWordClick(tokenIdx, word) {
     efState.foundErrors.add(errIdx);
 
     // 標記這個 token 為已找到的錯誤
-    const tokenEl = document.getElementById(`wt-${tokenIdx}`);
-    if (tokenEl) tokenEl.classList.add('found-error');
+    el.classList.add('found-error');
 
     const remaining = efState.errorWords.length - efState.foundErrors.size;
     if (remaining > 0) {
@@ -1920,8 +2479,8 @@ function handleWordClick(tokenIdx, word) {
       // 全找到了，進入第二步
       feedbackEl.innerHTML = `<div class="error-find-feedback success">🎉 全部找到了！現在來修正每個錯誤</div>`;
       // 標記所有非錯誤的字為灰色
-      document.querySelectorAll('.word-token:not(.punctuation):not(.found-error)').forEach(el => {
-        el.classList.add('not-error');
+      document.querySelectorAll('.word-token:not(.punctuation):not(.found-error)').forEach(t => {
+        t.classList.add('not-error');
       });
       efState.currentFixIdx = 0;
       efState.fixAnswered = false;
@@ -1930,12 +2489,8 @@ function handleWordClick(tokenIdx, word) {
   } else {
     // 點錯了
     feedbackEl.innerHTML = `<div class="error-find-feedback hint">這個字沒有問題，再試試看</div>`;
-    // 短暫閃爍提示
-    const tokenEl = document.getElementById(`wt-${tokenIdx}`);
-    if (tokenEl) {
-      tokenEl.style.background = 'var(--border)';
-      setTimeout(() => { tokenEl.style.background = ''; }, 600);
-    }
+    el.style.background = 'var(--border)';
+    setTimeout(() => { el.style.background = ''; }, 600);
   }
 }
 
@@ -1949,7 +2504,7 @@ function renderFixStep() {
     fixEl.innerHTML = `
       <div class="grammar-explanation show" style="margin-top:12px;">
         <strong>📌 解析：</strong>${efState.grammar.explanation}<br>
-        <span style="color:var(--green); font-weight:600;">✅ ${efState.correctSentence}</span>
+        <span style="color:var(--green); font-weight:600;">✅ ${escHtml(efState.correctSentence)}</span>
       </div>`;
     document.getElementById('grammar-ai-new-ef').style.display = 'block';
     document.getElementById('grammar-next-btn-ef').style.display = 'block';
@@ -1960,13 +2515,15 @@ function renderFixStep() {
   const choices = shuffle([...err.correctOptions]);
   efState.fixAnswered = false;
 
+  window._fixChoices = choices;
+  window._fixCorrect = err.correctOptions[0];
   fixEl.innerHTML = `
     <div class="word-fix-section">
       <div class="word-fix-prompt">
-        <span class="error-word">${err.word}</span> 應該改成？
+        <span class="error-word">${escHtml(err.word)}</span> 應該改成？
       </div>
       <div class="word-fix-choices">
-        ${(() => { window._fixChoices = choices; window._fixCorrect = err.correctOptions[0]; return choices.map((c, i) => `<button class="word-fix-choice" onclick="answerFixByIdx(this, ${i})">${c}</button>`).join(''); })()}
+        ${choices.map((c, i) => `<button class="word-fix-choice" onclick="answerFixByIdx(this, ${i})">${escHtml(c)}</button>`).join('')}
       </div>
       <div id="fix-feedback-${idx}"></div>
     </div>`;
@@ -2012,12 +2569,13 @@ function initDiary() {
   renderDiaryList();
   renderEngooList();
   renderCamblyList();
+  renderInboxList();
   const today = new Date().toISOString().split('T')[0];
   document.getElementById('engoo-date').value = today;
 }
 function setDiaryTab(tab) {
   diaryTab = tab;
-  ['diary','engoo','cambly'].forEach(t => {
+  ['diary','engoo','cambly','inbox'].forEach(t => {
     document.getElementById('diary-sub-' + t).style.display = t === tab ? 'block' : 'none';
     document.getElementById('diary-tab-' + t).classList.toggle('active', t === tab);
   });
@@ -2101,6 +2659,7 @@ function clearDiaries() {
 function initGerman() {
   renderPronunciation();
   initSentencePractice();
+  renderGermanGrammar();
 }
 function setDeTab(tab) {
   deTab = tab;
@@ -2123,9 +2682,45 @@ function renderPronunciation() {
             <span class="pr-example-word">${ex.word}</span>
             <span class="pr-example-pron"> [${ex.pronunciation}]</span>
             <span class="pr-example-meaning"> ${ex.meaning}</span>
+            <button class="speak-btn-inline" style="width:22px; height:22px; font-size:11px;" onclick="speak('${escAttr(ex.word)}', 'de-DE')">🔊</button>
           </div>`).join('')}
       </div>
       ${pr.notes ? `<div class="pr-notes">💡 ${pr.notes}</div>` : ''}
+    </div>`).join('');
+}
+
+// 德文文法列表（讀取 data.js 的 GERMAN_GRAMMAR）
+function renderGermanGrammar() {
+  const el = document.getElementById('de-grammar-list');
+  if (typeof GERMAN_GRAMMAR === 'undefined' || GERMAN_GRAMMAR.length === 0) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🚧</div><div class="empty-state-text">還沒有德文文法資料</div><div class="empty-state-sub">學到文法後會出現在這裡</div></div>`;
+    return;
+  }
+  const catLabel = {
+    case_akkusativ: 'Akkusativ 第四格',
+    case_dativ: 'Dativ 第三格',
+    case_genitiv: 'Genitiv 第二格',
+    clause: '子句',
+    idiom: '慣用語',
+    essay_correction: '作文批改',
+    vocab_pattern: '詞彙規則',
+  };
+  // 依分類分組顯示
+  const groups = {};
+  GERMAN_GRAMMAR.forEach(g => {
+    const key = catLabel[g.category] || g.category || '其他';
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(g);
+  });
+  el.innerHTML = Object.keys(groups).map(cat => `
+    <div class="pr-card">
+      <div class="pr-title">${cat}</div>
+      ${groups[cat].map(g => `
+        <div style="padding: 10px 0; border-top: 1px solid var(--border);">
+          <div style="font-size: 14px; font-weight: 600; line-height:1.5;">${g.rule}</div>
+          ${g.example ? `<div style="font-size: 13px; color: var(--de); margin-top: 6px; line-height:1.5;">${escHtml(g.example)}</div>` : ''}
+          ${g.explanation ? `<div style="font-size: 12px; color: var(--text2); margin-top: 6px; line-height:1.6;">${g.explanation}</div>` : ''}
+        </div>`).join('')}
     </div>`).join('');
 }
 
@@ -2204,9 +2799,12 @@ function renderSentenceList() {
     <div class="pr-card">
       <div class="pr-title">${unit}</div>
       ${groups[unit].map(s => `
-        <div style="padding: 8px 0; border-top: 1px solid var(--border);">
-          <div style="font-size: 14px; font-weight: 600;">${s.german}</div>
-          <div style="font-size: 13px; color: var(--text2); margin-top: 2px;">${s.chinese}</div>
+        <div style="padding: 8px 0; border-top: 1px solid var(--border); display:flex; align-items:center; gap:8px;">
+          <div style="flex:1;">
+            <div style="font-size: 14px; font-weight: 600;">${escHtml(s.german)}</div>
+            <div style="font-size: 13px; color: var(--text2); margin-top: 2px;">${escHtml(s.chinese)}</div>
+          </div>
+          <button class="speak-btn-inline" onclick="speakSentenceById('${s.id}')">🔊</button>
         </div>`).join('')}
     </div>`).join('');
 }
@@ -2217,6 +2815,12 @@ function renderSentenceList() {
 function initSettings() {
   const k = getApiKey();
   if (k) document.getElementById('api-key-input').value = k;
+  document.getElementById('gemini-model-input').value = getGeminiModel();
+  const gh = getGithubConfig();
+  if (gh.token) document.getElementById('github-token-input').value = gh.token;
+  if (gh.owner) document.getElementById('github-owner-input').value = gh.owner;
+  if (gh.repo) document.getElementById('github-repo-input').value = gh.repo;
+  document.getElementById('github-branch-input').value = gh.branch;
   document.getElementById('settings-en-count').textContent = `共 ${ENGLISH_VOCABULARY.length} 個`;
   document.getElementById('settings-de-count').textContent = `共 ${GERMAN_VOCABULARY.length} 個`;
   document.getElementById('settings-grammar-count').textContent = `共 ${ENGLISH_GRAMMAR.length} 道`;
@@ -2242,6 +2846,7 @@ function exportData() {
     reviewSchedule,
     grammarStats,
     todayStats,
+    inboxItems,
   };
   const json = JSON.stringify(exportObj, null, 2);
   const blob = new Blob([json], { type: 'application/json' });
@@ -2271,6 +2876,7 @@ function importData(event) {
       if (data.reviewSchedule) reviewSchedule = data.reviewSchedule;
       if (data.grammarStats) grammarStats = data.grammarStats;
       if (data.todayStats) todayStats = data.todayStats;
+      if (data.inboxItems) inboxItems = data.inboxItems;
       saveData();
       const exportDate = new Date(data.exportDate).toLocaleDateString('zh-TW');
       document.getElementById('import-status').innerHTML =
@@ -2288,24 +2894,35 @@ function importData(event) {
 
 // ============================================================
 // GEMINI AI
+// 統一入口：parts 可以是純文字或文字+圖片
+// 回傳 { ok: true, text } 或 { ok: false, error }
+// 錯誤訊息會包含 Google 回傳的原因，方便除錯
 // ============================================================
-async function callGemini(prompt) {
+async function callGemini(parts) {
   const key = getApiKey();
-  if (!key) { showToast('請先在設定中輸入 Gemini API Key'); return null; }
+  if (!key) return { ok: false, error: '請先在「設定」中輸入 Gemini API Key' };
+  // 向下相容：如果傳進來是字串，包成 parts 格式
+  if (typeof parts === 'string') parts = [{ text: parts }];
+  const model = getGeminiModel();
   try {
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`, {
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+      body: JSON.stringify({ contents: [{ parts: parts }] })
     });
     const data = await res.json();
-    if (data.candidates && data.candidates[0]) {
-      return data.candidates[0].content.parts[0].text;
+    if (!res.ok) {
+      // 顯示 Google 回傳的真正錯誤（例如模型名稱錯誤、key 無效、超過額度）
+      const msg = (data.error && data.error.message) ? data.error.message : `HTTP ${res.status}`;
+      return { ok: false, error: `Gemini 錯誤：${msg}（目前模型：${model}，可到設定修改）` };
     }
-    return null;
+    if (data.candidates && data.candidates[0] && data.candidates[0].content) {
+      const text = data.candidates[0].content.parts.map(p => p.text || '').join('');
+      return { ok: true, text };
+    }
+    return { ok: false, error: 'Gemini 沒有回傳內容，請再試一次' };
   } catch(e) {
-    console.error(e);
-    return null;
+    return { ok: false, error: '網路錯誤：' + e.message };
   }
 }
 
@@ -2322,10 +2939,10 @@ Format:
 2. [sentence] → [Chinese translation]
 Only output the sentences, nothing else.`;
   const result = await callGemini(prompt);
-  if (result) {
-    resultEl.innerHTML = `<div class="ai-result ${currentLang === 'de' ? 'de' : ''}">${result.replace(/\n/g, '<br>')}</div>`;
+  if (result.ok) {
+    resultEl.innerHTML = `<div class="ai-result ${currentLang === 'de' ? 'de' : ''}">${escHtml(result.text)}</div>`;
   } else {
-    resultEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ 無法連線，請確認 API Key</div>`;
+    resultEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${result.error}</div>`;
   }
 }
 
@@ -2339,7 +2956,7 @@ async function getAIGrammarExample(grammarId) {
   const resultEl = document.getElementById(resultElId);
   if (!resultEl) return;
   resultEl.innerHTML = `<div class="ai-loading"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 生成新例句中…</div>`;
-  const prompt = `You are an English teacher for a Taiwanese learner named Christine (chemical industry analyst, ENTP, loves travel and K-pop).
+  const prompt = `You are an English teacher for a Taiwanese learner named Christine (chemical industry analyst, loves travel and K-pop).
 Grammar rule: "${g.rule}"
 Generate 3 NEW practice sentences related to her daily life (work/travel/food/LOL esports/skincare).
 Each sentence should be WRONG first, then show the correct version.
@@ -2350,10 +2967,10 @@ Format:
 
 Only output the 3 sets, nothing else.`;
   const result = await callGemini(prompt);
-  if (result) {
-    resultEl.innerHTML = `<div class="ai-result">${result.replace(/\n/g, '<br>').replace(/❌/g, '<span style="color:var(--de)">❌</span>').replace(/✅/g, '<span style="color:var(--green)">✅</span>')}</div>`;
+  if (result.ok) {
+    resultEl.innerHTML = `<div class="ai-result">${escHtml(result.text).replace(/❌/g, '<span style="color:var(--de)">❌</span>').replace(/✅/g, '<span style="color:var(--green)">✅</span>')}</div>`;
   } else {
-    resultEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ 連線失敗</div>`;
+    resultEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${result.error}</div>`;
   }
 }
 
@@ -2380,10 +2997,10 @@ Format:
 【整體評價】
 [encouragement in Chinese]`;
   const result = await callGemini(prompt);
-  if (result) {
-    resultEl.innerHTML = `<div class="ai-result">${result.replace(/\n/g, '<br>').replace(/❌/g, '<span style="color:var(--de)">❌</span>').replace(/✅/g, '<span style="color:var(--green)">✅</span>')}</div>`;
+  if (result.ok) {
+    resultEl.innerHTML = `<div class="ai-result">${escHtml(result.text).replace(/❌/g, '<span style="color:var(--de)">❌</span>').replace(/✅/g, '<span style="color:var(--green)">✅</span>')}</div>`;
   } else {
-    resultEl.innerHTML = `<div class="ai-result" style="color:var(--de); margin-top:10px;">❌ 連線失敗，請確認 API Key</div>`;
+    resultEl.innerHTML = `<div class="ai-result" style="color:var(--de); margin-top:10px;">❌ ${result.error}</div>`;
   }
 }
 
@@ -2401,7 +3018,7 @@ function escHtml(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
 }
 function escAttr(s) {
-  return String(s).replace(/'/g,'&#39;').replace(/"/g,'&quot;');
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/'/g,'&#39;').replace(/"/g,'&quot;');
 }
 function showToast(msg, duration = 2000) {
   const t = document.getElementById('toast');
@@ -2415,6 +3032,11 @@ function showToast(msg, duration = 2000) {
 // ============================================================
 loadData();
 updateHome();
+// 載入 GitHub 上的使用者資料檔（收集箱新增的內容），完成後刷新首頁數字
+loadUserData().then(() => {
+  updateHome();
+  if (currentPage === 'settings') initSettings();
+});
 </script>
 </body>
 </html>
