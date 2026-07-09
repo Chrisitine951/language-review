@@ -1380,7 +1380,7 @@
           </div>
         </div>
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Language Review App v1.4.1<br>最後更新：2026-07-09（修正找錯誤卡死＋Engoo貼連結自動整理）
+          Language Review App v1.4.2<br>最後更新：2026-07-09（文法題引擎重寫：差異填空＋同句判斷）
         </div>
       </div>
     </div>
@@ -2487,32 +2487,89 @@ function renderGrammarCard() {
   }
 }
 
-function renderChoiceCard(g) {
+// ============================================================
+// 英文文法題引擎（v1.4.2 重寫）
+// 舊設計的問題：選項是從「其他文法題」抓來的正確句，三句彼此無關、
+// 全都文法正確，根本無從判斷——已整段淘汰。
+// 新設計：所有題目只圍繞「同一條規則」出題，兩種題型：
+//   1. 填空題：自動比對 wrong/correct 的差異字挖空，
+//      選項 = 正確字 + 本人當時的錯字 + 同類干擾字（從混淆池抓）
+//   2. 判斷題：同一句話的錯誤版 vs 正確版，二選一
+// 差異太大無法挖空的題目自動退回判斷題。
+// ============================================================
+
+// 各分類的「混淆池」：填空題的第三個干擾選項從這裡抓（要跟正解、錯字都不同才用）
+const GRAMMAR_DISTRACTOR_POOLS = {
+  past_tense: ['go', 'went', 'gone', 'come', 'came', 'is', 'was', 'were', 'have been', 'begin', 'began', 'begun', 'bring', 'brought', 'feel', 'felt', 'stay', 'stayed', 'choose', 'chose'],
+  subject_verb: ['is', 'are', 'was', 'were', 'has', 'have', 'does', 'do'],
+  preposition: ['in', 'on', 'at', 'to', 'for', 'from', 'about', 'of', 'with', 'as'],
+  other: ['a', 'an', 'the', 'more', 'most', 'was', 'is', 'to', 'ing'],
+};
+
+// 比對錯誤句與正確句，找出「從頭到尾唯一不同的那段」
+// 回傳 { pre, wrongMid, correctMid, post }；差異太大（挖空超過4個字）回傳 null
+function diffSentences(wrong, correct) {
+  const clean = s => s.trim().replace(/\s+/g, ' ');
+  const wWords = clean(wrong).split(' ');
+  const cWords = clean(correct).split(' ');
+  const norm = x => x.toLowerCase().replace(/[.,!?;:'"()]+$/g, '');
+  // 從頭找相同的部分
+  let start = 0;
+  while (start < wWords.length && start < cWords.length && norm(wWords[start]) === norm(cWords[start])) start++;
+  // 從尾找相同的部分
+  let endW = wWords.length - 1, endC = cWords.length - 1;
+  while (endW >= start && endC >= start && norm(wWords[endW]) === norm(cWords[endC])) { endW--; endC--; }
+  const wrongMid = wWords.slice(start, endW + 1).join(' ');
+  const correctMid = cWords.slice(start, endC + 1).join(' ');
+  // 兩邊差異都是空 或 挖空段太長 → 不適合填空
+  if (!correctMid || correctMid.split(' ').length > 4) return null;
+  if (norm(wrongMid) === norm(correctMid)) return null;
+  return {
+    pre: cWords.slice(0, start).join(' '),
+    wrongMid: wrongMid.replace(/[.,!?;:]+$/g, ''),
+    correctMid: correctMid.replace(/[.,!?;:]+$/g, ''),
+    post: cWords.slice(endC + 1).join(' '),
+  };
+}
+
+// 用差異結果組出填空題；組不出來回傳 null（呼叫端退回判斷題）
+function buildFillQuestion(g) {
+  const d = diffSentences(g.wrong, g.correct);
+  if (!d) return null;
+  const choices = [d.correctMid];
+  // 本人當時的錯字當第二個選項（若差異段是「多出來的字」則 wrongMid 可能為空）
+  if (d.wrongMid && d.wrongMid.toLowerCase() !== d.correctMid.toLowerCase()) choices.push(d.wrongMid);
+  // 從同分類混淆池抓一個都不重複的干擾字
+  const pool = GRAMMAR_DISTRACTOR_POOLS[g.category] || GRAMMAR_DISTRACTOR_POOLS.other;
+  const used = choices.map(c => c.toLowerCase());
+  const candidates = pool.filter(p => !used.includes(p.toLowerCase()) && !used.some(u => u.includes(p.toLowerCase())));
+  if (candidates.length > 0 && choices.length < 3) {
+    choices.push(candidates[Math.floor(Math.random() * candidates.length)]);
+  }
+  if (choices.length < 2) return null; // 至少要兩個選項才成題
+  const question = `${d.pre} ___ ${d.post}`.trim().replace(/\s+/g, ' ');
+  return { question, choices, answer: d.correctMid };
+}
+
+// 共用的題卡外框（填空題與判斷題都用這個）
+function renderGrammarCardFrame(g, questionText, choices, answer) {
   const container = document.getElementById('grammar-card-container');
   const catLabel = { past_tense:'過去式', subject_verb:'主詞一致', preposition:'介系詞', other:'其他文法' };
-
-  const sameCategory = ENGLISH_GRAMMAR.filter(x => x.id !== g.id && x.category === g.category);
-  const otherCategory = ENGLISH_GRAMMAR.filter(x => x.id !== g.id && x.category !== g.category);
-  shuffle(sameCategory);
-  shuffle(otherCategory);
-  const wrongPool = [...sameCategory, ...otherCategory];
-  const wrongChoices = wrongPool.slice(0, 2).map(x => x.correct);
-  const choices = shuffle([g.correct, ...wrongChoices]);
-
   grammarAnswered = false;
+  const shuffled = shuffle([...choices]);
   // 把 choices 存到 window 讓 onclick 用 index 取值，避免引號衝突
-  window._grammarChoices = choices;
-  window._grammarCorrect = g.correct;
+  window._grammarChoices = shuffled;
+  window._grammarCorrect = answer;
   container.innerHTML = `
     <div class="grammar-card">
       <div class="grammar-category-row" onclick="toggleRuleDetail('rule-${g.id}')">
-        <span class="grammar-category-label">${catLabel[g.category] || g.category}</span>
+        <span class="grammar-category-label">${catLabel[g.category] || g.category}${g.source === 'ielts' ? '・雅思錯題' : ''}</span>
         <span class="grammar-rule-toggle">規則 ▾</span>
       </div>
       <div class="grammar-rule-detail" id="rule-${g.id}">${g.rule}</div>
-      <div class="grammar-question">哪一句是正確的？</div>
+      <div class="grammar-question">${escHtml(questionText)}</div>
       <div class="grammar-choices">
-        ${choices.map((c, i) => `<button class="grammar-choice" onclick="answerGrammarByIdx(this, ${i})">${escHtml(c)}</button>`).join('')}
+        ${shuffled.map((c, i) => `<button class="grammar-choice" onclick="answerGrammarByIdx(this, ${i})">${escHtml(c)}</button>`).join('')}
       </div>
       <div class="grammar-explanation" id="grammar-exp">
         <strong>📌 解析：</strong>${g.explanation}<br>
@@ -2524,6 +2581,17 @@ function renderChoiceCard(g) {
       </div>
       <button class="grammar-nav-btn" id="grammar-next-btn" onclick="nextGrammar()" style="display:none;">下一題 →</button>
     </div>`;
+}
+
+// 題型分派：優先填空題（60%），否則判斷題；填空組不出來也退回判斷題
+function renderChoiceCard(g) {
+  const fill = Math.random() < 0.6 ? buildFillQuestion(g) : null;
+  if (fill) {
+    renderGrammarCardFrame(g, fill.question, fill.choices, fill.answer);
+  } else {
+    // 判斷題：同一句的錯誤版 vs 正確版
+    renderGrammarCardFrame(g, '哪一句是正確的？', [g.correct, g.wrong], g.correct);
+  }
 }
 
 function toggleRuleDetail(id) {
