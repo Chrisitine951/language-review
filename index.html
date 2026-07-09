@@ -898,6 +898,16 @@
           <span class="quick-btn-title">收集箱</span>
           <span class="quick-btn-sub">拍照上傳課堂紀錄</span>
         </button>
+        <button class="quick-btn" onclick="goTo('roots',null)">
+          <span class="quick-btn-icon">🌱</span>
+          <span class="quick-btn-title">字根教室</span>
+          <span class="quick-btn-sub" id="home-roots-count">雅思字根拆解</span>
+        </button>
+        <button class="quick-btn" onclick="goTo('diary',null); setDiaryTab('diary')">
+          <span class="quick-btn-icon">📖</span>
+          <span class="quick-btn-title">日記 / 記錄</span>
+          <span class="quick-btn-sub">寫日記・課程</span>
+        </button>
       </div>
 
       <div class="section-header">
@@ -915,7 +925,6 @@
           <div class="topbar-title" id="vocab-title">英文單字</div>
           <div class="topbar-sub" id="vocab-mode-label">翻牌模式</div>
         </div>
-        <button class="topbar-action" onclick="toggleVocabMode()" title="切換模式">⌨️</button>
       </div>
 
       <!-- lang toggle -->
@@ -924,6 +933,13 @@
           <button class="lang-toggle-btn active" id="lang-en-btn" onclick="setVocabLang('en')">🇬🇧 英文</button>
           <button class="lang-toggle-btn" id="lang-de-btn" onclick="setVocabLang('de')">🇩🇪 德文</button>
         </div>
+      </div>
+
+      <!-- 模式切換：翻牌 / 打字 / 字根實驗室 -->
+      <div class="filter-row" style="padding-top: 12px;">
+        <button class="filter-chip active" id="vmode-flip" onclick="setVocabMode('flip')">🃏 翻牌</button>
+        <button class="filter-chip" id="vmode-type" onclick="setVocabMode('type')">⌨️ 打字</button>
+        <button class="filter-chip" id="vmode-roots" onclick="setVocabMode('roots')">🔎 字根實驗室</button>
       </div>
 
       <!-- flashcard mode -->
@@ -1169,9 +1185,69 @@
       </div>
 
       <div id="de-sub-grammar" style="display:none;">
-        <div class="section-header"><span class="section-title">德文文法重點</span></div>
-        <div id="de-grammar-list"><!-- filled by JS --></div>
+        <!-- 瀏覽 / 練習 模式切換 -->
+        <div class="lang-toggle" style="margin: 12px 16px 0;">
+          <button class="lang-toggle-btn active" id="degr-mode-browse" onclick="setDeGrammarMode('browse')">📖 瀏覽規則</button>
+          <button class="lang-toggle-btn" id="degr-mode-practice" onclick="setDeGrammarMode('practice')">✏️ 練習</button>
+        </div>
+        <div id="degr-browse-view">
+          <div class="section-header"><span class="section-title">德文文法重點</span></div>
+          <div id="de-grammar-list"><!-- filled by JS --></div>
+        </div>
+        <div id="degr-practice-view" style="display:none;">
+          <div class="grammar-stats" style="padding-top:12px;">
+            <div class="grammar-stat">
+              <div class="grammar-stat-num" id="degr-correct" style="color:var(--green);">0</div>
+              <div class="grammar-stat-label">答對</div>
+            </div>
+            <div class="grammar-stat">
+              <div class="grammar-stat-num" id="degr-wrong" style="color:var(--de);">0</div>
+              <div class="grammar-stat-label">答錯</div>
+            </div>
+            <div class="grammar-stat">
+              <div class="grammar-stat-num" id="degr-cached">0</div>
+              <div class="grammar-stat-label">題庫存量</div>
+            </div>
+          </div>
+          <div id="degr-question-container"><!-- filled by JS --></div>
+        </div>
       </div>
+    </div>
+
+    <!-- ROOTS 字根教室（從首頁進入，無底部導航按鈕）-->
+    <div id="page-roots" class="page">
+      <div class="topbar">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <button class="topbar-action" onclick="switchPage('home')" title="返回">←</button>
+          <div>
+            <div class="topbar-title">🌱 字根教室</div>
+            <div class="topbar-sub">雅思高頻字根・AI 拆解查詢</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI 查詢區 -->
+      <div class="section-header"><span class="section-title">查詢單字的字根來源</span></div>
+      <div class="diary-input-card">
+        <div class="typing-input-wrap" style="margin-top:0;">
+          <input class="typing-input" id="root-lookup-input" placeholder="輸入英文單字，例如 sustainable" autocomplete="off" autocapitalize="off">
+          <button class="typing-submit" onclick="lookupRoot()">拆解</button>
+        </div>
+        <div id="root-lookup-result"></div>
+      </div>
+
+      <!-- 篩選 -->
+      <div class="filter-row" style="padding-top:4px;">
+        <button class="filter-chip active" onclick="setRootFilter('all', this)">全部</button>
+        <button class="filter-chip" onclick="setRootFilter('root', this)">字根</button>
+        <button class="filter-chip" onclick="setRootFilter('prefix', this)">字首</button>
+        <button class="filter-chip" onclick="setRootFilter('suffix', this)">字尾</button>
+        <button class="filter-chip" onclick="setRootFilter('user', this)">📒 我的查詢</button>
+      </div>
+      <div style="padding: 0 16px 8px;">
+        <input class="record-input" id="root-search" placeholder="🔍 搜尋字根或例字…" oninput="renderRootList()" style="margin-bottom:0;">
+      </div>
+      <div id="root-list"><!-- filled by JS --></div>
     </div>
 
     <!-- SETTINGS -->
@@ -1208,6 +1284,23 @@
             <button class="settings-save-btn" onclick="saveGithubSettings()">儲存 GitHub 設定</button>
             <button class="settings-save-btn" style="background:var(--surface2); color:var(--text);" onclick="testGithubConnection()">🔌 測試連線</button>
             <div id="github-test-status"></div>
+          </div>
+        </div>
+
+        <div class="section-header" style="margin-top:8px;"><span class="section-title">☁️ 自動同步進度</span></div>
+        <div class="settings-section">
+          <div class="settings-item" style="flex-direction: column; align-items: stretch;">
+            <div class="settings-item-sub" style="line-height:1.6;">開啟後：複習進度、日記、記錄會自動備份到 GitHub（每人一個進度檔），開 App 時自動還原最新進度。換手機不用再手動匯出。</div>
+            <div class="settings-item-title" style="margin-top:12px;">使用者名稱</div>
+            <div class="settings-item-sub">每個人用不同名稱，進度就完全分開（如 christine / murray）</div>
+            <input class="settings-input" id="username-input" placeholder="christine">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:12px;">
+              <div class="settings-item-title">自動同步</div>
+              <button id="autosync-toggle" onclick="toggleAutoSync()" style="font-size:14px; font-weight:600; color:var(--green);">已開啟</button>
+            </div>
+            <button class="settings-save-btn" onclick="saveSyncSettings()">儲存同步設定</button>
+            <button class="settings-save-btn" style="background:var(--green);" onclick="pushProgress(true)">☁️ 立即同步</button>
+            <div class="settings-item-sub" id="sync-status" style="margin-top:8px; text-align:center;">—</div>
           </div>
         </div>
 
@@ -1278,7 +1371,7 @@
           </div>
         </div>
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Language Review App v1.3.0<br>最後更新：2026-07-08
+          Language Review App v1.4.0<br>最後更新：2026-07-09（雅思導向＋字根教室＋自動同步＋德文文法練習）
         </div>
       </div>
     </div>
@@ -1379,7 +1472,10 @@ function saveData() {
     localStorage.setItem('lr_today', JSON.stringify(todayStats));
     localStorage.setItem('lr_gstats', JSON.stringify(grammarStats));
     localStorage.setItem('lr_inbox', JSON.stringify(inboxItems));
+    localStorage.setItem('lr_savedat', String(Date.now())); // 給自動同步比對新舊用
   } catch(e) {}
+  // 資料有變動 → 排程 20 秒後自動上傳雲端（函式內會自行檢查是否已設定）
+  if (typeof scheduleAutoPush === 'function') scheduleAutoPush();
 }
 function loadData() {
   try {
@@ -1472,6 +1568,7 @@ function mergeUserData(userData) {
   mergeInto(ENGLISH_GRAMMAR, userData.englishGrammar);
   if (typeof GERMAN_GRAMMAR !== 'undefined') mergeInto(GERMAN_GRAMMAR, userData.germanGrammar);
   if (typeof GERMAN_SENTENCES !== 'undefined') mergeInto(GERMAN_SENTENCES, userData.germanSentences);
+  if (typeof WORD_ROOTS !== 'undefined') mergeInto(WORD_ROOTS, userData.wordRoots);
 }
 
 // ============================================================
@@ -1552,6 +1649,152 @@ async function githubPutUserData(json, sha) {
   }
 }
 
+// ============================================================
+// 自動同步：把「複習進度」備份到 GitHub 的 progress-<使用者名稱>.json
+// 設計重點：
+//   - 每位使用者（如 christine / murray）有各自的進度檔，互不干擾
+//   - 開啟 App 時自動下載雲端進度，若雲端較新就還原（比較 savedAt 時間戳）
+//   - 本機資料變動後 20 秒自動上傳一次（防抖，避免頻繁 commit）
+//   - 離開/切換 App 時也會嘗試上傳一次
+//   - 沒設定 GitHub 或關閉自動同步時，一切照舊（純本機）
+// ============================================================
+function getUsername() {
+  return (localStorage.getItem('lr_username') || 'christine').trim().toLowerCase().replace(/[^a-z0-9-]/g, '') || 'christine';
+}
+function isAutoSyncOn() {
+  return localStorage.getItem('lr_autosync') !== '0'; // 預設開啟
+}
+function progressPath() {
+  return 'progress-' + getUsername() + '.json';
+}
+
+// 通用：讀取 repo 裡任一個 JSON 檔
+async function githubGetJson(path) {
+  const cfg = getGithubConfig();
+  if (!cfg.token || !cfg.owner || !cfg.repo) return { error: '未設定' };
+  try {
+    const res = await fetch(githubApiUrl(path) + '?ref=' + encodeURIComponent(cfg.branch), {
+      headers: { 'Authorization': 'Bearer ' + cfg.token, 'Accept': 'application/vnd.github+json' },
+    });
+    if (res.status === 404) return { exists: false, sha: null, json: null };
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({}));
+      return { error: `GitHub 讀取失敗 (${res.status})：${body.message || '未知錯誤'}` };
+    }
+    const data = await res.json();
+    const text = fromBase64Unicode(data.content.replace(/\n/g, ''));
+    let json;
+    try { json = JSON.parse(text); } catch(e) { return { error: path + ' 不是有效的 JSON' }; }
+    return { exists: true, sha: data.sha, json };
+  } catch(e) { return { error: '網路錯誤：' + e.message }; }
+}
+
+// 通用：寫入 repo 裡任一個 JSON 檔
+async function githubPutJson(path, json, sha, message) {
+  const cfg = getGithubConfig();
+  const body = {
+    message: message || ('更新 ' + path + ' ' + new Date().toLocaleString('zh-TW')),
+    content: toBase64Unicode(JSON.stringify(json, null, 2)),
+    branch: cfg.branch,
+  };
+  if (sha) body.sha = sha;
+  try {
+    const res = await fetch(githubApiUrl(path), {
+      method: 'PUT',
+      headers: { 'Authorization': 'Bearer ' + cfg.token, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) {
+      const resBody = await res.json().catch(() => ({}));
+      return { error: `GitHub 寫入失敗 (${res.status})：${resBody.message || '未知錯誤'}` };
+    }
+    return { ok: true };
+  } catch(e) { return { error: '網路錯誤：' + e.message }; }
+}
+
+// 組合要備份的進度物件
+function buildProgressObject() {
+  return {
+    savedAt: Number(localStorage.getItem('lr_savedat') || 0),
+    username: getUsername(),
+    reviewSchedule, grammarStats, todayStats, diaryEntries, engooRecords, inboxItems,
+  };
+}
+// 把雲端進度還原到本機
+function applyProgressObject(p) {
+  if (!p) return;
+  if (p.reviewSchedule) reviewSchedule = p.reviewSchedule;
+  if (p.grammarStats) grammarStats = p.grammarStats;
+  if (p.todayStats && p.todayStats.date === new Date().toDateString()) todayStats = p.todayStats;
+  if (Array.isArray(p.diaryEntries)) diaryEntries = p.diaryEntries;
+  if (Array.isArray(p.engooRecords)) engooRecords = p.engooRecords;
+  if (Array.isArray(p.inboxItems)) inboxItems = p.inboxItems;
+  saveData();
+}
+
+let syncTimer = null;
+let syncing = false;
+function setSyncStatus(text) {
+  const el = document.getElementById('sync-status');
+  if (el) el.textContent = text;
+}
+// 資料變動後呼叫：20 秒後自動上傳（重複呼叫會重設計時器）
+function scheduleAutoPush() {
+  if (!isAutoSyncOn()) return;
+  const cfg = getGithubConfig();
+  if (!cfg.token || !cfg.owner || !cfg.repo) return;
+  if (syncTimer) clearTimeout(syncTimer);
+  syncTimer = setTimeout(() => pushProgress(), 20000);
+}
+// 上傳進度到雲端
+async function pushProgress(manual) {
+  if (syncing) return;
+  const cfg = getGithubConfig();
+  if (!cfg.token || !cfg.owner || !cfg.repo) {
+    if (manual) showToast('請先到設定完成 GitHub 設定');
+    return;
+  }
+  syncing = true;
+  setSyncStatus('⬆️ 同步中…');
+  try {
+    const remote = await githubGetJson(progressPath());
+    if (remote.error && remote.error !== '未設定') { setSyncStatus('❌ ' + remote.error); return; }
+    const put = await githubPutJson(progressPath(), buildProgressObject(), remote.sha, '進度同步 (' + getUsername() + ')');
+    if (put.error) { setSyncStatus('❌ ' + put.error); return; }
+    localStorage.setItem('lr_lastsync', String(Date.now()));
+    setSyncStatus('✅ 已同步 ' + new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' }));
+    if (manual) showToast('✅ 進度已同步到雲端');
+  } finally {
+    syncing = false;
+  }
+}
+// 開啟 App 時：雲端進度比本機新就還原
+async function pullProgressOnStartup() {
+  if (!isAutoSyncOn()) return;
+  const cfg = getGithubConfig();
+  if (!cfg.token || !cfg.owner || !cfg.repo) return;
+  const remote = await githubGetJson(progressPath());
+  if (remote.error || !remote.exists || !remote.json) return;
+  const localSavedAt = Number(localStorage.getItem('lr_savedat') || 0);
+  const remoteSavedAt = Number(remote.json.savedAt || 0);
+  if (remoteSavedAt > localSavedAt) {
+    applyProgressObject(remote.json);
+    localStorage.setItem('lr_savedat', String(remoteSavedAt));
+    setSyncStatus('⬇️ 已從雲端還原進度');
+    showToast('⬇️ 已從雲端還原最新進度');
+    if (currentPage === 'home') updateHome();
+  } else {
+    setSyncStatus('✅ 雲端進度已是最新');
+  }
+}
+// 離開 / 切換 App 時盡力上傳一次（fire and forget）
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden' && isAutoSyncOn()) {
+    const cfg = getGithubConfig();
+    if (cfg.token && cfg.owner && cfg.repo) pushProgress();
+  }
+});
+
 function emptyUserData() {
   return {
     englishVocabulary: [],
@@ -1559,6 +1802,7 @@ function emptyUserData() {
     englishGrammar: [],
     germanGrammar: [],
     germanSentences: [],
+    wordRoots: [],
   };
 }
 
@@ -1615,20 +1859,20 @@ async function analyzeInbox() {
   const statusEl = document.getElementById('inbox-analyze-status');
   statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 分析中，照片可能需要 10–20 秒…</div>`;
 
-  const prompt = `You are helping a Taiwanese language learner (Christine) organize her lesson notes into a study database.
-The content may include: English lesson feedback (您說/建議/解釋 format from Cambly), German lesson handouts, handwritten notes, or vocabulary lists.
+  const prompt = `You are helping a Taiwanese language learner (Christine) organize her lesson notes into a study database. She is preparing for IELTS (target band 6.5-7.0).
+The content may include: English lesson feedback (您說/建議/解釋 format from Cambly), IELTS practice exercises with mistakes and corrections (錯題), Engoo articles, German lesson handouts, handwritten notes, or vocabulary lists.
 
 Analyze the content and extract items into this exact JSON structure. Only include items that are clearly present. Return ONLY valid JSON, no markdown fences, no explanation:
 
 {
   "englishVocab": [
-    { "word": "...", "meaning": "中文意思", "partOfSpeech": "n./v./adj./phrase", "example": "example sentence" }
+    { "word": "...", "meaning": "中文意思", "partOfSpeech": "n./v./adj./phrase", "example": "example sentence", "source": "cambly/engoo/ielts/other" }
   ],
   "germanVocab": [
     { "article": "der/die/das or empty string", "word": "das Wort (include article in word for nouns)", "meaning": "中文意思", "category": "greeting/people/food/objects/body/places/nature/verb/adjective/time/other", "example": "German example sentence" }
   ],
   "englishGrammar": [
-    { "category": "past_tense/subject_verb/preposition/other", "rule": "簡短規則名稱", "wrong": "wrong sentence", "correct": "correct sentence", "explanation": "繁體中文解釋" }
+    { "category": "past_tense/subject_verb/preposition/other", "rule": "簡短規則名稱", "wrong": "wrong sentence", "correct": "correct sentence", "explanation": "繁體中文解釋", "source": "cambly/engoo/ielts/other" }
   ],
   "germanSentences": [
     { "german": "German sentence", "chinese": "中文翻譯", "unitTitle": "單元名稱（若可辨識）" }
@@ -1638,6 +1882,8 @@ Analyze the content and extract items into this exact JSON structure. Only inclu
 Rules:
 - Meanings and explanations in Traditional Chinese (繁體中文)
 - For grammar: only include errors with clear learning value, not every small mistake
+- "source": mark "ielts" if the content is clearly IELTS practice/test material (雅思題目、錯題訂正、劍橋真題); "cambly" for tutor lesson feedback; "engoo" for Engoo articles; otherwise "other"
+- For IELTS mistakes (錯題): the wrong answer goes in "wrong", the correction in "correct", and explain WHY in Traditional Chinese
 - If content is unreadable or empty, return {"englishVocab":[],"germanVocab":[],"englishGrammar":[],"germanSentences":[]}`;
 
   // 組合 Gemini 請求的 parts：文字 + 照片（如果有）
@@ -1667,7 +1913,7 @@ Rules:
   // 轉成收集箱項目
   let added = 0;
   (parsed.englishVocab || []).forEach(v => {
-    inboxItems.push({ type: 'en_vocab', word: v.word || '', meaning: v.meaning || '', partOfSpeech: v.partOfSpeech || '', example: v.example || '' });
+    inboxItems.push({ type: 'en_vocab', word: v.word || '', meaning: v.meaning || '', partOfSpeech: v.partOfSpeech || '', example: v.example || '', source: v.source || 'inbox' });
     added++;
   });
   (parsed.germanVocab || []).forEach(v => {
@@ -1675,7 +1921,7 @@ Rules:
     added++;
   });
   (parsed.englishGrammar || []).forEach(g => {
-    inboxItems.push({ type: 'en_grammar', category: g.category || 'other', rule: g.rule || '', wrong: g.wrong || '', correct: g.correct || '', explanation: g.explanation || '' });
+    inboxItems.push({ type: 'en_grammar', category: g.category || 'other', rule: g.rule || '', wrong: g.wrong || '', correct: g.correct || '', explanation: g.explanation || '', source: g.source || 'inbox' });
     added++;
   });
   (parsed.germanSentences || []).forEach(s => {
@@ -1796,7 +2042,7 @@ async function saveInboxToGithub() {
       userData.englishVocabulary.push({
         id: makeUserId('en', n),
         word: item.word, meaning: item.meaning,
-        partOfSpeech: item.partOfSpeech, source: 'inbox', example: item.example,
+        partOfSpeech: item.partOfSpeech, source: item.source || 'inbox', example: item.example,
       });
     } else if (item.type === 'de_vocab') {
       userData.germanVocabulary.push({
@@ -1810,6 +2056,7 @@ async function saveInboxToGithub() {
         category: item.category || 'other', rule: item.rule,
         wrong: item.wrong, correct: item.correct,
         explanation: item.explanation, mastered: false,
+        source: item.source || 'inbox',
       });
     } else if (item.type === 'de_sentence') {
       userData.germanSentences.push({
@@ -1882,7 +2129,9 @@ function switchPage(page) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('page-' + page).classList.add('active');
-  document.getElementById('nav-' + page).classList.add('active');
+  // 有些頁面（如字根教室）沒有底部導航按鈕，要防呆
+  const navItem = document.getElementById('nav-' + page);
+  if (navItem) navItem.classList.add('active');
   currentPage = page;
   if (page === 'home') updateHome();
   if (page === 'vocab') initVocab();
@@ -1890,6 +2139,7 @@ function switchPage(page) {
   if (page === 'diary') initDiary();
   if (page === 'german') initGerman();
   if (page === 'settings') initSettings();
+  if (page === 'roots') initRoots();
 }
 function goTo(page, lang) {
   if (lang) { currentLang = lang; }
@@ -1913,6 +2163,9 @@ function updateHome() {
     dueDE > 0 ? `${dueDE} 個到期複習` : `${GERMAN_VOCABULARY.length} 個單字`;
   document.getElementById('home-grammar-count').textContent =
     `${ENGLISH_GRAMMAR.length} 道題目`;
+  if (typeof WORD_ROOTS !== 'undefined') {
+    document.getElementById('home-roots-count').textContent = `${WORD_ROOTS.length} 組字根`;
+  }
 
   document.getElementById('streak-en').textContent = todayStats.enFlipped || 0;
   document.getElementById('streak-de').textContent = todayStats.deFlipped || 0;
@@ -2056,7 +2309,15 @@ function flipCard() {
   }
 }
 function swipeCard(dir) {
-  if (!cardFlipped) { flipCard(); return; }
+  if (!cardFlipped) {
+    // 新手引導：還沒翻面就按按鈕 → 先翻面並提示操作邏輯（只提示前3次）
+    const hintCount = Number(localStorage.getItem('lr_fliphint') || 0);
+    if (hintCount < 3) {
+      showToast('先看答案再作答：卡片已翻面，確認後再按一次', 2600);
+      localStorage.setItem('lr_fliphint', String(hintCount + 1));
+    }
+    flipCard(); return;
+  }
   const card = document.getElementById('flashcard');
   const w = currentDeck[currentCardIdx];
   card.classList.add(dir === 'right' ? 'swiping-right' : 'swiping-left');
@@ -2690,6 +2951,160 @@ function renderPronunciation() {
 }
 
 // 德文文法列表（讀取 data.js 的 GERMAN_GRAMMAR）
+// ============================================================
+// 德文文法練習模式（AI 出題 + 本機題庫快取 + 內建備用題）
+// 設計：AI 從 GERMAN_GRAMMAR 的規則生成選擇題 → 存進 localStorage 題庫
+//       沒有 API key 或離線時，使用內建備用題（BUILTIN_DE_QUESTIONS）
+// ============================================================
+let deGrammarMode = 'browse';
+let degrStats = { correct: 0, wrong: 0 };
+let degrCurrentQ = null;
+let degrAnswered = false;
+
+// 內建備用題（從 GERMAN_GRAMMAR 規則手工出的題，離線可用）
+const BUILTIN_DE_QUESTIONS = [
+  { ruleId: 'gg001', question: 'Ich habe ___ Freund.（我有一個男朋友）', choices: ['einen', 'ein', 'einem'], answer: 'einen', explanation: 'haben 後面接 Akkusativ；Freund 是陽性名詞，ein → einen。' },
+  { ruleId: 'gg003', question: '___ der Arbeit（因為工作的關係）', choices: ['wegen', 'nachdem', 'von'], answer: 'wegen', explanation: 'wegen + Genitiv 表示「因為…」，陰性 die Arbeit → der Arbeit。' },
+  { ruleId: 'gg006', question: 'Ich arbeite an ___ Forschungsinstitut.（我在一間研究機構工作）', choices: ['einem', 'einen', 'eines'], answer: 'einem', explanation: 'an + Dativ；das Forschungsinstitut 是中性名詞，ein → einem。' },
+  { ruleId: 'gg007', question: '「我覺得熱」的正確說法是？', choices: ['Mir ist heiß.', 'Ich bin heiß.', 'Mich ist heiß.'], answer: 'Mir ist heiß.', explanation: '身體感受用 Dativ 代名詞 mir。Ich bin heiß 意思會變成「我很辣／性感」！' },
+  { ruleId: 'gg013', question: '「搬去台北」怎麼說？', choices: ['nach Taipeh ziehen', 'in Taipeh ziehen', 'zu Taipeh ziehen'], answer: 'nach Taipeh ziehen', explanation: '搬去城市或無冠詞國家用 nach。' },
+  { ruleId: 'gg014', question: '「搬去瑞士」怎麼說？', choices: ['in die Schweiz ziehen', 'nach die Schweiz ziehen', 'nach Schweiz ziehen'], answer: 'in die Schweiz ziehen', explanation: 'die Schweiz 是陰性冠詞國家，用 in + Akkusativ，不用 nach。' },
+  { ruleId: 'gg015', question: '「搬去伊朗」怎麼說？', choices: ['in den Iran ziehen', 'in der Iran ziehen', 'nach Iran ziehen'], answer: 'in den Iran ziehen', explanation: 'der Iran 是陽性冠詞國家，Akkusativ 格中 der → den。' },
+  { ruleId: 'gg016', question: 'Sie arbeitet ___ Ingenieurin.（她擔任工程師）', choices: ['als', 'wie', 'für'], answer: 'als', explanation: 'als + 職業（不加冠詞）表示「擔任…」。' },
+  { ruleId: 'gg017', question: '女性研究員自我介紹應該說？', choices: ['Ich bin Forscherin.', 'Ich bin Forscher.', 'Ich bin die Forscher.'], answer: 'Ich bin Forscherin.', explanation: '女性從事職業要用陰性形式：字尾加 -in。' },
+  { ruleId: 'gg002', question: 'Nachdem er nach Taipeh gezogen ist, ___ wir weniger Kontakt.', choices: ['haben', 'wir haben', 'haben wir zu'], answer: 'haben', explanation: 'nachdem 子句後的主要子句要倒裝：動詞在主詞前（haben wir…）。' },
+];
+
+function setDeGrammarMode(mode) {
+  deGrammarMode = mode;
+  document.getElementById('degr-browse-view').style.display = mode === 'browse' ? 'block' : 'none';
+  document.getElementById('degr-practice-view').style.display = mode === 'practice' ? 'block' : 'none';
+  document.getElementById('degr-mode-browse').classList.toggle('active', mode === 'browse');
+  document.getElementById('degr-mode-practice').classList.toggle('active', mode === 'practice');
+  if (mode === 'practice') nextDeGrammarQuestion();
+}
+
+// 題庫快取：{ questions: [...], generatedAt }
+function getDeQuestionCache() {
+  try { return JSON.parse(localStorage.getItem('lr_de_qcache')) || { questions: [] }; }
+  catch(e) { return { questions: [] }; }
+}
+function saveDeQuestionCache(cache) {
+  try { localStorage.setItem('lr_de_qcache', JSON.stringify(cache)); } catch(e) {}
+}
+
+async function nextDeGrammarQuestion() {
+  const container = document.getElementById('degr-question-container');
+  degrAnswered = false;
+  const cache = getDeQuestionCache();
+  document.getElementById('degr-cached').textContent = cache.questions.length;
+
+  // 快取題庫少於5題且有 API key 時，背景補充新題（不擋使用者）
+  if (cache.questions.length < 5 && getApiKey()) {
+    generateDeQuestions(); // 非同步補題，不 await
+  }
+
+  let q;
+  if (cache.questions.length > 0) {
+    q = cache.questions.shift(); // 取出一題（用過就丟，避免重複）
+    saveDeQuestionCache(cache);
+  } else {
+    // 快取空了 → 用內建備用題隨機出
+    q = BUILTIN_DE_QUESTIONS[Math.floor(Math.random() * BUILTIN_DE_QUESTIONS.length)];
+  }
+  degrCurrentQ = q;
+  const rule = (typeof GERMAN_GRAMMAR !== 'undefined') ? GERMAN_GRAMMAR.find(g => g.id === q.ruleId) : null;
+  const choices = shuffle([...q.choices]);
+  window._degrChoices = choices;
+  window._degrAnswer = q.answer;
+
+  container.innerHTML = `
+    <div class="grammar-card">
+      ${rule ? `
+      <div class="grammar-category-row" onclick="toggleRuleDetail('degr-rule')">
+        <span class="grammar-category-label">相關規則</span>
+        <span class="grammar-rule-toggle">提示 ▾</span>
+      </div>
+      <div class="grammar-rule-detail" id="degr-rule" style="background:var(--de-light);">${escHtml(rule.rule)}</div>` : ''}
+      <div class="grammar-question">${escHtml(q.question)}</div>
+      <div class="grammar-choices">
+        ${choices.map((c, i) => `<button class="grammar-choice" onclick="answerDeGrammar(this, ${i})">${escHtml(c)}</button>`).join('')}
+      </div>
+      <div class="grammar-explanation" id="degr-exp">
+        <strong>📌 解析：</strong>${escHtml(q.explanation)}
+      </div>
+      <button class="grammar-nav-btn" id="degr-next-btn" onclick="nextDeGrammarQuestion()" style="display:none; background:var(--de);">下一題 →</button>
+    </div>`;
+}
+
+function answerDeGrammar(btn, idx) {
+  if (degrAnswered) return;
+  degrAnswered = true;
+  const chosen = window._degrChoices[idx];
+  const correct = window._degrAnswer;
+  const isCorrect = chosen === correct;
+  document.querySelectorAll('#degr-question-container .grammar-choice').forEach(b => {
+    if (b.textContent === correct) b.classList.add('correct');
+    else if (b === btn && !isCorrect) b.classList.add('wrong');
+  });
+  document.getElementById('degr-exp').classList.add('show');
+  document.getElementById('degr-next-btn').style.display = 'block';
+  if (isCorrect) degrStats.correct++; else degrStats.wrong++;
+  document.getElementById('degr-correct').textContent = degrStats.correct;
+  document.getElementById('degr-wrong').textContent = degrStats.wrong;
+  todayStats.grammarPracticed++;
+  todayStats.date = new Date().toDateString();
+  saveData();
+}
+
+// 背景生成新題：一次向 AI 要 5 題，存進快取
+let degrGenerating = false;
+async function generateDeQuestions() {
+  if (degrGenerating || typeof GERMAN_GRAMMAR === 'undefined') return;
+  degrGenerating = true;
+  try {
+    // 隨機挑 5 條規則出題
+    const rules = shuffle([...GERMAN_GRAMMAR]).slice(0, 5);
+    const rulesText = rules.map(g => `- id: ${g.id} | rule: ${g.rule} | example: ${g.example}`).join('\n');
+    const prompt = `You are a German teacher creating A1-A2 level multiple choice questions for a Taiwanese learner.
+
+Based on these grammar rules from her notes:
+${rulesText}
+
+Create exactly 5 multiple choice questions (one per rule). Return ONLY valid JSON, no markdown:
+{
+  "questions": [
+    {
+      "ruleId": "the id from above",
+      "question": "fill-in-the-blank German sentence with ___ , plus 中文提示 in parentheses",
+      "choices": ["correct answer", "wrong option 1", "wrong option 2"],
+      "answer": "correct answer (must exactly match one choice)",
+      "explanation": "繁體中文解釋，一兩句話"
+    }
+  ]
+}
+Rules: questions test the grammar point (case endings, word order, prepositions). Choices must be plausible. Keep A1-A2 vocabulary.`;
+    const result = await callGemini(prompt);
+    if (!result.ok) return;
+    let parsed;
+    try { parsed = JSON.parse(result.text.replace(/^```json\s*/,'').replace(/\s*```$/,'').trim()); }
+    catch(e) { return; }
+    if (!parsed.questions || !Array.isArray(parsed.questions)) return;
+    const cache = getDeQuestionCache();
+    parsed.questions.forEach(q => {
+      // 基本驗證：答案必須在選項裡
+      if (q.question && Array.isArray(q.choices) && q.choices.includes(q.answer)) {
+        cache.questions.push(q);
+      }
+    });
+    saveDeQuestionCache(cache);
+    const cachedEl = document.getElementById('degr-cached');
+    if (cachedEl) cachedEl.textContent = cache.questions.length;
+  } finally {
+    degrGenerating = false;
+  }
+}
+
 function renderGermanGrammar() {
   const el = document.getElementById('de-grammar-list');
   if (typeof GERMAN_GRAMMAR === 'undefined' || GERMAN_GRAMMAR.length === 0) {
@@ -2810,6 +3225,147 @@ function renderSentenceList() {
 }
 
 // ============================================================
+// ROOTS 字根教室
+// ============================================================
+let rootFilter = 'all';
+let pendingRootResult = null; // AI 查詢結果暫存，等使用者按「儲存」
+
+function initRoots() {
+  renderRootList();
+}
+function setRootFilter(f, el) {
+  rootFilter = f;
+  document.querySelectorAll('#page-roots .filter-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderRootList();
+}
+function renderRootList() {
+  const el = document.getElementById('root-list');
+  const q = (document.getElementById('root-search').value || '').trim().toLowerCase();
+  const typeLabel = { root: '字根', prefix: '字首', suffix: '字尾' };
+  let list = WORD_ROOTS;
+  if (rootFilter === 'user') list = list.filter(r => String(r.id).startsWith('urt'));
+  else if (rootFilter !== 'all') list = list.filter(r => r.type === rootFilter);
+  if (q) {
+    list = list.filter(r =>
+      r.root.toLowerCase().includes(q) ||
+      (r.meaning || '').toLowerCase().includes(q) ||
+      (r.examples || []).some(ex => ex.word.toLowerCase().includes(q))
+    );
+  }
+  if (list.length === 0) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🌱</div><div class="empty-state-text">${rootFilter === 'user' ? '還沒有查詢紀錄' : '沒有符合的字根'}</div><div class="empty-state-sub">${rootFilter === 'user' ? '用上面的查詢框拆解單字，儲存後會出現在這裡' : '換個關鍵字試試'}</div></div>`;
+    return;
+  }
+  el.innerHTML = list.map(r => `
+    <div class="pr-card">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <div class="pr-title" style="margin-bottom:0;">${escHtml(r.root)} <span style="font-weight:400; font-size:13px; color:var(--text2);">＝ ${escHtml(r.meaning)}</span></div>
+        <span class="tag ${r.type === 'root' ? 'tag-en' : r.type === 'prefix' ? 'tag-green' : 'tag-amber'}">${typeLabel[r.type] || r.type}${String(r.id).startsWith('urt') ? '・我的' : ''}</span>
+      </div>
+      ${r.origin ? `<div class="pr-rule" style="margin:6px 0 8px;">來源：${escHtml(r.origin)}</div>` : '<div style="height:8px;"></div>'}
+      <div class="pr-examples">
+        ${(r.examples || []).map(ex => `
+          <div class="pr-example" style="background:var(--en-light);">
+            <span class="pr-example-word" style="color:var(--en);">${escHtml(ex.word)}</span>
+            <span class="pr-example-meaning"> ${escHtml(ex.meaning)}</span>
+          </div>`).join('')}
+      </div>
+      ${r.ieltsTip ? `<div class="pr-notes">💡 ${escHtml(r.ieltsTip)}</div>` : ''}
+    </div>`).join('');
+}
+
+// AI 拆解單字的字根來源
+async function lookupRoot() {
+  const input = document.getElementById('root-lookup-input');
+  const word = input.value.trim();
+  const resultEl = document.getElementById('root-lookup-result');
+  if (!word) { showToast('請先輸入單字'); return; }
+  pendingRootResult = null;
+  resultEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 拆解中…</div>`;
+
+  const prompt = `You are an etymology teacher for a Taiwanese IELTS learner. Break down the English word "${word}" into its morphemes (root/prefix/suffix).
+
+Return ONLY valid JSON, no markdown:
+{
+  "word": "${word}",
+  "breakdown": "prefix + root + suffix 的拆解說明，用繁體中文，例如：sus(=sub, 在下) + tain(握住) + able(可以…的)",
+  "root": "the main root, e.g. tain/ten",
+  "rootMeaning": "字根意思（繁體中文）",
+  "origin": "字根來源（繁體中文），例如：拉丁文 tenere",
+  "relatedWords": [
+    { "word": "related word 1", "meaning": "繁體中文意思" },
+    { "word": "related word 2", "meaning": "繁體中文意思" },
+    { "word": "related word 3", "meaning": "繁體中文意思" }
+  ],
+  "ieltsTip": "一句繁體中文的雅思應用提示（這個字根家族在雅思哪類題目常見）"
+}`;
+
+  const result = await callGemini(prompt);
+  if (!result.ok) {
+    resultEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${escHtml(result.error)}</div>`;
+    return;
+  }
+  let parsed;
+  try {
+    parsed = JSON.parse(result.text.replace(/^```json\s*/,'').replace(/\s*```$/,'').trim());
+  } catch(e) {
+    resultEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ AI 回傳格式異常，請再按一次「拆解」</div>`;
+    return;
+  }
+  pendingRootResult = parsed;
+  resultEl.innerHTML = `
+    <div class="ai-result" style="margin-top:12px;">
+      <div style="font-size:16px; font-weight:700;">${escHtml(parsed.word)}</div>
+      <div style="margin-top:6px;">🧩 ${escHtml(parsed.breakdown || '')}</div>
+      <div style="margin-top:6px; color:var(--text2);">字根 <strong>${escHtml(parsed.root || '')}</strong> ＝ ${escHtml(parsed.rootMeaning || '')}（${escHtml(parsed.origin || '')}）</div>
+      <div style="margin-top:8px;">同家族：${(parsed.relatedWords || []).map(x => `<strong>${escHtml(x.word)}</strong> ${escHtml(x.meaning)}`).join('、')}</div>
+      ${parsed.ieltsTip ? `<div style="margin-top:8px; color:var(--amber);">💡 ${escHtml(parsed.ieltsTip)}</div>` : ''}
+    </div>
+    <button class="settings-save-btn" style="background:var(--green);" onclick="saveRootLookup()">📒 儲存到我的字根筆記（同步到 GitHub）</button>
+    <div id="root-save-status"></div>`;
+}
+
+// 把查詢結果存進 data-user.json 的 wordRoots
+async function saveRootLookup() {
+  if (!pendingRootResult) return;
+  const statusEl = document.getElementById('root-save-status');
+  const p = pendingRootResult;
+  const entry = {
+    id: 'urt' + Date.now().toString(36),
+    type: 'root',
+    root: p.root || p.word,
+    meaning: p.rootMeaning || '',
+    origin: p.origin || '',
+    examples: [{ word: p.word, meaning: p.breakdown || '' }, ...(p.relatedWords || []).slice(0, 3)],
+    ieltsTip: p.ieltsTip || '',
+  };
+  const cfg = getGithubConfig();
+  if (!cfg.token || !cfg.owner || !cfg.repo) {
+    // 沒設定 GitHub 也可以先存在本機（放進記憶體 + localStorage 收集箱概念之外，這裡直接併入並提示）
+    WORD_ROOTS.push(entry);
+    renderRootList();
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--amber);">已暫存在這台裝置。到「設定」完成 GitHub 設定後再儲存可跨裝置同步。</div>`;
+    pendingRootResult = null;
+    return;
+  }
+  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>正在寫入 GitHub…</div>`;
+  const current = await githubGetUserData();
+  if (current.error) { statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${escHtml(current.error)}</div>`; return; }
+  const userData = current.json || emptyUserData();
+  const defaults = emptyUserData();
+  Object.keys(defaults).forEach(k => { if (!Array.isArray(userData[k])) userData[k] = []; });
+  userData.wordRoots.push(entry);
+  const put = await githubPutUserData(userData, current.sha);
+  if (put.error) { statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${escHtml(put.error)}</div>`; return; }
+  WORD_ROOTS.push(entry); // 本機立即生效
+  renderRootList();
+  statusEl.innerHTML = `<div class="ai-result" style="color:var(--green);">✅ 已儲存！其他裝置約 1 分鐘後重新整理可看到。</div>`;
+  pendingRootResult = null;
+  showToast('✅ 字根已加入筆記');
+}
+
+// ============================================================
 // SETTINGS
 // ============================================================
 function initSettings() {
@@ -2821,9 +3377,32 @@ function initSettings() {
   if (gh.owner) document.getElementById('github-owner-input').value = gh.owner;
   if (gh.repo) document.getElementById('github-repo-input').value = gh.repo;
   document.getElementById('github-branch-input').value = gh.branch;
+  // 同步設定
+  document.getElementById('username-input').value = getUsername();
+  updateAutoSyncToggle();
+  const lastSync = Number(localStorage.getItem('lr_lastsync') || 0);
+  if (lastSync) setSyncStatus('上次同步：' + new Date(lastSync).toLocaleString('zh-TW'));
   document.getElementById('settings-en-count').textContent = `共 ${ENGLISH_VOCABULARY.length} 個`;
   document.getElementById('settings-de-count').textContent = `共 ${GERMAN_VOCABULARY.length} 個`;
   document.getElementById('settings-grammar-count').textContent = `共 ${ENGLISH_GRAMMAR.length} 道`;
+}
+function updateAutoSyncToggle() {
+  const btn = document.getElementById('autosync-toggle');
+  if (!btn) return;
+  const on = isAutoSyncOn();
+  btn.textContent = on ? '已開啟' : '已關閉';
+  btn.style.color = on ? 'var(--green)' : 'var(--text3)';
+}
+function toggleAutoSync() {
+  localStorage.setItem('lr_autosync', isAutoSyncOn() ? '0' : '1');
+  updateAutoSyncToggle();
+  showToast(isAutoSyncOn() ? '☁️ 自動同步已開啟' : '自動同步已關閉');
+}
+function saveSyncSettings() {
+  const name = document.getElementById('username-input').value.trim();
+  if (name) localStorage.setItem('lr_username', name);
+  showToast('✅ 同步設定已儲存');
+  initSettings();
 }
 function resetToday() {
   todayStats = { enFlipped: 0, deFlipped: 0, grammarPracticed: 0 };
@@ -3037,6 +3616,8 @@ loadUserData().then(() => {
   updateHome();
   if (currentPage === 'settings') initSettings();
 });
+// 自動同步：開啟 App 時檢查雲端進度，比本機新就還原
+pullProgressOnStartup();
 </script>
 </body>
 </html>
