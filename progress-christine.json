@@ -1,5 +1,5 @@
 {
-  "savedAt": 1783675704409,
+  "savedAt": 1783684032587,
   "username": "christine",
   "reviewSchedule": {
     "en_en126": {
@@ -448,15 +448,15 @@
     },
     "de_de022": {
       "stage": 1,
-      "nextReview": 1782288903043,
+      "nextReview": 1783770432586,
       "correct": 0,
-      "incorrect": 2
+      "incorrect": 3
     },
     "de_de069": {
       "stage": 1,
-      "nextReview": 1783520357596,
+      "nextReview": 1783770424121,
       "correct": 1,
-      "incorrect": 1
+      "incorrect": 2
     },
     "de_de033": {
       "stage": 2,
@@ -471,10 +471,10 @@
       "incorrect": 0
     },
     "de_de027": {
-      "stage": 2,
-      "nextReview": 1782807294026,
+      "stage": 1,
+      "nextReview": 1783770426221,
       "correct": 1,
-      "incorrect": 1
+      "incorrect": 2
     },
     "de_de005": {
       "stage": 3,
@@ -585,10 +585,10 @@
       "incorrect": 2
     },
     "de_de036": {
-      "stage": 2,
-      "nextReview": 1782807322813,
+      "stage": 1,
+      "nextReview": 1783770416152,
       "correct": 1,
-      "incorrect": 1
+      "incorrect": 2
     },
     "de_de046": {
       "stage": 1,
@@ -676,14 +676,14 @@
     },
     "de_de068": {
       "stage": 1,
-      "nextReview": 1782289246291,
+      "nextReview": 1783770431269,
       "correct": 0,
-      "incorrect": 1
+      "incorrect": 2
     },
     "de_de062": {
-      "stage": 1,
-      "nextReview": 1782289278244,
-      "correct": 0,
+      "stage": 2,
+      "nextReview": 1784288828769,
+      "correct": 1,
       "incorrect": 1
     },
     "de_de039": {
@@ -855,9 +855,9 @@
       "incorrect": 0
     },
     "de_de004": {
-      "stage": 2,
-      "nextReview": 1782808311130,
-      "correct": 1,
+      "stage": 3,
+      "nextReview": 1784893630086,
+      "correct": 2,
       "incorrect": 0
     },
     "de_de018": {
@@ -1192,7 +1192,7 @@
   },
   "todayStats": {
     "enFlipped": 21,
-    "deFlipped": 0,
+    "deFlipped": 7,
     "grammarPracticed": 2,
     "date": "Fri Jul 10 2026"
   },
