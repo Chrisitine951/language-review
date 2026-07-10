@@ -678,6 +678,22 @@
     width: 100%; height: 100%;
     object-fit: cover;
   }
+  .inbox-pdf-thumb {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 2px;
+    font-size: 20px;
+    background: var(--de-light);
+  }
+  .inbox-pdf-thumb span {
+    font-size: 9px;
+    color: var(--text2);
+    max-width: 64px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   .inbox-photo-remove {
     position: absolute; top: 2px; right: 2px;
     width: 20px; height: 20px;
@@ -1157,14 +1173,14 @@
         <div class="section-header"><span class="section-title">上傳課堂紀錄</span></div>
         <div class="diary-input-card">
           <div style="font-size:12px; color:var(--text3); line-height:1.6; margin-bottom:10px;">
-            拍照或貼上課堂內容 → AI 自動整理成單字/文法 → 確認後直接存進資料庫（GitHub）。
+            拍照、上傳 PDF 或貼上課堂內容 → AI 自動整理成單字/文法 → 確認後直接存進資料庫（GitHub）。
           </div>
-          <textarea class="diary-textarea" id="inbox-text" style="min-height:90px;" placeholder="貼上文字內容（Cambly AI回饋、筆記…），或只上傳照片"></textarea>
+          <textarea class="diary-textarea" id="inbox-text" style="min-height:90px;" placeholder="貼上文字內容（Cambly AI回饋、筆記…），或只上傳照片/PDF"></textarea>
           <div class="diary-toolbar">
-            <button class="diary-ai-btn" style="flex:1;" onclick="document.getElementById('inbox-photo').click()">📷 選擇照片（可多張）</button>
+            <button class="diary-ai-btn" style="flex:1;" onclick="document.getElementById('inbox-photo').click()">📷 選擇照片/PDF</button>
             <button class="diary-submit" style="flex:1.6;" onclick="analyzeInbox()">✨ AI 分析內容</button>
           </div>
-          <input type="file" id="inbox-photo" accept="image/*" multiple style="display:none;" onchange="handleInboxPhoto(event)">
+          <input type="file" id="inbox-photo" accept="image/*,application/pdf" multiple style="display:none;" onchange="handleInboxPhoto(event)">
           <div id="inbox-photo-preview" class="inbox-photo-preview" style="display:none;"></div>
           <div id="inbox-analyze-status"></div>
         </div>
@@ -1464,7 +1480,7 @@
           </div>
         </div>
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Language Review App v1.4.4<br>最後更新：2026-07-10（設定頁分組收合＋德文格位表/動詞變化＋收集箱多張照片）
+          Language Review App v1.4.5<br>最後更新：2026-07-10（收集箱支援 PDF 上傳）
         </div>
       </div>
     </div>
@@ -2015,19 +2031,36 @@ function resizeImageToDataUrl(file, maxDim) {
   });
 }
 
-// v1.4.4：支援一次選擇多張照片（例如課堂筆記拍了好幾頁），全部縮圖後存進 inboxPhotos 陣列
+// 純讀檔轉 base64（PDF 用這個，不需要也不能像圖片一樣用 canvas 縮圖）
+function readFileAsDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = (e) => resolve(e.target.result);
+    reader.onerror = () => reject(new Error('檔案讀取失敗'));
+    reader.readAsDataURL(file);
+  });
+}
+
+// v1.4.5：支援 PDF（Gemini 可以直接讀 PDF 內容，不需要轉成圖片）
+// 圖片一樣會先縮到 1600px；PDF 檔案較大，限制 15MB 避免請求太大失敗
+const INBOX_PDF_SIZE_LIMIT = 15 * 1024 * 1024;
 async function handleInboxPhoto(event) {
   const files = Array.from(event.target.files || []);
   if (files.length === 0) return;
   const statusEl = document.getElementById('inbox-analyze-status');
-  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;">處理 ${files.length} 張照片中…</div>`;
+  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;">處理 ${files.length} 個檔案中…</div>`;
   for (const file of files) {
     try {
-      const dataUrl = await resizeImageToDataUrl(file, 1600);
+      const isPdf = file.type === 'application/pdf';
+      if (isPdf && file.size > INBOX_PDF_SIZE_LIMIT) {
+        showToast(`「${file.name}」超過 15MB，已略過`);
+        continue;
+      }
+      const dataUrl = isPdf ? await readFileAsDataUrl(file) : await resizeImageToDataUrl(file, 1600);
       const match = dataUrl.match(/^data:(.+?);base64,(.*)$/);
       if (!match) continue;
-      inboxPhotos.push({ mime: match[1], base64: match[2] });
-    } catch(e) { /* 單張失敗不影響其他張 */ }
+      inboxPhotos.push({ mime: match[1], base64: match[2], isPdf, name: file.name });
+    } catch(e) { /* 單一檔案失敗不影響其他檔案 */ }
   }
   statusEl.innerHTML = '';
   renderInboxPhotoPreviews();
@@ -2039,7 +2072,9 @@ function renderInboxPhotoPreviews() {
   el.style.display = 'flex';
   el.innerHTML = inboxPhotos.map((p, i) => `
     <div class="inbox-photo-thumb">
-      <img src="data:${p.mime};base64,${p.base64}">
+      ${p.isPdf
+        ? `<div class="inbox-pdf-thumb" title="${escAttr(p.name || 'PDF')}">📄<span>${escHtml((p.name || 'PDF').slice(0, 10))}</span></div>`
+        : `<img src="data:${p.mime};base64,${p.base64}">`}
       <button class="inbox-photo-remove" onclick="removeInboxPhoto(${i})" title="移除">✕</button>
     </div>`).join('');
 }
@@ -2047,6 +2082,7 @@ function removeInboxPhoto(idx) {
   inboxPhotos.splice(idx, 1);
   renderInboxPhotoPreviews();
 }
+
 
 // ============================================================
 // 收集箱：AI 分析
@@ -2058,7 +2094,7 @@ async function analyzeInbox() {
     return;
   }
   const statusEl = document.getElementById('inbox-analyze-status');
-  const photoNote = inboxPhotos.length > 1 ? `（${inboxPhotos.length} 張照片一起分析）` : '';
+  const photoNote = inboxPhotos.length > 1 ? `（${inboxPhotos.length} 個檔案一起分析）` : '';
   statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 分析中${photoNote}，可能需要 10–30 秒…</div>`;
 
   const prompt = `You are helping a Taiwanese language learner (Christine) organize her lesson notes into a study database. She is preparing for IELTS (target band 6.5-7.0).
