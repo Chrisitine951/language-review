@@ -1380,7 +1380,7 @@
           </div>
         </div>
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Language Review App v1.4.2<br>最後更新：2026-07-09（文法題引擎重寫：差異填空＋同句判斷）
+          Language Review App v1.4.3<br>最後更新：2026-07-09（修復打字/字根按鈕失效＋GitHub分支診斷）
         </div>
       </div>
     </div>
@@ -1650,7 +1650,7 @@ async function githubPutUserData(json, sha) {
     });
     if (!res.ok) {
       const resBody = await res.json().catch(() => ({}));
-      return { error: `GitHub 寫入失敗 (${res.status})：${resBody.message || '未知錯誤'}` };
+      return { error: `GitHub 寫入失敗 (${res.status})：${resBody.message || '未知錯誤'}${res.status === 404 ? '（很可能是分支名稱設錯，請到設定頁重新按「測試連線」檢查）' : ''}` };
     }
     return { ok: true };
   } catch(e) {
@@ -1715,10 +1715,23 @@ async function githubPutJson(path, json, sha, message) {
     });
     if (!res.ok) {
       const resBody = await res.json().catch(() => ({}));
-      return { error: `GitHub 寫入失敗 (${res.status})：${resBody.message || '未知錯誤'}` };
+      return { error: `GitHub 寫入失敗 (${res.status})：${resBody.message || '未知錯誤'}${res.status === 404 ? '（很可能是分支名稱設錯，請到設定頁重新按「測試連線」檢查）' : ''}` };
     }
-    return { ok: true };
+    const resData = await res.json().catch(() => ({}));
+    return { ok: true, sha: resData.content && resData.content.sha };
   } catch(e) { return { error: '網路錯誤：' + e.message }; }
+}
+// 刪除檔案（目前只用在「測試連線」清掉自己建立的測試檔，避免留垃圾檔在 repo 裡）
+async function githubDeleteJson(path, sha, message) {
+  const cfg = getGithubConfig();
+  try {
+    const res = await fetch(githubApiUrl(path), {
+      method: 'DELETE',
+      headers: { 'Authorization': 'Bearer ' + cfg.token, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: message || ('刪除 ' + path), sha, branch: cfg.branch }),
+    });
+    return { ok: res.ok };
+  } catch(e) { return { ok: false }; }
 }
 
 // 組合要備份的進度物件
@@ -1816,6 +1829,32 @@ function emptyUserData() {
 }
 
 // 測試 GitHub 連線設定是否正確
+// ============================================================
+// 修復記錄（2026-07-09）：使用者回報「測試連線」顯示成功，但收集箱按
+// 「儲存到 GitHub」卻失敗顯示 404。
+// 原因：舊版 testGithubConnection() 只測試讀取(GET)，從未測試寫入(PUT)。
+// 最常見的真正病灶是「分支名稱設錯」：例如 repo 實際預設分支是 master，
+// 但設定裡填的是 main（或留空、程式預設 main）。讀取時 GitHub 對不存在
+// 的分支會回 404，我們的程式碼誤判成「檔案還不存在，等一下建立」而顯示
+// 成功；但寫入時同樣分支不存在，就會真的失敗。
+// 修法：測試連線時額外呼叫 GET /repos/{owner}/{repo} 取得 default_branch，
+// 和設定裡的分支比對，不符就明確提示正確的分支名稱。
+// ============================================================
+async function githubGetRepoInfo() {
+  const cfg = getGithubConfig();
+  try {
+    const res = await fetch(`https://api.github.com/repos/${cfg.owner}/${cfg.repo}`, {
+      headers: { 'Authorization': 'Bearer ' + cfg.token, 'Accept': 'application/vnd.github+json' },
+    });
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({}));
+      return { error: `找不到 repo (${res.status})：${body.message || '請檢查擁有者/Repo 名稱是否正確，或 Token 是否有這個 repo 的權限'}` };
+    }
+    const data = await res.json();
+    return { defaultBranch: data.default_branch };
+  } catch(e) { return { error: '網路錯誤：' + e.message }; }
+}
+
 async function testGithubConnection() {
   const cfg = getGithubConfig();
   const statusEl = document.getElementById('github-test-status');
@@ -1824,13 +1863,44 @@ async function testGithubConnection() {
     return;
   }
   statusEl.innerHTML = `<div style="color:var(--text3); font-size:13px; margin-top:8px;">測試中…</div>`;
+
+  // 第一步：確認 repo 存在，並拿到真正的預設分支名稱
+  const repoInfo = await githubGetRepoInfo();
+  if (repoInfo.error) {
+    statusEl.innerHTML = `<div style="color:var(--de); font-size:13px; margin-top:8px;">❌ ${escHtml(repoInfo.error)}</div>`;
+    return;
+  }
+  // 第二步：分支名稱是否和設定相符
+  if (repoInfo.defaultBranch && repoInfo.defaultBranch !== cfg.branch) {
+    statusEl.innerHTML = `<div style="color:var(--de); font-size:13px; margin-top:8px; line-height:1.6;">
+      ⚠️ 分支名稱不符：你的 repo 實際分支是 <strong>${escHtml(repoInfo.defaultBranch)}</strong>，但設定裡填的是 <strong>${escHtml(cfg.branch)}</strong>。<br>
+      這就是「測試看起來成功、但儲存時 404」最常見的原因！
+      <button class="settings-save-btn" style="margin-top:8px;" onclick="document.getElementById('github-branch-input').value='${escHtml(repoInfo.defaultBranch)}'; saveGithubSettings(); testGithubConnection();">✅ 自動修正為 ${escHtml(repoInfo.defaultBranch)}</button>
+    </div>`;
+    return;
+  }
+  // 第三步：讀取測試（確認 token 至少有讀取權限）
   const result = await githubGetUserData();
   if (result.error) {
-    statusEl.innerHTML = `<div style="color:var(--de); font-size:13px; margin-top:8px;">❌ ${result.error}</div>`;
-  } else if (!result.exists) {
-    statusEl.innerHTML = `<div style="color:var(--amber); font-size:13px; margin-top:8px;">✅ 連線成功！repo 中還沒有 data-user.json，第一次儲存時會自動建立</div>`;
+    statusEl.innerHTML = `<div style="color:var(--de); font-size:13px; margin-top:8px;">❌ ${escHtml(result.error)}</div>`;
+    return;
+  }
+  // 第四步：真正測試寫入權限——寫一個小測試檔再馬上刪除，確保「測試連線」不會給假的安心感
+  const testPath = '.lr-connection-test.json';
+  const putResult = await githubPutJson(testPath, { test: true, at: Date.now() }, null, '連線測試（可忽略/刪除）');
+  if (putResult.error) {
+    statusEl.innerHTML = `<div style="color:var(--de); font-size:13px; margin-top:8px; line-height:1.6;">
+      ❌ 讀取正常，但寫入失敗：${escHtml(putResult.error)}<br>
+      請檢查 Token 權限是否為「Contents: Read and write」（不是 Read-only）。
+    </div>`;
+    return;
+  }
+  // 寫入測試成功 → 立刻刪掉測試檔，不留垃圾在 repo 裡（刪除失敗也不影響「連線成功」的結論）
+  if (putResult.sha) await githubDeleteJson(testPath, putResult.sha, '清除連線測試檔');
+  if (!result.exists) {
+    statusEl.innerHTML = `<div style="color:var(--green); font-size:13px; margin-top:8px;">✅ 連線成功（讀取＋寫入都正常）！repo 中還沒有 data-user.json，第一次儲存時會自動建立</div>`;
   } else {
-    statusEl.innerHTML = `<div style="color:var(--green); font-size:13px; margin-top:8px;">✅ 連線成功，data-user.json 已存在</div>`;
+    statusEl.innerHTML = `<div style="color:var(--green); font-size:13px; margin-top:8px;">✅ 連線成功（讀取＋寫入都正常），data-user.json 已存在</div>`;
   }
 }
 
@@ -2244,6 +2314,8 @@ function initVocab() {
   document.getElementById('lang-en-btn').classList.toggle('active', lang === 'en');
   document.getElementById('lang-de-btn').classList.toggle('active', lang === 'de');
   document.getElementById('vocab-title').textContent = lang === 'en' ? '英文單字' : '德文單字';
+  document.getElementById('vmode-flip').classList.toggle('active', vocabMode === 'flip');
+  document.getElementById('vmode-type').classList.toggle('active', vocabMode === 'type');
   if (currentDeck.length === 0) buildDeck(lang);
   if (vocabMode === 'flip') renderFlashcard();
   else renderTyping();
@@ -2378,12 +2450,32 @@ fcArea.addEventListener('touchend', e => {
 });
 
 // typing mode
-function toggleVocabMode() {
-  vocabMode = vocabMode === 'flip' ? 'type' : 'flip';
+// ============================================================
+// 修復記錄（2026-07-09）：HTML 按鈕呼叫 setVocabMode()，但先前只定義了
+// 舊版 toggleVocabMode()（只有兩種模式），導致「打字」「字根實驗室」按鈕
+// 完全沒有對應函式可執行，點擊沒有任何反應。這裡補上正確版本。
+// 教訓：修改 HTML 按鈕的 onclick 名稱時，一定要同步搜尋 JS 是否有對應函式。
+// ============================================================
+function setVocabMode(mode) {
+  if (mode === 'roots') {
+    // 字根功能已經是獨立的「字根教室」頁面（從首頁進入），這裡直接導頁過去，
+    // 避免同一套邏輯要維護兩份。
+    goTo('roots', null);
+    return;
+  }
+  vocabMode = mode; // 'flip' | 'type'
   document.getElementById('flashcard-mode').style.display = vocabMode === 'flip' ? 'block' : 'none';
   document.getElementById('typing-mode-view').style.display = vocabMode === 'type' ? 'block' : 'none';
   document.getElementById('vocab-mode-label').textContent = vocabMode === 'flip' ? '翻牌模式' : '打字模式';
+  // 三個模式按鈕的 active 樣式
+  document.getElementById('vmode-flip').classList.toggle('active', mode === 'flip');
+  document.getElementById('vmode-type').classList.toggle('active', mode === 'type');
+  document.getElementById('vmode-roots').classList.remove('active'); // roots 是導頁，不需要 active 狀態
   if (vocabMode === 'type') { buildDeck(currentLang); renderTyping(); }
+}
+function toggleVocabMode() {
+  // 保留舊函式名稱以防其他地方還有呼叫到，內部轉呼叫新版
+  setVocabMode(vocabMode === 'flip' ? 'type' : 'flip');
 }
 function renderTyping() {
   if (currentDeck.length === 0) return;
