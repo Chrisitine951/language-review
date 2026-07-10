@@ -1,0 +1,17 @@
+{
+  "savedAt": 0,
+  "username": "murray",
+  "reviewSchedule": {},
+  "grammarStats": {
+    "correct": 0,
+    "wrong": 0
+  },
+  "todayStats": {
+    "enFlipped": 0,
+    "deFlipped": 0,
+    "grammarPracticed": 0
+  },
+  "diaryEntries": [],
+  "engooRecords": [],
+  "inboxItems": []
+}
