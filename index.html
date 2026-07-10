@@ -662,12 +662,30 @@
 
   /* ===== 收集箱 (INBOX) ===== */
   .inbox-photo-preview {
-    width: 100%;
-    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-top: 10px;
-    max-height: 220px;
-    object-fit: contain;
+  }
+  .inbox-photo-thumb {
+    position: relative;
+    width: 72px; height: 72px;
+    border-radius: 10px;
+    overflow: hidden;
     background: var(--surface2);
+  }
+  .inbox-photo-thumb img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .inbox-photo-remove {
+    position: absolute; top: 2px; right: 2px;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 11px;
+    display: flex; align-items: center; justify-content: center;
   }
   .inbox-item {
     background: var(--surface);
@@ -732,6 +750,13 @@
     border-radius: 8px;
     font-size: 12px; color: var(--amber);
   }
+  /* 格位速查表 */
+  .case-table-wrap { overflow-x: auto; margin-bottom: 14px; }
+  .case-table { width: 100%; border-collapse: collapse; font-size: 12px; white-space: nowrap; }
+  .case-table caption { text-align: left; font-weight: 700; font-size: 13px; margin-bottom: 6px; color: var(--de); caption-side: top; }
+  .case-table th, .case-table td { border: 1px solid var(--border); padding: 6px 8px; text-align: center; }
+  .case-table th { background: var(--surface2); font-weight: 600; }
+  .case-table td:first-child, .case-table th:first-child { text-align: left; font-weight: 600; color: var(--text2); }
 
   /* ===== SETTINGS PAGE ===== */
   .settings-section {
@@ -757,6 +782,19 @@
     color: var(--text);
     margin-top: 6px;
   }
+  .settings-group-header {
+    cursor: pointer;
+    user-select: none;
+  }
+  .settings-group-header .chevron {
+    font-size: 12px;
+    color: var(--text3);
+    transition: transform 0.15s;
+    display: inline-block;
+  }
+  .settings-group-header.open .chevron { transform: rotate(90deg); }
+  .settings-group-body { display: none; }
+  .settings-group-body.open { display: block; }
   .settings-save-btn {
     width: 100%; padding: 14px;
     background: var(--en); color: white;
@@ -1123,11 +1161,11 @@
           </div>
           <textarea class="diary-textarea" id="inbox-text" style="min-height:90px;" placeholder="貼上文字內容（Cambly AI回饋、筆記…），或只上傳照片"></textarea>
           <div class="diary-toolbar">
-            <button class="diary-ai-btn" style="flex:1;" onclick="document.getElementById('inbox-photo').click()">📷 選擇照片</button>
+            <button class="diary-ai-btn" style="flex:1;" onclick="document.getElementById('inbox-photo').click()">📷 選擇照片（可多張）</button>
             <button class="diary-submit" style="flex:1.6;" onclick="analyzeInbox()">✨ AI 分析內容</button>
           </div>
-          <input type="file" id="inbox-photo" accept="image/*" style="display:none;" onchange="handleInboxPhoto(event)">
-          <img id="inbox-photo-preview" class="inbox-photo-preview" style="display:none;">
+          <input type="file" id="inbox-photo" accept="image/*" multiple style="display:none;" onchange="handleInboxPhoto(event)">
+          <div id="inbox-photo-preview" class="inbox-photo-preview" style="display:none;"></div>
           <div id="inbox-analyze-status"></div>
         </div>
 
@@ -1194,12 +1232,23 @@
       </div>
 
       <div id="de-sub-grammar" style="display:none;">
-        <!-- 瀏覽 / 練習 模式切換 -->
+        <!-- 瀏覽 / 練習 / 動詞變化 模式切換 -->
         <div class="lang-toggle" style="margin: 12px 16px 0;">
           <button class="lang-toggle-btn active" id="degr-mode-browse" onclick="setDeGrammarMode('browse')">📖 瀏覽規則</button>
           <button class="lang-toggle-btn" id="degr-mode-practice" onclick="setDeGrammarMode('practice')">✏️ 練習</button>
+          <button class="lang-toggle-btn" id="degr-mode-conjug" onclick="setDeGrammarMode('conjug')">🔤 動詞變化</button>
         </div>
         <div id="degr-browse-view">
+          <!-- 格位速查表（v1.4.4 新增，B1 之路待辦）-->
+          <div class="pr-card">
+            <div class="grammar-category-row" onclick="toggleRuleDetail('case-table-detail')" style="margin-bottom:0;">
+              <span class="pr-title" style="margin-bottom:0;">📐 格位速查表（定冠詞／不定冠詞／代名詞）</span>
+              <span class="grammar-rule-toggle">展開 ▾</span>
+            </div>
+            <div class="grammar-rule-detail" id="case-table-detail" style="background:transparent; padding:0;">
+              <div id="case-tables-container"><!-- filled by JS --></div>
+            </div>
+          </div>
           <div class="section-header"><span class="section-title">德文文法重點</span></div>
           <div id="de-grammar-list"><!-- filled by JS --></div>
         </div>
@@ -1219,6 +1268,23 @@
             </div>
           </div>
           <div id="degr-question-container"><!-- filled by JS --></div>
+        </div>
+        <div id="degr-conjug-view" style="display:none;">
+          <div class="grammar-stats" style="padding-top:12px;">
+            <div class="grammar-stat">
+              <div class="grammar-stat-num" id="deconj-correct" style="color:var(--green);">0</div>
+              <div class="grammar-stat-label">答對</div>
+            </div>
+            <div class="grammar-stat">
+              <div class="grammar-stat-num" id="deconj-wrong" style="color:var(--de);">0</div>
+              <div class="grammar-stat-label">答錯</div>
+            </div>
+            <div class="grammar-stat">
+              <div class="grammar-stat-num" id="deconj-total">0</div>
+              <div class="grammar-stat-label">已練習</div>
+            </div>
+          </div>
+          <div id="deconj-question-container"><!-- filled by JS --></div>
         </div>
       </div>
     </div>
@@ -1265,8 +1331,11 @@
         <div><div class="topbar-title">設定</div></div>
       </div>
       <div style="padding: 16px 0 0;">
-        <div class="section-header"><span class="section-title">AI 設定</span></div>
-        <div class="settings-section">
+        <div class="section-header settings-group-header" id="sg-header-ai" onclick="toggleSettingsGroup('ai')">
+          <span class="section-title">AI 設定</span>
+          <span class="chevron">▸</span>
+        </div>
+        <div class="settings-section settings-group-body" id="sg-body-ai">
           <div class="settings-item" style="flex-direction: column; align-items: stretch;">
             <div class="settings-item-title">Gemini API Key</div>
             <div class="settings-item-sub">用於 AI 批改日記、生成例句、收集箱辨識</div>
@@ -1278,8 +1347,11 @@
           </div>
         </div>
 
-        <div class="section-header" style="margin-top:8px;"><span class="section-title">GitHub 同步（收集箱用）</span></div>
-        <div class="settings-section">
+        <div class="section-header settings-group-header" id="sg-header-github" style="margin-top:8px;" onclick="toggleSettingsGroup('github')">
+          <span class="section-title">GitHub 同步（收集箱用）</span>
+          <span class="chevron">▸</span>
+        </div>
+        <div class="settings-section settings-group-body" id="sg-body-github">
           <div class="settings-item" style="flex-direction: column; align-items: stretch;">
             <div class="settings-item-title">GitHub Token</div>
             <div class="settings-item-sub">Fine-grained token，只需這個 repo 的 Contents 讀寫權限</div>
@@ -1296,8 +1368,11 @@
           </div>
         </div>
 
-        <div class="section-header" style="margin-top:8px;"><span class="section-title">☁️ 自動同步進度</span></div>
-        <div class="settings-section">
+        <div class="section-header settings-group-header" id="sg-header-sync" style="margin-top:8px;" onclick="toggleSettingsGroup('sync')">
+          <span class="section-title">☁️ 自動同步進度</span>
+          <span class="chevron">▸</span>
+        </div>
+        <div class="settings-section settings-group-body" id="sg-body-sync">
           <div class="settings-item" style="flex-direction: column; align-items: stretch;">
             <div class="settings-item-sub" style="line-height:1.6;">開啟後：複習進度、日記、記錄會自動備份到 GitHub（每人一個進度檔），開 App 時自動還原最新進度。換手機不用再手動匯出。</div>
             <div class="settings-item-title" style="margin-top:12px;">使用者名稱</div>
@@ -1313,8 +1388,11 @@
           </div>
         </div>
 
-        <div class="section-header" style="margin-top:8px;"><span class="section-title">資料管理</span></div>
-        <div class="settings-section">
+        <div class="section-header settings-group-header" id="sg-header-data" style="margin-top:8px;" onclick="toggleSettingsGroup('data')">
+          <span class="section-title">資料管理</span>
+          <span class="chevron">▸</span>
+        </div>
+        <div class="settings-section settings-group-body" id="sg-body-data">
           <div class="settings-item">
             <div class="settings-item-left">
               <div class="settings-item-title">英文單字數量</div>
@@ -1352,8 +1430,11 @@
           </div>
         </div>
 
-        <div class="section-header" style="margin-top:8px;"><span class="section-title">資料備份 & 轉移</span></div>
-        <div class="settings-section">
+        <div class="section-header settings-group-header" id="sg-header-backup" style="margin-top:8px;" onclick="toggleSettingsGroup('backup')">
+          <span class="section-title">資料備份 & 轉移</span>
+          <span class="chevron">▸</span>
+        </div>
+        <div class="settings-section settings-group-body" id="sg-body-backup">
           <div class="card" style="display:flex; flex-direction:column; gap:10px;">
             <div style="font-size:13px; color:var(--text2); line-height:1.6;">
               匯出後會下載一個 <strong>.json</strong> 檔案，存到 iCloud 或任何地方。<br>
@@ -1370,8 +1451,11 @@
           </div>
         </div>
 
-        <div class="section-header" style="margin-top:8px;"><span class="section-title">資料更新方式</span></div>
-        <div class="settings-section">
+        <div class="section-header settings-group-header" id="sg-header-howto" style="margin-top:8px;" onclick="toggleSettingsGroup('howto')">
+          <span class="section-title">資料更新方式</span>
+          <span class="chevron">▸</span>
+        </div>
+        <div class="settings-section settings-group-body" id="sg-body-howto">
           <div class="card">
             <div style="font-size:13px; line-height:1.8; color: var(--text2);">
               <strong>日常小更新</strong>：用「📥 收集箱」拍照上傳，AI 整理後直接存進 GitHub 的 data-user.json。<br><br>
@@ -1380,7 +1464,7 @@
           </div>
         </div>
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Language Review App v1.4.3<br>最後更新：2026-07-09（修復打字/字根按鈕失效＋GitHub分支診斷）
+          Language Review App v1.4.4<br>最後更新：2026-07-10（設定頁分組收合＋德文格位表/動詞變化＋收集箱多張照片）
         </div>
       </div>
     </div>
@@ -1456,8 +1540,7 @@ let efState = null;
 // 收集箱 state：待確認項目清單
 // 每筆 = { type: 'en_vocab'|'de_vocab'|'en_grammar'|'de_sentence', ...欄位 }
 let inboxItems = [];
-let inboxPhotoBase64 = null; // 目前選擇的照片（base64，不含前綴）
-let inboxPhotoMime = null;
+let inboxPhotos = []; // v1.4.4：改為陣列支援多張照片，格式 [{mime, base64}]
 
 // data
 let diaryEntries = [];
@@ -1907,23 +1990,62 @@ async function testGithubConnection() {
 // ============================================================
 // 收集箱：照片處理
 // ============================================================
-function handleInboxPhoto(event) {
-  const file = event.target.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    // e.target.result 格式：data:image/jpeg;base64,XXXX
-    const dataUrl = e.target.result;
-    const match = dataUrl.match(/^data:(.+?);base64,(.*)$/);
-    if (!match) { showToast('照片讀取失敗'); return; }
-    inboxPhotoMime = match[1];
-    inboxPhotoBase64 = match[2];
-    const preview = document.getElementById('inbox-photo-preview');
-    preview.src = dataUrl;
-    preview.style.display = 'block';
-  };
-  reader.readAsDataURL(file);
+// 把照片縮到最長邊 1600px 再轉成 base64（省流量、Gemini 處理也更快）
+// 獨立成一個函式方便測試時 mock 掉（jsdom 沒有真正的 canvas 繪圖能力）
+function resizeImageToDataUrl(file, maxDim) {
+  maxDim = maxDim || 1600;
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        let { width, height } = img;
+        if (width > height && width > maxDim) { height = Math.round(height * maxDim / width); width = maxDim; }
+        else if (height >= width && height > maxDim) { width = Math.round(width * maxDim / height); height = maxDim; }
+        const canvas = document.createElement('canvas');
+        canvas.width = width; canvas.height = height;
+        canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+        resolve(canvas.toDataURL('image/jpeg', 0.85));
+      };
+      img.onerror = () => reject(new Error('圖片載入失敗'));
+      img.src = e.target.result;
+    };
+    reader.onerror = () => reject(new Error('檔案讀取失敗'));
+    reader.readAsDataURL(file);
+  });
+}
+
+// v1.4.4：支援一次選擇多張照片（例如課堂筆記拍了好幾頁），全部縮圖後存進 inboxPhotos 陣列
+async function handleInboxPhoto(event) {
+  const files = Array.from(event.target.files || []);
+  if (files.length === 0) return;
+  const statusEl = document.getElementById('inbox-analyze-status');
+  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;">處理 ${files.length} 張照片中…</div>`;
+  for (const file of files) {
+    try {
+      const dataUrl = await resizeImageToDataUrl(file, 1600);
+      const match = dataUrl.match(/^data:(.+?);base64,(.*)$/);
+      if (!match) continue;
+      inboxPhotos.push({ mime: match[1], base64: match[2] });
+    } catch(e) { /* 單張失敗不影響其他張 */ }
+  }
+  statusEl.innerHTML = '';
+  renderInboxPhotoPreviews();
   event.target.value = '';
+}
+function renderInboxPhotoPreviews() {
+  const el = document.getElementById('inbox-photo-preview');
+  if (inboxPhotos.length === 0) { el.style.display = 'none'; el.innerHTML = ''; return; }
+  el.style.display = 'flex';
+  el.innerHTML = inboxPhotos.map((p, i) => `
+    <div class="inbox-photo-thumb">
+      <img src="data:${p.mime};base64,${p.base64}">
+      <button class="inbox-photo-remove" onclick="removeInboxPhoto(${i})" title="移除">✕</button>
+    </div>`).join('');
+}
+function removeInboxPhoto(idx) {
+  inboxPhotos.splice(idx, 1);
+  renderInboxPhotoPreviews();
 }
 
 // ============================================================
@@ -1931,12 +2053,13 @@ function handleInboxPhoto(event) {
 // ============================================================
 async function analyzeInbox() {
   const text = document.getElementById('inbox-text').value.trim();
-  if (!text && !inboxPhotoBase64) {
+  if (!text && inboxPhotos.length === 0) {
     showToast('請先貼上文字或選擇照片');
     return;
   }
   const statusEl = document.getElementById('inbox-analyze-status');
-  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 分析中，照片可能需要 10–20 秒…</div>`;
+  const photoNote = inboxPhotos.length > 1 ? `（${inboxPhotos.length} 張照片一起分析）` : '';
+  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 分析中${photoNote}，可能需要 10–30 秒…</div>`;
 
   const prompt = `You are helping a Taiwanese language learner (Christine) organize her lesson notes into a study database. She is preparing for IELTS (target band 6.5-7.0).
 The content may include: English lesson feedback (您說/建議/解釋 format from Cambly), IELTS practice exercises with mistakes and corrections (錯題), Engoo articles, German lesson handouts, handwritten notes, or vocabulary lists.
@@ -1965,12 +2088,13 @@ Rules:
 - For IELTS mistakes (錯題): the wrong answer goes in "wrong", the correction in "correct", and explain WHY in Traditional Chinese
 - If content is unreadable or empty, return {"englishVocab":[],"germanVocab":[],"englishGrammar":[],"germanSentences":[]}`;
 
-  // 組合 Gemini 請求的 parts：文字 + 照片（如果有）
+  // 組合 Gemini 請求的 parts：文字 + 全部照片（v1.4.4：多張照片一次送給 AI 一起分析，
+  // 比一張一張分開分析更有效率，也讓 AI 能理解跨頁筆記的上下文）
   const parts = [{ text: prompt }];
   if (text) parts.push({ text: '\n\n=== Content to analyze ===\n' + text });
-  if (inboxPhotoBase64) {
-    parts.push({ inline_data: { mime_type: inboxPhotoMime, data: inboxPhotoBase64 } });
-  }
+  inboxPhotos.forEach(p => {
+    parts.push({ inline_data: { mime_type: p.mime, data: p.base64 } });
+  });
 
   const result = await callGemini(parts);
   if (!result.ok) {
@@ -2017,9 +2141,8 @@ Rules:
     statusEl.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 辨識出 ${added} 個項目！請往下確認、修改，再按儲存</div>`;
     // 清空輸入區
     document.getElementById('inbox-text').value = '';
-    inboxPhotoBase64 = null;
-    inboxPhotoMime = null;
-    document.getElementById('inbox-photo-preview').style.display = 'none';
+    inboxPhotos = [];
+    renderInboxPhotoPreviews();
   }
 }
 
@@ -3167,6 +3290,7 @@ function initGerman() {
   renderPronunciation();
   initSentencePractice();
   renderGermanGrammar();
+  renderCaseTables();
 }
 function setDeTab(tab) {
   deTab = tab;
@@ -3208,6 +3332,142 @@ let degrCurrentQ = null;
 let degrAnswered = false;
 
 // 內建備用題（從 GERMAN_GRAMMAR 規則手工出的題，離線可用）
+// ============================================================
+// 德文格位速查表（v1.4.4 新增，德文 B1 之路待辦①）
+// 純參考資料，不需要 data.js 那樣的批次整理流程，直接放在 app.html。
+// ============================================================
+const GERMAN_CASE_TABLES = [
+  {
+    title: '定冠詞（der/die/das）格位變化',
+    header: ['格', '陽性', '陰性', '中性', '複數'],
+    rows: [
+      ['Nominativ（主格）', 'der', 'die', 'das', 'die'],
+      ['Akkusativ（受格）', 'den', 'die', 'das', 'die'],
+      ['Dativ（與格）', 'dem', 'der', 'dem', 'den'],
+      ['Genitiv（屬格）', 'des', 'der', 'des', 'der'],
+    ],
+  },
+  {
+    title: '不定冠詞（ein/eine）格位變化',
+    header: ['格', '陽性', '陰性', '中性'],
+    rows: [
+      ['Nominativ', 'ein', 'eine', 'ein'],
+      ['Akkusativ', 'einen', 'eine', 'ein'],
+      ['Dativ', 'einem', 'einer', 'einem'],
+      ['Genitiv', 'eines', 'einer', 'eines'],
+    ],
+  },
+  {
+    title: '人稱代名詞格位變化',
+    header: ['人稱', 'Nominativ', 'Akkusativ', 'Dativ'],
+    rows: [
+      ['ich（我）', 'ich', 'mich', 'mir'],
+      ['du（你）', 'du', 'dich', 'dir'],
+      ['er（他）', 'er', 'ihn', 'ihm'],
+      ['sie（她）', 'sie', 'sie', 'ihr'],
+      ['es（它）', 'es', 'es', 'ihm'],
+      ['wir（我們）', 'wir', 'uns', 'uns'],
+      ['ihr（你們）', 'ihr', 'euch', 'euch'],
+      ['sie/Sie（他們/您）', 'sie/Sie', 'sie/Sie', 'ihnen/Ihnen'],
+    ],
+  },
+];
+function renderCaseTables() {
+  const el = document.getElementById('case-tables-container');
+  if (!el) return;
+  el.innerHTML = GERMAN_CASE_TABLES.map(t => `
+    <div class="case-table-wrap">
+      <table class="case-table">
+        <caption>${escHtml(t.title)}</caption>
+        <thead><tr>${t.header.map(h => `<th>${escHtml(h)}</th>`).join('')}</tr></thead>
+        <tbody>
+          ${t.rows.map(r => `<tr>${r.map(c => `<td>${escHtml(c)}</td>`).join('')}</tr>`).join('')}
+        </tbody>
+      </table>
+    </div>`).join('');
+}
+
+// ============================================================
+// 德文動詞變化練習（v1.4.4 新增，德文 B1 之路待辦②）
+// 內建常見動詞的六個人稱變化（規則動詞 + 幾個高頻不規則動詞），
+// 純本機題庫，不需要 AI，離線也能練習。
+// 出題邏輯：隨機挑動詞+人稱，選項＝正解＋同一動詞的其他人稱變化
+//（這樣的干擾項最有教學價值：測的是「這個變化對應哪個人稱」）
+// ============================================================
+const GERMAN_VERB_CONJUGATIONS = [
+  { infinitive: 'sein', meaning: '是（be動詞）', forms: { 'ich':'bin', 'du':'bist', 'er/sie/es':'ist', 'wir':'sind', 'ihr':'seid', 'sie/Sie':'sind' } },
+  { infinitive: 'haben', meaning: '有', forms: { 'ich':'habe', 'du':'hast', 'er/sie/es':'hat', 'wir':'haben', 'ihr':'habt', 'sie/Sie':'haben' } },
+  { infinitive: 'werden', meaning: '變成、將要', forms: { 'ich':'werde', 'du':'wirst', 'er/sie/es':'wird', 'wir':'werden', 'ihr':'werdet', 'sie/Sie':'werden' } },
+  { infinitive: 'gehen', meaning: '去、走', forms: { 'ich':'gehe', 'du':'gehst', 'er/sie/es':'geht', 'wir':'gehen', 'ihr':'geht', 'sie/Sie':'gehen' } },
+  { infinitive: 'kommen', meaning: '來', forms: { 'ich':'komme', 'du':'kommst', 'er/sie/es':'kommt', 'wir':'kommen', 'ihr':'kommt', 'sie/Sie':'kommen' } },
+  { infinitive: 'machen', meaning: '做', forms: { 'ich':'mache', 'du':'machst', 'er/sie/es':'macht', 'wir':'machen', 'ihr':'macht', 'sie/Sie':'machen' } },
+  { infinitive: 'sehen', meaning: '看見', forms: { 'ich':'sehe', 'du':'siehst', 'er/sie/es':'sieht', 'wir':'sehen', 'ihr':'seht', 'sie/Sie':'sehen' } },
+  { infinitive: 'sprechen', meaning: '說', forms: { 'ich':'spreche', 'du':'sprichst', 'er/sie/es':'spricht', 'wir':'sprechen', 'ihr':'sprecht', 'sie/Sie':'sprechen' } },
+  { infinitive: 'lesen', meaning: '讀', forms: { 'ich':'lese', 'du':'liest', 'er/sie/es':'liest', 'wir':'lesen', 'ihr':'lest', 'sie/Sie':'lesen' } },
+  { infinitive: 'essen', meaning: '吃', forms: { 'ich':'esse', 'du':'isst', 'er/sie/es':'isst', 'wir':'essen', 'ihr':'esst', 'sie/Sie':'essen' } },
+  { infinitive: 'fahren', meaning: '開車、搭乘', forms: { 'ich':'fahre', 'du':'fährst', 'er/sie/es':'fährt', 'wir':'fahren', 'ihr':'fahrt', 'sie/Sie':'fahren' } },
+  { infinitive: 'arbeiten', meaning: '工作', forms: { 'ich':'arbeite', 'du':'arbeitest', 'er/sie/es':'arbeitet', 'wir':'arbeiten', 'ihr':'arbeitet', 'sie/Sie':'arbeiten' } },
+  { infinitive: 'lernen', meaning: '學習', forms: { 'ich':'lerne', 'du':'lernst', 'er/sie/es':'lernt', 'wir':'lernen', 'ihr':'lernt', 'sie/Sie':'lernen' } },
+  { infinitive: 'wohnen', meaning: '居住', forms: { 'ich':'wohne', 'du':'wohnst', 'er/sie/es':'wohnt', 'wir':'wohnen', 'ihr':'wohnt', 'sie/Sie':'wohnen' } },
+];
+
+let deconjStats = { correct: 0, wrong: 0 };
+let deconjAnswered = false;
+
+function nextConjugationQuestion() {
+  const container = document.getElementById('deconj-question-container');
+  deconjAnswered = false;
+  const verb = GERMAN_VERB_CONJUGATIONS[Math.floor(Math.random() * GERMAN_VERB_CONJUGATIONS.length)];
+  const persons = Object.keys(verb.forms);
+  const person = persons[Math.floor(Math.random() * persons.length)];
+  const correct = verb.forms[person];
+
+  // 干擾選項：同一動詞其他人稱的變化（去重、排除跟正解一樣的）
+  const otherForms = [...new Set(persons.filter(p => p !== person).map(p => verb.forms[p]))].filter(f => f !== correct);
+  shuffle(otherForms);
+  const choices = shuffle([correct, ...otherForms.slice(0, 2)]);
+
+  window._deconjChoices = choices;
+  window._deconjAnswer = correct;
+  window._deconjVerb = verb;
+
+  container.innerHTML = `
+    <div class="grammar-card">
+      <div class="grammar-category-row" style="cursor:default;">
+        <span class="grammar-category-label">${escHtml(verb.infinitive)}（${escHtml(verb.meaning)}）</span>
+      </div>
+      <div class="grammar-question">${escHtml(person)} ___ （${escHtml(verb.infinitive)}）</div>
+      <div class="grammar-choices">
+        ${choices.map((c, i) => `<button class="grammar-choice" onclick="answerConjugation(this, ${i})">${escHtml(c)}</button>`).join('')}
+      </div>
+      <div class="grammar-explanation" id="deconj-exp">
+        <strong>📌 完整變化：</strong>${persons.map(p => `${p}: ${verb.forms[p]}`).join('　')}
+      </div>
+      <button class="grammar-nav-btn" id="deconj-next-btn" onclick="nextConjugationQuestion()" style="display:none; background:var(--de);">下一題 →</button>
+    </div>`;
+}
+
+function answerConjugation(btn, idx) {
+  if (deconjAnswered) return;
+  deconjAnswered = true;
+  const chosen = window._deconjChoices[idx];
+  const correct = window._deconjAnswer;
+  const isCorrect = chosen === correct;
+  document.querySelectorAll('#deconj-question-container .grammar-choice').forEach(b => {
+    if (b.textContent === correct) b.classList.add('correct');
+    else if (b === btn && !isCorrect) b.classList.add('wrong');
+  });
+  document.getElementById('deconj-exp').classList.add('show');
+  document.getElementById('deconj-next-btn').style.display = 'block';
+  if (isCorrect) deconjStats.correct++; else deconjStats.wrong++;
+  document.getElementById('deconj-correct').textContent = deconjStats.correct;
+  document.getElementById('deconj-wrong').textContent = deconjStats.wrong;
+  document.getElementById('deconj-total').textContent = deconjStats.correct + deconjStats.wrong;
+  todayStats.grammarPracticed++;
+  todayStats.date = new Date().toDateString();
+  saveData();
+}
+
 const BUILTIN_DE_QUESTIONS = [
   { ruleId: 'gg001', question: 'Ich habe ___ Freund.（我有一個男朋友）', choices: ['einen', 'ein', 'einem'], answer: 'einen', explanation: 'haben 後面接 Akkusativ；Freund 是陽性名詞，ein → einen。' },
   { ruleId: 'gg003', question: '___ der Arbeit（因為工作的關係）', choices: ['wegen', 'nachdem', 'von'], answer: 'wegen', explanation: 'wegen + Genitiv 表示「因為…」，陰性 die Arbeit → der Arbeit。' },
@@ -3225,9 +3485,12 @@ function setDeGrammarMode(mode) {
   deGrammarMode = mode;
   document.getElementById('degr-browse-view').style.display = mode === 'browse' ? 'block' : 'none';
   document.getElementById('degr-practice-view').style.display = mode === 'practice' ? 'block' : 'none';
+  document.getElementById('degr-conjug-view').style.display = mode === 'conjug' ? 'block' : 'none';
   document.getElementById('degr-mode-browse').classList.toggle('active', mode === 'browse');
   document.getElementById('degr-mode-practice').classList.toggle('active', mode === 'practice');
+  document.getElementById('degr-mode-conjug').classList.toggle('active', mode === 'conjug');
   if (mode === 'practice') nextDeGrammarQuestion();
+  if (mode === 'conjug') nextConjugationQuestion();
 }
 
 // 題庫快取：{ questions: [...], generatedAt }
@@ -3614,7 +3877,38 @@ async function saveRootLookup() {
 // ============================================================
 // SETTINGS
 // ============================================================
+// ============================================================
+// 設定頁：分組收合（v1.4.4 新增，解決「設定頁太長」的待辦）
+// 設計：每組記住自己的開關狀態在 localStorage，下次進來維持原狀。
+// 首次使用（沒有存過狀態）時，AI 設定與 GitHub 同步預設展開（初次設定最常用到），
+// 其餘分組預設收合。
+// ============================================================
+const SETTINGS_GROUP_DEFAULTS = { ai: true, github: true, sync: false, data: false, backup: false, howto: false };
+function toggleSettingsGroup(id) {
+  const body = document.getElementById('sg-body-' + id);
+  const header = document.getElementById('sg-header-' + id);
+  if (!body || !header) return;
+  const open = !body.classList.contains('open');
+  body.classList.toggle('open', open);
+  header.classList.toggle('open', open);
+  try { localStorage.setItem('lr_sg_' + id, open ? '1' : '0'); } catch(e) {}
+}
+function initSettingsGroups() {
+  Object.keys(SETTINGS_GROUP_DEFAULTS).forEach(id => {
+    let open;
+    try {
+      const saved = localStorage.getItem('lr_sg_' + id);
+      open = saved !== null ? saved === '1' : SETTINGS_GROUP_DEFAULTS[id];
+    } catch(e) { open = SETTINGS_GROUP_DEFAULTS[id]; }
+    const body = document.getElementById('sg-body-' + id);
+    const header = document.getElementById('sg-header-' + id);
+    if (body) body.classList.toggle('open', open);
+    if (header) header.classList.toggle('open', open);
+  });
+}
+
 function initSettings() {
+  initSettingsGroups();
   const k = getApiKey();
   if (k) document.getElementById('api-key-input').value = k;
   document.getElementById('gemini-model-input').value = getGeminiModel();
