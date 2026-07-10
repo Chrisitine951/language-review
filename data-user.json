@@ -1,8 +1,170 @@
 {
   "englishVocabulary": [],
-  "germanVocabulary": [],
+  "germanVocabulary": [
+    {
+      "id": "udemrekfzmh1",
+      "article": "",
+      "word": "heiß",
+      "meaning": "熱的",
+      "category": "adjective",
+      "example": "Es ist sehr heiß."
+    },
+    {
+      "id": "udemrekfzmh2",
+      "article": "",
+      "word": "sterben",
+      "meaning": "死亡",
+      "category": "verb",
+      "example": "Ich sterbe vor Hitze"
+    },
+    {
+      "id": "udemrekfzmh3",
+      "article": "die",
+      "word": "die Hitze",
+      "meaning": "熱、酷熱",
+      "category": "nature",
+      "example": "Ich sterbe vor Hitze"
+    },
+    {
+      "id": "udemrekfzmh4",
+      "article": "",
+      "word": "affenheiß",
+      "meaning": "超級熱的",
+      "category": "adjective",
+      "example": "Es ist affenheiß"
+    },
+    {
+      "id": "udemrekfzmh5",
+      "article": "",
+      "word": "schmelzen",
+      "meaning": "融化",
+      "category": "verb",
+      "example": "Ich schmelze weg"
+    },
+    {
+      "id": "udemrekfzmh11",
+      "article": "",
+      "word": "sehr",
+      "meaning": "很/非常",
+      "category": "adverb",
+      "example": "Es ist sehr heiß."
+    },
+    {
+      "id": "udemrekfzmh12",
+      "article": "",
+      "word": "heiß",
+      "meaning": "熱的/辣的",
+      "category": "adjective",
+      "example": "Es ist sehr heiß. / Ich bin heiß."
+    },
+    {
+      "id": "udemrekfzmh13",
+      "article": "",
+      "word": "kalt",
+      "meaning": "冷的/冷酷的",
+      "category": "adjective",
+      "example": "Mir ist kalt. / Ich bin kalt."
+    },
+    {
+      "id": "udemrekfzmh14",
+      "article": "",
+      "word": "von",
+      "meaning": "來自/從",
+      "category": "preposition",
+      "example": ""
+    },
+    {
+      "id": "udemrekfzmh15",
+      "article": "",
+      "word": "sterben",
+      "meaning": "死亡",
+      "category": "verb",
+      "example": ""
+    }
+  ],
   "englishGrammar": [],
   "germanGrammar": [],
-  "germanSentences": [],
+  "germanSentences": [
+    {
+      "id": "usmrekfzmh6",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Es ist sehr heiß.",
+      "chinese": "好熱。"
+    },
+    {
+      "id": "usmrekfzmh7",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Mir ist heiß.",
+      "chinese": "我好熱。"
+    },
+    {
+      "id": "usmrekfzmh8",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich sterbe vor Hitze",
+      "chinese": "我快被熱死了！"
+    },
+    {
+      "id": "usmrekfzmh9",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Es ist affenheiß",
+      "chinese": "真的是超級熱！"
+    },
+    {
+      "id": "usmrekfzmh10",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich schmelze weg",
+      "chinese": "我要融化了！"
+    },
+    {
+      "id": "usmrekfzmh16",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "天氣",
+      "german": "Es ist sehr heiß.",
+      "chinese": "好熱。"
+    },
+    {
+      "id": "usmrekfzmh17",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "感受",
+      "german": "Mir ist heiß.",
+      "chinese": "我好熱"
+    },
+    {
+      "id": "usmrekfzmh18",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "感受",
+      "german": "Mir ist kalt.",
+      "chinese": "我好冷"
+    },
+    {
+      "id": "usmrekfzmh19",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "形容人",
+      "german": "Ich bin heiß.",
+      "chinese": "我很辣。"
+    },
+    {
+      "id": "usmrekfzmh20",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "形容人",
+      "german": "Ich bin kalt.",
+      "chinese": "我很冷酷。"
+    }
+  ],
   "wordRoots": []
 }
