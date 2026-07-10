@@ -1,7 +1,68 @@
 {
   "savedAt": 0,
   "username": "murray",
-  "reviewSchedule": {},
+  "reviewSchedule": {
+    "de_de072": {
+      "stage": 1,
+      "nextReview": 1783599932007,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "de_de096": {
+      "stage": 2,
+      "nextReview": 1784122413155,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "de_de003": {
+      "stage": 1,
+      "nextReview": 1783604025835,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "de_de057": {
+      "stage": 1,
+      "nextReview": 1783604065656,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "de_de040": {
+      "stage": 1,
+      "nextReview": 1783604216410,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "de_de074": {
+      "stage": 1,
+      "nextReview": 1783604235726,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "de_de038": {
+      "stage": 1,
+      "nextReview": 1783604242199,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "de_de070": {
+      "stage": 1,
+      "nextReview": 1783604257013,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "de_de049": {
+      "stage": 1,
+      "nextReview": 1783604269379,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "de_de046": {
+      "stage": 1,
+      "nextReview": 1783604278646,
+      "correct": 0,
+      "incorrect": 1
+    }
+  },
   "grammarStats": {
     "correct": 0,
     "wrong": 0
