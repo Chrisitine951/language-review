@@ -80,9 +80,766 @@
       "meaning": "死亡",
       "category": "verb",
       "example": ""
+    },
+    {
+      "id": "udemreo7jra1",
+      "article": "",
+      "word": "Hallo!",
+      "meaning": "哈囉!",
+      "category": "greeting",
+      "example": "最常見,任何時間都可以"
+    },
+    {
+      "id": "udemreo7jra2",
+      "article": "",
+      "word": "Hi!",
+      "meaning": "嗨!",
+      "category": "greeting",
+      "example": "很口語,朋友之間"
+    },
+    {
+      "id": "udemreo7jra3",
+      "article": "",
+      "word": "Guten Morgen!",
+      "meaning": "早安!",
+      "category": "greeting",
+      "example": "約5:00-10:00"
+    },
+    {
+      "id": "udemreo7jra4",
+      "article": "",
+      "word": "Guten Tag!",
+      "meaning": "您好!",
+      "category": "greeting",
+      "example": "白天,正式場合"
+    },
+    {
+      "id": "udemreo7jra5",
+      "article": "",
+      "word": "Guten Abend!",
+      "meaning": "晚安/晚上好!",
+      "category": "greeting",
+      "example": "晚上見面時"
+    },
+    {
+      "id": "udemreo7jra6",
+      "article": "",
+      "word": "Grüß Gott!",
+      "meaning": "您好!",
+      "category": "greeting",
+      "example": "德國南部、奥地利"
+    },
+    {
+      "id": "udemreo7jra7",
+      "article": "",
+      "word": "Servus!",
+      "meaning": "哈囉/掰掰!",
+      "category": "greeting",
+      "example": "巴伐利亞、奥地利"
+    },
+    {
+      "id": "udemreo7jra8",
+      "article": "",
+      "word": "Moin!",
+      "meaning": "哈囉!",
+      "category": "greeting",
+      "example": "德國北部,一整天都可使用"
+    },
+    {
+      "id": "udemreo7jra9",
+      "article": "",
+      "word": "Gut, danke.",
+      "meaning": "不錯,謝謝。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra10",
+      "article": "",
+      "word": "Ganz gut.",
+      "meaning": "還不錯。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra11",
+      "article": "",
+      "word": "Sehr gut.",
+      "meaning": "很好。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra12",
+      "article": "",
+      "word": "Super!",
+      "meaning": "超棒!",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra13",
+      "article": "",
+      "word": "Prima!",
+      "meaning": "很棒!",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra14",
+      "article": "",
+      "word": "Alles gut.",
+      "meaning": "一切都好。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra15",
+      "article": "",
+      "word": "Passt schon.",
+      "meaning": "還行啦。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra16",
+      "article": "",
+      "word": "Es geht.",
+      "meaning": "普普通通。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra17",
+      "article": "",
+      "word": "Kann nicht klagen.",
+      "meaning": "還行,沒什麼好抱怨的。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra18",
+      "article": "",
+      "word": "Nicht schlecht.",
+      "meaning": "不錯。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra19",
+      "article": "",
+      "word": "So lala.",
+      "meaning": "馬馬虎虎。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra20",
+      "article": "",
+      "word": "Muss ja.",
+      "meaning": "還能怎樣呢。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra21",
+      "article": "",
+      "word": "Könnte besser sein.",
+      "meaning": "可以更好。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra22",
+      "article": "",
+      "word": "Nicht so gut.",
+      "meaning": "不太好。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra23",
+      "article": "",
+      "word": "Schlecht.",
+      "meaning": "很糟。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra24",
+      "article": "",
+      "word": "Sehr schlecht.",
+      "meaning": "非常糟。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra25",
+      "article": "",
+      "word": "Ich bin müde.",
+      "meaning": "我很累。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra26",
+      "article": "",
+      "word": "Ich bin krank.",
+      "meaning": "我生病了。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra27",
+      "article": "",
+      "word": "Ich bin erkältet.",
+      "meaning": "我感冒了。",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra28",
+      "article": "",
+      "word": "Freut mich!",
+      "meaning": "很高興認識你!",
+      "category": "greeting",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra29",
+      "article": "",
+      "word": "Freut mich, dich kennenzulernen.",
+      "meaning": "很高興認識你。",
+      "category": "greeting",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra30",
+      "article": "",
+      "word": "Schön, dich kennenzulernen.",
+      "meaning": "很高興認識你。",
+      "category": "greeting",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra31",
+      "article": "",
+      "word": "Ebenso!",
+      "meaning": "我也是!",
+      "category": "other",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra32",
+      "article": "",
+      "word": "Tschüss!",
+      "meaning": "掰掰!",
+      "category": "greeting",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra33",
+      "article": "",
+      "word": "Ciao!",
+      "meaning": "掰!(義文,較口語)",
+      "category": "greeting",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra34",
+      "article": "",
+      "word": "Bis bald!",
+      "meaning": "回頭見!(短時間內會再見)",
+      "category": "greeting",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra35",
+      "article": "",
+      "word": "Bis später!",
+      "meaning": "晚點見!",
+      "category": "greeting",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra36",
+      "article": "",
+      "word": "Bis morgen!",
+      "meaning": "明天見!",
+      "category": "greeting",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra37",
+      "article": "",
+      "word": "Bis dann!",
+      "meaning": "待會見!",
+      "category": "greeting",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra38",
+      "article": "",
+      "word": "Auf Wiedersehen!",
+      "meaning": "下次再相見!(正式)",
+      "category": "greeting",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra39",
+      "article": "",
+      "word": "Gute Nacht!",
+      "meaning": "晚安!(睡覺前)",
+      "category": "greeting",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra40",
+      "article": "",
+      "word": "kommen",
+      "meaning": "來",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra41",
+      "article": "",
+      "word": "ankommen",
+      "meaning": "到達",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra42",
+      "article": "",
+      "word": "anrufen",
+      "meaning": "打電話給",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra43",
+      "article": "",
+      "word": "anfangen",
+      "meaning": "開始",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra44",
+      "article": "",
+      "word": "ansehen",
+      "meaning": "看",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra45",
+      "article": "",
+      "word": "aufstehen",
+      "meaning": "起床",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra46",
+      "article": "",
+      "word": "aufmachen",
+      "meaning": "打開",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra47",
+      "article": "",
+      "word": "ausgehen",
+      "meaning": "出門",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra48",
+      "article": "",
+      "word": "aussteigen",
+      "meaning": "下車",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra49",
+      "article": "",
+      "word": "aussehen",
+      "meaning": "看起來",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra50",
+      "article": "",
+      "word": "ausfüllen",
+      "meaning": "填寫",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra51",
+      "article": "",
+      "word": "einkaufen",
+      "meaning": "購物",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra52",
+      "article": "",
+      "word": "einladen",
+      "meaning": "邀請",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra53",
+      "article": "",
+      "word": "mitkommen",
+      "meaning": "一起來",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra54",
+      "article": "",
+      "word": "mitbringen",
+      "meaning": "帶來",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra55",
+      "article": "",
+      "word": "nachfragen",
+      "meaning": "再詢問",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra56",
+      "article": "",
+      "word": "nach Hause gehen",
+      "meaning": "回家",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra57",
+      "article": "",
+      "word": "nachmachen",
+      "meaning": "模仿",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra58",
+      "article": "",
+      "word": "vorstellen",
+      "meaning": "介紹",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra59",
+      "article": "",
+      "word": "vorbereiten",
+      "meaning": "準備",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra60",
+      "article": "",
+      "word": "vorlesen",
+      "meaning": "朗讀",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra61",
+      "article": "",
+      "word": "weggehen",
+      "meaning": "離開",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra62",
+      "article": "",
+      "word": "wegfahren",
+      "meaning": "駛離",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra63",
+      "article": "",
+      "word": "zurückkommen",
+      "meaning": "回來",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra64",
+      "article": "",
+      "word": "zurückgehen",
+      "meaning": "回去",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra65",
+      "article": "",
+      "word": "zurückgeben",
+      "meaning": "歸還",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra66",
+      "article": "",
+      "word": "zumachen",
+      "meaning": "關起來",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra67",
+      "article": "",
+      "word": "zuhören",
+      "meaning": "專心聽",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra68",
+      "article": "",
+      "word": "zusehen",
+      "meaning": "看著",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra69",
+      "article": "",
+      "word": "besuchen",
+      "meaning": "拜訪",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra70",
+      "article": "",
+      "word": "bezahlen",
+      "meaning": "付款",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra71",
+      "article": "",
+      "word": "vergessen",
+      "meaning": "忘記",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra72",
+      "article": "",
+      "word": "verkaufen",
+      "meaning": "賣",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra73",
+      "article": "",
+      "word": "verstehen",
+      "meaning": "理解",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra74",
+      "article": "",
+      "word": "erzählen",
+      "meaning": "敘述",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra75",
+      "article": "",
+      "word": "erklären",
+      "meaning": "解釋",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra76",
+      "article": "",
+      "word": "entdecken",
+      "meaning": "發現",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra77",
+      "article": "",
+      "word": "klagen",
+      "meaning": "抱怨",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra78",
+      "article": "",
+      "word": "schlecht",
+      "meaning": "糟的",
+      "category": "adjective",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra79",
+      "article": "",
+      "word": "müde",
+      "meaning": "累的",
+      "category": "adjective",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra80",
+      "article": "",
+      "word": "krank",
+      "meaning": "生病的",
+      "category": "adjective",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra81",
+      "article": "",
+      "word": "erkältet",
+      "meaning": "感冒的",
+      "category": "adjective",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra82",
+      "article": "",
+      "word": "sich erkälten",
+      "meaning": "感冒",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra83",
+      "article": "",
+      "word": "schön",
+      "meaning": "好的/棒的",
+      "category": "adjective",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra84",
+      "article": "",
+      "word": "mitnehmen",
+      "meaning": "帶走",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra85",
+      "article": "",
+      "word": "wegwerfen",
+      "meaning": "丟掉",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra86",
+      "article": "",
+      "word": "aufräumen",
+      "meaning": "整理",
+      "category": "verb",
+      "example": ""
+    },
+    {
+      "id": "udemreo7jra87",
+      "article": "",
+      "word": "einsteigen",
+      "meaning": "上車",
+      "category": "verb",
+      "example": ""
     }
   ],
-  "englishGrammar": [],
+  "englishGrammar": [
+    {
+      "id": "ugrmreo7jra88",
+      "category": "other",
+      "rule": "假設語氣用途",
+      "wrong": "",
+      "correct": "",
+      "explanation": "德文的假設語氣(Konjunktiv II)可用於表達客氣、假定語氣或可能性。",
+      "mastered": false,
+      "source": "other"
+    },
+    {
+      "id": "ugrmreo7jra89",
+      "category": "other",
+      "rule": "動詞原型位置",
+      "wrong": "",
+      "correct": "",
+      "explanation": "在一個句子中如果出現兩個動詞，第二個動詞通常會以原型形式出現在句子的最後。",
+      "mastered": false,
+      "source": "other"
+    },
+    {
+      "id": "ugrmreo7jra90",
+      "category": "other",
+      "rule": "動詞過去分詞與形容詞",
+      "wrong": "",
+      "correct": "",
+      "explanation": "德文的動詞過去分詞 (Partizip II) 與形容詞有時形式相似但用法不同。例如，'sich erkälten' 的過去分詞用於完成式 ('Ich habe mich erkältet' - 我感冒了)，而 'erkältet' 也可以作為形容詞，意為『感冒的』 ('Ich bin erkältet' - 我感冒了，強調狀態)。",
+      "mastered": false,
+      "source": "other"
+    },
+    {
+      "id": "ugrmreo7jra91",
+      "category": "other",
+      "rule": "不人稱句型 `Es freut mich`",
+      "wrong": "",
+      "correct": "",
+      "explanation": "`Es freut mich` 是一個非人稱句型，意為『我很高興』。其中 `Es` 是虛主詞，`mich` 是第一人稱的受格形式，表示『使我高興』。此句型常用於表達因某事而感到高興。",
+      "mastered": false,
+      "source": "other"
+    },
+    {
+      "id": "ugrmreo7jra92",
+      "category": "other",
+      "rule": "不定詞帶 `zu`",
+      "wrong": "",
+      "correct": "",
+      "explanation": "在德文中，不定詞句型 (Infinitiv mit zu) 中，`zu` 通常放在動詞原型之前。如果動詞是可分動詞 (trennbare Verben)，`zu` 會插入在前綴和動詞詞幹之間 (例如：`aufstehen` → `aufzustehen`)；如果動詞是不可分動詞 (untrennbare Verben) 或沒有前綴，`zu` 會放在整個動詞之前 (例如：`kennenlernen` → `kennenzulernen`)。",
+      "mastered": false,
+      "source": "other"
+    },
+    {
+      "id": "ugrmreo7jra93",
+      "category": "other",
+      "rule": "可分前綴動詞規則",
+      "wrong": "",
+      "correct": "",
+      "explanation": "在德文的現在式句型中，可分前綴動詞的動詞詞幹會置於句子的第二位，而其前綴會移到句子的最後。",
+      "mastered": false,
+      "source": "other"
+    }
+  ],
   "germanGrammar": [],
   "germanSentences": [
     {
@@ -164,6 +921,118 @@
       "unitTitle": "形容人",
       "german": "Ich bin kalt.",
       "chinese": "我很冷酷。"
+    },
+    {
+      "id": "usmreo7jra94",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "打招呼講義(Begrüßung)",
+      "german": "Wie geht es dir?",
+      "chinese": "你好嗎?"
+    },
+    {
+      "id": "usmreo7jra95",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "打招呼講義(Begrüßung)",
+      "german": "Wie geht's?",
+      "chinese": "你好嗎?"
+    },
+    {
+      "id": "usmreo7jra96",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "打招呼講義(Begrüßung)",
+      "german": "Wie geht es Ihnen?",
+      "chinese": "您好嗎?"
+    },
+    {
+      "id": "usmreo7jra97",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文前綴講義(Präfixe)",
+      "german": "Ich stehe um 7 Uhr auf.",
+      "chinese": "我七點起床。"
+    },
+    {
+      "id": "usmreo7jra98",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文前綴講義(Präfixe)",
+      "german": "Er kommt heute mit.",
+      "chinese": "他今天會一起來。"
+    },
+    {
+      "id": "usmreo7jra99",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文前綴講義(Präfixe)",
+      "german": "Wir kaufen im Supermarkt ein.",
+      "chinese": "我們在超市購物。"
+    },
+    {
+      "id": "usmreo7jra100",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文前綴講義(Präfixe)",
+      "german": "Ich besuche meine Freundin.",
+      "chinese": "我拜訪我的朋友。"
+    },
+    {
+      "id": "usmreo7jra101",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文前綴講義(Präfixe)",
+      "german": "Er verkauft sein Auto.",
+      "chinese": "他賣掉他的車。"
+    },
+    {
+      "id": "usmreo7jra102",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文前綴講義(Präfixe)",
+      "german": "Sie versteht Deutsch.",
+      "chinese": "她懂德文。"
+    },
+    {
+      "id": "usmreo7jra103",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Kann nicht klagen.",
+      "chinese": "還行,沒什麼好抱怨的。"
+    },
+    {
+      "id": "usmreo7jra104",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Könnte besser sein.",
+      "chinese": "可以更好。"
+    },
+    {
+      "id": "usmreo7jra105",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich bin müde.",
+      "chinese": "我很累。"
+    },
+    {
+      "id": "usmreo7jra106",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich bin krank.",
+      "chinese": "我生病了。"
+    },
+    {
+      "id": "usmreo7jra107",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich bin erkältet.",
+      "chinese": "我感冒了。"
     }
   ],
   "wordRoots": []
