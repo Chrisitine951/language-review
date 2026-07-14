@@ -1191,10 +1191,9 @@
     "total": 10
   },
   "todayStats": {
-    "enFlipped": 25,
+    "enFlipped": 0,
     "deFlipped": 0,
-    "grammarPracticed": 0,
-    "date": "Mon Jul 13 2026"
+    "grammarPracticed": 0
   },
   "diaryEntries": [],
   "engooRecords": [
