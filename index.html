@@ -1480,7 +1480,7 @@
           </div>
         </div>
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Language Review App v1.4.5<br>最後更新：2026-07-10（收集箱支援 PDF 上傳）
+          Language Review App v1.4.6<br>最後更新：2026-07-10（GitHub 同步 409 衝突自動重試）
         </div>
       </div>
     </div>
@@ -1868,6 +1868,18 @@ function scheduleAutoPush() {
   syncTimer = setTimeout(() => pushProgress(), 20000);
 }
 // 上傳進度到雲端
+// ============================================================
+// 修復記錄（2026-07-10）：使用者回報同步時出現「409：progress-christine.json
+// does not match <sha>」。
+// 原因：GitHub 用 sha 做樂觀鎖（optimistic concurrency）。pushProgress() 原本
+// 是「讀取 sha → 寫入」一次做完，但如果同時有另一個分頁/裝置也在同步（例如
+// 自動同步的 20 秒計時器和手動按「立即同步」剛好前後腳，或同時開了電腦+手機
+// 兩個視窗），中間那個檔案已經被別人改過，手上的 sha 就過期了，寫入會被 GitHub
+// 拒絕並回傳 409。
+// 修法：409 是「暫時性」的競爭問題，不是設定錯誤，重新抓一次最新 sha 再寫入
+// 通常就會成功，所以加上自動重試（最多 3 次，每次間隔遞增），完全不需要使用者
+// 自己處理。真的重試 3 次都失敗才顯示錯誤。
+// ============================================================
 async function pushProgress(manual) {
   if (syncing) return;
   const cfg = getGithubConfig();
@@ -1878,13 +1890,33 @@ async function pushProgress(manual) {
   syncing = true;
   setSyncStatus('⬆️ 同步中…');
   try {
-    const remote = await githubGetJson(progressPath());
-    if (remote.error && remote.error !== '未設定') { setSyncStatus('❌ ' + remote.error); return; }
-    const put = await githubPutJson(progressPath(), buildProgressObject(), remote.sha, '進度同步 (' + getUsername() + ')');
-    if (put.error) { setSyncStatus('❌ ' + put.error); return; }
-    localStorage.setItem('lr_lastsync', String(Date.now()));
-    setSyncStatus('✅ 已同步 ' + new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' }));
-    if (manual) showToast('✅ 進度已同步到雲端');
+    let lastError = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const remote = await githubGetJson(progressPath());
+      if (remote.error && remote.error !== '未設定') { lastError = remote.error; break; }
+      const put = await githubPutJson(progressPath(), buildProgressObject(), remote.sha, '進度同步 (' + getUsername() + ')');
+      if (put.ok) {
+        lastError = null;
+        localStorage.setItem('lr_lastsync', String(Date.now()));
+        setSyncStatus('✅ 已同步 ' + new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' }));
+        if (manual) showToast('✅ 進度已同步到雲端');
+        break;
+      }
+      lastError = put.error;
+      // 409 衝突：sha 過期，重新抓最新 sha 再試一次；其他錯誤（權限/網路）重試沒有意義，直接跳出
+      if (put.error && put.error.includes('409') && attempt < 2) {
+        await new Promise(r => setTimeout(r, 400 * (attempt + 1)));
+        continue;
+      }
+      break;
+    }
+    if (lastError) {
+      const friendly = lastError.includes('409')
+        ? '同步衝突，已重試但仍失敗，請稍後手動再按一次「立即同步」'
+        : lastError;
+      setSyncStatus('❌ ' + friendly);
+      if (manual) showToast('❌ 同步失敗，請稍後再試');
+    }
   } finally {
     syncing = false;
   }
@@ -2250,6 +2282,42 @@ function makeUserId(prefix, n) {
   return 'u' + prefix + Date.now().toString(36) + n;
 }
 
+// ============================================================
+// 通用：把新內容附加進 data-user.json，內建 409 衝突自動重試（2026-07-10 新增）
+// applyFn(userData) 負責把新內容 push 進 userData 對應的陣列；每次重試都會重新
+// 讀取「最新」的雲端資料再呼叫 applyFn，這點很重要——因為 data-user.json 是
+// Christine 和 Murray 共用的檔案，如果衝突重試時偷懶重用舊資料，會不小心蓋掉
+// 對方同時寫入的內容。重新讀取再附加，才能保證兩人的新增都保留下來。
+// ============================================================
+async function githubAppendToUserData(applyFn) {
+  let lastError = null;
+  let finalUserData = null;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const current = await githubGetUserData();
+    if (current.error) { lastError = current.error; break; }
+    const userData = current.json || emptyUserData();
+    const defaults = emptyUserData();
+    Object.keys(defaults).forEach(k => { if (!Array.isArray(userData[k])) userData[k] = []; });
+    applyFn(userData);
+    const put = await githubPutUserData(userData, current.sha);
+    if (put.ok) { finalUserData = userData; lastError = null; break; }
+    lastError = put.error;
+    // 409 衝突：資料已被別人（或另一台裝置）改過，sha 過期。重新讀取最新版本後重試。
+    if (put.error && put.error.includes('409') && attempt < 2) {
+      await new Promise(r => setTimeout(r, 400 * (attempt + 1)));
+      continue;
+    }
+    break;
+  }
+  return { ok: !lastError, error: lastError, userData: finalUserData };
+}
+function friendlyConflictMessage(error, retryHint) {
+  if (error && error.includes('409')) {
+    return `同步衝突（可能你和 Murray 剛好同時儲存），已自動重試但仍失敗，請稍後${retryHint}`;
+  }
+  return error;
+}
+
 async function saveInboxToGithub() {
   const statusEl = document.getElementById('inbox-save-status');
   if (inboxItems.length === 0) { showToast('收集箱是空的'); return; }
@@ -2259,67 +2327,53 @@ async function saveInboxToGithub() {
     return;
   }
 
-  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>正在讀取現有資料…</div>`;
+  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>正在儲存到 GitHub…</div>`;
 
-  // 1. 讀取現有的 data-user.json（拿到 sha 才能更新）
-  const current = await githubGetUserData();
-  if (current.error) {
-    statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${current.error}</div>`;
-    return;
-  }
-  const userData = current.json || emptyUserData();
-  // 確保各陣列存在
-  const defaults = emptyUserData();
-  Object.keys(defaults).forEach(k => { if (!Array.isArray(userData[k])) userData[k] = []; });
-
-  // 2. 把收集箱項目轉成資料庫格式並附加
-  let n = 0;
-  inboxItems.forEach(item => {
-    n++;
-    if (item.type === 'en_vocab') {
-      userData.englishVocabulary.push({
-        id: makeUserId('en', n),
-        word: item.word, meaning: item.meaning,
-        partOfSpeech: item.partOfSpeech, source: item.source || 'inbox', example: item.example,
-      });
-    } else if (item.type === 'de_vocab') {
-      userData.germanVocabulary.push({
-        id: makeUserId('de', n),
-        article: item.article, word: item.word, meaning: item.meaning,
-        category: item.category || 'other', example: item.example,
-      });
-    } else if (item.type === 'en_grammar') {
-      userData.englishGrammar.push({
-        id: makeUserId('gr', n),
-        category: item.category || 'other', rule: item.rule,
-        wrong: item.wrong, correct: item.correct,
-        explanation: item.explanation, mastered: false,
-        source: item.source || 'inbox',
-      });
-    } else if (item.type === 'de_sentence') {
-      userData.germanSentences.push({
-        id: makeUserId('s', n),
-        stage: 0, part: 0,
-        unitTitle: item.unitTitle || '收集箱新增',
-        german: item.german, chinese: item.chinese,
-      });
-    }
+  const result = await githubAppendToUserData((userData) => {
+    let n = 0;
+    inboxItems.forEach(item => {
+      n++;
+      if (item.type === 'en_vocab') {
+        userData.englishVocabulary.push({
+          id: makeUserId('en', n),
+          word: item.word, meaning: item.meaning,
+          partOfSpeech: item.partOfSpeech, source: item.source || 'inbox', example: item.example,
+        });
+      } else if (item.type === 'de_vocab') {
+        userData.germanVocabulary.push({
+          id: makeUserId('de', n),
+          article: item.article, word: item.word, meaning: item.meaning,
+          category: item.category || 'other', example: item.example,
+        });
+      } else if (item.type === 'en_grammar') {
+        userData.englishGrammar.push({
+          id: makeUserId('gr', n),
+          category: item.category || 'other', rule: item.rule,
+          wrong: item.wrong, correct: item.correct,
+          explanation: item.explanation, mastered: false,
+          source: item.source || 'inbox',
+        });
+      } else if (item.type === 'de_sentence') {
+        userData.germanSentences.push({
+          id: makeUserId('s', n),
+          stage: 0, part: 0,
+          unitTitle: item.unitTitle || '收集箱新增',
+          german: item.german, chinese: item.chinese,
+        });
+      }
+    });
   });
 
-  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>正在寫入 GitHub…</div>`;
-
-  // 3. 寫回 GitHub
-  const putResult = await githubPutUserData(userData, current.sha);
-  if (putResult.error) {
-    statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${putResult.error}</div>`;
+  if (!result.ok) {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${friendlyConflictMessage(result.error, '再按一次「儲存到 GitHub」')}</div>`;
     return;
   }
 
-  // 4. 成功：清空收集箱、把新資料合併進目前的 app（不用等重新部署）
+  // 成功：清空收集箱、把新資料合併進目前的 app（不用等重新部署）
   const savedCount = inboxItems.length;
   inboxItems = [];
   saveData();
-  mergeUserData(userData);
+  mergeUserData(result.userData);
   renderInboxList();
   statusEl.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 已儲存 ${savedCount} 個項目到 GitHub！GitHub Pages 約 1 分鐘後更新，本機已即時生效</div>`;
   showToast('✅ 儲存成功！');
@@ -3895,14 +3949,11 @@ async function saveRootLookup() {
     return;
   }
   statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>正在寫入 GitHub…</div>`;
-  const current = await githubGetUserData();
-  if (current.error) { statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${escHtml(current.error)}</div>`; return; }
-  const userData = current.json || emptyUserData();
-  const defaults = emptyUserData();
-  Object.keys(defaults).forEach(k => { if (!Array.isArray(userData[k])) userData[k] = []; });
-  userData.wordRoots.push(entry);
-  const put = await githubPutUserData(userData, current.sha);
-  if (put.error) { statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${escHtml(put.error)}</div>`; return; }
+  const result = await githubAppendToUserData((userData) => { userData.wordRoots.push(entry); });
+  if (!result.ok) {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--de);">❌ ${escHtml(friendlyConflictMessage(result.error, '再按一次儲存'))}</div>`;
+    return;
+  }
   WORD_ROOTS.push(entry); // 本機立即生效
   renderRootList();
   statusEl.innerHTML = `<div class="ai-result" style="color:var(--green);">✅ 已儲存！其他裝置約 1 分鐘後重新整理可看到。</div>`;
