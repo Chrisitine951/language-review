@@ -1,4 +1,25 @@
 {
-  "savedLookups": [],
+  "savedLookups": [
+    {
+      "id": "ulkmrma62km1",
+      "word": "grammer",
+      "parts": [
+        {
+          "type": "root",
+          "text": "gramm",
+          "meaning": "寫；畫",
+          "grimmNote": "雙子音規則：單字裡出現連續兩個相同子音（在此為 'mm'）時，第二個通常不具意義，只是加強語氣或維持音節結構。拆字根時看第一個子音（含）之前就好，故真正的字根是 'gram'。此字根 'gram' 與 'graph' 同源（透過喉音互換 g/c/k），表示『寫』或『畫』。"
+        },
+        {
+          "type": "suffix",
+          "text": "er",
+          "meaning": "人、物；有時表動作反覆",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "單字「grammer」由字根 'gramm'（根據雙子音規則，實際字根為 'gram'，表示『寫』或『畫』）加上代表『人、物』或『動作反覆』的字尾 '-er' 組成，意指『寫作的人或其行為』。",
+      "savedAt": "2026-07-15T16:14:28.486Z"
+    }
+  ],
   "userRoots": []
 }
