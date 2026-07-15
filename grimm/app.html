@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>格林字根 Grimm Roots</title>
+<meta name="theme-color" content="#37584B">
+<style>
+/* ============================================================
+   格林字根 App — 樣式
+   設計語彙：字源辭典（lexicon）風格。紙色底、墨綠主色、
+   襯線體只用在「英文字母／字根」本身，中文介面用黑體。
+   ============================================================ */
+:root{
+  --paper:#F5F3EC;
+  --card:#FFFFFF;
+  --ink:#282419;
+  --sub:#6E675A;
+  --line:#E2DCCB;
+  --green:#37584B;
+  --green-deep:#27423A;
+  --green-soft:#E4ECE6;
+  --amber:#A66A12;
+  --amber-soft:#F5EAD3;
+  --danger:#A4452F;
+  --radius:12px;
+  --serif:Georgia,"Times New Roman","Noto Serif TC",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65}
+button{font-family:inherit;cursor:pointer}
+input,select,textarea{font-family:inherit;font-size:16px}
+
+/* ==== 頁首與分頁列 ==== */
+header{position:sticky;top:0;z-index:20;background:var(--green);color:#fff;padding:10px 14px 0;box-shadow:0 2px 8px rgba(30,45,38,.25)}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand h1{margin:0;font-size:19px;font-weight:700;letter-spacing:.04em}
+.brand .en{font-family:var(--serif);font-style:italic;font-size:13px;opacity:.75}
+nav{display:flex;gap:2px;margin-top:8px}
+nav button{flex:1;border:none;background:transparent;color:#fff;opacity:.7;padding:9px 2px 11px;font-size:14px;border-radius:8px 8px 0 0;white-space:nowrap}
+nav button.active{background:var(--paper);color:var(--green-deep);opacity:1;font-weight:700}
+main{max-width:760px;margin:0 auto;padding:16px 14px 60px}
+.page{display:none}
+.page.active{display:block}
+
+/* ==== 通用卡片與元件 ==== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-bottom:12px}
+.card h3{margin:0 0 6px;font-size:16px}
+.muted{color:var(--sub);font-size:13px}
+.small{font-size:13px}
+.btn{border:none;border-radius:9px;padding:10px 16px;font-size:15px;font-weight:600}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:disabled{opacity:.5;cursor:default}
+.btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn-amber{background:var(--amber);color:#fff}
+.btn-sm{padding:6px 12px;font-size:13px}
+.status{font-size:13px;margin-top:8px;white-space:pre-wrap}
+.status.ok{color:var(--green-deep)}
+.status.err{color:var(--danger)}
+input[type=text],input[type=password],select,textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:9px 11px;background:#fff;color:var(--ink)}
+label{display:block;font-size:13px;color:var(--sub);margin:10px 0 4px}
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:12px}
+details>summary{list-style:none;cursor:pointer;padding:13px 16px;font-weight:700;display:flex;align-items:center;gap:8px}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"▾";margin-left:auto;color:var(--sub);transition:transform .15s}
+details[open]>summary::after{transform:rotate(180deg)}
+details>.body{padding:0 16px 14px}
+
+/* ==== 轉音規則徽章與對照 pill（本 App 的招牌元素）==== */
+.rule-badge{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:2px 10px;margin:2px 4px 2px 0;cursor:pointer;border:1px solid transparent}
+.pair{display:inline-flex;align-items:center;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:3px 12px;margin:3px 6px 3px 0;font-family:var(--serif);font-size:15px}
+.pair .arrow{color:var(--amber);font-weight:700}
+.pair-note{display:block;color:var(--sub);font-size:12.5px;margin:0 0 6px 4px}
+
+/* ==== 查詢頁 ==== */
+.search-row{display:flex;gap:8px}
+.search-row input{flex:1;font-size:18px;font-family:var(--serif)}
+.hit-variant{font-family:var(--serif);font-weight:700;color:var(--green-deep)}
+.chip{display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 12px;margin:3px 6px 3px 0;font-size:14px;font-family:var(--serif);cursor:pointer}
+.part-pill{display:inline-block;border-radius:8px;padding:3px 10px;margin:2px 6px 2px 0;font-family:var(--serif);font-size:16px;font-weight:700}
+.part-prefix{background:var(--amber-soft);color:var(--amber)}
+.part-root{background:var(--green-soft);color:var(--green-deep)}
+.part-suffix{background:#E4E8F2;color:#3A5D8F}
+.part-row{border-top:1px dashed var(--line);padding:8px 0}
+.part-row input{margin-top:4px;font-size:14px}
+
+/* ==== A–Z 手風琴 ==== */
+.letter-sec{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:8px;overflow:hidden}
+.letter-head{width:100%;display:flex;align-items:center;gap:12px;background:transparent;border:none;padding:8px 14px;text-align:left}
+.letter-glyph{font-family:var(--serif);font-size:34px;line-height:1;color:var(--green-deep);width:40px;text-align:center;flex-shrink:0}
+.letter-meta{flex:1;min-width:0}
+.letter-count{font-size:12px;color:var(--sub)}
+.letter-head .caret{color:var(--sub)}
+.letter-body{display:none;border-top:1px solid var(--line);padding:12px 14px;background:#FCFBF7}
+.letter-sec.open .letter-body{display:block}
+.letter-sec.open .caret{transform:rotate(180deg)}
+.root-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin:10px 0}
+.root-name{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--green-deep)}
+.root-variants{font-family:var(--serif);color:var(--sub);font-size:14px}
+.src-tag{display:inline-block;font-size:11px;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:2px;white-space:nowrap}
+.src-notes{background:var(--green-soft);color:var(--green-deep)}
+.src-ety{background:#EFEAE0;color:#7A6A52}
+.ex-row{display:flex;gap:8px;align-items:baseline;border-top:1px dashed var(--line);padding:6px 0;font-size:14.5px}
+.ex-word{font-family:var(--serif);font-weight:700;min-width:0}
+.ex-tts{border:none;background:transparent;font-size:15px;padding:0 2px;flex-shrink:0}
+.ex-text{flex:1;min-width:0}
+.flash{animation:flash 1.6s ease}
+@keyframes flash{0%{background:var(--amber-soft)}100%{background:var(--card)}}
+
+/* ==== 收藏頁 ==== */
+.saved-word{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--green-deep)}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:420px){nav button{font-size:13px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand"><h1>格林字根</h1><span class="en">Grimm Roots</span></div>
+  <nav>
+    <button data-page="pageLookup" class="active" onclick="showPage(this)">🔍 查詢</button>
+    <button data-page="pageAZ" onclick="showPage(this)">📚 A–Z</button>
+    <button data-page="pageSaved" onclick="showPage(this)">⭐ 收藏</button>
+    <button data-page="pageSettings" onclick="showPage(this)">⚙️ 設定</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- ==================== 🔍 查詢頁 ==================== -->
+<section id="pageLookup" class="page active">
+  <div class="card">
+    <div class="search-row">
+      <input type="text" id="lookupInput" placeholder="輸入英文單字，例如 recycle" autocapitalize="none" autocomplete="off" spellcheck="false">
+      <button class="btn btn-primary" onclick="doLookup()">查詢</button>
+    </div>
+    <div class="muted" style="margin-top:6px">先做本機字根比對（離線可用）；需要完整拆解再按 AI。</div>
+  </div>
+  <div id="localResults"></div>
+  <div id="aiArea"></div>
+  <div class="card">
+    <h3>最近查過</h3>
+    <div id="historyBox" class="muted">（尚無查詢紀錄）</div>
+  </div>
+</section>
+
+<!-- ==================== 📚 A–Z 頁 ==================== -->
+<section id="pageAZ" class="page">
+  <details id="rulesBox">
+    <summary>🔁 轉音規則總表</summary>
+    <div class="body" id="rulesBody"></div>
+  </details>
+  <details id="affixBox">
+    <summary>🧩 字首字尾總表</summary>
+    <div class="body" id="affixBody"></div>
+  </details>
+  <details id="addRootBox">
+    <summary>➕ 補充自訂字根</summary>
+    <div class="body">
+      <label>字根（必填）</label><input type="text" id="urRoot" placeholder="例：fer">
+      <label>同源變體（逗號分隔，全小寫）</label><input type="text" id="urVariants" placeholder="例：fer, phor, bear">
+      <label>意義（必填）</label><input type="text" id="urMeaning" placeholder="例：攜帶、承載">
+      <label>來源</label><input type="text" id="urOrigin" placeholder="例：拉丁 ferre">
+      <label>歸屬字母</label><select id="urLetter"></select>
+      <label>轉音規則</label><select id="urRule"></select>
+      <label>備註</label><input type="text" id="urNote" placeholder="記憶技巧、易混淆提醒（選填）">
+      <div style="margin-top:12px"><button class="btn btn-primary" onclick="addUserRoot()">儲存到雲端收藏</button></div>
+      <div id="urStatus" class="status"></div>
+    </div>
+  </details>
+  <div id="azBox"></div>
+</section>
+
+<!-- ==================== ⭐ 收藏頁 ==================== -->
+<section id="pageSaved" class="page">
+  <div class="card">
+    <h3>我的收藏</h3>
+    <div class="muted">收藏儲存在 GitHub 的 data-user.json。要刪除項目，請直接到 GitHub 編輯該檔案。</div>
+    <div style="margin-top:8px"><button class="btn btn-ghost btn-sm" onclick="reloadUserData()">↻ 重新載入雲端資料</button></div>
+    <div id="savedStatus" class="status"></div>
+  </div>
+  <div id="savedBox"></div>
+</section>
+
+<!-- ==================== ⚙️ 設定頁 ==================== -->
+<section id="pageSettings" class="page">
+  <div class="card">
+    <h3>Gemini AI</h3>
+    <label>API key</label><input type="password" id="setApikey" autocomplete="off">
+    <label>模型名稱</label><input type="text" id="setModel" placeholder="gemini-2.5-flash">
+    <div style="margin-top:12px"><button class="btn btn-primary btn-sm" onclick="saveSettings()">儲存設定</button></div>
+  </div>
+  <div class="card">
+    <h3>GitHub（收藏同步）</h3>
+    <label>Token</label><input type="password" id="setGhToken" autocomplete="off">
+    <label>Owner（帳號）</label><input type="text" id="setGhOwner" autocapitalize="none">
+    <label>Repo（儲存庫）</label><input type="text" id="setGhRepo" autocapitalize="none">
+    <label>Branch（分支）</label><input type="text" id="setGhBranch" placeholder="main" autocapitalize="none">
+    <div style="margin-top:12px">
+      <button class="btn btn-primary btn-sm" onclick="saveSettings()">儲存設定</button>
+      <button class="btn btn-ghost btn-sm" onclick="testConnection()">測試連線</button>
+    </div>
+    <div id="testLog" class="status"></div>
+  </div>
+  <div class="card">
+    <h3>關於</h3>
+    <div class="small">格林字根 Grimm Roots v1.0 — 以格林法則（轉音規則）為基礎的字根查找工具。內容依 Christine 的影片筆記整理改寫。A–Z 頁與本機比對離線可用；AI 拆解與收藏同步需要網路。</div>
+  </div>
+</section>
+
+</main>
+
+<script src="grimm-data.js"></script>
+<script>
+// ============================================================
+// 格林字根 App — 程式
+// 區塊：工具函式 → 設定存取 → 使用者資料 → GitHub API →
+//       Gemini AI → 語音 → 查詢頁 → AI 拆解 → A–Z 頁 →
+//       收藏頁 → 設定頁 → 初始化
+// ============================================================
+
+// ==== 常數 ====
+// data-user.json 在 repo 內的路徑（App 部署於 repo 的 grimm/ 子資料夾）
+const USER_DATA_PATH = "grimm/data-user.json";
+// 各轉音規則的徽章配色（新增規則時若沒有對應色，會用灰色備援）
+const RULE_STYLE = {
+  sr01: { fg: "#A66A12", bg: "#F5EAD3" },
+  sr02: { fg: "#A44343", bg: "#F5E0DE" },
+  sr03: { fg: "#3A5D8F", bg: "#E0E8F3" },
+  sr04: { fg: "#3E7250", bg: "#E1EEE4" },
+  sr05: { fg: "#6E4E93", bg: "#EBE3F3" },
+  sr06: { fg: "#2F7A78", bg: "#DEEFEE" },
+  sr07: { fg: "#6B6455", bg: "#ECE8DE" },
+  sr08: { fg: "#6B6455", bg: "#ECE8DE" },
+  sr09: { fg: "#8C5A2B", bg: "#F2E3D5" }
+};
+const RULE_STYLE_FALLBACK = { fg: "#6B6455", bg: "#ECE8DE" };
+
+// ==== 工具函式 ====
+// HTML 逸出：所有動態內容進 innerHTML 前必經此函式
+function escHtml(s) {
+  return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+  });
+}
+function byId(id) { return document.getElementById(id); }
+function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+// App 內新增資料的 id：u + 類型 + 時間戳36進位 + 流水號（與主資料庫 id 永不衝突）
+let _idSeq = 0;
+function genId(kind) { _idSeq++; return "u" + kind + Date.now().toString(36) + _idSeq.toString(36); }
+function findRule(id) { return SOUND_RULES.find(function (r) { return r.id === id; }); }
+// 來源標示：notes＝影片筆記整理，etymology＝字源學補充（非影片內容），自訂字根不顯示
+function sourceTagHtml(source) {
+  if (source === "etymology") return '<span class="src-tag src-ety" title="字源學補充，非影片筆記內容">字源補充</span>';
+  if (source === "notes") return '<span class="src-tag src-notes" title="來自影片筆記整理">影片筆記</span>';
+  return "";
+}
+function ruleBadgeHtml(ruleId) {
+  const r = findRule(ruleId);
+  if (!r) return "";
+  const st = RULE_STYLE[ruleId] || RULE_STYLE_FALLBACK;
+  return '<span class="rule-badge" style="color:' + st.fg + ';background:' + st.bg + '" data-rule="' + escHtml(ruleId) + '" onclick="gotoRule(this)">' + escHtml(r.title) + "</span>";
+}
+
+// ==== 分頁切換 ====
+function showPage(btnOrId) {
+  const id = typeof btnOrId === "string" ? btnOrId : btnOrId.dataset.page;
+  document.querySelectorAll(".page").forEach(function (p) { p.classList.toggle("active", p.id === id); });
+  document.querySelectorAll("nav button").forEach(function (b) { b.classList.toggle("active", b.dataset.page === id); });
+}
+
+// ==== 使用者資料（data-user.json）====
+function emptyUserData() { return { savedLookups: [], userRoots: [] }; }
+// 以 id 去重合併，缺欄位時補空陣列
+function normalizeUserData(d) {
+  const out = emptyUserData();
+  if (d && Array.isArray(d.savedLookups)) out.savedLookups = d.savedLookups.slice();
+  if (d && Array.isArray(d.userRoots)) out.userRoots = d.userRoots.slice();
+  return out;
+}
+function mergeUserData(a, b) {
+  const out = emptyUserData();
+  ["savedLookups", "userRoots"].forEach(function (key) {
+    const seen = {};
+    (a[key] || []).concat(b[key] || []).forEach(function (item) {
+      if (item && item.id && !seen[item.id]) { seen[item.id] = true; out[key].push(item); }
+    });
+  });
+  return out;
+}
+let userData = emptyUserData();
+// 啟動時載入：優先讀同資料夾的 data-user.json（GitHub Pages 部署）；
+// 失敗時若已設定 GitHub，改走 API 讀取。
+async function loadUserData(preferApi) {
+  let loaded = null;
+  if (!preferApi) {
+    try {
+      const res = await fetch("data-user.json?ts=" + Date.now(), { cache: "no-store" });
+      if (res.ok) loaded = await res.json();
+    } catch (e) { /* 離線或本機開啟，走下一招 */ }
+  }
+  if (!loaded && ghConfig().ok) {
+    const got = await githubGetJson(USER_DATA_PATH);
+    if (got.ok) loaded = got.json;
+  }
+  if (loaded) userData = mergeUserData(userData, normalizeUserData(loaded));
+}
+function allRoots() { return GRIMM_ROOTS.concat(userData.userRoots || []); }
+
+// ==== GitHub API ====
+function ghConfig() {
+  const token = lsGet("gr_gh_token") || "";
+  const owner = lsGet("gr_gh_owner") || "";
+  const repo = lsGet("gr_gh_repo") || "";
+  const branch = lsGet("gr_gh_branch") || "main";
+  return { token: token, owner: owner, repo: repo, branch: branch, ok: !!(token && owner && repo) };
+}
+function ghHeaders(cfg) {
+  return { "Authorization": "Bearer " + cfg.token, "Accept": "application/vnd.github+json" };
+}
+// base64 與 UTF-8 互轉（GitHub contents API 用）
+function b64EncodeUtf8(str) {
+  const bytes = new TextEncoder().encode(str);
+  let bin = "";
+  bytes.forEach(function (b) { bin += String.fromCharCode(b); });
+  return btoa(bin);
+}
+function b64DecodeUtf8(b64) {
+  const bin = atob(String(b64).replace(/\n/g, ""));
+  const bytes = Uint8Array.from(bin, function (c) { return c.charCodeAt(0); });
+  return new TextDecoder().decode(bytes);
+}
+// 讀取 repo 內 JSON 檔，回傳 {ok, json, sha} 或 {ok:false, status, error}
+async function githubGetJson(path) {
+  const cfg = ghConfig();
+  if (!cfg.ok) return { ok: false, status: 0, error: "GitHub 設定不完整" };
+  try {
+    const url = "https://api.github.com/repos/" + cfg.owner + "/" + cfg.repo + "/contents/" + path + "?ref=" + encodeURIComponent(cfg.branch) + "&ts=" + Date.now();
+    const res = await fetch(url, { headers: ghHeaders(cfg), cache: "no-store" });
+    if (!res.ok) return { ok: false, status: res.status, error: "HTTP " + res.status };
+    const data = await res.json();
+    return { ok: true, json: JSON.parse(b64DecodeUtf8(data.content)), sha: data.sha };
+  } catch (e) { return { ok: false, status: -1, error: String(e) }; }
+}
+// 寫入 repo 內 JSON 檔；sha 為 null 表示建立新檔
+async function githubPutJson(path, obj, sha, message) {
+  const cfg = ghConfig();
+  if (!cfg.ok) return { ok: false, status: 0, error: "GitHub 設定不完整" };
+  try {
+    const url = "https://api.github.com/repos/" + cfg.owner + "/" + cfg.repo + "/contents/" + path;
+    const body = { message: message || "更新（App）", content: b64EncodeUtf8(JSON.stringify(obj, null, 2)), branch: cfg.branch };
+    if (sha) body.sha = sha;
+    const res = await fetch(url, { method: "PUT", headers: ghHeaders(cfg), body: JSON.stringify(body) });
+    if (!res.ok) {
+      let msg = "HTTP " + res.status;
+      try { const d = await res.json(); if (d.message) msg += "：" + d.message; } catch (e) {}
+      return { ok: false, status: res.status, error: msg };
+    }
+    const data = await res.json();
+    return { ok: true, sha: data.content && data.content.sha };
+  } catch (e) { return { ok: false, status: -1, error: String(e) }; }
+}
+// 附加資料到 data-user.json：讀最新 → applyFn 修改 → PUT。
+// 409（版本衝突）時最多重試 3 次，每次都重新讀取最新雲端資料再套用。
+async function githubAppendToUserData(applyFn) {
+  const cfg = ghConfig();
+  if (!cfg.ok) return { ok: false, error: "請先到 ⚙️ 設定填入 GitHub token / owner / repo" };
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    let cur = emptyUserData(); let sha = null;
+    const got = await githubGetJson(USER_DATA_PATH);
+    if (got.ok) { cur = normalizeUserData(got.json); sha = got.sha; }
+    else if (got.status !== 404) return { ok: false, error: "讀取 data-user.json 失敗：" + got.error };
+    applyFn(cur);
+    const put = await githubPutJson(USER_DATA_PATH, cur, sha, "收藏更新（App）");
+    if (put.ok) { userData = cur; return { ok: true }; }
+    if (put.status === 409) continue; // 版本衝突：重讀再套用
+    return { ok: false, error: "寫入失敗：" + put.error };
+  }
+  return { ok: false, error: "雲端忙碌（409 重試 3 次仍失敗），請稍後再試" };
+}
+// 測試連線：① 讀 repo 與分支 ② 讀 data-user.json ③ 實際寫入測試檔再刪除
+async function testConnection() {
+  const log = byId("testLog");
+  log.className = "status";
+  const lines = [];
+  function show() { log.textContent = lines.join("\n"); }
+  const cfg = ghConfig();
+  if (!cfg.ok) { log.className = "status err"; log.textContent = "請先填入並儲存 token / owner / repo"; return; }
+  lines.push("① 讀取 repo 資訊…"); show();
+  try {
+    const res = await fetch("https://api.github.com/repos/" + cfg.owner + "/" + cfg.repo, { headers: ghHeaders(cfg) });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const info = await res.json();
+    lines[lines.length - 1] = "① 讀取 repo 成功（預設分支 " + info.default_branch + "）";
+    if (info.default_branch !== cfg.branch) lines.push("⚠ 設定的分支是 " + cfg.branch + "，與預設分支不同，請確認是否正確");
+  } catch (e) { lines[lines.length - 1] = "① 讀取 repo 失敗：" + e.message; log.className = "status err"; show(); return; }
+  show();
+  lines.push("② 讀取 data-user.json…"); show();
+  const got = await githubGetJson(USER_DATA_PATH);
+  if (got.ok) lines[lines.length - 1] = "② 讀取 data-user.json 成功";
+  else if (got.status === 404) lines[lines.length - 1] = "② data-user.json 尚不存在（第一次收藏時會自動建立）";
+  else { lines[lines.length - 1] = "② 讀取失敗：" + got.error; log.className = "status err"; show(); return; }
+  show();
+  lines.push("③ 寫入測試檔…"); show();
+  const testPath = "grimm/.connection-test.json";
+  const put = await githubPutJson(testPath, { ts: Date.now() }, null, "連線測試（App）");
+  if (!put.ok && put.status === 422) {
+    // 檔案已存在（上次測試殘留）：取得 sha 後覆寫
+    const old = await githubGetJson(testPath);
+    if (old.ok) {
+      const put2 = await githubPutJson(testPath, { ts: Date.now() }, old.sha, "連線測試（App）");
+      if (put2.ok) put.ok = true, put.sha = put2.sha;
+    }
+  }
+  if (!put.ok) { lines[lines.length - 1] = "③ 寫入失敗：" + put.error + "（token 可能沒有寫入權限）"; log.className = "status err"; show(); return; }
+  lines[lines.length - 1] = "③ 寫入測試成功，刪除測試檔…"; show();
+  try {
+    const del = await fetch("https://api.github.com/repos/" + cfg.owner + "/" + cfg.repo + "/contents/" + testPath, {
+      method: "DELETE", headers: ghHeaders(cfg),
+      body: JSON.stringify({ message: "刪除連線測試檔（App）", sha: put.sha, branch: cfg.branch })
+    });
+    lines.push(del.ok ? "✔ 全部通過：讀取、分支、寫入都正常" : "⚠ 測試檔刪除失敗（不影響使用，可到 GitHub 手動刪除 " + testPath + "）");
+  } catch (e) { lines.push("⚠ 測試檔刪除失敗：" + e.message); }
+  log.className = "status ok"; show();
+}
+
+// ==== Gemini AI ====
+async function callGemini(promptText) {
+  const key = lsGet("gr_apikey") || "";
+  const model = lsGet("gr_model") || "gemini-2.5-flash";
+  if (!key) return { ok: false, error: "尚未設定 Gemini API key（到 ⚙️ 設定填入）" };
+  try {
+    const url = "https://generativelanguage.googleapis.com/v1beta/models/" + encodeURIComponent(model) + ":generateContent?key=" + encodeURIComponent(key);
+    const res = await fetch(url, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ contents: [{ parts: [{ text: promptText }] }] })
+    });
+    const data = await res.json();
+    if (!res.ok) return { ok: false, error: "Gemini 錯誤（模型 " + model + "）：" + ((data.error && data.error.message) || ("HTTP " + res.status)) };
+    let text = "";
+    try { text = data.candidates[0].content.parts.map(function (p) { return p.text || ""; }).join(""); } catch (e) {}
+    if (!text) return { ok: false, error: "Gemini 回傳空白（模型 " + model + "）" };
+    return { ok: true, text: text };
+  } catch (e) { return { ok: false, error: "連線失敗：" + String(e) }; }
+}
+// 由 SOUND_RULES 動態組出規則摘要：資料庫更新後，AI 的術語自動跟上
+function buildRulesSummary() {
+  const rules = SOUND_RULES.map(function (r) {
+    const ex = r.examplePairs.slice(0, 2).map(function (p) { return p.from + "→" + p.to; }).join("、");
+    return "- " + r.title + "：" + r.explanation + "（例：" + ex + "）";
+  }).join("\n");
+  const affixes = AFFIXES.map(function (a) { return a.affix + "＝" + a.meaning; }).join("；");
+  return rules + "\n常用字首字尾：" + affixes;
+}
+function buildLookupPrompt(word) {
+  return "你是英文字源助教，請依照「格林法則」（轉音規則）拆解單字「" + word + "」。\n" +
+    "本 App 使用的轉音規則摘要如下，解說時請使用相同術語：\n" + buildRulesSummary() + "\n\n" +
+    'Return ONLY valid JSON（不要 markdown 圍欄、不要任何多餘文字），格式：\n' +
+    '{"parts":[{"type":"prefix|root|suffix","text":"...","meaning":"繁體中文意思","grimmNote":"用到的轉音或結構規則說明，沒有就給空字串"}],"summary":"一句話說明這個單字的組成故事（繁體中文）"}\n' +
+    "規定：parts 依序串接後必須完整等於原單字的字母（忽略大小寫）；meaning、grimmNote、summary 一律使用繁體中文。";
+}
+// 剝除 ```json 圍欄後解析
+function parseAiJson(text) {
+  let t = String(text).trim();
+  if (t.startsWith("```")) t = t.replace(/^```[a-zA-Z]*\s*/, "").replace(/```\s*$/, "").trim();
+  return JSON.parse(t);
+}
+// 檢查 parts 串起來是否等於原單字（只比字母、忽略大小寫）
+function partsMatchWord(parts, word) {
+  const joined = parts.map(function (p) { return String(p.text || ""); }).join("").toLowerCase().replace(/[^a-z]/g, "");
+  return joined === String(word).toLowerCase().replace(/[^a-z]/g, "");
+}
+
+// ==== 語音（TTS）====
+function speak(word) {
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(word);
+    u.lang = "en-US";
+    speechSynthesis.speak(u);
+  } catch (e) { /* 不支援 TTS 時靜默略過 */ }
+}
+function speakWord(btn) { speak(btn.dataset.word || ""); }
+
+// ==== 查詢頁：本機比對 ====
+// 演算法：輸入轉小寫，逐一檢查字根 variants 是否為單字子字串；
+// 少於 3 個字母的變體只在整字相等時才算命中，減少誤判。
+function localLookup(word) {
+  const w = String(word).toLowerCase().replace(/[^a-z]/g, "");
+  const rootHits = [];
+  allRoots().forEach(function (root) {
+    let best = "";
+    (root.variants || []).forEach(function (v) {
+      const hit = v.length >= 3 ? w.indexOf(v) !== -1 : w === v;
+      if (hit && v.length > best.length) best = v;
+    });
+    if (best) rootHits.push({ root: root, matched: best });
+  });
+  rootHits.sort(function (a, b) { return b.matched.length - a.matched.length; });
+  const prefixHits = [], suffixHits = [];
+  AFFIXES.forEach(function (a) {
+    (a.variants || []).forEach(function (v) {
+      if (w.length >= v.length + 3) {
+        if (a.type === "prefix" && w.indexOf(v) === 0 && !prefixHits.includes(a)) prefixHits.push(a);
+        if (a.type === "suffix" && w.lastIndexOf(v) === w.length - v.length && !suffixHits.includes(a)) suffixHits.push(a);
+      }
+    });
+  });
+  return { w: w, rootHits: rootHits, prefixHits: prefixHits, suffixHits: suffixHits };
+}
+function rootCardHtml(root, matchedVariant) {
+  let h = '<div class="root-card">';
+  h += '<div><span class="root-name">' + escHtml(root.root) + '</span> <span class="root-variants">' + escHtml((root.variants || []).join(" / ")) + "</span>" + sourceTagHtml(root.source) + "</div>";
+  if (matchedVariant) h += '<div class="small">命中變體：<span class="hit-variant">' + escHtml(matchedVariant) + "</span></div>";
+  h += '<div>' + escHtml(root.meaning) + "</div>";
+  if (root.origin) h += '<div class="muted">來源：' + escHtml(root.origin) + "</div>";
+  h += "<div>" + ruleBadgeHtml(root.soundRuleId) + "</div>";
+  if (root.note) h += '<div class="small" style="margin-top:4px">💡 ' + escHtml(root.note) + "</div>";
+  (root.examples || []).forEach(function (ex) {
+    h += '<div class="ex-row"><span class="ex-word">' + escHtml(ex.word) + "</span>" +
+      '<button class="ex-tts" data-word="' + escHtml(ex.word) + '" onclick="speakWord(this)" aria-label="播放發音">🔊</button>' +
+      '<span class="ex-text">' + escHtml(ex.breakdown) + "｜" + escHtml(ex.meaning) + "</span></div>";
+  });
+  return h + "</div>";
+}
+function affixLineHtml(a) {
+  let h = '<div class="root-card">';
+  h += '<div><span class="root-name">' + escHtml(a.affix) + "</span> <span class='muted'>" + (a.type === "prefix" ? "字首" : "字尾") + "</span></div>";
+  h += "<div>" + escHtml(a.meaning) + "</div>";
+  if (a.note) h += '<div class="small">💡 ' + escHtml(a.note) + "</div>";
+  (a.examples || []).forEach(function (ex) {
+    h += '<div class="ex-row"><span class="ex-word">' + escHtml(ex.word) + "</span>" +
+      '<button class="ex-tts" data-word="' + escHtml(ex.word) + '" onclick="speakWord(this)" aria-label="播放發音">🔊</button>' +
+      '<span class="ex-text">' + escHtml(ex.breakdown) + "｜" + escHtml(ex.meaning) + "</span></div>";
+  });
+  return h + "</div>";
+}
+let currentWord = "";
+function doLookup(fromWord) {
+  const input = byId("lookupInput");
+  if (typeof fromWord === "string") input.value = fromWord;
+  const word = input.value.trim();
+  if (!word) return;
+  currentWord = word;
+  pushHistory(word);
+  const r = localLookup(word);
+  let h = '<div class="card"><h3>本機比對：<span style="font-family:var(--serif)">' + escHtml(word) + "</span></h3>";
+  if (!r.rootHits.length && !r.prefixHits.length && !r.suffixHits.length) {
+    h += '<div class="muted">資料庫裡沒有比對到字根。可以按下方「AI 完整拆解」試試。</div>';
+  } else {
+    r.rootHits.forEach(function (hit) { h += rootCardHtml(hit.root, hit.matched); });
+    if (r.prefixHits.length || r.suffixHits.length) {
+      h += '<div class="small" style="margin-top:8px">可能的字首字尾（依開頭／結尾粗略判斷）：</div>';
+      r.prefixHits.concat(r.suffixHits).forEach(function (a) {
+        h += '<span class="chip" style="cursor:default">' + escHtml(a.affix) + "＝" + escHtml(a.meaning) + "</span>";
+      });
+    }
+  }
+  h += "</div>";
+  byId("localResults").innerHTML = h;
+  byId("aiArea").innerHTML =
+    '<div class="card"><button class="btn btn-amber" onclick="aiBreakdown()">✨ AI 完整拆解</button>' +
+    '<span class="muted" style="margin-left:8px">用 Gemini 依格林法則拆出字首／字根／字尾</span>' +
+    '<div id="aiStatus" class="status"></div><div id="aiResult"></div></div>';
+}
+
+// ==== 查詢頁：查詢歷史（純本機，最多 50 筆）====
+function pushHistory(word) {
+  let h = [];
+  try { h = JSON.parse(lsGet("gr_lookuphistory") || "[]"); } catch (e) {}
+  h = h.filter(function (x) { return x.word !== word; });
+  h.unshift({ word: word, ts: Date.now() });
+  lsSet("gr_lookuphistory", JSON.stringify(h.slice(0, 50)));
+  renderHistory();
+}
+function renderHistory() {
+  let h = [];
+  try { h = JSON.parse(lsGet("gr_lookuphistory") || "[]"); } catch (e) {}
+  const box = byId("historyBox");
+  if (!h.length) { box.innerHTML = "（尚無查詢紀錄）"; return; }
+  box.innerHTML = h.map(function (x, i) {
+    return '<span class="chip" data-idx="' + i + '" onclick="historyClick(this)">' + escHtml(x.word) + "</span>";
+  }).join("");
+  box._items = h;
+}
+function historyClick(el) {
+  const items = byId("historyBox")._items || [];
+  const item = items[parseInt(el.dataset.idx, 10)];
+  if (item) doLookup(item.word);
+}
+
+// ==== 查詢頁：AI 拆解與收藏 ====
+let currentAiResult = null;
+async function aiBreakdown() {
+  const status = byId("aiStatus");
+  status.className = "status";
+  status.textContent = "AI 拆解中…";
+  byId("aiResult").innerHTML = "";
+  currentAiResult = null;
+  const word = currentWord;
+  const res = await callGemini(buildLookupPrompt(word));
+  if (!res.ok) { status.className = "status err"; status.textContent = res.error; return; }
+  let obj;
+  try { obj = parseAiJson(res.text); } catch (e) {
+    status.className = "status err";
+    status.textContent = "AI 回傳的格式無法解析，請再按一次「AI 完整拆解」重試。";
+    return;
+  }
+  if (!obj || !Array.isArray(obj.parts) || !obj.parts.length) {
+    status.className = "status err";
+    status.textContent = "AI 沒有回傳拆解結果，請重試。";
+    return;
+  }
+  status.textContent = "";
+  if (!partsMatchWord(obj.parts, word)) {
+    status.className = "status err";
+    status.textContent = "⚠ 拆解片段拼起來對不上原單字，內容僅供參考；可再按一次重試。";
+  }
+  currentAiResult = { word: word, parts: obj.parts, summary: obj.summary || "" };
+  renderAiResult();
+}
+function renderAiResult() {
+  const r = currentAiResult;
+  if (!r) return;
+  const typeClass = { prefix: "part-prefix", root: "part-root", suffix: "part-suffix" };
+  const typeName = { prefix: "字首", root: "字根", suffix: "字尾" };
+  let h = '<div style="margin-top:10px">';
+  h += "<div>" + r.parts.map(function (p) {
+    return '<span class="part-pill ' + (typeClass[p.type] || "part-root") + '">' + escHtml(p.text) + "</span>";
+  }).join('<span class="muted">＋</span>') + "</div>";
+  r.parts.forEach(function (p, i) {
+    h += '<div class="part-row"><span class="part-pill ' + (typeClass[p.type] || "part-root") + '">' + escHtml(p.text) + "</span>" +
+      '<span class="muted small">' + (typeName[p.type] || "字根") + "（意義與轉音說明可修改後再收藏）</span>" +
+      '<input type="text" data-field="meaning" data-idx="' + i + '" value="' + escHtml(p.meaning || "") + '" placeholder="意義">' +
+      '<input type="text" data-field="grimmNote" data-idx="' + i + '" value="' + escHtml(p.grimmNote || "") + '" placeholder="轉音／結構規則說明">' +
+      "</div>";
+  });
+  h += '<label>一句話總結</label><input type="text" id="aiSummary" value="' + escHtml(r.summary) + '">';
+  h += '<div style="margin-top:12px"><button class="btn btn-primary" onclick="saveLookup(this)">⭐ 收藏這個拆解</button></div>';
+  h += '<div id="saveStatus" class="status"></div></div>';
+  byId("aiResult").innerHTML = h;
+}
+async function saveLookup(btn) {
+  const r = currentAiResult;
+  if (!r) return;
+  // 讀回可編輯欄位
+  document.querySelectorAll("#aiResult input[data-idx]").forEach(function (inp) {
+    const p = r.parts[parseInt(inp.dataset.idx, 10)];
+    if (p) p[inp.dataset.field] = inp.value;
+  });
+  r.summary = byId("aiSummary").value;
+  const entry = { id: genId("lk"), word: r.word, parts: r.parts, summary: r.summary, savedAt: new Date().toISOString() };
+  const status = byId("saveStatus");
+  btn.disabled = true;
+  status.className = "status"; status.textContent = "儲存到雲端中…";
+  const res = await githubAppendToUserData(function (d) { d.savedLookups.push(entry); });
+  btn.disabled = false;
+  if (res.ok) { status.className = "status ok"; status.textContent = "✔ 已收藏"; renderSaved(); }
+  else { status.className = "status err"; status.textContent = res.error; }
+}
+
+// ==== A–Z 頁：轉音規則總表與字首字尾總表 ====
+function renderRulesTable() {
+  byId("rulesBody").innerHTML = SOUND_RULES.map(function (r) {
+    let h = '<div class="root-card" id="rule-' + escHtml(r.id) + '">';
+    h += '<div><span class="root-name" style="font-family:var(--sans);font-size:16px">' + escHtml(r.title) + "</span></div>";
+    h += '<div class="muted small">' + escHtml(r.articulation) + "</div>";
+    h += "<div class='small'>" + escHtml(r.explanation) + "</div><div style='margin-top:6px'>";
+    r.examplePairs.forEach(function (p) {
+      h += '<span class="pair">' + escHtml(p.from) + '<span class="arrow">→</span>' + escHtml(p.to) + "</span>" +
+        '<span class="pair-note">' + escHtml(p.note) + "</span>";
+    });
+    return h + "</div></div>";
+  }).join("");
+}
+function renderAffixTable() {
+  const pre = AFFIXES.filter(function (a) { return a.type === "prefix"; });
+  const suf = AFFIXES.filter(function (a) { return a.type === "suffix"; });
+  byId("affixBody").innerHTML =
+    "<h3 class='small' style='margin:8px 0 0'>字首</h3>" + pre.map(affixLineHtml).join("") +
+    "<h3 class='small' style='margin:14px 0 0'>字尾</h3>" + suf.map(affixLineHtml).join("");
+}
+// 點規則徽章：展開總表並捲動到該規則
+function gotoRule(el) {
+  const id = el.dataset.rule;
+  showPage("pageAZ");
+  byId("rulesBox").open = true;
+  const target = byId("rule-" + id);
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth", block: "center" });
+    target.classList.remove("flash");
+    void target.offsetWidth; // 重新觸發動畫
+    target.classList.add("flash");
+  }
+}
+
+// ==== A–Z 頁：26 字母手風琴 ====
+function azOpenSet() {
+  try { return new Set(JSON.parse(lsGet("gr_azopen") || "[]")); } catch (e) { return new Set(); }
+}
+function saveAzOpen(set) { lsSet("gr_azopen", JSON.stringify(Array.from(set))); }
+function renderAZ() {
+  const open = azOpenSet();
+  const rootById = {};
+  allRoots().forEach(function (r) { rootById[r.id] = r; });
+  // 使用者自訂字根依 letter 也要掛進對應字母
+  const extraByLetter = {};
+  (userData.userRoots || []).forEach(function (r) {
+    const L = String(r.letter || "").toUpperCase();
+    (extraByLetter[L] = extraByLetter[L] || []).push(r);
+  });
+  byId("azBox").innerHTML = LETTER_GUIDE.map(function (lg) {
+    const roots = lg.rootIds.map(function (id) { return rootById[id]; }).filter(Boolean)
+      .concat(extraByLetter[lg.letter] || []);
+    const isOpen = open.has(lg.letter);
+    let h = '<div class="letter-sec' + (isOpen ? " open" : "") + '" id="letter-' + lg.letter + '">';
+    h += '<button class="letter-head" data-letter="' + lg.letter + '" onclick="toggleLetter(this)">';
+    h += '<span class="letter-glyph">' + lg.letter + "</span>";
+    h += '<span class="letter-meta"><span class="letter-count">' + (roots.length ? roots.length + " 個字根" : "尚無字根") + "</span><br>";
+    h += lg.soundRuleIds.map(ruleBadgeHtml).join("") + "</span>";
+    h += '<span class="caret">▾</span></button>';
+    h += '<div class="letter-body">';
+    if (lg.meaningNotes) h += '<div class="small">' + escHtml(lg.meaningNotes) + "</div>";
+    roots.forEach(function (r) { h += rootCardHtml(r, ""); });
+    h += "</div></div>";
+    return h;
+  }).join("");
+}
+function toggleLetter(btn) {
+  const letter = btn.dataset.letter;
+  const sec = byId("letter-" + letter);
+  sec.classList.toggle("open");
+  const open = azOpenSet();
+  if (sec.classList.contains("open")) open.add(letter); else open.delete(letter);
+  saveAzOpen(open);
+}
+
+// ==== A–Z 頁：補充自訂字根 ====
+function fillAddRootSelects() {
+  byId("urLetter").innerHTML = LETTER_GUIDE.map(function (lg) {
+    return '<option value="' + lg.letter + '">' + lg.letter + "</option>";
+  }).join("");
+  byId("urRule").innerHTML = SOUND_RULES.map(function (r) {
+    return '<option value="' + escHtml(r.id) + '">' + escHtml(r.title) + "</option>";
+  }).join("");
+}
+async function addUserRoot() {
+  const status = byId("urStatus");
+  const root = byId("urRoot").value.trim();
+  const meaning = byId("urMeaning").value.trim();
+  if (!root || !meaning) { status.className = "status err"; status.textContent = "「字根」與「意義」是必填欄位"; return; }
+  const variants = byId("urVariants").value.toLowerCase().split(/[,，、]/)
+    .map(function (s) { return s.trim(); }).filter(Boolean);
+  if (!variants.length) variants.push(root.toLowerCase());
+  const entry = {
+    id: genId("gr"), root: root, variants: variants, meaning: meaning,
+    origin: byId("urOrigin").value.trim(),
+    soundRuleId: byId("urRule").value, letter: byId("urLetter").value,
+    examples: [], note: byId("urNote").value.trim()
+  };
+  status.className = "status"; status.textContent = "儲存到雲端中…";
+  const res = await githubAppendToUserData(function (d) { d.userRoots.push(entry); });
+  if (res.ok) {
+    status.className = "status ok"; status.textContent = "✔ 已儲存，字根已加入 " + entry.letter + " 字母";
+    ["urRoot", "urVariants", "urMeaning", "urOrigin", "urNote"].forEach(function (id) { byId(id).value = ""; });
+    renderAZ(); renderSaved();
+  } else { status.className = "status err"; status.textContent = res.error; }
+}
+
+// ==== 收藏頁 ====
+function renderSaved() {
+  const box = byId("savedBox");
+  const lookups = (userData.savedLookups || []).slice().reverse();
+  const roots = (userData.userRoots || []).slice().reverse();
+  let h = "";
+  if (lookups.length) {
+    h += lookups.map(function (s) {
+      const typeClass = { prefix: "part-prefix", root: "part-root", suffix: "part-suffix" };
+      let c = '<div class="card"><div class="saved-word">' + escHtml(s.word) +
+        ' <button class="ex-tts" data-word="' + escHtml(s.word) + '" onclick="speakWord(this)" aria-label="播放發音">🔊</button></div>';
+      c += "<div>" + (s.parts || []).map(function (p) {
+        return '<span class="part-pill ' + (typeClass[p.type] || "part-root") + '">' + escHtml(p.text) + "</span>";
+      }).join('<span class="muted">＋</span>') + "</div>";
+      (s.parts || []).forEach(function (p) {
+        c += '<div class="small">' + escHtml(p.text) + "：" + escHtml(p.meaning || "") +
+          (p.grimmNote ? '<span class="muted">（' + escHtml(p.grimmNote) + "）</span>" : "") + "</div>";
+      });
+      if (s.summary) c += '<div class="small" style="margin-top:4px">💡 ' + escHtml(s.summary) + "</div>";
+      if (s.savedAt) c += '<div class="muted small">' + escHtml(String(s.savedAt).slice(0, 10)) + "</div>";
+      return c + "</div>";
+    }).join("");
+  }
+  if (roots.length) {
+    h += '<div class="card"><h3>自訂字根</h3>' + roots.map(function (r) { return rootCardHtml(r, ""); }).join("") + "</div>";
+  }
+  if (!h) h = '<div class="card muted">還沒有收藏。到 🔍 查詢頁做 AI 拆解後按「收藏」，就會出現在這裡。</div>';
+  box.innerHTML = h;
+}
+async function reloadUserData() {
+  const status = byId("savedStatus");
+  status.className = "status"; status.textContent = "載入中…";
+  userData = emptyUserData();
+  await loadUserData(ghConfig().ok); // 有設定 GitHub 時優先走 API，拿最新版
+  status.className = "status ok"; status.textContent = "✔ 已更新";
+  renderSaved(); renderAZ();
+}
+
+// ==== 設定頁 ====
+const SETTING_KEYS = [
+  ["setApikey", "gr_apikey"], ["setModel", "gr_model"],
+  ["setGhToken", "gr_gh_token"], ["setGhOwner", "gr_gh_owner"],
+  ["setGhRepo", "gr_gh_repo"], ["setGhBranch", "gr_gh_branch"]
+];
+function loadSettings() {
+  SETTING_KEYS.forEach(function (pair) { byId(pair[0]).value = lsGet(pair[1]) || ""; });
+  if (!byId("setModel").value) byId("setModel").value = "gemini-2.5-flash";
+  if (!byId("setGhBranch").value) byId("setGhBranch").value = "main";
+}
+function saveSettings() {
+  SETTING_KEYS.forEach(function (pair) { lsSet(pair[1], byId(pair[0]).value.trim()); });
+  alert("設定已儲存");
+}
+
+// ==== 初始化 ====
+async function init() {
+  loadSettings();
+  fillAddRootSelects();
+  renderRulesTable();
+  renderAffixTable();
+  renderAZ();
+  renderHistory();
+  renderSaved();
+  byId("lookupInput").addEventListener("keydown", function (e) { if (e.key === "Enter") doLookup(); });
+  await loadUserData(false);
+  renderAZ(); renderSaved(); // 合併雲端資料後重繪
+}
+init();
+</script>
+</body>
+</html>
