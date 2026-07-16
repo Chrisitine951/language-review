@@ -173,6 +173,37 @@ async function run() {
   ok('考試日期有存', window.localStorage.getItem('lren_exam_date') === '2026-11-15');
   ok('倒數有算出天數', /\d/.test(doc.getElementById('countdown-days').textContent));
 
+  console.log('\n【13】舊版進度搬家（iOS PWA 與 Safari 的 localStorage 不共用）');
+  // 模擬 Christine 真實的 progress-christine.json：英德文排程混在一起
+  const legacy = {
+    savedAt: 1784097711467, username: 'christine',
+    reviewSchedule: {
+      'en_en126': { stage: 4, nextReview: 1785419627806, correct: 3, incorrect: 1 },
+      'en_en071': { stage: 1, nextReview: 1784029066694, correct: 2, incorrect: 4 },
+      'en_en169': { stage: 4, nextReview: 1783931349901, correct: 3, incorrect: 0 },
+      'de_de050': { stage: 3, nextReview: 1784775265406, correct: 2, incorrect: 0 },
+      'de_de059': { stage: 3, nextReview: 1785306105001, correct: 2, incorrect: 1 },
+    },
+    grammarStats: { correct: 10, wrong: 6, total: 16 },
+    diaryEntries: [], engooRecords: [{ id: 1, title: 'Toyota', date: '2026-06-25', words: '' }],
+    inboxItems: [],
+  };
+  // 清空本機英文進度，模擬「第一次用 v2」
+  window.eval('reviewSchedule = {}; diaryEntries = []; engooRecords = []; grammarStats = { correct:0, wrong:0, total:0 };');
+  window.localStorage.removeItem('lren_migrated');
+  const moved = window.eval('extractEnglishProgress(' + JSON.stringify(legacy) + ')');
+  ok('從舊進度檔搬到 3 筆英文排程', moved === 3, '搬了 ' + moved + ' 筆');
+  ok('英文排程有搬進來', !!window.eval('reviewSchedule["en_en126"]'));
+  ok('⚠️ 德文排程「沒有」被搬走（要留給德文 App）', !window.eval('reviewSchedule["de_de050"]'));
+  ok('保留原本的複習階段', window.eval('reviewSchedule["en_en126"].stage') === 4);
+  ok('文法統計有搬過來', window.eval('grammarStats.total') === 16);
+  ok('Engoo 閱讀紀錄有搬過來', window.eval('engooRecords.length') === 1);
+  const moved2 = window.eval('extractEnglishProgress(' + JSON.stringify(legacy) + ')');
+  ok('重複搬不會重複計算（可安全按兩次）', moved2 === 0);
+  ok('手動搬家按鈕存在', !!doc.querySelector('#sg-body-data button[onclick="manualMigrate()"]'));
+  window.eval('initSettings()');
+  ok('設定頁顯示排程數量（可自行確認）', doc.getElementById('settings-schedule-count').textContent.includes('3'));
+
   console.log('\n════════════════════════════════');
   console.log(`  通過 ${pass} 項，失敗 ${fail} 項`);
   if (fail) { console.log('  失敗項目：' + errors.join(', ')); process.exit(1); }
