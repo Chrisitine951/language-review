@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784216337172,
+  "savedAt": 1784218360434,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {},
@@ -14,7 +14,51 @@
   },
   "diaryEntries": [],
   "engooRecords": [],
-  "inboxItems": [],
+  "inboxItems": [
+    {
+      "type": "en_vocab",
+      "word": "Atheist",
+      "meaning": "無神論者",
+      "partOfSpeech": "",
+      "example": "",
+      "source": "other"
+    },
+    {
+      "type": "en_vocab",
+      "word": "Insist",
+      "meaning": "堅持",
+      "partOfSpeech": "",
+      "example": "",
+      "source": "other"
+    },
+    {
+      "type": "en_grammar",
+      "category": "verb_form",
+      "rule": "-ie 結尾動詞的ing形式",
+      "wrong": "tieing",
+      "correct": "tying",
+      "explanation": "以-ie結尾的動詞，變為現在分詞（-ing形式）時，應將-ie改為-y再加-ing。",
+      "source": "other"
+    },
+    {
+      "type": "en_grammar",
+      "category": "subject_verb_agreement",
+      "rule": "主詞單複數判斷",
+      "wrong": "",
+      "correct": "",
+      "explanation": "動詞形式需根據其前方主詞的單數或複數形式來決定。",
+      "source": "other"
+    },
+    {
+      "type": "en_grammar",
+      "category": "subject_verb_agreement",
+      "rule": "並列主詞的動詞形式",
+      "wrong": "",
+      "correct": "某人 and 某人 do something",
+      "explanation": "當主詞為複數形式（如'某人 and 某人'）時，在現在簡單式中動詞應使用原型（base form）。",
+      "source": "other"
+    }
+  ],
   "planItems": [],
   "practiceRecords": [],
   "breakdowns": [],
