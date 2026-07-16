@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784221788102,
+  "savedAt": 1784222024522,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -706,7 +706,385 @@
       "words": ""
     }
   ],
-  "inboxItems": [],
+  "inboxItems": [
+    {
+      "type": "en_vocab",
+      "word": "systematic",
+      "meaning": "有系統的",
+      "partOfSpeech": "adj.",
+      "example": "It is not easy to be systematic and objective about language study.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "objective",
+      "meaning": "客觀的",
+      "partOfSpeech": "adj.",
+      "example": "It is not easy to be systematic and objective about language study.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "linguistic debate",
+      "meaning": "語言爭論",
+      "partOfSpeech": "phrase",
+      "example": "Popular linguistic debate regularly deteriorates into invective and polemic.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "polemic",
+      "meaning": "激烈論戰",
+      "partOfSpeech": "n.",
+      "example": "Popular linguistic debate regularly deteriorates into invective and polemic.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "hold an opinion",
+      "meaning": "持有意見",
+      "partOfSpeech": "phrase",
+      "example": "Language belongs to everyone, so most people feel they have a right to hold an opinion about it.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "run high",
+      "meaning": "（情緒）高漲",
+      "partOfSpeech": "phrase",
+      "example": "And when opinions differ, emotions can run high.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "minor",
+      "meaning": "小的",
+      "partOfSpeech": "adj.",
+      "example": "Arguments can start as easily over minor points of usage.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "major",
+      "meaning": "大的",
+      "partOfSpeech": "adj.",
+      "example": "Arguments can start as easily over minor points of usage as over major policies of linguistic education.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "policy",
+      "meaning": "政策",
+      "partOfSpeech": "n.",
+      "example": "major policies of linguistic education.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "linguistic factors",
+      "meaning": "語言因素",
+      "partOfSpeech": "phrase",
+      "example": "linguistic factors influence how we judge personality, intelligence, social status.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "influence",
+      "meaning": "影響",
+      "partOfSpeech": "v.",
+      "example": "linguistic factors influence how we judge personality, intelligence, social status.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "affect",
+      "meaning": "影響",
+      "partOfSpeech": "v.",
+      "example": "Our assessment of a person's intelligence is affected by the way he or she uses language.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "judge",
+      "meaning": "判斷",
+      "partOfSpeech": "v.",
+      "example": "linguistic factors influence how we judge personality, intelligence.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "assessment",
+      "meaning": "評價",
+      "partOfSpeech": "n.",
+      "example": "Our assessment of a person's intelligence is affected by the way he or she uses language.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "personality",
+      "meaning": "人格",
+      "partOfSpeech": "n.",
+      "example": "linguistic factors influence how we judge personality, intelligence.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "intelligence",
+      "meaning": "智力",
+      "partOfSpeech": "n.",
+      "example": "linguistic factors influence how we judge personality, intelligence.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "social status",
+      "meaning": "社會地位",
+      "partOfSpeech": "phrase",
+      "example": "linguistic factors influence how we judge personality, intelligence, social status.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "educational standards",
+      "meaning": "教育程度",
+      "partOfSpeech": "phrase",
+      "example": "linguistic factors influence how we judge... educational standards.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "job aptitude",
+      "meaning": "工作能力",
+      "partOfSpeech": "phrase",
+      "example": "linguistic factors influence how we judge... job aptitude.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "prescriptivism",
+      "meaning": "規範主義",
+      "partOfSpeech": "n.",
+      "example": "In its most general sense, prescriptivism is the view that one variety of language has an inherently higher value than others.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "standard language",
+      "meaning": "標準語",
+      "partOfSpeech": "phrase",
+      "example": "the favoured variety is usually a version of the \"standard\" written language.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "correct",
+      "meaning": "正確的",
+      "partOfSpeech": "adj.",
+      "example": "Adherents to this variety are said to speak or write \"correctly\".",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "incorrect",
+      "meaning": "錯誤的",
+      "partOfSpeech": "adj.",
+      "example": "deviations from it are said to be \"incorrect\".",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "formal spoken language",
+      "meaning": "正式口語",
+      "partOfSpeech": "phrase",
+      "example": "the formal spoken language which most closely reflects this style.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "codify",
+      "meaning": "編纂",
+      "partOfSpeech": "v.",
+      "example": "they wanted to codify the principles of their languages.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "chaos",
+      "meaning": "混亂",
+      "partOfSpeech": "n.",
+      "example": "to show that there was a system beneath the apparent chaos of usage.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "rule",
+      "meaning": "規則",
+      "partOfSpeech": "n.",
+      "example": "The authoritarian nature of the approach is best characterised by its reliance on \"rules\" of grammar.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "prescribe",
+      "meaning": "規定",
+      "partOfSpeech": "v.",
+      "example": "Some usages are \"prescribed\", to be learnt and followed accurately.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "proscribe",
+      "meaning": "禁止",
+      "partOfSpeech": "v.",
+      "example": "others are \"proscribed\", to be avoided.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "pronounce judgement",
+      "meaning": "下判斷",
+      "partOfSpeech": "phrase",
+      "example": "it was the task of the grammarian not simply to record alternatives, but to pronounce judgement upon them.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "descriptivism",
+      "meaning": "描述主義",
+      "partOfSpeech": "n.",
+      "example": "The opposition between \"descriptivists\" and \"prescriptivists\" has often become extreme.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "describe",
+      "meaning": "描述",
+      "partOfSpeech": "v.",
+      "example": "it is the task of the grammarian to describe, not prescribe.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "language change",
+      "meaning": "語言改變",
+      "partOfSpeech": "phrase",
+      "example": "not to attempt the impossible tasks of evaluating language variation or halting language change.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "custom of speaking",
+      "meaning": "口語習慣",
+      "partOfSpeech": "phrase",
+      "example": "the custom of speaking is the original and only just standard of any language.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "popular speech",
+      "meaning": "大眾口語",
+      "partOfSpeech": "phrase",
+      "example": "grammar should be based on popular speech.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "misrepresent",
+      "meaning": "錯誤描述；扭曲",
+      "partOfSpeech": "v.",
+      "example": "Both descriptivists and prescriptivists have been misrepresented.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "unreal pictures",
+      "meaning": "不真實的描繪",
+      "partOfSpeech": "phrase",
+      "example": "both sides painting unreal pictures of the other.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "descriptive grammarians",
+      "meaning": "描述性語法學家",
+      "partOfSpeech": "phrase",
+      "example": "Descriptive grammarians have been presented as people who do not care about standards.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "prescriptive grammarians",
+      "meaning": "規範性語法學家",
+      "partOfSpeech": "phrase",
+      "example": "Prescriptive grammarians have been presented as blind adherents to a historical tradition.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "usage",
+      "meaning": "用法",
+      "partOfSpeech": "n.",
+      "example": "Arguments can start as easily over minor points of usage.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "grammar",
+      "meaning": "文法",
+      "partOfSpeech": "n.",
+      "example": "The view is propounded especially in relation to grammar and vocabulary.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "standard",
+      "meaning": "標準",
+      "partOfSpeech": "n.",
+      "example": "linguistic standards should be maintained.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "variation",
+      "meaning": "變化",
+      "partOfSpeech": "n.",
+      "example": "evaluating language variation.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "custom",
+      "meaning": "習慣",
+      "partOfSpeech": "n.",
+      "example": "the custom of speaking is the original and only just standard.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "speech",
+      "meaning": "口語",
+      "partOfSpeech": "n.",
+      "example": "the custom of speaking is the original and only just standard.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "evaluation",
+      "meaning": "評估",
+      "partOfSpeech": "n.",
+      "example": "not to attempt the impossible tasks of evaluating language variation.",
+      "source": "ielts"
+    },
+    {
+      "type": "practice",
+      "skill": "reading",
+      "material": "IELTS Academic Reading Passage 1: Attitudes to Language",
+      "date": "2026-07-16",
+      "score": "9 / 13",
+      "causes": "同義替換辨識, Summary 定位, YES / NO / NOT GIVEN 還不熟",
+      "notes": "閱讀理解能力比較難建立，不熟悉 IELTS 出題邏輯。IELTS 最常考同義替換，例如 influence = affect, judge = assessment, unreal pictures = misrepresented。Summary 題通常不是考推論，而是考原文定位和同義替換，建議解題順序是先找到關鍵人名（如 Joseph Priestley），回到原文定位，優先找與原文幾乎一致的詞，再從選項中挑最符合的同義詞。YES / NO / NOT GIVEN 題不要推論，作者有寫就是有，沒有寫就是沒有。文章架構分為：語言容易吵架、Prescriptivism、十八世紀文法家、Descriptivism、Joseph Priestley、作者立場（兩派都被誤解）。"
+    }
+  ],
   "planItems": [],
   "practiceRecords": [],
   "breakdowns": [],
