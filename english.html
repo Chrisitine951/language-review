@@ -543,6 +543,13 @@
         </div>
         <div class="settings-section settings-group-body" id="sg-body-data">
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">英文單字</div><div class="settings-item-sub" id="settings-en-count">—</div></div><span class="tag tag-en">單字</span></div>
+          <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">複習排程</div><div class="settings-item-sub" id="settings-schedule-count">—</div></div><span class="tag tag-green">進度</span></div>
+          <div class="settings-item" style="flex-direction: column; align-items: stretch;">
+            <div class="settings-item-title">從舊版 App 搬入進度</div>
+            <div class="settings-item-sub" style="line-height:1.6;">如果上面的複習排程是 0，按這裡把舊版 app.html 的英文進度搬過來（會從雲端的 progress-&lt;使用者名稱&gt;.json 讀取，只搬英文、不動德文）。</div>
+            <button class="settings-save-btn" style="background:var(--surface2); color:var(--text);" onclick="manualMigrate()">🔄 搬入舊版英文進度</button>
+            <div id="migrate-status"></div>
+          </div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">文法題</div><div class="settings-item-sub" id="settings-grammar-count">—</div></div><span class="tag tag-green">文法</span></div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">雅思練習紀錄</div><div class="settings-item-sub" id="settings-practice-count">—</div></div><span class="tag tag-amber">雅思</span></div>
           <div class="settings-item">
@@ -673,28 +680,82 @@ function loadData() {
 }
 
 // ============================================================
-// 舊資料一次性搬家（v1 的 lr_* → v2 的 lren_*）
-// 兩支 App 同網域，localStorage 是共用的，所以不用連網就能搬。
-// 只搬英文相關：排程只取 en_ 開頭的 key，德文的留給 german.html。
-// 搬完設 lren_migrated 旗標，只會做一次。
+// 舊資料搬家（v1 的 app.html → v2 的 english.html）
+//
+// 【為什麼有兩條路】
+// 路徑 A（本機）：兩支 App 同網域，localStorage 共用 → 直接讀 lr_* 搬過來。
+// 路徑 B（雲端）：⚠️ iOS 上「加到主畫面的 PWA」和「Safari 瀏覽器」的 localStorage
+//   是分開的兩個空間！她舊版是從主畫面開的，用 Safari 開新版就讀不到本機舊資料。
+//   所以路徑 A 撲空時，要改從雲端的 progress-<使用者名稱>.json 撈（那裡面有完整的
+//   en_* 排程）。這是 2026-07-16 使用者回報「沒跳出搬家提示」的真正原因。
+//
+// 【重要】只搬 en_ 開頭的排程，德文的留給 german.html；而且只讀不寫，
+//   絕對不能回寫 progress-<name>.json，否則會動到德文/Murray 的進度。
 // ============================================================
-function migrateFromV1() {
-  if (localStorage.getItem('lren_migrated')) return;
+function extractEnglishProgress(src) {
+  // 從一份 v1 進度物件抽出「英文的部分」，回傳搬了幾筆
+  let moved = 0;
+  const sched = src.reviewSchedule || {};
+  Object.keys(sched).forEach(k => {
+    if (k.startsWith('en_') && !reviewSchedule[k]) { reviewSchedule[k] = sched[k]; moved++; }
+  });
+  if (Array.isArray(src.diaryEntries) && diaryEntries.length === 0) diaryEntries = src.diaryEntries;
+  if (Array.isArray(src.engooRecords) && engooRecords.length === 0) engooRecords = src.engooRecords;
+  if (src.grammarStats && !grammarStats.total) grammarStats = src.grammarStats;
+  return moved;
+}
+// 路徑 A：本機 localStorage（同瀏覽器用過舊版才有）
+function migrateFromV1Local() {
+  if (localStorage.getItem('lren_migrated')) return 0;
   try {
     const oldSchedule = JSON.parse(localStorage.getItem('lr_schedule') || '{}');
-    let moved = 0;
-    Object.keys(oldSchedule).forEach(k => {
-      if (k.startsWith('en_') && !reviewSchedule[k]) { reviewSchedule[k] = oldSchedule[k]; moved++; }
+    if (Object.keys(oldSchedule).length === 0) return 0; // 沒東西可搬 → 先不設旗標，留給雲端路徑
+    const moved = extractEnglishProgress({
+      reviewSchedule: oldSchedule,
+      diaryEntries: JSON.parse(localStorage.getItem('lr_diary') || '[]'),
+      engooRecords: JSON.parse(localStorage.getItem('lr_engoo') || '[]'),
+      grammarStats: JSON.parse(localStorage.getItem('lr_gstats') || 'null'),
     });
-    const oldDiary = JSON.parse(localStorage.getItem('lr_diary') || '[]');
-    if (Array.isArray(oldDiary) && diaryEntries.length === 0) diaryEntries = oldDiary;
-    const oldEngoo = JSON.parse(localStorage.getItem('lr_engoo') || '[]');
-    if (Array.isArray(oldEngoo) && engooRecords.length === 0) engooRecords = oldEngoo;
-    const oldG = JSON.parse(localStorage.getItem('lr_gstats') || 'null');
-    if (oldG && !grammarStats.total) grammarStats = oldG;
+    if (moved > 0) {
+      localStorage.setItem('lren_migrated', '1');
+      saveData();
+      showToast(`✅ 已從舊版搬入 ${moved} 個英文複習進度`, 3000);
+    }
+    return moved;
+  } catch(e) { return 0; }
+}
+// 路徑 B：雲端舊進度檔（progress-<使用者名稱>.json）
+async function migrateFromCloud(manual) {
+  const cfg = getGithubConfig();
+  if (!cfg.token || !cfg.owner || !cfg.repo) return { moved: 0, error: '未設定 GitHub' };
+  const old = await githubGetJson('progress-' + getUsername() + '.json');
+  if (old.error) return { moved: 0, error: old.error };
+  if (!old.exists || !old.json) return { moved: 0, error: '雲端找不到舊版進度檔' };
+  const moved = extractEnglishProgress(old.json);
+  if (moved > 0 || manual) {
     localStorage.setItem('lren_migrated', '1');
-    if (moved > 0) { saveData(); showToast(`✅ 已從舊版搬入 ${moved} 個英文複習進度`, 3000); }
-  } catch(e) { localStorage.setItem('lren_migrated', '1'); }
+    saveData();
+    if (moved > 0) showToast(`✅ 已從雲端搬入 ${moved} 個英文複習進度`, 3000);
+  }
+  return { moved };
+}
+// 設定頁的手動按鈕：本機找不到就從雲端找，把過程講清楚
+async function manualMigrate() {
+  const el = document.getElementById('migrate-status');
+  el.innerHTML = `<div class="ai-loading" style="margin-top:8px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>搬移中…</div>`;
+  localStorage.removeItem('lren_migrated'); // 手動觸發時忽略旗標，強制再試一次
+  const localMoved = migrateFromV1Local();
+  const cloud = await migrateFromCloud(true);
+  const total = localMoved + cloud.moved;
+  initSettings();
+  updateHome();
+  if (total > 0) {
+    el.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 搬入 ${total} 個英文複習進度（本機 ${localMoved} + 雲端 ${cloud.moved}）<br>德文進度和 Murray 的進度完全沒有被動到。</div>`;
+  } else if (cloud.error) {
+    el.innerHTML = `<div class="ai-result" style="color:var(--amber);">沒搬到東西：${escHtml(cloud.error)}<br>若還沒填 GitHub 設定，請先完成上面的「GitHub 同步」設定再按一次。</div>`;
+  } else {
+    el.innerHTML = `<div class="ai-result" style="color:var(--amber);">舊版進度已經搬過了，或舊檔裡沒有英文排程（複習排程目前 ${Object.keys(reviewSchedule).length} 個）。</div>`;
+  }
 }
 
 // ============================================================
@@ -768,6 +829,13 @@ async function pullProgressOnStartup() {
   const cfg = getGithubConfig();
   if (!cfg.token || !cfg.owner || !cfg.repo) return;
   const remote = await githubGetJson(progressPath());
+  // 新進度檔還不存在 = 第一次用 v2 → 自動去雲端的舊進度檔把英文部分搬過來
+  // （iOS 主畫面 PWA 和 Safari 的 localStorage 不共用，本機搬家常常會撲空）
+  if (!remote.error && !remote.exists) {
+    const r = await migrateFromCloud(false);
+    if (r.moved > 0) { updateHome(); if (currentPage === 'settings') initSettings(); }
+    return;
+  }
   if (remote.error || !remote.exists || !remote.json) return;
   const localSavedAt = Number(localStorage.getItem('lren_savedat') || 0);
   const remoteSavedAt = Number(remote.json.savedAt || 0);
@@ -2559,6 +2627,8 @@ function initSettings() {
   document.getElementById('settings-en-count').textContent = `共 ${ENGLISH_VOCABULARY.length} 個`;
   document.getElementById('settings-grammar-count').textContent = `共 ${ENGLISH_GRAMMAR.length} 道`;
   document.getElementById('settings-practice-count').textContent = `共 ${practiceRecords.length} 筆・拆解檢核 ${breakdowns.length} 題・作文 ${essayRecords.length} 篇`;
+  const schedCount = Object.keys(reviewSchedule).length;
+  document.getElementById('settings-schedule-count').textContent = schedCount > 0 ? `${schedCount} 個字已排程複習` : '0 個（若舊版有進度，按下方搬入）';
 }
 function updateAutoSyncToggle() {
   const btn = document.getElementById('autosync-toggle');
@@ -2622,7 +2692,7 @@ function importData(event) {
 // INIT
 // ============================================================
 loadData();
-migrateFromV1();
+migrateFromV1Local();
 updateHome();
 loadUserData().then(() => {
   updateHome();
