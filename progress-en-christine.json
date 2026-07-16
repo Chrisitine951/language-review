@@ -1,0 +1,22 @@
+{
+  "savedAt": 0,
+  "username": "christine",
+  "app": "english",
+  "reviewSchedule": {},
+  "grammarStats": {
+    "correct": 0,
+    "wrong": 0,
+    "total": 0
+  },
+  "todayStats": {
+    "flipped": 0,
+    "grammarPracticed": 0
+  },
+  "diaryEntries": [],
+  "engooRecords": [],
+  "inboxItems": [],
+  "planItems": [],
+  "practiceRecords": [],
+  "breakdowns": [],
+  "essayRecords": []
+}
