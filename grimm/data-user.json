@@ -45,6 +45,32 @@
       ],
       "summary": "單字「patients」來自拉丁字根「pati」（忍受、遭受），加上表示「做…的人或物」或「有…性質的」的字尾「-ent」，形成「忍耐的人」或「忍受者」（即病人），最後加上複數字尾「-s」成為「病人」。",
       "savedAt": "2026-07-16T15:34:20.700Z"
+    },
+    {
+      "id": "ulkmrnok1lt2",
+      "word": "dentists",
+      "parts": [
+        {
+          "type": "root",
+          "text": "dent",
+          "meaning": "牙齒",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ist",
+          "meaning": "從事…者；專家",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "s",
+          "meaning": "複數",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "單字 dentists 由表示「牙齒」的字根 dent，加上表示「從事某種專業的人」的字尾 -ist，以及表示複數的 -s 所組成，完整意思為「牙醫們」。",
+      "savedAt": "2026-07-16T15:45:01.217Z"
     }
   ],
   "userRoots": []
