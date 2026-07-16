@@ -127,6 +127,30 @@
       "partOfSpeech": "n.",
       "source": "other",
       "example": ""
+    },
+    {
+      "id": "uenmrnoc7eu1",
+      "word": "Nurses",
+      "meaning": "護理師",
+      "partOfSpeech": "n.",
+      "source": "other",
+      "example": ""
+    },
+    {
+      "id": "uenmrnoc7eu2",
+      "word": "look after",
+      "meaning": "照顧、照料",
+      "partOfSpeech": "phrase",
+      "source": "other",
+      "example": ""
+    },
+    {
+      "id": "uenmrnoc7eu3",
+      "word": "patients",
+      "meaning": "病人",
+      "partOfSpeech": "n.",
+      "source": "other",
+      "example": ""
     }
   ],
   "germanVocabulary": [
