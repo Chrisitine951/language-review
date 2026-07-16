@@ -71,6 +71,26 @@
       ],
       "summary": "單字 dentists 由表示「牙齒」的字根 dent，加上表示「從事某種專業的人」的字尾 -ist，以及表示複數的 -s 所組成，完整意思為「牙醫們」。",
       "savedAt": "2026-07-16T15:45:01.217Z"
+    },
+    {
+      "id": "ulkmrnpazvc3",
+      "word": "insist",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in",
+          "meaning": "在內、進入",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "sist",
+          "meaning": "站立",
+          "grimmNote": "此字根源自更基本的字根 sta- (站立)，其形式變化包括字母 T 與 S 互換 (舌音互換 t/s)，以及字母 A 與 I 互換 (母音通轉 a/i)。"
+        }
+      ],
+      "summary": "單字 insist 由字首 in- (在內、進入) 和字根 sist (站立) 組成，字面意義為「堅定地站立在內」，引申為堅持、堅稱。",
+      "savedAt": "2026-07-16T16:05:58.680Z"
     }
   ],
   "userRoots": []
