@@ -151,6 +151,22 @@
       "partOfSpeech": "n.",
       "source": "other",
       "example": ""
+    },
+    {
+      "id": "uenmrnpknnf1",
+      "word": "Atheist",
+      "meaning": "無神論者",
+      "partOfSpeech": "",
+      "source": "other",
+      "example": ""
+    },
+    {
+      "id": "uenmrnpknnf2",
+      "word": "Insist",
+      "meaning": "堅持",
+      "partOfSpeech": "",
+      "source": "other",
+      "example": ""
     }
   ],
   "germanVocabulary": [
@@ -1847,6 +1863,36 @@
       "explanation": "'bring about' 是明確表示「導致」、「造成」因果關係的動詞詞組，而非僅僅是伴隨發生。",
       "mastered": false,
       "source": "ielts"
+    },
+    {
+      "id": "ugrmrnpknnf3",
+      "category": "verb_form",
+      "rule": "-ie 結尾動詞的ing形式",
+      "wrong": "tieing",
+      "correct": "tying",
+      "explanation": "以-ie結尾的動詞，變為現在分詞（-ing形式）時，應將-ie改為-y再加-ing。",
+      "mastered": false,
+      "source": "other"
+    },
+    {
+      "id": "ugrmrnpknnf4",
+      "category": "subject_verb_agreement",
+      "rule": "主詞單複數判斷",
+      "wrong": "",
+      "correct": "",
+      "explanation": "動詞形式需根據其前方主詞的單數或複數形式來決定。",
+      "mastered": false,
+      "source": "other"
+    },
+    {
+      "id": "ugrmrnpknnf5",
+      "category": "subject_verb_agreement",
+      "rule": "並列主詞的動詞形式",
+      "wrong": "",
+      "correct": "某人 and 某人 do something",
+      "explanation": "當主詞為複數形式（如'某人 and 某人'）時，在現在簡單式中動詞應使用原型（base form）。",
+      "mastered": false,
+      "source": "other"
     }
   ],
   "germanGrammar": [
