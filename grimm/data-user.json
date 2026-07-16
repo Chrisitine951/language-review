@@ -19,6 +19,32 @@
       ],
       "summary": "單字「grammer」由字根 'gramm'（根據雙子音規則，實際字根為 'gram'，表示『寫』或『畫』）加上代表『人、物』或『動作反覆』的字尾 '-er' 組成，意指『寫作的人或其行為』。",
       "savedAt": "2026-07-15T16:14:28.486Z"
+    },
+    {
+      "id": "ulkmrno6bdo1",
+      "word": "patients",
+      "parts": [
+        {
+          "type": "root",
+          "text": "pati",
+          "meaning": "忍受、遭受",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ent",
+          "meaning": "做…的人或物；有…性質的",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "s",
+          "meaning": "複數",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "單字「patients」來自拉丁字根「pati」（忍受、遭受），加上表示「做…的人或物」或「有…性質的」的字尾「-ent」，形成「忍耐的人」或「忍受者」（即病人），最後加上複數字尾「-s」成為「病人」。",
+      "savedAt": "2026-07-16T15:34:20.700Z"
     }
   ],
   "userRoots": []
