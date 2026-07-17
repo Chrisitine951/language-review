@@ -2765,6 +2765,32 @@
         }
       ],
       "ieltsTip": "「Bulb」及其相關概念（如「膨脹」、「圓形」）常用於描述科學、地理或技術文章中的物體形狀或構造，例如在生物學中描述植物部分 (plant bulbs)、在物理學中描述燈泡 (light bulbs)。理解其「膨脹、圓形」的核心意義，有助於理解相關描述性詞彙，這在雅思閱讀和寫作的學術文本中很常見。"
+    },
+    {
+      "id": "urtmrp1d9m6",
+      "type": "root",
+      "root": "scribe",
+      "meaning": "寫下",
+      "origin": "拉丁文 scrībere",
+      "examples": [
+        {
+          "word": "proscribe",
+          "meaning": "pro- (公開地，向前) + scribe (寫下)"
+        },
+        {
+          "word": "prescribe",
+          "meaning": "規定；開藥方"
+        },
+        {
+          "word": "describe",
+          "meaning": "描述；描繪"
+        },
+        {
+          "word": "subscribe",
+          "meaning": "訂閱；捐助"
+        }
+      ],
+      "ieltsTip": "這是一個在學術文章和聽力中常見的正式詞彙，了解其「禁止、宣告非法」的含義以及與 prescribe (規定、開藥) 的區別，對雅思閱讀和寫作非常重要。"
     }
   ],
   "task2Phrases": [],
