@@ -14,6 +14,15 @@
 <style>
   /* 英文 App 主色＝藍色（德文 App 是紅色，兩支 App 一眼可分辨） */
   :root { --primary: var(--en); --primary-light: var(--en-light); }
+  /* EGIU 145 單元進度棋盤（v2.1.0 新增，只有英文 App 用，所以放這裡不放 core.css） */
+  .egiu-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; margin: 6px 0 8px; }
+  .egiu-cell { aspect-ratio: 1; border-radius: 6px; background: var(--surface2); border: 1px solid var(--border);
+    font-size: 10px; color: var(--text3); display: flex; align-items: center; justify-content: center;
+    cursor: pointer; user-select: none; -webkit-user-select: none; }
+  .egiu-cell.done { background: var(--green); border-color: var(--green); color: #fff; font-weight: 700; }
+  .plan-template-banner { margin: 0 16px 8px; padding: 10px 12px; background: var(--primary-light);
+    border-radius: 10px; font-size: 12px; line-height: 1.6; color: var(--text2); }
+  .plan-template-banner strong { color: var(--primary); }
 </style>
 </head>
 <body>
@@ -159,6 +168,18 @@
       <div class="topbar">
         <div><div class="topbar-title">文法練習</div><div class="topbar-sub">你的真實錯誤 × AI 出題</div></div>
         <button class="topbar-action" onclick="refreshGrammar()">🔄</button>
+      </div>
+      <!-- EGIU 145 單元進度棋盤（v2.1.0）：每日一單元的習慣追蹤，點格子標記完成 -->
+      <div class="pr-card" style="margin-top:12px;">
+        <div class="grammar-category-row" onclick="toggleRuleDetail('egiu-detail')" style="margin-bottom:0;">
+          <span class="pr-title" style="margin-bottom:0;">📘 Grammar in Use 進度（<span id="egiu-count">0</span>/145）</span>
+          <span class="grammar-rule-toggle">展開 ▾</span>
+        </div>
+        <div class="grammar-rule-detail" id="egiu-detail" style="background:transparent; padding:0;">
+          <div style="font-size:12px; color:var(--text3); margin:8px 0 2px;" id="egiu-week-target"></div>
+          <div class="egiu-grid" id="egiu-grid"></div>
+          <div style="font-size:11px; color:var(--text3);">點一下格子＝完成該單元（再點取消）。平日 1 單元、假日可 2，每週六快速複習本週單元。</div>
+        </div>
       </div>
       <div class="grammar-stats">
         <div class="grammar-stat"><div class="grammar-stat-num" id="gs-correct" style="color:var(--green);">0</div><div class="grammar-stat-label">答對</div></div>
@@ -576,7 +597,7 @@
         </div>
 
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          IELTS English App v2.0.0<br>德文功能已搬到 german.html
+          IELTS English App v2.1.0<br>德文功能已搬到 german.html
         </div>
       </div>
     </div>
@@ -609,10 +630,12 @@
 
 <script>
 // ============================================================
-// english.html — 雅思英文 App（v2.0.0）
+// english.html — 雅思英文 App（v2.1.0）
 // 共用邏輯（GitHub/Gemini/TTS/工具）在 core.js，樣式在 core.css。
 // 【localStorage 前綴規則】這支 App 一律用 lren_ 前綴；德文 App 用 lr_。
 //   兩支 App 同網域共用 localStorage，前綴搞錯會互相蓋資料！
+// 【v2.1.0 新增】18 週備考大表自動帶入計畫表（資料在 data-ielts.js 的
+//   IELTS_STUDY_PLAN）＋ EGIU 145 單元進度棋盤（文法頁）。
 // ============================================================
 
 // ============================================================
@@ -637,10 +660,12 @@ let inboxItems = [], inboxPhotos = [];
 let diaryEntries = [], engooRecords = [], reviewSchedule = {};
 let grammarStats = { correct: 0, wrong: 0, total: 0 };
 let todayStats = { flipped: 0, grammarPracticed: 0 };
-let planItems = [];      // 週計畫 { id, week, skill, day, text, done }
+let planItems = [];      // 週計畫 { id, week, skill, day, text, done, fromPlan? }
 let practiceRecords = [];// 聽/讀練習 { id, skill, date, material, score, causes:[], notes }
 let breakdowns = [];     // 閱讀拆解檢核 { id, date, question, ..., score }
 let essayRecords = [];   // 作文批改 { id, date, task, question, essay, feedback }
+let egiuDone = {};       // EGIU 進度 { "單元號": "完成日期 YYYY-MM-DD" }（v2.1.0）
+let planImportedWeeks = []; // 已自動帶入大表的週（v2.1.0）——帶過就不再帶，刪掉的項目不會自己長回來
 
 let touchStartX = 0, touchStartY = 0, isDragging = false;
 let planWeekOffset = 0;
@@ -660,6 +685,8 @@ function saveData() {
     localStorage.setItem('lren_practice', JSON.stringify(practiceRecords));
     localStorage.setItem('lren_breakdowns', JSON.stringify(breakdowns));
     localStorage.setItem('lren_essays', JSON.stringify(essayRecords));
+    localStorage.setItem('lren_egiu', JSON.stringify(egiuDone));
+    localStorage.setItem('lren_planwk', JSON.stringify(planImportedWeeks));
     localStorage.setItem('lren_savedat', String(Date.now()));
   } catch(e) {}
   scheduleAutoPush();
@@ -675,6 +702,8 @@ function loadData() {
   practiceRecords = get('lren_practice', []);
   breakdowns = get('lren_breakdowns', []);
   essayRecords = get('lren_essays', []);
+  egiuDone = get('lren_egiu', {});
+  planImportedWeeks = get('lren_planwk', []);
   const saved = get('lren_today', null);
   if (saved && saved.date === new Date().toDateString()) todayStats = saved;
 }
@@ -769,6 +798,7 @@ function buildProgressObject() {
     username: getUsername(), app: 'english',
     reviewSchedule, grammarStats, todayStats, diaryEntries, engooRecords, inboxItems,
     planItems, practiceRecords, breakdowns, essayRecords,
+    egiuDone, planImportedWeeks,
   };
 }
 function applyProgressObject(p) {
@@ -783,6 +813,8 @@ function applyProgressObject(p) {
   if (Array.isArray(p.practiceRecords)) practiceRecords = p.practiceRecords;
   if (Array.isArray(p.breakdowns)) breakdowns = p.breakdowns;
   if (Array.isArray(p.essayRecords)) essayRecords = p.essayRecords;
+  if (p.egiuDone && typeof p.egiuDone === 'object') egiuDone = p.egiuDone;
+  if (Array.isArray(p.planImportedWeeks)) planImportedWeeks = p.planImportedWeeks;
   saveData();
 }
 let syncTimer = null, syncing = false;
@@ -880,7 +912,7 @@ function toggleRuleDetail(id) { const el = document.getElementById(id); if (el) 
 // ============================================================
 // 首頁：考試倒數
 // ============================================================
-// 考試日期：Christine 暫定 2026-11-21，隨時可到「設定 → 考試目標」修改（改了就存進 localStorage 覆蓋預設）
+// 考試日期：2026-11-21（已和 Christine 確認），隨時可到「設定 → 考試目標」修改
 const DEFAULT_EXAM_DATE = '2026-11-21';
 function getExamDate() { return localStorage.getItem('lren_exam_date') || DEFAULT_EXAM_DATE; }
 function getTargetBand() { return localStorage.getItem('lren_exam_target') || '7.0'; }
@@ -907,8 +939,13 @@ function updateCountdown() {
 }
 
 // ============================================================
-// 首頁：週計畫表（參考 Christine 的試算表：四科 × 週一～週日 + 其他書籍材料）
-// 週別用該週週一的日期字串當 key，例如 "2026-07-13"
+// 首頁：週計畫表（四科 × 週一～週日 + 其他書籍材料）
+// 週別用該週週一的日期字串當 key，例如 "2026-07-20"
+//
+// 【v2.1.0 大表自動帶入】data-ielts.js 的 IELTS_STUDY_PLAN 排好了 18 週進度。
+// 第一次開到「本週或未來週」時，該週項目自動帶入 planItems（標 fromPlan），
+// 之後就是普通項目：可以打勾、刪除、補充。帶過的週記在 planImportedWeeks，
+// 不會重複帶入——她刪掉的項目不會自己長回來。
 // ============================================================
 function mondayOf(date) {
   const d = new Date(date);
@@ -925,19 +962,40 @@ function shiftWeek(n) { planWeekOffset += n; renderPlan(); }
 function goThisWeek() { planWeekOffset = 0; renderPlan(); }
 const DAY_LABELS = ['週一','週二','週三','週四','週五','週六','週日'];
 
+function getWeekPlan(wk) {
+  if (typeof IELTS_STUDY_PLAN === 'undefined') return null;
+  return IELTS_STUDY_PLAN.find(p => p.week === wk) || null;
+}
+function autoImportWeekPlan(wk) {
+  if (planWeekOffset < 0) return; // 過去的週不補帶，避免灌進一堆沒做的項目
+  if (planImportedWeeks.includes(wk)) return;
+  const tpl = getWeekPlan(wk);
+  if (!tpl) return;
+  tpl.items.forEach((it, i) => {
+    planItems.push({ id: Date.now() + i, week: wk, skill: it[0], day: it[1], text: it[2], done: false, score: '', fromPlan: true });
+  });
+  planImportedWeeks.push(wk);
+  saveData();
+  showToast('🗓️ 已帶入第 ' + tpl.no + ' 週的大表安排', 2600);
+}
+
 function renderPlan() {
   const wk = weekKey(planWeekOffset);
+  autoImportWeekPlan(wk);
+  const tpl = getWeekPlan(wk);
   const title = planWeekOffset === 0 ? '本週計畫' : (planWeekOffset < 0 ? `${-planWeekOffset} 週前` : `${planWeekOffset} 週後`);
   document.getElementById('plan-week-title').textContent = `${title}（${wk} 起）`;
   document.getElementById('plan-thisweek-chip').classList.toggle('active', planWeekOffset === 0);
   const items = planItems.filter(p => p.week === wk);
   const el = document.getElementById('plan-list');
+  // 大表階段橫幅：讓她知道現在在 18 週的哪裡、這週 EGIU 要到哪
+  const banner = tpl ? `<div class="plan-template-banner">📋 <strong>第 ${tpl.no}/${typeof IELTS_PLAN_TOTAL_WEEKS !== 'undefined' ? IELTS_PLAN_TOTAL_WEEKS : 18} 週</strong>・${escHtml(tpl.phase)}<br>📘 EGIU：${escHtml(tpl.egiu)}　<span style="color:var(--text3);">週四德文家教日不排英文</span></div>` : '';
   if (items.length === 0) {
-    el.innerHTML = `<div class="empty-state" style="padding:24px;"><div class="empty-state-icon">🗓️</div><div class="empty-state-text">這週還沒安排</div><div class="empty-state-sub">按右上角「＋ 安排」排進度</div></div>`;
+    el.innerHTML = banner + `<div class="empty-state" style="padding:24px;"><div class="empty-state-icon">🗓️</div><div class="empty-state-text">這週還沒安排</div><div class="empty-state-sub">按右上角「＋ 安排」排進度</div></div>`;
     return;
   }
   // 依科目分組顯示，每組內依星期排序
-  let html = '';
+  let html = banner;
   PLAN_SKILLS.forEach(sk => {
     const group = items.filter(i => i.skill === sk.id).sort((a, b) => a.day - b.day);
     if (group.length === 0) return;
@@ -995,7 +1053,7 @@ function updateHome() {
 
   const due = getDueWords().length;
   document.getElementById('home-vocab-count').textContent = due > 0 ? `${due} 個到期複習` : `${ENGLISH_VOCABULARY.length} 個單字`;
-  document.getElementById('home-grammar-count').textContent = `${ENGLISH_GRAMMAR.length} 道題目`;
+  document.getElementById('home-grammar-count').textContent = `${ENGLISH_GRAMMAR.length} 道題・EGIU ${Object.keys(egiuDone).length}/145`;
   if (typeof WORD_ROOTS !== 'undefined') document.getElementById('home-roots-count').textContent = `${WORD_ROOTS.length} 組字根`;
 
   document.getElementById('streak-vocab').textContent = todayStats.flipped || 0;
@@ -1190,6 +1248,43 @@ function checkTyping() {
 document.getElementById('typing-input').addEventListener('keydown', e => { if (e.key === 'Enter') checkTyping(); });
 
 // ============================================================
+// EGIU 進度棋盤（v2.1.0）——English Grammar in Use 145 Units
+// 個人進度：存 lren_egiu、走 progress-en-<name>.json 同步，不進 data-user.json
+// egiuDone 格式：{ "37": "2026-07-21", ... }（單元號 → 完成日期）
+// ============================================================
+const EGIU_TOTAL = 145;
+function renderEgiu() {
+  const grid = document.getElementById('egiu-grid');
+  if (!grid) return;
+  let html = '';
+  for (let u = 1; u <= EGIU_TOTAL; u++) {
+    const done = egiuDone[u];
+    html += `<div class="egiu-cell${done ? ' done' : ''}" data-u="${u}" onclick="toggleEgiu(this)" title="Unit ${u}${done ? '・' + done : ''}">${u}</div>`;
+  }
+  grid.innerHTML = html;
+  document.getElementById('egiu-count').textContent = Object.keys(egiuDone).length;
+  // 本週目標（來自 18 週大表）＋本週已完成幾格
+  const targetEl = document.getElementById('egiu-week-target');
+  if (targetEl) {
+    const tpl = getWeekPlan(weekKey(0));
+    const wkStart = mondayOf(new Date());
+    const wkEnd = new Date(wkStart); wkEnd.setDate(wkEnd.getDate() + 7);
+    const thisWeekDone = Object.values(egiuDone).filter(d => {
+      const t = new Date(d + 'T00:00:00');
+      return t >= wkStart && t < wkEnd;
+    }).length;
+    targetEl.textContent = tpl ? `本週大表目標：${tpl.egiu}（本週已完成 ${thisWeekDone} 格）` : `本週已完成 ${thisWeekDone} 格`;
+  }
+}
+function toggleEgiu(el) {
+  const u = el.dataset.u;
+  if (egiuDone[u]) delete egiuDone[u];
+  else egiuDone[u] = new Date().toISOString().split('T')[0];
+  saveData();
+  renderEgiu();
+}
+
+// ============================================================
 // GRAMMAR — 題型引擎（v1.4.2 設計，勿走回頭路）
 // 淘汰的舊設計：選項從「其他文法題」抓正確句 → 三句無關且都正確，無從作答。
 // 現行設計：所有題目只圍繞同一條規則出題
@@ -1203,7 +1298,7 @@ const GRAMMAR_DISTRACTOR_POOLS = {
   preposition: ['in','on','at','to','for','from','about','of','with','as'],
   other: ['a','an','the','more','most','was','is','to','ing'],
 };
-function initGrammar() { buildGrammarDeck(); renderGrammarCard(); updateGrammarStats(); }
+function initGrammar() { renderEgiu(); buildGrammarDeck(); renderGrammarCard(); updateGrammarStats(); }
 function buildGrammarDeck() {
   let pool = [...ENGLISH_GRAMMAR];
   if (grammarFilter === 'weak') pool = pool.filter(g => !g.mastered);
@@ -2116,6 +2211,7 @@ function renderSpeakingNotes() {
   </div>`).join('');
 }
 
+
 // ============================================================
 // 記錄 & 收集
 // ============================================================
@@ -2433,33 +2529,41 @@ async function saveInboxToGithub() {
     dbItems.forEach(item => {
       n++;
       if (item.type === 'en_vocab') {
-        ud.englishVocabulary.push({ id: makeUserId('en', n), word: item.word, meaning: item.meaning, partOfSpeech: item.partOfSpeech, source: item.source || 'inbox', example: item.example });
+        ud.englishVocabulary.push({ id: makeUserId('en', n), word: item.word, meaning: item.meaning,
+          partOfSpeech: item.partOfSpeech || '', example: item.example || '', source: item.source || 'other' });
       } else if (item.type === 'en_grammar') {
-        ud.englishGrammar.push({ id: makeUserId('gr', n), category: item.category || 'other', rule: item.rule, wrong: item.wrong, correct: item.correct, explanation: item.explanation, mastered: false, source: item.source || 'inbox' });
+        ud.englishGrammar.push({ id: makeUserId('gr', n), category: item.category || 'other',
+          rule: item.rule || '', wrong: item.wrong || '', correct: item.correct || '',
+          explanation: item.explanation || '', source: item.source || 'other', mastered: false });
       } else if (item.type === 't2_phrase') {
-        ud.task2Phrases.push({ id: makeUserId('p2', n), word: item.word, meaning: item.meaning, usage: item.usage, topic: item.topic || '通用' });
+        ud.task2Phrases.push({ id: makeUserId('t2', n), word: item.word || '', meaning: item.meaning || '',
+          usage: item.usage || '', topic: item.topic || '通用' });
       } else if (item.type === 'speaking') {
-        ud.speakingNotes.push({ id: makeUserId('sn', n), core: item.core, topics: (item.topics || '').split('/').map(s => s.trim()).filter(Boolean), nouns: item.nouns, verbs: item.verbs, idioms: item.idioms });
+        ud.speakingNotes.push({ id: makeUserId('sn', n), core: item.core || '',
+          topics: (item.topics || '').split('/').map(s => s.trim()).filter(Boolean),
+          nouns: item.nouns || '', verbs: item.verbs || '', idioms: item.idioms || '' });
       }
     });
   });
+
   if (!result.ok) {
     statusEl.innerHTML = `<div class="ai-result" style="color:var(--danger);">❌ ${escHtml(friendlyConflictMessage(result.error, '再按一次「儲存到資料庫」'))}</div>`;
     return;
   }
-  const saved = inboxItems.length;
-  inboxItems = [];
-  saveData();
+  // 成功：把最新雲端資料合併回本地陣列（含這次新增的），清空收集箱
   mergeUserData(result.userData);
-  renderInboxList(); renderPracticeList('listening'); renderPracticeList('reading'); renderPhrases(); renderSpeakingNotes();
-  statusEl.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 已儲存 ${saved} 個項目！GitHub Pages 約 1 分鐘後更新，本機已即時生效</div>`;
-  showToast('✅ 儲存成功！');
+  inboxItems = [];
+  saveData(); renderInboxList();
+  renderPracticeList('listening'); renderPracticeList('reading');
+  renderSpeakingNotes();
+  updateHome();
+  statusEl.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 已儲存 ${dbItems.length} 筆到雲端資料庫${practices.length ? `，另有 ${practices.length} 筆練習紀錄已存入個人進度` : ''}。<br>Murray 的德文資料完全沒有被動到。</div>`;
 }
 
 // ============================================================
-// 字根教室
+// 字根教室（WORD_ROOTS 在 data.js；使用者查詢結果可存進 data-user.json 的 wordRoots）
 // ============================================================
-let rootFilter = 'all', pendingRootResult = null;
+let rootFilter = 'all';
 function setRootFilter(f, el) {
   rootFilter = f;
   document.querySelectorAll('#page-roots .filter-chip').forEach(c => c.classList.remove('active'));
@@ -2468,142 +2572,151 @@ function setRootFilter(f, el) {
 }
 function renderRootList() {
   const el = document.getElementById('root-list');
+  if (el === null || typeof WORD_ROOTS === 'undefined') return;
   const q = (document.getElementById('root-search').value || '').trim().toLowerCase();
-  const typeLabel = { root: '字根', prefix: '字首', suffix: '字尾' };
   let list = WORD_ROOTS;
   if (rootFilter === 'user') list = list.filter(r => String(r.id).startsWith('urt'));
   else if (rootFilter !== 'all') list = list.filter(r => r.type === rootFilter);
-  if (q) list = list.filter(r => r.root.toLowerCase().includes(q) || (r.meaning || '').toLowerCase().includes(q) || (r.examples || []).some(ex => ex.word.toLowerCase().includes(q)));
+  if (q) list = list.filter(r =>
+    (r.root || '').toLowerCase().includes(q) || (r.meaning || '').includes(q) ||
+    (r.examples || []).some(x => (x.word || '').toLowerCase().includes(q) || (x.meaning || '').includes(q)));
+  const typeLabel = { root: '字根', prefix: '字首', suffix: '字尾' };
   if (list.length === 0) {
-    el.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🌱</div><div class="empty-state-text">${rootFilter === 'user' ? '還沒有查詢紀錄' : '沒有符合的字根'}</div></div>`;
+    el.innerHTML = `<div class="empty-state" style="padding:24px;"><div class="empty-state-icon">🌱</div><div class="empty-state-text">沒有符合的字根</div><div class="empty-state-sub">${rootFilter === 'user' ? '用上面的拆解功能查單字，儲存後會出現在這裡' : '換個關鍵字試試'}</div></div>`;
     return;
   }
   el.innerHTML = list.map(r => `<div class="pr-card">
     <div style="display:flex; align-items:center; justify-content:space-between;">
-      <div class="pr-title" style="margin-bottom:0;">${escHtml(r.root)} <span style="font-weight:400; font-size:13px; color:var(--text2);">＝ ${escHtml(r.meaning)}</span></div>
-      <span class="tag ${r.type === 'root' ? 'tag-en' : r.type === 'prefix' ? 'tag-green' : 'tag-amber'}">${typeLabel[r.type] || r.type}${String(r.id).startsWith('urt') ? '・我的' : ''}</span>
+      <div class="pr-title" style="margin-bottom:0;">${escHtml(r.root)} <span style="font-weight:400; font-size:13px; color:var(--text2);">${escHtml(r.meaning)}</span></div>
+      <span class="tag tag-en">${typeLabel[r.type] || r.type}</span>
     </div>
-    ${r.origin ? `<div class="pr-rule" style="margin:6px 0 8px;">來源：${escHtml(r.origin)}</div>` : '<div style="height:8px;"></div>'}
-    <div class="pr-examples">${(r.examples || []).map(ex => `<div class="pr-example"><span class="pr-example-word">${escHtml(ex.word)}</span><span class="pr-example-meaning"> ${escHtml(ex.meaning)}</span></div>`).join('')}</div>
-    ${r.ieltsTip ? `<div class="pr-notes">💡 ${escHtml(r.ieltsTip)}</div>` : ''}
+    ${r.note ? `<div class="pr-rule" style="margin:6px 0 0;">${escHtml(r.note)}</div>` : ''}
+    <div class="pr-examples" style="margin-top:8px;">
+      ${(r.examples || []).map(x => `<div class="pr-example">
+        <span class="pr-example-word">${escHtml(x.word)}</span>
+        <button class="speak-btn-inline" onclick="speak(this.dataset.w, 'en-US')" data-w="${escAttr(x.word)}">🔊</button>
+        <span style="color:var(--text2); font-size:12px;">${escHtml(x.meaning || '')}</span>
+        ${x.breakdown ? `<span style="color:var(--text3); font-size:11px;">（${escHtml(x.breakdown)}）</span>` : ''}
+      </div>`).join('')}
+    </div>
   </div>`).join('');
 }
 async function lookupRoot() {
-  const input = document.getElementById('root-lookup-input');
-  const word = input.value.trim();
-  const resultEl = document.getElementById('root-lookup-result');
+  const word = document.getElementById('root-lookup-input').value.trim();
   if (!word) { showToast('請先輸入單字'); return; }
-  pendingRootResult = null;
-  resultEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 拆解中…</div>`;
-  const prompt = `You are an etymology teacher for a Taiwanese IELTS learner. Break down the English word "${word}" into its morphemes (root/prefix/suffix).
+  const el = document.getElementById('root-lookup-result');
+  el.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>拆解中…</div>`;
+  const prompt = `You are an etymology teacher for a Taiwanese IELTS student. Break down the English word "${word}" into its roots, prefixes and suffixes.
 
 Return ONLY valid JSON, no markdown:
 {
   "word": "${word}",
-  "breakdown": "拆解說明，繁體中文，例如：sus(=sub, 在下) + tain(握住) + able(可以…的)",
-  "root": "the main root, e.g. tain/ten",
-  "rootMeaning": "字根意思（繁體中文）",
-  "origin": "字根來源（繁體中文），例如：拉丁文 tenere",
-  "relatedWords": [ { "word": "related word", "meaning": "繁體中文意思" } ],
-  "ieltsTip": "一句繁體中文的雅思應用提示"
-}`;
-  const result = await callGemini(prompt);
-  if (!result.ok) { resultEl.innerHTML = `<div class="ai-result" style="color:var(--danger);">❌ ${escHtml(result.error)}</div>`; return; }
-  let parsed;
-  try { parsed = JSON.parse(stripJsonFences(result.text)); }
-  catch(e) { resultEl.innerHTML = `<div class="ai-result" style="color:var(--danger);">❌ AI 回傳格式異常，請再按一次「拆解」</div>`; return; }
-  pendingRootResult = parsed;
-  resultEl.innerHTML = `<div class="ai-result" style="margin-top:12px;">
-      <div style="font-size:16px; font-weight:700;">${escHtml(parsed.word)}</div>
-      <div style="margin-top:6px;">🧩 ${escHtml(parsed.breakdown || '')}</div>
-      <div style="margin-top:6px; color:var(--text2);">字根 <strong>${escHtml(parsed.root || '')}</strong> ＝ ${escHtml(parsed.rootMeaning || '')}（${escHtml(parsed.origin || '')}）</div>
-      <div style="margin-top:8px;">同家族：${(parsed.relatedWords || []).map(x => `<strong>${escHtml(x.word)}</strong> ${escHtml(x.meaning)}`).join('、')}</div>
-      ${parsed.ieltsTip ? `<div style="margin-top:8px; color:var(--amber);">💡 ${escHtml(parsed.ieltsTip)}</div>` : ''}
+  "meaning": "這個字的繁體中文意思",
+  "parts": [ { "part": "字母片段", "type": "prefix/root/suffix", "meaning": "這個片段的繁體中文意思" } ],
+  "story": "用一句繁體中文把各片段串成好記的小故事",
+  "related": [ { "word": "同字根的其他常見字（雅思程度）", "meaning": "繁體中文" } ],
+  "rootEntry": { "root": "核心字根（如 spect）", "type": "root", "meaning": "字根的繁體中文意思", "note": "一句補充" }
+}
+"related" 最多 4 個。若這個字不好拆（如專有名詞），parts 給一個 type "root" 的整字並照實說明。`;
+  const res = await callGemini(prompt);
+  if (!res.ok) { el.innerHTML = `<div class="ai-result" style="color:var(--danger);">❌ ${escHtml(res.error)}</div>`; return; }
+  let p;
+  try { p = JSON.parse(stripJsonFences(res.text)); }
+  catch(e) { el.innerHTML = `<div class="ai-result" style="color:var(--danger);">❌ AI 回傳格式異常，請再按一次</div>`; return; }
+  window._lastRootLookup = p;
+  el.innerHTML = `<div class="ai-result">
+    <div style="font-size:16px; font-weight:700;">${escHtml(p.word)} <span style="font-weight:400; font-size:13px; color:var(--text2);">${escHtml(p.meaning || '')}</span>
+      <button class="speak-btn-inline" onclick="speak(this.dataset.w, 'en-US')" data-w="${escAttr(p.word)}">🔊</button></div>
+    <div style="display:flex; gap:6px; flex-wrap:wrap; margin:8px 0;">
+      ${(p.parts || []).map(x => `<span class="tag ${x.type === 'root' ? 'tag-amber' : 'tag-en'}">${escHtml(x.part)}＝${escHtml(x.meaning)}</span>`).join('')}
     </div>
-    <button class="settings-save-btn" style="background:var(--green);" onclick="saveRootLookup()">📒 儲存到我的字根筆記</button>
-    <div id="root-save-status"></div>`;
+    ${p.story ? `<div>💡 ${escHtml(p.story)}</div>` : ''}
+    ${(p.related || []).length ? `<div style="margin-top:8px;"><strong>同字根：</strong>${p.related.map(r => `${escHtml(r.word)}（${escHtml(r.meaning)}）`).join('、')}</div>` : ''}
+  </div>
+  <button class="settings-save-btn" style="background:var(--green);" onclick="saveRootLookup()">📒 存進我的查詢</button>`;
 }
 async function saveRootLookup() {
-  if (!pendingRootResult) return;
-  const statusEl = document.getElementById('root-save-status');
-  const p = pendingRootResult;
+  const p = window._lastRootLookup;
+  if (!p) return;
   const entry = {
-    id: 'urt' + Date.now().toString(36), type: 'root',
-    root: p.root || p.word, meaning: p.rootMeaning || '', origin: p.origin || '',
-    examples: [{ word: p.word, meaning: p.breakdown || '' }, ...(p.relatedWords || []).slice(0, 3)],
-    ieltsTip: p.ieltsTip || '',
+    id: 'urt' + Date.now().toString(36),
+    root: (p.rootEntry && p.rootEntry.root) || p.word,
+    type: (p.rootEntry && p.rootEntry.type) || 'root',
+    meaning: (p.rootEntry && p.rootEntry.meaning) || p.meaning || '',
+    note: ((p.rootEntry && p.rootEntry.note) || '') + (p.story ? '｜' + p.story : ''),
+    examples: [{ word: p.word, meaning: p.meaning || '', breakdown: (p.parts || []).map(x => x.part).join(' + ') }]
+      .concat((p.related || []).slice(0, 3).map(r => ({ word: r.word, meaning: r.meaning || '' }))),
   };
   const cfg = getGithubConfig();
   if (!cfg.token || !cfg.owner || !cfg.repo) {
-    WORD_ROOTS.push(entry); renderRootList();
-    statusEl.innerHTML = `<div class="ai-result" style="color:var(--amber);">已暫存在這台裝置。到「設定」完成 GitHub 設定後再儲存可跨裝置同步。</div>`;
-    pendingRootResult = null; return;
+    if (typeof WORD_ROOTS !== 'undefined') WORD_ROOTS.push(entry);
+    renderRootList(); showToast('已暫存在這台裝置（設定 GitHub 後可跨裝置）');
+    return;
   }
-  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>正在寫入 GitHub…</div>`;
-  const result = await githubAppendToUserData((ud) => { ud.wordRoots.push(entry); });
-  if (!result.ok) { statusEl.innerHTML = `<div class="ai-result" style="color:var(--danger);">❌ ${escHtml(friendlyConflictMessage(result.error, '再按一次儲存'))}</div>`; return; }
-  WORD_ROOTS.push(entry); renderRootList();
-  statusEl.innerHTML = `<div class="ai-result" style="color:var(--green);">✅ 已儲存！</div>`;
-  pendingRootResult = null;
-  showToast('✅ 字根已加入筆記');
+  showToast('儲存中…');
+  const r = await githubAppendToUserData(ud => { ud.wordRoots.push(entry); });
+  if (!r.ok) { showToast('❌ ' + friendlyConflictMessage(r.error, '再按一次儲存')); return; }
+  if (typeof WORD_ROOTS !== 'undefined') WORD_ROOTS.push(entry);
+  renderRootList();
+  document.getElementById('root-lookup-input').value = '';
+  document.getElementById('root-lookup-result').innerHTML = '';
+  showToast('✅ 已存進我的查詢');
 }
 
 // ============================================================
-// AI 例句
+// AI 例句（單字翻牌／文法卡）
 // ============================================================
 async function getAIExample() {
   if (currentDeck.length === 0) return;
   const w = currentDeck[currentCardIdx];
-  const resultEl = document.getElementById('ai-example-result');
-  resultEl.innerHTML = `<div class="ai-loading"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 生成中…</div>`;
-  const result = await callGemini(`Generate 2 short, natural example sentences for the word "${w.word}" (${w.meaning}) in English, at IELTS band 7 level.
-Each sentence should be practical and help a Taiwanese learner remember this word. If the word fits a common IELTS topic, use that topic.
-Format:
-1. [sentence] → [Chinese translation]
-2. [sentence] → [Chinese translation]
-Only output the sentences, nothing else.`);
-  resultEl.innerHTML = result.ok ? `<div class="ai-result">${escHtml(result.text)}</div>`
-    : `<div class="ai-result" style="color:var(--danger);">❌ ${escHtml(result.error)}</div>`;
+  const el = document.getElementById('ai-example-result');
+  el.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>生成例句中…</div>`;
+  const prompt = `為台灣的雅思考生 Christine（化工產業分析師）用英文單字「${w.word}」（意思：${w.meaning}）造 2 個實用例句。
+一個貼近她的生活或工作（化工產業、新竹、學習），一個偏雅思寫作／口說可用。
+回傳格式（不要 markdown）：
+1. 英文例句一
+（繁體中文翻譯）
+2. 英文例句二
+（繁體中文翻譯）`;
+  const res = await callGemini(prompt);
+  el.innerHTML = res.ok
+    ? `<div class="ai-result">${escHtml(res.text)}</div>`
+    : `<div class="ai-result" style="color:var(--danger);">❌ ${escHtml(res.error)}</div>`;
 }
 async function getAIGrammarExample(grammarId) {
   const g = ENGLISH_GRAMMAR.find(x => x.id === grammarId);
   if (!g) return;
-  const id = document.getElementById(`grammar-ai-result-${grammarId}`) ? `grammar-ai-result-${grammarId}` : `grammar-ai-result-ef-${grammarId}`;
-  const resultEl = document.getElementById(id);
-  if (!resultEl) return;
-  resultEl.innerHTML = `<div class="ai-loading"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 生成新例句中…</div>`;
-  const result = await callGemini(`You are an English teacher for Christine (Taiwanese chemical industry analyst, IELTS band 7 target, likes travel and K-pop).
-Grammar rule: "${g.rule}"
-Generate 3 NEW practice sentences related to IELTS writing/speaking topics or her daily life (work/travel/food/esports/skincare).
-Each sentence should be WRONG first, then show the correct version.
-Format:
-❌ [wrong sentence]
-✅ [correct sentence]
-→ [brief Chinese explanation in 1 line]
-Only output the 3 sets, nothing else.`);
-  resultEl.innerHTML = result.ok
-    ? `<div class="ai-result">${escHtml(result.text).replace(/❌/g, '<span style="color:var(--danger)">❌</span>').replace(/✅/g, '<span style="color:var(--green)">✅</span>')}</div>`
-    : `<div class="ai-result" style="color:var(--danger);">❌ ${escHtml(result.error)}</div>`;
+  const el = document.getElementById('grammar-ai-result-' + grammarId) || document.getElementById('grammar-ai-result-ef-' + grammarId);
+  if (!el) return;
+  el.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>生成新例句中…</div>`;
+  const prompt = `Christine（台灣雅思考生）在練這條文法規則：「${g.rule}」。
+她犯過的錯：「${g.wrong}」→ 正確：「${g.correct}」。
+請生成 2 個練習同一條規則的新句子（英文），每句先給一個含空格的版本讓她填，再給答案與繁體中文翻譯。不要 markdown。`;
+  const res = await callGemini(prompt);
+  el.innerHTML = res.ok
+    ? `<div class="ai-result">${escHtml(res.text)}</div>`
+    : `<div class="ai-result" style="color:var(--danger);">❌ ${escHtml(res.error)}</div>`;
 }
 
 // ============================================================
-// 設定
+// SETTINGS
 // ============================================================
-const SETTINGS_GROUP_DEFAULTS = { exam: true, ai: true, github: false, sync: false, data: false, backup: false };
-function toggleSettingsGroup(id) {
-  const body = document.getElementById('sg-body-' + id), header = document.getElementById('sg-header-' + id);
-  if (!body || !header) return;
-  const open = !body.classList.contains('open');
-  body.classList.toggle('open', open);
-  header.classList.toggle('open', open);
-  try { localStorage.setItem('lren_sg_' + id, open ? '1' : '0'); } catch(e) {}
+// 設定頁分組收合：exam 預設展開（考試目標最常用），其餘收合
+const SETTINGS_GROUP_DEFAULTS = { exam: true, ai: false, github: false, sync: false, data: false, backup: false };
+function toggleSettingsGroup(g) {
+  const body = document.getElementById('sg-body-' + g);
+  const header = document.getElementById('sg-header-' + g);
+  if (!body) return;
+  const open = body.classList.toggle('open');
+  if (header) header.classList.toggle('open', open);
+  try { localStorage.setItem('lren_sg_' + g, open ? '1' : '0'); } catch(e) {}
 }
 function initSettingsGroups() {
-  Object.keys(SETTINGS_GROUP_DEFAULTS).forEach(id => {
-    let open;
-    try { const s = localStorage.getItem('lren_sg_' + id); open = s !== null ? s === '1' : SETTINGS_GROUP_DEFAULTS[id]; }
-    catch(e) { open = SETTINGS_GROUP_DEFAULTS[id]; }
-    const body = document.getElementById('sg-body-' + id), header = document.getElementById('sg-header-' + id);
+  Object.keys(SETTINGS_GROUP_DEFAULTS).forEach(g => {
+    const saved = localStorage.getItem('lren_sg_' + g);
+    const open = saved === null ? SETTINGS_GROUP_DEFAULTS[g] : saved === '1';
+    const body = document.getElementById('sg-body-' + g);
+    const header = document.getElementById('sg-header-' + g);
     if (body) body.classList.toggle('open', open);
     if (header) header.classList.toggle('open', open);
   });
@@ -2612,93 +2725,119 @@ function initSettings() {
   initSettingsGroups();
   document.getElementById('exam-date-input').value = getExamDate();
   document.getElementById('exam-target-input').value = getTargetBand();
-  const k = getApiKey();
-  if (k) document.getElementById('api-key-input').value = k;
+  document.getElementById('api-key-input').value = getApiKey();
   document.getElementById('gemini-model-input').value = getGeminiModel();
-  const gh = getGithubConfig();
-  if (gh.token) document.getElementById('github-token-input').value = gh.token;
-  if (gh.owner) document.getElementById('github-owner-input').value = gh.owner;
-  if (gh.repo) document.getElementById('github-repo-input').value = gh.repo;
-  document.getElementById('github-branch-input').value = gh.branch;
-  document.getElementById('username-input').value = getUsername();
+  const cfg = getGithubConfig();
+  document.getElementById('github-token-input').value = cfg.token;
+  document.getElementById('github-owner-input').value = cfg.owner;
+  document.getElementById('github-repo-input').value = cfg.repo;
+  document.getElementById('github-branch-input').value = cfg.branch;
+  document.getElementById('username-input').value = localStorage.getItem('lr_username') || '';
   updateAutoSyncToggle();
-  const lastSync = Number(localStorage.getItem('lren_lastsync') || 0);
-  if (lastSync) setSyncStatus('上次同步：' + new Date(lastSync).toLocaleString('zh-TW'));
-  document.getElementById('settings-en-count').textContent = `共 ${ENGLISH_VOCABULARY.length} 個`;
-  document.getElementById('settings-grammar-count').textContent = `共 ${ENGLISH_GRAMMAR.length} 道`;
-  document.getElementById('settings-practice-count').textContent = `共 ${practiceRecords.length} 筆・拆解檢核 ${breakdowns.length} 題・作文 ${essayRecords.length} 篇`;
-  const schedCount = Object.keys(reviewSchedule).length;
-  document.getElementById('settings-schedule-count').textContent = schedCount > 0 ? `${schedCount} 個字已排程複習` : '0 個（若舊版有進度，按下方搬入）';
+  document.getElementById('settings-en-count').textContent = `${ENGLISH_VOCABULARY.length} 個單字`;
+  document.getElementById('settings-grammar-count').textContent = `${ENGLISH_GRAMMAR.length} 道題`;
+  document.getElementById('settings-practice-count').textContent = `${practiceRecords.length} 筆・拆解 ${breakdowns.length} 筆・作文 ${essayRecords.length} 篇`;
+  const enSched = Object.keys(reviewSchedule).filter(k => k.startsWith('en_')).length;
+  document.getElementById('settings-schedule-count').textContent = `${enSched} 個單字已排程`;
+  const last = Number(localStorage.getItem('lren_lastsync') || 0);
+  setSyncStatus(last ? '上次同步：' + new Date(last).toLocaleString('zh-TW') : '尚未同步過');
 }
 function updateAutoSyncToggle() {
-  const btn = document.getElementById('autosync-toggle');
-  if (!btn) return;
+  const el = document.getElementById('autosync-toggle');
+  if (!el) return;
   const on = isAutoSyncOn();
-  btn.textContent = on ? '已開啟' : '已關閉';
-  btn.style.color = on ? 'var(--green)' : 'var(--text3)';
+  el.textContent = on ? '已開啟' : '已關閉';
+  el.style.color = on ? 'var(--green)' : 'var(--text3)';
 }
 function toggleAutoSync() {
   localStorage.setItem('lr_autosync', isAutoSyncOn() ? '0' : '1');
   updateAutoSyncToggle();
-  showToast(isAutoSyncOn() ? '☁️ 自動同步已開啟' : '自動同步已關閉');
+  showToast(isAutoSyncOn() ? '✅ 自動同步已開啟' : '自動同步已關閉（可用「立即同步」手動同步）');
 }
 function saveSyncSettings() {
   const name = document.getElementById('username-input').value.trim();
   if (name) localStorage.setItem('lr_username', name);
-  showToast('✅ 同步設定已儲存');
+  showToast('✅ 同步設定已儲存（使用者名稱兩個 App 共用）');
   initSettings();
 }
-function resetToday() { todayStats = { flipped: 0, grammarPracticed: 0 }; saveData(); showToast('今日進度已重置'); updateHome(); }
-function resetAllSchedule() {
-  if (!confirm('確定要清除所有複習排程嗎？')) return;
-  reviewSchedule = {}; saveData(); showToast('複習排程已清除');
+function resetToday() {
+  if (!confirm('確定重置今天的學習進度嗎？')) return;
+  todayStats = { flipped: 0, grammarPracticed: 0, date: new Date().toDateString() };
+  saveData(); updateHome();
+  showToast('✅ 今日進度已重置');
 }
+function resetAllSchedule() {
+  if (!confirm('確定清除所有英文複習排程嗎？這無法復原！')) return;
+  Object.keys(reviewSchedule).forEach(k => { if (k.startsWith('en_')) delete reviewSchedule[k]; });
+  saveData(); updateHome();
+  showToast('✅ 英文複習排程已清除');
+}
+// 匯出／匯入（v2.1.0：加入 egiuDone、planImportedWeeks）
 function exportData() {
-  const obj = { exportDate: new Date().toISOString(), version: '2.0.0', app: 'english',
-    diaryEntries, engooRecords, reviewSchedule, grammarStats, todayStats, inboxItems, planItems, practiceRecords, breakdowns, essayRecords };
-  const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
+  const data = {
+    version: '2.1.0', app: 'english', exportedAt: new Date().toISOString(),
+    diaryEntries, engooRecords, reviewSchedule, grammarStats, todayStats, inboxItems,
+    planItems, practiceRecords, breakdowns, essayRecords, egiuDone, planImportedWeeks,
+    examDate: getExamDate(), examTarget: getTargetBand(),
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
   a.download = `ielts-english-backup-${new Date().toISOString().split('T')[0]}.json`;
   a.click();
   URL.revokeObjectURL(url);
-  showToast('✅ 資料已匯出！');
+  showToast('✅ 已匯出，請把檔案存到 iCloud 或安全的地方');
 }
 function importData(event) {
   const file = event.target.files[0];
   if (!file) return;
+  const statusEl = document.getElementById('import-status');
   const reader = new FileReader();
-  reader.onload = function(e) {
+  reader.onload = (e) => {
     try {
-      const d = JSON.parse(e.target.result);
-      if (!d.version || !d.exportDate) {
-        document.getElementById('import-status').innerHTML = `<div style="color:var(--danger); font-size:13px; margin-top:4px;">❌ 檔案格式不正確</div>`;
-        return;
-      }
-      applyProgressObject(d);
-      document.getElementById('import-status').innerHTML = `<div style="color:var(--green); font-size:13px; margin-top:4px;">✅ 匯入成功！備份日期：${new Date(d.exportDate).toLocaleDateString('zh-TW')}</div>`;
-      showToast('✅ 資料匯入成功！');
-      updateHome();
+      const data = JSON.parse(e.target.result);
+      if (!data.reviewSchedule && !data.planItems && !data.diaryEntries) throw new Error('不是本 App 的備份檔');
+      if (!confirm('匯入會覆蓋目前的英文進度（單字排程、計畫、練習紀錄…），確定嗎？')) { event.target.value = ''; return; }
+      if (data.reviewSchedule) reviewSchedule = data.reviewSchedule;
+      if (data.grammarStats) grammarStats = data.grammarStats;
+      if (Array.isArray(data.diaryEntries)) diaryEntries = data.diaryEntries;
+      if (Array.isArray(data.engooRecords)) engooRecords = data.engooRecords;
+      if (Array.isArray(data.inboxItems)) inboxItems = data.inboxItems;
+      if (Array.isArray(data.planItems)) planItems = data.planItems;
+      if (Array.isArray(data.practiceRecords)) practiceRecords = data.practiceRecords;
+      if (Array.isArray(data.breakdowns)) breakdowns = data.breakdowns;
+      if (Array.isArray(data.essayRecords)) essayRecords = data.essayRecords;
+      if (data.egiuDone && typeof data.egiuDone === 'object') egiuDone = data.egiuDone;
+      if (Array.isArray(data.planImportedWeeks)) planImportedWeeks = data.planImportedWeeks;
+      if (data.examDate) localStorage.setItem('lren_exam_date', data.examDate);
+      if (data.examTarget) localStorage.setItem('lren_exam_target', data.examTarget);
+      saveData();
+      updateHome(); initSettings();
+      statusEl.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 匯入成功！</div>`;
+      showToast('✅ 資料已匯入');
     } catch(err) {
-      document.getElementById('import-status').innerHTML = `<div style="color:var(--danger); font-size:13px; margin-top:4px;">❌ 讀取失敗</div>`;
+      statusEl.innerHTML = `<div class="ai-result" style="color:var(--danger);">❌ 匯入失敗：${escHtml(err.message)}</div>`;
     }
+    event.target.value = '';
   };
   reader.readAsText(file);
-  event.target.value = '';
 }
 
 // ============================================================
 // INIT
 // ============================================================
 loadData();
-migrateFromV1Local();
+migrateFromV1Local();   // 路徑 A：本機舊資料搬家（撲空時由 pullProgressOnStartup 走雲端路徑 B）
 updateHome();
+// data-user.json（使用者累積內容）載入後刷新畫面
 loadUserData().then(() => {
   updateHome();
-  if (currentPage === 'settings') initSettings();
+  if (currentPage === 'vocab') { buildDeck(); vocabMode === 'flip' ? renderFlashcard() : renderTyping(); }
+  if (currentPage === 'grammar') initGrammar();
   if (currentPage === 'ielts') initIelts();
 });
+// 雲端進度：較新就拉下來（progress-en-<name>.json 不存在時自動從舊版進度檔搬英文部分）
 pullProgressOnStartup();
 </script>
 </body>
