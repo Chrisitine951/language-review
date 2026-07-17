@@ -546,3 +546,195 @@ const PLAN_TIPS = [
   "適時檢討排定計畫與完成程度的落差",
   "把做題的分數也一併寫上，讓念書進步更有感（沒進步也更警惕自己 xd）",
 ];
+
+// ============================================================
+// 18 週備考大表（v2.1.0 新增）
+// 起算 2026-07-20（週一）→ 考試 2026-11-21（週六）＝ 共 18 週，目標總分 7.0
+//
+// 【內容來源】Christine 的備考指南＋外部 AI 顧問整理的「長跑型」節奏，
+//   已依她的實際生活調整：
+//   - 平日下班約 19:00、約 00:00 睡 → 每天約 2–2.5 小時
+//   - 週三晚上 Cambly（口說）
+//   - ⚠️ 週四晚上 21:00 有德文家教 1.5 小時 → 週四「不排任何英文任務」
+//     （EGIU 每日一單元是背景習慣，由文法頁的進度棋盤追蹤，不佔計畫格）
+//   - 週末保留彈性，只各排 1–2 項
+//
+// 【四階段】W1–4 建立方法（不限時）→ W5–9 提量＋部分限時 →
+//           W10–14 全限時＋模考開始 → W15–18 每週模考＋衝刺
+//
+// 【使用方式】english.html 的週計畫表在第一次開啟「本週或未來週」時，
+//   自動把該週項目帶入 planItems（標記 fromPlan），她只需打勾，不用手動輸入。
+//   已帶入的週記錄在 planImportedWeeks（隨進度同步），刪掉的項目不會自己長回來。
+//
+// 【材料說明】劍橋真題編號（劍10→劍20）照「由舊到新」原則排，實際手邊有哪幾本
+//   可自行替換，週數節奏不變。EGIU＝English Grammar in Use（145 Units）：
+//   平日 1 單元、假日可 2，每週六快速複習本週單元，W16 完成全部 145。
+//
+// 欄位：week=該週週一日期（計畫表的 key）、no=第幾週、phase=階段、
+//       egiu=本週 EGIU 範圍、items=[[skill, day, text], ...]，day: 0=週一…6=週日
+// ============================================================
+const IELTS_PLAN_START = '2026-07-20';
+const IELTS_PLAN_TOTAL_WEEKS = 18;
+const IELTS_STUDY_PLAN = [
+  { week: '2026-07-20', no: 1, phase: '第一階段・建立方法（W1–4）', egiu: 'Unit 1–9', items: [
+    ['reading', 0, '平行閱讀法五步驟精讀＋劍10 T1 P1 不限時拆解'],
+    ['listening', 1, '劍10 T1 S1–S2 精聽訂正＋Shadowing 10分鐘'],
+    ['speaking', 2, 'Cambly＋課後把語料丟收集箱'],
+    ['writing', 4, 'Simon Task 2 四段結構＋13句法熟讀（先不寫全篇）'],
+    ['reading', 5, '劍10 T1 P2 不限時＋拆解檢核'],
+    ['writing', 6, 'Task 2 Opinion 模板背誦＋每週回顧'],
+    ['material', 5, 'EGIU Unit 1–9（平日1單元、假日可2，週六快速複習）'],
+  ]},
+  { week: '2026-07-27', no: 2, phase: '第一階段・建立方法（W1–4）', egiu: 'Unit 10–18', items: [
+    ['reading', 0, '劍10 T1 P3 不限時＋拆解檢核'],
+    ['listening', 1, '劍10 T1 S3–S4 精聽訂正＋Shadowing'],
+    ['speaking', 2, 'Cambly＋建立第1份核心語料（書／滑雪…）'],
+    ['writing', 4, 'Simon Task 1 結構：改寫題目＋Overview 寫法'],
+    ['reading', 5, '劍10 T2 P1 不限時'],
+    ['writing', 6, 'Task 2 Discussion 模板＋每週回顧'],
+    ['material', 5, 'EGIU Unit 10–18（週六複習）'],
+  ]},
+  { week: '2026-08-03', no: 3, phase: '第一階段・建立方法（W1–4）', egiu: 'Unit 19–27', items: [
+    ['reading', 0, '劍10 T2 P2 不限時＋拆解檢核'],
+    ['listening', 1, '劍10 T2 聽力整回不限時訂正＋Shadowing'],
+    ['speaking', 2, 'Cambly＋核心語料第2份＋自錄15分鐘'],
+    ['writing', 4, 'Task 1 圖表詞彙（Bar／Line）＋範例改寫'],
+    ['reading', 5, '劍10 T2 P3 不限時'],
+    ['writing', 6, 'Task 2 Problem/Solution 模板＋每週回顧'],
+    ['material', 5, 'EGIU Unit 19–27（週六複習）'],
+  ]},
+  { week: '2026-08-10', no: 4, phase: '第一階段・建立方法（W1–4）', egiu: 'Unit 28–36', items: [
+    ['reading', 0, '劍10 T3 P1–P2 不限時（開始加快節奏）'],
+    ['listening', 1, '劍10 T3 聽力＋錯因記進練習紀錄'],
+    ['speaking', 2, 'Cambly＋自錄15分鐘×1'],
+    ['writing', 4, 'Task 2 2-Part 模板＋第一篇不限時 Task 2'],
+    ['reading', 5, '劍10 T3 P3＋拆解檢核'],
+    ['writing', 6, '訂正本週 Task 2（訂正比多寫一篇有效）＋每週回顧'],
+    ['material', 5, 'EGIU Unit 28–36（週六複習）'],
+  ]},
+  { week: '2026-08-17', no: 5, phase: '第二階段・提量＋部分限時（W5–9）', egiu: 'Unit 37–45', items: [
+    ['reading', 0, '劍11 T1 P1 單篇計時20分鐘（開始部分限時）'],
+    ['listening', 1, '劍11 T1 聽力整回計時＋完整訂正流程（約90分）'],
+    ['speaking', 2, 'Cambly＋核心語料第3份'],
+    ['writing', 4, 'Task 1 一篇不限時＋對照範文自我檢查'],
+    ['reading', 5, '劍11 T1 P2–P3 不限時'],
+    ['writing', 6, 'Task 1 訂正重寫＋每週回顧'],
+    ['material', 5, 'EGIU Unit 37–45（週六複習）'],
+  ]},
+  { week: '2026-08-24', no: 6, phase: '第二階段・提量＋部分限時（W5–9）', egiu: 'Unit 46–54', items: [
+    ['reading', 0, '劍11 T2 P1–P2 各計時20分鐘'],
+    ['listening', 1, '劍11 T2 聽力計時＋Shadowing'],
+    ['speaking', 2, 'Cambly＋自錄15分鐘×2（本週起固定）'],
+    ['writing', 4, 'Task 2 一篇不限時（plan 10分鐘要做滿）'],
+    ['reading', 5, '劍11 T2 P3＋拆解檢核'],
+    ['writing', 6, 'Task 2 訂正＋每週回顧'],
+    ['material', 5, 'EGIU Unit 46–54（週六複習）'],
+  ]},
+  { week: '2026-08-31', no: 7, phase: '第二階段・提量＋部分限時（W5–9）', egiu: 'Unit 55–63', items: [
+    ['reading', 0, '劍11 T3 P1–P2 計時'],
+    ['listening', 1, '劍11 T3 聽力計時＋回顧錯因 Top 3'],
+    ['speaking', 2, 'Cambly＋核心語料第4份'],
+    ['writing', 4, 'Task 1 一篇（30分鐘內）'],
+    ['reading', 5, '劍11 T4 P1–P2 計時'],
+    ['writing', 6, '訂正＋每週回顧'],
+    ['material', 5, 'EGIU Unit 55–63（週六複習）'],
+  ]},
+  { week: '2026-09-07', no: 8, phase: '第二階段・提量＋部分限時（W5–9）', egiu: 'Unit 64–72', items: [
+    ['reading', 0, '劍12 T1 P1–P3 每篇20分鐘'],
+    ['listening', 1, '劍12 T1 聽力計時訂正'],
+    ['speaking', 2, 'Cambly＋自錄（Part 2 計時2分鐘）'],
+    ['writing', 4, 'Task 2 一篇 60分鐘內'],
+    ['reading', 5, '劍12 T2 閱讀整回（記錄總耗時，不強制60分）'],
+    ['writing', 6, 'Task 2 訂正＋每週回顧'],
+    ['material', 5, 'EGIU Unit 64–72（週六複習）'],
+  ]},
+  { week: '2026-09-14', no: 9, phase: '第二階段・提量＋部分限時（W5–9）', egiu: 'Unit 73–81', items: [
+    ['reading', 0, '劍12 T3 閱讀整回（記錄總耗時）'],
+    ['listening', 1, '劍12 T3 聽力計時＋場景詞整理'],
+    ['speaking', 2, 'Cambly＋核心語料第5份'],
+    ['writing', 4, 'Task 1 30分鐘限時'],
+    ['reading', 5, '劍13 T1 閱讀整回'],
+    ['writing', 6, '訂正＋Phase 2 總回顧（列出弱點清單）'],
+    ['material', 5, 'EGIU Unit 73–81（週六複習）'],
+  ]},
+  { week: '2026-09-21', no: 10, phase: '第三階段・全限時＋模考（W10–14）', egiu: 'Unit 82–90', items: [
+    ['reading', 0, '劍13 T2 閱讀整回 60分鐘限時（首次全限時）'],
+    ['listening', 1, '劍13 T2 聽力整回30分＋90分訂正'],
+    ['speaking', 2, 'Cambly＋自錄×2'],
+    ['writing', 4, 'Task 2 40分鐘限時（首次）'],
+    ['reading', 5, '限時結果檢討＋錯題全部過拆解檢核'],
+    ['writing', 6, 'Task 2 訂正重寫＋每週回顧'],
+    ['material', 5, 'EGIU Unit 82–90（週六複習）'],
+  ]},
+  { week: '2026-09-28', no: 11, phase: '第三階段・全限時＋模考（W10–14）', egiu: 'Unit 91–99', items: [
+    ['reading', 0, '劍13 T3 閱讀 60分鐘'],
+    ['listening', 1, '劍13 T4 聽力30分＋訂正'],
+    ['speaking', 2, 'Cambly＋口說模考（Part 1–3 全程錄音）'],
+    ['writing', 4, 'Task 1 20分＋Task 2 40分（連寫60分鐘）'],
+    ['reading', 5, '錯題整理＋弱題型專練'],
+    ['writing', 6, '訂正＋每週回顧'],
+    ['material', 5, 'EGIU Unit 91–99（週六複習）'],
+  ]},
+  { week: '2026-10-05', no: 12, phase: '第三階段・全限時＋模考（W10–14）', egiu: 'Unit 100–108', items: [
+    ['reading', 0, '【模考1】劍18 T1 聽力＋閱讀連做 → 成績記進練習紀錄'],
+    ['listening', 1, '模考1 聽力完整訂正'],
+    ['speaking', 2, 'Cambly＋弱點題型口說練習'],
+    ['writing', 4, '【模考1】Task 1＋2 連寫 60分鐘'],
+    ['reading', 5, '模考1 閱讀完整訂正＋拆解檢核'],
+    ['writing', 6, '模考1 總檢討（四科弱點清單）＋每週回顧'],
+    ['material', 5, 'EGIU Unit 100–108（週六複習）'],
+  ]},
+  { week: '2026-10-12', no: 13, phase: '第三階段・全限時＋模考（W10–14）', egiu: 'Unit 109–117', items: [
+    ['reading', 0, '針對模考1弱點：弱題型專練（劍14 挑題）'],
+    ['listening', 1, '弱 Section 專練＋場景詞'],
+    ['speaking', 2, 'Cambly＋自錄×2'],
+    ['writing', 4, 'Task 2 弱題型一篇 40分鐘'],
+    ['reading', 5, '劍14 T1 閱讀 60分鐘'],
+    ['writing', 6, '訂正＋每週回顧'],
+    ['material', 5, 'EGIU Unit 109–117（週六複習）'],
+  ]},
+  { week: '2026-10-19', no: 14, phase: '第三階段・全限時＋模考（W10–14）', egiu: 'Unit 118–126', items: [
+    ['reading', 0, '劍14 T2 閱讀 60分鐘'],
+    ['listening', 1, '劍14 T2 聽力30分＋訂正'],
+    ['speaking', 2, 'Cambly＋口說模考第2次'],
+    ['writing', 4, '【模考2】Task 1＋2 連寫 60分鐘'],
+    ['reading', 5, '【模考2】劍18 T2 聽力＋閱讀連做'],
+    ['writing', 6, '模考2 總檢討＋每週回顧'],
+    ['material', 5, 'EGIU Unit 118–126（週六複習）'],
+  ]},
+  { week: '2026-10-26', no: 15, phase: '第四階段・每週模考衝刺（W15–18）', egiu: 'Unit 127–135', items: [
+    ['reading', 0, '模考2 弱點補強專練'],
+    ['listening', 1, '劍15 T1 聽力＋訂正'],
+    ['speaking', 2, 'Cambly＋串題總演練（一份語料對五題）'],
+    ['writing', 4, 'Task 1 各圖表模板總複習＋一篇 20分鐘'],
+    ['reading', 5, '【模考3】劍19 T1 聽力＋閱讀'],
+    ['writing', 6, '模考3 檢討＋每週回顧'],
+    ['material', 5, 'EGIU Unit 127–135（週六複習）'],
+  ]},
+  { week: '2026-11-02', no: 16, phase: '第四階段・每週模考衝刺（W15–18）', egiu: 'Unit 136–145', items: [
+    ['reading', 0, '模考3 弱點專練'],
+    ['listening', 1, '劍15 T2 聽力 30分鐘'],
+    ['speaking', 2, 'Cambly＋自錄（考試流程完整跑一次）'],
+    ['writing', 4, '【模考4】Task 1＋2 連寫 60分鐘'],
+    ['reading', 5, '【模考4】劍19 T2 聽力＋閱讀'],
+    ['writing', 6, '模考4 檢討＋每週回顧'],
+    ['material', 5, 'EGIU Unit 136–145（週六複習）→ 145 全部完成！'],
+  ]},
+  { week: '2026-11-09', no: 17, phase: '第四階段・每週模考衝刺（W15–18）', egiu: '總複習（只翻答錯過的單元）', items: [
+    ['reading', 0, '【模考5】劍20 T1 聽力＋閱讀（最後一次全模考）'],
+    ['listening', 1, '模考5 訂正＋聽力錯因總瀏覽'],
+    ['speaking', 2, 'Cambly＋考場流程演練'],
+    ['writing', 4, 'Task 2 高頻主題 plan 練習×3（只 plan 不寫全篇）'],
+    ['reading', 5, '拆解檢核紀錄總回顧（看平均分與猜題率）'],
+    ['writing', 6, '模考5 檢討＋每週回顧'],
+    ['material', 5, 'EGIU：只翻答錯過的單元'],
+  ]},
+  { week: '2026-11-16', no: 18, phase: '考前週（11/21 週六考試）', egiu: '考前休息，不排新單元', items: [
+    ['reading', 0, '錯題本／錯因 Top 3 總複習（不做新題）'],
+    ['listening', 1, '輕量：Shadowing＋場景詞掃讀'],
+    ['speaking', 2, 'Cambly（考前最後調整）＋語料快速過一遍'],
+    ['writing', 4, '模板默寫一次（Task 1＋2 各題型開頭結尾）'],
+    ['reading', 5, '準備考試用品、早睡；平行閱讀法五步驟心中過一遍'],
+    ['writing', 6, '11/21（六）考試日！加油 🎉'],
+  ]},
+];
