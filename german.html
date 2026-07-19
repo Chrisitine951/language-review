@@ -13,6 +13,10 @@
 <style>
   /* 德文 App 主色＝紅色（英文 App 是藍色，兩支 App 一眼可分辨） */
   :root { --primary: var(--de); --primary-light: var(--de-light); }
+  /* 單字卡背面的變化表（v2.1.0）：沿用 core.css 的 case-table 樣式，只縮小字級 */
+  #fc-conjug .case-table-wrap { margin: 8px 0 0; }
+  #fc-conjug .case-table { font-size: 12px; }
+  #fc-conjug .case-table caption { font-size: 11px; }
 </style>
 </head>
 <body>
@@ -87,6 +91,8 @@
                 <div class="flashcard-meaning" id="fc-meaning"></div>
                 <div class="flashcard-example" id="fc-example"></div>
                 <div class="flashcard-example" id="fc-note" style="color:var(--amber);"></div>
+                <!-- v2.1.0：名詞顯示四格變化（由冠詞動態算出）、動詞顯示六人稱變化表 -->
+                <div id="fc-conjug"></div>
                 <button class="speak-btn-inline" onclick="event.stopPropagation(); speakCurrentExample();" title="唸例句">📢</button>
               </div>
               <div class="flashcard-hint" id="fc-hint">點擊翻面</div>
@@ -204,6 +210,7 @@
             <div class="grammar-stat"><div class="grammar-stat-num" id="deconj-wrong" style="color:var(--de);">0</div><div class="grammar-stat-label">答錯</div></div>
             <div class="grammar-stat"><div class="grammar-stat-num" id="deconj-total">0</div><div class="grammar-stat-label">已練習</div></div>
           </div>
+          <div id="deconj-pool-note" style="font-size:12px; color:var(--text3); padding: 0 16px 4px;"></div>
           <div id="deconj-question-container"></div>
         </div>
       </div>
@@ -217,7 +224,8 @@
       <div class="section-header"><span class="section-title">上傳課堂紀錄</span></div>
       <div class="diary-input-card">
         <div style="font-size:12px; color:var(--text3); line-height:1.6; margin-bottom:10px;">
-          拍照、上傳 PDF 或貼上課堂內容 → AI 自動整理成德文單字／文法／句型 → 確認後直接存進資料庫（GitHub）。
+          拍照、上傳 PDF 或貼上課堂內容 → AI 自動整理成德文單字／文法／句型 → 確認後直接存進資料庫（GitHub）。<br>
+          動詞會順便帶出六人稱變化，確認後就會自動出現在「動詞變化」練習題庫。
         </div>
         <textarea class="diary-textarea" id="inbox-text" style="min-height:90px;" placeholder="貼上文字內容（課堂筆記、講義…），或只上傳照片/PDF"></textarea>
         <div class="diary-toolbar">
@@ -305,6 +313,7 @@
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">德文單字</div><div class="settings-item-sub" id="settings-de-count">—</div></div><span class="tag tag-de">單字</span></div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">文法規則</div><div class="settings-item-sub" id="settings-grammar-count">—</div></div><span class="tag tag-green">文法</span></div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">發音規則 / 句型</div><div class="settings-item-sub" id="settings-pr-count">—</div></div><span class="tag tag-amber">基礎</span></div>
+          <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">動詞變化題庫</div><div class="settings-item-sub" id="settings-conj-count">—</div></div><span class="tag tag-de">動詞</span></div>
           <div class="settings-item">
             <div class="settings-item-left"><div class="settings-item-title">重置今日進度</div><div class="settings-item-sub">清除今天的翻牌記錄</div></div>
             <button onclick="resetToday()" style="font-size:13px; color:var(--de); font-weight:600;">重置</button>
@@ -329,7 +338,7 @@
         </div>
 
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Deutsch App v2.0.0<br>英文/雅思功能在 english.html
+          Deutsch App v2.1.0<br>英文/雅思功能在 english.html
         </div>
       </div>
     </div>
@@ -359,10 +368,13 @@
 
 <script>
 // ============================================================
-// german.html — 德文 App（v2.0.0）
+// german.html — 德文 App（v2.1.0）
 // 共用邏輯（GitHub/Gemini/TTS/工具）在 core.js，樣式在 core.css。
 // 【localStorage 前綴規則】這支 App 沿用 v1 的 lr_ 前綴（零遷移，Murray 和
 //   Christine 的德文進度都原封不動）；英文 App 用 lren_。改前綴會弄丟她們的進度！
+// 【v2.1.0 新增】① 冠詞去重（deSplitWord/deFullWord）② 單字卡背面顯示變化表
+//   （名詞四格由冠詞算出、動詞六人稱來自 conjugation 欄位）③ 動詞變化練習題庫
+//   自動吃 data.js/收集箱裡有 conjugation 的動詞。
 // ============================================================
 
 // ============================================================
@@ -383,6 +395,38 @@ let grammarStats = { correct: 0, wrong: 0 };
 let degrStats = { correct: 0, wrong: 0 }, degrCurrentQ = null, degrAnswered = false;
 let deconjStats = { correct: 0, wrong: 0 }, deconjAnswered = false;
 let touchStartX = 0, touchStartY = 0, isDragging = false;
+
+// ============================================================
+// 德文冠詞處理（v2.1.0）
+//
+// 【為什麼需要】舊資料裡有些 word 欄位已經含冠詞（"das Kind"）、有些沒有，
+// 而 article 欄位又另外存了一份 → 顯示時會變成「das das Kind」。
+// 這裡在「顯示層」統一處理，不動 data.js（她的檔案是 ground truth，
+// 而且大整理才由對話中的 AI 做）。之後收集箱存進去的一律是不含冠詞的乾淨格式。
+// ============================================================
+const DE_ARTICLES = ['der', 'die', 'das'];
+// 把可能含冠詞的 word 拆成 { article, word }：冠詞優先取 word 開頭的，其次用 article 欄位
+function deSplitWord(w) {
+  if (!w) return { article: '', word: '' };
+  let word = String(w.word || '').trim();
+  let article = String(w.article || '').trim();
+  const m = word.match(/^(der|die|das)\s+(.+)$/i);
+  if (m) {
+    // word 開頭就有冠詞 → 以它為準（比 article 欄位可靠，是實際寫在單字上的）
+    article = m[1].toLowerCase();
+    word = m[2].trim();
+  } else if (article && !DE_ARTICLES.includes(article.toLowerCase())) {
+    article = ''; // article 欄位放了奇怪的東西（例如空白或詞性）就忽略
+  } else {
+    article = article.toLowerCase();
+  }
+  return { article, word };
+}
+// 拿來發音／比對答案用的完整形式："das Kind"（沒冠詞的動詞形容詞就只有單字本身）
+function deFullWord(w) {
+  const s = deSplitWord(w);
+  return (s.article ? s.article + ' ' : '') + s.word;
+}
 
 // ============================================================
 // STORAGE（沿用 v1 的 lr_ 前綴）
@@ -530,7 +574,8 @@ function updateHome() {
   document.getElementById('home-vocab-count').textContent = due > 0 ? `${due} 個到期複習` : `${GERMAN_VOCABULARY.length} 個單字`;
   document.getElementById('home-pr-count').textContent = `${GERMAN_PRONUNCIATION.length} 條規則`;
   document.getElementById('home-sent-count').textContent = `${GERMAN_SENTENCES.length} 個句子`;
-  document.getElementById('home-grammar-count').textContent = `${GERMAN_GRAMMAR.length} 條規則・${GERMAN_VERB_CONJUGATIONS.length} 個動詞`;
+  // 動詞數＝內建題庫＋資料庫裡有變化表的動詞（v2.1.0）
+  document.getElementById('home-grammar-count').textContent = `${GERMAN_GRAMMAR.length} 條規則・${conjugationPool().length} 個動詞`;
   document.getElementById('streak-vocab').textContent = todayStats.deFlipped || 0;
   document.getElementById('streak-grammar').textContent = todayStats.grammarPracticed || 0;
   document.getElementById('streak-total').textContent = GERMAN_VOCABULARY.length;
@@ -544,7 +589,7 @@ function updateHome() {
         if (!d) return '';
         return `<div class="cambly-item" style="margin-bottom:8px; cursor:pointer;" onclick="switchPage('vocab')">
           <div class="cambly-item-header"><span class="tag tag-de">🇩🇪 德文</span><span style="font-size:11px; color:var(--de);">到期複習</span></div>
-          <div class="cambly-item-topic">${escHtml((d.article ? d.article + ' ' : '') + d.word)}</div></div>`;
+          <div class="cambly-item-topic">${escHtml(deFullWord(d))}</div></div>`;
       }).join('');
 }
 
@@ -633,18 +678,21 @@ function renderFlashcard() {
   const card = document.getElementById('flashcard');
   cardFlipped = false;
   card.className = 'flashcard';
-  document.getElementById('fc-article').textContent = w.article || '';
-  document.getElementById('fc-word').textContent = w.word;
+  // v2.1.0：冠詞一律用 deSplitWord 拆出來顯示，避免舊資料出現「das das Kind」
+  const s = deSplitWord(w);
+  document.getElementById('fc-article').textContent = s.article;
+  document.getElementById('fc-word').textContent = s.word;
   document.getElementById('fc-pos').textContent = w.pos || '';
   document.getElementById('fc-back').style.display = 'none';
   document.getElementById('fc-meaning').textContent = w.meaning || '';
   document.getElementById('fc-example').textContent = w.example || '';
   document.getElementById('fc-note').textContent = w.note ? '💡 ' + w.note : '';
+  document.getElementById('fc-conjug').innerHTML = renderCardTable(w); // 名詞四格／動詞六人稱
   document.getElementById('fc-hint').textContent = '點擊翻面';
   const tag = document.getElementById('fc-tag');
-  const s = getSchedule(w.id);
+  const sc = getSchedule(w.id);
   tag.className = 'tag tag-de';
-  tag.textContent = ['新單字','7天後','14天後','30天後'][s.stage - 1] || '新單字';
+  tag.textContent = ['新單字','7天後','14天後','30天後'][sc.stage - 1] || '新單字';
   document.getElementById('fc-progress').style.width = Math.round((currentCardIdx / currentDeck.length) * 100) + '%';
   document.getElementById('fc-progress-text').textContent = `${currentCardIdx} / ${currentDeck.length}`;
   document.getElementById('ai-example-result').innerHTML = '';
@@ -693,8 +741,7 @@ fcArea.addEventListener('touchend', e => {
 });
 function speakCurrentWord() {
   if (!currentDeck.length) return;
-  const w = currentDeck[currentCardIdx];
-  speak((w.article ? w.article + ' ' : '') + w.word, 'de-DE');
+  speak(deFullWord(currentDeck[currentCardIdx]), 'de-DE');
 }
 function speakCurrentExample() {
   if (!currentDeck.length) return;
@@ -708,7 +755,8 @@ function renderTyping() {
   input.value = ''; input.className = 'typing-input';
   document.getElementById('typing-feedback').innerHTML = '';
   document.getElementById('typing-word').textContent = w.meaning;
-  document.getElementById('typing-hint').textContent = w.article ? `提示：定冠詞 ${w.article}` : '';
+  const s = deSplitWord(w);
+  document.getElementById('typing-hint').textContent = s.article ? `提示：定冠詞 ${s.article}` : '';
   document.getElementById('typing-progress').style.width = Math.round((currentCardIdx / currentDeck.length) * 100) + '%';
   document.getElementById('typing-progress-text').textContent = `${currentCardIdx} / ${currentDeck.length}`;
 }
@@ -721,11 +769,13 @@ function checkTyping() {
   const w = currentDeck[currentCardIdx];
   const input = document.getElementById('typing-input');
   const val = input.value.trim().toLowerCase();
-  const answer = (w.article ? w.article + ' ' : '') + w.word;
-  let correct = val === answer.toLowerCase() || val === w.word.toLowerCase();
+  // v2.1.0：用 deFullWord/deSplitWord 比對，含冠詞、不含冠詞都算對（舊資料重複冠詞也不會誤判）
+  const s = deSplitWord(w);
+  const answer = deFullWord(w);
+  let correct = val === answer.toLowerCase() || val === s.word.toLowerCase();
   if (!correct) {
     const nv = normalizeGerman(val);
-    correct = nv === normalizeGerman(answer) || nv === normalizeGerman(w.word);
+    correct = nv === normalizeGerman(answer) || nv === normalizeGerman(s.word);
   }
   input.className = 'typing-input ' + (correct ? 'correct' : 'wrong');
   const fb = document.getElementById('typing-feedback');
@@ -875,8 +925,68 @@ function renderCaseTables() {
 }
 
 // ============================================================
+// 單字卡背面的變化表（v2.1.0）
+//
+// 【設計原則：能算出來的就不存】
+// - 名詞四格：定冠詞的格位變化是固定規則，用 article 直接查表算出來，
+//   資料庫一個欄位都不用加（零儲存）。
+// - 動詞六人稱：沒有規則可算（不規則動詞太多），所以才需要 conjugation 欄位；
+//   沒有這個欄位的動詞就不顯示表格，不會壞掉。
+// ============================================================
+const CONJ_PERSONS = ['ich', 'du', 'er/sie/es', 'wir', 'ihr', 'sie/Sie'];
+// 定冠詞四格：陽性 der→den→dem→des／陰性 die→die→der→der／中性 das→das→dem→des／複數 die→die→den→der
+const NOUN_CASE_FORMS = {
+  der: ['der', 'den', 'dem', 'des'],
+  die: ['die', 'die', 'der', 'der'],
+  das: ['das', 'das', 'dem', 'des'],
+  _plural: ['die', 'die', 'den', 'der'],
+};
+const NOUN_CASE_LABELS = ['Nominativ 主格', 'Akkusativ 受格', 'Dativ 與格', 'Genitiv 屬格'];
+// 把「ich,du,er,wir,ihr,sie」六段逗號字串解析成 forms 物件；不是剛好六段就回 null（不存壞資料）
+function parseConjugation(str) {
+  if (!str) return null;
+  const parts = String(str).split(/[,，]/).map(s => s.trim()).filter(Boolean);
+  if (parts.length !== 6) return null;
+  const forms = {};
+  CONJ_PERSONS.forEach((p, i) => { forms[p] = parts[i]; });
+  return forms;
+}
+// 反向：把 forms 物件變回逗號字串（給收集箱編輯欄位用）
+function conjugationToString(forms) {
+  if (!forms) return '';
+  return CONJ_PERSONS.map(p => forms[p] || '').join(', ');
+}
+function renderConjTable(forms, caption) {
+  if (!forms) return '';
+  return `<div class="case-table-wrap"><table class="case-table">
+    ${caption ? `<caption>${escHtml(caption)}</caption>` : ''}
+    <tbody>${CONJ_PERSONS.map(p => `<tr><td>${escHtml(p)}</td><td><strong>${escHtml(forms[p] || '—')}</strong></td></tr>`).join('')}</tbody>
+  </table></div>`;
+}
+// 單字卡背面要顯示什麼：動詞 → 六人稱表；名詞 → 四格一行；其他 → 不顯示
+function renderCardTable(w) {
+  if (!w) return '';
+  if (w.conjugation) {
+    const forms = typeof w.conjugation === 'string' ? parseConjugation(w.conjugation) : w.conjugation;
+    if (forms) return renderConjTable(forms, '現在式變化');
+  }
+  const s = deSplitWord(w);
+  if (!s.article) return '';
+  // 複數名詞的冠詞也是 die，但格位變化和陰性不同 → 用詞性判斷
+  const isPlural = /複數/.test(w.pos || '');
+  const forms = isPlural ? NOUN_CASE_FORMS._plural : NOUN_CASE_FORMS[s.article];
+  if (!forms) return '';
+  return `<div class="case-table-wrap"><table class="case-table">
+    <caption>${escHtml(s.word)} 的格位變化${isPlural ? '（複數）' : ''}</caption>
+    <thead><tr>${NOUN_CASE_LABELS.map(l => `<th>${escHtml(l.split(' ')[1])}</th>`).join('')}</tr></thead>
+    <tbody><tr>${forms.map(f => `<td><strong>${escHtml(f)}</strong> ${escHtml(s.word)}</td>`).join('')}</tr></tbody>
+  </table></div>`;
+}
+
+// ============================================================
 // 德文動詞變化練習（純本機題庫，不需要 AI，離線可用）
 // 干擾項故意用「同一個動詞的其他人稱」——測的是分不分得清哪個變化對應哪個人稱
+// v2.1.0：題庫＝內建 14 個動詞 ＋ 資料庫裡有 conjugation 欄位的動詞（收集箱存進來的）
 // ============================================================
 const GERMAN_VERB_CONJUGATIONS = [
   { infinitive: 'sein', meaning: '是（be動詞）', forms: { 'ich':'bin','du':'bist','er/sie/es':'ist','wir':'sind','ihr':'seid','sie/Sie':'sind' } },
@@ -894,10 +1004,39 @@ const GERMAN_VERB_CONJUGATIONS = [
   { infinitive: 'lernen', meaning: '學習', forms: { 'ich':'lerne','du':'lernst','er/sie/es':'lernt','wir':'lernen','ihr':'lernt','sie/Sie':'lernen' } },
   { infinitive: 'wohnen', meaning: '居住', forms: { 'ich':'wohne','du':'wohnst','er/sie/es':'wohnt','wir':'wohnen','ihr':'wohnt','sie/Sie':'wohnen' } },
 ];
+// 題庫池＝內建 ＋ 單字庫裡有 conjugation 的動詞
+// 過濾條件：不重複的變化形式至少 3 種，否則出題會出現「三個選項有兩個一樣」（例如
+// 變化全部相同的動詞，選項湊不出有意義的干擾項）
+function conjugationPool() {
+  const pool = [...GERMAN_VERB_CONJUGATIONS];
+  const seen = new Set(pool.map(v => v.infinitive.toLowerCase()));
+  if (typeof GERMAN_VOCABULARY !== 'undefined') {
+    GERMAN_VOCABULARY.forEach(w => {
+      if (!w.conjugation) return;
+      const forms = typeof w.conjugation === 'string' ? parseConjugation(w.conjugation) : w.conjugation;
+      if (!forms) return;
+      const uniq = new Set(CONJ_PERSONS.map(p => forms[p]).filter(Boolean));
+      if (uniq.size < 3) return;
+      const inf = deSplitWord(w).word.toLowerCase();
+      if (!inf || seen.has(inf)) return; // 以原形去重，內建的優先
+      seen.add(inf);
+      pool.push({ infinitive: deSplitWord(w).word, meaning: w.meaning || '', forms });
+    });
+  }
+  return pool;
+}
 function nextConjugationQuestion() {
   const container = document.getElementById('deconj-question-container');
   deconjAnswered = false;
-  const verb = GERMAN_VERB_CONJUGATIONS[Math.floor(Math.random() * GERMAN_VERB_CONJUGATIONS.length)];
+  const pool = conjugationPool();
+  const note = document.getElementById('deconj-pool-note');
+  if (note) {
+    const extra = pool.length - GERMAN_VERB_CONJUGATIONS.length;
+    note.textContent = extra > 0
+      ? `題庫：${pool.length} 個動詞（內建 ${GERMAN_VERB_CONJUGATIONS.length} ＋ 你的單字庫 ${extra}）`
+      : `題庫：${pool.length} 個動詞・在收集箱新增動詞時填變化，就會自動加進來`;
+  }
+  const verb = pool[Math.floor(Math.random() * pool.length)];
   const persons = Object.keys(verb.forms);
   const person = persons[Math.floor(Math.random() * persons.length)];
   const correct = verb.forms[person];
@@ -1067,6 +1206,8 @@ function renderGermanGrammar() {
 
 // ============================================================
 // 收集箱（德文版：只辨識德文單字／文法／句型）
+// v2.1.0：① 要求 AI 回傳「不含冠詞」的乾淨 word，冠詞獨立放 article 欄位
+//         ② 動詞要求回傳六人稱變化（逗號分隔），存進 conjugation 欄位
 // ============================================================
 const INBOX_PDF_SIZE_LIMIT = 15 * 1024 * 1024;
 async function handleInboxPhoto(event) {
@@ -1110,14 +1251,21 @@ The content may include: German lesson handouts, vocabulary lists, handwritten n
 
 Analyze the content and extract items into this exact JSON structure. Only include items clearly present. Return ONLY valid JSON, no markdown fences:
 {
-  "germanVocab": [ { "article": "der/die/das or empty string", "pos": "中文詞性（陽性名詞/陰性名詞/中性名詞/動詞/形容詞/副詞/慣用語）", "word": "das Wort (include article in word for nouns)", "meaning": "中文意思", "category": "greeting/people/food/objects/body/places/nature/verb/adjective/time/other", "example": "German example sentence", "note": "特別提醒（選填，如不規則變化）" } ],
+  "germanVocab": [ { "article": "der/die/das for nouns, empty string for everything else", "pos": "中文詞性（陽性名詞/陰性名詞/中性名詞/複數名詞/動詞/形容詞/副詞/慣用語）", "word": "the word WITHOUT the article", "meaning": "中文意思", "category": "greeting/people/food/objects/body/places/nature/verb/adjective/time/other", "example": "German example sentence", "note": "特別提醒（選填，如不規則變化）", "conjugation": "verbs only: the six present-tense forms, comma separated" } ],
   "germanGrammar": [ { "category": "case_akkusativ/case_dativ/case_genitiv/clause/idiom/essay_correction/vocab_pattern", "rule": "規則（繁體中文）", "example": "German example", "explanation": "繁體中文解釋" } ],
   "germanSentences": [ { "german": "German sentence", "chinese": "中文翻譯", "unitTitle": "單元名稱（若可辨識）" } ]
 }
 
 Rules:
 - Meanings and explanations in Traditional Chinese (繁體中文)
-- For nouns, always include the article in "word" (e.g. "das Kind") and also in the "article" field
+- IMPORTANT — "word" must NEVER include the article. Put the article in the "article" field only.
+  Correct:   { "article": "das", "word": "Kind" }
+  Wrong:     { "article": "das", "word": "das Kind" }
+- For verbs, give "word" as the infinitive and fill "conjugation" with exactly 6 present-tense forms
+  in this order: ich, du, er/sie/es, wir, ihr, sie/Sie
+  Example for "gehen": "gehe, gehst, geht, gehen, geht, gehen"
+  If you are not confident about the conjugation, leave "conjugation" as an empty string.
+- For non-verbs, "conjugation" must be an empty string.
 - If content is unreadable or empty, return {"germanVocab":[],"germanGrammar":[],"germanSentences":[]}`;
   const parts = [{ text: prompt }];
   if (text) parts.push({ text: '\n\n=== Content to analyze ===\n' + text });
@@ -1128,7 +1276,14 @@ Rules:
   try { parsed = JSON.parse(stripJsonFences(result.text)); }
   catch(e) { statusEl.innerHTML = `<div class="ai-result" style="color:var(--danger);">❌ AI 回傳的格式無法解析，請再試一次</div>`; return; }
   let added = 0;
-  (parsed.germanVocab || []).forEach(v => { inboxItems.push({ type: 'de_vocab', article: v.article || '', pos: v.pos || '', word: v.word || '', meaning: v.meaning || '', category: v.category || 'other', example: v.example || '', note: v.note || '' }); added++; });
+  (parsed.germanVocab || []).forEach(v => {
+    // AI 偶爾還是會把冠詞塞進 word（prompt 說了也一樣），所以這裡再正規化一次
+    const s = deSplitWord({ article: v.article || '', word: v.word || '' });
+    inboxItems.push({ type: 'de_vocab', article: s.article, pos: v.pos || '', word: s.word,
+      meaning: v.meaning || '', category: v.category || 'other', example: v.example || '',
+      note: v.note || '', conjugation: v.conjugation || '' });
+    added++;
+  });
   (parsed.germanGrammar || []).forEach(g => { inboxItems.push({ type: 'de_grammar', category: g.category || 'idiom', rule: g.rule || '', example: g.example || '', explanation: g.explanation || '' }); added++; });
   (parsed.germanSentences || []).forEach(s => { inboxItems.push({ type: 'de_sentence', german: s.german || '', chinese: s.chinese || '', unitTitle: s.unitTitle || '' }); added++; });
   saveData(); renderInboxList();
@@ -1148,7 +1303,7 @@ const INBOX_TYPE_LABEL = {
   de_sentence: { label: '💬 德文句子', tag: 'tag-amber' },
 };
 const INBOX_TYPE_FIELDS = {
-  de_vocab: [['article','冠詞'],['word','單字'],['meaning','中文'],['pos','詞性'],['category','分類'],['example','例句'],['note','提醒']],
+  de_vocab: [['article','冠詞'],['word','單字'],['meaning','中文'],['pos','詞性'],['category','分類'],['example','例句'],['note','提醒'],['conjugation','動詞變化（6個逗號分隔）']],
   de_grammar: [['rule','規則'],['category','分類'],['example','例句'],['explanation','解釋']],
   de_sentence: [['german','德文'],['chinese','中文'],['unitTitle','單元']],
 };
@@ -1171,6 +1326,8 @@ function renderInboxList() {
         <span class="inbox-field-label">${label}</span>
         <input class="inbox-field-input" value="${escAttr(item[key] || '')}" data-idx="${idx}" data-key="${key}" oninput="updateInboxField(this)">
       </div>`).join('')}
+      ${item.type === 'de_vocab' && item.conjugation && !parseConjugation(item.conjugation)
+        ? `<div style="font-size:11px; color:var(--amber); padding:2px 0 0;">⚠️ 動詞變化不是 6 個（用逗號分隔 ich, du, er, wir, ihr, sie），儲存時會略過這欄</div>` : ''}
     </div>`;
   }).join('');
 }
@@ -1193,12 +1350,21 @@ async function saveInboxToGithub() {
     return;
   }
   statusEl.innerHTML = `<div class="ai-loading" style="margin-top:10px;"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>正在儲存到 GitHub…</div>`;
+  let conjSaved = 0;
   const result = await githubAppendToUserData((ud) => {
     let n = 0;
+    conjSaved = 0;
     inboxItems.forEach(item => {
       n++;
       if (item.type === 'de_vocab') {
-        ud.germanVocabulary.push({ id: makeUserId('de', n), article: item.article, pos: item.pos || '', word: item.word, meaning: item.meaning, category: item.category || 'other', example: item.example, note: item.note || '' });
+        // 存進資料庫前正規化：word 不含冠詞、冠詞獨立一欄（v2.1.0 起的乾淨格式）
+        const s = deSplitWord(item);
+        const entry = { id: makeUserId('de', n), article: s.article, pos: item.pos || '', word: s.word,
+          meaning: item.meaning, category: item.category || 'other', example: item.example, note: item.note || '' };
+        // 動詞變化：解析成功才存（不是 6 段就當作沒填，不存壞資料進資料庫）
+        const forms = parseConjugation(item.conjugation);
+        if (forms) { entry.conjugation = forms; conjSaved++; }
+        ud.germanVocabulary.push(entry);
       } else if (item.type === 'de_grammar') {
         ud.germanGrammar.push({ id: makeUserId('gg', n), category: item.category || 'idiom', rule: item.rule, example: item.example, explanation: item.explanation, mastered: false });
       } else if (item.type === 'de_sentence') {
@@ -1215,7 +1381,8 @@ async function saveInboxToGithub() {
   saveData();
   mergeUserData(result.userData);
   renderInboxList();
-  statusEl.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 已儲存 ${saved} 個項目！GitHub Pages 約 1 分鐘後更新，本機已即時生效</div>`;
+  updateHome();
+  statusEl.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 已儲存 ${saved} 個項目！${conjSaved ? `其中 ${conjSaved} 個動詞的變化表已加進「動詞變化」練習題庫。` : ''}<br>GitHub Pages 約 1 分鐘後更新，本機已即時生效</div>`;
   showToast('✅ 儲存成功！');
 }
 
@@ -1227,7 +1394,7 @@ async function getAIExample() {
   const w = currentDeck[currentCardIdx];
   const resultEl = document.getElementById('ai-example-result');
   resultEl.innerHTML = `<div class="ai-loading"><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>AI 生成中…</div>`;
-  const result = await callGemini(`Generate 2 short, natural example sentences for the German word "${(w.article ? w.article + ' ' : '') + w.word}" (${w.meaning}) at A1-A2 level.
+  const result = await callGemini(`Generate 2 short, natural example sentences for the German word "${deFullWord(w)}" (${w.meaning}) at A1-A2 level.
 Each sentence should be simple, practical, and help a Taiwanese learner remember this word.
 Format:
 1. [German sentence] → [Chinese translation]
@@ -1277,6 +1444,8 @@ function initSettings() {
   document.getElementById('settings-de-count').textContent = `共 ${GERMAN_VOCABULARY.length} 個`;
   document.getElementById('settings-grammar-count').textContent = `共 ${GERMAN_GRAMMAR.length} 條`;
   document.getElementById('settings-pr-count').textContent = `${GERMAN_PRONUNCIATION.length} 條發音規則・${GERMAN_SENTENCES.length} 個句型`;
+  const pool = conjugationPool();
+  document.getElementById('settings-conj-count').textContent = `${pool.length} 個動詞（內建 ${GERMAN_VERB_CONJUGATIONS.length} ＋ 單字庫 ${pool.length - GERMAN_VERB_CONJUGATIONS.length}）`;
 }
 function updateAutoSyncToggle() {
   const btn = document.getElementById('autosync-toggle');
@@ -1302,7 +1471,7 @@ function resetAllSchedule() {
   reviewSchedule = {}; saveData(); showToast('複習排程已清除');
 }
 function exportData() {
-  const obj = { exportDate: new Date().toISOString(), version: '2.0.0', app: 'german', reviewSchedule, grammarStats, todayStats, inboxItems };
+  const obj = { exportDate: new Date().toISOString(), version: '2.1.0', app: 'german', reviewSchedule, grammarStats, todayStats, inboxItems };
   const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
