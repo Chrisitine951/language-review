@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784298671442,
+  "savedAt": 1784448233001,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -790,9 +790,8 @@
     "total": 16
   },
   "todayStats": {
-    "flipped": 41,
-    "grammarPracticed": 0,
-    "date": "Fri Jul 17 2026"
+    "flipped": 0,
+    "grammarPracticed": 0
   },
   "diaryEntries": [],
   "engooRecords": [
@@ -845,5 +844,10 @@
     }
   ],
   "breakdowns": [],
-  "essayRecords": []
+  "essayRecords": [],
+  "egiuDone": {
+    "1": "2026-07-19",
+    "2": "2026-07-19"
+  },
+  "planImportedWeeks": []
 }
