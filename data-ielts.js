@@ -738,3 +738,243 @@ const IELTS_STUDY_PLAN = [
     ['writing', 6, '11/21（六）考試日！加油 🎉'],
   ]},
 ];
+
+// ============================================================
+// Paraphrase Bank／改寫語料庫（v2.2.0，英文 App 雅思口說區）
+//
+// 【設計】依 IELTS 語境整理「一個核心概念 → 多個可替換表達」，並標語域(register)。
+// - 固定資料放這裡（IELTS_PARAPHRASES）；收集箱新增的走 data-user.json 的 paraphrases，
+//   由 core.js mergeUserData() 以 id 去重合併進來（新增 id 前綴 upara_，永不衝突）。
+// - register 只有三值：
+//     spoken  = 主要適合口說／較自然的會話
+//     formal  = 主要適合正式寫作／較正式語境
+//     neutral = 口說與寫作通常都可使用
+// - ⚠️ 近義詞不是所有句子都能互換！每筆的 note 與例句保留使用限制，出題也靠這個防呆。
+//
+// 【出題邏輯（純本機，離線可用）】不用「同概念其他表達」當干擾項（它們往往都對），
+//   而是從「其他 concept」抽 register 相同、語意不符的表達當干擾項；湊不到 2 個就跳題。
+//   詳見 english.html 的 paraphrasePracticePool() / nextParaphraseQuestion()。
+// ============================================================
+const PARAPHRASE_TOPICS = [
+  { id: 'holidays and travel', label: '🧳 旅遊假期' },
+  { id: 'work', label: '💼 工作' },
+  { id: 'feelings and opinions', label: '💭 感受與觀點' },
+  { id: 'cost and value', label: '💰 費用與價值' },
+  { id: 'frequency', label: '🔁 頻率' },
+  { id: 'environment', label: '🌱 環境' },
+];
+const PARAPHRASE_REGISTERS = ['spoken', 'formal', 'neutral'];
+
+const IELTS_PARAPHRASES = [
+  // ===== cost and value =====
+  { id: "para_expensive_001", concept: "very expensive", topics: ["cost and value", "holidays and travel"],
+    original: "The trip was very expensive.",
+    speakingExample: "The whole trip cost an arm and a leg.",
+    writingExample: "The trip was relatively costly compared with other options.",
+    expressions: [
+      { text: "cost an arm and a leg", register: "spoken", note: "口語慣用語，很生動；不適合正式寫作。" },
+      { text: "cost a fortune", register: "spoken", note: "口語誇飾，強調花很多錢。" },
+      { text: "costly", register: "formal", note: "適合正式寫作，中性偏正式。" },
+      { text: "pricey", register: "spoken", note: "口語，比 expensive 更隨意。" },
+    ] },
+  { id: "para_cheap_001", concept: "cheap / good value", topics: ["cost and value"],
+    original: "The hotel was cheap.",
+    speakingExample: "The hotel was really good value for money.",
+    writingExample: "The accommodation was reasonably priced.",
+    expressions: [
+      { text: "good value for money", register: "neutral", note: "正面說法，比 cheap 得體，口說寫作皆可。" },
+      { text: "reasonably priced", register: "formal", note: "適合寫作，中性禮貌。" },
+      { text: "affordable", register: "neutral", note: "口說寫作皆可，強調負擔得起。" },
+      { text: "a bargain", register: "spoken", note: "口語，指划算的好康。" },
+    ] },
+  { id: "para_afford_001", concept: "can barely afford", topics: ["cost and value", "work"],
+    original: "I could barely afford it.",
+    speakingExample: "It was so pricey I could barely afford it.",
+    writingExample: "The cost was almost beyond my budget.",
+    expressions: [
+      { text: "could barely afford", register: "neutral", note: "口說寫作皆可。" },
+      { text: "beyond my budget", register: "formal", note: "偏正式，適合寫作。" },
+      { text: "stretch my budget", register: "spoken", note: "口語，指預算被撐到極限。" },
+    ] },
+
+  // ===== holidays and travel =====
+  { id: "para_relax_001", concept: "relax / de-stress", topics: ["holidays and travel", "feelings and opinions"],
+    original: "I go on holiday to relax.",
+    speakingExample: "I travel mainly to unwind after a busy period at work.",
+    writingExample: "Many people take holidays in order to unwind and recharge.",
+    expressions: [
+      { text: "unwind", register: "neutral", note: "比 relax 更道地，口說寫作皆可；常搭 after work。" },
+      { text: "recharge", register: "neutral", note: "指補充精力，常與 unwind 連用。" },
+      { text: "de-stress", register: "spoken", note: "口語，強調釋放壓力。" },
+      { text: "wind down", register: "spoken", note: "口語片語動詞，指慢慢放鬆下來。" },
+    ] },
+  { id: "para_scenery_001", concept: "see something different / new surroundings", topics: ["holidays and travel"],
+    original: "I like to see something different.",
+    speakingExample: "I love travelling because I get to enjoy a change of scenery.",
+    writingExample: "A holiday offers a welcome change of scenery.",
+    expressions: [
+      { text: "a change of scenery", register: "neutral", note: "指換個環境；口說寫作皆可。注意這是名詞片語。" },
+      { text: "a change of pace", register: "neutral", note: "指換個生活步調，語意稍不同（步調≠風景），別當完全等義。" },
+    ] },
+  { id: "para_broaden_001", concept: "learn about new cultures", topics: ["holidays and travel", "feelings and opinions"],
+    original: "Travelling helps me learn about new cultures.",
+    speakingExample: "Travelling really helps me broaden my horizons.",
+    writingExample: "Travelling abroad can broaden one's horizons.",
+    expressions: [
+      { text: "broaden my horizons", register: "neutral", note: "指開闊眼界；口說寫作皆可。所有格隨主詞變（my/one's）。" },
+      { text: "gain a new perspective", register: "formal", note: "偏正式，指獲得新視角。" },
+      { text: "experience different cultures", register: "neutral", note: "較直白的中性說法。" },
+    ] },
+  { id: "para_holiday_001", concept: "holiday / time away from work", topics: ["holidays and travel", "work"],
+    original: "I need a holiday.",
+    speakingExample: "I really need some time off work.",
+    writingExample: "Employees are entitled to regular periods of paid leave.",
+    expressions: [
+      { text: "vacation", register: "neutral", note: "美式用語；英式 IELTS 情境 holiday 更常見，但 vacation 也接受。" },
+      { text: "time off work", register: "spoken", note: "口語，指請假／不上班的時間。" },
+      { text: "a break from work", register: "spoken", note: "口語，強調暫時脫離工作。" },
+      { text: "annual leave", register: "formal", note: "正式用語（年假），適合寫作或正式口說。" },
+    ] },
+  { id: "para_cuisine_001", concept: "food from a particular culture", topics: ["holidays and travel", "feelings and opinions"],
+    original: "I like food from other countries.",
+    speakingExample: "One of my favourite things about travelling is trying the local cuisine.",
+    writingExample: "Sampling local cuisine is a highlight of overseas travel.",
+    expressions: [
+      { text: "cuisine", register: "formal", note: "指某文化的整體飲食風格，比 food 正式；不可用於指單一道菜。" },
+      { text: "local delicacies", register: "neutral", note: "指當地特色美食（尤指珍稀或特別的）。" },
+    ] },
+
+  // ===== feelings and opinions =====
+  { id: "para_contemplate_001", concept: "think deeply about something", topics: ["feelings and opinions"],
+    original: "I like to think about things carefully.",
+    speakingExample: "I often take time to contemplate my future plans.",
+    writingExample: "It is worth contemplating the long-term consequences.",
+    expressions: [
+      { text: "contemplate", register: "formal", note: "偏正式，指深思；後可接名詞或動名詞。口語用會顯得較文謅謅。" },
+      { text: "reflect on", register: "neutral", note: "指回顧省思；口說寫作皆可。" },
+      { text: "mull over", register: "spoken", note: "口語片語，指反覆思量。" },
+    ] },
+  { id: "para_notmention_001", concept: "in addition / and also", topics: ["feelings and opinions"],
+    original: "It is cheap, and it is also convenient.",
+    speakingExample: "It's affordable, not to mention really convenient.",
+    writingExample: "The policy is cost-effective; in addition, it is easy to implement.",
+    expressions: [
+      { text: "not to mention", register: "spoken", note: "口語連接語，用來追加一個更強的點；後接名詞片語，別接完整子句。" },
+      { text: "in addition", register: "formal", note: "適合寫作的連接詞，句首用，後加逗號。" },
+      { text: "on top of that", register: "spoken", note: "口語，指此外、加上這點。" },
+      { text: "furthermore", register: "formal", note: "正式書面連接詞。" },
+    ] },
+  { id: "para_opinion_001", concept: "in my opinion", topics: ["feelings and opinions"],
+    original: "In my opinion, it is a good idea.",
+    speakingExample: "If you ask me, it's definitely worth it.",
+    writingExample: "From my perspective, the benefits outweigh the drawbacks.",
+    expressions: [
+      { text: "if you ask me", register: "spoken", note: "口語，引出個人看法；不適合正式寫作。" },
+      { text: "from my perspective", register: "formal", note: "適合寫作，比 in my opinion 更有變化。" },
+      { text: "as far as I'm concerned", register: "neutral", note: "口說寫作皆可，語氣稍強。" },
+    ] },
+  { id: "para_enjoy_001", concept: "really enjoy / love doing", topics: ["feelings and opinions"],
+    original: "I really like hiking.",
+    speakingExample: "I'm really into hiking these days.",
+    writingExample: "Hiking is one of my greatest passions.",
+    expressions: [
+      { text: "be really into", register: "spoken", note: "口語，指很熱衷某事；後接名詞或動名詞。" },
+      { text: "be keen on", register: "neutral", note: "口說寫作皆可，指熱衷／喜愛。" },
+      { text: "have a passion for", register: "formal", note: "偏正式，語氣較強。" },
+    ] },
+
+  // ===== work =====
+  { id: "para_busy_001", concept: "very busy at work", topics: ["work", "feelings and opinions"],
+    original: "I am very busy at work.",
+    speakingExample: "I've been snowed under at work lately.",
+    writingExample: "Employees often have a heavy workload during peak periods.",
+    expressions: [
+      { text: "snowed under", register: "spoken", note: "口語慣用語，指被工作淹沒；不適合正式寫作。" },
+      { text: "have a heavy workload", register: "formal", note: "適合寫作的中性說法。" },
+      { text: "swamped", register: "spoken", note: "口語，指忙翻了。" },
+    ] },
+  { id: "para_challenging_001", concept: "difficult / challenging", topics: ["work", "feelings and opinions"],
+    original: "My job is difficult.",
+    speakingExample: "My job can be pretty demanding at times.",
+    writingExample: "The role is intellectually challenging.",
+    expressions: [
+      { text: "demanding", register: "neutral", note: "指要求高、耗費心力；口說寫作皆可，比 difficult 得體。" },
+      { text: "challenging", register: "neutral", note: "中性偏正面，指有挑戰性（不全是負面）。" },
+      { text: "tough", register: "spoken", note: "口語，指辛苦、難搞。" },
+    ] },
+  { id: "para_rewarding_001", concept: "a job that gives satisfaction", topics: ["work", "feelings and opinions"],
+    original: "My job makes me feel good.",
+    speakingExample: "My job is really rewarding, even when it's hard.",
+    writingExample: "Teaching is widely regarded as a rewarding profession.",
+    expressions: [
+      { text: "rewarding", register: "neutral", note: "指有成就感的；口說寫作皆可（注意：指心理回報，不是薪水高）。" },
+      { text: "fulfilling", register: "formal", note: "偏正式，指讓人有滿足感的。" },
+    ] },
+
+  // ===== frequency =====
+  { id: "para_often_001", concept: "as often as possible", topics: ["frequency", "holidays and travel"],
+    original: "I travel whenever I can.",
+    speakingExample: "I try to travel as often as I can.",
+    writingExample: "People should exercise as frequently as possible.",
+    expressions: [
+      { text: "as often as I can", register: "spoken", note: "口語自然說法；主詞可換（as often as they can 等）。" },
+      { text: "as frequently as possible", register: "formal", note: "適合寫作，比較正式。" },
+      { text: "whenever I get the chance", register: "spoken", note: "口語，指一有機會就。" },
+    ] },
+  { id: "para_sometimes_001", concept: "sometimes / occasionally", topics: ["frequency"],
+    original: "I sometimes go to the gym.",
+    speakingExample: "I go to the gym every now and then.",
+    writingExample: "People occasionally overlook the long-term effects.",
+    expressions: [
+      { text: "every now and then", register: "spoken", note: "口語，指偶爾、不定期。" },
+      { text: "occasionally", register: "neutral", note: "口說寫作皆可。" },
+      { text: "from time to time", register: "neutral", note: "口說寫作皆可，指時不時。" },
+    ] },
+  { id: "para_usually_001", concept: "usually / most of the time", topics: ["frequency"],
+    original: "I usually stay at home.",
+    speakingExample: "I tend to stay in most of the time.",
+    writingExample: "People generally prefer convenience over cost.",
+    expressions: [
+      { text: "tend to", register: "neutral", note: "指傾向於（習慣性）；口說寫作皆可，後接原形動詞。" },
+      { text: "most of the time", register: "spoken", note: "口語，指大部分時候。" },
+      { text: "generally", register: "formal", note: "適合寫作的副詞。" },
+    ] },
+
+  // ===== environment =====
+  { id: "para_litter_001", concept: "rubbish / litter（用法不同，勿混用）", topics: ["environment"],
+    original: "There is a lot of rubbish on the street.",
+    speakingExample: "People shouldn't drop litter in the park.",
+    writingExample: "Littering in public spaces is a persistent problem.",
+    expressions: [
+      { text: "litter", register: "neutral", note: "⚠️ 與 rubbish 不完全等義！litter 專指「亂丟在公共場所的垃圾」，也可當動詞（drop litter／littering）。不可代換所有 rubbish（家裡的垃圾不叫 litter）。" },
+      { text: "rubbish", register: "neutral", note: "英式泛指垃圾（不可數）；美式常用 trash/garbage。" },
+      { text: "waste", register: "formal", note: "偏正式，指廢棄物（工業/家庭），寫作常用。" },
+    ] },
+  { id: "para_pollution_001", concept: "cause pollution / harm the environment", topics: ["environment"],
+    original: "Cars cause a lot of pollution.",
+    speakingExample: "Cars give off a lot of pollution.",
+    writingExample: "Vehicles emit significant amounts of greenhouse gases.",
+    expressions: [
+      { text: "give off", register: "spoken", note: "口語片語動詞，指排放（氣體/味道）。" },
+      { text: "emit", register: "formal", note: "正式用語，適合寫作；後接 emissions/gases。" },
+      { text: "harm the environment", register: "neutral", note: "中性直白，口說寫作皆可。" },
+    ] },
+  { id: "para_reduce_001", concept: "reduce / cut down", topics: ["environment", "cost and value"],
+    original: "We should reduce waste.",
+    speakingExample: "We should cut down on single-use plastic.",
+    writingExample: "Governments should reduce carbon emissions.",
+    expressions: [
+      { text: "cut down on", register: "spoken", note: "口語片語動詞，指減少（用量）；後接名詞。" },
+      { text: "reduce", register: "neutral", note: "口說寫作皆可，中性。" },
+      { text: "curb", register: "formal", note: "正式用語，指抑制／遏止（成長、排放）。" },
+    ] },
+  { id: "para_sustainable_001", concept: "environmentally friendly", topics: ["environment"],
+    original: "This product is good for the environment.",
+    speakingExample: "This packaging is really eco-friendly.",
+    writingExample: "Sustainable practices are essential for long-term development.",
+    expressions: [
+      { text: "eco-friendly", register: "neutral", note: "口說寫作皆可，指環保的。" },
+      { text: "sustainable", register: "formal", note: "偏正式，指可永續的（雅思環境題高頻）。" },
+      { text: "green", register: "spoken", note: "口語，指環保的（green energy 等）。" },
+    ] },
+];
