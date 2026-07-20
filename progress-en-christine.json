@@ -1,106 +1,728 @@
 {
-  "savedAt": 1784532411914,
+  "savedAt": 1784222076114,
   "username": "christine",
   "app": "english",
-  "reviewSchedule": {},
+  "reviewSchedule": {
+    "en_en126": {
+      "stage": 4,
+      "nextReview": 1785419627806,
+      "correct": 3,
+      "incorrect": 1
+    },
+    "en_en071": {
+      "stage": 1,
+      "nextReview": 1784029066694,
+      "correct": 2,
+      "incorrect": 4
+    },
+    "en_en169": {
+      "stage": 4,
+      "nextReview": 1783931349901,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en047": {
+      "stage": 3,
+      "nextReview": 1784037369916,
+      "correct": 2,
+      "incorrect": 2
+    },
+    "en_en125": {
+      "stage": 4,
+      "nextReview": 1783931369502,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en168": {
+      "stage": 4,
+      "nextReview": 1785419774550,
+      "correct": 3,
+      "incorrect": 1
+    },
+    "en_en068": {
+      "stage": 4,
+      "nextReview": 1783931383688,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en012": {
+      "stage": 4,
+      "nextReview": 1783931386071,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en191": {
+      "stage": 4,
+      "nextReview": 1786590529949,
+      "correct": 4,
+      "incorrect": 0
+    },
+    "en_en109": {
+      "stage": 4,
+      "nextReview": 1783931396389,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en148": {
+      "stage": 2,
+      "nextReview": 1784603327599,
+      "correct": 3,
+      "incorrect": 3
+    },
+    "en_en166": {
+      "stage": 4,
+      "nextReview": 1783931401823,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en028": {
+      "stage": 4,
+      "nextReview": 1783931403423,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en053": {
+      "stage": 2,
+      "nextReview": 1784174529014,
+      "correct": 3,
+      "incorrect": 2
+    },
+    "en_en090": {
+      "stage": 1,
+      "nextReview": 1784029093081,
+      "correct": 3,
+      "incorrect": 1
+    },
+    "en_en167": {
+      "stage": 4,
+      "nextReview": 1785419819649,
+      "correct": 3,
+      "incorrect": 1
+    },
+    "en_en085": {
+      "stage": 4,
+      "nextReview": 1785419588499,
+      "correct": 3,
+      "incorrect": 1
+    },
+    "en_en057": {
+      "stage": 1,
+      "nextReview": 1784000396674,
+      "correct": 1,
+      "incorrect": 6
+    },
+    "en_en009": {
+      "stage": 1,
+      "nextReview": 1784000320246,
+      "correct": 1,
+      "incorrect": 5
+    },
+    "en_en155": {
+      "stage": 4,
+      "nextReview": 1786590543700,
+      "correct": 4,
+      "incorrect": 0
+    },
+    "en_en149": {
+      "stage": 4,
+      "nextReview": 1783931449476,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en011": {
+      "stage": 1,
+      "nextReview": 1784029084829,
+      "correct": 3,
+      "incorrect": 1
+    },
+    "en_en019": {
+      "stage": 4,
+      "nextReview": 1785419630307,
+      "correct": 3,
+      "incorrect": 1
+    },
+    "en_en163": {
+      "stage": 4,
+      "nextReview": 1785419581682,
+      "correct": 3,
+      "incorrect": 1
+    },
+    "en_en117": {
+      "stage": 4,
+      "nextReview": 1783931458062,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en007": {
+      "stage": 2,
+      "nextReview": 1784280399587,
+      "correct": 3,
+      "incorrect": 3
+    },
+    "en_en123": {
+      "stage": 4,
+      "nextReview": 1785419810004,
+      "correct": 3,
+      "incorrect": 1
+    },
+    "en_en177": {
+      "stage": 4,
+      "nextReview": 1783931467147,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en099": {
+      "stage": 1,
+      "nextReview": 1784029089834,
+      "correct": 3,
+      "incorrect": 1
+    },
+    "en_en106": {
+      "stage": 4,
+      "nextReview": 1785419712570,
+      "correct": 3,
+      "incorrect": 1
+    },
+    "en_en119": {
+      "stage": 1,
+      "nextReview": 1784000148291,
+      "correct": 0,
+      "incorrect": 6
+    },
+    "en_en110": {
+      "stage": 3,
+      "nextReview": 1784037233023,
+      "correct": 2,
+      "incorrect": 1
+    },
+    "en_en179": {
+      "stage": 3,
+      "nextReview": 1784037308151,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en092": {
+      "stage": 4,
+      "nextReview": 1786161614864,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en031": {
+      "stage": 2,
+      "nextReview": 1784280383319,
+      "correct": 1,
+      "incorrect": 4
+    },
+    "en_en104": {
+      "stage": 2,
+      "nextReview": 1784280308538,
+      "correct": 2,
+      "incorrect": 3
+    },
+    "en_en108": {
+      "stage": 4,
+      "nextReview": 1786161662421,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en188": {
+      "stage": 3,
+      "nextReview": 1784037303068,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en201": {
+      "stage": 3,
+      "nextReview": 1784779162305,
+      "correct": 2,
+      "incorrect": 1
+    },
+    "en_en030": {
+      "stage": 3,
+      "nextReview": 1784779632549,
+      "correct": 2,
+      "incorrect": 1
+    },
+    "en_en135": {
+      "stage": 3,
+      "nextReview": 1784037431234,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en006": {
+      "stage": 2,
+      "nextReview": 1784174390176,
+      "correct": 1,
+      "incorrect": 3
+    },
+    "en_en002": {
+      "stage": 4,
+      "nextReview": 1786161564706,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en141": {
+      "stage": 3,
+      "nextReview": 1784779181809,
+      "correct": 2,
+      "incorrect": 2
+    },
+    "en_en113": {
+      "stage": 4,
+      "nextReview": 1786161872990,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en059": {
+      "stage": 1,
+      "nextReview": 1784000363319,
+      "correct": 1,
+      "incorrect": 4
+    },
+    "en_en183": {
+      "stage": 4,
+      "nextReview": 1786161639116,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en114": {
+      "stage": 4,
+      "nextReview": 1786161720946,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en054": {
+      "stage": 2,
+      "nextReview": 1784518538520,
+      "correct": 1,
+      "incorrect": 4
+    },
+    "en_en015": {
+      "stage": 3,
+      "nextReview": 1784037254560,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en156": {
+      "stage": 2,
+      "nextReview": 1784174763521,
+      "correct": 2,
+      "incorrect": 1
+    },
+    "en_en093": {
+      "stage": 3,
+      "nextReview": 1784037278446,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en196": {
+      "stage": 2,
+      "nextReview": 1784174371539,
+      "correct": 1,
+      "incorrect": 2
+    },
+    "en_en063": {
+      "stage": 3,
+      "nextReview": 1784037292116,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en120": {
+      "stage": 2,
+      "nextReview": 1784280298469,
+      "correct": 1,
+      "incorrect": 4
+    },
+    "en_en086": {
+      "stage": 4,
+      "nextReview": 1786161952703,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en178": {
+      "stage": 4,
+      "nextReview": 1786162004428,
+      "correct": 3,
+      "incorrect": 0
+    },
+    "en_en091": {
+      "stage": 2,
+      "nextReview": 1784280271514,
+      "correct": 3,
+      "incorrect": 1
+    },
+    "en_en032": {
+      "stage": 2,
+      "nextReview": 1784168112814,
+      "correct": 1,
+      "incorrect": 2
+    },
+    "en_en174": {
+      "stage": 2,
+      "nextReview": 1784518747401,
+      "correct": 1,
+      "incorrect": 5
+    },
+    "en_en220": {
+      "stage": 1,
+      "nextReview": 1784000340747,
+      "correct": 0,
+      "incorrect": 3
+    },
+    "en_en145": {
+      "stage": 2,
+      "nextReview": 1784280252428,
+      "correct": 2,
+      "incorrect": 1
+    },
+    "en_en055": {
+      "stage": 1,
+      "nextReview": 1784084936283,
+      "correct": 0,
+      "incorrect": 3
+    },
+    "en_en210": {
+      "stage": 3,
+      "nextReview": 1784779373938,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en131": {
+      "stage": 1,
+      "nextReview": 1784000179172,
+      "correct": 0,
+      "incorrect": 3
+    },
+    "en_en147": {
+      "stage": 2,
+      "nextReview": 1784518781422,
+      "correct": 1,
+      "incorrect": 3
+    },
+    "en_en218": {
+      "stage": 2,
+      "nextReview": 1784280350996,
+      "correct": 1,
+      "incorrect": 2
+    },
+    "en_en162": {
+      "stage": 2,
+      "nextReview": 1784280389985,
+      "correct": 1,
+      "incorrect": 2
+    },
+    "en_en122": {
+      "stage": 2,
+      "nextReview": 1784518757485,
+      "correct": 1,
+      "incorrect": 3
+    },
+    "en_en121": {
+      "stage": 1,
+      "nextReview": 1782914376295,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "en_en159": {
+      "stage": 1,
+      "nextReview": 1784000274780,
+      "correct": 0,
+      "incorrect": 3
+    },
+    "en_en203": {
+      "stage": 3,
+      "nextReview": 1784779611062,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en208": {
+      "stage": 2,
+      "nextReview": 1784280266731,
+      "correct": 1,
+      "incorrect": 2
+    },
+    "en_en194": {
+      "stage": 3,
+      "nextReview": 1784779548186,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en195": {
+      "stage": 3,
+      "nextReview": 1784779560521,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en209": {
+      "stage": 3,
+      "nextReview": 1784779550886,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en181": {
+      "stage": 3,
+      "nextReview": 1784779555987,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en132": {
+      "stage": 1,
+      "nextReview": 1784000389008,
+      "correct": 0,
+      "incorrect": 2
+    },
+    "en_en213": {
+      "stage": 3,
+      "nextReview": 1784779621396,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en080": {
+      "stage": 3,
+      "nextReview": 1784779292025,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en173": {
+      "stage": 3,
+      "nextReview": 1784779428096,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en227": {
+      "stage": 1,
+      "nextReview": 1784029096631,
+      "correct": 0,
+      "incorrect": 3
+    },
+    "en_en088": {
+      "stage": 3,
+      "nextReview": 1784779351400,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en026": {
+      "stage": 3,
+      "nextReview": 1784779579207,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en219": {
+      "stage": 1,
+      "nextReview": 1784000295149,
+      "correct": 0,
+      "incorrect": 4
+    },
+    "en_en127": {
+      "stage": 2,
+      "nextReview": 1784280277516,
+      "correct": 1,
+      "incorrect": 2
+    },
+    "en_en221": {
+      "stage": 1,
+      "nextReview": 1784000373971,
+      "correct": 0,
+      "incorrect": 2
+    },
+    "en_en073": {
+      "stage": 3,
+      "nextReview": 1784779235433,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en231": {
+      "stage": 1,
+      "nextReview": 1784000211352,
+      "correct": 0,
+      "incorrect": 3
+    },
+    "en_en198": {
+      "stage": 2,
+      "nextReview": 1784280269615,
+      "correct": 2,
+      "incorrect": 1
+    },
+    "en_en044": {
+      "stage": 3,
+      "nextReview": 1784779576890,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en020": {
+      "stage": 3,
+      "nextReview": 1784779565939,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en076": {
+      "stage": 1,
+      "nextReview": 1784000311463,
+      "correct": 0,
+      "incorrect": 3
+    },
+    "en_en087": {
+      "stage": 2,
+      "nextReview": 1784280342044,
+      "correct": 2,
+      "incorrect": 1
+    },
+    "en_en234": {
+      "stage": 2,
+      "nextReview": 1784518598229,
+      "correct": 1,
+      "incorrect": 2
+    },
+    "en_en134": {
+      "stage": 3,
+      "nextReview": 1784779302094,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en060": {
+      "stage": 2,
+      "nextReview": 1784280339177,
+      "correct": 1,
+      "incorrect": 2
+    },
+    "en_en050": {
+      "stage": 2,
+      "nextReview": 1784168125533,
+      "correct": 1,
+      "incorrect": 1
+    },
+    "en_en062": {
+      "stage": 1,
+      "nextReview": 1784000163836,
+      "correct": 0,
+      "incorrect": 4
+    },
+    "en_en200": {
+      "stage": 1,
+      "nextReview": 1784000331698,
+      "correct": 0,
+      "incorrect": 3
+    },
+    "en_en089": {
+      "stage": 2,
+      "nextReview": 1784174511762,
+      "correct": 1,
+      "incorrect": 1
+    },
+    "en_en079": {
+      "stage": 3,
+      "nextReview": 1784779645367,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en058": {
+      "stage": 2,
+      "nextReview": 1784174816663,
+      "correct": 1,
+      "incorrect": 1
+    },
+    "en_en095": {
+      "stage": 2,
+      "nextReview": 1784518769753,
+      "correct": 1,
+      "incorrect": 2
+    },
+    "en_en098": {
+      "stage": 3,
+      "nextReview": 1784885192486,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en033": {
+      "stage": 2,
+      "nextReview": 1784174411762,
+      "correct": 1,
+      "incorrect": 1
+    },
+    "en_en187": {
+      "stage": 3,
+      "nextReview": 1784779626648,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en039": {
+      "stage": 2,
+      "nextReview": 1784174485473,
+      "correct": 1,
+      "incorrect": 1
+    },
+    "en_en211": {
+      "stage": 3,
+      "nextReview": 1784779634849,
+      "correct": 2,
+      "incorrect": 0
+    },
+    "en_en206": {
+      "stage": 3,
+      "nextReview": 1784779487309,
+      "correct": 2,
+      "incorrect": 0
+    }
+  },
   "grammarStats": {
-    "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "correct": 10,
+    "wrong": 6,
+    "total": 16
   },
   "todayStats": {
     "flipped": 0,
     "grammarPracticed": 0
   },
   "diaryEntries": [],
-  "engooRecords": [],
-  "inboxItems": [],
-  "planItems": [
+  "engooRecords": [
     {
-      "id": 1784182990796,
-      "week": "2026-07-12",
-      "skill": "listening",
-      "day": 3,
-      "text": "一篇題庫",
-      "done": false,
-      "score": ""
+      "id": 1782833716771,
+      "title": "https://engoo.com/app/daily-news/article/world-cup-heartbreak-for-japan-after-knockout-loss/Fu5tznRIEfGXCw8gMfr-Gw",
+      "date": "2026-06-30",
+      "words": ""
     },
     {
-      "id": 1784528210554,
-      "week": "2026-07-20",
-      "skill": "reading",
-      "day": 0,
-      "text": "平行閱讀法五步驟精讀＋劍10 T1 P1 不限時拆解",
-      "done": false,
-      "score": "",
-      "fromPlan": true
+      "id": 1782748392130,
+      "title": "https://podcasts.apple.com/tw/podcast/6-minute-english/id262026947?i=1000774161848",
+      "date": "2026-06-29",
+      "words": "這個是podcast"
     },
     {
-      "id": 1784528210555,
-      "week": "2026-07-20",
-      "skill": "listening",
-      "day": 1,
-      "text": "劍10 T1 S1–S2 精聽訂正＋Shadowing 10分鐘",
-      "done": false,
-      "score": "",
-      "fromPlan": true
+      "id": 1782574088205,
+      "title": "https://engoo.com/app/daily-news/article/worlds-most-peaceful-countries-for-2026-revealed/3-z_jGadEfGz4GMwRBno5A",
+      "date": "2026-06-27",
+      "words": ""
     },
     {
-      "id": 1784528210556,
-      "week": "2026-07-20",
-      "skill": "speaking",
-      "day": 2,
-      "text": "Cambly＋課後把語料丟收集箱",
-      "done": false,
-      "score": "",
-      "fromPlan": true
+      "id": 1782354273942,
+      "title": "Toyota Was World's Top-Selling Automaker in 2025",
+      "date": "2026-06-25",
+      "words": ""
     },
     {
-      "id": 1784528210557,
-      "week": "2026-07-20",
-      "skill": "writing",
-      "day": 4,
-      "text": "Simon Task 2 四段結構＋13句法熟讀（先不寫全篇）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784528210558,
-      "week": "2026-07-20",
-      "skill": "reading",
-      "day": 5,
-      "text": "劍10 T1 P2 不限時＋拆解檢核",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784528210559,
-      "week": "2026-07-20",
-      "skill": "writing",
-      "day": 6,
-      "text": "Task 2 Opinion 模板背誦＋每週回顧",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784528210560,
-      "week": "2026-07-20",
-      "skill": "material",
-      "day": 5,
-      "text": "EGIU Unit 1–9（平日1單元、假日可2，週六快速複習）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
+      "id": 1782314951628,
+      "title": "https://engoo.com/app/daily-news/article/toy-story-5-has-312-million-box-office-debut/b0Y2Km7OEfGeSNtdHcyc8w",
+      "date": "2026-06-24",
+      "words": ""
     }
   ],
-  "practiceRecords": [],
+  "inboxItems": [],
+  "planItems": [],
+  "practiceRecords": [
+    {
+      "id": 1784222073816.5935,
+      "skill": "reading",
+      "date": "2026-07-16",
+      "material": "IELTS Academic Reading Passage 1: Attitudes to Language",
+      "score": "9 / 13",
+      "causes": [
+        "同義替換辨識",
+        "Summary 定位",
+        "YES / NO / NOT GIVEN 還不熟"
+      ],
+      "notes": "閱讀理解能力比較難建立，不熟悉 IELTS 出題邏輯。IELTS 最常考同義替換，例如 influence = affect, judge = assessment, unreal pictures = misrepresented。Summary 題通常不是考推論，而是考原文定位和同義替換，建議解題順序是先找到關鍵人名（如 Joseph Priestley），回到原文定位，優先找與原文幾乎一致的詞，再從選項中挑最符合的同義詞。YES / NO / NOT GIVEN 題不要推論，作者有寫就是有，沒有寫就是沒有。文章架構分為：語言容易吵架、Prescriptivism、十八世紀文法家、Descriptivism、Joseph Priestley、作者立場（兩派都被誤解）。"
+    }
+  ],
   "breakdowns": [],
-  "essayRecords": [],
-  "egiuDone": {},
-  "planImportedWeeks": [
-    "2026-07-20"
-  ]
+  "essayRecords": []
 }
