@@ -191,6 +191,7 @@ function emptyUserData() {
     wordRoots: [],
     task2Phrases: [],   // 英文 App：雅思寫作佳句
     speakingNotes: [],  // 英文 App：口說語料（串題用）
+    paraphrases: [],    // 英文 App：Paraphrase Bank 改寫語料（收集箱新增，id 前綴 upara_）
   };
 }
 async function githubGetUserData() {
@@ -254,6 +255,8 @@ function mergeUserData(userData) {
   if (typeof WORD_ROOTS !== 'undefined') mergeInto(WORD_ROOTS, userData.wordRoots);
   if (typeof TASK2_PHRASES !== 'undefined') mergeInto(TASK2_PHRASES, userData.task2Phrases);
   if (typeof SPEAKING_NOTES !== 'undefined') mergeInto(SPEAKING_NOTES, userData.speakingNotes);
+  // Paraphrase Bank：固定資料在 data-ielts.js 的 IELTS_PARAPHRASES，收集箱新增的合併進來（id 前綴 upara_）
+  if (typeof IELTS_PARAPHRASES !== 'undefined') mergeInto(IELTS_PARAPHRASES, userData.paraphrases);
 }
 // App 啟動時讀取 data-user.json（走 GitHub Pages 靜態檔，不用 token）
 async function loadUserData() {
