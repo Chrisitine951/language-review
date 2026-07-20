@@ -953,10 +953,21 @@ function mondayOf(date) {
   d.setDate(d.getDate() - day); d.setHours(0,0,0,0);
   return d;
 }
+// 用「本地」年月日組 YYYY-MM-DD 字串。
+// 【勿改回 toISOString()】toISOString() 會轉成 UTC，台灣是 UTC+8，
+// 本地午夜 00:00 換算 UTC 會變成前一天 16:00 → 週一 7/20 被吐成 7/19，
+// 於是計畫表的週 key 和 18 週大表（用正確週一日期）永遠對不上、顯示空白。
+// 這是踩過的坑（v2.1.1 修），大表 key 也是純日期字串，必須用本地日期比對。
+function ymdLocal(d) {
+  const y = d.getFullYear();
+  const mo = String(d.getMonth() + 1).padStart(2, '0');
+  const da = String(d.getDate()).padStart(2, '0');
+  return `${y}-${mo}-${da}`;
+}
 function weekKey(offset) {
   const d = mondayOf(new Date());
   d.setDate(d.getDate() + offset * 7);
-  return d.toISOString().split('T')[0];
+  return ymdLocal(d);
 }
 function shiftWeek(n) { planWeekOffset += n; renderPlan(); }
 function goThisWeek() { planWeekOffset = 0; renderPlan(); }
