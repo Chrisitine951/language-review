@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784448233001,
+  "savedAt": 1784526398249,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -827,7 +827,78 @@
     }
   ],
   "inboxItems": [],
-  "planItems": [],
+  "planItems": [
+    {
+      "id": 1784526398249,
+      "week": "2026-07-20",
+      "skill": "reading",
+      "day": 0,
+      "text": "平行閱讀法五步驟精讀＋劍10 T1 P1 不限時拆解",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1784526398250,
+      "week": "2026-07-20",
+      "skill": "listening",
+      "day": 1,
+      "text": "劍10 T1 S1–S2 精聽訂正＋Shadowing 10分鐘",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1784526398251,
+      "week": "2026-07-20",
+      "skill": "speaking",
+      "day": 2,
+      "text": "Cambly＋課後把語料丟收集箱",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1784526398252,
+      "week": "2026-07-20",
+      "skill": "writing",
+      "day": 4,
+      "text": "Simon Task 2 四段結構＋13句法熟讀（先不寫全篇）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1784526398253,
+      "week": "2026-07-20",
+      "skill": "reading",
+      "day": 5,
+      "text": "劍10 T1 P2 不限時＋拆解檢核",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1784526398254,
+      "week": "2026-07-20",
+      "skill": "writing",
+      "day": 6,
+      "text": "Task 2 Opinion 模板背誦＋每週回顧",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1784526398255,
+      "week": "2026-07-20",
+      "skill": "material",
+      "day": 5,
+      "text": "EGIU Unit 1–9（平日1單元、假日可2，週六快速複習）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    }
+  ],
   "practiceRecords": [
     {
       "id": 1784222073816.5935,
@@ -849,5 +920,7 @@
     "1": "2026-07-19",
     "2": "2026-07-19"
   },
-  "planImportedWeeks": []
+  "planImportedWeeks": [
+    "2026-07-20"
+  ]
 }
