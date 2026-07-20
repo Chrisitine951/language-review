@@ -535,6 +535,150 @@
       "partOfSpeech": "n.",
       "source": "ielts",
       "example": "not to attempt the impossible tasks of evaluating language variation."
+    },
+    {
+      "id": "uenmrswis7x1",
+      "word": "nap",
+      "meaning": "小睡、午睡",
+      "partOfSpeech": "n.",
+      "example": "I took a short nap after lunch.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x2",
+      "word": "siesta",
+      "meaning": "午休、午睡",
+      "partOfSpeech": "n.",
+      "example": "Some people take a siesta in the afternoon.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x3",
+      "word": "tectonic plate",
+      "meaning": "地殼板塊",
+      "partOfSpeech": "n.",
+      "example": "Taiwan lies near the boundary of two tectonic plates.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x4",
+      "word": "jet lag",
+      "meaning": "時差反應",
+      "partOfSpeech": "n.",
+      "example": "I suffered from jet lag after returning to Taiwan.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x5",
+      "word": "long-haul flight",
+      "meaning": "長途飛行",
+      "partOfSpeech": "n.",
+      "example": "It was a long-haul flight from Taiwan to the United States.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x6",
+      "word": "unwind",
+      "meaning": "放鬆、紓解壓力",
+      "partOfSpeech": "v.",
+      "example": "I like to travel because it helps me unwind.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x7",
+      "word": "contemplate",
+      "meaning": "深入思考",
+      "partOfSpeech": "v.",
+      "example": "A quiet holiday gives me time to contemplate my future.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x8",
+      "word": "cost an arm and a leg",
+      "meaning": "非常昂貴",
+      "partOfSpeech": "phrase",
+      "example": "Flights during the holiday season can cost an arm and a leg.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x9",
+      "word": "a change of scenery",
+      "meaning": "換個環境",
+      "partOfSpeech": "phrase",
+      "example": "Travelling gives me a welcome change of scenery.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x10",
+      "word": "broaden my horizons",
+      "meaning": "拓展視野",
+      "partOfSpeech": "phrase",
+      "example": "Travelling abroad allows me to broaden my horizons.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x11",
+      "word": "here and there",
+      "meaning": "零星地、到處有一些",
+      "partOfSpeech": "phrase",
+      "example": "We saw small cafés here and there along the street.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x12",
+      "word": "as often as I can",
+      "meaning": "盡可能常常",
+      "partOfSpeech": "phrase",
+      "example": "I travel as often as I can.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x13",
+      "word": "not to mention",
+      "meaning": "更不用說、此外還有",
+      "partOfSpeech": "phrase",
+      "example": "The city has beautiful architecture, not to mention its amazing food.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x14",
+      "word": "rubbish",
+      "meaning": "垃圾",
+      "partOfSpeech": "n.",
+      "example": "People should not leave rubbish in public places.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x15",
+      "word": "litter",
+      "meaning": "亂丟垃圾；散落的垃圾",
+      "partOfSpeech": "v./n.",
+      "example": "Some people litter because they do not understand the environmental consequences.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x16",
+      "word": "cuisine",
+      "meaning": "某地區或文化的料理",
+      "partOfSpeech": "n.",
+      "example": "I would love to try different European cuisines.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x17",
+      "word": "reheat",
+      "meaning": "重新加熱",
+      "partOfSpeech": "v.",
+      "example": "I can reheat the soup later.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrswis7x18",
+      "word": "time off work",
+      "meaning": "休假",
+      "partOfSpeech": "phrase",
+      "example": "Holidays give me some time off work.",
+      "source": "cambly"
     }
   ],
   "germanVocabulary": [
@@ -2261,6 +2405,136 @@
       "explanation": "當主詞為複數形式（如'某人 and 某人'）時，在現在簡單式中動詞應使用原型（base form）。",
       "mastered": false,
       "source": "other"
+    },
+    {
+      "id": "ugrmrswis7x19",
+      "category": "past_tense",
+      "rule": "過去式與自然搭配",
+      "wrong": "I drink a sip of water.",
+      "correct": "I took a sip of water.",
+      "explanation": "描述剛完成動作應使用過去式，且搭配詞為 take a sip。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrswis7x20",
+      "category": "other",
+      "rule": "詞性與天氣句型",
+      "wrong": "Outside has a big rainy.",
+      "correct": "It is raining heavily outside.",
+      "explanation": "Rainy 是形容詞，不能當名詞。描述下雨應使用 It is raining + 副詞。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrswis7x21",
+      "category": "other",
+      "rule": "現在進行式",
+      "wrong": "Where are you stay?",
+      "correct": "Where are you staying?",
+      "explanation": "詢問目前居住狀態應使用 be + V-ing。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrswis7x22",
+      "category": "other",
+      "rule": "名詞單複數",
+      "wrong": "We have many strong earthquake every year.",
+      "correct": "We have many strong earthquakes every year.",
+      "explanation": "Many 後面需接可數名詞複數。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrswis7x23",
+      "category": "other",
+      "rule": "冠詞",
+      "wrong": "Today is weekend.",
+      "correct": "Today is the weekend.",
+      "explanation": "表示本週週末時需加上定冠詞 the。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrswis7x24",
+      "category": "past_tense",
+      "rule": "時態一致性",
+      "wrong": "I buy something, and it is very expensive.",
+      "correct": "I bought something, and it was very expensive.",
+      "explanation": "描述過去發生的事，整句時態應一致。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrswis7x25",
+      "category": "other",
+      "rule": "比較級",
+      "wrong": "This one is more better.",
+      "correct": "This one is better.",
+      "explanation": "Better 本身即為比較級，前面不可加 more。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrswis7x26",
+      "category": "other",
+      "rule": "介系詞與搭配",
+      "wrong": "I decide to have the exam in November 21.",
+      "correct": "I decided to take the exam on November 21.",
+      "explanation": "考試用 take，特定日期前介系詞用 on。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrswis7x27",
+      "category": "other",
+      "rule": "情態動詞",
+      "wrong": "I maybe have four months to prepare.",
+      "correct": "I may have four months to prepare.",
+      "explanation": "Maybe 是副詞，May 才是情態動詞，可接原形動詞。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrswis7x28",
+      "category": "other",
+      "rule": "動詞結構",
+      "wrong": "Taiwan is have many typhoons.",
+      "correct": "Taiwan has many typhoons.",
+      "explanation": "一般現在式直接用動詞即可，不需要 be 動詞。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrswis7x29",
+      "category": "other",
+      "rule": "there be 句型",
+      "wrong": "Everywhere has a lot of water.",
+      "correct": "There is water everywhere.",
+      "explanation": "表示某處存在某物時，使用 there be 句型更自然。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrswis7x30",
+      "category": "other",
+      "rule": "spend 句型",
+      "wrong": "I spent twelve hours to fly to Seattle.",
+      "correct": "I spent twelve hours flying to Seattle.",
+      "explanation": "Spend time 後面應接 V-ing。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrswis7x31",
+      "category": "other",
+      "rule": "-ed/-ing 形容詞",
+      "wrong": "I felt very tired.",
+      "correct": "The flight was very tiring, so I felt tired.",
+      "explanation": "人感到的狀態用 -ed，造成狀態的事物用 -ing。",
+      "source": "ielts",
+      "mastered": false
     }
   ],
   "germanGrammar": [
@@ -2794,5 +3068,48 @@
     }
   ],
   "task2Phrases": [],
-  "speakingNotes": []
+  "speakingNotes": [
+    {
+      "id": "usnmrswis7x32",
+      "core": "Holidays provide time off work to unwind and reset.",
+      "topics": [
+        "Holidays and Vacations"
+      ],
+      "nouns": "holidays, time off, trip",
+      "verbs": "take a trip, catch up with friends, plan a trip",
+      "idioms": "time off work, unwind"
+    },
+    {
+      "id": "usnmrswis7x33",
+      "core": "Travel helps broaden horizons and experience different cuisines.",
+      "topics": [
+        "Travel",
+        "Future Plans"
+      ],
+      "nouns": "cuisine, architecture, culture",
+      "verbs": "broaden horizons, try different cuisines, go sightseeing",
+      "idioms": "a change of scenery, broaden my horizons"
+    },
+    {
+      "id": "usnmrswis7x34",
+      "core": "Taiwan is prone to typhoons and earthquakes; buildings are designed for safety.",
+      "topics": [
+        "Natural Disasters",
+        "Taiwan"
+      ],
+      "nouns": "typhoons, earthquakes, buildings",
+      "verbs": "withstand, close schools, stay indoors",
+      "idioms": ""
+    },
+    {
+      "id": "usnmrswis7x35",
+      "core": "Business travel can be exhausting but valuable for personal growth.",
+      "topics": [
+        "Business Travel"
+      ],
+      "nouns": "immigration officer, business trip, jet lag",
+      "verbs": "suffer from jet lag, take long-haul flights",
+      "idioms": "long-haul flight, cost an arm and a leg"
+    }
+  ]
 }
