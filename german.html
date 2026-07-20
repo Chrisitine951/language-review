@@ -191,6 +191,20 @@
             </div>
             <div class="grammar-rule-detail" id="case-table-detail" style="background:transparent; padding:0;">
               <div id="case-tables-container"></div>
+              <div class="pr-notes">💡 Genitiv（屬格）現代使用率極低，因此人稱代名詞未列入速查表；物主相關請參考下方「物主」章節。</div>
+            </div>
+          </div>
+          <div class="pr-card">
+            <div class="grammar-category-row" onclick="toggleRuleDetail('possessiv-detail')" style="margin-bottom:0;">
+              <span class="pr-title" style="margin-bottom:0;">👤 物主（Possessiv）速查</span>
+              <span class="grammar-rule-toggle">展開 ▾</span>
+            </div>
+            <div class="grammar-rule-detail" id="possessiv-detail" style="background:transparent; padding:0;">
+              <div id="possessiv-overview-container"></div>
+              <div class="pr-notes">💡 先找主人，再查格位變化。</div>
+              <div class="filter-row" id="possessiv-stem-row"></div>
+              <div id="possessiv-table-container"></div>
+              <div class="pr-notes">💡 物主冠詞 ≠ 物主代名詞。例：<strong>Das ist mein Hund.</strong>（我的狗）→ 後面沒有名詞時要改用物主代名詞：<strong>Das ist meiner.</strong>當後方沒有名詞時，物主冠詞需要改成物主代名詞。</div>
             </div>
           </div>
           <div class="section-header"><span class="section-title">德文文法重點</span></div>
@@ -800,6 +814,7 @@ function initLearn() {
   initSentencePractice();
   renderGermanGrammar();
   renderCaseTables();
+  renderPossessive();
 }
 function setDeTab(tab) {
   deTab = tab;
@@ -923,6 +938,91 @@ function renderCaseTables() {
       <tbody>${t.rows.map(r => `<tr>${r.map(c => `<td>${escHtml(c)}</td>`).join('')}</tr>`).join('')}</tbody>
     </table></div>`).join('');
 }
+
+// ============================================================
+// 物主（Possessiv）速查（v2.2.0）
+//
+// 【設計原則：能算出來的就不存】—— 跟 NOUN_CASE_FORMS 同一種做法。
+// 物主冠詞的格位變化規則和不定冠詞 ein/eine 完全相同，只是換了字根，
+// 所以只存 7 個字根，格位/詞尾規則共用一份，動態算出 28 個形式，
+// 不手動打 7 張表（減少人工輸入 112 個字串的出錯機會）。
+// ============================================================
+// 只存字根：人稱、字根、中文
+const POSSESSIVE_STEMS = [
+  { person: 'ich', stem: 'mein',  meaning: '我的' },
+  { person: 'du',  stem: 'dein',  meaning: '你的' },
+  { person: 'er',  stem: 'sein',  meaning: '他的' },
+  { person: 'sie', stem: 'ihr',   meaning: '她的' },
+  { person: 'es',  stem: 'sein',  meaning: '它的' },
+  { person: 'wir', stem: 'unser', meaning: '我們的' },
+  { person: 'ihr', stem: 'euer',  meaning: '你們的' },
+  { person: 'sie', stem: 'ihr',   meaning: '他們的' },
+  { person: 'Sie', stem: 'Ihr',   meaning: '您的' },
+];
+// 共用詞尾規則（跟 ein/eine 不定冠詞格位變化相同）：陽性/中性/陰性/複數 × Nom/Akk/Dat/Gen
+const POSSESSIVE_ENDINGS = {
+  masc:   ['',  'en', 'em', 'es'],
+  neut:   ['',  '',   'em', 'es'],
+  fem:    ['e', 'e',  'er', 'er'],
+  plural: ['e', 'e',  'en', 'er'],
+};
+const POSSESSIVE_CASE_LABELS = ['Nominativ', 'Akkusativ', 'Dativ', 'Genitiv'];
+// euer 特例：無詞尾（''）維持 euer 本身；加詞尾時字根縮成 eur-（eure/euren/eurem/eures）
+function possessiveForm(stem, ending) {
+  if (stem === 'euer') return ending === '' ? 'euer' : 'eur' + ending;
+  return stem + ending;
+}
+// 切換用的字根清單（去重，供 filter-chip 顯示；mein 只出現一次，即使對到 ich 一個人稱）
+function possessiveStemList() {
+  const seen = new Set();
+  const list = [];
+  POSSESSIVE_STEMS.forEach(s => { if (!seen.has(s.stem)) { seen.add(s.stem); list.push(s.stem); } });
+  return list;
+}
+let possessiveStem = 'mein';
+function renderPossessiveOverview() {
+  const el = document.getElementById('possessiv-overview-container');
+  if (!el) return;
+  el.innerHTML = `<div class="case-table-wrap"><table class="case-table">
+    <caption>物主冠詞原型（誰的？）</caption>
+    <thead><tr><th>人稱</th><th>物主冠詞</th><th>中文</th></tr></thead>
+    <tbody>${POSSESSIVE_STEMS.map(s => `<tr><td>${escHtml(s.person)}</td><td><strong>${escHtml(s.stem)}</strong></td><td>${escHtml(s.meaning)}</td></tr>`).join('')}</tbody>
+  </table></div>`;
+}
+function renderPossessiveStemChips() {
+  const el = document.getElementById('possessiv-stem-row');
+  if (!el) return;
+  el.innerHTML = possessiveStemList().map(s =>
+    `<button class="filter-chip ${possessiveStem === s ? 'active' : ''}" data-stem="${escAttr(s)}" onclick="setPossessiveStem(this)">${escHtml(s)}</button>`).join('');
+}
+function setPossessiveStem(el) {
+  possessiveStem = el.dataset.stem;
+  document.querySelectorAll('#possessiv-stem-row .filter-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderPossessiveTable();
+}
+function renderPossessiveTable() {
+  const el = document.getElementById('possessiv-table-container');
+  if (!el) return;
+  const rows = POSSESSIVE_CASE_LABELS.map((label, i) => [
+    label,
+    possessiveForm(possessiveStem, POSSESSIVE_ENDINGS.masc[i]),
+    possessiveForm(possessiveStem, POSSESSIVE_ENDINGS.neut[i]),
+    possessiveForm(possessiveStem, POSSESSIVE_ENDINGS.fem[i]),
+    possessiveForm(possessiveStem, POSSESSIVE_ENDINGS.plural[i]),
+  ]);
+  el.innerHTML = `<div class="case-table-wrap"><table class="case-table">
+    <caption>${escHtml(possessiveStem)} 的格位變化</caption>
+    <thead><tr><th>格</th><th>陽性</th><th>中性</th><th>陰性</th><th>複數</th></tr></thead>
+    <tbody>${rows.map(r => `<tr>${r.map(c => `<td>${escHtml(c)}</td>`).join('')}</tr>`).join('')}</tbody>
+  </table></div>`;
+}
+function renderPossessive() {
+  renderPossessiveOverview();
+  renderPossessiveStemChips();
+  renderPossessiveTable();
+}
+
 
 // ============================================================
 // 單字卡背面的變化表（v2.1.0）
