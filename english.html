@@ -23,6 +23,12 @@
   .plan-template-banner { margin: 0 16px 8px; padding: 10px 12px; background: var(--primary-light);
     border-radius: 10px; font-size: 12px; line-height: 1.6; color: var(--text2); }
   .plan-template-banner strong { color: var(--primary); }
+  /* 收集箱 paraphrase 類型切換下拉 + 解析警告（v2.2.0，只有英文 App 用） */
+  .inbox-type-select { font-size: 13px; font-weight: 600; padding: 4px 8px; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--surface2); color: var(--text); }
+  .inbox-warn { font-size: 12px; line-height: 1.6; color: var(--amber); background: var(--amber-light, #fff8e1);
+    border-radius: 8px; padding: 8px 10px; margin: 4px 0 8px; }
+  .inbox-warn code { background: rgba(0,0,0,.06); padding: 1px 4px; border-radius: 4px; font-size: 11px; }
 </style>
 </head>
 <body>
@@ -253,7 +259,34 @@
           <div id="sn-ai-result"></div>
         </div>
         <div id="sn-list"></div>
+
+        <!-- Paraphrase Bank／改寫語料庫（v2.2.0） -->
+        <div class="section-header" style="margin-top:20px;">
+          <span class="section-title">🔄 Paraphrase Bank（改寫語料）</span>
+          <span class="section-action" style="pointer-events:none; color:var(--text3);" id="para-count">—</span>
+        </div>
+        <div class="lang-toggle" style="margin: 0 16px 8px;">
+          <button class="lang-toggle-btn active" id="para-mode-browse" onclick="setParaMode('browse')">📖 瀏覽</button>
+          <button class="lang-toggle-btn" id="para-mode-practice" onclick="setParaMode('practice')">✏️ 替換練習</button>
+        </div>
+
+        <div id="para-browse-view">
+          <div style="padding: 0 16px;">
+            <input class="record-input" id="para-search" placeholder="🔍 搜尋核心概念或表達（如 expensive、relax）" oninput="renderParaList()">
+          </div>
+          <div class="filter-row" id="para-topic-row"></div>
+          <div id="para-list"></div>
+        </div>
+
+        <div id="para-practice-view" style="display:none;">
+          <div style="font-size:12px; color:var(--text3); line-height:1.6; padding: 8px 16px 0;">
+            句中挖空，選最自然的替換表達。干擾項來自其他概念、同樣語域（口說/寫作），但語意不符。
+          </div>
+          <div id="para-practice-note" style="font-size:12px; color:var(--text3); padding: 0 16px;"></div>
+          <div id="para-question-container"></div>
+        </div>
       </div>
+
 
       <!-- 閱讀 -->
       <div id="ielts-sub-reading" style="display:none;">
@@ -434,7 +467,7 @@
         <div class="section-header"><span class="section-title">上傳課堂／練習紀錄</span></div>
         <div class="diary-input-card">
           <div style="font-size:12px; color:var(--text3); line-height:1.6; margin-bottom:10px;">
-            拍照、上傳 PDF 或貼上內容 → AI 自動分辨是<strong>單字、文法錯誤、雅思練習成績、寫作佳句還是口說語料</strong>，分別整理好 → 確認後存進資料庫。
+            拍照、上傳 PDF 或貼上內容 → AI 自動分辨是<strong>單字、文法錯誤、雅思練習成績、寫作佳句、口說語料還是改寫語料</strong>，分別整理好 → 確認後存進資料庫。
           </div>
           <textarea class="diary-textarea" id="inbox-text" style="min-height:90px;" placeholder="貼上文字（Cambly AI回饋、劍橋檢討筆記、寫作批改…），或只上傳照片/PDF"></textarea>
           <div class="diary-toolbar">
@@ -1579,6 +1612,7 @@ function initIelts() {
   fillBreakdownSelects();
   renderPracticeList('listening'); renderPracticeList('reading');
   renderSpeakingNotes(); renderBreakdownList(); renderEssayList();
+  initParaBank();
   renderRules(); renderStruct(); renderPhrases();
   const today = new Date().toISOString().split('T')[0];
   ['lp-date','rp-date'].forEach(id => { const el = document.getElementById(id); if (el && !el.value) el.value = today; });
@@ -2222,10 +2256,161 @@ function renderSpeakingNotes() {
   </div>`).join('');
 }
 
+// ============================================================
+// Paraphrase Bank／改寫語料庫（v2.2.0）
+// 固定資料在 data-ielts.js 的 IELTS_PARAPHRASES；收集箱新增的走 data-user.json，
+// 由 core.js mergeUserData() 合併進同一個 IELTS_PARAPHRASES 陣列。
+// register 三值：spoken / formal / neutral。
+// ============================================================
+let paraMode = 'browse';
+let paraTopic = 'all';
+const REGISTER_LABEL = { spoken: '🗣️ 口說', formal: '✍️ 寫作', neutral: '🔁 通用' };
+const REGISTER_TAG = { spoken: 'tag-amber', formal: 'tag-en', neutral: 'tag-green' };
 
-// ============================================================
-// 記錄 & 收集
-// ============================================================
+function paraBank() { return typeof IELTS_PARAPHRASES !== 'undefined' ? IELTS_PARAPHRASES : []; }
+
+function initParaBank() {
+  renderParaTopicChips();
+  renderParaList();
+  const c = document.getElementById('para-count');
+  if (c) c.textContent = `${paraBank().length} 組`;
+}
+function setParaMode(mode) {
+  paraMode = mode;
+  document.getElementById('para-browse-view').style.display = mode === 'browse' ? 'block' : 'none';
+  document.getElementById('para-practice-view').style.display = mode === 'practice' ? 'block' : 'none';
+  document.getElementById('para-mode-browse').classList.toggle('active', mode === 'browse');
+  document.getElementById('para-mode-practice').classList.toggle('active', mode === 'practice');
+  if (mode === 'practice') nextParaphraseQuestion();
+}
+function renderParaTopicChips() {
+  const el = document.getElementById('para-topic-row');
+  if (!el) return;
+  const topics = (typeof PARAPHRASE_TOPICS !== 'undefined') ? PARAPHRASE_TOPICS : [];
+  el.innerHTML = `<button class="filter-chip ${paraTopic === 'all' ? 'active' : ''}" data-topic="all" onclick="setParaTopic(this)">全部</button>` +
+    topics.map(t => `<button class="filter-chip ${paraTopic === t.id ? 'active' : ''}" data-topic="${escAttr(t.id)}" onclick="setParaTopic(this)">${escHtml(t.label)}</button>`).join('');
+}
+function setParaTopic(el) {
+  paraTopic = el.dataset.topic;
+  document.querySelectorAll('#para-topic-row .filter-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderParaList();
+}
+function renderParaList() {
+  const el = document.getElementById('para-list');
+  if (!el) return;
+  const q = (document.getElementById('para-search').value || '').trim().toLowerCase();
+  let list = paraBank();
+  if (paraTopic !== 'all') list = list.filter(p => (p.topics || []).includes(paraTopic));
+  if (q) list = list.filter(p =>
+    (p.concept || '').toLowerCase().includes(q) ||
+    (p.expressions || []).some(e => (e.text || '').toLowerCase().includes(q)));
+  if (list.length === 0) {
+    el.innerHTML = `<div class="empty-state" style="padding:24px;"><div class="empty-state-icon">🔄</div><div class="empty-state-text">沒有符合的改寫語料</div><div class="empty-state-sub">${q || paraTopic !== 'all' ? '換個關鍵字或主題' : '從收集箱貼課堂整理，AI 會幫你分類'}</div></div>`;
+    return;
+  }
+  el.innerHTML = list.map(p => `<div class="pr-card">
+    <div class="pr-title">🔄 ${escHtml(p.concept)}</div>
+    <div class="pr-examples" style="margin:6px 0;">
+      ${(p.expressions || []).map(e => `<div class="pr-example" style="display:block; padding:6px 0;">
+        <span class="pr-example-word">${escHtml(e.text)}</span>
+        <span class="tag ${REGISTER_TAG[e.register] || ''}" style="margin-left:6px;">${REGISTER_LABEL[e.register] || escHtml(e.register)}</span>
+        ${e.note ? `<div style="font-size:12px; color:var(--text2); margin-top:2px;">${escHtml(e.note)}</div>` : ''}
+      </div>`).join('')}
+    </div>
+    ${p.speakingExample ? `<div class="pr-rule"><strong>🗣️ 口說：</strong>${escHtml(p.speakingExample)}
+      <button class="speak-btn-inline" onclick="speak(this.dataset.w, 'en-US')" data-w="${escAttr(p.speakingExample)}">🔊</button></div>` : ''}
+    ${p.writingExample ? `<div class="pr-rule"><strong>✍️ 寫作：</strong>${escHtml(p.writingExample)}</div>` : ''}
+    ${(p.topics || []).length ? `<div class="pr-examples" style="margin-top:6px;">${p.topics.map(t => `<div class="pr-example" style="font-size:11px;">${escHtml(t)}</div>`).join('')}</div>` : ''}
+  </div>`).join('');
+}
+
+// ---- 替換選擇題（純本機，離線可用）----
+// 出題規則：挑一個有 example 的 expression 當答案，把它從 example 句挖空；
+// 干擾項來自「其他 concept」、register 相同、文字不重複的表達；湊不到 2 個就跳題。
+let paraAnswered = false;
+function buildParaQuestionPool() {
+  // 攤平成「可出題的候選」：每個 (concept, expression, example) 一筆
+  const bank = paraBank();
+  const pool = [];
+  bank.forEach(p => {
+    (p.expressions || []).forEach(e => {
+      if (!e.text || !e.register) return;
+      // 例句優先用符合語域的：spoken→speakingExample、formal→writingExample、neutral→任一
+      let example = '';
+      if (e.register === 'formal') example = p.writingExample || p.speakingExample || '';
+      else example = p.speakingExample || p.writingExample || '';
+      if (!example) return;
+      // 例句必須真的包含這個表達才挖得了空
+      if (!example.toLowerCase().includes(e.text.toLowerCase())) return;
+      pool.push({ conceptId: p.id, concept: p.concept, text: e.text, register: e.register, example });
+    });
+  });
+  return pool;
+}
+function nextParaphraseQuestion() {
+  const container = document.getElementById('para-question-container');
+  const noteEl = document.getElementById('para-practice-note');
+  paraAnswered = false;
+  const pool = buildParaQuestionPool();
+  // 嘗試最多 20 次找出一個能湊到 2 個干擾項的題目
+  let q = null;
+  const shuffledPool = shuffle([...pool]);
+  for (const cand of shuffledPool) {
+    // 干擾項：其他 concept、register 相同、文字不同
+    const distractorSrc = pool.filter(x =>
+      x.conceptId !== cand.conceptId &&
+      x.register === cand.register &&
+      x.text.toLowerCase() !== cand.text.toLowerCase());
+    // 去重（同一個 text 只留一個）
+    const seen = new Set();
+    const distractors = [];
+    shuffle([...distractorSrc]).forEach(d => {
+      const k = d.text.toLowerCase();
+      if (!seen.has(k)) { seen.add(k); distractors.push(d.text); }
+    });
+    if (distractors.length >= 2) { q = { ...cand, distractors: distractors.slice(0, 2) }; break; }
+  }
+  if (!q) {
+    if (noteEl) noteEl.textContent = '';
+    container.innerHTML = `<div class="empty-state" style="padding:24px;"><div class="empty-state-icon">🧩</div><div class="empty-state-text">資料還太少，湊不出練習題</div><div class="empty-state-sub">同一語域（口說/寫作）至少要有幾個不同概念的表達，才能出替換題。多存幾筆再來練！</div></div>`;
+    return;
+  }
+  if (noteEl) noteEl.textContent = `題庫：${pool.length} 個可出題表達`;
+  // 挖空：把答案表達從例句中換成 ___
+  const re = new RegExp(q.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+  const blanked = q.example.replace(re, '______');
+  const choices = shuffle([q.text, ...q.distractors]);
+  window._paraChoices = choices;
+  window._paraAnswer = q.text;
+  const regHint = q.register === 'formal' ? '正式寫作' : (q.register === 'spoken' ? '口語' : '通用');
+  container.innerHTML = `<div class="grammar-card">
+    <div class="grammar-category-row" style="cursor:default;">
+      <span class="grammar-category-label">概念：${escHtml(q.concept)}</span>
+      <span class="tag ${REGISTER_TAG[q.register] || ''}">${REGISTER_LABEL[q.register] || ''}</span>
+    </div>
+    <div class="grammar-question">${escHtml(blanked)}<div style="font-size:12px; color:var(--text3); margin-top:6px;">請選最自然的${escHtml(regHint)}替換：</div></div>
+    <div class="grammar-choices">
+      ${choices.map((c, i) => `<button class="grammar-choice" onclick="answerParaphrase(this, ${i})">${escHtml(c)}</button>`).join('')}
+    </div>
+    <div class="grammar-explanation" id="para-exp"><strong>📌 答案：</strong>${escHtml(q.text)}　（原句：${escHtml(q.example)}）</div>
+    <button class="grammar-nav-btn" id="para-next-btn" onclick="nextParaphraseQuestion()" style="display:none;">下一題 →</button>
+  </div>`;
+}
+function answerParaphrase(btn, idx) {
+  if (paraAnswered) return;
+  paraAnswered = true;
+  const isCorrect = window._paraChoices[idx] === window._paraAnswer;
+  document.querySelectorAll('#para-question-container .grammar-choice').forEach(b => {
+    if (b.textContent === window._paraAnswer) b.classList.add('correct');
+    else if (b === btn && !isCorrect) b.classList.add('wrong');
+  });
+  document.getElementById('para-exp').classList.add('show');
+  document.getElementById('para-next-btn').style.display = 'block';
+  // 第一版不存統計（照規格），純練習
+}
+
+
 function initRecords() {
   renderDiaryList(); renderEngooList(); renderCamblyList(); renderInboxList();
   const el = document.getElementById('engoo-date');
@@ -2419,6 +2604,7 @@ The content could be any of:
 - Reading/listening review notes with wrong answers → grammar or practice
 - Writing feedback or model essay analysis → Task 2 phrases
 - Speaking notes → speaking material
+- Paraphrase / 改寫語料 (一個核心概念 + 多個可替換表達，標語域) → paraphrases
 - Vocabulary lists, textbook photos → vocabulary
 
 Return ONLY valid JSON, no markdown fences, no explanation:
@@ -2427,7 +2613,8 @@ Return ONLY valid JSON, no markdown fences, no explanation:
   "englishGrammar": [ { "category": "past_tense/subject_verb/preposition/other", "rule": "簡短規則名稱", "wrong": "wrong sentence", "correct": "correct sentence", "explanation": "繁體中文解釋", "source": "cambly/engoo/ielts/other" } ],
   "practice": [ { "skill": "listening/reading", "material": "例如 劍10 Test 1", "date": "YYYY-MM-DD 或空字串", "score": "分數字串或空", "causes": "錯誤原因，繁體中文，逗號分隔", "notes": "檢討重點，繁體中文" } ],
   "task2Phrases": [ { "word": "英文佳句或詞組", "meaning": "繁體中文意思", "usage": "怎麼用/例句", "topic": "主題分類（如 環境/教育/科技/通用）" } ],
-  "speakingNotes": [ { "core": "核心答案", "topics": "可套用題目，用 / 分隔", "nouns": "名詞，逗號分隔", "verbs": "動詞片語，逗號分隔", "idioms": "慣用語" } ]
+  "speakingNotes": [ { "core": "核心答案", "topics": "可套用題目，用 / 分隔", "nouns": "名詞，逗號分隔", "verbs": "動詞片語，逗號分隔", "idioms": "慣用語" } ],
+  "paraphrases": [ { "concept": "core concept in English (如 very expensive)", "expressions": [ { "text": "替換表達", "register": "spoken/formal/neutral", "note": "繁體中文使用限制/語域說明" } ], "original": "平實原句", "speakingExample": "口說例句", "writingExample": "寫作例句", "topics": "主題，逗號分隔（如 travel, money）" } ]
 }
 
 Rules:
@@ -2435,6 +2622,13 @@ Rules:
 - Meanings and explanations in Traditional Chinese (繁體中文).
 - Grammar: only errors with clear learning value, not every tiny mistake. Mark source "ielts" if from IELTS practice material.
 - Practice: if you see a 劍橋 test name with a score or a list of wrong questions, make a practice record. Guess the skill from context.
+- PARAPHRASE classification (重要):
+  - Two input styles both map to "paraphrases":
+    (A) Full structure: 核心概念/替換表達/適用語境/原句/口說例句/寫作例句/主題
+    (B) Simplified: 原句 / 自然改寫 / 適用:口說或寫作 / 主題
+  - Classify as paraphrase ONLY if there is a core concept AND at least two alternative expressions, OR it is explicitly labelled 改寫語料/paraphrase.
+  - A single word + a Chinese meaning is NOT a paraphrase → put it in englishVocab.
+  - "register" MUST be exactly one of: "spoken", "formal", "neutral". Definitions: spoken=口說/會話; formal=正式寫作; neutral=兩者皆可. If unsure, use "neutral". Never invent other values.
 - If nothing readable, return all empty arrays.`;
 
   const parts = [{ text: prompt }];
@@ -2453,6 +2647,21 @@ Rules:
   (parsed.practice || []).forEach(p => { inboxItems.push({ type: 'practice', skill: p.skill === 'reading' ? 'reading' : 'listening', material: p.material || '', date: p.date || new Date().toISOString().split('T')[0], score: p.score || '', causes: p.causes || '', notes: p.notes || '' }); added++; });
   (parsed.task2Phrases || []).forEach(p => { inboxItems.push({ type: 't2_phrase', word: p.word || '', meaning: p.meaning || '', usage: p.usage || '', topic: p.topic || '通用' }); added++; });
   (parsed.speakingNotes || []).forEach(s => { inboxItems.push({ type: 'speaking', core: s.core || '', topics: s.topics || '', nouns: s.nouns || '', verbs: s.verbs || '', idioms: s.idioms || '' }); added++; });
+  (parsed.paraphrases || []).forEach(p => {
+    // expressions 攤成多行文字「text | register | note」供預覽編輯；存檔時再 parseExpressions 解析回陣列
+    const exprLines = (p.expressions || []).map(e =>
+      `${e.text || ''} | ${normalizeRegister(e.register)} | ${e.note || ''}`).join('\n');
+    inboxItems.push({
+      type: 'paraphrase',
+      concept: p.concept || '',
+      expressions: exprLines,
+      original: p.original || '',
+      speakingExample: p.speakingExample || '',
+      writingExample: p.writingExample || '',
+      topics: Array.isArray(p.topics) ? p.topics.join(', ') : (p.topics || ''),
+    });
+    added++;
+  });
 
   saveData(); renderInboxList();
   if (added === 0) {
@@ -2471,6 +2680,7 @@ const INBOX_TYPE_LABEL = {
   practice:   { label: '📊 雅思練習紀錄', tag: 'tag-amber' },
   t2_phrase:  { label: '✍️ 寫作佳句', tag: 'tag-en' },
   speaking:   { label: '🎙️ 口說語料', tag: 'tag-de' },
+  paraphrase: { label: '🔄 改寫語料', tag: 'tag-amber' },
 };
 const INBOX_TYPE_FIELDS = {
   en_vocab:   [['word','單字'],['meaning','中文'],['partOfSpeech','詞性'],['example','例句']],
@@ -2478,7 +2688,68 @@ const INBOX_TYPE_FIELDS = {
   practice:   [['skill','科目'],['material','材料'],['date','日期'],['score','分數'],['causes','錯因'],['notes','檢討']],
   t2_phrase:  [['word','佳句'],['meaning','中文'],['usage','用法'],['topic','主題']],
   speaking:   [['core','核心'],['topics','題目'],['nouns','名詞'],['verbs','動詞'],['idioms','慣用語']],
+  paraphrase: [['concept','核心概念'],['expressions','替換表達'],['original','原句'],['speakingExample','口說例句'],['writingExample','寫作例句'],['topics','主題']],
 };
+// register 正規化：非三值一律回 neutral（AI 亂回也不會存進壞資料）
+function normalizeRegister(r) {
+  const v = (r || '').toString().trim().toLowerCase();
+  return ['spoken','formal','neutral'].includes(v) ? v : 'neutral';
+}
+// 把預覽多行文字「text | register | note」解析回 expressions 陣列
+// 解析不出至少 1 筆合法（有 text）就回 null → 儲存時擋下、顯示黃字（照德文 parseConjugation 防呆）
+function parseExpressions(raw) {
+  if (!raw) return null;
+  const out = [];
+  raw.split('\n').forEach(line => {
+    const t = line.trim();
+    if (!t) return;
+    const parts = t.split('|').map(x => x.trim());
+    if (!parts[0]) return;
+    out.push({ text: parts[0], register: normalizeRegister(parts[1]), note: parts[2] || '' });
+  });
+  return out.length ? out : null;
+}
+// 收集箱類型切換（第一版只允許 paraphrase ↔ en_vocab，兩者最易混淆）
+// 照規格：轉換不靜默丟失內容，映射不安全時要使用者確認
+function convertInboxType(el) {
+  const i = parseInt(el.dataset.idx, 10);
+  const item = inboxItems[i];
+  if (!item) return;
+  const to = el.value;
+  if (to === item.type) return;
+  if (item.type === 'en_vocab' && to === 'paraphrase') {
+    // 單字 → 改寫：保留可用文字，缺概念/表達給提示，不假設完整
+    const conv = {
+      type: 'paraphrase',
+      concept: item.meaning || '',            // 中文意思暫放概念，讓她改
+      expressions: item.word ? `${item.word} | neutral | ` : '',
+      original: item.example || '',
+      speakingExample: '', writingExample: '',
+      topics: '',
+    };
+    inboxItems[i] = conv;
+    saveData(); renderInboxList();
+    showToast('已轉為改寫語料，請補上「核心概念」與至少兩個替換表達');
+  } else if (item.type === 'paraphrase' && to === 'en_vocab') {
+    // 改寫 → 單字：只保留可安全映射的主表達；資訊會變少，先確認
+    const exprs = parseExpressions(item.expressions);
+    const mainText = exprs && exprs[0] ? exprs[0].text : '';
+    if (!confirm('轉成單字只會保留第一個替換表達當作單字，其他表達、語域與例句會被捨棄。確定要轉換嗎？')) {
+      el.value = 'paraphrase'; // 還原下拉
+      return;
+    }
+    inboxItems[i] = {
+      type: 'en_vocab',
+      word: mainText,
+      meaning: item.concept || '',
+      partOfSpeech: '',
+      example: item.speakingExample || item.original || '',
+      source: 'inbox',
+    };
+    saveData(); renderInboxList();
+    showToast('已轉為單字（其餘改寫內容已捨棄）');
+  }
+}
 function renderInboxList() {
   const el = document.getElementById('inbox-list');
   document.getElementById('inbox-count').textContent = inboxItems.length;
@@ -2489,21 +2760,47 @@ function renderInboxList() {
   el.innerHTML = inboxItems.map((item, idx) => {
     const meta = INBOX_TYPE_LABEL[item.type] || { label: item.type, tag: '' };
     const fields = INBOX_TYPE_FIELDS[item.type] || [];
-    return `<div class="inbox-item">
-      <div class="inbox-item-header">
-        <span class="tag ${meta.tag}">${meta.label}</span>
-        <button class="inbox-item-remove" data-idx="${idx}" onclick="removeInboxItem(this)">刪除</button>
-      </div>
-      ${fields.map(([key, label]) => `<div class="inbox-field">
+    // 只有 en_vocab / paraphrase 顯示類型切換下拉（兩者最易混淆）
+    const canSwitch = (item.type === 'en_vocab' || item.type === 'paraphrase');
+    const switchUI = canSwitch ? `<select class="inbox-type-select" data-idx="${idx}" onchange="convertInboxType(this)">
+        <option value="en_vocab" ${item.type === 'en_vocab' ? 'selected' : ''}>🔤 英文單字</option>
+        <option value="paraphrase" ${item.type === 'paraphrase' ? 'selected' : ''}>🔄 改寫語料</option>
+      </select>` : `<span class="tag ${meta.tag}">${meta.label}</span>`;
+    // paraphrase 的 expressions 用多行 textarea，並即時檢查解析
+    let exprWarn = '';
+    if (item.type === 'paraphrase') {
+      const parsed = parseExpressions(item.expressions);
+      if (!parsed) exprWarn = `<div class="inbox-warn">⚠️ 替換表達至少要有一筆「表達文字」，格式：<code>表達 | spoken/formal/neutral | 說明</code>，一行一個。目前無法解析，儲存時會被擋下。</div>`;
+    }
+    const fieldHtml = fields.map(([key, label]) => {
+      if (item.type === 'paraphrase' && key === 'expressions') {
+        return `<div class="inbox-field" style="flex-direction:column; align-items:stretch;">
+          <span class="inbox-field-label" style="margin-bottom:4px;">${label}（一行一個：<code>表達 | spoken/formal/neutral | 說明</code>）</span>
+          <textarea class="inbox-field-input" style="min-height:64px; font-family:inherit;" data-idx="${idx}" data-key="${key}" oninput="updateInboxField(this)">${escHtml(item[key] || '')}</textarea>
+        </div>${exprWarn}`;
+      }
+      return `<div class="inbox-field">
         <span class="inbox-field-label">${label}</span>
         <input class="inbox-field-input" value="${escAttr(item[key] || '')}" data-idx="${idx}" data-key="${key}" oninput="updateInboxField(this)">
-      </div>`).join('')}
+      </div>`;
+    }).join('');
+    return `<div class="inbox-item">
+      <div class="inbox-item-header">
+        ${switchUI}
+        <button class="inbox-item-remove" data-idx="${idx}" onclick="removeInboxItem(this)">刪除</button>
+      </div>
+      ${fieldHtml}
     </div>`;
   }).join('');
 }
 function updateInboxField(el) {
   const i = parseInt(el.dataset.idx, 10);
-  if (inboxItems[i]) { inboxItems[i][el.dataset.key] = el.value; saveData(); }
+  if (inboxItems[i]) {
+    inboxItems[i][el.dataset.key] = el.value;
+    saveData();
+    // paraphrase 的 expressions 改動時即時更新解析警告
+    if (inboxItems[i].type === 'paraphrase' && el.dataset.key === 'expressions') renderInboxList();
+  }
 }
 function removeInboxItem(el) { inboxItems.splice(parseInt(el.dataset.idx, 10), 1); saveData(); renderInboxList(); }
 function clearInbox() {
@@ -2526,6 +2823,12 @@ async function saveInboxToGithub() {
     inboxItems = []; saveData(); renderInboxList();
     renderPracticeList('listening'); renderPracticeList('reading');
     statusEl.innerHTML = `<div class="ai-result" style="color:var(--green);">✅ 已存入 ${practices.length} 筆練習紀錄（練習紀錄屬於個人進度，走進度同步）</div>`;
+    return;
+  }
+  // paraphrase 儲存前驗證：expressions 解析不出至少 1 筆合法就擋下（不讓壞資料進資料庫）
+  const badPara = dbItems.filter(i => i.type === 'paraphrase' && (!i.concept || !i.concept.trim() || !parseExpressions(i.expressions)));
+  if (badPara.length) {
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--amber);">⚠️ 有 ${badPara.length} 筆改寫語料還不完整（缺核心概念，或替換表達無法解析）。請補齊「核心概念」與至少一筆「表達 | 語域 | 說明」再儲存。</div>`;
     return;
   }
   const cfg = getGithubConfig();
@@ -2553,6 +2856,12 @@ async function saveInboxToGithub() {
         ud.speakingNotes.push({ id: makeUserId('sn', n), core: item.core || '',
           topics: (item.topics || '').split('/').map(s => s.trim()).filter(Boolean),
           nouns: item.nouns || '', verbs: item.verbs || '', idioms: item.idioms || '' });
+      } else if (item.type === 'paraphrase') {
+        ud.paraphrases.push({ id: makeUserId('upara', n), concept: item.concept || '',
+          expressions: parseExpressions(item.expressions) || [],
+          original: item.original || '', speakingExample: item.speakingExample || '',
+          writingExample: item.writingExample || '',
+          topics: (item.topics || '').split(/[,，]/).map(s => s.trim()).filter(Boolean) });
       }
     });
   });
@@ -2567,6 +2876,7 @@ async function saveInboxToGithub() {
   saveData(); renderInboxList();
   renderPracticeList('listening'); renderPracticeList('reading');
   renderSpeakingNotes();
+  initParaBank();
   updateHome();
   statusEl.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 已儲存 ${dbItems.length} 筆到雲端資料庫${practices.length ? `，另有 ${practices.length} 筆練習紀錄已存入個人進度` : ''}。<br>Murray 的德文資料完全沒有被動到。</div>`;
 }
