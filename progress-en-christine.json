@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784619202754,
+  "savedAt": 1784619231343,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -786,12 +786,12 @@
   },
   "grammarStats": {
     "correct": 10,
-    "wrong": 6,
-    "total": 16
+    "wrong": 7,
+    "total": 17
   },
   "todayStats": {
     "flipped": 17,
-    "grammarPracticed": 0,
+    "grammarPracticed": 1,
     "date": "Tue Jul 21 2026"
   },
   "diaryEntries": [],
