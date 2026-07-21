@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784222076114,
+  "savedAt": 1784609156299,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -11,14 +11,14 @@
     },
     "en_en071": {
       "stage": 1,
-      "nextReview": 1784029066694,
+      "nextReview": 1784384450749,
       "correct": 2,
-      "incorrect": 4
+      "incorrect": 5
     },
     "en_en169": {
       "stage": 4,
-      "nextReview": 1783931349901,
-      "correct": 3,
+      "nextReview": 1786890067685,
+      "correct": 4,
       "incorrect": 0
     },
     "en_en047": {
@@ -77,20 +77,20 @@
     },
     "en_en028": {
       "stage": 4,
-      "nextReview": 1783931403423,
-      "correct": 3,
+      "nextReview": 1786890080554,
+      "correct": 4,
       "incorrect": 0
     },
     "en_en053": {
-      "stage": 2,
-      "nextReview": 1784174529014,
-      "correct": 3,
+      "stage": 3,
+      "nextReview": 1785507655483,
+      "correct": 4,
       "incorrect": 2
     },
     "en_en090": {
-      "stage": 1,
-      "nextReview": 1784029093081,
-      "correct": 3,
+      "stage": 2,
+      "nextReview": 1784902898673,
+      "correct": 4,
       "incorrect": 1
     },
     "en_en167": {
@@ -125,8 +125,8 @@
     },
     "en_en149": {
       "stage": 4,
-      "nextReview": 1783931449476,
-      "correct": 3,
+      "nextReview": 1786890147715,
+      "correct": 4,
       "incorrect": 0
     },
     "en_en011": {
@@ -154,9 +154,9 @@
       "incorrect": 0
     },
     "en_en007": {
-      "stage": 2,
-      "nextReview": 1784280399587,
-      "correct": 3,
+      "stage": 3,
+      "nextReview": 1785507696273,
+      "correct": 4,
       "incorrect": 3
     },
     "en_en123": {
@@ -190,9 +190,9 @@
       "incorrect": 6
     },
     "en_en110": {
-      "stage": 3,
-      "nextReview": 1784037233023,
-      "correct": 2,
+      "stage": 4,
+      "nextReview": 1786890169718,
+      "correct": 3,
       "incorrect": 1
     },
     "en_en179": {
@@ -208,9 +208,9 @@
       "incorrect": 0
     },
     "en_en031": {
-      "stage": 2,
-      "nextReview": 1784280383319,
-      "correct": 1,
+      "stage": 3,
+      "nextReview": 1785507802724,
+      "correct": 2,
       "incorrect": 4
     },
     "en_en104": {
@@ -244,15 +244,15 @@
       "incorrect": 1
     },
     "en_en135": {
-      "stage": 3,
-      "nextReview": 1784037431234,
-      "correct": 2,
+      "stage": 4,
+      "nextReview": 1786890151182,
+      "correct": 3,
       "incorrect": 0
     },
     "en_en006": {
-      "stage": 2,
-      "nextReview": 1784174390176,
-      "correct": 1,
+      "stage": 3,
+      "nextReview": 1785507760833,
+      "correct": 2,
       "incorrect": 3
     },
     "en_en002": {
@@ -316,15 +316,15 @@
       "incorrect": 0
     },
     "en_en196": {
-      "stage": 2,
-      "nextReview": 1784174371539,
-      "correct": 1,
+      "stage": 3,
+      "nextReview": 1785507720660,
+      "correct": 2,
       "incorrect": 2
     },
     "en_en063": {
-      "stage": 3,
-      "nextReview": 1784037292116,
-      "correct": 2,
+      "stage": 4,
+      "nextReview": 1786890101207,
+      "correct": 3,
       "incorrect": 0
     },
     "en_en120": {
@@ -370,16 +370,16 @@
       "incorrect": 3
     },
     "en_en145": {
-      "stage": 2,
-      "nextReview": 1784280252428,
-      "correct": 2,
+      "stage": 3,
+      "nextReview": 1785507724394,
+      "correct": 3,
       "incorrect": 1
     },
     "en_en055": {
       "stage": 1,
-      "nextReview": 1784084936283,
+      "nextReview": 1784384555999,
       "correct": 0,
-      "incorrect": 3
+      "incorrect": 4
     },
     "en_en210": {
       "stage": 3,
@@ -400,10 +400,10 @@
       "incorrect": 3
     },
     "en_en218": {
-      "stage": 2,
-      "nextReview": 1784280350996,
+      "stage": 1,
+      "nextReview": 1784384588773,
       "correct": 1,
-      "incorrect": 2
+      "incorrect": 3
     },
     "en_en162": {
       "stage": 2,
@@ -467,9 +467,9 @@
     },
     "en_en132": {
       "stage": 1,
-      "nextReview": 1784000389008,
+      "nextReview": 1784384565451,
       "correct": 0,
-      "incorrect": 2
+      "incorrect": 3
     },
     "en_en213": {
       "stage": 3,
@@ -557,9 +557,9 @@
     },
     "en_en076": {
       "stage": 1,
-      "nextReview": 1784000311463,
+      "nextReview": 1784384598373,
       "correct": 0,
-      "incorrect": 3
+      "incorrect": 4
     },
     "en_en087": {
       "stage": 2,
@@ -598,9 +598,9 @@
       "incorrect": 4
     },
     "en_en200": {
-      "stage": 1,
-      "nextReview": 1784000331698,
-      "correct": 0,
+      "stage": 2,
+      "nextReview": 1784902862350,
+      "correct": 1,
       "incorrect": 3
     },
     "en_en089": {
@@ -616,9 +616,9 @@
       "incorrect": 0
     },
     "en_en058": {
-      "stage": 2,
-      "nextReview": 1784174816663,
-      "correct": 1,
+      "stage": 3,
+      "nextReview": 1785507772952,
+      "correct": 2,
       "incorrect": 1
     },
     "en_en095": {
@@ -646,9 +646,9 @@
       "incorrect": 0
     },
     "en_en039": {
-      "stage": 2,
-      "nextReview": 1784174485473,
-      "correct": 1,
+      "stage": 3,
+      "nextReview": 1785507684986,
+      "correct": 2,
       "incorrect": 1
     },
     "en_en211": {
@@ -661,6 +661,126 @@
       "stage": 3,
       "nextReview": 1784779487309,
       "correct": 2,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg7": {
+      "stage": 1,
+      "nextReview": 1784384621789,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "en_uenmrnrr7sg21": {
+      "stage": 2,
+      "nextReview": 1784903030998,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg26": {
+      "stage": 2,
+      "nextReview": 1784903042668,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg17": {
+      "stage": 2,
+      "nextReview": 1784903081457,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg24": {
+      "stage": 1,
+      "nextReview": 1784384713113,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "en_uenmrnrr7sg41": {
+      "stage": 2,
+      "nextReview": 1784903376430,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg8": {
+      "stage": 2,
+      "nextReview": 1784903378360,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg6": {
+      "stage": 2,
+      "nextReview": 1784903388427,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg20": {
+      "stage": 2,
+      "nextReview": 1784903413198,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg29": {
+      "stage": 1,
+      "nextReview": 1784385025101,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "en_uenmrnrr7sg19": {
+      "stage": 1,
+      "nextReview": 1784385035501,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "en_uenmrnrr7sg39": {
+      "stage": 2,
+      "nextReview": 1784903440736,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg4": {
+      "stage": 1,
+      "nextReview": 1784385045953,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "en_uenmrnrr7sg37": {
+      "stage": 1,
+      "nextReview": 1784385050588,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "en_uenmrnrr7sg5": {
+      "stage": 2,
+      "nextReview": 1784903453705,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg31": {
+      "stage": 2,
+      "nextReview": 1784903462724,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg27": {
+      "stage": 2,
+      "nextReview": 1784903464474,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg9": {
+      "stage": 2,
+      "nextReview": 1784903466457,
+      "correct": 1,
+      "incorrect": 0
+    },
+    "en_uenmrnrr7sg14": {
+      "stage": 1,
+      "nextReview": 1784385069657,
+      "correct": 0,
+      "incorrect": 1
+    },
+    "en_uenmrnrr7sg45": {
+      "stage": 2,
+      "nextReview": 1784903471441,
+      "correct": 1,
       "incorrect": 0
     }
   },
@@ -707,7 +827,78 @@
     }
   ],
   "inboxItems": [],
-  "planItems": [],
+  "planItems": [
+    {
+      "id": 1784526398249,
+      "week": "2026-07-20",
+      "skill": "reading",
+      "day": 0,
+      "text": "平行閱讀法五步驟精讀＋劍10 T1 P1 不限時拆解",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1784526398250,
+      "week": "2026-07-20",
+      "skill": "listening",
+      "day": 1,
+      "text": "劍10 T1 S1–S2 精聽訂正＋Shadowing 10分鐘",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1784526398251,
+      "week": "2026-07-20",
+      "skill": "speaking",
+      "day": 2,
+      "text": "Cambly＋課後把語料丟收集箱",
+      "done": true,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1784526398252,
+      "week": "2026-07-20",
+      "skill": "writing",
+      "day": 4,
+      "text": "Simon Task 2 四段結構＋13句法熟讀（先不寫全篇）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1784526398253,
+      "week": "2026-07-20",
+      "skill": "reading",
+      "day": 5,
+      "text": "劍10 T1 P2 不限時＋拆解檢核",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1784526398254,
+      "week": "2026-07-20",
+      "skill": "writing",
+      "day": 6,
+      "text": "Task 2 Opinion 模板背誦＋每週回顧",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1784526398255,
+      "week": "2026-07-20",
+      "skill": "material",
+      "day": 5,
+      "text": "EGIU Unit 1–9（平日1單元、假日可2，週六快速複習）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    }
+  ],
   "practiceRecords": [
     {
       "id": 1784222073816.5935,
@@ -724,5 +915,12 @@
     }
   ],
   "breakdowns": [],
-  "essayRecords": []
+  "essayRecords": [],
+  "egiuDone": {
+    "1": "2026-07-19",
+    "2": "2026-07-19"
+  },
+  "planImportedWeeks": [
+    "2026-07-20"
+  ]
 }
