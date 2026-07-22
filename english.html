@@ -29,6 +29,13 @@
   .inbox-warn { font-size: 12px; line-height: 1.6; color: var(--amber); background: var(--amber-light, #fff8e1);
     border-radius: 8px; padding: 8px 10px; margin: 4px 0 8px; }
   .inbox-warn code { background: rgba(0,0,0,.06); padding: 1px 4px; border-radius: 4px; font-size: 11px; }
+  /* 計畫項目編輯按鈕（v2.2.1） */
+  .plan-edit { font-size: 13px; color: var(--text3); background: none; border: none; padding: 4px 6px; cursor: pointer; }
+  /* Paraphrase 選項中文說明（v2.2.1，答完後顯示每個選項的意思，不只正確答案） */
+  .para-choice-meaning { font-size: 12px; line-height: 1.6; color: var(--text2); margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border); }
+  .para-choice-meaning .pcm-row { margin-bottom: 4px; }
+  .para-choice-meaning .pcm-correct { color: var(--green); font-weight: 600; }
+  .para-choice-meaning .pcm-wrong { color: var(--text2); }
 </style>
 </head>
 <body>
@@ -280,7 +287,7 @@
 
         <div id="para-practice-view" style="display:none;">
           <div style="font-size:12px; color:var(--text3); line-height:1.6; padding: 8px 16px 0;">
-            句中挖空，選最自然的替換表達。干擾項來自其他概念、同樣語域（口說/寫作），但語意不符。
+            句中挖空，選最自然的替換表達；也會出現「語域選擇」題，考的是同一個概念在不同場合該用哪個字。答完後每個選項都會顯示中文說明。
           </div>
           <div id="para-practice-note" style="font-size:12px; color:var(--text3); padding: 0 16px;"></div>
           <div id="para-question-container"></div>
@@ -979,6 +986,13 @@ function updateCountdown() {
 // 第一次開到「本週或未來週」時，該週項目自動帶入 planItems（標 fromPlan），
 // 之後就是普通項目：可以打勾、刪除、補充。帶過的週記在 planImportedWeeks，
 // 不會重複帶入——她刪掉的項目不會自己長回來。
+//
+// 【v2.2.1 新增】editPlan()：大表自動帶入的項目原本只能勾選完成或整筆刪除，
+// 沒有辦法「調整」——但她幾乎每天都會依實際進度調整當天/隔天要做的項目
+// （例如今天沒做完想挪到明天，或想把材料換一本）。這裡補上編輯功能：
+// 點鉛筆圖示可以直接改「星期幾」和「內容文字」，跟 openPlanEditor() 一樣
+// 用 prompt() 完成，不新增頁面、不改資料結構（fromPlan 標記維持不變，
+// 純粹是文字/星期被她自己改過，仍算她已經確認調整過的項目）。
 // ============================================================
 function mondayOf(date) {
   const d = new Date(date);
@@ -1050,6 +1064,7 @@ function renderPlan() {
         <div class="plan-check" data-idx="${idx}" onclick="togglePlan(this)">${i.done ? '✓' : ''}</div>
         <div class="plan-text"><strong style="font-size:12px; color:var(--text3);">${DAY_LABELS[i.day]}</strong>　${escHtml(i.text)}
         ${i.score ? `<span class="tag tag-green" style="margin-left:6px;">${escHtml(i.score)}</span>` : ''}</div>
+        <button class="plan-edit" data-idx="${idx}" onclick="editPlan(this)" title="調整這一項">✏️</button>
         <button class="plan-del" data-idx="${idx}" onclick="delPlan(this)">✕</button>
       </div>`;
     }).join('');
@@ -1068,6 +1083,26 @@ function delPlan(el) {
   if (!confirm('刪除這個安排？')) return;
   planItems.splice(i, 1);
   saveData(); renderPlan();
+}
+// 【v2.2.1 新增】編輯已存在的計畫項目（含大表自動帶入的項目）：
+// 可以改「星期幾」和「內容文字」。用 prompt() 沿用 openPlanEditor() 的做法，
+// 低複雜度、不新增頁面。fromPlan 標記不變——這只是她確認過並調整內容，
+// 不影響「已帶入哪些週」的紀錄，也不會讓大表重新灌入這一項。
+function editPlan(el) {
+  const i = parseInt(el.dataset.idx, 10);
+  const item = planItems[i];
+  if (!item) return;
+  const dayIn = prompt(`調整星期幾？1=週一 … 7=週日（目前：${DAY_LABELS[item.day]}）`, String(item.day + 1));
+  if (dayIn === null) return; // 取消
+  const day = parseInt(dayIn, 10) - 1;
+  if (isNaN(day) || day < 0 || day > 6) { showToast('請輸入 1–7，已取消調整'); return; }
+  const textIn = prompt('調整內容文字：', item.text);
+  if (textIn === null) return; // 取消
+  if (!textIn.trim()) { showToast('內容不能是空的，已取消調整'); return; }
+  item.day = day;
+  item.text = textIn.trim();
+  saveData(); renderPlan();
+  showToast('✅ 已調整這一項');
 }
 // 新增安排：用 prompt 串起來（不另開頁面，維持低複雜度）
 function openPlanEditor() {
@@ -2257,10 +2292,18 @@ function renderSpeakingNotes() {
 }
 
 // ============================================================
-// Paraphrase Bank／改寫語料庫（v2.2.0）
+// Paraphrase Bank／改寫語料庫（v2.2.0；v2.2.1 加入第二題型 + 選項中文說明）
 // 固定資料在 data-ielts.js 的 IELTS_PARAPHRASES；收集箱新增的走 data-user.json，
 // 由 core.js mergeUserData() 合併進同一個 IELTS_PARAPHRASES 陣列。
 // register 三值：spoken / formal / neutral。
+//
+// 【v2.2.1 修改原因（Christine 回饋）】
+// 1. 題型永遠一樣（只有挖空選擇）→ 新增第二種題型「語域選擇」：同一個概念底下
+//    有多種表達分別適合口說/寫作/通用，考的是「這個場合該用哪個」，而不是
+//    「這句話的意思是什麼」。兩種題型隨機出現，不新增資料欄位、純本機邏輯。
+// 2. 有些片語看不懂意思，答錯或猜對了也不知道為什麼 → 答題後的解析區塊
+//    現在會列出「每一個選項」的中文說明（用該表達自己在 IELTS_PARAPHRASES
+//    裡本來就存在的 note 欄位），不是只公布正確答案。
 // ============================================================
 let paraMode = 'browse';
 let paraTopic = 'all';
@@ -2325,7 +2368,32 @@ function renderParaList() {
   </div>`).join('');
 }
 
-// ---- 替換選擇題（純本機，離線可用）----
+// ---- 練習題共用工具：把「文字」查回它在題庫裡的完整記錄（含中文說明），
+// 答完後才好列出每個選項的意思，不只正確答案一個 ----
+function paraTextIndex() {
+  const idx = {};
+  paraBank().forEach(p => (p.expressions || []).forEach(e => {
+    if (!e.text) return;
+    const k = e.text.toLowerCase();
+    if (!idx[k]) idx[k] = { text: e.text, register: e.register, note: e.note || '', concept: p.concept };
+  }));
+  return idx;
+}
+function renderChoiceMeanings(choices, correctText) {
+  const idx = paraTextIndex();
+  const rows = choices.map(c => {
+    const info = idx[c.toLowerCase()];
+    const isCorrect = c === correctText;
+    const regLabel = info ? (REGISTER_LABEL[info.register] || info.register) : '';
+    const noteText = info && info.note ? info.note : '（沒有額外說明）';
+    return `<div class="pcm-row"><span class="${isCorrect ? 'pcm-correct' : 'pcm-wrong'}">${isCorrect ? '✅' : '・'} ${escHtml(c)}</span>
+      ${regLabel ? `<span class="tag ${REGISTER_TAG[info.register] || ''}" style="margin-left:4px;">${regLabel}</span>` : ''}
+      <br><span style="font-size:12px;">${escHtml(noteText)}</span></div>`;
+  }).join('');
+  return `<div class="para-choice-meaning">${rows}</div>`;
+}
+
+// ---- 題型一：挖空選擇（主力）----
 // 出題規則：挑一個有 example 的 expression 當答案，把它從 example 句挖空；
 // 干擾項來自「其他 concept」、register 相同、文字不重複的表達；湊不到 2 個就跳題。
 let paraAnswered = false;
@@ -2343,12 +2411,38 @@ function buildParaQuestionPool() {
       if (!example) return;
       // 例句必須真的包含這個表達才挖得了空
       if (!example.toLowerCase().includes(e.text.toLowerCase())) return;
-      pool.push({ conceptId: p.id, concept: p.concept, text: e.text, register: e.register, example });
+      pool.push({ conceptId: p.id, concept: p.concept, text: e.text, register: e.register, example, note: e.note || '' });
     });
   });
   return pool;
 }
+// ---- 題型二：語域選擇 ----
+// 同一個概念底下若有 ≥2 種不同語域的表達，隨機挑一個目標語域，
+// 讓使用者從「這個概念自己的幾種表達」裡選出符合該語域的那一個。
+// 這裡選項全部來自同一個概念，測的是「場合判斷」，不是「概念意思」，
+// 所以不需要跨概念找干擾項，也不會有語意含糊的問題。
+function buildRegisterQuestionPool() {
+  const bank = paraBank();
+  const out = [];
+  bank.forEach(p => {
+    const byReg = {};
+    (p.expressions || []).forEach(e => {
+      if (!e.text || !e.register) return;
+      if (!byReg[e.register]) byReg[e.register] = e; // 每種語域只取第一個，避免同語域選項重複、無法作答
+    });
+    const regs = Object.keys(byReg);
+    if (regs.length >= 2) out.push({ conceptId: p.id, concept: p.concept, options: regs.map(r => byReg[r]) });
+  });
+  return out;
+}
 function nextParaphraseQuestion() {
+  // 隨機決定這題出哪一種題型：語域選擇題庫不夠大時自動退回挖空選擇，不會出現空題
+  const regPool = buildRegisterQuestionPool();
+  const useRegisterType = regPool.length > 0 && Math.random() < 0.45;
+  if (useRegisterType) { renderRegisterQuestion(regPool); return; }
+  renderBlankQuestion();
+}
+function renderBlankQuestion() {
   const container = document.getElementById('para-question-container');
   const noteEl = document.getElementById('para-practice-note');
   paraAnswered = false;
@@ -2376,7 +2470,7 @@ function nextParaphraseQuestion() {
     container.innerHTML = `<div class="empty-state" style="padding:24px;"><div class="empty-state-icon">🧩</div><div class="empty-state-text">資料還太少，湊不出練習題</div><div class="empty-state-sub">同一語域（口說/寫作）至少要有幾個不同概念的表達，才能出替換題。多存幾筆再來練！</div></div>`;
     return;
   }
-  if (noteEl) noteEl.textContent = `題庫：${pool.length} 個可出題表達`;
+  if (noteEl) noteEl.textContent = `題庫：${pool.length} 個可出題表達・題型：挖空選擇`;
   // 挖空：把答案表達從例句中換成 ___
   const re = new RegExp(q.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
   const blanked = q.example.replace(re, '______');
@@ -2384,6 +2478,7 @@ function nextParaphraseQuestion() {
   window._paraChoices = choices;
   window._paraAnswer = q.text;
   const regHint = q.register === 'formal' ? '正式寫作' : (q.register === 'spoken' ? '口語' : '通用');
+  const explainHtml = `<strong>📌 答案：</strong>${escHtml(q.text)}　（原句：${escHtml(q.example)}）` + renderChoiceMeanings(choices, q.text);
   container.innerHTML = `<div class="grammar-card">
     <div class="grammar-category-row" style="cursor:default;">
       <span class="grammar-category-label">概念：${escHtml(q.concept)}</span>
@@ -2393,7 +2488,32 @@ function nextParaphraseQuestion() {
     <div class="grammar-choices">
       ${choices.map((c, i) => `<button class="grammar-choice" onclick="answerParaphrase(this, ${i})">${escHtml(c)}</button>`).join('')}
     </div>
-    <div class="grammar-explanation" id="para-exp"><strong>📌 答案：</strong>${escHtml(q.text)}　（原句：${escHtml(q.example)}）</div>
+    <div class="grammar-explanation" id="para-exp">${explainHtml}</div>
+    <button class="grammar-nav-btn" id="para-next-btn" onclick="nextParaphraseQuestion()" style="display:none;">下一題 →</button>
+  </div>`;
+}
+function renderRegisterQuestion(regPool) {
+  const container = document.getElementById('para-question-container');
+  const noteEl = document.getElementById('para-practice-note');
+  paraAnswered = false;
+  const q = shuffle([...regPool])[0];
+  const targetOpt = shuffle([...q.options])[0];
+  const targetReg = targetOpt.register;
+  const choices = shuffle(q.options.map(o => o.text));
+  window._paraChoices = choices;
+  window._paraAnswer = targetOpt.text;
+  if (noteEl) noteEl.textContent = `題庫：${regPool.length} 個可出題概念・題型：語域選擇`;
+  const regHint = REGISTER_LABEL[targetReg] || targetReg;
+  const explainHtml = `<strong>📌 答案：</strong>${escHtml(targetOpt.text)}（適合${escHtml(regHint)}）` + renderChoiceMeanings(choices, targetOpt.text);
+  container.innerHTML = `<div class="grammar-card">
+    <div class="grammar-category-row" style="cursor:default;">
+      <span class="grammar-category-label">概念：${escHtml(q.concept)}</span>
+    </div>
+    <div class="grammar-question">如果要用在<strong>${escHtml(regHint)}</strong>的場合，下面哪一個表達最適合？<div style="font-size:12px; color:var(--text3); margin-top:6px;">這幾個字都跟「${escHtml(q.concept)}」意思相關，差別在使用場合。</div></div>
+    <div class="grammar-choices">
+      ${choices.map((c, i) => `<button class="grammar-choice" onclick="answerParaphrase(this, ${i})">${escHtml(c)}</button>`).join('')}
+    </div>
+    <div class="grammar-explanation" id="para-exp">${explainHtml}</div>
     <button class="grammar-nav-btn" id="para-next-btn" onclick="nextParaphraseQuestion()" style="display:none;">下一題 →</button>
   </div>`;
 }
