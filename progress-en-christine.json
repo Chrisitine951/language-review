@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784735160527,
+  "savedAt": 1784735338382,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -834,7 +834,7 @@
       "skill": "reading",
       "day": 0,
       "text": "Cambly口說課",
-      "done": false,
+      "done": true,
       "score": "",
       "fromPlan": true
     },
@@ -843,8 +843,8 @@
       "week": "2026-07-20",
       "skill": "listening",
       "day": 1,
-      "text": "劍10 T1 S1–S2 精聽訂正＋Shadowing 10分鐘",
-      "done": false,
+      "text": "平行閱讀法五步驟精讀，p.12第一節（到練習一）+EGIU Unit4",
+      "done": true,
       "score": "",
       "fromPlan": true
     },
