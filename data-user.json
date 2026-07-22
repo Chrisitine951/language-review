@@ -759,6 +759,134 @@
       "partOfSpeech": "phrase",
       "example": "The jury is still out on the main cause of the problem.",
       "source": "ielts"
+    },
+    {
+      "id": "uenmrvvn5su1",
+      "word": "annual leave",
+      "meaning": "年假、帶薪休假",
+      "partOfSpeech": "phrase",
+      "example": "I have about 18 days of annual leave this year.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su2",
+      "word": "trilingual",
+      "meaning": "能使用三種語言的",
+      "partOfSpeech": "adj.",
+      "example": "Many students in Europe grow up trilingual.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su3",
+      "word": "dialect",
+      "meaning": "方言、地方語言變體",
+      "partOfSpeech": "n.",
+      "example": "Different regions may have their own dialects.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su4",
+      "word": "priceless",
+      "meaning": "無價的；因情感價值而無法估價的",
+      "partOfSpeech": "adj.",
+      "example": "This family photograph is priceless to me.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su5",
+      "word": "relaxing",
+      "meaning": "令人放鬆的",
+      "partOfSpeech": "adj.",
+      "example": "I find landscape paintings relaxing.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su6",
+      "word": "soothing",
+      "meaning": "使人平靜、舒緩的",
+      "partOfSpeech": "adj.",
+      "example": "The colours in the painting are very soothing.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su7",
+      "word": "particularly",
+      "meaning": "尤其、特別是",
+      "partOfSpeech": "adv.",
+      "example": "I particularly like paintings of natural scenery.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su8",
+      "word": "combination",
+      "meaning": "組合、結合",
+      "partOfSpeech": "n.",
+      "example": "The painting uses a combination of warm and cool colours.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su9",
+      "word": "masterpiece",
+      "meaning": "傑作、代表作",
+      "partOfSpeech": "n.",
+      "example": "Many people consider Guernica a masterpiece.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su10",
+      "word": "artwork",
+      "meaning": "藝術作品",
+      "partOfSpeech": "n.",
+      "example": "This piece of artwork is displayed in a museum.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su11",
+      "word": "impressionism",
+      "meaning": "印象派",
+      "partOfSpeech": "n.",
+      "example": "Impressionism is one of the art styles I would like to learn more about.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su12",
+      "word": "admire",
+      "meaning": "欣賞、欽佩",
+      "partOfSpeech": "v.",
+      "example": "I admire artists who can express complex emotions through paintings.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su13",
+      "word": "inspire",
+      "meaning": "啟發、激勵",
+      "partOfSpeech": "v.",
+      "example": "Great teachers can inspire their students.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su14",
+      "word": "mesmerised",
+      "meaning": "看得入迷、深深著迷",
+      "partOfSpeech": "adj.",
+      "example": "I was completely mesmerised by the details of the painting.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su15",
+      "word": "impromptu",
+      "meaning": "即興的、沒有事先安排的",
+      "partOfSpeech": "adj.",
+      "example": "I’m not very comfortable with impromptu plans.",
+      "source": "cambly"
+    },
+    {
+      "id": "uenmrvvn5su16",
+      "word": "rhetorical question",
+      "meaning": "修辭問句",
+      "partOfSpeech": "n.",
+      "example": "A rhetorical question can be used to introduce a Part 2 answer.",
+      "source": "cambly"
     }
   ],
   "germanVocabulary": [
@@ -2685,6 +2813,66 @@
       "explanation": "hungry 是身體狀態，不能使用 being。",
       "source": "ielts",
       "mastered": false
+    },
+    {
+      "id": "ugrmrvvn5su17",
+      "category": "other",
+      "rule": "未來安排使用現在進行式",
+      "wrong": "I go to Korea in August.",
+      "correct": "I’m going to Korea in August.",
+      "explanation": "已經安排好的未來行程，可使用現在進行式。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrvvn5su18",
+      "category": "preposition",
+      "rule": "apply for",
+      "wrong": "If you apply that three…",
+      "correct": "If you apply for three days of annual leave…",
+      "explanation": "申請某物使用 apply for。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrvvn5su19",
+      "category": "past_tense",
+      "rule": "現在完成式表達持續年資",
+      "wrong": "Because I already do this work three years.",
+      "correct": "Because I have worked here for three years.",
+      "explanation": "從過去持續到現在的工作年資，使用 have worked + for。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrvvn5su20",
+      "category": "other",
+      "rule": "比較級對象需對等",
+      "wrong": "Our company is more than the lawyer.",
+      "correct": "Our company gives us more annual leave than the law requires.",
+      "explanation": "lawyer 是律師，law 才是法律。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrvvn5su21",
+      "category": "other",
+      "rule": "形容詞與副詞修飾",
+      "wrong": "You can easy to communicate",
+      "correct": "You can communicate easily",
+      "explanation": "easy 是形容詞，修飾動詞 communicate 需使用副詞 easily。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrvvn5su22",
+      "category": "other",
+      "rule": "情緒形容詞 ed/ing",
+      "wrong": "I will be exciting.",
+      "correct": "I will be excited.",
+      "explanation": "描述人感到情緒使用 -ed 形容詞。",
+      "source": "cambly",
+      "mastered": false
     }
   ],
   "germanGrammar": [
@@ -3217,7 +3405,36 @@
       "ieltsTip": "這是一個在學術文章和聽力中常見的正式詞彙，了解其「禁止、宣告非法」的含義以及與 prescribe (規定、開藥) 的區別，對雅思閱讀和寫作非常重要。"
     }
   ],
-  "task2Phrases": [],
+  "task2Phrases": [
+    {
+      "id": "ut2mrvvn5su23",
+      "word": "I couldn’t take my eyes off it",
+      "meaning": "我完全移不開視線",
+      "usage": "用於描述對藝術品或美景的著迷。",
+      "topic": "通用"
+    },
+    {
+      "id": "ut2mrvvn5su24",
+      "word": "look forward to",
+      "meaning": "期待",
+      "usage": "用於描述對未來的計畫或旅遊的興奮。",
+      "topic": "通用"
+    },
+    {
+      "id": "ut2mrvvn5su25",
+      "word": "think something over",
+      "meaning": "仔細考慮某事",
+      "usage": "表達在做決定前的深思熟慮。",
+      "topic": "通用"
+    },
+    {
+      "id": "ut2mrvvn5su26",
+      "word": "in terms of",
+      "meaning": "就……而言",
+      "usage": "用於引入分析角度。",
+      "topic": "通用"
+    }
+  ],
   "speakingNotes": [
     {
       "id": "usnmrswis7x32",
@@ -3260,6 +3477,39 @@
       "nouns": "immigration officer, business trip, jet lag",
       "verbs": "suffer from jet lag, take long-haul flights",
       "idioms": "long-haul flight, cost an arm and a leg"
+    },
+    {
+      "id": "usnmrvvn5su27",
+      "core": "描述畫作 (Guernica)",
+      "topics": [
+        "Art",
+        "Painting"
+      ],
+      "nouns": "art, masterpiece, painting, detail, message",
+      "verbs": "express, communicate, impress, take my eyes off",
+      "idioms": "I couldn’t take my eyes off it"
+    },
+    {
+      "id": "usnmrvvn5su28",
+      "core": "旅遊與年假",
+      "topics": [
+        "Travel",
+        "Work"
+      ],
+      "nouns": "annual leave, trip, company benefit, law",
+      "verbs": "apply for, work here for, look forward to",
+      "idioms": ""
+    },
+    {
+      "id": "usnmrvvn5su29",
+      "core": "語言學習優勢",
+      "topics": [
+        "Language",
+        "Education"
+      ],
+      "nouns": "advantage, network, opportunity",
+      "verbs": "speak, communicate, study abroad",
+      "idioms": ""
     }
   ],
   "paraphrases": [
