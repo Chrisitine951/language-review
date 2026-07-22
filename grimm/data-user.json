@@ -143,6 +143,38 @@
       ],
       "summary": "infinitive（不定詞）由字首 in-（在內、進入）加上字根 fin（界線、終點）與形容詞字尾組成，字面上的意思是「沒有設置界線、不受限制的」，因此引申為文法中的「不定詞」。",
       "savedAt": "2026-07-22T14:57:10.892Z"
+    },
+    {
+      "id": "ulkmrw7hzsk3",
+      "word": "irregular",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ir",
+          "meaning": "否定（源自 in-，因同化作用變成 ir-）",
+          "grimmNote": "in-＝在內、進入，在此表否定。因為後面接 r，為了發音順口同化成了 ir-"
+        },
+        {
+          "type": "prefix",
+          "text": "re",
+          "meaning": "再次、反覆、相反",
+          "grimmNote": "re-＝再次、重複、回來，此處引申為「反向、相反」的意思"
+        },
+        {
+          "type": "root",
+          "text": "g",
+          "meaning": "規則、直線、引導",
+          "grimmNote": "喉音互換 g / k / c：源自古印歐語根 *reg-（直、導、統治），演變出 right、regular、correct 等字"
+        },
+        {
+          "type": "suffix",
+          "text": "ular",
+          "meaning": "形容詞字尾（具有…性質的）",
+          "grimmNote": "-ul-（表 dimin 或是形容詞成分）加上 -ar（形容詞字尾 -al，流音 l/r 變化與結合）"
+        }
+      ],
+      "summary": "irregular 由否定字首 ir-（in- 的同化變體）、反向字首 re- 加上表「規則」的字根 g 以及形容詞字尾 -ular 組合而成，字面意思就是「不合規則的、不規則的」。",
+      "savedAt": "2026-07-22T14:57:27.668Z"
     }
   ],
   "userRoots": []
