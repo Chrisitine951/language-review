@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784735463954,
+  "savedAt": 1784736518883,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -365,9 +365,9 @@
     },
     "en_en220": {
       "stage": 1,
-      "nextReview": 1784000340747,
+      "nextReview": 1784822918882,
       "correct": 0,
-      "incorrect": 3
+      "incorrect": 4
     },
     "en_en145": {
       "stage": 3,
@@ -790,8 +790,9 @@
     "total": 20
   },
   "todayStats": {
-    "flipped": 0,
-    "grammarPracticed": 0
+    "flipped": 1,
+    "grammarPracticed": 0,
+    "date": "Thu Jul 23 2026"
   },
   "diaryEntries": [],
   "engooRecords": [
