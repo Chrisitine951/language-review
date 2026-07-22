@@ -117,6 +117,32 @@
       ],
       "summary": "單字 atheist 由字首 a-（否定、沒有）、字根 the-（神）和字尾 -ist（相信…的人）組成，合起來表示「不信神的人」。",
       "savedAt": "2026-07-16T16:06:42.732Z"
+    },
+    {
+      "id": "ulkmrw7hmuk2",
+      "word": "infinitive",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字首 in- 表示在內、進入"
+        },
+        {
+          "type": "root",
+          "text": "fin",
+          "meaning": "界線、終點",
+          "grimmNote": "源自拉丁字根 finis（邊界、終點），與英文 finish 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "-itive",
+          "meaning": "形容詞字尾（由 -ive 複合而成）",
+          "grimmNote": "母音通轉 i/e，結合名詞/形容詞字尾構成複合字尾 -itive"
+        }
+      ],
+      "summary": "infinitive（不定詞）由字首 in-（在內、進入）加上字根 fin（界線、終點）與形容詞字尾組成，字面上的意思是「沒有設置界線、不受限制的」，因此引申為文法中的「不定詞」。",
+      "savedAt": "2026-07-22T14:57:10.892Z"
     }
   ],
   "userRoots": []
