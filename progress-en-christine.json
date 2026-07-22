@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784711676210,
+  "savedAt": 1784711729871,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -826,187 +826,7 @@
       "words": ""
     }
   ],
-  "inboxItems": [
-    {
-      "type": "en_vocab",
-      "word": "as is often the case",
-      "meaning": "正如經常發生的情況一樣",
-      "partOfSpeech": "phrase",
-      "example": "As is often the case, the answer depends on whom you ask.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "all but impossible",
-      "meaning": "幾乎不可能",
-      "partOfSpeech": "phrase",
-      "example": "It is all but impossible to predict the weather perfectly.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "at a very early stage",
-      "meaning": "仍處於很初期的階段",
-      "partOfSpeech": "phrase",
-      "example": "Research into this technology is still at a very early stage.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "cannot be denied",
-      "meaning": "不可否認",
-      "partOfSpeech": "phrase",
-      "example": "It cannot be denied that the climate is changing.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "rather than",
-      "meaning": "與其說……不如說……；而不是",
-      "partOfSpeech": "phrase",
-      "example": "The planet may be getting greener rather than hotter.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "including",
-      "meaning": "包括、其中包含",
-      "partOfSpeech": "phrase",
-      "example": "Several companies, including two large manufacturers, joined the project.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "have most to lose",
-      "meaning": "最可能蒙受損失",
-      "partOfSpeech": "phrase",
-      "example": "Traditional businesses may have most to lose from the new policy.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "on the side of",
-      "meaning": "站在……的一方、支持……",
-      "partOfSpeech": "phrase",
-      "example": "Some large businesses are on the side of the sceptics.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "natural cyclical changes",
-      "meaning": "自然的週期性變化",
-      "partOfSpeech": "phrase",
-      "example": "Some experts attribute temperature changes to natural cyclical changes.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "the jury is still out",
-      "meaning": "目前尚未有定論",
-      "partOfSpeech": "phrase",
-      "example": "The jury is still out on the main cause of the problem.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_grammar",
-      "category": "subject_verb",
-      "rule": "現在進行式問句結構",
-      "wrong": "Why do you laughing?",
-      "correct": "Why are you laughing?",
-      "explanation": "正在笑是當下發生的動作，問句結構為 be＋主詞＋V-ing。",
-      "source": "ielts"
-    },
-    {
-      "type": "en_grammar",
-      "category": "past_tense",
-      "rule": "事實描述用現在簡單式",
-      "wrong": "The River Nile is flowing into the Mediterranean.",
-      "correct": "The River Nile flows into the Mediterranean.",
-      "explanation": "描述河流流向這項長期事實，使用現在簡單式。",
-      "source": "ielts"
-    },
-    {
-      "type": "en_grammar",
-      "category": "subject_verb",
-      "rule": "暫時狀況用現在進行式",
-      "wrong": "The river flows very fast today.",
-      "correct": "The river is flowing very fast today.",
-      "explanation": "句子描述今天的特殊情況，而不是河流平常的狀態。",
-      "source": "ielts"
-    },
-    {
-      "type": "en_grammar",
-      "category": "subject_verb",
-      "rule": "變化中的趨勢",
-      "wrong": "More and more people use electric cars.",
-      "correct": "More and more people are using electric cars.",
-      "explanation": "more and more 表示正在增加，強調持續發展的趨勢。",
-      "source": "ielts"
-    },
-    {
-      "type": "en_grammar",
-      "category": "subject_verb",
-      "rule": "助動詞後接原形",
-      "wrong": "What does he went?",
-      "correct": "What does he want?",
-      "explanation": "does 後面必須使用動詞原形。",
-      "source": "ielts"
-    },
-    {
-      "type": "en_grammar",
-      "category": "subject_verb",
-      "rule": "狀態動詞用法",
-      "wrong": "I’m not believing it.",
-      "correct": "I don’t believe it.",
-      "explanation": "believe 表示內心相信的狀態，通常不用現在進行式。",
-      "source": "ielts"
-    },
-    {
-      "type": "en_grammar",
-      "category": "subject_verb",
-      "rule": "be 與 be being 的區別",
-      "wrong": "Are you being hungry?",
-      "correct": "Are you hungry?",
-      "explanation": "hungry 是身體狀態，不能使用 being。",
-      "source": "ielts"
-    },
-    {
-      "type": "practice",
-      "skill": "reading",
-      "material": "雅思閱讀題型分析/練習",
-      "date": "2026-07-22",
-      "score": "6/6 (強化題)",
-      "causes": "未完整確認前後語意, 忽略邏輯小詞, 時間線索判斷錯誤, 字面翻譯",
-      "notes": "閱讀時需特別注意 before, rather than, including, less than 等詞彙，並區分過去與目前的觀點。"
-    },
-    {
-      "type": "paraphrase",
-      "concept": "at a very early stage",
-      "expressions": "at a very early stage | neutral | 用於描述進程的初期\nnot very developed yet | neutral | 解釋性描述",
-      "original": "We are still at a very early stage in understanding weather.",
-      "speakingExample": "Our project is still at a very early stage.",
-      "writingExample": "The study of this phenomenon is not very developed yet.",
-      "topics": "technology, climate"
-    },
-    {
-      "type": "paraphrase",
-      "concept": "nearly impossible",
-      "expressions": "all but impossible | formal | 用於強調幾乎不可能\nnearly impossible | neutral | 通用",
-      "original": "Predicting change is all but impossible.",
-      "speakingExample": "It's nearly impossible to find a parking space here.",
-      "writingExample": "It is all but impossible to eradicate poverty completely.",
-      "topics": "general"
-    },
-    {
-      "type": "paraphrase",
-      "concept": "sceptical perspective",
-      "expressions": "the sceptics, including many big businesses | neutral | 描述懷疑論者構成\nmany big businesses are among the sceptics | neutral | 描述企業立場",
-      "original": "The sceptics, including a lot of big businesses...",
-      "speakingExample": "Many big businesses are among the sceptics regarding the new policy.",
-      "writingExample": "The sceptics, including many big businesses, argue against the tax.",
-      "topics": "business, environment"
-    }
-  ],
+  "inboxItems": [],
   "planItems": [
     {
       "id": 1784526398249,
@@ -1081,6 +901,20 @@
   ],
   "practiceRecords": [
     {
+      "id": 1784711722447.1611,
+      "skill": "reading",
+      "date": "2026-07-22",
+      "material": "雅思閱讀題型分析/練習",
+      "score": "6/6 (強化題)",
+      "causes": [
+        "未完整確認前後語意",
+        "忽略邏輯小詞",
+        "時間線索判斷錯誤",
+        "字面翻譯"
+      ],
+      "notes": "閱讀時需特別注意 before, rather than, including, less than 等詞彙，並區分過去與目前的觀點。"
+    },
+    {
       "id": 1784222073816.5935,
       "skill": "reading",
       "date": "2026-07-16",
@@ -1099,7 +933,8 @@
   "egiuDone": {
     "1": "2026-07-19",
     "2": "2026-07-19",
-    "3": "2026-07-21"
+    "3": "2026-07-21",
+    "4": "2026-07-22"
   },
   "planImportedWeeks": [
     "2026-07-20"
