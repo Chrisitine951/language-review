@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784786887554,
+  "savedAt": 1784786915165,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -901,6 +901,19 @@
     }
   ],
   "practiceRecords": [
+    {
+      "id": 1784786915165,
+      "skill": "grammar",
+      "date": "2026-07-18",
+      "material": "Unit 2",
+      "score": "85",
+      "causes": [
+        "主詞動詞一致忘記檢查",
+        "其他文法規則",
+        "規則有印象但不確定怎麼用"
+      ],
+      "notes": "肯定句與否定句表現穩定，主要錯在 do／does 問句。需要先判斷真正的主詞，再決定使用 do 或 does，後面的主要動詞維持原形。"
+    },
     {
       "id": 1784786887553,
       "skill": "grammar",
