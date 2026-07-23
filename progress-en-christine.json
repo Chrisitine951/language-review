@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784786979109,
+  "savedAt": 1784787230386,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -785,13 +785,13 @@
     }
   },
   "grammarStats": {
-    "correct": 12,
+    "correct": 13,
     "wrong": 8,
-    "total": 20
+    "total": 21
   },
   "todayStats": {
     "flipped": 1,
-    "grammarPracticed": 0,
+    "grammarPracticed": 1,
     "date": "Thu Jul 23 2026"
   },
   "diaryEntries": [],
@@ -901,6 +901,19 @@
     }
   ],
   "practiceRecords": [
+    {
+      "id": 1784787010554,
+      "skill": "grammar",
+      "date": "2026-07-22",
+      "material": "Unit 5",
+      "score": "50",
+      "causes": [
+        "過去式（時態判斷錯誤）",
+        "其他文法規則",
+        "規則有印象但不確定怎麼用"
+      ],
+      "notes": "過去簡單式整體掌握良好，能使用規則與不規則過去式。需繼續注意 did／didn’t 後面使用原形動詞，並在完成後檢查不規則動詞、拼字與漏空格問題。"
+    },
     {
       "id": 1784786979108,
       "skill": "grammar",
