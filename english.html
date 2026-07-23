@@ -230,26 +230,34 @@
           <div style="font-size:12px; color:var(--text3); margin:8px 0 2px;" id="egiu-week-target"></div>
           <div class="egiu-grid" id="egiu-grid"></div>
           <div style="font-size:11px; color:var(--text3);">點一下格子＝完成該單元（再點取消）。平日 1 單元、假日可 2，每週六快速複習本週單元。</div>
-        </div>
-      </div>
 
-      <!-- EGIU 練習紀錄（v2.2.5 新增）：跟聽力/閱讀同一套 practiceRecords，材料欄位可自由填 Unit 編號，
-           不強制跟棋盤某一格綁定——兩個不同 Unit 講到同一個文法點時，材料欄位直接寫「Unit 37, 52」即可，
-           下方「最常犯的錯因」統計是跨全部紀錄算的，本來就會自動把同一種錯因抓在一起。 -->
-      <div class="section-header" style="margin-top:12px;"><span class="section-title">📝 EGIU 練習紀錄</span></div>
-      <div class="diary-input-card">
-        <input class="record-input" id="eg-material" placeholder="Unit 編號（例如 Unit 37，或 Unit 37, 52 同一個文法點）">
-        <div style="display:flex; gap:8px;">
-          <input class="record-input" id="eg-score" placeholder="正確率（例如 90，選填，填數字才會算進平均）">
-          <input class="record-input" id="eg-date" type="date">
+          <!-- EGIU 練習紀錄（v2.2.5 新增；v2.2.6 搬進這個收合區塊，跟棋盤共用同一個開關，
+               不會一直佔住畫面擠到下面的文法練習題）：跟聽力/閱讀同一套 practiceRecords，
+               材料欄位可自由填 Unit 編號，不強制跟棋盤某一格綁定——兩個不同 Unit 講到同一個
+               文法點時，材料欄位直接寫「Unit 37, 52」即可，下方「最常犯的錯因」統計是跨全部
+               紀錄算的，本來就會自動把同一種錯因抓在一起。
+               「錯誤類型」（可複選）與「學習狀態」（單選）是兩個獨立維度，分開存、分開顯示。 -->
+          <div class="section-header" style="margin-top:16px;"><span class="section-title">📝 EGIU 練習紀錄</span></div>
+          <div class="diary-input-card">
+            <input class="record-input" id="eg-material" placeholder="Unit 編號（例如 Unit 37，或 Unit 37, 52 同一個文法點）">
+            <div style="display:flex; gap:8px;">
+              <input class="record-input" id="eg-score" placeholder="正確率（例如 90，選填，填數字才會算進平均）">
+              <input class="record-input" id="eg-date" type="date">
+            </div>
+            <div style="font-size:12px; color:var(--text3); margin:4px 0 6px;">錯誤類型（可複選）</div>
+            <div class="error-cause-row" id="eg-causes"></div>
+            <div style="font-size:12px; color:var(--text3); margin:8px 0 6px;">學習狀態（單選）</div>
+            <div class="error-cause-row" id="eg-status"></div>
+            <textarea class="diary-textarea" id="eg-notes" style="min-height:70px;" placeholder="錯題重點、下次需要注意的地方…"></textarea>
+            <div class="diary-toolbar">
+              <button class="diary-submit" style="flex:1;" id="eg-save-btn" onclick="savePractice('grammar')">儲存紀錄</button>
+              <button class="diary-ai-btn" style="flex:0.6;" onclick="cancelEditPractice('grammar')">取消編輯</button>
+            </div>
+          </div>
+          <div id="eg-analysis"></div>
+          <div id="eg-list"></div>
         </div>
-        <div style="font-size:12px; color:var(--text3); margin:4px 0 6px;">這次的錯誤類型（可複選）</div>
-        <div class="error-cause-row" id="eg-causes"></div>
-        <textarea class="diary-textarea" id="eg-notes" style="min-height:70px;" placeholder="錯題重點、下次需要注意的地方…"></textarea>
-        <button class="diary-submit" style="width:100%; margin-top:8px;" onclick="savePractice('grammar')">儲存紀錄</button>
       </div>
-      <div id="eg-analysis"></div>
-      <div id="eg-list"></div>
 
       <div class="grammar-stats">
         <div class="grammar-stat"><div class="grammar-stat-num" id="gs-correct" style="color:var(--green);">0</div><div class="grammar-stat-label">答對</div></div>
@@ -293,7 +301,10 @@
           <div style="font-size:12px; color:var(--text3); margin:4px 0 6px;">這次的錯誤原因（可複選，來自你的檢討步驟⑤）</div>
           <div class="error-cause-row" id="lp-causes"></div>
           <textarea class="diary-textarea" id="lp-notes" style="min-height:70px;" placeholder="檢討筆記：哪幾題錯、場景詞、再聽一次後找到的原因…"></textarea>
-          <button class="diary-submit" style="width:100%; margin-top:8px;" onclick="savePractice('listening')">儲存紀錄</button>
+          <div class="diary-toolbar">
+            <button class="diary-submit" style="flex:1;" id="lp-save-btn" onclick="savePractice('listening')">儲存紀錄</button>
+            <button class="diary-ai-btn" style="flex:0.6;" onclick="cancelEditPractice('listening')">取消編輯</button>
+          </div>
         </div>
         <div class="section-header"><span class="section-title">分數趨勢與弱點</span></div>
         <div id="lp-analysis"></div>
@@ -420,7 +431,10 @@
             <div style="font-size:12px; color:var(--text3); margin:4px 0 6px;">這次的錯誤原因（可複選）</div>
             <div class="error-cause-row" id="rp-causes"></div>
             <textarea class="diary-textarea" id="rp-notes" style="min-height:70px;" placeholder="檢討筆記：定位點對不對、精講怎麼說…"></textarea>
-            <button class="diary-submit" style="width:100%; margin-top:8px;" onclick="savePractice('reading')">儲存紀錄</button>
+            <div class="diary-toolbar">
+              <button class="diary-submit" style="flex:1;" id="rp-save-btn" onclick="savePractice('reading')">儲存紀錄</button>
+              <button class="diary-ai-btn" style="flex:0.6;" onclick="cancelEditPractice('reading')">取消編輯</button>
+            </div>
           </div>
           <div class="section-header"><span class="section-title">分數趨勢與弱點</span></div>
           <div id="rp-analysis"></div>
@@ -1641,6 +1655,7 @@ const GRAMMAR_DISTRACTOR_POOLS = {
 function initGrammar() {
   renderEgiu(); buildGrammarDeck(); renderGrammarCard(); updateGrammarStats();
   renderCauseChips('eg-causes', 'grammar');
+  renderStatusChips('eg-status', GRAMMAR_LEARNING_STATUS);
   renderPracticeList('grammar');
   const dateEl = document.getElementById('eg-date');
   if (dateEl && !dateEl.value) dateEl.value = new Date().toISOString().split('T')[0];
@@ -1998,35 +2013,93 @@ function renderMethod(skill, containerId) {
     </div>
   </div>`;
 }
-// 錯因 chips
+// 錯因 chips（可複選）
 function renderCauseChips(containerId, skill) {
   const el = document.getElementById(containerId);
   if (!el) return;
   el.innerHTML = IELTS_ERROR_CAUSES[skill].map(c =>
     `<button class="error-cause-chip" data-cause="${escAttr(c.label)}" onclick="this.classList.toggle('selected')">${escHtml(c.label)}</button>`).join('');
 }
+// 學習狀態 chips（單選——同一筆紀錄同一時間只會是一種狀態，選新的會自動取消同組其他已選項）
+function renderStatusChips(containerId, list) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  el.innerHTML = list.map(c =>
+    `<button class="error-cause-chip" data-status="${escAttr(c.label)}" onclick="selectStatusChip(this)">${escHtml(c.label)}</button>`).join('');
+}
+function selectStatusChip(el) {
+  el.parentElement.querySelectorAll('.error-cause-chip').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+}
 // 練習紀錄的 skill → 表單欄位前綴對照（新增科目時只要加這裡一行）
 const PRACTICE_SKILL_PREFIX = { listening: 'lp', reading: 'rp', grammar: 'eg' };
+// 目前正在編輯中的紀錄 id（null＝目前是「新增」狀態，不是 null 就是「編輯既有紀錄」）
+let editingPracticeId = null;
 function savePractice(skill) {
   const p = PRACTICE_SKILL_PREFIX[skill];
   const material = document.getElementById(p + '-material').value.trim();
   if (!material) { showToast('請填材料名稱'); return; }
   const causes = [...document.querySelectorAll(`#${p}-causes .error-cause-chip.selected`)].map(c => c.dataset.cause);
-  practiceRecords.unshift({
-    id: Date.now(), skill,
+  const statusChip = document.querySelector(`#${p}-status .error-cause-chip.selected`);
+  const status = statusChip ? statusChip.dataset.status : '';
+  const wasEditing = editingPracticeId !== null;
+  const record = {
+    id: wasEditing ? editingPracticeId : Date.now(), skill,
     date: document.getElementById(p + '-date').value || new Date().toISOString().split('T')[0],
     material,
     score: document.getElementById(p + '-score').value,
     causes,
+    status,
     notes: document.getElementById(p + '-notes').value.trim(),
-  });
+  };
+  if (wasEditing) {
+    const idx = practiceRecords.findIndex(r => r.id === editingPracticeId);
+    if (idx !== -1) practiceRecords[idx] = record; else practiceRecords.unshift(record);
+  } else {
+    practiceRecords.unshift(record);
+  }
   saveData();
-  document.getElementById(p + '-material').value = '';
-  document.getElementById(p + '-score').value = '';
-  document.getElementById(p + '-notes').value = '';
-  document.querySelectorAll(`#${p}-causes .error-cause-chip`).forEach(c => c.classList.remove('selected'));
+  cancelEditPractice(skill); // 清空表單、重設編輯狀態、按鈕文字改回「儲存紀錄」
   renderPracticeList(skill);
-  showToast('✅ 練習紀錄已儲存');
+  showToast(wasEditing ? '✅ 紀錄已更新' : '✅ 練習紀錄已儲存');
+}
+// 把某一筆既有紀錄載回表單，準備編輯；按「儲存紀錄」（此時文字會變成「更新這筆紀錄」）就會覆蓋回去，不會變成新的一筆
+function editPractice(el) {
+  const id = Number(el.dataset.id);
+  const rec = practiceRecords.find(r => r.id === id);
+  if (!rec) return;
+  const p = PRACTICE_SKILL_PREFIX[rec.skill];
+  document.getElementById(p + '-material').value = rec.material || '';
+  document.getElementById(p + '-score').value = rec.score || '';
+  document.getElementById(p + '-date').value = rec.date || '';
+  document.getElementById(p + '-notes').value = rec.notes || '';
+  document.querySelectorAll(`#${p}-causes .error-cause-chip`).forEach(c => {
+    c.classList.toggle('selected', (rec.causes || []).includes(c.dataset.cause));
+  });
+  const statusContainer = document.getElementById(p + '-status');
+  if (statusContainer) {
+    statusContainer.querySelectorAll('.error-cause-chip').forEach(c => {
+      c.classList.toggle('selected', !!rec.status && rec.status === c.dataset.status);
+    });
+  }
+  editingPracticeId = id;
+  const saveBtn = document.getElementById(p + '-save-btn');
+  if (saveBtn) saveBtn.textContent = '💾 更新這筆紀錄';
+  showToast('已載入這筆紀錄，改完按「更新這筆紀錄」即可');
+  document.getElementById(p + '-material').scrollIntoView?.({ behavior: 'smooth', block: 'center' });
+}
+// 取消編輯：清空表單、回到「新增」狀態。存檔成功後也會自動呼叫這個來重置表單
+function cancelEditPractice(skill) {
+  const p = PRACTICE_SKILL_PREFIX[skill];
+  editingPracticeId = null;
+  const matEl = document.getElementById(p + '-material'); if (matEl) matEl.value = '';
+  const scoreEl = document.getElementById(p + '-score'); if (scoreEl) scoreEl.value = '';
+  const notesEl = document.getElementById(p + '-notes'); if (notesEl) notesEl.value = '';
+  document.querySelectorAll(`#${p}-causes .error-cause-chip`).forEach(c => c.classList.remove('selected'));
+  const statusContainer = document.getElementById(p + '-status');
+  if (statusContainer) statusContainer.querySelectorAll('.error-cause-chip').forEach(c => c.classList.remove('selected'));
+  const saveBtn = document.getElementById(p + '-save-btn');
+  if (saveBtn) saveBtn.textContent = '儲存紀錄';
 }
 function delPractice(el) {
   const id = Number(el.dataset.id);
@@ -2034,7 +2107,10 @@ function delPractice(el) {
   const rec = practiceRecords.find(r => r.id === id);
   practiceRecords = practiceRecords.filter(r => r.id !== id);
   saveData();
-  if (rec) renderPracticeList(rec.skill);
+  if (rec) {
+    if (editingPracticeId === id) cancelEditPractice(rec.skill); // 正在編輯的那筆被刪掉，順便重置表單
+    renderPracticeList(rec.skill);
+  }
 }
 function renderPracticeList(skill) {
   const p = PRACTICE_SKILL_PREFIX[skill];
@@ -2048,10 +2124,17 @@ function renderPracticeList(skill) {
   // 弱點統計：把錯因次數排序，最常見的就是要加強的
   // 【重點】這裡的「最常犯的錯因」統計是跨所有紀錄做的，不分是哪個 Unit/材料。
   // 所以就算兩個不同 Unit 講到同一個文法點（例如 Unit 37 跟 Unit 52 都是過去式），
-  // 只要錯因都勾「過去式」，這裡就會自動把它們算在一起，不需要手動把兩個 Unit 綁定。
+  // 只要錯誤類型都勾「時態與動詞形式」，這裡就會自動把它們算在一起，不需要手動把兩個 Unit 綁定。
   const counts = {};
   list.forEach(r => (r.causes || []).forEach(c => { counts[c] = (counts[c] || 0) + 1; }));
   const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 3);
+  // 學習狀態是第二個獨立維度，只有文法/EGIU 紀錄會用到，一樣跨全部紀錄統計
+  let statusTop = [];
+  if (skill === 'grammar') {
+    const statusCounts = {};
+    list.forEach(r => { if (r.status) statusCounts[r.status] = (statusCounts[r.status] || 0) + 1; });
+    statusTop = Object.entries(statusCounts).sort((a, b) => b[1] - a[1]).slice(0, 3);
+  }
   // 只取能轉成有效數字的分數（避免像「18/20」這種格式讓平均變 NaN——這是煙霧測試時抓到的 bug）
   const scores = list.filter(r => r.score && !isNaN(Number(r.score))).map(r => Number(r.score));
   const avg = scores.length ? (scores.reduce((a, b) => a + b, 0) / scores.length).toFixed(1) : '—';
@@ -2067,15 +2150,18 @@ function renderPracticeList(skill) {
       <div><div class="ielts-record-score">${thirdValue}</div><div class="ielts-record-meta">${thirdLabel}</div></div>
     </div>
     ${top.length ? `<div style="font-size:13px; line-height:1.8; color:var(--text2); border-top:1px solid var(--border); padding-top:8px;">
-      <strong>最常犯的錯因：</strong><br>${top.map(([c, n]) => `・${escHtml(c)} <span class="tag tag-amber">${n} 次</span>`).join('<br>')}
+      <strong>最常犯的錯誤類型：</strong><br>${top.map(([c, n]) => `・${escHtml(c)} <span class="tag tag-amber">${n} 次</span>`).join('<br>')}
       <br><span style="color:var(--text3); font-size:12px;">→ 下一回練習前先針對這幾點加強</span></div>` : ''}
+    ${statusTop.length ? `<div style="font-size:13px; line-height:1.8; color:var(--text2); border-top:1px solid var(--border); padding-top:8px; margin-top:8px;">
+      <strong>最常見的學習狀態：</strong><br>${statusTop.map(([c, n]) => `・${escHtml(c)} <span class="tag tag-green">${n} 次</span>`).join('<br>')}</div>` : ''}
   </div>`;
   el.innerHTML = list.map(r => `<div class="ielts-record">
     <div class="ielts-record-header">
       <div><span class="ielts-record-score">${escHtml(r.score || '—')}</span> <span style="font-size:13px; font-weight:600;">${escHtml(r.material)}</span></div>
-      <div><span class="ielts-record-meta">${escHtml(r.date)}</span> <button class="inbox-item-remove" data-id="${r.id}" onclick="delPractice(this)">刪除</button></div>
+      <div><span class="ielts-record-meta">${escHtml(r.date)}</span> <button class="inbox-item-remove" data-id="${r.id}" onclick="editPractice(this)">編輯</button> <button class="inbox-item-remove" data-id="${r.id}" onclick="delPractice(this)">刪除</button></div>
     </div>
     ${(r.causes || []).length ? `<div class="error-cause-row">${r.causes.map(c => `<span class="error-cause-chip selected">${escHtml(c)}</span>`).join('')}</div>` : ''}
+    ${r.status ? `<div style="margin-top:6px;"><span class="tag tag-green">${escHtml(r.status)}</span></div>` : ''}
     ${r.notes ? `<div class="ielts-record-notes">${escHtml(r.notes)}</div>` : ''}
   </div>`).join('');
 }
