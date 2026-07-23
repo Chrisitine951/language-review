@@ -887,6 +887,238 @@
       "partOfSpeech": "n.",
       "example": "A rhetorical question can be used to introduce a Part 2 answer.",
       "source": "cambly"
+    },
+    {
+      "id": "uenmrwxvy501",
+      "word": "amphibious",
+      "meaning": "水陸兩用的",
+      "partOfSpeech": "adj.",
+      "example": "The vehicle becomes amphibious when it reaches a river.",
+      "source": "ielts"
+    },
+    {
+      "id": "uenmrwxvy502",
+      "word": "hydrojet",
+      "meaning": "噴水推進器",
+      "partOfSpeech": "n.",
+      "example": "Two hydrojets power the vehicle across the water.",
+      "source": "ielts"
+    },
+    {
+      "id": "uenmrwxvy503",
+      "word": "hatchback",
+      "meaning": "掀背車",
+      "partOfSpeech": "n.",
+      "example": "The company is well known for its family hatchbacks.",
+      "source": "ielts"
+    },
+    {
+      "id": "uenmrwxvy504",
+      "word": "computer-aided design",
+      "meaning": "電腦輔助設計",
+      "partOfSpeech": "n.",
+      "example": "Computer-aided design allows engineers to check a design before building it.",
+      "source": "ielts"
+    },
+    {
+      "id": "uenmrwxvy505",
+      "word": "replica",
+      "meaning": "複製品、等比例模型",
+      "partOfSpeech": "n.",
+      "example": "The engineers did not need to build a full-size replica.",
+      "source": "ielts"
+    },
+    {
+      "id": "uenmrwxvy506",
+      "word": "prototype",
+      "meaning": "原型、試作品",
+      "partOfSpeech": "n.",
+      "example": "The vehicle was tested before a physical prototype existed.",
+      "source": "ielts"
+    },
+    {
+      "id": "uenmrwxvy507",
+      "word": "composite material",
+      "meaning": "複合材料",
+      "partOfSpeech": "n.",
+      "example": "Composite materials can make vehicles lighter.",
+      "source": "ielts"
+    },
+    {
+      "id": "uenmrwxvy508",
+      "word": "thermal expansion",
+      "meaning": "熱膨脹",
+      "partOfSpeech": "n.",
+      "example": "Thermal expansion of seawater contributes to rising sea levels.",
+      "source": "ielts"
+    },
+    {
+      "id": "uenmrwxvy509",
+      "word": "water table",
+      "meaning": "地下水位",
+      "partOfSpeech": "n.",
+      "example": "Changes in the water table may affect sea levels.",
+      "source": "ielts"
+    },
+    {
+      "id": "uenmrwxvy5010",
+      "word": "teach",
+      "meaning": "教導",
+      "partOfSpeech": "v.",
+      "example": "My father taught me to drive.",
+      "source": "ielts",
+      "pastTense": "taught",
+      "pastParticiple": "taught"
+    },
+    {
+      "id": "uenmrwxvy5011",
+      "word": "catch",
+      "meaning": "抓住",
+      "partOfSpeech": "v.",
+      "example": "He didn't catch the train.",
+      "source": "ielts",
+      "pastTense": "caught",
+      "pastParticiple": "caught"
+    },
+    {
+      "id": "uenmrwxvy5012",
+      "word": "buy",
+      "meaning": "購買",
+      "partOfSpeech": "v.",
+      "example": "I didn't buy a new phone yesterday.",
+      "source": "ielts",
+      "pastTense": "bought",
+      "pastParticiple": "bought"
+    },
+    {
+      "id": "uenmrwxvy5013",
+      "word": "think",
+      "meaning": "思考",
+      "partOfSpeech": "v.",
+      "example": "",
+      "source": "ielts",
+      "pastTense": "thought",
+      "pastParticiple": "thought"
+    },
+    {
+      "id": "uenmrwxvy5014",
+      "word": "fall",
+      "meaning": "落下",
+      "partOfSpeech": "v.",
+      "example": "",
+      "source": "ielts",
+      "pastTense": "fell",
+      "pastParticiple": "fallen"
+    },
+    {
+      "id": "uenmrwxvy5015",
+      "word": "throw",
+      "meaning": "丟擲",
+      "partOfSpeech": "v.",
+      "example": "",
+      "source": "ielts",
+      "pastTense": "threw",
+      "pastParticiple": "thrown"
+    },
+    {
+      "id": "uenmrwxvy5016",
+      "word": "fly",
+      "meaning": "飛行",
+      "partOfSpeech": "v.",
+      "example": "",
+      "source": "ielts",
+      "pastTense": "flew",
+      "pastParticiple": "flown"
+    },
+    {
+      "id": "uenmrwxvy5017",
+      "word": "take",
+      "meaning": "拿取/搭乘",
+      "partOfSpeech": "v.",
+      "example": "I took the bus home.",
+      "source": "ielts",
+      "pastTense": "took",
+      "pastParticiple": "taken"
+    },
+    {
+      "id": "uenmrwxvy5018",
+      "word": "go",
+      "meaning": "去",
+      "partOfSpeech": "v.",
+      "example": "I went to a coffee shop.",
+      "source": "ielts",
+      "pastTense": "went",
+      "pastParticiple": "gone"
+    },
+    {
+      "id": "uenmrwxvy5019",
+      "word": "sleep",
+      "meaning": "睡覺",
+      "partOfSpeech": "v.",
+      "example": "I didn't sleep well.",
+      "source": "ielts",
+      "pastTense": "slept",
+      "pastParticiple": "slept"
+    },
+    {
+      "id": "uenmrwxvy5020",
+      "word": "spend",
+      "meaning": "花費",
+      "partOfSpeech": "v.",
+      "example": "I spent three hours working.",
+      "source": "ielts",
+      "pastTense": "spent",
+      "pastParticiple": "spent"
+    },
+    {
+      "id": "uenmrwxvy5021",
+      "word": "leave",
+      "meaning": "離開",
+      "partOfSpeech": "v.",
+      "example": "",
+      "source": "ielts",
+      "pastTense": "left",
+      "pastParticiple": "left"
+    },
+    {
+      "id": "uenmrwxvy5022",
+      "word": "hurt",
+      "meaning": "受傷",
+      "partOfSpeech": "v.",
+      "example": "",
+      "source": "ielts",
+      "pastTense": "hurt",
+      "pastParticiple": "hurt"
+    },
+    {
+      "id": "uenmrwxvy5123",
+      "word": "cost",
+      "meaning": "花費/價值",
+      "partOfSpeech": "v.",
+      "example": "That dress cost me £100.",
+      "source": "ielts",
+      "pastTense": "cost",
+      "pastParticiple": "cost"
+    },
+    {
+      "id": "uenmrwxvy5124",
+      "word": "put",
+      "meaning": "放置",
+      "partOfSpeech": "v.",
+      "example": "",
+      "source": "ielts",
+      "pastTense": "put",
+      "pastParticiple": "put"
+    },
+    {
+      "id": "uenmrwxvy5125",
+      "word": "cut",
+      "meaning": "切",
+      "partOfSpeech": "v.",
+      "example": "",
+      "source": "ielts",
+      "pastTense": "cut",
+      "pastParticiple": "cut"
     }
   ],
   "germanVocabulary": [
@@ -2872,6 +3104,106 @@
       "correct": "I will be excited.",
       "explanation": "描述人感到情緒使用 -ed 形容詞。",
       "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrwxvy5126",
+      "category": "past_tense",
+      "rule": "不規則動詞三態",
+      "wrong": "teach → teached",
+      "correct": "teach → taught",
+      "explanation": "teach的過去式與過去分詞都是taught。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrwxvy5127",
+      "category": "past_tense",
+      "rule": "不規則動詞三態",
+      "wrong": "fall → falled",
+      "correct": "fall → fell",
+      "explanation": "fall的過去式是fell，過去分詞是fallen。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrwxvy5128",
+      "category": "past_tense",
+      "rule": "不規則動詞三態",
+      "wrong": "throw → throwed",
+      "correct": "throw → threw",
+      "explanation": "throw的過去式是threw，過去分詞是thrown。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrwxvy5129",
+      "category": "past_tense",
+      "rule": "不規則動詞三態",
+      "wrong": "catch → catched",
+      "correct": "catch → caught",
+      "explanation": "catch的過去式與過去分詞都是caught。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrwxvy5130",
+      "category": "past_tense",
+      "rule": "不規則動詞三態",
+      "wrong": "fly → flyed",
+      "correct": "fly → flew",
+      "explanation": "fly的過去式是flew，過去分詞是flown。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrwxvy5131",
+      "category": "past_tense",
+      "rule": "過去式問句",
+      "wrong": "How long did they take?",
+      "correct": "How long did it take?",
+      "explanation": "it代表該趟行程，也可以用How long did the journey take?",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrwxvy5132",
+      "category": "past_tense",
+      "rule": "be動詞問句",
+      "wrong": "How did the weather?",
+      "correct": "How was the weather?",
+      "explanation": "weather在描述狀態時使用be動詞，不使用did。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrwxvy5133",
+      "category": "other",
+      "rule": "teach句型",
+      "wrong": "My father taught me for driving car.",
+      "correct": "My father taught me to drive.",
+      "explanation": "應使用teach someone to do something。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrwxvy5134",
+      "category": "other",
+      "rule": "spend句型",
+      "wrong": "I spent three hours to work.",
+      "correct": "I spent three hours working.",
+      "explanation": "spend＋時間＋V-ing。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmrwxvy5135",
+      "category": "other",
+      "rule": "冠詞與詞彙",
+      "wrong": "After worked off",
+      "correct": "After work",
+      "explanation": "after work 為固定用法，表示下班後。",
+      "source": "ielts",
       "mastered": false
     }
   ],
