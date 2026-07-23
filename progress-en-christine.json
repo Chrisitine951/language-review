@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784788725284,
+  "savedAt": 1784222076114,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -10,15 +10,15 @@
       "incorrect": 1
     },
     "en_en071": {
-      "stage": 2,
-      "nextReview": 1785214917768,
-      "correct": 3,
-      "incorrect": 5
+      "stage": 1,
+      "nextReview": 1784029066694,
+      "correct": 2,
+      "incorrect": 4
     },
     "en_en169": {
       "stage": 4,
-      "nextReview": 1786890067685,
-      "correct": 4,
+      "nextReview": 1783931349901,
+      "correct": 3,
       "incorrect": 0
     },
     "en_en047": {
@@ -59,8 +59,8 @@
     },
     "en_en109": {
       "stage": 4,
-      "nextReview": 1787202112067,
-      "correct": 4,
+      "nextReview": 1783931396389,
+      "correct": 3,
       "incorrect": 0
     },
     "en_en148": {
@@ -77,20 +77,20 @@
     },
     "en_en028": {
       "stage": 4,
-      "nextReview": 1786890080554,
-      "correct": 4,
+      "nextReview": 1783931403423,
+      "correct": 3,
       "incorrect": 0
     },
     "en_en053": {
-      "stage": 3,
-      "nextReview": 1785507655483,
-      "correct": 4,
+      "stage": 2,
+      "nextReview": 1784174529014,
+      "correct": 3,
       "incorrect": 2
     },
     "en_en090": {
-      "stage": 2,
-      "nextReview": 1784902898673,
-      "correct": 4,
+      "stage": 1,
+      "nextReview": 1784029093081,
+      "correct": 3,
       "incorrect": 1
     },
     "en_en167": {
@@ -113,9 +113,9 @@
     },
     "en_en009": {
       "stage": 1,
-      "nextReview": 1784696532737,
+      "nextReview": 1784000320246,
       "correct": 1,
-      "incorrect": 6
+      "incorrect": 5
     },
     "en_en155": {
       "stage": 4,
@@ -125,8 +125,8 @@
     },
     "en_en149": {
       "stage": 4,
-      "nextReview": 1786890147715,
-      "correct": 4,
+      "nextReview": 1783931449476,
+      "correct": 3,
       "incorrect": 0
     },
     "en_en011": {
@@ -149,14 +149,14 @@
     },
     "en_en117": {
       "stage": 4,
-      "nextReview": 1787202027137,
-      "correct": 4,
+      "nextReview": 1783931458062,
+      "correct": 3,
       "incorrect": 0
     },
     "en_en007": {
-      "stage": 3,
-      "nextReview": 1785507696273,
-      "correct": 4,
+      "stage": 2,
+      "nextReview": 1784280399587,
+      "correct": 3,
       "incorrect": 3
     },
     "en_en123": {
@@ -172,9 +172,9 @@
       "incorrect": 0
     },
     "en_en099": {
-      "stage": 2,
-      "nextReview": 1785214829621,
-      "correct": 4,
+      "stage": 1,
+      "nextReview": 1784029089834,
+      "correct": 3,
       "incorrect": 1
     },
     "en_en106": {
@@ -190,9 +190,9 @@
       "incorrect": 6
     },
     "en_en110": {
-      "stage": 4,
-      "nextReview": 1786890169718,
-      "correct": 3,
+      "stage": 3,
+      "nextReview": 1784037233023,
+      "correct": 2,
       "incorrect": 1
     },
     "en_en179": {
@@ -208,9 +208,9 @@
       "incorrect": 0
     },
     "en_en031": {
-      "stage": 3,
-      "nextReview": 1785507802724,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784280383319,
+      "correct": 1,
       "incorrect": 4
     },
     "en_en104": {
@@ -226,9 +226,9 @@
       "incorrect": 0
     },
     "en_en188": {
-      "stage": 4,
-      "nextReview": 1787202122836,
-      "correct": 3,
+      "stage": 3,
+      "nextReview": 1784037303068,
+      "correct": 2,
       "incorrect": 0
     },
     "en_en201": {
@@ -244,15 +244,15 @@
       "incorrect": 1
     },
     "en_en135": {
-      "stage": 4,
-      "nextReview": 1786890151182,
-      "correct": 3,
+      "stage": 3,
+      "nextReview": 1784037431234,
+      "correct": 2,
       "incorrect": 0
     },
     "en_en006": {
-      "stage": 3,
-      "nextReview": 1785507760833,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784174390176,
+      "correct": 1,
       "incorrect": 3
     },
     "en_en002": {
@@ -275,9 +275,9 @@
     },
     "en_en059": {
       "stage": 1,
-      "nextReview": 1784696507949,
+      "nextReview": 1784000363319,
       "correct": 1,
-      "incorrect": 5
+      "incorrect": 4
     },
     "en_en183": {
       "stage": 4,
@@ -316,21 +316,21 @@
       "incorrect": 0
     },
     "en_en196": {
-      "stage": 3,
-      "nextReview": 1785507720660,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784174371539,
+      "correct": 1,
       "incorrect": 2
     },
     "en_en063": {
-      "stage": 4,
-      "nextReview": 1786890101207,
-      "correct": 3,
+      "stage": 3,
+      "nextReview": 1784037292116,
+      "correct": 2,
       "incorrect": 0
     },
     "en_en120": {
-      "stage": 3,
-      "nextReview": 1785819621586,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784280298469,
+      "correct": 1,
       "incorrect": 4
     },
     "en_en086": {
@@ -346,15 +346,15 @@
       "incorrect": 0
     },
     "en_en091": {
-      "stage": 3,
-      "nextReview": 1785819735020,
-      "correct": 4,
+      "stage": 2,
+      "nextReview": 1784280271514,
+      "correct": 3,
       "incorrect": 1
     },
     "en_en032": {
-      "stage": 3,
-      "nextReview": 1785829277550,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784168112814,
+      "correct": 1,
       "incorrect": 2
     },
     "en_en174": {
@@ -365,21 +365,21 @@
     },
     "en_en220": {
       "stage": 1,
-      "nextReview": 1784822918882,
+      "nextReview": 1784000340747,
       "correct": 0,
-      "incorrect": 4
+      "incorrect": 3
     },
     "en_en145": {
-      "stage": 3,
-      "nextReview": 1785507724394,
-      "correct": 3,
+      "stage": 2,
+      "nextReview": 1784280252428,
+      "correct": 2,
       "incorrect": 1
     },
     "en_en055": {
       "stage": 1,
-      "nextReview": 1784384555999,
+      "nextReview": 1784084936283,
       "correct": 0,
-      "incorrect": 4
+      "incorrect": 3
     },
     "en_en210": {
       "stage": 3,
@@ -388,9 +388,9 @@
       "incorrect": 0
     },
     "en_en131": {
-      "stage": 2,
-      "nextReview": 1785214811551,
-      "correct": 1,
+      "stage": 1,
+      "nextReview": 1784000179172,
+      "correct": 0,
       "incorrect": 3
     },
     "en_en147": {
@@ -400,10 +400,10 @@
       "incorrect": 3
     },
     "en_en218": {
-      "stage": 1,
-      "nextReview": 1784384588773,
+      "stage": 2,
+      "nextReview": 1784280350996,
       "correct": 1,
-      "incorrect": 3
+      "incorrect": 2
     },
     "en_en162": {
       "stage": 2,
@@ -412,10 +412,10 @@
       "incorrect": 2
     },
     "en_en122": {
-      "stage": 1,
-      "nextReview": 1784696445841,
+      "stage": 2,
+      "nextReview": 1784518757485,
       "correct": 1,
-      "incorrect": 4
+      "incorrect": 3
     },
     "en_en121": {
       "stage": 1,
@@ -436,9 +436,9 @@
       "incorrect": 0
     },
     "en_en208": {
-      "stage": 3,
-      "nextReview": 1785829272370,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784280266731,
+      "correct": 1,
       "incorrect": 2
     },
     "en_en194": {
@@ -467,9 +467,9 @@
     },
     "en_en132": {
       "stage": 1,
-      "nextReview": 1784384565451,
+      "nextReview": 1784000389008,
       "correct": 0,
-      "incorrect": 3
+      "incorrect": 2
     },
     "en_en213": {
       "stage": 3,
@@ -533,9 +533,9 @@
     },
     "en_en231": {
       "stage": 1,
-      "nextReview": 1784696438088,
+      "nextReview": 1784000211352,
       "correct": 0,
-      "incorrect": 4
+      "incorrect": 3
     },
     "en_en198": {
       "stage": 2,
@@ -557,9 +557,9 @@
     },
     "en_en076": {
       "stage": 1,
-      "nextReview": 1784384598373,
+      "nextReview": 1784000311463,
       "correct": 0,
-      "incorrect": 4
+      "incorrect": 3
     },
     "en_en087": {
       "stage": 2,
@@ -586,9 +586,9 @@
       "incorrect": 2
     },
     "en_en050": {
-      "stage": 3,
-      "nextReview": 1785819564716,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784168125533,
+      "correct": 1,
       "incorrect": 1
     },
     "en_en062": {
@@ -598,15 +598,15 @@
       "incorrect": 4
     },
     "en_en200": {
-      "stage": 2,
-      "nextReview": 1784902862350,
-      "correct": 1,
+      "stage": 1,
+      "nextReview": 1784000331698,
+      "correct": 0,
       "incorrect": 3
     },
     "en_en089": {
-      "stage": 3,
-      "nextReview": 1785819624386,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784174511762,
+      "correct": 1,
       "incorrect": 1
     },
     "en_en079": {
@@ -616,9 +616,9 @@
       "incorrect": 0
     },
     "en_en058": {
-      "stage": 3,
-      "nextReview": 1785507772952,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784174816663,
+      "correct": 1,
       "incorrect": 1
     },
     "en_en095": {
@@ -646,9 +646,9 @@
       "incorrect": 0
     },
     "en_en039": {
-      "stage": 3,
-      "nextReview": 1785507684986,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784174485473,
+      "correct": 1,
       "incorrect": 1
     },
     "en_en211": {
@@ -662,137 +662,16 @@
       "nextReview": 1784779487309,
       "correct": 2,
       "incorrect": 0
-    },
-    "en_uenmrnrr7sg7": {
-      "stage": 1,
-      "nextReview": 1784384621789,
-      "correct": 0,
-      "incorrect": 1
-    },
-    "en_uenmrnrr7sg21": {
-      "stage": 2,
-      "nextReview": 1784903030998,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg26": {
-      "stage": 2,
-      "nextReview": 1784903042668,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg17": {
-      "stage": 2,
-      "nextReview": 1784903081457,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg24": {
-      "stage": 1,
-      "nextReview": 1784696479428,
-      "correct": 0,
-      "incorrect": 2
-    },
-    "en_uenmrnrr7sg41": {
-      "stage": 2,
-      "nextReview": 1784903376430,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg8": {
-      "stage": 2,
-      "nextReview": 1784903378360,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg6": {
-      "stage": 2,
-      "nextReview": 1784903388427,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg20": {
-      "stage": 2,
-      "nextReview": 1784903413198,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg29": {
-      "stage": 1,
-      "nextReview": 1784385025101,
-      "correct": 0,
-      "incorrect": 1
-    },
-    "en_uenmrnrr7sg19": {
-      "stage": 1,
-      "nextReview": 1784696458524,
-      "correct": 0,
-      "incorrect": 2
-    },
-    "en_uenmrnrr7sg39": {
-      "stage": 2,
-      "nextReview": 1784903440736,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg4": {
-      "stage": 1,
-      "nextReview": 1784696404934,
-      "correct": 0,
-      "incorrect": 2
-    },
-    "en_uenmrnrr7sg37": {
-      "stage": 1,
-      "nextReview": 1784385050588,
-      "correct": 0,
-      "incorrect": 1
-    },
-    "en_uenmrnrr7sg5": {
-      "stage": 2,
-      "nextReview": 1784903453705,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg31": {
-      "stage": 2,
-      "nextReview": 1784903462724,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg27": {
-      "stage": 2,
-      "nextReview": 1784903464474,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg9": {
-      "stage": 2,
-      "nextReview": 1784903466457,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg14": {
-      "stage": 1,
-      "nextReview": 1784385069657,
-      "correct": 0,
-      "incorrect": 1
-    },
-    "en_uenmrnrr7sg45": {
-      "stage": 2,
-      "nextReview": 1784903471441,
-      "correct": 1,
-      "incorrect": 0
     }
   },
   "grammarStats": {
-    "correct": 13,
-    "wrong": 8,
-    "total": 21
+    "correct": 10,
+    "wrong": 6,
+    "total": 16
   },
   "todayStats": {
-    "flipped": 1,
-    "grammarPracticed": 1,
-    "date": "Thu Jul 23 2026"
+    "flipped": 0,
+    "grammarPracticed": 0
   },
   "diaryEntries": [],
   "engooRecords": [
@@ -828,177 +707,8 @@
     }
   ],
   "inboxItems": [],
-  "planItems": [
-    {
-      "id": 1784526398249,
-      "week": "2026-07-20",
-      "skill": "reading",
-      "day": 0,
-      "text": "Cambly口說課",
-      "done": true,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784526398250,
-      "week": "2026-07-20",
-      "skill": "listening",
-      "day": 1,
-      "text": "平行閱讀法五步驟精讀，p.12第一節（到練習一）+EGIU Unit4",
-      "done": true,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784526398251,
-      "week": "2026-07-20",
-      "skill": "speaking",
-      "day": 2,
-      "text": "平行閱讀法第一節選擇題 練習二三、第二節summary 例一（p.30）+EGIU Unit5",
-      "done": true,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784526398252,
-      "week": "2026-07-20",
-      "skill": "writing",
-      "day": 4,
-      "text": "Simon Task 2 四段結構＋13句法熟讀（先不寫全篇）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784526398253,
-      "week": "2026-07-20",
-      "skill": "reading",
-      "day": 5,
-      "text": "劍10 T1 P2 不限時＋拆解檢核",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784526398254,
-      "week": "2026-07-20",
-      "skill": "writing",
-      "day": 6,
-      "text": "Task 2 Opinion 模板背誦＋每週回顧",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784526398255,
-      "week": "2026-07-20",
-      "skill": "material",
-      "day": 5,
-      "text": "EGIU Unit 1–9（平日1單元、假日可2，週六快速複習）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    }
-  ],
+  "planItems": [],
   "practiceRecords": [
-    {
-      "id": 1784787010554,
-      "skill": "grammar",
-      "date": "2026-07-22",
-      "material": "Unit 5",
-      "score": "50",
-      "causes": [
-        "時態與動詞形式",
-        "助動詞與問句／否定句",
-        "拼字與書寫疏漏"
-      ],
-      "status": "知道如何使用，但作答不穩定",
-      "notes": "過去簡單式整體掌握良好。需繼續熟悉不規則動詞，並注意 did／didn’t 後面使用動詞原形。完成後應檢查動詞拼字、漏字及單字之間的空格。"
-    },
-    {
-      "id": 1784786979108,
-      "skill": "grammar",
-      "date": "2026-07-22",
-      "material": "Unit 4",
-      "score": "85",
-      "causes": [
-        "時態與動詞形式",
-        "句型結構與語序",
-        "語意判斷"
-      ],
-      "status": "記得規則，但不會判斷情境",
-      "notes": "主要問題是依動詞意義判斷能否使用現在進行式。know、believe、want、need、remember、seem 等狀態動詞通常使用現在簡單式；think 表示「認為」時用簡單式，表示「正在考慮」時可用進行式。am／is／are being 用來描述某人當下可控制的行為。"
-    },
-    {
-      "id": 1784786945887,
-      "skill": "grammar",
-      "date": "2026-07-19",
-      "material": "Unit 3",
-      "score": "80",
-      "causes": [
-        "時態與動詞形式",
-        "助動詞與問句／否定句",
-        "句型結構與語序",
-        "語意判斷"
-      ],
-      "status": "記得規則，但不會判斷情境",
-      "notes": "容易混淆現在簡單式與現在進行式。固定習慣、事實及長期狀態使用現在簡單式；現在正在發生、暫時情況或正在變化的事情使用現在進行式。另需注意「always＋現在進行式」可表達抱怨或事情發生得過於頻繁。"
-    },
-    {
-      "id": 1784786915165,
-      "skill": "grammar",
-      "date": "2026-07-18",
-      "material": "Unit 2",
-      "score": "85",
-      "causes": [
-        "助動詞與問句／否定句",
-        "主詞—動詞一致",
-        "句型結構與語序"
-      ],
-      "status": "知道如何使用，但作答不穩定",
-      "notes": "現在簡單式肯定句與否定句大致掌握，主要問題出現在 do／does 問句。需先判斷句子的主詞，第三人稱單數使用 does，且 does 後面的主要動詞要恢復原形。"
-    },
-    {
-      "id": 1784786887553,
-      "skill": "grammar",
-      "date": "2026-07-18",
-      "material": "Unit 1",
-      "score": "95",
-      "causes": [
-        "時態與動詞形式",
-        "助動詞與問句／否定句",
-        "句型結構與語序"
-      ],
-      "status": "知道如何使用，但作答不穩定",
-      "notes": "已掌握現在進行式「am／is／are＋V-ing」的基本概念。需注意問句中不能漏掉 be 動詞，並檢查 V-ing 拼字及主詞對應的 am／is／are。"
-    },
-    {
-      "id": 1784776567481.2766,
-      "skill": "reading",
-      "date": "2026-07-23",
-      "material": "New-Age Transport（閱讀練習）",
-      "score": "",
-      "causes": [
-        "過度要求原文與選項必須完全同義",
-        "對上下位概念辨識不足",
-        "對題型目的判斷錯誤"
-      ],
-      "notes": "區分直接原因與間接原因；不要僅比較字面，要判斷包含關係；NOT mentioned題型要確認角色是否符合。"
-    },
-    {
-      "id": 1784711722447.1611,
-      "skill": "reading",
-      "date": "2026-07-22",
-      "material": "雅思閱讀題型分析/練習",
-      "score": "6/6 (強化題)",
-      "causes": [
-        "未完整確認前後語意",
-        "忽略邏輯小詞",
-        "時間線索判斷錯誤",
-        "字面翻譯"
-      ],
-      "notes": "閱讀時需特別注意 before, rather than, including, less than 等詞彙，並區分過去與目前的觀點。"
-    },
     {
       "id": 1784222073816.5935,
       "skill": "reading",
@@ -1014,16 +724,5 @@
     }
   ],
   "breakdowns": [],
-  "essayRecords": [],
-  "egiuDone": {
-    "1": "2026-07-19",
-    "2": "2026-07-19",
-    "3": "2026-07-21",
-    "4": "2026-07-22",
-    "5": "2026-07-23"
-  },
-  "planImportedWeeks": [
-    "2026-07-20"
-  ],
-  "irregularSchedule": {}
+  "essayRecords": []
 }
