@@ -93,20 +93,16 @@ const ENGLISH_VOCABULARY = [
   { id: "en075", word: "roster", meaning: "陣容名單", partOfSpeech: "n.", source: "cambly", example: "The team announced a new roster for the season." },
   { id: "en076", word: "tournament", meaning: "錦標賽", partOfSpeech: "n.", source: "cambly", example: "The LCK tournament is held in Korea." },
   // === 不規則動詞過去式（重點！）===
-  { id: "en077", word: "went (go)", meaning: "去（go 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I went to Japan last year." },
-  { id: "en078", word: "came (come)", meaning: "來（come 的過去式）", partOfSpeech: "v.", source: "cambly", example: "She came to my office this morning." },
-  { id: "en079", word: "saw (see)", meaning: "看見（see 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I saw a beautiful temple yesterday." },
-  { id: "en080", word: "took (take)", meaning: "搭乘（take 的過去式）", partOfSpeech: "v.", source: "cambly", example: "We took the MRT to Taipei." },
-  { id: "en081", word: "bought (buy)", meaning: "買（buy 的過去式）", partOfSpeech: "v.", source: "cambly", example: "She bought a lot of souvenirs in Korea." },
-  { id: "en082", word: "told (tell)", meaning: "告訴（tell 的過去式）", partOfSpeech: "v.", source: "cambly", example: "She told me the news." },
-  { id: "en083", word: "made (make)", meaning: "製作（make 的過去式）", partOfSpeech: "v.", source: "cambly", example: "She made a presentation last week." },
-  { id: "en084", word: "thought (think)", meaning: "認為（think 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I thought it was a good idea." },
-  { id: "en085", word: "found (find)", meaning: "發現（find 的過去式）", partOfSpeech: "v.", source: "cambly", example: "We found a nice café near the temple." },
-  { id: "en086", word: "chose (choose)", meaning: "選擇（choose 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I chose to go to Universal Studios." },
-  { id: "en087", word: "woke up (wake up)", meaning: "醒來（wake up 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I just woke up when you called." },
-  { id: "en088", word: "brought (bring)", meaning: "帶來（bring 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I brought my camera on the trip." },
-  { id: "en089", word: "rode (ride)", meaning: "乘坐（ride 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I rode many rides at Universal Studios." },
-  { id: "en090", word: "had (have)", meaning: "有／吃（have 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I had lunch with my brother yesterday." },
+  { id: "en078", word: "come", meaning: "來", partOfSpeech: "v.", source: "cambly", example: "She came to my office this morning.", pastTense: "came", pastParticiple: "come" },
+  { id: "en079", word: "see", meaning: "看見", partOfSpeech: "v.", source: "cambly", example: "I saw a beautiful temple yesterday.", pastTense: "saw", pastParticiple: "seen" },
+  { id: "en082", word: "tell", meaning: "告訴", partOfSpeech: "v.", source: "cambly", example: "She told me the news.", pastTense: "told", pastParticiple: "told" },
+  { id: "en083", word: "make", meaning: "製作", partOfSpeech: "v.", source: "cambly", example: "She made a presentation last week.", pastTense: "made", pastParticiple: "made" },
+  { id: "en085", word: "find", meaning: "發現", partOfSpeech: "v.", source: "cambly", example: "We found a nice café near the temple.", pastTense: "found", pastParticiple: "found" },
+  { id: "en086", word: "choose", meaning: "選擇", partOfSpeech: "v.", source: "cambly", example: "I chose to go to Universal Studios.", pastTense: "chose", pastParticiple: "chosen" },
+  { id: "en087", word: "wake up", meaning: "醒來", partOfSpeech: "v.", source: "cambly", example: "I just woke up when you called.", pastTense: "woke up", pastParticiple: "woken up" },
+  { id: "en088", word: "bring", meaning: "帶來", partOfSpeech: "v.", source: "cambly", example: "I brought my camera on the trip.", pastTense: "brought", pastParticiple: "brought" },
+  { id: "en089", word: "ride", meaning: "騎乘、搭乘", partOfSpeech: "v.", source: "cambly", example: "I rode many rides at Universal Studios.", pastTense: "rode", pastParticiple: "ridden" },
+  { id: "en090", word: "have", meaning: "有／吃", partOfSpeech: "v.", source: "cambly", example: "I had lunch with my brother yesterday.", pastTense: "had", pastParticiple: "had" },
 
   // === 第23堂補充（Uzma）===
   { id: "en091", word: "carbon dioxide", meaning: "二氧化碳", partOfSpeech: "n.", source: "cambly", example: "Heavy industries emit large amounts of carbon dioxide." },
@@ -319,10 +315,13 @@ const ENGLISH_VOCABULARY = [
   { id: "en260", word: "achieve a goal", meaning: "達成目標（不是 attend）", partOfSpeech: "phrase", source: "cambly", example: "You need to save that money to achieve your goals." },
   { id: "en261", word: "high-risk investing", meaning: "高風險投資", partOfSpeech: "n.", source: "cambly", example: "If you want to do some high-risk investing, you need to know you might lose money." },
 
-  // === 不規則動詞三態練習清單（2026-07-22 自己整理，搬自 english.html 內建種子）===
-  // 【注意】單字庫裡 en077-en090 已經有一批「過去式(原形)」格式的不規則動詞條目
-  // （例如 en081 "bought (buy)"），跟這批新資料格式不同、但教的是同一件事，
-  // 兩邊並存不衝突，只是未來想整理成一致格式時可以參考這裡合併。
+  // === 不規則動詞三態練習清單（2026-07-22 自己整理；2026-07-23 與 en077-090 統一格式）===
+  // 【格式統一】原本 en077-090 是「過去式(原形)」的舊格式（例如 "bought (buy)"）。
+  // 2026-07-23 整理：其中 go/take/buy/think 4 個跟這批新格式重複，已移除
+  // （原始內容封存到 data-removed.js）；其餘 10 個（come/see/tell/make/find/
+  // choose/wake up/bring/ride/have）已就地改成這批新格式（word=原形、
+  // 補上 pastTense/pastParticiple），id 保持不變。現在整個單字庫只有一種
+  // 不規則動詞格式，練習池由 english.html 的 irregularVerbPool() 自動抓取。
   { id: "en262", word: "teach", meaning: "教導", partOfSpeech: "v.", source: "other", example: "My teacher taught me this word yesterday.", pastTense: "taught", pastParticiple: "taught" },
   { id: "en263", word: "catch", meaning: "抓住、趕上", partOfSpeech: "v.", source: "other", example: "I caught the last bus home.", pastTense: "caught", pastParticiple: "caught" },
   { id: "en264", word: "buy", meaning: "購買", partOfSpeech: "v.", source: "other", example: "I bought a dress yesterday.", pastTense: "bought", pastParticiple: "bought" },
