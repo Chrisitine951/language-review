@@ -36,6 +36,21 @@
   .para-choice-meaning .pcm-row { margin-bottom: 4px; }
   .para-choice-meaning .pcm-correct { color: var(--green); font-weight: 600; }
   .para-choice-meaning .pcm-wrong { color: var(--text2); }
+  /* 不規則動詞三態（v2.2.2） */
+  .irr-input-row { display: flex; gap: 8px; margin: 10px 0; }
+  .irr-input-row input { flex: 1; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--surface2); color: var(--text); font-size: 15px; min-height: 44px; }
+  .irr-input-label { font-size: 11px; color: var(--text3); margin-bottom: 2px; }
+  .irr-list-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-top: 1px solid var(--border); }
+  .irr-list-row:first-child { border-top: none; }
+  .irr-list-forms { font-size: 13px; color: var(--text2); }
+  .irr-stage-tag { font-size: 11px; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+  .irr-stage-new { background: var(--surface2); color: var(--text3); }
+  .irr-stage-review { background: var(--amber-light, #fff8e1); color: var(--amber); }
+  .irr-stage-mastered { background: var(--green-light, #e8f5e9); color: var(--green); }
+  #diary-verb-hint:empty { display: none; }
+  .diary-verb-hint-box { margin: 0 16px 10px; padding: 8px 12px; background: var(--primary-light); border-radius: 10px; font-size: 12px; line-height: 1.6; color: var(--text2); }
+  .diary-verb-hint-box strong { color: var(--primary); }
 </style>
 </head>
 <body>
@@ -115,6 +130,7 @@
       <div class="filter-row" style="padding-top: 12px;">
         <button class="filter-chip active" id="vmode-flip" onclick="setVocabMode('flip')">🃏 翻牌</button>
         <button class="filter-chip" id="vmode-type" onclick="setVocabMode('type')">⌨️ 打字</button>
+        <button class="filter-chip" id="vmode-irregular" onclick="setVocabMode('irregular')">🔁 不規則動詞</button>
         <button class="filter-chip" id="vmode-roots" onclick="setVocabMode('roots')">🔎 字根實驗室</button>
       </div>
       <div class="filter-row">
@@ -172,6 +188,28 @@
             <div class="progress-bar"><div class="progress-fill" id="typing-progress"></div></div>
             <span class="progress-text" id="typing-progress-text">0 / 0</span>
           </div>
+        </div>
+      </div>
+
+      <!-- 不規則動詞三態（v2.2.2 新增）：內建種子清單＋獨立的 1/3/7 天主動回想排程 -->
+      <div id="irregular-mode-view" style="display:none;">
+        <div class="lang-toggle" style="margin: 0 0 12px;">
+          <button class="lang-toggle-btn active" id="irr-sub-quiz" onclick="setIrregularSubMode('quiz')">✏️ 練習</button>
+          <button class="lang-toggle-btn" id="irr-sub-list" onclick="setIrregularSubMode('list')">📋 清單</button>
+        </div>
+        <div id="irr-quiz-view">
+          <div class="grammar-stats">
+            <div class="grammar-stat"><div class="grammar-stat-num" id="irr-stat-due" style="color:var(--amber);">0</div><div class="grammar-stat-label">今日待複習</div></div>
+            <div class="grammar-stat"><div class="grammar-stat-num" id="irr-stat-mastered" style="color:var(--green);">0</div><div class="grammar-stat-label">已熟悉</div></div>
+            <div class="grammar-stat"><div class="grammar-stat-num" id="irr-stat-total">0</div><div class="grammar-stat-label">總數</div></div>
+          </div>
+          <div id="irr-card-container"></div>
+        </div>
+        <div id="irr-list-view" style="display:none;">
+          <div style="font-size:12px; color:var(--text3); line-height:1.6; padding: 0 16px 8px;">
+            🆕 新　🟡 複習中（隔天/3天/7天各測一次）　✅ 已熟悉（暫時移出複習清單）
+          </div>
+          <div id="irr-list-container"></div>
         </div>
       </div>
     </div>
@@ -434,6 +472,7 @@
 
       <div id="rec-sub-diary">
         <div class="section-header"><span class="section-title">今日英文日記</span></div>
+        <div id="diary-verb-hint"></div>
         <div class="diary-input-card">
           <textarea class="diary-textarea" id="diary-text" placeholder="用英文寫下今天發生的事… (3句以上)&#10;提示：試著用過去式！"></textarea>
           <div class="diary-toolbar">
@@ -706,6 +745,7 @@ let breakdowns = [];     // 閱讀拆解檢核 { id, date, question, ..., score 
 let essayRecords = [];   // 作文批改 { id, date, task, question, essay, feedback }
 let egiuDone = {};       // EGIU 進度 { "單元號": "完成日期 YYYY-MM-DD" }（v2.1.0）
 let planImportedWeeks = []; // 已自動帶入大表的週（v2.1.0）——帶過就不再帶，刪掉的項目不會自己長回來
+let irregularSchedule = {}; // 不規則動詞三態的獨立 1/3/7 天排程（v2.2.2），key: irrv_<base>
 
 let touchStartX = 0, touchStartY = 0, isDragging = false;
 let planWeekOffset = 0;
@@ -727,6 +767,7 @@ function saveData() {
     localStorage.setItem('lren_essays', JSON.stringify(essayRecords));
     localStorage.setItem('lren_egiu', JSON.stringify(egiuDone));
     localStorage.setItem('lren_planwk', JSON.stringify(planImportedWeeks));
+    localStorage.setItem('lren_irrsched', JSON.stringify(irregularSchedule));
     localStorage.setItem('lren_savedat', String(Date.now()));
   } catch(e) {}
   scheduleAutoPush();
@@ -744,6 +785,7 @@ function loadData() {
   essayRecords = get('lren_essays', []);
   egiuDone = get('lren_egiu', {});
   planImportedWeeks = get('lren_planwk', []);
+  irregularSchedule = get('lren_irrsched', {});
   const saved = get('lren_today', null);
   if (saved && saved.date === new Date().toDateString()) todayStats = saved;
 }
@@ -838,12 +880,13 @@ function buildProgressObject() {
     username: getUsername(), app: 'english',
     reviewSchedule, grammarStats, todayStats, diaryEntries, engooRecords, inboxItems,
     planItems, practiceRecords, breakdowns, essayRecords,
-    egiuDone, planImportedWeeks,
+    egiuDone, planImportedWeeks, irregularSchedule,
   };
 }
 function applyProgressObject(p) {
   if (!p) return;
   if (p.reviewSchedule) reviewSchedule = p.reviewSchedule;
+  if (p.irregularSchedule && typeof p.irregularSchedule === 'object') irregularSchedule = p.irregularSchedule;
   if (p.grammarStats) grammarStats = p.grammarStats;
   if (p.todayStats && p.todayStats.date === new Date().toDateString()) todayStats = p.todayStats;
   if (Array.isArray(p.diaryEntries)) diaryEntries = p.diaryEntries;
@@ -1195,6 +1238,8 @@ function setVocabSource(s, el) {
 function initVocab() {
   document.getElementById('vmode-flip').classList.toggle('active', vocabMode === 'flip');
   document.getElementById('vmode-type').classList.toggle('active', vocabMode === 'type');
+  document.getElementById('vmode-irregular').classList.toggle('active', vocabMode === 'irregular');
+  if (vocabMode === 'irregular') { setIrregularSubMode(irregularSubMode); return; }
   if (currentDeck.length === 0) buildDeck();
   vocabMode === 'flip' ? renderFlashcard() : renderTyping();
 }
@@ -1205,11 +1250,14 @@ function setVocabMode(mode) {
   vocabMode = mode;
   document.getElementById('flashcard-mode').style.display = mode === 'flip' ? 'block' : 'none';
   document.getElementById('typing-mode-view').style.display = mode === 'type' ? 'block' : 'none';
-  document.getElementById('vocab-mode-label').textContent = mode === 'flip' ? '翻牌模式' : '打字模式';
+  document.getElementById('irregular-mode-view').style.display = mode === 'irregular' ? 'block' : 'none';
+  document.getElementById('vocab-mode-label').textContent = mode === 'flip' ? '翻牌模式' : (mode === 'type' ? '打字模式' : '不規則動詞');
   document.getElementById('vmode-flip').classList.toggle('active', mode === 'flip');
   document.getElementById('vmode-type').classList.toggle('active', mode === 'type');
+  document.getElementById('vmode-irregular').classList.toggle('active', mode === 'irregular');
   document.getElementById('vmode-roots').classList.remove('active');
   if (mode === 'type') { buildDeck(); renderTyping(); }
+  if (mode === 'irregular') { setIrregularSubMode(irregularSubMode); }
 }
 function buildDeck() {
   const vocab = sourcePool();
@@ -1325,6 +1373,220 @@ function checkTyping() {
   setTimeout(() => { currentCardIdx++; if (currentCardIdx >= currentDeck.length) { showToast('🎉 本輪結束！'); currentCardIdx = 0; } renderTyping(); }, correct ? 1200 : 2000);
 }
 document.getElementById('typing-input').addEventListener('keydown', e => { if (e.key === 'Enter') checkTyping(); });
+
+// ============================================================
+// 不規則動詞三態（v2.2.2 新增，Christine 回饋：想紀錄＋主動回想練習）
+//
+// 【設計比照德文動詞變化表】內建種子清單直接放這裡（不進 data.js），
+// 之後如果想從收集箱擴充更多不規則動詞，可以讓 ENGLISH_VOCABULARY 的單字
+// 帶 pastTense/pastParticiple 選填欄位，irregularVerbPool() 會自動把它們併入
+// 練習池——比照德文 conjugationPool()「存一個動詞、練習題自動長大」的做法。
+//
+// 【複習排程是獨立的一套，不跟一般單字的 7/14/30 天排程混用】
+// 這是 Christine 討論後選定的方式：隔天 → 3 天後 → 7 天後 各主動回想一次，
+// 三次都答對才算「已熟悉」（移出待複習清單，但仍留在總清單裡）；
+// 只要有一次想不起來，就退回隔天重測（不是整個歸零重來）。
+// ============================================================
+const ENGLISH_IRREGULAR_VERBS = [
+  { base: 'teach', pastTense: 'taught', pastParticiple: 'taught', meaning: '教導' },
+  { base: 'catch', pastTense: 'caught', pastParticiple: 'caught', meaning: '抓住、趕上' },
+  { base: 'buy', pastTense: 'bought', pastParticiple: 'bought', meaning: '購買' },
+  { base: 'think', pastTense: 'thought', pastParticiple: 'thought', meaning: '思考、認為' },
+  { base: 'fall', pastTense: 'fell', pastParticiple: 'fallen', meaning: '跌倒、落下' },
+  { base: 'throw', pastTense: 'threw', pastParticiple: 'thrown', meaning: '丟擲' },
+  { base: 'fly', pastTense: 'flew', pastParticiple: 'flown', meaning: '飛' },
+  { base: 'take', pastTense: 'took', pastParticiple: 'taken', meaning: '拿取、搭乘' },
+  { base: 'go', pastTense: 'went', pastParticiple: 'gone', meaning: '去' },
+  { base: 'sleep', pastTense: 'slept', pastParticiple: 'slept', meaning: '睡覺' },
+  { base: 'leave', pastTense: 'left', pastParticiple: 'left', meaning: '離開、留下' },
+  { base: 'spend', pastTense: 'spent', pastParticiple: 'spent', meaning: '花費（時間/金錢）' },
+  { base: 'hurt', pastTense: 'hurt', pastParticiple: 'hurt', meaning: '傷害、受傷' },
+  { base: 'cost', pastTense: 'cost', pastParticiple: 'cost', meaning: '花費（金錢）' },
+];
+// 練習池：內建清單 + 單字庫中帶 pastTense/pastParticiple 的動詞（未來收集箱擴充用），以 base 去重、內建優先
+function irregularVerbPool() {
+  const pool = ENGLISH_IRREGULAR_VERBS.map(v => ({ ...v }));
+  const seen = new Set(pool.map(v => v.base.toLowerCase()));
+  if (typeof ENGLISH_VOCABULARY !== 'undefined') {
+    ENGLISH_VOCABULARY.forEach(w => {
+      if (w.word && w.pastTense && w.pastParticiple && !seen.has(w.word.toLowerCase())) {
+        pool.push({ base: w.word, pastTense: w.pastTense, pastParticiple: w.pastParticiple, meaning: w.meaning || '' });
+        seen.add(w.word.toLowerCase());
+      }
+    });
+  }
+  return pool;
+}
+// ---- 獨立的 1/3/7 天排程（不共用一般單字的 reviewSchedule）----
+// stage 1=新／答錯後　2=通過隔天測驗，下次 3 天後　3=通過 3 天測驗，下次 7 天後　4=通過 7 天測驗＝已熟悉
+function irrKey(base) { return 'irrv_' + base.toLowerCase(); }
+function getIrrSchedule(base) { return irregularSchedule[irrKey(base)] || { stage: 1, nextReview: 0, correct: 0, incorrect: 0 }; }
+function updateIrrSchedule(base, knew) {
+  const k = irrKey(base), s = getIrrSchedule(base), now = Date.now();
+  if (knew) {
+    s.correct++;
+    if (s.stage === 1) { s.stage = 2; s.nextReview = now + 1 * 864e5; }
+    else if (s.stage === 2) { s.stage = 3; s.nextReview = now + 3 * 864e5; }
+    else { s.stage = 4; s.nextReview = 0; } // 已熟悉：移出待複習清單，不再排下一次
+  } else {
+    s.incorrect++; s.stage = 1; s.nextReview = now + 1 * 864e5; // 想不起來 → 隔天重測，不是歸零重來
+  }
+  irregularSchedule[k] = s;
+  saveData();
+}
+function getDueIrregularVerbs() {
+  const now = Date.now();
+  return irregularVerbPool().filter(v => {
+    const s = getIrrSchedule(v.base);
+    return s.nextReview > 0 && s.nextReview <= now;
+  });
+}
+function getFreshIrregularVerbs() {
+  return irregularVerbPool().filter(v => getIrrSchedule(v.base).nextReview === 0 && getIrrSchedule(v.base).stage === 1);
+}
+
+let irregularSubMode = 'quiz'; // 'quiz' | 'list'
+let irrDeck = [], irrDeckIdx = 0, irrAnswered = false, irrQuestionType = 'typing';
+function setIrregularSubMode(mode) {
+  irregularSubMode = mode;
+  document.getElementById('irr-quiz-view').style.display = mode === 'quiz' ? 'block' : 'none';
+  document.getElementById('irr-list-view').style.display = mode === 'list' ? 'block' : 'none';
+  document.getElementById('irr-sub-quiz').classList.toggle('active', mode === 'quiz');
+  document.getElementById('irr-sub-list').classList.toggle('active', mode === 'list');
+  if (mode === 'quiz') { buildIrrDeck(); renderIrrCard(); updateIrrStats(); }
+  else renderIrrList();
+}
+function updateIrrStats() {
+  const pool = irregularVerbPool();
+  const mastered = pool.filter(v => getIrrSchedule(v.base).stage === 4).length;
+  document.getElementById('irr-stat-due').textContent = getDueIrregularVerbs().length;
+  document.getElementById('irr-stat-mastered').textContent = mastered;
+  document.getElementById('irr-stat-total').textContent = pool.length;
+}
+function buildIrrDeck() {
+  const due = getDueIrregularVerbs();
+  const fresh = getFreshIrregularVerbs();
+  shuffle(due); shuffle(fresh);
+  irrDeck = [...due, ...fresh];
+  if (irrDeck.length === 0) irrDeck = shuffle([...irregularVerbPool()]); // 全部都熟了：允許隨機複習，不會卡在空白畫面
+  irrDeckIdx = 0;
+}
+function pickIrrDistractors(correct, count) {
+  const pool = irregularVerbPool().filter(v => v.base.toLowerCase() !== correct.base.toLowerCase());
+  return shuffle([...pool]).slice(0, count);
+}
+function renderIrrCard() {
+  updateIrrStats();
+  const container = document.getElementById('irr-card-container');
+  if (irrDeck.length === 0) {
+    container.innerHTML = `<div class="empty-state" style="padding:24px;"><div class="empty-state-icon">🔁</div><div class="empty-state-text">還沒有不規則動詞資料</div></div>`;
+    return;
+  }
+  const v = irrDeck[irrDeckIdx % irrDeck.length];
+  irrAnswered = false;
+  irrQuestionType = Math.random() < 0.5 ? 'typing' : 'choice'; // 兩種都要，隨機出現
+  window._irrCurrent = v;
+  const stageLabel = { 1: '🆕 新', 2: '🟡 複習中（隔天）', 3: '🟡 複習中（3天後）', 4: '✅ 已熟悉' }[getIrrSchedule(v.base).stage] || '';
+  if (irrQuestionType === 'typing') {
+    container.innerHTML = `<div class="grammar-card">
+      <div class="grammar-category-row" style="cursor:default;">
+        <span class="grammar-category-label">主動回想：先默念 ${escHtml(v.base)} → ___ → ___</span>
+        <span class="tag" style="background:var(--surface2);">${stageLabel}</span>
+      </div>
+      <div class="grammar-question" style="font-size:22px;">${escHtml(v.base)}<span style="font-size:13px; color:var(--text3); font-weight:400;">　${escHtml(v.meaning || '')}</span>
+        <button class="speak-btn-inline" onclick="speak('${escAttr(v.base)}', 'en-US')">🔊</button></div>
+      <div class="irr-input-row">
+        <div style="flex:1;"><div class="irr-input-label">過去式</div><input id="irr-input-past" placeholder="past tense" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"></div>
+        <div style="flex:1;"><div class="irr-input-label">過去分詞</div><input id="irr-input-pp" placeholder="past participle" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"></div>
+      </div>
+      <button class="typing-submit" style="width:100%;" onclick="answerIrrTyping()">確認</button>
+      <div class="grammar-explanation" id="irr-exp"></div>
+      <button class="grammar-nav-btn" id="irr-next-btn" onclick="nextIrr()" style="display:none;">下一個 →</button>
+    </div>`;
+    const pastEl = document.getElementById('irr-input-past');
+    pastEl.addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById('irr-input-pp').focus(); });
+    document.getElementById('irr-input-pp').addEventListener('keydown', e => { if (e.key === 'Enter') answerIrrTyping(); });
+    pastEl.focus();
+  } else {
+    const distractors = pickIrrDistractors(v, 2);
+    const correctText = `${v.pastTense} / ${v.pastParticiple}`;
+    const choices = shuffle([correctText, ...distractors.map(d => `${d.pastTense} / ${d.pastParticiple}`)]);
+    window._irrChoices = choices;
+    window._irrCorrectText = correctText;
+    container.innerHTML = `<div class="grammar-card">
+      <div class="grammar-category-row" style="cursor:default;">
+        <span class="grammar-category-label">選出正確的「過去式 / 過去分詞」</span>
+        <span class="tag" style="background:var(--surface2);">${stageLabel}</span>
+      </div>
+      <div class="grammar-question" style="font-size:22px;">${escHtml(v.base)}<span style="font-size:13px; color:var(--text3); font-weight:400;">　${escHtml(v.meaning || '')}</span>
+        <button class="speak-btn-inline" onclick="speak('${escAttr(v.base)}', 'en-US')">🔊</button></div>
+      <div class="grammar-choices">
+        ${choices.map((c, i) => `<button class="grammar-choice" onclick="answerIrrChoice(this, ${i})">${escHtml(c)}</button>`).join('')}
+      </div>
+      <div class="grammar-explanation" id="irr-exp"></div>
+      <button class="grammar-nav-btn" id="irr-next-btn" onclick="nextIrr()" style="display:none;">下一個 →</button>
+    </div>`;
+  }
+}
+function irrRevealExplanation(v, wasCorrect) {
+  const el = document.getElementById('irr-exp');
+  el.innerHTML = `<strong>📌 ${escHtml(v.base)} → ${escHtml(v.pastTense)} → ${escHtml(v.pastParticiple)}</strong><br>
+    <span style="font-size:12px; color:var(--text2);">試著自己造一句：My teacher ${v.pastTense === v.base ? v.pastTense : v.pastTense} … （或用你自己的方式造句更好記）</span>`;
+  el.classList.add('show');
+  document.getElementById('irr-next-btn').style.display = 'block';
+}
+function answerIrrTyping() {
+  if (irrAnswered) return;
+  const v = window._irrCurrent;
+  const past = document.getElementById('irr-input-past').value.trim().toLowerCase();
+  const pp = document.getElementById('irr-input-pp').value.trim().toLowerCase();
+  const correct = past === v.pastTense.toLowerCase() && pp === v.pastParticiple.toLowerCase();
+  irrAnswered = true;
+  document.getElementById('irr-input-past').style.borderColor = past === v.pastTense.toLowerCase() ? 'var(--green)' : 'var(--danger)';
+  document.getElementById('irr-input-pp').style.borderColor = pp === v.pastParticiple.toLowerCase() ? 'var(--green)' : 'var(--danger)';
+  updateIrrSchedule(v.base, correct);
+  irrRevealExplanation(v, correct);
+}
+function answerIrrChoice(btn, idx) {
+  if (irrAnswered) return;
+  irrAnswered = true;
+  const v = window._irrCurrent;
+  const isCorrect = window._irrChoices[idx] === window._irrCorrectText;
+  document.querySelectorAll('#irr-card-container .grammar-choice').forEach(b => {
+    if (b.textContent === window._irrCorrectText) b.classList.add('correct');
+    else if (b === btn && !isCorrect) b.classList.add('wrong');
+  });
+  updateIrrSchedule(v.base, isCorrect);
+  irrRevealExplanation(v, isCorrect);
+}
+function nextIrr() {
+  irrDeckIdx++;
+  if (irrDeckIdx >= irrDeck.length) { buildIrrDeck(); showToast('🎉 這輪練習完成！'); }
+  renderIrrCard();
+}
+function renderIrrList() {
+  const pool = irregularVerbPool();
+  const stageTagClass = { 1: 'irr-stage-new', 2: 'irr-stage-review', 3: 'irr-stage-review', 4: 'irr-stage-mastered' };
+  const stageLabel = { 1: '🆕 新', 2: '🟡 複習中', 3: '🟡 複習中', 4: '✅ 已熟悉' };
+  document.getElementById('irr-list-container').innerHTML = pool.map(v => {
+    const s = getIrrSchedule(v.base);
+    return `<div class="irr-list-row">
+      <div>
+        <div style="font-weight:600;">${escHtml(v.base)} <span style="font-weight:400; color:var(--text3); font-size:12px;">${escHtml(v.meaning || '')}</span></div>
+        <div class="irr-list-forms">${escHtml(v.pastTense)} / ${escHtml(v.pastParticiple)}</div>
+      </div>
+      <span class="irr-stage-tag ${stageTagClass[s.stage] || 'irr-stage-new'}">${stageLabel[s.stage] || ''}</span>
+    </div>`;
+  }).join('');
+}
+// 日記頁提示：只顯示今天到期的不規則動詞，不做 AI 編故事（Christine 選擇先不做）
+function renderDiaryVerbHint() {
+  const el = document.getElementById('diary-verb-hint');
+  if (!el) return;
+  const due = getDueIrregularVerbs().slice(0, 6);
+  if (due.length === 0) { el.innerHTML = ''; return; }
+  el.innerHTML = `<div class="diary-verb-hint-box">💡 <strong>今天可以練習用到的不規則動詞：</strong>${due.map(v => escHtml(v.base)).join('、')}</div>`;
+}
 
 // ============================================================
 // EGIU 進度棋盤（v2.1.0）——English Grammar in Use 145 Units
@@ -2532,7 +2794,7 @@ function answerParaphrase(btn, idx) {
 
 
 function initRecords() {
-  renderDiaryList(); renderEngooList(); renderCamblyList(); renderInboxList();
+  renderDiaryList(); renderEngooList(); renderCamblyList(); renderInboxList(); renderDiaryVerbHint();
   const el = document.getElementById('engoo-date');
   if (el && !el.value) el.value = new Date().toISOString().split('T')[0];
 }
@@ -2676,6 +2938,10 @@ function renderCamblyList() {
 // 【新增類型時】要同步改：INBOX_TYPE_LABEL、INBOX_TYPE_FIELDS、analyzeInbox 的 prompt
 // 與轉換迴圈、saveInboxToGithub 的寫入分支（練習紀錄不寫 GitHub 資料庫，
 // 它屬於個人進度，直接進 practiceRecords）
+// 【v2.2.3】不規則動詞三態不是新類型：沿用 en_vocab，只是多帶 pastTense/pastParticiple
+// 兩個選填欄位。這兩個欄位有值時 getInboxFields() 才會多顯示輸入框，一般單字不受影響；
+// 存進 data-user.json 時也只在有值才加欄位。irregularVerbPool()（單字頁「不規則動詞」）
+// 會自動抓單字庫裡帶這兩個欄位的動詞併入練習池，不用再改練習邏輯。
 // ============================================================
 const INBOX_PDF_SIZE_LIMIT = 15 * 1024 * 1024;
 async function handleInboxPhoto(event) {
@@ -2729,7 +2995,7 @@ The content could be any of:
 
 Return ONLY valid JSON, no markdown fences, no explanation:
 {
-  "englishVocab": [ { "word": "...", "meaning": "中文意思", "partOfSpeech": "n./v./adj./phrase", "example": "example sentence", "source": "cambly/engoo/ielts/other" } ],
+  "englishVocab": [ { "word": "...", "meaning": "中文意思", "partOfSpeech": "n./v./adj./phrase", "example": "example sentence", "source": "cambly/engoo/ielts/other", "pastTense": "過去式（只有動詞且能判斷三態時才填，否則留空字串）", "pastParticiple": "過去分詞（同上）" } ],
   "englishGrammar": [ { "category": "past_tense/subject_verb/preposition/other", "rule": "簡短規則名稱", "wrong": "wrong sentence", "correct": "correct sentence", "explanation": "繁體中文解釋", "source": "cambly/engoo/ielts/other" } ],
   "practice": [ { "skill": "listening/reading", "material": "例如 劍10 Test 1", "date": "YYYY-MM-DD 或空字串", "score": "分數字串或空", "causes": "錯誤原因，繁體中文，逗號分隔", "notes": "檢討重點，繁體中文" } ],
   "task2Phrases": [ { "word": "英文佳句或詞組", "meaning": "繁體中文意思", "usage": "怎麼用/例句", "topic": "主題分類（如 環境/教育/科技/通用）" } ],
@@ -2742,6 +3008,7 @@ Rules:
 - Meanings and explanations in Traditional Chinese (繁體中文).
 - Grammar: only errors with clear learning value, not every tiny mistake. Mark source "ielts" if from IELTS practice material.
 - Practice: if you see a 劍橋 test name with a score or a list of wrong questions, make a practice record. Guess the skill from context.
+- IRREGULAR VERB classification (重要): if the content is a table or list of English irregular verbs showing base form + past tense + past participle (e.g. "teach / taught / taught", or a table with columns 原形/過去式/過去分詞), classify each row into englishVocab with: word=base form, pastTense=past tense form, pastParticiple=past participle form, partOfSpeech="動詞", meaning=繁體中文意思 (translate if not given), example=留空 or the sentence if provided. Do NOT put these in a separate category — they are still englishVocab, just with the two extra fields filled in. For ordinary vocabulary (not showing three forms), leave pastTense and pastParticiple as empty strings.
 - PARAPHRASE classification (重要):
   - Two input styles both map to "paraphrases":
     (A) Full structure: 核心概念/替換表達/適用語境/原句/口說例句/寫作例句/主題
@@ -2762,7 +3029,7 @@ Rules:
   catch(e) { statusEl.innerHTML = `<div class="ai-result" style="color:var(--danger);">❌ AI 回傳的格式無法解析，請再試一次</div>`; return; }
 
   let added = 0;
-  (parsed.englishVocab || []).forEach(v => { inboxItems.push({ type: 'en_vocab', word: v.word || '', meaning: v.meaning || '', partOfSpeech: v.partOfSpeech || '', example: v.example || '', source: v.source || 'inbox' }); added++; });
+  (parsed.englishVocab || []).forEach(v => { inboxItems.push({ type: 'en_vocab', word: v.word || '', meaning: v.meaning || '', partOfSpeech: v.partOfSpeech || '', example: v.example || '', source: v.source || 'inbox', pastTense: v.pastTense || '', pastParticiple: v.pastParticiple || '' }); added++; });
   (parsed.englishGrammar || []).forEach(g => { inboxItems.push({ type: 'en_grammar', category: g.category || 'other', rule: g.rule || '', wrong: g.wrong || '', correct: g.correct || '', explanation: g.explanation || '', source: g.source || 'inbox' }); added++; });
   (parsed.practice || []).forEach(p => { inboxItems.push({ type: 'practice', skill: p.skill === 'reading' ? 'reading' : 'listening', material: p.material || '', date: p.date || new Date().toISOString().split('T')[0], score: p.score || '', causes: p.causes || '', notes: p.notes || '' }); added++; });
   (parsed.task2Phrases || []).forEach(p => { inboxItems.push({ type: 't2_phrase', word: p.word || '', meaning: p.meaning || '', usage: p.usage || '', topic: p.topic || '通用' }); added++; });
@@ -2810,6 +3077,17 @@ const INBOX_TYPE_FIELDS = {
   speaking:   [['core','核心'],['topics','題目'],['nouns','名詞'],['verbs','動詞'],['idioms','慣用語']],
   paraphrase: [['concept','核心概念'],['expressions','替換表達'],['original','原句'],['speakingExample','口說例句'],['writingExample','寫作例句'],['topics','主題']],
 };
+// 不規則動詞三態（v2.2.3）：不新增收集箱類型，沿用 en_vocab，只在 AI 有偵測到三態時
+// 才多顯示 pastTense/pastParticiple 這兩個欄位讓她確認/修改，一般單字（沒有三態）畫面不受影響。
+// 這兩個欄位一路傳到 saveInboxToGithub → ud.englishVocabulary，irregularVerbPool()
+// 會自動抓單字庫裡帶這兩個欄位的動詞併入不規則動詞練習池，不用再改練習邏輯。
+function getInboxFields(item) {
+  const base = INBOX_TYPE_FIELDS[item.type] || [];
+  if (item.type === 'en_vocab' && (item.pastTense || item.pastParticiple)) {
+    return [...base, ['pastTense', '過去式'], ['pastParticiple', '過去分詞']];
+  }
+  return base;
+}
 // register 正規化：非三值一律回 neutral（AI 亂回也不會存進壞資料）
 function normalizeRegister(r) {
   const v = (r || '').toString().trim().toLowerCase();
@@ -2879,7 +3157,7 @@ function renderInboxList() {
   }
   el.innerHTML = inboxItems.map((item, idx) => {
     const meta = INBOX_TYPE_LABEL[item.type] || { label: item.type, tag: '' };
-    const fields = INBOX_TYPE_FIELDS[item.type] || [];
+    const fields = getInboxFields(item);
     // 只有 en_vocab / paraphrase 顯示類型切換下拉（兩者最易混淆）
     const canSwitch = (item.type === 'en_vocab' || item.type === 'paraphrase');
     const switchUI = canSwitch ? `<select class="inbox-type-select" data-idx="${idx}" onchange="convertInboxType(this)">
@@ -2963,8 +3241,14 @@ async function saveInboxToGithub() {
     dbItems.forEach(item => {
       n++;
       if (item.type === 'en_vocab') {
-        ud.englishVocabulary.push({ id: makeUserId('en', n), word: item.word, meaning: item.meaning,
-          partOfSpeech: item.partOfSpeech || '', example: item.example || '', source: item.source || 'other' });
+        const vocabEntry = { id: makeUserId('en', n), word: item.word, meaning: item.meaning,
+          partOfSpeech: item.partOfSpeech || '', example: item.example || '', source: item.source || 'other' };
+        // 不規則動詞三態：只有真的有值才加欄位，一般單字不會多出空欄位污染資料庫
+        if (item.pastTense && item.pastParticiple) {
+          vocabEntry.pastTense = item.pastTense;
+          vocabEntry.pastParticiple = item.pastParticiple;
+        }
+        ud.englishVocabulary.push(vocabEntry);
       } else if (item.type === 'en_grammar') {
         ud.englishGrammar.push({ id: makeUserId('gr', n), category: item.category || 'other',
           rule: item.rule || '', wrong: item.wrong || '', correct: item.correct || '',
@@ -3218,7 +3502,7 @@ function exportData() {
   const data = {
     version: '2.1.0', app: 'english', exportedAt: new Date().toISOString(),
     diaryEntries, engooRecords, reviewSchedule, grammarStats, todayStats, inboxItems,
-    planItems, practiceRecords, breakdowns, essayRecords, egiuDone, planImportedWeeks,
+    planItems, practiceRecords, breakdowns, essayRecords, egiuDone, planImportedWeeks, irregularSchedule,
     examDate: getExamDate(), examTarget: getTargetBand(),
   };
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
@@ -3251,6 +3535,7 @@ function importData(event) {
       if (Array.isArray(data.essayRecords)) essayRecords = data.essayRecords;
       if (data.egiuDone && typeof data.egiuDone === 'object') egiuDone = data.egiuDone;
       if (Array.isArray(data.planImportedWeeks)) planImportedWeeks = data.planImportedWeeks;
+      if (data.irregularSchedule && typeof data.irregularSchedule === 'object') irregularSchedule = data.irregularSchedule;
       if (data.examDate) localStorage.setItem('lren_exam_date', data.examDate);
       if (data.examTarget) localStorage.setItem('lren_exam_target', data.examTarget);
       saveData();
