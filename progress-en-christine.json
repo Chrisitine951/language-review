@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784780518158,
+  "savedAt": 1784786887554,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -901,6 +901,18 @@
     }
   ],
   "practiceRecords": [
+    {
+      "id": 1784786887553,
+      "skill": "grammar",
+      "date": "2026-07-18",
+      "material": "Unit 1",
+      "score": "95",
+      "causes": [
+        "其他文法規則",
+        "規則有印象但不確定怎麼用"
+      ],
+      "notes": "現在進行式的基本結構掌握良好。少數錯誤來自 V-ing 拼字及問句語序，作答後要檢查 am／is／are 是否完整。"
+    },
     {
       "id": 1784776567481.2766,
       "skill": "reading",
