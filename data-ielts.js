@@ -277,14 +277,26 @@ const IELTS_ERROR_CAUSES = {
     { id: "r-guess", label: "猜的（就算猜對也要記）" },
   ],
   grammar: [
-    { id: "g-tense", label: "過去式（時態判斷錯誤）" },
-    { id: "g-agree", label: "主詞動詞一致忘記檢查" },
-    { id: "g-prep", label: "介系詞固定搭配記錯" },
-    { id: "g-other", label: "其他文法規則" },
-    { id: "g-forgot", label: "規則忘記了，需要重新複習" },
-    { id: "g-unsure", label: "規則有印象但不確定怎麼用" },
+    { id: "g-tense", label: "時態與動詞形式" },
+    { id: "g-aux", label: "助動詞與問句／否定句" },
+    { id: "g-agree", label: "主詞—動詞一致" },
+    { id: "g-order", label: "句型結構與語序" },
+    { id: "g-usage", label: "單字用法與固定搭配" },
+    { id: "g-semantic", label: "語意判斷" },
+    { id: "g-spelling", label: "拼字與書寫疏漏" },
   ],
 };
+
+// EGIU 練習紀錄的「學習狀態」——跟上面的錯誤類型是兩個獨立維度：
+// 錯誤類型回答「錯在哪裡」，學習狀態回答「為什麼會錯、下次該怎麼補」。
+// 單選（同一筆紀錄同一時間只會是一種狀態），UI 用 selectStatusChip() 處理互斥選取。
+const GRAMMAR_LEARNING_STATUS = [
+  { id: "st-unknown", label: "完全不熟悉規則" },
+  { id: "st-forgot", label: "規則忘記，需要複習" },
+  { id: "st-context", label: "記得規則，但不會判斷情境" },
+  { id: "st-unstable", label: "知道如何使用，但作答不穩定" },
+  { id: "st-careless", label: "粗心或輸入錯誤" },
+];
 
 // ============================================================
 // 寫作 Task 2：Simon 的四種題型與對應寫法
