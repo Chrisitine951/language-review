@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784736518883,
+  "savedAt": 1784776570803,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -901,6 +901,19 @@
     }
   ],
   "practiceRecords": [
+    {
+      "id": 1784776567481.2766,
+      "skill": "reading",
+      "date": "2026-07-23",
+      "material": "New-Age Transport（閱讀練習）",
+      "score": "",
+      "causes": [
+        "過度要求原文與選項必須完全同義",
+        "對上下位概念辨識不足",
+        "對題型目的判斷錯誤"
+      ],
+      "notes": "區分直接原因與間接原因；不要僅比較字面，要判斷包含關係；NOT mentioned題型要確認角色是否符合。"
+    },
     {
       "id": 1784711722447.1611,
       "skill": "reading",
