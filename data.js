@@ -318,6 +318,25 @@ const ENGLISH_VOCABULARY = [
   { id: "en259", word: "pay yourself first", meaning: "先支付自己（先存錢再花錢的理財原則）", partOfSpeech: "phrase", source: "cambly", example: "The best money advice I've heard is: pay yourself first." },
   { id: "en260", word: "achieve a goal", meaning: "達成目標（不是 attend）", partOfSpeech: "phrase", source: "cambly", example: "You need to save that money to achieve your goals." },
   { id: "en261", word: "high-risk investing", meaning: "高風險投資", partOfSpeech: "n.", source: "cambly", example: "If you want to do some high-risk investing, you need to know you might lose money." },
+
+  // === 不規則動詞三態練習清單（2026-07-22 自己整理，搬自 english.html 內建種子）===
+  // 【注意】單字庫裡 en077-en090 已經有一批「過去式(原形)」格式的不規則動詞條目
+  // （例如 en081 "bought (buy)"），跟這批新資料格式不同、但教的是同一件事，
+  // 兩邊並存不衝突，只是未來想整理成一致格式時可以參考這裡合併。
+  { id: "en262", word: "teach", meaning: "教導", partOfSpeech: "v.", source: "other", example: "My teacher taught me this word yesterday.", pastTense: "taught", pastParticiple: "taught" },
+  { id: "en263", word: "catch", meaning: "抓住、趕上", partOfSpeech: "v.", source: "other", example: "I caught the last bus home.", pastTense: "caught", pastParticiple: "caught" },
+  { id: "en264", word: "buy", meaning: "購買", partOfSpeech: "v.", source: "other", example: "I bought a dress yesterday.", pastTense: "bought", pastParticiple: "bought" },
+  { id: "en265", word: "think", meaning: "思考、認為", partOfSpeech: "v.", source: "other", example: "I thought it was a good idea.", pastTense: "thought", pastParticiple: "thought" },
+  { id: "en266", word: "fall", meaning: "跌倒、落下", partOfSpeech: "v.", source: "other", example: "Prices fell sharply last month.", pastTense: "fell", pastParticiple: "fallen" },
+  { id: "en267", word: "throw", meaning: "丟擲", partOfSpeech: "v.", source: "other", example: "He threw the ball across the yard.", pastTense: "threw", pastParticiple: "thrown" },
+  { id: "en268", word: "fly", meaning: "飛", partOfSpeech: "v.", source: "other", example: "We flew to Japan last year.", pastTense: "flew", pastParticiple: "flown" },
+  { id: "en269", word: "take", meaning: "拿取、搭乘", partOfSpeech: "v.", source: "other", example: "We took the MRT to Taipei.", pastTense: "took", pastParticiple: "taken" },
+  { id: "en270", word: "go", meaning: "去", partOfSpeech: "v.", source: "other", example: "Yesterday, I went shopping.", pastTense: "went", pastParticiple: "gone" },
+  { id: "en271", word: "sleep", meaning: "睡覺", partOfSpeech: "v.", source: "other", example: "I slept well after the shower.", pastTense: "slept", pastParticiple: "slept" },
+  { id: "en272", word: "leave", meaning: "離開、留下", partOfSpeech: "v.", source: "other", example: "She left the office early.", pastTense: "left", pastParticiple: "left" },
+  { id: "en273", word: "spend", meaning: "花費（時間/金錢）", partOfSpeech: "v.", source: "other", example: "I spent a lot of money on the trip.", pastTense: "spent", pastParticiple: "spent" },
+  { id: "en274", word: "hurt", meaning: "傷害、受傷", partOfSpeech: "v.", source: "other", example: "I hurt my leg while hiking.", pastTense: "hurt", pastParticiple: "hurt" },
+  { id: "en275", word: "cost", meaning: "花費（金錢）", partOfSpeech: "v.", source: "other", example: "The trip cost more than I expected.", pastTense: "cost", pastParticiple: "cost" },
 ];
 
 // ============================================================
