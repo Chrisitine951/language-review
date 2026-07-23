@@ -18,4 +18,14 @@ const REMOVED_VOCABULARY = [
   { id: "en186", word: "mille-feuille", meaning: "千層酥（法式甜點）", partOfSpeech: "n.", source: "cambly", example: "Mille-feuille is a delicious French custard layered pastry." },
   { id: "en189", word: "HD brows", meaning: "高清眉毛（美容）", partOfSpeech: "n.", source: "cambly", example: "HD brows is a beauty treatment to enhance eyebrow shape." },
   { id: "en238", word: "g'day", meaning: "嗨（澳洲口語問候，good day 的縮寫）", partOfSpeech: "phrase", source: "cambly", example: "Australians say 'g'day' instead of 'good day'." },
+
+  // === 2026-07-23 移除：不規則動詞格式統一 ===
+  // 原因：這 4 筆是舊格式的不規則動詞（word 欄位放「過去式(原形)」，例如 "bought (buy)"）。
+  // 整理不規則動詞練習功能時，發現它們分別跟新格式的 en270(go)/en269(take)/
+  // en264(buy)/en265(think) 是同一個字、教同一件事，為了避免單字庫和練習池出現
+  // 重複條目，把這 4 筆舊格式移除，原始內容保留在此。
+  { id: "en077", word: "went (go)", meaning: "去（go 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I went to Japan last year." },
+  { id: "en080", word: "took (take)", meaning: "搭乘（take 的過去式）", partOfSpeech: "v.", source: "cambly", example: "We took the MRT to Taipei." },
+  { id: "en081", word: "bought (buy)", meaning: "買（buy 的過去式）", partOfSpeech: "v.", source: "cambly", example: "She bought a lot of souvenirs in Korea." },
+  { id: "en084", word: "thought (think)", meaning: "認為（think 的過去式）", partOfSpeech: "v.", source: "cambly", example: "I thought it was a good idea." },
 ];
