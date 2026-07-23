@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784786915165,
+  "savedAt": 1784786979109,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -901,6 +901,34 @@
     }
   ],
   "practiceRecords": [
+    {
+      "id": 1784786979108,
+      "skill": "grammar",
+      "date": "2026-07-22",
+      "material": "Unit 4",
+      "score": "85",
+      "causes": [
+        "主詞動詞一致忘記檢查",
+        "其他文法規則",
+        "規則忘記了，需要重新複習",
+        "規則有印象但不確定怎麼用"
+      ],
+      "notes": "主要問題是狀態動詞通常不用現在進行式，例如 know、believe、want、need、seem。think、feel、look 等動詞要依句意判斷；am／is／are being 只用於某人當下表現出的行為。"
+    },
+    {
+      "id": 1784786945887,
+      "skill": "grammar",
+      "date": "2026-07-19",
+      "material": "Unit 3",
+      "score": "80",
+      "causes": [
+        "主詞動詞一致忘記檢查",
+        "其他文法規則",
+        "規則忘記了，需要重新複習",
+        "規則有印象但不確定怎麼用"
+      ],
+      "notes": "對現在簡單式與現在進行式已有基本概念，但遇到「固定習慣、暫時情況、當下正在發生」時仍容易混淆。也要注意 always＋現在進行式可表達抱怨或事情發生得太頻繁。"
+    },
     {
       "id": 1784786915165,
       "skill": "grammar",
