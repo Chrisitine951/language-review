@@ -232,6 +232,25 @@
           <div style="font-size:11px; color:var(--text3);">點一下格子＝完成該單元（再點取消）。平日 1 單元、假日可 2，每週六快速複習本週單元。</div>
         </div>
       </div>
+
+      <!-- EGIU 練習紀錄（v2.2.5 新增）：跟聽力/閱讀同一套 practiceRecords，材料欄位可自由填 Unit 編號，
+           不強制跟棋盤某一格綁定——兩個不同 Unit 講到同一個文法點時，材料欄位直接寫「Unit 37, 52」即可，
+           下方「最常犯的錯因」統計是跨全部紀錄算的，本來就會自動把同一種錯因抓在一起。 -->
+      <div class="section-header" style="margin-top:12px;"><span class="section-title">📝 EGIU 練習紀錄</span></div>
+      <div class="diary-input-card">
+        <input class="record-input" id="eg-material" placeholder="Unit 編號（例如 Unit 37，或 Unit 37, 52 同一個文法點）">
+        <div style="display:flex; gap:8px;">
+          <input class="record-input" id="eg-score" placeholder="正確率（例如 90，選填，填數字才會算進平均）">
+          <input class="record-input" id="eg-date" type="date">
+        </div>
+        <div style="font-size:12px; color:var(--text3); margin:4px 0 6px;">這次的錯誤類型（可複選）</div>
+        <div class="error-cause-row" id="eg-causes"></div>
+        <textarea class="diary-textarea" id="eg-notes" style="min-height:70px;" placeholder="錯題重點、下次需要注意的地方…"></textarea>
+        <button class="diary-submit" style="width:100%; margin-top:8px;" onclick="savePractice('grammar')">儲存紀錄</button>
+      </div>
+      <div id="eg-analysis"></div>
+      <div id="eg-list"></div>
+
       <div class="grammar-stats">
         <div class="grammar-stat"><div class="grammar-stat-num" id="gs-correct" style="color:var(--green);">0</div><div class="grammar-stat-label">答對</div></div>
         <div class="grammar-stat"><div class="grammar-stat-num" id="gs-wrong" style="color:var(--de);">0</div><div class="grammar-stat-label">答錯</div></div>
@@ -1619,7 +1638,24 @@ const GRAMMAR_DISTRACTOR_POOLS = {
   preposition: ['in','on','at','to','for','from','about','of','with','as'],
   other: ['a','an','the','more','most','was','is','to','ing'],
 };
-function initGrammar() { renderEgiu(); buildGrammarDeck(); renderGrammarCard(); updateGrammarStats(); }
+function initGrammar() {
+  renderEgiu(); buildGrammarDeck(); renderGrammarCard(); updateGrammarStats();
+  renderCauseChips('eg-causes', 'grammar');
+  renderPracticeList('grammar');
+  const dateEl = document.getElementById('eg-date');
+  if (dateEl && !dateEl.value) dateEl.value = new Date().toISOString().split('T')[0];
+  const matEl = document.getElementById('eg-material');
+  if (matEl && !matEl.value) matEl.value = suggestEgiuMaterial();
+}
+// 建議這次練習紀錄要填的 Unit 編號：抓最近一次在棋盤上標記完成的單元。
+// 只是「建議」，欄位本身可以自由編輯——同一個文法點橫跨好幾個 Unit 時，
+// 她可以直接手動改成「Unit 37, 52」，不強制綁定單一格子。
+function suggestEgiuMaterial() {
+  const entries = Object.entries(egiuDone);
+  if (entries.length === 0) return '';
+  entries.sort((a, b) => (b[1] || '').localeCompare(a[1] || ''));
+  return 'Unit ' + entries[0][0];
+}
 function buildGrammarDeck() {
   let pool = [...ENGLISH_GRAMMAR];
   if (grammarFilter === 'weak') pool = pool.filter(g => !g.mastered);
@@ -1969,8 +2005,10 @@ function renderCauseChips(containerId, skill) {
   el.innerHTML = IELTS_ERROR_CAUSES[skill].map(c =>
     `<button class="error-cause-chip" data-cause="${escAttr(c.label)}" onclick="this.classList.toggle('selected')">${escHtml(c.label)}</button>`).join('');
 }
+// 練習紀錄的 skill → 表單欄位前綴對照（新增科目時只要加這裡一行）
+const PRACTICE_SKILL_PREFIX = { listening: 'lp', reading: 'rp', grammar: 'eg' };
 function savePractice(skill) {
-  const p = skill === 'listening' ? 'lp' : 'rp';
+  const p = PRACTICE_SKILL_PREFIX[skill];
   const material = document.getElementById(p + '-material').value.trim();
   if (!material) { showToast('請填材料名稱'); return; }
   const causes = [...document.querySelectorAll(`#${p}-causes .error-cause-chip.selected`)].map(c => c.dataset.cause);
@@ -1999,7 +2037,7 @@ function delPractice(el) {
   if (rec) renderPracticeList(rec.skill);
 }
 function renderPracticeList(skill) {
-  const p = skill === 'listening' ? 'lp' : 'rp';
+  const p = PRACTICE_SKILL_PREFIX[skill];
   const list = practiceRecords.filter(r => r.skill === skill);
   const el = document.getElementById(p + '-list');
   const an = document.getElementById(p + '-analysis');
@@ -2008,18 +2046,25 @@ function renderPracticeList(skill) {
     an.innerHTML = ''; return;
   }
   // 弱點統計：把錯因次數排序，最常見的就是要加強的
+  // 【重點】這裡的「最常犯的錯因」統計是跨所有紀錄做的，不分是哪個 Unit/材料。
+  // 所以就算兩個不同 Unit 講到同一個文法點（例如 Unit 37 跟 Unit 52 都是過去式），
+  // 只要錯因都勾「過去式」，這裡就會自動把它們算在一起，不需要手動把兩個 Unit 綁定。
   const counts = {};
   list.forEach(r => (r.causes || []).forEach(c => { counts[c] = (counts[c] || 0) + 1; }));
   const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 3);
-  const scores = list.filter(r => r.score).map(r => Number(r.score));
+  // 只取能轉成有效數字的分數（避免像「18/20」這種格式讓平均變 NaN——這是煙霧測試時抓到的 bug）
+  const scores = list.filter(r => r.score && !isNaN(Number(r.score))).map(r => Number(r.score));
   const avg = scores.length ? (scores.reduce((a, b) => a + b, 0) / scores.length).toFixed(1) : '—';
   const recent = scores.slice(0, 3);
   const recentAvg = recent.length ? (recent.reduce((a, b) => a + b, 0) / recent.length).toFixed(1) : '—';
+  // 文法/EGIU 不是雅思分數科目，第三格顯示「已記錄次數」取代「目標」
+  const thirdLabel = skill === 'grammar' ? '已記錄次數' : '目標';
+  const thirdValue = skill === 'grammar' ? list.length : getTargetBand();
   an.innerHTML = `<div class="card">
     <div style="display:flex; gap:16px; margin-bottom:10px;">
       <div><div class="ielts-record-score">${avg}</div><div class="ielts-record-meta">平均（${scores.length} 回）</div></div>
       <div><div class="ielts-record-score">${recentAvg}</div><div class="ielts-record-meta">最近 3 回</div></div>
-      <div><div class="ielts-record-score">${getTargetBand()}</div><div class="ielts-record-meta">目標</div></div>
+      <div><div class="ielts-record-score">${thirdValue}</div><div class="ielts-record-meta">${thirdLabel}</div></div>
     </div>
     ${top.length ? `<div style="font-size:13px; line-height:1.8; color:var(--text2); border-top:1px solid var(--border); padding-top:8px;">
       <strong>最常犯的錯因：</strong><br>${top.map(([c, n]) => `・${escHtml(c)} <span class="tag tag-amber">${n} 次</span>`).join('<br>')}
