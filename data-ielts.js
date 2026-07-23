@@ -249,8 +249,13 @@ const KEYWORD_TYPES = [
 ];
 
 // ============================================================
-// 錯因分類（聽力/閱讀檢討用，整理自 Christine 的備考指南）
+// 錯因分類（聽力/閱讀/文法檢討用，整理自 Christine 的備考指南）
 // 練習紀錄裡每題錯誤都要歸到一類，久了就能看出弱點模式
+// 【v2.2.5 新增 grammar】給文法頁 EGIU 練習紀錄用。分類儘量對齊 ENGLISH_GRAMMAR
+// 既有的 category（past_tense/subject_verb/preposition/other），這樣「最常犯的
+// 錯因」統計才能跟她自己的文法錯題庫看到同一套分類；另外加兩個 EGIU 特有的
+// 情況（規則忘記/沒吃透），因為 Grammar in Use 涵蓋的文法範圍比那 4 類更廣
+// （時態、子句、被動、條件句…都會在 145 單元裡出現）。
 // ============================================================
 const IELTS_ERROR_CAUSES = {
   listening: [
@@ -270,6 +275,14 @@ const IELTS_ERROR_CAUSES = {
     { id: "r-vocab", label: "生字不懂" },
     { id: "r-time", label: "時間不夠沒寫完" },
     { id: "r-guess", label: "猜的（就算猜對也要記）" },
+  ],
+  grammar: [
+    { id: "g-tense", label: "過去式（時態判斷錯誤）" },
+    { id: "g-agree", label: "主詞動詞一致忘記檢查" },
+    { id: "g-prep", label: "介系詞固定搭配記錯" },
+    { id: "g-other", label: "其他文法規則" },
+    { id: "g-forgot", label: "規則忘記了，需要重新複習" },
+    { id: "g-unsure", label: "規則有印象但不確定怎麼用" },
   ],
 };
 
