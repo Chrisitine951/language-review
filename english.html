@@ -1375,46 +1375,26 @@ function checkTyping() {
 document.getElementById('typing-input').addEventListener('keydown', e => { if (e.key === 'Enter') checkTyping(); });
 
 // ============================================================
-// 不規則動詞三態（v2.2.2 新增，Christine 回饋：想紀錄＋主動回想練習）
+// 不規則動詞三態（v2.2.2 新增；v2.2.4 移除內建種子清單）
 //
-// 【設計比照德文動詞變化表】內建種子清單直接放這裡（不進 data.js），
-// 之後如果想從收集箱擴充更多不規則動詞，可以讓 ENGLISH_VOCABULARY 的單字
-// 帶 pastTense/pastParticiple 選填欄位，irregularVerbPool() 會自動把它們併入
-// 練習池——比照德文 conjugationPool()「存一個動詞、練習題自動長大」的做法。
-//
-// 【複習排程是獨立的一套，不跟一般單字的 7/14/30 天排程混用】
-// 這是 Christine 討論後選定的方式：隔天 → 3 天後 → 7 天後 各主動回想一次，
-// 三次都答對才算「已熟悉」（移出待複習清單，但仍留在總清單裡）；
-// 只要有一次想不起來，就退回隔天重測（不是整個歸零重來）。
+// 【v2.2.4 更新】原本這 14 個動詞是寫死在這裡當種子清單（比照德文動詞變化表
+// 的做法）。Christine 決定把它們正式搬進 data.js 的 ENGLISH_VOCABULARY（見
+// en262–en275，帶 pastTense/pastParticiple 欄位）後，這裡就不再需要重複一份
+// 種子清單了——同一份資料只留一個來源，之後要編輯/刪除這些動詞，直接透過
+// data.js 的整理流程即可，不用再回來改這支檔案。
+// irregularVerbPool() 現在單純讀 ENGLISH_VOCABULARY 裡帶 pastTense/pastParticiple
+// 欄位的單字（不管是這次搬進去的 14 個，或未來從收集箱新增的），邏輯不變。
 // ============================================================
-const ENGLISH_IRREGULAR_VERBS = [
-  { base: 'teach', pastTense: 'taught', pastParticiple: 'taught', meaning: '教導' },
-  { base: 'catch', pastTense: 'caught', pastParticiple: 'caught', meaning: '抓住、趕上' },
-  { base: 'buy', pastTense: 'bought', pastParticiple: 'bought', meaning: '購買' },
-  { base: 'think', pastTense: 'thought', pastParticiple: 'thought', meaning: '思考、認為' },
-  { base: 'fall', pastTense: 'fell', pastParticiple: 'fallen', meaning: '跌倒、落下' },
-  { base: 'throw', pastTense: 'threw', pastParticiple: 'thrown', meaning: '丟擲' },
-  { base: 'fly', pastTense: 'flew', pastParticiple: 'flown', meaning: '飛' },
-  { base: 'take', pastTense: 'took', pastParticiple: 'taken', meaning: '拿取、搭乘' },
-  { base: 'go', pastTense: 'went', pastParticiple: 'gone', meaning: '去' },
-  { base: 'sleep', pastTense: 'slept', pastParticiple: 'slept', meaning: '睡覺' },
-  { base: 'leave', pastTense: 'left', pastParticiple: 'left', meaning: '離開、留下' },
-  { base: 'spend', pastTense: 'spent', pastParticiple: 'spent', meaning: '花費（時間/金錢）' },
-  { base: 'hurt', pastTense: 'hurt', pastParticiple: 'hurt', meaning: '傷害、受傷' },
-  { base: 'cost', pastTense: 'cost', pastParticiple: 'cost', meaning: '花費（金錢）' },
-];
-// 練習池：內建清單 + 單字庫中帶 pastTense/pastParticiple 的動詞（未來收集箱擴充用），以 base 去重、內建優先
 function irregularVerbPool() {
-  const pool = ENGLISH_IRREGULAR_VERBS.map(v => ({ ...v }));
-  const seen = new Set(pool.map(v => v.base.toLowerCase()));
-  if (typeof ENGLISH_VOCABULARY !== 'undefined') {
-    ENGLISH_VOCABULARY.forEach(w => {
-      if (w.word && w.pastTense && w.pastParticiple && !seen.has(w.word.toLowerCase())) {
-        pool.push({ base: w.word, pastTense: w.pastTense, pastParticiple: w.pastParticiple, meaning: w.meaning || '' });
-        seen.add(w.word.toLowerCase());
-      }
-    });
-  }
+  if (typeof ENGLISH_VOCABULARY === 'undefined') return [];
+  const pool = [];
+  const seen = new Set();
+  ENGLISH_VOCABULARY.forEach(w => {
+    if (w.word && w.pastTense && w.pastParticiple && !seen.has(w.word.toLowerCase())) {
+      pool.push({ base: w.word, pastTense: w.pastTense, pastParticiple: w.pastParticiple, meaning: w.meaning || '' });
+      seen.add(w.word.toLowerCase());
+    }
+  });
   return pool;
 }
 // ---- 獨立的 1/3/7 天排程（不共用一般單字的 reviewSchedule）----
