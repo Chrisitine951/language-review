@@ -1,5 +1,5 @@
 {
-  "savedAt": 1784222076114,
+  "savedAt": 1785166217166,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -707,7 +707,78 @@
     }
   ],
   "inboxItems": [],
-  "planItems": [],
+  "planItems": [
+    {
+      "id": 1785166217166,
+      "week": "2026-07-27",
+      "skill": "reading",
+      "day": 0,
+      "text": "劍10 T1 P3 不限時＋拆解檢核",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785166217167,
+      "week": "2026-07-27",
+      "skill": "listening",
+      "day": 1,
+      "text": "劍10 T1 S3–S4 精聽訂正＋Shadowing",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785166217168,
+      "week": "2026-07-27",
+      "skill": "speaking",
+      "day": 2,
+      "text": "Cambly＋建立第1份核心語料（書／滑雪…）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785166217169,
+      "week": "2026-07-27",
+      "skill": "writing",
+      "day": 4,
+      "text": "Simon Task 1 結構：改寫題目＋Overview 寫法",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785166217170,
+      "week": "2026-07-27",
+      "skill": "reading",
+      "day": 5,
+      "text": "劍10 T2 P1 不限時",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785166217171,
+      "week": "2026-07-27",
+      "skill": "writing",
+      "day": 6,
+      "text": "Task 2 Discussion 模板＋每週回顧",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785166217172,
+      "week": "2026-07-27",
+      "skill": "material",
+      "day": 5,
+      "text": "EGIU Unit 10–18（週六複習）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    }
+  ],
   "practiceRecords": [
     {
       "id": 1784222073816.5935,
@@ -724,5 +795,10 @@
     }
   ],
   "breakdowns": [],
-  "essayRecords": []
+  "essayRecords": [],
+  "egiuDone": {},
+  "planImportedWeeks": [
+    "2026-07-27"
+  ],
+  "irregularSchedule": {}
 }
