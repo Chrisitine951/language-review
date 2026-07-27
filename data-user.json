@@ -2713,6 +2713,236 @@
       "category": "adjective",
       "example": "",
       "note": ""
+    },
+    {
+      "id": "udems3fwq3y1",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Kind",
+      "meaning": "孩子",
+      "category": "people",
+      "example": "Ich helfe keinen Kindern.",
+      "note": "複數為 die Kinder"
+    },
+    {
+      "id": "udems3fwq3y2",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Lehrer",
+      "meaning": "男老師",
+      "category": "people",
+      "example": "der Lehrer → die Lehrerin",
+      "note": "複數為 die Lehrer"
+    },
+    {
+      "id": "udems3fwq3y3",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Lehrerin",
+      "meaning": "女老師",
+      "category": "people",
+      "example": "die Lehrerin → die Lehrerinnen",
+      "note": "複數為 die Lehrerinnen"
+    },
+    {
+      "id": "udems3fwq3y4",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Student",
+      "meaning": "男大學生",
+      "category": "people",
+      "example": "der Student → die Studentin",
+      "note": "複數為 die Studenten"
+    },
+    {
+      "id": "udems3fwq3y5",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Studentin",
+      "meaning": "女大學生",
+      "category": "people",
+      "example": "die Studentin → die Studentinnen",
+      "note": "複數為 die Studentinnen"
+    },
+    {
+      "id": "udems3fwq3y6",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Arzt",
+      "meaning": "醫生",
+      "category": "people",
+      "example": "der Arzt → die Ärztin",
+      "note": "變音為 Ärztin / Ärzte"
+    },
+    {
+      "id": "udems3fwq3y7",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Ärztin",
+      "meaning": "女醫生",
+      "category": "people",
+      "example": "zum Arzt / zur Ärztin",
+      "note": ""
+    },
+    {
+      "id": "udems3fwq3y8",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Friseur",
+      "meaning": "男理髮師",
+      "category": "people",
+      "example": "zum Friseur",
+      "note": "複數為 die Friseure"
+    },
+    {
+      "id": "udems3fwq3y9",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Friseurin",
+      "meaning": "女理髮師",
+      "category": "people",
+      "example": "die Friseurin → die Friseurinnen",
+      "note": ""
+    },
+    {
+      "id": "udems3fwq3y10",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Freundschaft",
+      "meaning": "友誼",
+      "category": "other",
+      "example": "die Freundschaft",
+      "note": "-schaft 結尾的名詞通常為陰性"
+    },
+    {
+      "id": "udems3fwq3y11",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Mannschaft",
+      "meaning": "隊伍、球隊",
+      "category": "other",
+      "example": "die Mannschaft",
+      "note": ""
+    },
+    {
+      "id": "udems3fwq3y12",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Wissenschaft",
+      "meaning": "科學",
+      "category": "other",
+      "example": "die Wissenschaft",
+      "note": ""
+    },
+    {
+      "id": "udems3fwq3y13",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Gesellschaft",
+      "meaning": "社會、公司",
+      "category": "other",
+      "example": "die Gesellschaft",
+      "note": ""
+    },
+    {
+      "id": "udems3fwq3y14",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Wirtschaft",
+      "meaning": "經濟",
+      "category": "other",
+      "example": "die Wirtschaft",
+      "note": ""
+    },
+    {
+      "id": "udems3fwq3y15",
+      "article": "",
+      "pos": "動詞",
+      "word": "fahren",
+      "meaning": "搭車、行駛",
+      "category": "verb",
+      "example": "Wir fahren nach München.",
+      "note": "",
+      "conjugation": {
+        "ich": "fahre",
+        "du": "fährst",
+        "er/sie/es": "fährt",
+        "wir": "fahren",
+        "ihr": "fahrt",
+        "sie/Sie": "fahren"
+      }
+    },
+    {
+      "id": "udems3fwq3z16",
+      "article": "",
+      "pos": "動詞",
+      "word": "fliegen",
+      "meaning": "搭飛機",
+      "category": "verb",
+      "example": "Ich fliege.",
+      "note": "",
+      "conjugation": {
+        "ich": "fliege",
+        "du": "fliegst",
+        "er/sie/es": "fliegt",
+        "wir": "fliegen",
+        "ihr": "fliegt",
+        "sie/Sie": "fliegen"
+      }
+    },
+    {
+      "id": "udems3fwq3z17",
+      "article": "",
+      "pos": "動詞",
+      "word": "gehen",
+      "meaning": "走路、前往",
+      "category": "verb",
+      "example": "Ich gehe zu meiner Mutter.",
+      "note": "",
+      "conjugation": {
+        "ich": "gehe",
+        "du": "gehst",
+        "er/sie/es": "geht",
+        "wir": "gehen",
+        "ihr": "geht",
+        "sie/Sie": "gehen"
+      }
+    },
+    {
+      "id": "udems3fwq3z18",
+      "article": "",
+      "pos": "動詞",
+      "word": "helfen",
+      "meaning": "幫助",
+      "category": "verb",
+      "example": "Ich helfe keinen Kindern.",
+      "note": "換音動詞 (e->i)",
+      "conjugation": {
+        "ich": "helfe",
+        "du": "hilfst",
+        "er/sie/es": "hilft",
+        "wir": "helfen",
+        "ihr": "helft",
+        "sie/Sie": "helfen"
+      }
+    },
+    {
+      "id": "udems3fwq3z19",
+      "article": "",
+      "pos": "動詞",
+      "word": "wissen",
+      "meaning": "知道",
+      "category": "verb",
+      "example": "Ich weiß das.",
+      "note": "不規則變化動詞",
+      "conjugation": {
+        "ich": "weiße",
+        "du": "weißt",
+        "er/sie/es": "weiß",
+        "wir": "wissen",
+        "ihr": "wisst",
+        "sie/Sie": "wissen"
+      }
     }
   ],
   "englishGrammar": [
@@ -3311,6 +3541,46 @@
       "example": "Bekanntschaft machen",
       "explanation": "意思為「認識（某人）、結識」。",
       "mastered": false
+    },
+    {
+      "id": "uggms3fwq3z20",
+      "category": "vocab_pattern",
+      "rule": "kein 不是副詞也不是動詞，而是否定冠詞（Negativartikel），用來否定名詞。",
+      "example": "Nein, ich bin kein Student.",
+      "explanation": "kein 的變化類似 ein，但 ein 沒有複數形式，kein 則有複數形式。用來表示「沒有／不是任何一個」。",
+      "mastered": false
+    },
+    {
+      "id": "uggms3fwq3z21",
+      "category": "vocab_pattern",
+      "rule": "nicht 用來否定動詞、形容詞或整個句子。",
+      "example": "Nein, ich arbeite nicht.",
+      "explanation": "nicht 針對動作或狀態進行否定，位置通常放在句尾或被否定詞彙之前。",
+      "mastered": false
+    },
+    {
+      "id": "uggms3fwq3z22",
+      "category": "case_akkusativ",
+      "rule": "表示前往某地時，in＋Akkusativ 強調進入建築、場所或空間（ins = in das）。",
+      "example": "ins Kino, in die Schule, in den Park",
+      "explanation": "用於指向封閉空間或建築物內部。",
+      "mastered": false
+    },
+    {
+      "id": "uggms3fwq3z23",
+      "category": "case_dativ",
+      "rule": "表示前往某人、職業人士或服務場所時，使用 zu＋Dativ（zum = zu dem, zur = zu der）。",
+      "example": "zur Post, zum Friseur, zum Arzt",
+      "explanation": "用於前往特定人物或機構（非進入內部空間本身）。",
+      "mastered": false
+    },
+    {
+      "id": "uggms3fwq3z24",
+      "category": "vocab_pattern",
+      "rule": "以 -schaft 結尾的名詞通常都是陰性，冠詞使用 die。",
+      "example": "die Freundschaft, die Mannschaft",
+      "explanation": "-schaft 常表示群體、關係、狀態或領域。",
+      "mastered": false
     }
   ],
   "germanSentences": [
@@ -3681,6 +3951,142 @@
       "unitTitle": "收集箱新增",
       "german": "Wir fahren zum Arzt.",
       "chinese": "我們去看醫生。"
+    },
+    {
+      "id": "usms3fwq3z25",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Wie heißen Sie?",
+      "chinese": "您叫什麼名字？"
+    },
+    {
+      "id": "usms3fwq3z26",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Ich heiße ______.",
+      "chinese": "我叫＿＿＿＿。"
+    },
+    {
+      "id": "usms3fwq3z27",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Woher kommen Sie?",
+      "chinese": "您從哪裡來？"
+    },
+    {
+      "id": "usms3fwq3z28",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Ich komme aus Taiwan.",
+      "chinese": "我來自台灣。"
+    },
+    {
+      "id": "usms3fwq3z29",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Wo wohnen Sie?",
+      "chinese": "您住在哪裡？"
+    },
+    {
+      "id": "usms3fwq3z30",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Ich wohne in ______.",
+      "chinese": "我住在＿＿＿＿。"
+    },
+    {
+      "id": "usms3fwq3z31",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Sind Sie Student?",
+      "chinese": "您是學生嗎？"
+    },
+    {
+      "id": "usms3fwq3z32",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Ja, ich bin Student.",
+      "chinese": "是的，我是學生。"
+    },
+    {
+      "id": "usms3fwq3z33",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Nein, ich bin kein Student.",
+      "chinese": "不，我不是學生。"
+    },
+    {
+      "id": "usms3fwq3z34",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Ich bin jetzt kein Student mehr.",
+      "chinese": "我現在已經不是學生了。"
+    },
+    {
+      "id": "usms3fwq3z35",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "Woher／Wo／Wohin",
+      "german": "Wohin fahren Sie?",
+      "chinese": "您要去哪裡？"
+    },
+    {
+      "id": "usms3fwq3z36",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "Woher／Wo／Wohin",
+      "german": "Wir fahren nach München.",
+      "chinese": "我們要去慕尼黑。"
+    },
+    {
+      "id": "usms3fwq3z37",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "表示「前往某地」的介系詞",
+      "german": "Ich gehe zu meiner Mutter.",
+      "chinese": "我要去找我的母親。"
+    },
+    {
+      "id": "usms3fwq3z38",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "Ja／Nein 問句",
+      "german": "Arbeiten Sie?",
+      "chinese": "您有工作嗎？"
+    },
+    {
+      "id": "usms3fwq3z39",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "Ja／Nein 問句",
+      "german": "Ja, ich arbeite.",
+      "chinese": "有，我工作。"
+    },
+    {
+      "id": "usms3fwq3z40",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "Ja／Nein 問句",
+      "german": "Nein, ich arbeite nicht.",
+      "chinese": "沒有，我不工作。"
+    },
+    {
+      "id": "usms3fwq3z41",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "kein 格位變化",
+      "german": "Ich helfe keinen Kindern.",
+      "chinese": "我沒有幫助任何孩子。"
     }
   ],
   "wordRoots": [
