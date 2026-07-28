@@ -81,6 +81,7 @@
       <!-- 本週計畫表 -->
       <div class="section-header">
         <span class="section-title" id="plan-week-title">本週計畫</span>
+        <button class="section-action" onclick="resetWeekPlan()" style="color:var(--text3); margin-right:8px;">🔄 重置本週</button>
         <button class="section-action" onclick="openPlanEditor()">＋ 安排</button>
       </div>
       <div class="filter-row" id="plan-week-nav">
@@ -314,6 +315,21 @@
       <!-- 口說 -->
       <div id="ielts-sub-speaking" style="display:none;">
         <div id="method-speaking"></div>
+
+        <!-- 每週範例回答背誦/解析紀錄（v2.2.7 新增）：跟寫作那邊同一套邏輯，material 填題型或主題 -->
+        <div class="section-header"><span class="section-title">📚 每週範例回答背誦/解析紀錄</span></div>
+        <div class="diary-input-card">
+          <input class="record-input" id="sm-material" placeholder="範例回答主題（例：Part 2 - Describe a book）">
+          <input class="record-input" id="sm-date" type="date">
+          <textarea class="diary-textarea" id="sm-notes" style="min-height:70px;" placeholder="學到的句型、慣用語、心得…"></textarea>
+          <div class="diary-toolbar">
+            <button class="diary-submit" style="flex:1;" id="sm-save-btn" onclick="savePractice('speakingModel')">儲存紀錄</button>
+            <button class="diary-ai-btn" style="flex:0.6;" onclick="cancelEditPractice('speakingModel')">取消編輯</button>
+          </div>
+        </div>
+        <div id="sm-analysis"></div>
+        <div id="sm-list"></div>
+
         <div class="section-header">
           <span class="section-title">🔗 核心語料庫（串題用）</span>
           <button class="section-action" onclick="toggleEl('sn-form')">＋ 新增</button>
@@ -450,6 +466,21 @@
           <button class="lang-toggle-btn" id="wr-mode-vocab" onclick="setWriteMode('vocab')">📔 語料</button>
         </div>
 
+        <!-- 每週範文背誦/解析紀錄（v2.2.7 新增）：跟聽力/閱讀/文法同一套 practiceRecords，
+             不管切到批改/結構/語料哪個子分頁都看得到，因為這是每週固定的任務，不屬於任何一個子分頁 -->
+        <div class="section-header" style="margin-top:12px;"><span class="section-title">📚 每週範文背誦/解析紀錄</span></div>
+        <div class="diary-input-card">
+          <input class="record-input" id="wm-material" placeholder="範文名稱或主題（例：Task 2 Opinion 範文 - Education）">
+          <input class="record-input" id="wm-date" type="date">
+          <textarea class="diary-textarea" id="wm-notes" style="min-height:70px;" placeholder="學到的句型、詞彙、心得…"></textarea>
+          <div class="diary-toolbar">
+            <button class="diary-submit" style="flex:1;" id="wm-save-btn" onclick="savePractice('writingModel')">儲存紀錄</button>
+            <button class="diary-ai-btn" style="flex:0.6;" onclick="cancelEditPractice('writingModel')">取消編輯</button>
+          </div>
+        </div>
+        <div id="wm-analysis"></div>
+        <div id="wm-list"></div>
+
         <!-- AI 批改 -->
         <div id="wr-view-grade">
           <div class="section-header"><span class="section-title">作文批改（依 Simon 標準）</span></div>
@@ -505,6 +536,7 @@
 
       <div id="rec-sub-diary">
         <div class="section-header"><span class="section-title">今日英文日記</span></div>
+        <div id="diary-prompt-box"></div>
         <div id="diary-verb-hint"></div>
         <div class="diary-input-card">
           <textarea class="diary-textarea" id="diary-text" placeholder="用英文寫下今天發生的事… (3句以上)&#10;提示：試著用過去式！"></textarea>
@@ -667,6 +699,7 @@
             </div>
             <button class="settings-save-btn" onclick="saveSyncSettings()">儲存同步設定</button>
             <button class="settings-save-btn" style="background:var(--green);" onclick="pushProgress(true)">☁️ 立即同步</button>
+            <button class="settings-save-btn" style="background:var(--surface2); color:var(--text);" onclick="pullProgressManual()">⬇️ 從雲端拉最新進度</button>
             <div class="settings-item-sub" id="sync-status" style="margin-top:8px; text-align:center;">—</div>
           </div>
         </div>
@@ -972,6 +1005,37 @@ async function pushProgress(manual) {
     }
   } finally { syncing = false; }
 }
+// 手動「從雲端拉最新進度」——設定頁按鈕用。
+// 【為什麼需要這個】自動同步只有兩個時機會發生：① 存檔後 20 秒防抖上傳 ② App 啟動當下下載一次。
+// 中間沒有「App 開著時持續檢查雲端」這回事，所以裝置 A 存檔、裝置 B 沒有重新整理就切過去看，
+// 資料不會自動出現——這是 2026-07-28 使用者實際回報的情況，不是同步壞掉，只是缺一個手動觸發點。
+// 邏輯沿用跟 pullProgressOnStartup() 一樣的 last-write-wins 比對（雲端 savedAt 較新才覆蓋本機），
+// 不會因為手動按了就無條件蓋掉本機這幾秒內還沒同步上去的變動。
+async function pullProgressManual() {
+  const cfg = getGithubConfig();
+  if (!cfg.token || !cfg.owner || !cfg.repo) { showToast('請先到設定完成 GitHub 設定'); return; }
+  setSyncStatus('⬇️ 檢查雲端最新進度…');
+  const remote = await githubGetJson(progressPath());
+  if (remote.error) { setSyncStatus('❌ ' + remote.error); showToast('❌ 拉取失敗，請稍後再試'); return; }
+  if (!remote.exists || !remote.json) { setSyncStatus('雲端目前還沒有進度檔'); showToast('雲端目前沒有進度檔可拉取'); return; }
+  const localSavedAt = Number(localStorage.getItem('lren_savedat') || 0);
+  const remoteSavedAt = Number(remote.json.savedAt || 0);
+  if (remoteSavedAt > localSavedAt) {
+    applyProgressObject(remote.json);
+    localStorage.setItem('lren_savedat', String(remoteSavedAt));
+    setSyncStatus('⬇️ 已還原 ' + new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' }));
+    showToast('⬇️ 已拉取雲端最新進度');
+    // 重新渲染目前畫面，讓拉下來的資料立刻反映在畫面上，不用手動切頁再切回來
+    updateHome();
+    if (currentPage === 'grammar') initGrammar();
+    if (currentPage === 'ielts') initIelts();
+    if (currentPage === 'vocab') { buildDeck(); vocabMode === 'flip' ? renderFlashcard() : renderTyping(); }
+    if (currentPage === 'records') initRecords();
+  } else {
+    setSyncStatus('✅ 本機已經是最新的');
+    showToast('本機已經是最新進度，不用拉取');
+  }
+}
 async function pullProgressOnStartup() {
   if (!isAutoSyncOn()) return;
   const cfg = getGithubConfig();
@@ -1197,6 +1261,26 @@ function openPlanEditor() {
   planItems.push({ id: Date.now(), week: wk, skill: sk.id, day, text: text.trim(), done: false, score: '' });
   saveData(); renderPlan();
   showToast('✅ 已加入計畫');
+}
+
+// 重置本週：把這週目前的安排（不管是大表帶入的還是自己手動調過的）全部清掉，
+// 重新照 data-ielts.js 目前的 IELTS_STUDY_PLAN 帶入一次。
+// 【跟 autoImportWeekPlan 的差異】那個函式只在「還沒帶過」而且「不是過去週」時才會帶入；
+// 這裡是使用者主動按的，不管是過去週、本週還是未來週，也不管帶過沒帶過，一律強制重新帶入——
+// 這是設計上刻意放寬的例外，因為這是明確的手動動作，不是自動流程要避免的「一直重複灌資料」。
+function resetWeekPlan() {
+  const wk = weekKey(planWeekOffset);
+  const tpl = getWeekPlan(wk);
+  if (!tpl) { showToast('大表沒有這一週的範本可以重置'); return; }
+  if (!confirm(`確定要重置「${wk} 起」這一週嗎？\n這週目前的安排（包含你手動改過的內容）都會被清掉，換成大表目前最新的版本。`)) return;
+  planItems = planItems.filter(p => p.week !== wk);
+  planImportedWeeks = planImportedWeeks.filter(w => w !== wk);
+  tpl.items.forEach((it, i) => {
+    planItems.push({ id: Date.now() + i, week: wk, skill: it[0], day: it[1], text: it[2], done: false, score: '', fromPlan: true });
+  });
+  planImportedWeeks.push(wk);
+  saveData(); renderPlan();
+  showToast('✅ 已重置本週，換成最新的大表安排');
 }
 
 function updateHome() {
@@ -1602,6 +1686,69 @@ function renderDiaryVerbHint() {
 }
 
 // ============================================================
+// 日記每日題目（v2.2.7 新增）：從文法／口說／閱讀三個既有來源隨機出一個小題目，
+// 解決「日記不知道要寫什麼」的問題。同一天固定同一題（存 lren_diary_prompt），
+// 按 🔄 可以強制換一題。純本機邏輯，不呼叫 AI。
+// ============================================================
+function pickGrammarPrompt() {
+  if (typeof ENGLISH_GRAMMAR === 'undefined' || ENGLISH_GRAMMAR.length === 0) return null;
+  const g = ENGLISH_GRAMMAR[Math.floor(Math.random() * ENGLISH_GRAMMAR.length)];
+  return `📝 文法練習：試著用「${g.rule}」這個文法點寫 3 句日記（參考：${g.correct}）`;
+}
+function pickSpeakingPrompt() {
+  if (typeof SPEAKING_NOTES !== 'undefined' && SPEAKING_NOTES.length > 0) {
+    const n = SPEAKING_NOTES[Math.floor(Math.random() * SPEAKING_NOTES.length)];
+    return `🎙️ 口說語料：試著把你的核心答案「${n.core}」寫成 3 句日記`;
+  }
+  if (typeof IELTS_TOPIC_LIST !== 'undefined' && IELTS_TOPIC_LIST.length > 0) {
+    const t = IELTS_TOPIC_LIST[Math.floor(Math.random() * IELTS_TOPIC_LIST.length)];
+    return `🎙️ 口說主題：試著寫 3 句關於「${t}」的日記`;
+  }
+  return null;
+}
+function pickReadingPrompt() {
+  const readingRecs = (typeof practiceRecords !== 'undefined' ? practiceRecords : []).filter(r => r.skill === 'reading' && (r.material || r.notes));
+  if (readingRecs.length > 0) {
+    const r = readingRecs[Math.floor(Math.random() * readingRecs.length)];
+    return `📖 閱讀複習：想一下你在「${escHtml(r.material || '')}」練習到的內容，用 3 句話寫下心得或摘要`;
+  }
+  if (typeof breakdowns !== 'undefined' && breakdowns.length > 0) {
+    const withLesson = breakdowns.filter(b => b.keyLesson);
+    if (withLesson.length > 0) {
+      const b = withLesson[Math.floor(Math.random() * withLesson.length)];
+      return `📖 閱讀複習：回顧這個學習點——「${b.keyLesson}」，用 3 句話寫下你的想法`;
+    }
+  }
+  return null;
+}
+// 三個來源隨機挑一種，該來源沒資料就換下一種，全部沒資料就給通用題目（不會空白）
+function generateDiaryPrompt() {
+  const pickers = shuffle([pickGrammarPrompt, pickSpeakingPrompt, pickReadingPrompt]);
+  for (const fn of pickers) {
+    const p = fn();
+    if (p) return p;
+  }
+  return '📝 今天想寫什麼都可以，試著用 3 句英文記錄一下！';
+}
+// forceNew=true（按🔄按鈕）一定重新抽一題；平常同一天固定同一題，不會每次切頁就換題目
+function renderDiaryPrompt(forceNew) {
+  const el = document.getElementById('diary-prompt-box');
+  if (!el) return;
+  const today = new Date().toDateString();
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem('lren_diary_prompt') || 'null'); } catch(e) {}
+  let text;
+  if (!forceNew && saved && saved.date === today) {
+    text = saved.text;
+  } else {
+    text = generateDiaryPrompt();
+    try { localStorage.setItem('lren_diary_prompt', JSON.stringify({ date: today, text })); } catch(e) {}
+  }
+  el.innerHTML = `<div class="diary-verb-hint-box">${escHtml(text)}
+    <button class="speak-btn-inline" style="margin-left:6px;" onclick="renderDiaryPrompt(true)" title="換一題">🔄 換一題</button></div>`;
+}
+
+// ============================================================
 // EGIU 進度棋盤（v2.1.0）——English Grammar in Use 145 Units
 // 個人進度：存 lren_egiu、走 progress-en-<name>.json 同步，不進 data-user.json
 // egiuDone 格式：{ "37": "2026-07-21", ... }（單元號 → 完成日期）
@@ -1939,11 +2086,12 @@ function initIelts() {
   renderCauseChips('rp-causes', 'reading');
   fillBreakdownSelects();
   renderPracticeList('listening'); renderPracticeList('reading');
+  renderPracticeList('writingModel'); renderPracticeList('speakingModel');
   renderSpeakingNotes(); renderBreakdownList(); renderEssayList();
   initParaBank();
   renderRules(); renderStruct(); renderPhrases();
   const today = new Date().toISOString().split('T')[0];
-  ['lp-date','rp-date'].forEach(id => { const el = document.getElementById(id); if (el && !el.value) el.value = today; });
+  ['lp-date','rp-date','wm-date','sm-date'].forEach(id => { const el = document.getElementById(id); if (el && !el.value) el.value = today; });
 }
 // 拆解檢核的下拉選單：全部從 data-ielts.js 生成，之後規則有更新不用改這裡
 // （信號詞下拉用 optgroup 依七類分組，她不用背哪個字屬於哪類）
@@ -2032,7 +2180,11 @@ function selectStatusChip(el) {
   el.classList.add('selected');
 }
 // 練習紀錄的 skill → 表單欄位前綴對照（新增科目時只要加這裡一行）
-const PRACTICE_SKILL_PREFIX = { listening: 'lp', reading: 'rp', grammar: 'eg' };
+// 練習紀錄的 skill → 表單欄位前綴對照（新增科目時只要加這裡一行）
+// writingModel/speakingModel 是「每週背範文/範例回答」的紀錄，沒有錯因 chips
+// （不是錯題，是背誦進度），所以沒有對應的 #<prefix>-causes / #<prefix>-status 容器，
+// savePractice() 用 querySelectorAll 取值，容器不存在時自然回傳空陣列，不會報錯。
+const PRACTICE_SKILL_PREFIX = { listening: 'lp', reading: 'rp', grammar: 'eg', writingModel: 'wm', speakingModel: 'sm' };
 // 目前正在編輯中的紀錄 id（null＝目前是「新增」狀態，不是 null 就是「編輯既有紀錄」）
 let editingPracticeId = null;
 function savePractice(skill) {
@@ -2047,7 +2199,7 @@ function savePractice(skill) {
     id: wasEditing ? editingPracticeId : Date.now(), skill,
     date: document.getElementById(p + '-date').value || new Date().toISOString().split('T')[0],
     material,
-    score: document.getElementById(p + '-score').value,
+    score: document.getElementById(p + '-score')?.value || '',
     causes,
     status,
     notes: document.getElementById(p + '-notes').value.trim(),
@@ -2070,7 +2222,7 @@ function editPractice(el) {
   if (!rec) return;
   const p = PRACTICE_SKILL_PREFIX[rec.skill];
   document.getElementById(p + '-material').value = rec.material || '';
-  document.getElementById(p + '-score').value = rec.score || '';
+  const editScoreEl = document.getElementById(p + '-score'); if (editScoreEl) editScoreEl.value = rec.score || '';
   document.getElementById(p + '-date').value = rec.date || '';
   document.getElementById(p + '-notes').value = rec.notes || '';
   document.querySelectorAll(`#${p}-causes .error-cause-chip`).forEach(c => {
@@ -2140,9 +2292,10 @@ function renderPracticeList(skill) {
   const avg = scores.length ? (scores.reduce((a, b) => a + b, 0) / scores.length).toFixed(1) : '—';
   const recent = scores.slice(0, 3);
   const recentAvg = recent.length ? (recent.reduce((a, b) => a + b, 0) / recent.length).toFixed(1) : '—';
-  // 文法/EGIU 不是雅思分數科目，第三格顯示「已記錄次數」取代「目標」
-  const thirdLabel = skill === 'grammar' ? '已記錄次數' : '目標';
-  const thirdValue = skill === 'grammar' ? list.length : getTargetBand();
+  // 文法/EGIU、寫作/口說範文背誦都不是雅思分數科目，第三格顯示「已記錄次數」取代「目標」
+  const NON_BAND_SKILLS = ['grammar', 'writingModel', 'speakingModel'];
+  const thirdLabel = NON_BAND_SKILLS.includes(skill) ? '已記錄次數' : '目標';
+  const thirdValue = NON_BAND_SKILLS.includes(skill) ? list.length : getTargetBand();
   an.innerHTML = `<div class="card">
     <div style="display:flex; gap:16px; margin-bottom:10px;">
       <div><div class="ielts-record-score">${avg}</div><div class="ielts-record-meta">平均（${scores.length} 回）</div></div>
@@ -2906,6 +3059,7 @@ function answerParaphrase(btn, idx) {
 
 function initRecords() {
   renderDiaryList(); renderEngooList(); renderCamblyList(); renderInboxList(); renderDiaryVerbHint();
+  renderDiaryPrompt();
   const el = document.getElementById('engoo-date');
   if (el && !el.value) el.value = new Date().toISOString().split('T')[0];
 }
