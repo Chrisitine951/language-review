@@ -4141,6 +4141,32 @@
         }
       ],
       "ieltsTip": "這是一個在學術文章和聽力中常見的正式詞彙，了解其「禁止、宣告非法」的含義以及與 prescribe (規定、開藥) 的區別，對雅思閱讀和寫作非常重要。"
+    },
+    {
+      "id": "urtms4f5j3s",
+      "root": "gard / ward",
+      "type": "root",
+      "meaning": "看顧，守護，留意",
+      "note": "這個字根源於古法語 'garder'，在英語中常以 -ward 或 -guard 的形式出現。｜「re-」表示「回」，「ward」源自「看顧、留意」之意，加上「-ing」形成形容詞，表示某件事是「值得你付出努力去獲得回報的」，因此是有益處的。",
+      "examples": [
+        {
+          "word": "rewarding",
+          "meaning": "有益的，值得的，有報酬的",
+          "breakdown": "re- + ward + -ing"
+        },
+        {
+          "word": "regard",
+          "meaning": "看待，視為；尊重"
+        },
+        {
+          "word": "award",
+          "meaning": "授予，頒發；獎項"
+        },
+        {
+          "word": "warden",
+          "meaning": "監獄長，看守人"
+        }
+      ]
     }
   ],
   "task2Phrases": [
