@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785228874372,
+  "savedAt": 1785228928090,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -1031,6 +1031,19 @@
     }
   ],
   "practiceRecords": [
+    {
+      "id": 1785228928090,
+      "skill": "grammar",
+      "date": "2026-07-28",
+      "material": "Unit 6",
+      "score": "80",
+      "causes": [
+        "時態與動詞形式",
+        "語意判斷"
+      ],
+      "status": "記得規則，但不會判斷情境",
+      "notes": "主要問題是一般過去式與過去進行式容易對調。判斷時先找出「原本正在進行的背景」，使用 was／were + V-ing；後來插入或已完成的事件使用一般過去式。例如：I was cooking when the phone rang。不要只看動作長短，要看動作在句中的時間關係。另外需留意 hear → heard 等不規則動詞。"
+    },
     {
       "id": 1784787010554,
       "skill": "grammar",
