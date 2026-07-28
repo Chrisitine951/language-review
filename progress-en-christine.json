@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785228928090,
+  "savedAt": 1785229009730,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -785,13 +785,13 @@
     }
   },
   "grammarStats": {
-    "correct": 13,
-    "wrong": 8,
-    "total": 21
+    "correct": 15,
+    "wrong": 9,
+    "total": 24
   },
   "todayStats": {
     "flipped": 19,
-    "grammarPracticed": 0,
+    "grammarPracticed": 3,
     "date": "Tue Jul 28 2026"
   },
   "diaryEntries": [],
@@ -1032,6 +1032,22 @@
   ],
   "practiceRecords": [
     {
+      "id": 1785228966656,
+      "skill": "grammar",
+      "date": "2026-07-28",
+      "material": "Unit 7",
+      "score": "85",
+      "causes": [
+        "時態與動詞形式",
+        "助動詞與問句／否定句",
+        "主詞—動詞一致",
+        "單字用法與固定搭配",
+        "拼字與書寫疏漏"
+      ],
+      "status": "知道如何使用，但作答不穩定",
+      "notes": "現在完成式的基本概念已理解，即使題目未標示 Unit，也大多能正確判斷。主要需加強過去分詞，如 shrink–shrank–shrunk、come–came–come，以及 reply → replied。單數主詞使用 has，複數或 you 使用 have。沒有明確過去時間、並強調現在結果時，優先考慮 have／has + 過去分詞。just、already 放在過去分詞前，yet 通常放在問句或否定句句尾。"
+    },
+    {
       "id": 1785228928090,
       "skill": "grammar",
       "date": "2026-07-28",
@@ -1159,7 +1175,8 @@
     "3": "2026-07-21",
     "4": "2026-07-22",
     "5": "2026-07-23",
-    "6": "2026-07-28"
+    "6": "2026-07-28",
+    "7": "2026-07-28"
   },
   "planImportedWeeks": [
     "2026-08-03",
