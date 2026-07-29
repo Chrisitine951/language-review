@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785323856411,
+  "savedAt": 1785323929288,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -826,7 +826,148 @@
       "words": ""
     }
   ],
-  "inboxItems": [],
+  "inboxItems": [
+    {
+      "type": "en_vocab",
+      "word": "under-utilised",
+      "meaning": "未被充分利用",
+      "partOfSpeech": "adj.",
+      "example": "Some classroom resources remain under-utilised.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "wipe out",
+      "meaning": "徹底消除；摧毀",
+      "partOfSpeech": "phr.",
+      "example": "The reform appeared to wipe out the previous system.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "reinforce",
+      "meaning": "強化；加深某個想法或決定",
+      "partOfSpeech": "v.",
+      "example": "The interviewer focused on information that reinforced the initial decision.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "run counter to",
+      "meaning": "與……相違背；背道而馳",
+      "partOfSpeech": "phr.",
+      "example": "The finding runs counter to the traditional belief.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "be subject to",
+      "meaning": "受……約束、限制或影響",
+      "partOfSpeech": "phr.",
+      "example": "Informal learning is not subject to institutional timetables.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "fit in with",
+      "meaning": "適應；融入；與……相符",
+      "partOfSpeech": "phr.",
+      "example": "New employees need to fit in with the working environment.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "meet expectations",
+      "meaning": "達到期望",
+      "partOfSpeech": "phr.",
+      "example": "Some organisations fail to meet shareholders' expectations.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "under-utilised",
+      "meaning": "未被充分利用",
+      "partOfSpeech": "adj.",
+      "example": "Some classroom resources remain under-utilised.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "wipe out",
+      "meaning": "徹底消除；摧毀",
+      "partOfSpeech": "phr.",
+      "example": "The reform appeared to wipe out the previous system.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "reinforce",
+      "meaning": "強化；加深某個想法或決定",
+      "partOfSpeech": "v.",
+      "example": "The interviewer focused on information that reinforced the initial decision.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "run counter to",
+      "meaning": "與……相違背；背道而馳",
+      "partOfSpeech": "phr.",
+      "example": "The finding runs counter to the traditional belief.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "be subject to",
+      "meaning": "受……約束、限制或影響",
+      "partOfSpeech": "phr.",
+      "example": "Informal learning is not subject to institutional timetables.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "fit in with",
+      "meaning": "適應；融入；與……相符",
+      "partOfSpeech": "phr.",
+      "example": "New employees need to fit in with the working environment.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "meet expectations",
+      "meaning": "達到期望",
+      "partOfSpeech": "phr.",
+      "example": "Some organisations fail to meet shareholders' expectations.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    }
+  ],
   "planItems": [
     {
       "id": 1785219165676,
