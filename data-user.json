@@ -1249,6 +1249,62 @@
       "partOfSpeech": "phr.",
       "example": "Some organisations fail to meet shareholders' expectations.",
       "source": "other"
+    },
+    {
+      "id": "uenms5ztpit1",
+      "word": "go out of business",
+      "meaning": "倒閉；停止營業",
+      "partOfSpeech": "phrase",
+      "example": "Many small companies went out of business during the recession.",
+      "source": "other"
+    },
+    {
+      "id": "uenms5ztpit2",
+      "word": "result in",
+      "meaning": "導致；造成",
+      "partOfSpeech": "phrase",
+      "example": "Poor recruitment decisions may result in financial losses.",
+      "source": "other"
+    },
+    {
+      "id": "uenms5ztpit3",
+      "word": "a predictor of",
+      "meaning": "……的預測指標",
+      "partOfSpeech": "phrase",
+      "example": "An unstructured interview is a poor predictor of future job performance.",
+      "source": "other"
+    },
+    {
+      "id": "uenms5ztpit4",
+      "word": "fare little better than",
+      "meaning": "表現只比……好一點；兩者其實都不理想",
+      "partOfSpeech": "phrase",
+      "example": "The method fared little better than simple guesswork.",
+      "source": "other"
+    },
+    {
+      "id": "uenms5ztpit5",
+      "word": "invariably",
+      "meaning": "總是；一貫地",
+      "partOfSpeech": "adv.",
+      "example": "Work invariably takes place within a particular social environment.",
+      "source": "other"
+    },
+    {
+      "id": "uenms5ztpit6",
+      "word": "barely",
+      "meaning": "僅僅；幾乎不",
+      "partOfSpeech": "adv.",
+      "example": "Barely one in five people in the group was under 20.",
+      "source": "other"
+    },
+    {
+      "id": "uenms5ztpit7",
+      "word": "momentous",
+      "meaning": "重大的；具有深遠影響的",
+      "partOfSpeech": "adj.",
+      "example": "A momentous political change occurred during this period.",
+      "source": "other"
     }
   ],
   "germanVocabulary": [
