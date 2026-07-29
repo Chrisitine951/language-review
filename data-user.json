@@ -3621,6 +3621,76 @@
       "explanation": "after work 為固定用法，表示下班後。",
       "source": "ielts",
       "mastered": false
+    },
+    {
+      "id": "ugrms5zv3ny1",
+      "category": "other",
+      "rule": "irrespective of whether + 主詞 + 動詞",
+      "wrong": "Irrespective whether the method is formal or informal, the result remains the same.",
+      "correct": "Irrespective of whether the method is formal or informal, the result remains the same.",
+      "explanation": "irrespective 後方通常接 of；irrespective of whether 表示「不論是否……」。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrms5zv3ny2",
+      "category": "other",
+      "rule": "find it + 形容詞 + to V",
+      "wrong": "Some students find easier to understand classroom language.",
+      "correct": "Some students find it easier to understand classroom language.",
+      "explanation": "使用虛受詞 it 代替後方的 to understand classroom language。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrms5zv3ny3",
+      "category": "preposition",
+      "rule": "despite + 名詞或 V-ing",
+      "wrong": "Despite the product was expensive, it remained popular.",
+      "correct": "Despite its high price, the product remained popular.",
+      "explanation": "despite 後方不能直接接完整子句。若要接完整子句，可改用 although。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrms5zv3ny4",
+      "category": "other",
+      "rule": "one of the + 最高級 + 複數名詞",
+      "wrong": "Sydney Harbour is one of the largest port in the world.",
+      "correct": "Sydney Harbour is one of the largest ports in the world.",
+      "explanation": "one of the 後方表示「多個之中的一個」，因此名詞必須使用複數。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrms5zv3ny5",
+      "category": "other",
+      "rule": "has或have yet to + 原形動詞",
+      "wrong": "The government has yet introduced a ban.",
+      "correct": "The government has yet to introduce a ban.",
+      "explanation": "has yet to do 表示「尚未做某事」，yet 後方必須接 to 加原形動詞。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrms5zv3ny6",
+      "category": "subject_verb",
+      "rule": "neither A nor B 的動詞通常配合較接近的主詞",
+      "wrong": "Neither the managers nor the workers trusts the new system.",
+      "correct": "Neither the managers nor the workers trust the new system.",
+      "explanation": "最接近動詞的主詞 workers 是複數，因此使用 trust。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrms5zv3ny7",
+      "category": "preposition",
+      "rule": "be more similar to A than to B",
+      "wrong": "Classroom language is more similar with middle-class language than working-class language.",
+      "correct": "Classroom language is more similar to middle-class language than to working-class language.",
+      "explanation": "similar 通常搭配介系詞 to；完整比較可使用 more similar to A than to B。",
+      "source": "cambly",
+      "mastered": false
     }
   ],
   "germanGrammar": [
