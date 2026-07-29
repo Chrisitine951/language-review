@@ -1119,6 +1119,24 @@
       "source": "ielts",
       "pastTense": "cut",
       "pastParticiple": "cut"
+    },
+    {
+      "id": "uenms5za1801",
+      "word": "prevail",
+      "meaning": "盛行、戰勝",
+      "partOfSpeech": "v.",
+      "example": "",
+      "source": "ielts",
+      "pastTense": "prevailed",
+      "pastParticiple": "prevailed"
+    },
+    {
+      "id": "uenms5za1802",
+      "word": "momentous",
+      "meaning": "重大的、關鍵的",
+      "partOfSpeech": "adj.",
+      "example": "",
+      "source": "ielts"
     }
   ],
   "germanVocabulary": [
