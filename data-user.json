@@ -4600,6 +4600,103 @@
         "business",
         "environment"
       ]
+    },
+    {
+      "id": "uuparams5zya351",
+      "concept": "fit in with",
+      "expressions": [
+        {
+          "text": "adapt to",
+          "register": "neutral",
+          "note": "強調適應新的環境"
+        },
+        {
+          "text": "be compatible with",
+          "register": "formal",
+          "note": "強調與制度或環境相容"
+        }
+      ],
+      "original": "The individual has to fit in with the work environment.",
+      "speakingExample": "New employees need time to adapt to the workplace.",
+      "writingExample": "Applicants must be compatible with the organisation's working culture.",
+      "topics": [
+        "work",
+        "reading"
+      ]
+    },
+    {
+      "id": "uuparams5zya352",
+      "concept": "account for",
+      "expressions": [
+        {
+          "text": "explain",
+          "register": "neutral",
+          "note": "表示解釋某個現象"
+        },
+        {
+          "text": "be responsible for",
+          "register": "neutral",
+          "note": "表示造成某項結果"
+        },
+        {
+          "text": "contribute to",
+          "register": "formal",
+          "note": "表示是多個原因之一"
+        }
+      ],
+      "original": "This may partly account for the difference.",
+      "speakingExample": "This could explain why the results are different.",
+      "writingExample": "Several social factors may contribute to this trend.",
+      "topics": [
+        "academic",
+        "cause and effect"
+      ]
+    },
+    {
+      "id": "uuparams5zya353",
+      "concept": "barely one in five",
+      "expressions": [
+        {
+          "text": "only about one fifth",
+          "register": "neutral",
+          "note": "將比例改寫成分數"
+        },
+        {
+          "text": "just under 20 percent",
+          "register": "formal",
+          "note": "表示略低於百分之二十"
+        }
+      ],
+      "original": "Barely one in five people will be under 20.",
+      "speakingExample": "Only about one fifth of the group is under 20.",
+      "writingExample": "People under 20 are projected to account for just under 20 percent of the population.",
+      "topics": [
+        "numbers",
+        "trends"
+      ]
+    },
+    {
+      "id": "uuparams5zya354",
+      "concept": "more than one in four",
+      "expressions": [
+        {
+          "text": "over one quarter",
+          "register": "neutral",
+          "note": "將人數比例改寫成分數"
+        },
+        {
+          "text": "more than 25 percent",
+          "register": "neutral",
+          "note": "將比例改寫成百分比"
+        }
+      ],
+      "original": "More than one in four Europeans will be aged 60 or over.",
+      "speakingExample": "More than 25 percent of the population will be over 60.",
+      "writingExample": "People aged 60 or above are expected to represent over one quarter of the population.",
+      "topics": [
+        "numbers",
+        "population"
+      ]
     }
   ]
 }
