@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785323984947,
+  "savedAt": 1785324085667,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -826,78 +826,7 @@
       "words": ""
     }
   ],
-  "inboxItems": [
-    {
-      "type": "en_vocab",
-      "word": "go out of business",
-      "meaning": "倒閉；停止營業",
-      "partOfSpeech": "phrase",
-      "example": "Many small companies went out of business during the recession.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "result in",
-      "meaning": "導致；造成",
-      "partOfSpeech": "phrase",
-      "example": "Poor recruitment decisions may result in financial losses.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "a predictor of",
-      "meaning": "……的預測指標",
-      "partOfSpeech": "phrase",
-      "example": "An unstructured interview is a poor predictor of future job performance.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "fare little better than",
-      "meaning": "表現只比……好一點；兩者其實都不理想",
-      "partOfSpeech": "phrase",
-      "example": "The method fared little better than simple guesswork.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "invariably",
-      "meaning": "總是；一貫地",
-      "partOfSpeech": "adv.",
-      "example": "Work invariably takes place within a particular social environment.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "barely",
-      "meaning": "僅僅；幾乎不",
-      "partOfSpeech": "adv.",
-      "example": "Barely one in five people in the group was under 20.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "momentous",
-      "meaning": "重大的；具有深遠影響的",
-      "partOfSpeech": "adj.",
-      "example": "A momentous political change occurred during this period.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    }
-  ],
+  "inboxItems": [],
   "planItems": [
     {
       "id": 1785219165676,
