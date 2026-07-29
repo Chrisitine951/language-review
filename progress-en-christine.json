@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785323053733,
+  "savedAt": 1785323103051,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -826,55 +826,7 @@
       "words": ""
     }
   ],
-  "inboxItems": [
-    {
-      "type": "en_vocab",
-      "word": "prevail",
-      "meaning": "盛行、戰勝",
-      "partOfSpeech": "v.",
-      "example": "",
-      "source": "ielts",
-      "pastTense": "prevailed",
-      "pastParticiple": "prevailed"
-    },
-    {
-      "type": "en_vocab",
-      "word": "momentous",
-      "meaning": "重大的、關鍵的",
-      "partOfSpeech": "adj.",
-      "example": "",
-      "source": "ielts",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "practice",
-      "skill": "reading",
-      "material": "平行閱讀法 TRUE/FALSE/NOT GIVEN 練習一",
-      "date": "2026-07-29",
-      "score": "7/8",
-      "causes": "定位能力已具備，基本判斷方法已理解",
-      "notes": "表現最好，正確率 87.5%，耗時 17 分鐘"
-    },
-    {
-      "type": "practice",
-      "skill": "reading",
-      "material": "平行閱讀法 TRUE/FALSE/NOT GIVEN 練習三",
-      "date": "2026-07-29",
-      "score": "4/8",
-      "causes": "主題為英國政治史，包含較多陌生單字、人物與複雜句",
-      "notes": "正確率 50%，未記錄時間"
-    },
-    {
-      "type": "practice",
-      "skill": "reading",
-      "material": "平行閱讀法 TRUE/FALSE/NOT GIVEN 練習四",
-      "date": "2026-07-29",
-      "score": "5/7",
-      "causes": "速度比練習一快但出現較多判斷錯誤，語意比對不穩定",
-      "notes": "正確率 71.4%，耗時 15 分鐘"
-    }
-  ],
+  "inboxItems": [],
   "planItems": [
     {
       "id": 1785219165676,
@@ -1078,6 +1030,42 @@
     }
   ],
   "practiceRecords": [
+    {
+      "id": 1785323100139.1084,
+      "skill": "reading",
+      "date": "2026-07-29",
+      "material": "平行閱讀法 TRUE/FALSE/NOT GIVEN 練習四",
+      "score": "5/7",
+      "causes": [
+        "速度比練習一快但出現較多判斷錯誤",
+        "語意比對不穩定"
+      ],
+      "notes": "正確率 71.4%，耗時 15 分鐘"
+    },
+    {
+      "id": 1785323100139.9702,
+      "skill": "reading",
+      "date": "2026-07-29",
+      "material": "平行閱讀法 TRUE/FALSE/NOT GIVEN 練習三",
+      "score": "4/8",
+      "causes": [
+        "主題為英國政治史",
+        "包含較多陌生單字、人物與複雜句"
+      ],
+      "notes": "正確率 50%，未記錄時間"
+    },
+    {
+      "id": 1785323100138.4285,
+      "skill": "reading",
+      "date": "2026-07-29",
+      "material": "平行閱讀法 TRUE/FALSE/NOT GIVEN 練習一",
+      "score": "7/8",
+      "causes": [
+        "定位能力已具備",
+        "基本判斷方法已理解"
+      ],
+      "notes": "表現最好，正確率 87.5%，耗時 17 分鐘"
+    },
     {
       "id": 1785228966656,
       "skill": "grammar",
