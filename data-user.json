@@ -4251,6 +4251,116 @@
       "explanation": "similar 通常搭配介系詞 to；完整比較可使用 more similar to A than to B。",
       "source": "cambly",
       "mastered": false
+    },
+    {
+      "id": "ugrmsd32nbl1",
+      "category": "other",
+      "rule": "現在完成進行式（活動跡象）",
+      "wrong": "Have you worked hard?",
+      "correct": "Have you been working hard?",
+      "explanation": "You look tired 表示現在看起來很累，重點是之前持續工作的活動及其造成的現在結果。",
+      "source": "other",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd32nbl2",
+      "category": "other",
+      "rule": "現在完成進行式（過程強調）",
+      "wrong": "You look as if you have cried.",
+      "correct": "You look as if you have been crying.",
+      "explanation": "句子從現在的外表推測對方之前一直在哭，重點是活動過程，而不是哭這件事是否完成。",
+      "source": "other",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd32nbl3",
+      "category": "other",
+      "rule": "現在完成式（has gone 用法）",
+      "wrong": "Where has Lisa been going?",
+      "correct": "Where has Lisa gone?",
+      "explanation": "has gone 表示 Lisa 已經去了某處，目前不在這裡；has been going 則表示她最近一直往某處去，意思不同。",
+      "source": "other",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd32nbl4",
+      "category": "other",
+      "rule": "狀態動詞（have 擁有）",
+      "wrong": "I have been having this book since I was a child.",
+      "correct": "I have had this book since I was a child.",
+      "explanation": "have 在此表示擁有。即使有 since，仍應使用現在完成式，而不是現在完成進行式。",
+      "source": "other",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd32nbl5",
+      "category": "other",
+      "rule": "副詞用法（ever 的使用時機）",
+      "wrong": "Have you ever seen my phone?",
+      "correct": "Have you seen my phone?",
+      "explanation": "ever 表示人生經驗中的「曾經」。尋找眼前遺失的特定手機時，只需要問對方是否看見過它。",
+      "source": "other",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd32nbl6",
+      "category": "other",
+      "rule": "現在完成進行式",
+      "wrong": "I have read the book, but I haven’t finished it yet.",
+      "correct": "I have been reading the book, but I haven’t finished it yet.",
+      "explanation": "尚未讀完，因此重點是持續進行的閱讀活動，應使用 have been reading。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd32nbl7",
+      "category": "other",
+      "rule": "現在完成式",
+      "wrong": "I have been reading the book, so you can have it back now.",
+      "correct": "I have read the book, so you can have it back now.",
+      "explanation": "書現在可以歸還，表示已經讀完，重點是完成結果，因此使用 have read。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd32nbl8",
+      "category": "other",
+      "rule": "一般現在式與現在完成式",
+      "wrong": "She has been married to a German guy.",
+      "correct": "She is married to a German guy.",
+      "explanation": "題目只問 Amy 現在是否已婚，沒有強調結婚多久，因此使用 is married。若有時間長度，才可說 She has been married for ten years。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd32nbl9",
+      "category": "other",
+      "rule": "一般現在式與現在完成式",
+      "wrong": "He has lived in Milan.",
+      "correct": "He lives in Milan.",
+      "explanation": "句子只是在補充 Martin 現在住在米蘭。若要使用 has lived，通常需要 for 或 since 等時間資訊。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd32nbl10",
+      "category": "other",
+      "rule": "動詞形式與固定搭配",
+      "wrong": "I haven’t went to the cinema for ages.",
+      "correct": "I haven’t been to the cinema for ages.",
+      "explanation": "went 是一般過去式，不能放在 have 後面。haven’t been to 表示已經很久沒有去過某地。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd32nbl11",
+      "category": "other",
+      "rule": "現在完成式",
+      "wrong": "Have you always been living in Chicago?",
+      "correct": "Have you always lived in Chicago?",
+      "explanation": "always 強調整段期間一貫不變的狀態，課本通常使用現在完成式 have always lived。",
+      "source": "ielts",
+      "mastered": false
     }
   ],
   "germanGrammar": [
