@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785748300699,
+  "savedAt": 1785748355728,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -715,6 +715,24 @@
       "score": "3/7 (43%)",
       "causes": "沒有先概括整段主旨，直接從選項尋找相同單字，被原文同字、段首資訊與局部細節干擾",
       "notes": "先用中文寫出段落摘要，再判斷哪個標題能涵蓋整段內容"
+    },
+    {
+      "type": "practice",
+      "skill": "reading",
+      "material": "練習二 What Is a Dinosaur? (List of Headings)",
+      "date": "2026-08-03",
+      "score": "6/7 (86%)",
+      "causes": "把段落中的骨骼細節誤認為整段主旨",
+      "notes": "已能分辨分類型、總分型段落與相近主題，整體表現明顯進步。下次注意確認標題能否涵蓋整段，而不是只符合其中一句或一個名詞。"
+    },
+    {
+      "type": "practice",
+      "skill": "reading",
+      "material": "The Introduction of SATs Paragraph B",
+      "date": "2026-08-03",
+      "score": "",
+      "causes": "只注意到表面好處，忽略轉折語 but in fact 後方的真實立場",
+      "notes": "轉折前通常是舊觀點或表面說法，轉折後才是作者真正要表達的立場"
     }
   ],
   "planItems": [
