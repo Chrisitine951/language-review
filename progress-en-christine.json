@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785752657931,
+  "savedAt": 1785752754991,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -919,6 +919,8 @@
   "breakdowns": [],
   "essayRecords": [],
   "egiuDone": {
+    "8": "2026-08-03",
+    "9": "2026-08-03",
     "10": "2026-08-03",
     "11": "2026-08-03"
   },
