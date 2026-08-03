@@ -32,7 +32,7 @@
       "words": ""
     }
   ],
-  "savedAt": 1785169346777,
+  "savedAt": 1785747798282,
   "username": "christine",
   "app": "german",
   "reviewSchedule": {},
@@ -44,5 +44,61 @@
     "deFlipped": 0,
     "grammarPracticed": 0
   },
-  "inboxItems": []
+  "inboxItems": [
+    {
+      "type": "de_vocab",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Krankenhaus",
+      "meaning": "醫院",
+      "category": "places",
+      "example": "Ich gehe ins Krankenhaus.",
+      "note": "德文複合名詞最後一個名詞決定詞性，因此 Krankenhaus 是 das。",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Fernsehen",
+      "meaning": "電視、電視節目",
+      "category": "objects",
+      "example": "Ich sehe gern fern.",
+      "note": "字面意思就是「遠距離觀看」。",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Handschuh",
+      "meaning": "手套",
+      "category": "objects",
+      "example": "Ich brauche Handschuhe.",
+      "note": "複數：die Handschuhe。德文很多名詞都可以利用拆字理解。",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Maschinenbau",
+      "meaning": "機械工程",
+      "category": "other",
+      "example": "Ich studiere Maschinenbau.",
+      "note": "",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Hausmann",
+      "meaning": "家庭主夫",
+      "category": "people",
+      "example": "Er ist Hausmann.",
+      "note": "",
+      "conjugation": ""
+    }
+  ]
 }
