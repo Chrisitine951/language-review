@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785753182514,
+  "savedAt": 1785753250959,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -706,35 +706,7 @@
       "words": ""
     }
   ],
-  "inboxItems": [
-    {
-      "type": "en_grammar",
-      "category": "past_tense",
-      "rule": "過去式使用不穩定",
-      "wrong": "",
-      "correct": "",
-      "explanation": "在口說中敘述過去發生的事情時，過去式的時態維持不穩定，需加強練習。",
-      "source": "cambly"
-    },
-    {
-      "type": "en_grammar",
-      "category": "subject_verb",
-      "rule": "主詞動詞一致性",
-      "wrong": "",
-      "correct": "",
-      "explanation": "主詞與動詞在單複數上常出現不一致的情況。",
-      "source": "cambly"
-    },
-    {
-      "type": "en_grammar",
-      "category": "other",
-      "rule": "冠詞及單複數",
-      "wrong": "",
-      "correct": "",
-      "explanation": "名詞的冠詞（a/an/the）使用以及單複數變化不夠穩定。",
-      "source": "cambly"
-    }
-  ],
+  "inboxItems": [],
   "planItems": [
     {
       "id": 1785166217166,
