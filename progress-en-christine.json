@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785753491835,
+  "savedAt": 1785753545426,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -706,17 +706,7 @@
       "words": ""
     }
   ],
-  "inboxItems": [
-    {
-      "type": "practice",
-      "skill": "listening",
-      "material": "Cambly IELTS Speaking 模擬口試 Part 1、Part 2、Part 3",
-      "date": "2026-08-03",
-      "score": "",
-      "causes": "過度注意是否使用艱深或精確的單字造成停頓、過去式不穩定、主詞動詞一致不穩定、冠詞及單複數不穩定、經常直接重複題目用字、Part 3 偶爾沒有回答問題真正詢問的內容",
-      "notes": "口說不是知識測驗，應先用簡單自然的英文直接回答，再補充原因、細節或例子。Part 1 使用直接回答加一個延伸；Part 2 先確認時態與故事主線；Part 3 使用 Answer－Reason－Example－Close。不要為了高級單字犧牲流暢度，每週熟練 3～5 個能自然用於自身經驗的 phrasal verbs。"
-    }
-  ],
+  "inboxItems": [],
   "planItems": [
     {
       "id": 1785166217166,
@@ -861,6 +851,17 @@
   ],
   "practiceRecords": [
     {
+      "id": 1785753527906.7178,
+      "skill": "listening",
+      "date": "2026-08-03",
+      "material": "Cambly IELTS Speaking 模擬口試 Part 1、Part 2、Part 3",
+      "score": "",
+      "causes": [
+        "過度注意是否使用艱深或精確的單字造成停頓、過去式不穩定、主詞動詞一致不穩定、冠詞及單複數不穩定、經常直接重複題目用字、Part 3 偶爾沒有回答問題真正詢問的內容"
+      ],
+      "notes": "口說不是知識測驗，應先用簡單自然的英文直接回答，再補充原因、細節或例子。Part 1 使用直接回答加一個延伸；Part 2 先確認時態與故事主線；Part 3 使用 Answer－Reason－Example－Close。不要為了高級單字犧牲流暢度，每週熟練 3～5 個能自然用於自身經驗的 phrasal verbs。"
+    },
+    {
       "id": 1785752866608,
       "skill": "grammar",
       "date": "2026-07-29",
@@ -960,7 +961,8 @@
     "8": "2026-08-03",
     "9": "2026-08-03",
     "10": "2026-08-03",
-    "11": "2026-08-03"
+    "11": "2026-08-03",
+    "12": "2026-08-03"
   },
   "planImportedWeeks": [
     "2026-07-27",
