@@ -32,7 +32,7 @@
       "words": ""
     }
   ],
-  "savedAt": 1785747932290,
+  "savedAt": 1785747952580,
   "username": "christine",
   "app": "german",
   "reviewSchedule": {},
@@ -213,6 +213,116 @@
       "rule": "字尾 -ist",
       "example": "Gitarrist, Journalist, Tourist, Spezialist",
       "explanation": "表示從事某種職業或身份的人，看到 -ist 很多都是「某一類的人」。"
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Bahnhof",
+      "meaning": "火車站",
+      "category": "places",
+      "example": "",
+      "note": "",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Straßenbahn",
+      "meaning": "電車",
+      "category": "places",
+      "example": "",
+      "note": "由 Straße + Bahn 組成",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "U-Bahn",
+      "meaning": "地鐵",
+      "category": "places",
+      "example": "",
+      "note": "",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Hauptbahnhof",
+      "meaning": "主要火車站",
+      "category": "places",
+      "example": "",
+      "note": "縮寫為 Hbf.，Haupt意為主要、最大的",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "",
+      "pos": "複數名詞",
+      "word": "Bahnhöfe",
+      "meaning": "火車站（複數）",
+      "category": "places",
+      "example": "",
+      "note": "der Bahnhof 的複數形",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Studium",
+      "meaning": "大學學業",
+      "category": "other",
+      "example": "",
+      "note": "",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "",
+      "pos": "動詞",
+      "word": "studieren",
+      "meaning": "就讀、主修",
+      "category": "verb",
+      "example": "",
+      "note": "",
+      "conjugation": "studiere, studierst, studiert, studieren, studiert, studieren"
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Studienplatz",
+      "meaning": "大學名額",
+      "category": "other",
+      "example": "",
+      "note": "",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Studiengang",
+      "meaning": "科系",
+      "category": "other",
+      "example": "",
+      "note": "",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Studienzeit",
+      "meaning": "求學期間",
+      "category": "time",
+      "example": "",
+      "note": "",
+      "conjugation": ""
     }
   ]
 }
