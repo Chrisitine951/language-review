@@ -32,7 +32,7 @@
       "words": ""
     }
   ],
-  "savedAt": 1785747816703,
+  "savedAt": 1785747932290,
   "username": "christine",
   "app": "german",
   "reviewSchedule": {},
@@ -44,5 +44,175 @@
     "deFlipped": 0,
     "grammarPracticed": 0
   },
-  "inboxItems": []
+  "inboxItems": [
+    {
+      "type": "de_vocab",
+      "article": "",
+      "pos": "動詞",
+      "word": "verkaufen",
+      "meaning": "販賣、出售",
+      "category": "verb",
+      "example": "Ich verkaufe mein Auto.",
+      "note": "",
+      "conjugation": "verkaufe, verkaufst, verkauft, verkaufen, verkauft, verkaufen"
+    },
+    {
+      "type": "de_vocab",
+      "article": "",
+      "pos": "動詞",
+      "word": "lehren",
+      "meaning": "教導、傳授",
+      "category": "verb",
+      "example": "Er lehrt an der Universität.",
+      "note": "偏正式，除了教授知識，也可表示教導人生觀、價值觀。",
+      "conjugation": "lehre, lehrst, lehrt, lehren, lehrt, lehren"
+    },
+    {
+      "type": "de_vocab",
+      "article": "",
+      "pos": "動詞",
+      "word": "unterrichten",
+      "meaning": "授課、教課",
+      "category": "verb",
+      "example": "Ich unterrichte Deutsch.",
+      "note": "較口語，通常表示實際授課，比 lehren 更常用。",
+      "conjugation": "unterrichte, unterrichtest, unterrichtet, unterrichten, unterrichtet, unterrichten"
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Arbeiter",
+      "meaning": "工人",
+      "category": "people",
+      "example": "Er ist Arbeiter.",
+      "note": "",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Polizei",
+      "meaning": "警察機關、警方",
+      "category": "people",
+      "example": "Die Polizei kommt.",
+      "note": "不是指單一警察，而是整個警察機關。",
+      "conjugation": ""
+    },
+    {
+      "type": "de_sentence",
+      "german": "Ich verkaufe mein Auto.",
+      "chinese": "我賣掉我的車。",
+      "unitTitle": "德文單字 6"
+    },
+    {
+      "type": "de_sentence",
+      "german": "Er lehrt an der Universität.",
+      "chinese": "他在大學任教。",
+      "unitTitle": "德文單字 7"
+    },
+    {
+      "type": "de_sentence",
+      "german": "Ich unterrichte Deutsch.",
+      "chinese": "我教德文。",
+      "unitTitle": "德文單字 8"
+    },
+    {
+      "type": "de_sentence",
+      "german": "Er ist Arbeiter.",
+      "chinese": "他是工人。",
+      "unitTitle": "德文單字 9"
+    },
+    {
+      "type": "de_sentence",
+      "german": "Die Polizei kommt.",
+      "chinese": "警方來了。",
+      "unitTitle": "德文單字 10"
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Gitarrist",
+      "meaning": "吉他手",
+      "category": "people",
+      "example": "",
+      "note": "表示從事某種職業或身份的人",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Journalist",
+      "meaning": "記者",
+      "category": "people",
+      "example": "",
+      "note": "表示從事某種職業或身份的人",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Tourist",
+      "meaning": "遊客",
+      "category": "people",
+      "example": "",
+      "note": "表示從事某種職業或身份的人",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Spezialist",
+      "meaning": "專家",
+      "category": "people",
+      "example": "",
+      "note": "表示從事某種職業或身份的人",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "",
+      "pos": "形容詞",
+      "word": "Japanisch",
+      "meaning": "日文",
+      "category": "other",
+      "example": "",
+      "note": "",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "",
+      "pos": "形容詞",
+      "word": "Koreanisch",
+      "meaning": "韓文",
+      "category": "other",
+      "example": "",
+      "note": "",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "",
+      "pos": "形容詞",
+      "word": "Französisch",
+      "meaning": "法文",
+      "category": "other",
+      "example": "",
+      "note": "",
+      "conjugation": ""
+    },
+    {
+      "type": "de_grammar",
+      "category": "vocab_pattern",
+      "rule": "字尾 -ist",
+      "example": "Gitarrist, Journalist, Tourist, Spezialist",
+      "explanation": "表示從事某種職業或身份的人，看到 -ist 很多都是「某一類的人」。"
+    }
+  ]
 }
