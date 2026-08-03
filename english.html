@@ -940,6 +940,58 @@ async function manualMigrate() {
 // ============================================================
 function progressPath() { return 'progress-en-' + getUsername() + '.json'; }
 function isAutoSyncOn() { return localStorage.getItem('lr_autosync') !== '0'; }
+
+// ============================================================
+// 【v2.2.9 修正：跨裝置互相洗掉紀錄】
+// 舊行為：同步是純 last-write-wins，推送時把「本機這一份」整包蓋掉雲端。
+//   實際災情（2026-07-28 使用者回報）：手機填了文法練習紀錄並推上雲端 → 電腦開 App
+//   （記憶體裡是還沒有那些紀錄的舊資料）→ 在電腦點了任何東西就觸發存檔、savedAt 變新
+//   → 20 秒後整包推上去，把手機剛存的紀錄洗掉。只要兩台裝置交替使用就會一直發生。
+// 新行為：對「純累積型的紀錄陣列」改成以 id 聯集合併，推送前先把雲端有、本機沒有的補回來，
+//   拉取時也用合併而不是取代。這樣兩台裝置各自新增的紀錄都會保留。
+//
+// ⚠️ 為什麼不是所有欄位都合併：
+//   - planItems 不合併：使用者刪掉計畫項目是刻意動作，DESIGN.md 明訂「刪掉的項目不會自己
+//     長回來」。聯集會讓刪掉的項目復活，違反既有設計決策。
+//   - inboxItems 不合併：那是「待確認」的暫存區，存進資料庫後就該清空，合併會讓已處理的
+//     項目跑回來。
+//   - reviewSchedule / irregularSchedule / egiuDone 不合併：它們是狀態（現在排到第幾階段、
+//     哪天複習）不是紀錄，合併語意不明（兩台都複習過同一個字要取哪一份？），維持
+//     last-write-wins。單人多裝置下影響有限，真的出問題再處理。
+// ⚠️ 合併的取捨：在 A 裝置刪掉一筆紀錄後，若 B 裝置還留著舊的副本，那筆會被合併回來。
+//   相較於「整包洗掉別台的紀錄」，這個代價可接受得多——重複出現看得見，資料消失看不見。
+// ============================================================
+const MERGED_RECORD_KEYS = ['practiceRecords', 'breakdowns', 'essayRecords', 'diaryEntries', 'engooRecords'];
+// 以 id 聯集兩個紀錄陣列；同 id 時以 primary（通常是本機這份，代表使用者最近的編輯）為準
+function mergeRecordArrays(primary, secondary) {
+  if (!Array.isArray(primary)) primary = [];
+  if (!Array.isArray(secondary)) secondary = [];
+  const out = [...primary];
+  const seen = new Set(primary.map(r => String(r && r.id)));
+  secondary.forEach(r => {
+    if (!r || r.id === undefined) return;
+    if (!seen.has(String(r.id))) { out.push(r); seen.add(String(r.id)); }
+  });
+  return out;
+}
+// 推送前呼叫：把雲端有、本機沒有的紀錄先補進本機記憶體，這樣送上去的那份不會漏掉別台的東西
+function absorbRemoteRecords(remoteJson) {
+  if (!remoteJson) return 0;
+  let added = 0;
+  const before = {
+    practiceRecords: practiceRecords.length, breakdowns: breakdowns.length,
+    essayRecords: essayRecords.length, diaryEntries: diaryEntries.length, engooRecords: engooRecords.length,
+  };
+  practiceRecords = mergeRecordArrays(practiceRecords, remoteJson.practiceRecords);
+  breakdowns = mergeRecordArrays(breakdowns, remoteJson.breakdowns);
+  essayRecords = mergeRecordArrays(essayRecords, remoteJson.essayRecords);
+  diaryEntries = mergeRecordArrays(diaryEntries, remoteJson.diaryEntries);
+  engooRecords = mergeRecordArrays(engooRecords, remoteJson.engooRecords);
+  added = (practiceRecords.length - before.practiceRecords) + (breakdowns.length - before.breakdowns)
+        + (essayRecords.length - before.essayRecords) + (diaryEntries.length - before.diaryEntries)
+        + (engooRecords.length - before.engooRecords);
+  return added;
+}
 function buildProgressObject() {
   return {
     savedAt: Number(localStorage.getItem('lren_savedat') || 0),
@@ -955,13 +1007,16 @@ function applyProgressObject(p) {
   if (p.irregularSchedule && typeof p.irregularSchedule === 'object') irregularSchedule = p.irregularSchedule;
   if (p.grammarStats) grammarStats = p.grammarStats;
   if (p.todayStats && p.todayStats.date === new Date().toDateString()) todayStats = p.todayStats;
-  if (Array.isArray(p.diaryEntries)) diaryEntries = p.diaryEntries;
-  if (Array.isArray(p.engooRecords)) engooRecords = p.engooRecords;
+  // 紀錄類陣列一律「合併」不取代——雲端比較新不代表本機這幾筆就該被丟掉
+  // （這裡以雲端為 primary：拉取的情境下雲端那份是別台剛存的、比較完整）
+  diaryEntries = mergeRecordArrays(p.diaryEntries, diaryEntries);
+  engooRecords = mergeRecordArrays(p.engooRecords, engooRecords);
+  practiceRecords = mergeRecordArrays(p.practiceRecords, practiceRecords);
+  breakdowns = mergeRecordArrays(p.breakdowns, breakdowns);
+  essayRecords = mergeRecordArrays(p.essayRecords, essayRecords);
+  // 以下維持取代（理由見上方註解）
   if (Array.isArray(p.inboxItems)) inboxItems = p.inboxItems;
   if (Array.isArray(p.planItems)) planItems = p.planItems;
-  if (Array.isArray(p.practiceRecords)) practiceRecords = p.practiceRecords;
-  if (Array.isArray(p.breakdowns)) breakdowns = p.breakdowns;
-  if (Array.isArray(p.essayRecords)) essayRecords = p.essayRecords;
   if (p.egiuDone && typeof p.egiuDone === 'object') egiuDone = p.egiuDone;
   if (Array.isArray(p.planImportedWeeks)) planImportedWeeks = p.planImportedWeeks;
   saveData();
@@ -987,6 +1042,15 @@ async function pushProgress(manual) {
     for (let attempt = 0; attempt < 3; attempt++) {
       const remote = await githubGetJson(progressPath());
       if (remote.error && remote.error !== '未設定') { lastError = remote.error; break; }
+      // 【關鍵】推送前先把雲端有、本機沒有的紀錄吸收進來，再送出這一份。
+      // 少了這一步就是整包覆蓋，會洗掉別台裝置剛存的紀錄（v2.2.9 修的災情）。
+      // 放在重試迴圈「內」是刻意的：409 重試時雲端可能又被別台改過，每次都要重新吸收一次。
+      const absorbed = absorbRemoteRecords(remote.json);
+      if (absorbed > 0) {
+        saveData(); // 讓吸收回來的紀錄也寫進本機，畫面重整後不會又不見
+        renderPracticeList('listening'); renderPracticeList('reading'); renderPracticeList('grammar');
+        renderPracticeList('writingModel'); renderPracticeList('speakingModel');
+      }
       const put = await githubPutJson(progressPath(), buildProgressObject(), remote.sha, '英文進度同步 (' + getUsername() + ')');
       if (put.ok) {
         lastError = null;
@@ -1020,20 +1084,29 @@ async function pullProgressManual() {
   if (!remote.exists || !remote.json) { setSyncStatus('雲端目前還沒有進度檔'); showToast('雲端目前沒有進度檔可拉取'); return; }
   const localSavedAt = Number(localStorage.getItem('lren_savedat') || 0);
   const remoteSavedAt = Number(remote.json.savedAt || 0);
+  // 【v2.2.9】即使雲端 savedAt 比較舊，也要先把雲端獨有的紀錄合併進來——
+  // 「本機比較新」只代表本機最後存檔比較晚，不代表本機那份包含了別台存的所有紀錄。
+  const absorbed = absorbRemoteRecords(remote.json);
   if (remoteSavedAt > localSavedAt) {
     applyProgressObject(remote.json);
     localStorage.setItem('lren_savedat', String(remoteSavedAt));
     setSyncStatus('⬇️ 已還原 ' + new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' }));
     showToast('⬇️ 已拉取雲端最新進度');
+  } else if (absorbed > 0) {
+    saveData();
+    setSyncStatus('⬇️ 已補回 ' + absorbed + ' 筆雲端紀錄');
+    showToast(`⬇️ 已補回 ${absorbed} 筆其他裝置存的紀錄`);
+  } else {
+    setSyncStatus('✅ 本機已經是最新的');
+    showToast('本機已經是最新進度，不用拉取');
+  }
+  if (remoteSavedAt > localSavedAt || absorbed > 0) {
     // 重新渲染目前畫面，讓拉下來的資料立刻反映在畫面上，不用手動切頁再切回來
     updateHome();
     if (currentPage === 'grammar') initGrammar();
     if (currentPage === 'ielts') initIelts();
     if (currentPage === 'vocab') { buildDeck(); vocabMode === 'flip' ? renderFlashcard() : renderTyping(); }
     if (currentPage === 'records') initRecords();
-  } else {
-    setSyncStatus('✅ 本機已經是最新的');
-    showToast('本機已經是最新進度，不用拉取');
   }
 }
 async function pullProgressOnStartup() {
@@ -1051,11 +1124,17 @@ async function pullProgressOnStartup() {
   if (remote.error || !remote.exists || !remote.json) return;
   const localSavedAt = Number(localStorage.getItem('lren_savedat') || 0);
   const remoteSavedAt = Number(remote.json.savedAt || 0);
+  // 【v2.2.9】不論誰比較新，都先把雲端獨有的紀錄合併回本機（理由同 pullProgressManual）
+  const absorbed = absorbRemoteRecords(remote.json);
   if (remoteSavedAt > localSavedAt) {
     applyProgressObject(remote.json);
     localStorage.setItem('lren_savedat', String(remoteSavedAt));
     setSyncStatus('⬇️ 已從雲端還原進度');
     showToast('⬇️ 已從雲端還原最新進度');
+    if (currentPage === 'home') updateHome();
+  } else if (absorbed > 0) {
+    saveData();
+    setSyncStatus('⬇️ 已補回 ' + absorbed + ' 筆雲端紀錄');
     if (currentPage === 'home') updateHome();
   } else { setSyncStatus('✅ 雲端進度已是最新'); }
 }
@@ -2269,6 +2348,9 @@ function renderPracticeList(skill) {
   const list = practiceRecords.filter(r => r.skill === skill);
   const el = document.getElementById(p + '-list');
   const an = document.getElementById(p + '-analysis');
+  // 防呆：同步流程（pushProgress 吸收雲端紀錄後）也會呼叫這個函式，
+  // 萬一某個科目的 DOM 還沒就緒就直接跳過，不要讓渲染錯誤中斷整個同步
+  if (!el || !an) return;
   if (list.length === 0) {
     el.innerHTML = `<div class="empty-state" style="padding:24px;"><div class="empty-state-icon">📝</div><div class="empty-state-text">還沒有練習紀錄</div></div>`;
     an.innerHTML = ''; return;
