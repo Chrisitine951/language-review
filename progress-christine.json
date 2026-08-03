@@ -32,7 +32,7 @@
       "words": ""
     }
   ],
-  "savedAt": 1785747952580,
+  "savedAt": 1785748045659,
   "username": "christine",
   "app": "german",
   "reviewSchedule": {},
@@ -47,282 +47,105 @@
   "inboxItems": [
     {
       "type": "de_vocab",
-      "article": "",
-      "pos": "動詞",
-      "word": "verkaufen",
-      "meaning": "販賣、出售",
-      "category": "verb",
-      "example": "Ich verkaufe mein Auto.",
-      "note": "",
-      "conjugation": "verkaufe, verkaufst, verkauft, verkaufen, verkauft, verkaufen"
-    },
-    {
-      "type": "de_vocab",
-      "article": "",
-      "pos": "動詞",
-      "word": "lehren",
-      "meaning": "教導、傳授",
-      "category": "verb",
-      "example": "Er lehrt an der Universität.",
-      "note": "偏正式，除了教授知識，也可表示教導人生觀、價值觀。",
-      "conjugation": "lehre, lehrst, lehrt, lehren, lehrt, lehren"
-    },
-    {
-      "type": "de_vocab",
-      "article": "",
-      "pos": "動詞",
-      "word": "unterrichten",
-      "meaning": "授課、教課",
-      "category": "verb",
-      "example": "Ich unterrichte Deutsch.",
-      "note": "較口語，通常表示實際授課，比 lehren 更常用。",
-      "conjugation": "unterrichte, unterrichtest, unterrichtet, unterrichten, unterrichtet, unterrichten"
-    },
-    {
-      "type": "de_vocab",
-      "article": "der",
-      "pos": "陽性名詞",
-      "word": "Arbeiter",
-      "meaning": "工人",
-      "category": "people",
-      "example": "Er ist Arbeiter.",
-      "note": "",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "die",
-      "pos": "陰性名詞",
-      "word": "Polizei",
-      "meaning": "警察機關、警方",
-      "category": "people",
-      "example": "Die Polizei kommt.",
-      "note": "不是指單一警察，而是整個警察機關。",
-      "conjugation": ""
-    },
-    {
-      "type": "de_sentence",
-      "german": "Ich verkaufe mein Auto.",
-      "chinese": "我賣掉我的車。",
-      "unitTitle": "德文單字 6"
-    },
-    {
-      "type": "de_sentence",
-      "german": "Er lehrt an der Universität.",
-      "chinese": "他在大學任教。",
-      "unitTitle": "德文單字 7"
-    },
-    {
-      "type": "de_sentence",
-      "german": "Ich unterrichte Deutsch.",
-      "chinese": "我教德文。",
-      "unitTitle": "德文單字 8"
-    },
-    {
-      "type": "de_sentence",
-      "german": "Er ist Arbeiter.",
-      "chinese": "他是工人。",
-      "unitTitle": "德文單字 9"
-    },
-    {
-      "type": "de_sentence",
-      "german": "Die Polizei kommt.",
-      "chinese": "警方來了。",
-      "unitTitle": "德文單字 10"
-    },
-    {
-      "type": "de_vocab",
-      "article": "der",
-      "pos": "陽性名詞",
-      "word": "Gitarrist",
-      "meaning": "吉他手",
-      "category": "people",
-      "example": "",
-      "note": "表示從事某種職業或身份的人",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "der",
-      "pos": "陽性名詞",
-      "word": "Journalist",
-      "meaning": "記者",
-      "category": "people",
-      "example": "",
-      "note": "表示從事某種職業或身份的人",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "der",
-      "pos": "陽性名詞",
-      "word": "Tourist",
-      "meaning": "遊客",
-      "category": "people",
-      "example": "",
-      "note": "表示從事某種職業或身份的人",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "der",
-      "pos": "陽性名詞",
-      "word": "Spezialist",
-      "meaning": "專家",
-      "category": "people",
-      "example": "",
-      "note": "表示從事某種職業或身份的人",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "",
-      "pos": "形容詞",
-      "word": "Japanisch",
-      "meaning": "日文",
-      "category": "other",
-      "example": "",
-      "note": "",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "",
-      "pos": "形容詞",
-      "word": "Koreanisch",
-      "meaning": "韓文",
-      "category": "other",
-      "example": "",
-      "note": "",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "",
-      "pos": "形容詞",
-      "word": "Französisch",
-      "meaning": "法文",
-      "category": "other",
-      "example": "",
-      "note": "",
-      "conjugation": ""
-    },
-    {
-      "type": "de_grammar",
-      "category": "vocab_pattern",
-      "rule": "字尾 -ist",
-      "example": "Gitarrist, Journalist, Tourist, Spezialist",
-      "explanation": "表示從事某種職業或身份的人，看到 -ist 很多都是「某一類的人」。"
-    },
-    {
-      "type": "de_vocab",
-      "article": "der",
-      "pos": "陽性名詞",
-      "word": "Bahnhof",
-      "meaning": "火車站",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Krankenhaus",
+      "meaning": "醫院",
       "category": "places",
-      "example": "",
-      "note": "",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "die",
-      "pos": "陰性名詞",
-      "word": "Straßenbahn",
-      "meaning": "電車",
-      "category": "places",
-      "example": "",
-      "note": "由 Straße + Bahn 組成",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "die",
-      "pos": "陰性名詞",
-      "word": "U-Bahn",
-      "meaning": "地鐵",
-      "category": "places",
-      "example": "",
-      "note": "",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "der",
-      "pos": "陽性名詞",
-      "word": "Hauptbahnhof",
-      "meaning": "主要火車站",
-      "category": "places",
-      "example": "",
-      "note": "縮寫為 Hbf.，Haupt意為主要、最大的",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "",
-      "pos": "複數名詞",
-      "word": "Bahnhöfe",
-      "meaning": "火車站（複數）",
-      "category": "places",
-      "example": "",
-      "note": "der Bahnhof 的複數形",
+      "example": "Das Krankenhaus ist groß.",
+      "note": "複合名詞，複數為 Krankenhäuser",
       "conjugation": ""
     },
     {
       "type": "de_vocab",
       "article": "das",
       "pos": "中性名詞",
-      "word": "Studium",
-      "meaning": "大學學業",
-      "category": "other",
-      "example": "",
-      "note": "",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "",
-      "pos": "動詞",
-      "word": "studieren",
-      "meaning": "就讀、主修",
-      "category": "verb",
-      "example": "",
-      "note": "",
-      "conjugation": "studiere, studierst, studiert, studieren, studiert, studieren"
-    },
-    {
-      "type": "de_vocab",
-      "article": "der",
-      "pos": "陽性名詞",
-      "word": "Studienplatz",
-      "meaning": "大學名額",
-      "category": "other",
-      "example": "",
-      "note": "",
-      "conjugation": ""
-    },
-    {
-      "type": "de_vocab",
-      "article": "der",
-      "pos": "陽性名詞",
-      "word": "Studiengang",
-      "meaning": "科系",
-      "category": "other",
-      "example": "",
-      "note": "",
+      "word": "Familienfoto",
+      "meaning": "家庭照片",
+      "category": "objects",
+      "example": "Das ist ein Familienfoto.",
+      "note": "複合名詞",
       "conjugation": ""
     },
     {
       "type": "de_vocab",
       "article": "die",
       "pos": "陰性名詞",
-      "word": "Studienzeit",
-      "meaning": "求學期間",
-      "category": "time",
-      "example": "",
-      "note": "",
+      "word": "Studiengebühr",
+      "meaning": "學費",
+      "category": "other",
+      "example": "Die Studiengebühr ist teuer.",
+      "note": "複合名詞",
       "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Möglichkeitsform",
+      "meaning": "可能式、條件式",
+      "category": "other",
+      "example": "Das ist die Möglichkeitsform.",
+      "note": "Fugen-s 複合名詞",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Arbeitsvertrag",
+      "meaning": "工作合約",
+      "category": "other",
+      "example": "Ich habe einen Arbeitsvertrag unterschrieben.",
+      "note": "Fugen-s 複合名詞",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Haustür",
+      "meaning": "大門、家門",
+      "category": "objects",
+      "example": "Die Haustür ist geschlossen.",
+      "note": "不加 s 的複合名詞",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Autotür",
+      "meaning": "車門",
+      "category": "objects",
+      "example": "Die Autotür ist offen.",
+      "note": "不加 s 的複合名詞",
+      "conjugation": ""
+    },
+    {
+      "type": "de_vocab",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Berufsschule",
+      "meaning": "職業學校",
+      "category": "places",
+      "example": "Er geht zur Berufsschule.",
+      "note": "不加 s 的複合名詞",
+      "conjugation": ""
+    },
+    {
+      "type": "de_grammar",
+      "category": "vocab_pattern",
+      "rule": "複合名詞的詞性由最後一個名詞決定",
+      "example": "das Krankenhaus, das Familienfoto, die Studiengebühr",
+      "explanation": "在德文的複合名詞中，最右邊（最後一個）單字的詞性和性別，就是整個複合名詞的詞性和性別。"
+    },
+    {
+      "type": "de_grammar",
+      "category": "vocab_pattern",
+      "rule": "複合名詞是否加 s（Fugen-s）",
+      "example": "Möglichkeitsform, Arbeitsvertrag vs. Haustür, Autotür, Berufsschule",
+      "explanation": "複合名詞之間是否需要插入 s 沒有絕對規則，但常出現在字尾為 -ung、-heit、-keit、-schaft 的單字後方。許多日常單字則不加 s，主要需依母語者習慣來記憶。"
     }
   ]
 }
