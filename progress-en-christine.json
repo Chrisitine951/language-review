@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785748520081,
+  "savedAt": 1785748611581,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -706,88 +706,7 @@
       "words": ""
     }
   ],
-  "inboxItems": [
-    {
-      "type": "en_vocab",
-      "word": "masquerade as",
-      "meaning": "偽裝成；冒充為",
-      "partOfSpeech": "phrase",
-      "example": "The tests masquerade as IQ tests but do not accurately measure students' potential.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "diagnostic",
-      "meaning": "具有診斷作用的；能判斷問題的",
-      "partOfSpeech": "adj.",
-      "example": "The new test may be less diagnostic of students' true abilities than existing examinations.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "shortcoming",
-      "meaning": "缺點；不足之處",
-      "partOfSpeech": "n.",
-      "example": "One major shortcoming of multiple-choice tests is that they may reflect the limitations of the question writers.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "assessment",
-      "meaning": "評估；測驗",
-      "partOfSpeech": "n.",
-      "example": "Students may complete an assessment on a computer and receive an immediate result.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "psychometric testing",
-      "meaning": "心理計量測驗；心理測驗",
-      "partOfSpeech": "phrase",
-      "example": "Psychometric testing may help students make more informed choices about their future.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "distinguish A from B",
-      "meaning": "區分 A 與 B",
-      "partOfSpeech": "phrase",
-      "example": "The unique body plan helps distinguish dinosaurs from other animals.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "be treated with caution",
-      "meaning": "應謹慎看待／處理",
-      "partOfSpeech": "phrase",
-      "example": "Test results should be treated with caution because tests are only tools.",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    },
-    {
-      "type": "en_vocab",
-      "word": "in fact",
-      "meaning": "事實上；實際上",
-      "partOfSpeech": "phrase",
-      "example": "The test is intended to reduce social bias, but in fact it may create an additional barrier",
-      "source": "other",
-      "pastTense": "",
-      "pastParticiple": ""
-    }
-  ],
+  "inboxItems": [],
   "planItems": [
     {
       "id": 1785166217166,
@@ -858,6 +777,76 @@
       "done": false,
       "score": "",
       "fromPlan": true
+    },
+    {
+      "id": 1785748611581,
+      "week": "2026-08-03",
+      "skill": "reading",
+      "day": 0,
+      "text": "劍10 T2 P2 不限時＋拆解檢核",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785748611582,
+      "week": "2026-08-03",
+      "skill": "listening",
+      "day": 1,
+      "text": "劍10 T2 聽力整回不限時訂正＋Shadowing",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785748611583,
+      "week": "2026-08-03",
+      "skill": "speaking",
+      "day": 2,
+      "text": "Cambly＋核心語料第2份＋自錄15分鐘",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785748611584,
+      "week": "2026-08-03",
+      "skill": "writing",
+      "day": 4,
+      "text": "Task 1 圖表詞彙（Bar／Line）＋範例改寫",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785748611585,
+      "week": "2026-08-03",
+      "skill": "reading",
+      "day": 5,
+      "text": "劍10 T2 P3 不限時",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785748611586,
+      "week": "2026-08-03",
+      "skill": "writing",
+      "day": 6,
+      "text": "Task 2 Problem/Solution 模板＋每週回顧",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785748611587,
+      "week": "2026-08-03",
+      "skill": "material",
+      "day": 5,
+      "text": "EGIU Unit 19–27（週六複習）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
     }
   ],
   "practiceRecords": [
@@ -903,7 +892,8 @@
   "essayRecords": [],
   "egiuDone": {},
   "planImportedWeeks": [
-    "2026-07-27"
+    "2026-07-27",
+    "2026-08-03"
   ],
   "irregularSchedule": {}
 }
