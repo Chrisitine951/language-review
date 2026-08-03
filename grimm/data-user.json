@@ -175,6 +175,32 @@
       ],
       "summary": "irregular 由否定字首 ir-（in- 的同化變體）、反向字首 re- 加上表「規則」的字根 g 以及形容詞字尾 -ular 組合而成，字面意思就是「不合規則的、不規則的」。",
       "savedAt": "2026-07-22T14:57:27.668Z"
+    },
+    {
+      "id": "ulkmscvjz1l1",
+      "word": "validity",
+      "parts": [
+        {
+          "type": "root",
+          "text": "val",
+          "meaning": "強壯、有價值、有能力",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "id",
+          "meaning": "源自拉丁文形容詞字尾-idus，表示「具有…特質的」",
+          "grimmNote": "其結尾的 d 屬於舌音，常見於詞性轉換及字根衍生的情況，符合舌音互換規則。"
+        },
+        {
+          "type": "suffix",
+          "text": "ity",
+          "meaning": "名詞字尾",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "單字validity由字根val（強壯、有價值），加上源自拉丁文的形容詞字尾-id（表示具有某種特質），以及名詞字尾-ity共同組成，表示「有效性、正當性」。",
+      "savedAt": "2026-08-03T06:55:09.609Z"
     }
   ],
   "userRoots": []
