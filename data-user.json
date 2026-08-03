@@ -4471,6 +4471,86 @@
       "explanation": "for 後不能直接接動詞原形 visit。原回答也把 less well-known 說成 already famous，因此要先確認題目意思再回答。",
       "source": "ielts",
       "mastered": false
+    },
+    {
+      "id": "ugrmsd3lorg1",
+      "category": "preposition",
+      "rule": "for 與 since",
+      "wrong": "I haven’t seen him for last week.",
+      "correct": "I haven’t seen him since last week.",
+      "explanation": "last week 在這裡表示「從上週開始」，屬於起始時間點，因此使用 since。若是一段時間，才說 for a week。",
+      "source": "other",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3lorg2",
+      "category": "other",
+      "rule": "When 與 How long",
+      "wrong": "How long has Anna been in London? — Last week.",
+      "correct": "When did Anna arrive in London? — Last week.",
+      "explanation": "Last week 回答的是抵達的時間，不是持續時間，因此問句應使用 When 加一般過去式。",
+      "source": "other",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3lorg3",
+      "category": "subject_verb",
+      "rule": "現在完成式",
+      "wrong": "He has been being ill since Sunday.",
+      "correct": "He has been ill since Sunday.",
+      "explanation": "ill 是形容詞，be ill 表示「生病的狀態」。現在完成式是 has been ill，不需要再加入 being。",
+      "source": "other",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3lorg4",
+      "category": "past_tense",
+      "rule": "一般過去式與時間詞",
+      "wrong": "She got married for a year ago.",
+      "correct": "She got married a year ago.",
+      "explanation": "a year ago 已經完整表示「一年前」，不能再加 for。若使用 for，應改成 She has been married for a year.",
+      "source": "other",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3lorg5",
+      "category": "past_tense",
+      "rule": "現在完成式與一般過去式",
+      "wrong": "I’ve been working there for six months ago.",
+      "correct": "I’ve been working there for six months.",
+      "explanation": "for six months 表示工作持續了六個月，搭配現在完成進行式。也可以改成一般過去式：I started working there six months ago.",
+      "source": "other",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3lorg6",
+      "category": "other",
+      "rule": "固定搭配",
+      "wrong": "Kate started learning Japanese long time ago.",
+      "correct": "Kate started learning Japanese a long time ago.",
+      "explanation": "表示「很久以前」時，固定使用 a long time ago。",
+      "source": "other",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3lorg7",
+      "category": "past_tense",
+      "rule": "不規則動詞",
+      "wrong": "I haven’t rode a bike for ages.",
+      "correct": "I haven’t ridden a bike for ages.",
+      "explanation": "ride 的三態是 ride–rode–ridden。rode 是過去式；ridden 才是可以接在 have/has 後面的過去分詞。",
+      "source": "other",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3lorg8",
+      "category": "other",
+      "rule": "since 句型",
+      "wrong": "It’s five years since I haven’t had a holiday.",
+      "correct": "It’s five years since I last had a holiday.",
+      "explanation": "since 後面要描述上一次事件發生的時間，因此使用一般過去式 had。last 可清楚表達「上一次」。",
+      "source": "other",
+      "mastered": false
     }
   ],
   "germanGrammar": [
