@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785752604116,
+  "savedAt": 1785752657931,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -850,6 +850,20 @@
     }
   ],
   "practiceRecords": [
+    {
+      "id": 1785752657931,
+      "skill": "grammar",
+      "date": "2026-07-31",
+      "material": "Unit 11",
+      "score": "91",
+      "causes": [
+        "時態與動詞形式",
+        "單字用法與固定搭配",
+        "語意判斷"
+      ],
+      "status": "知道如何使用，但作答不穩定",
+      "notes": "本次表現：\n已能正確使用 how long、for、since 表達從過去持續到現在的情況，也能判斷 know、have 等狀態動詞應使用現在完成式。問句結構與完成進行式整體表現穩定。\n\n錯題重點：\n有時會過度使用現在完成式。若句子只是在描述現在的事實，不需要表達從過去持續到現在，應使用一般現在式，例如 She is married 和 He lives in Milan。\n\n下次注意：\n不要只因為事情現在仍然成立就使用現在完成式。必須確認句子是否真的在強調時間跨度；若只是現在的狀態或事實，一般現在式便足夠。"
+    },
     {
       "id": 1785748845040,
       "skill": "grammar",
