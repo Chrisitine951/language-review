@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785753250959,
+  "savedAt": 1785753318139,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -706,7 +706,26 @@
       "words": ""
     }
   ],
-  "inboxItems": [],
+  "inboxItems": [
+    {
+      "type": "en_grammar",
+      "category": "other",
+      "rule": "過去式及文法一致性",
+      "wrong": "",
+      "correct": "",
+      "explanation": "過去式、主詞動詞一致、冠詞及單複數仍不穩定，回答前應先辨認題目時態及真正詢問的內容。",
+      "source": "cambly"
+    },
+    {
+      "type": "practice",
+      "skill": "Speaking",
+      "material": "Cambly IELTS Speaking 模擬口試 Part 1, 2, 3",
+      "date": "2026-08-03",
+      "score": "",
+      "causes": "過度注意是否使用艱深單字造成停頓、過去式及主詞動詞一致性不穩定、常直接重複題目字、Part 3未準確回答問題、逐字翻譯中文想法",
+      "notes": "練習 Part 1 直接回答加一個細節；練習 Part 3 的 Answer－Reason－Example－Close 架構；不要為了尋找完美單字犧牲流暢度。"
+    }
+  ],
   "planItems": [
     {
       "id": 1785166217166,
