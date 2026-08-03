@@ -316,6 +316,7 @@
             </div>
             <button class="settings-save-btn" onclick="saveSyncSettings()">儲存同步設定</button>
             <button class="settings-save-btn" style="background:var(--green);" onclick="pushProgress(true)">☁️ 立即同步</button>
+            <button class="settings-save-btn" style="background:var(--surface2); color:var(--text);" onclick="pullProgressManual()">⬇️ 從雲端拉最新進度</button>
             <div class="settings-item-sub" id="sync-status" style="margin-top:8px; text-align:center;">—</div>
           </div>
         </div>
@@ -352,7 +353,7 @@
         </div>
 
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Deutsch App v2.1.0<br>英文/雅思功能在 english.html
+          Deutsch App v2.2.9<br>英文/雅思功能在 english.html
         </div>
       </div>
     </div>
@@ -382,13 +383,15 @@
 
 <script>
 // ============================================================
-// german.html — 德文 App（v2.1.0）
+// german.html — 德文 App（v2.2.9）
 // 共用邏輯（GitHub/Gemini/TTS/工具）在 core.js，樣式在 core.css。
 // 【localStorage 前綴規則】這支 App 沿用 v1 的 lr_ 前綴（零遷移，Murray 和
 //   Christine 的德文進度都原封不動）；英文 App 用 lren_。改前綴會弄丟她們的進度！
 // 【v2.1.0 新增】① 冠詞去重（deSplitWord/deFullWord）② 單字卡背面顯示變化表
 //   （名詞四格由冠詞算出、動詞六人稱來自 conjugation 欄位）③ 動詞變化練習題庫
 //   自動吃 data.js/收集箱裡有 conjugation 的動詞。
+// 【v2.2.9 修正】跨裝置同步不再整包覆蓋（見下方 mergeSchedules/absorbRemoteProgress）
+//   ＋ 新增「從雲端拉最新進度」手動按鈕。
 // ============================================================
 
 // ============================================================
@@ -472,6 +475,56 @@ function loadData() {
 // ============================================================
 function progressPath() { return 'progress-' + getUsername() + '.json'; }
 function isAutoSyncOn() { return localStorage.getItem('lr_autosync') !== '0'; }
+
+// ============================================================
+// 【v2.2.9 修正：跨裝置同步不再整包覆蓋】
+// 舊行為：純 last-write-wins，推送時把「本機這一份」整包蓋掉雲端。
+//   災情（英文 App 2026-08-03 實際發生）：A 裝置存了東西並推上雲端 → B 裝置開 App
+//   （記憶體裡是還沒有那些東西的舊資料）→ 在 B 點任何東西就觸發存檔、savedAt 變新
+//   → 20 秒後整包推上去，把 A 剛存的洗掉。只要兩台裝置交替使用就會一直發生。
+//
+// 德文 App 的風險跟英文 App 不同：這裡沒有「練習紀錄」那種累積清單，
+// 會被洗掉的是「單字複習進度」——例如手機把某個字複習到第 4 階段，
+// 電腦用舊狀態推上去就退回第 2 階段，等於白複習。
+//
+// 對策：推送/拉取前，把雲端與本機的排程「逐字合併」，每個字取練習次數較多的那一份，
+//   grammarStats 取較大值。這樣不論哪一台先推，進度都只會前進不會倒退。
+//
+// ⚠️ 為什麼 inboxItems 不合併：它是「待確認」暫存區，存進資料庫後就該清空，
+//   而且德文的 inboxItems 沒有 id 可以去重，聯集會產生重複項目。維持 last-write-wins。
+// ============================================================
+// 逐字合併複習排程：同一個字取「總練習次數（correct+incorrect）」較多的那一份；
+// 相同時取 nextReview 較晚的（代表比較近期才複習過）
+function mergeSchedules(local, remote) {
+  const out = Object.assign({}, remote || {});
+  Object.keys(local || {}).forEach(k => {
+    const a = local[k], b = out[k];
+    if (!b) { out[k] = a; return; }
+    const ta = (a.correct || 0) + (a.incorrect || 0);
+    const tb = (b.correct || 0) + (b.incorrect || 0);
+    if (ta > tb) out[k] = a;
+    else if (ta === tb && (a.nextReview || 0) > (b.nextReview || 0)) out[k] = a;
+  });
+  return out;
+}
+// 推送前呼叫：把雲端的進度吸收進本機，這樣送上去的那份不會讓別台的進度倒退
+// 回傳 true 表示本機真的有被補上東西（需要重新渲染畫面）
+function absorbRemoteProgress(remoteJson) {
+  if (!remoteJson) return false;
+  const beforeKeys = Object.keys(reviewSchedule).length;
+  const beforeTotal = Object.values(reviewSchedule).reduce((s, v) => s + (v.correct || 0) + (v.incorrect || 0), 0);
+  reviewSchedule = mergeSchedules(reviewSchedule, remoteJson.reviewSchedule);
+  // 文法統計取較大值（純計數器，取大的不會少算她的練習量）
+  if (remoteJson.grammarStats) {
+    grammarStats = {
+      correct: Math.max(grammarStats.correct || 0, remoteJson.grammarStats.correct || 0),
+      wrong: Math.max(grammarStats.wrong || 0, remoteJson.grammarStats.wrong || 0),
+    };
+  }
+  const afterKeys = Object.keys(reviewSchedule).length;
+  const afterTotal = Object.values(reviewSchedule).reduce((s, v) => s + (v.correct || 0) + (v.incorrect || 0), 0);
+  return afterKeys !== beforeKeys || afterTotal !== beforeTotal;
+}
 function buildProgressObject() {
   // 用 _passthrough 保留英文 App 舊欄位（diaryEntries 等），避免互相覆蓋
   return Object.assign({}, _passthrough, {
@@ -482,8 +535,14 @@ function buildProgressObject() {
 }
 function applyProgressObject(p) {
   if (!p) return;
-  if (p.reviewSchedule) reviewSchedule = p.reviewSchedule;
-  if (p.grammarStats) grammarStats = p.grammarStats;
+  // v2.2.9：排程改成合併而不是取代——雲端比較新不代表本機這幾次複習就該被丟掉
+  if (p.reviewSchedule) reviewSchedule = mergeSchedules(reviewSchedule, p.reviewSchedule);
+  if (p.grammarStats) {
+    grammarStats = {
+      correct: Math.max(grammarStats.correct || 0, p.grammarStats.correct || 0),
+      wrong: Math.max(grammarStats.wrong || 0, p.grammarStats.wrong || 0),
+    };
+  }
   if (p.todayStats && p.todayStats.date === new Date().toDateString()) todayStats = p.todayStats;
   if (Array.isArray(p.inboxItems)) inboxItems = p.inboxItems;
   // 不認得的欄位原樣收好，下次上傳時帶回去
@@ -512,6 +571,17 @@ async function pushProgress(manual) {
     for (let attempt = 0; attempt < 3; attempt++) {
       const remote = await githubGetJson(progressPath());
       if (remote.error && remote.error !== '未設定') { lastError = remote.error; break; }
+      // 【關鍵】推送前先把雲端的進度吸收進來，再送出這一份。
+      // 少了這一步就是整包覆蓋，會讓別台裝置的複習進度倒退（v2.2.9 修）。
+      // 放在重試迴圈「內」是刻意的：409 重試時雲端可能又被別台改過，每次都要重新吸收。
+      // 同時也把英文 App 的舊欄位收好，避免 pullProgressOnStartup 撲空時上傳漏掉它們。
+      if (remote.json) {
+        const changed = absorbRemoteProgress(remote.json);
+        ['diaryEntries', 'engooRecords'].forEach(k => {
+          if (remote.json[k] !== undefined && _passthrough[k] === undefined) _passthrough[k] = remote.json[k];
+        });
+        if (changed) { saveData(); updateHome(); }
+      }
       const put = await githubPutJson(progressPath(), buildProgressObject(), remote.sha, '德文進度同步 (' + getUsername() + ')');
       if (put.ok) {
         lastError = null;
@@ -530,6 +600,41 @@ async function pushProgress(manual) {
     }
   } finally { syncing = false; }
 }
+// 手動「從雲端拉最新進度」——設定頁按鈕用（v2.2.9 新增）
+// 【為什麼需要】自動同步只有兩個時機：① 存檔後 20 秒防抖上傳 ② App 啟動當下下載一次。
+// 中間沒有「App 開著時持續檢查雲端」，所以 A 裝置存檔、B 裝置沒重新整理就切過去看，
+// 資料不會自動出現。這個按鈕讓她不用整個關掉重開就能強制刷新。
+async function pullProgressManual() {
+  const cfg = getGithubConfig();
+  if (!cfg.token || !cfg.owner || !cfg.repo) { showToast('請先到設定完成 GitHub 設定'); return; }
+  setSyncStatus('⬇️ 檢查雲端最新進度…');
+  const remote = await githubGetJson(progressPath());
+  if (remote.error) { setSyncStatus('❌ ' + remote.error); showToast('❌ 拉取失敗，請稍後再試'); return; }
+  if (!remote.exists || !remote.json) { setSyncStatus('雲端目前還沒有進度檔'); showToast('雲端目前沒有進度檔可拉取'); return; }
+  const localSavedAt = Number(localStorage.getItem('lr_savedat') || 0);
+  const remoteSavedAt = Number(remote.json.savedAt || 0);
+  const changed = absorbRemoteProgress(remote.json);
+  if (remoteSavedAt > localSavedAt) {
+    applyProgressObject(remote.json);
+    localStorage.setItem('lr_savedat', String(remoteSavedAt));
+    setSyncStatus('⬇️ 已還原 ' + new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' }));
+    showToast('⬇️ 已拉取雲端最新進度');
+  } else if (changed) {
+    saveData();
+    setSyncStatus('⬇️ 已補回雲端的複習進度');
+    showToast('⬇️ 已補回其他裝置的複習進度');
+  } else {
+    setSyncStatus('✅ 本機已經是最新的');
+    showToast('本機已經是最新進度，不用拉取');
+  }
+  if (remoteSavedAt > localSavedAt || changed) {
+    updateHome();
+    if (currentPage === 'vocab') { buildDeck(); vocabMode === 'flip' ? renderFlashcard() : renderTyping(); }
+    if (currentPage === 'learn') initLearn();
+    if (currentPage === 'settings') initSettings();
+    if (currentPage === 'inbox') renderInboxList();
+  }
+}
 async function pullProgressOnStartup() {
   if (!isAutoSyncOn()) return;
   const cfg = getGithubConfig();
@@ -545,9 +650,12 @@ async function pullProgressOnStartup() {
     showToast('⬇️ 已從雲端還原最新進度');
     if (currentPage === 'home') updateHome();
   } else {
-    // 就算不還原，也要先把英文 App 的欄位收好，避免之後上傳時洗掉
+    // 就算本機比較新，也要① 合併雲端的複習進度（別台可能複習了本機沒有的字）
+    // ② 把英文 App 的欄位收好，避免之後上傳時洗掉
+    const changed = absorbRemoteProgress(remote.json);
     applyProgressObject(Object.assign({}, remote.json, { reviewSchedule: null, grammarStats: null, todayStats: null, inboxItems: null }));
-    setSyncStatus('✅ 雲端進度已是最新');
+    if (changed) { saveData(); if (currentPage === 'home') updateHome(); }
+    setSyncStatus(changed ? '⬇️ 已補回雲端的複習進度' : '✅ 雲端進度已是最新');
   }
 }
 document.addEventListener('visibilitychange', () => {
@@ -1571,7 +1679,7 @@ function resetAllSchedule() {
   reviewSchedule = {}; saveData(); showToast('複習排程已清除');
 }
 function exportData() {
-  const obj = { exportDate: new Date().toISOString(), version: '2.1.0', app: 'german', reviewSchedule, grammarStats, todayStats, inboxItems };
+  const obj = { exportDate: new Date().toISOString(), version: '2.2.9', app: 'german', reviewSchedule, grammarStats, todayStats, inboxItems };
   const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
