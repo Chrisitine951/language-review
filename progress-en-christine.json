@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785752754991,
+  "savedAt": 1785752809739,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -850,6 +850,20 @@
     }
   ],
   "practiceRecords": [
+    {
+      "id": 1785752809739,
+      "skill": "grammar",
+      "date": "2026-07-29",
+      "material": "Unit 8",
+      "score": "90",
+      "causes": [
+        "時態與動詞形式",
+        "主詞—動詞一致",
+        "句型結構與語序"
+      ],
+      "status": "",
+      "notes": "學習狀態：知道如何使用，但作答時偶爾有形式錯誤\n錯題重點：已能使用 Have you ever、I’ve never、recently、this week，以及 It’s the first time 等現在完成式句型。主要錯誤是漏掉 ever、I 誤搭配 has、複數主詞 children 誤用 has，以及 ride 的過去分詞應為 ridden。\n下次注意：現在完成式結構為 have／has＋過去分詞；I／you／we／they 用 have，he／she／it 用 has。最高級描述人生經驗時，注意使用 the best／most ... I’ve ever seen。"
+    },
     {
       "id": 1785752657931,
       "skill": "grammar",
