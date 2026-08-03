@@ -201,6 +201,26 @@
       ],
       "summary": "單字validity由字根val（強壯、有價值），加上源自拉丁文的形容詞字尾-id（表示具有某種特質），以及名詞字尾-ity共同組成，表示「有效性、正當性」。",
       "savedAt": "2026-08-03T06:55:09.609Z"
+    },
+    {
+      "id": "ulkmscvnq2l2",
+      "word": "drop in",
+      "parts": [
+        {
+          "type": "root",
+          "text": "drop",
+          "meaning": "落下",
+          "grimmNote": ""
+        },
+        {
+          "type": "prefix",
+          "text": "in",
+          "meaning": "在內、進入",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "單字「drop in」由表示「落下」的字根「drop」與表示「在內、進入」的字首「in」組成，共同形成「順道拜訪」或「偶然遇到」之意，暗示快速且不經意的進入。",
+      "savedAt": "2026-08-03T06:58:04.605Z"
     }
   ],
   "userRoots": []
