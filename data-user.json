@@ -1313,6 +1313,70 @@
       "partOfSpeech": "n.",
       "example": "I'm going to the cinema tonight.",
       "source": "other"
+    },
+    {
+      "id": "uenmsd0m5xz1",
+      "word": "masquerade as",
+      "meaning": "偽裝成；冒充為",
+      "partOfSpeech": "phrase",
+      "example": "The tests masquerade as IQ tests but do not accurately measure students' potential.",
+      "source": "other"
+    },
+    {
+      "id": "uenmsd0m5xz2",
+      "word": "diagnostic",
+      "meaning": "具有診斷作用的；能判斷問題的",
+      "partOfSpeech": "adj.",
+      "example": "The new test may be less diagnostic of students' true abilities than existing examinations.",
+      "source": "other"
+    },
+    {
+      "id": "uenmsd0m5xz3",
+      "word": "shortcoming",
+      "meaning": "缺點；不足之處",
+      "partOfSpeech": "n.",
+      "example": "One major shortcoming of multiple-choice tests is that they may reflect the limitations of the question writers.",
+      "source": "other"
+    },
+    {
+      "id": "uenmsd0m5xz4",
+      "word": "assessment",
+      "meaning": "評估；測驗",
+      "partOfSpeech": "n.",
+      "example": "Students may complete an assessment on a computer and receive an immediate result.",
+      "source": "other"
+    },
+    {
+      "id": "uenmsd0m5xz5",
+      "word": "psychometric testing",
+      "meaning": "心理計量測驗；心理測驗",
+      "partOfSpeech": "phrase",
+      "example": "Psychometric testing may help students make more informed choices about their future.",
+      "source": "other"
+    },
+    {
+      "id": "uenmsd0m5xz6",
+      "word": "distinguish A from B",
+      "meaning": "區分 A 與 B",
+      "partOfSpeech": "phrase",
+      "example": "The unique body plan helps distinguish dinosaurs from other animals.",
+      "source": "other"
+    },
+    {
+      "id": "uenmsd0m5xz7",
+      "word": "be treated with caution",
+      "meaning": "應謹慎看待／處理",
+      "partOfSpeech": "phrase",
+      "example": "Test results should be treated with caution because tests are only tools.",
+      "source": "other"
+    },
+    {
+      "id": "uenmsd0m5xz8",
+      "word": "in fact",
+      "meaning": "事實上；實際上",
+      "partOfSpeech": "phrase",
+      "example": "The test is intended to reduce social bias, but in fact it may create an additional barrier",
+      "source": "other"
     }
   ],
   "germanVocabulary": [
