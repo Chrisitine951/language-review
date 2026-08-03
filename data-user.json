@@ -4361,6 +4361,116 @@
       "explanation": "always 強調整段期間一貫不變的狀態，課本通常使用現在完成式 have always lived。",
       "source": "ielts",
       "mastered": false
+    },
+    {
+      "id": "ugrmsd3jlkx1",
+      "category": "past_tense",
+      "rule": "時態與動詞形式",
+      "wrong": "I just wake up.",
+      "correct": "I just woke up.",
+      "explanation": "起床的動作已經完成，所以不能使用現在式 wake。英式英文也可以說 I've just woken up.",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3jlkx2",
+      "category": "past_tense",
+      "rule": "時態與動詞形式",
+      "wrong": "I buy this book.",
+      "correct": "I bought this book.",
+      "explanation": "買書是已經發生的動作，因此 buy 要改成過去式 bought。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3jlkx3",
+      "category": "other",
+      "rule": "助動詞與問句／否定句",
+      "wrong": "I always will went into that shop.",
+      "correct": "I will always go into that shop.",
+      "explanation": "will 後使用原形 go，不能使用過去式 went。頻率副詞 always 通常放在 will 後面。",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3jlkx4",
+      "category": "other",
+      "rule": "冠詞",
+      "wrong": "It's first time.",
+      "correct": "It's the first time.",
+      "explanation": "表示「這是第一次」時，固定說法是 It's the first time.",
+      "source": "cambly",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3jlkx5",
+      "category": "subject_verb",
+      "rule": "everyone 視為單數，動詞需用第三人稱單數",
+      "wrong": "I think everyone go to different places by themselves.",
+      "correct": "I think everyone goes to different places by themselves.",
+      "explanation": "everyone 雖然代表許多人，但文法上是單數，因此動詞要使用 goes。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3jlkx6",
+      "category": "other",
+      "rule": "數字 three 後面需接複數名詞與複數動詞",
+      "wrong": "This three color is convenient to combine with different clothes.",
+      "correct": "These three colours are easy to match with different clothes.",
+      "explanation": "three colours 是複數，因此指示代名詞、名詞與動詞都要使用複數（these、colours、are）。衣服顏色搭配通常使用 match with。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3jlkx7",
+      "category": "other",
+      "rule": "many 後面應接可數名詞複數",
+      "wrong": "It has many size.",
+      "correct": "It comes in many sizes.",
+      "explanation": "size 應改為複數 sizes。描述衣服有多種尺寸時，習慣使用 comes in many sizes。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3jlkx8",
+      "category": "other",
+      "rule": "避免直接按中文直譯，應使用清楚的主動詞結構與連接詞",
+      "wrong": "I think it's right need to more people use bicycle.",
+      "correct": "I think more people should cycle because it is better for the environment.",
+      "explanation": "原句缺少清楚的主詞與動詞結構。建議使用 should 表達「應該」，並用 because 補充原因。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3jlkx9",
+      "category": "other",
+      "rule": "形容詞與名詞區分",
+      "wrong": "I have some technical to cut down my time.",
+      "correct": "I have learned some techniques to reduce my reading time.",
+      "explanation": "technical 是形容詞；表示方法或技巧時要使用名詞 techniques。reduce my reading time 比 cut down my time 更清楚。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3jlkx10",
+      "category": "preposition",
+      "rule": "形容詞與介系詞搭配",
+      "wrong": "Experiencing it yourself is different for the information on the internet.",
+      "correct": "Experiencing a place yourself is different from seeing it online.",
+      "explanation": "固定搭配是 different from。seeing it online 也比 information on the internet 更符合原本想表達的意思。",
+      "source": "ielts",
+      "mastered": false
+    },
+    {
+      "id": "ugrmsd3jlkx11",
+      "category": "other",
+      "rule": "動詞與介系詞搭配",
+      "wrong": "I think it's different experience for visit some places already famous.",
+      "correct": "I think visiting a less well-known place can be a completely different experience.",
+      "explanation": "for 後不能直接接動詞原形 visit。原回答也把 less well-known 說成 already famous，因此要先確認題目意思再回答。",
+      "source": "ielts",
+      "mastered": false
     }
   ],
   "germanGrammar": [
