@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785748355728,
+  "savedAt": 1785748437957,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -708,31 +708,84 @@
   ],
   "inboxItems": [
     {
-      "type": "practice",
-      "skill": "reading",
-      "material": "The Introduction of SATs (List of Headings)",
-      "date": "2026-08-03",
-      "score": "3/7 (43%)",
-      "causes": "沒有先概括整段主旨，直接從選項尋找相同單字，被原文同字、段首資訊與局部細節干擾",
-      "notes": "先用中文寫出段落摘要，再判斷哪個標題能涵蓋整段內容"
+      "type": "en_vocab",
+      "word": "masquerade as",
+      "meaning": "偽裝成；冒充為",
+      "partOfSpeech": "phrase",
+      "example": "The tests masquerade as IQ tests but do not accurately measure students' potential.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
     },
     {
-      "type": "practice",
-      "skill": "reading",
-      "material": "練習二 What Is a Dinosaur? (List of Headings)",
-      "date": "2026-08-03",
-      "score": "6/7 (86%)",
-      "causes": "把段落中的骨骼細節誤認為整段主旨",
-      "notes": "已能分辨分類型、總分型段落與相近主題，整體表現明顯進步。下次注意確認標題能否涵蓋整段，而不是只符合其中一句或一個名詞。"
+      "type": "en_vocab",
+      "word": "diagnostic",
+      "meaning": "具有診斷作用的；能判斷問題的",
+      "partOfSpeech": "adj.",
+      "example": "The new test may be less diagnostic of students' true abilities than existing examinations.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
     },
     {
-      "type": "practice",
-      "skill": "reading",
-      "material": "The Introduction of SATs Paragraph B",
-      "date": "2026-08-03",
-      "score": "",
-      "causes": "只注意到表面好處，忽略轉折語 but in fact 後方的真實立場",
-      "notes": "轉折前通常是舊觀點或表面說法，轉折後才是作者真正要表達的立場"
+      "type": "en_vocab",
+      "word": "shortcoming",
+      "meaning": "缺點；不足之處",
+      "partOfSpeech": "n.",
+      "example": "One major shortcoming of multiple-choice tests is that they may reflect the limitations of the question writers.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "assessment",
+      "meaning": "評估；測驗",
+      "partOfSpeech": "n.",
+      "example": "Students may complete an assessment on a computer and receive an immediate result.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "psychometric testing",
+      "meaning": "心理計量測驗；心理測驗",
+      "partOfSpeech": "phrase",
+      "example": "Psychometric testing may help students make more informed choices about their future.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "distinguish A from B",
+      "meaning": "區分 A 與 B",
+      "partOfSpeech": "phrase",
+      "example": "The unique body plan helps distinguish dinosaurs from other animals.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "be treated with caution",
+      "meaning": "應謹慎看待／處理",
+      "partOfSpeech": "phrase",
+      "example": "Test results should be treated with caution because tests are only tools.",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
+    },
+    {
+      "type": "en_vocab",
+      "word": "in fact",
+      "meaning": "事實上；實際上",
+      "partOfSpeech": "phrase",
+      "example": "The test is intended to reduce social bias, but in fact it may create an additional barrier",
+      "source": "other",
+      "pastTense": "",
+      "pastParticiple": ""
     }
   ],
   "planItems": [
@@ -808,6 +861,30 @@
     }
   ],
   "practiceRecords": [
+    {
+      "id": 1785748404996.6736,
+      "skill": "reading",
+      "date": "2026-08-03",
+      "material": "練習二 What Is a Dinosaur? (List of Headings)",
+      "score": "6/7 (86%)",
+      "causes": [
+        "把段落中的骨骼細節誤認為整段主旨"
+      ],
+      "notes": "已能分辨分類型、總分型段落與相近主題，整體表現明顯進步。下次注意確認標題能否涵蓋整段，而不是只符合其中一句或一個名詞。"
+    },
+    {
+      "id": 1785748404995.0632,
+      "skill": "reading",
+      "date": "2026-08-03",
+      "material": "The Introduction of SATs (List of Headings)",
+      "score": "3/7 (43%)",
+      "causes": [
+        "沒有先概括整段主旨",
+        "直接從選項尋找相同單字",
+        "被原文同字、段首資訊與局部細節干擾"
+      ],
+      "notes": "先用中文寫出段落摘要，再判斷哪個標題能涵蓋整段內容"
+    },
     {
       "id": 1784222073816.5935,
       "skill": "reading",
