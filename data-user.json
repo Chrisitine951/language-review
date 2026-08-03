@@ -3187,6 +3187,318 @@
       "category": "people",
       "example": "Er ist Hausmann.",
       "note": ""
+    },
+    {
+      "id": "udemsd09xmo1",
+      "article": "",
+      "pos": "動詞",
+      "word": "verkaufen",
+      "meaning": "販賣、出售",
+      "category": "verb",
+      "example": "Ich verkaufe mein Auto.",
+      "note": "",
+      "conjugation": {
+        "ich": "verkaufe",
+        "du": "verkaufst",
+        "er/sie/es": "verkauft",
+        "wir": "verkaufen",
+        "ihr": "verkauft",
+        "sie/Sie": "verkaufen"
+      }
+    },
+    {
+      "id": "udemsd09xmo2",
+      "article": "",
+      "pos": "動詞",
+      "word": "lehren",
+      "meaning": "教導、傳授",
+      "category": "verb",
+      "example": "Er lehrt an der Universität.",
+      "note": "偏正式，除了教授知識，也可表示教導人生觀、價值觀。",
+      "conjugation": {
+        "ich": "lehre",
+        "du": "lehrst",
+        "er/sie/es": "lehrt",
+        "wir": "lehren",
+        "ihr": "lehrt",
+        "sie/Sie": "lehren"
+      }
+    },
+    {
+      "id": "udemsd09xmo3",
+      "article": "",
+      "pos": "動詞",
+      "word": "unterrichten",
+      "meaning": "授課、教課",
+      "category": "verb",
+      "example": "Ich unterrichte Deutsch.",
+      "note": "較口語，通常表示實際授課，比 lehren 更常用。",
+      "conjugation": {
+        "ich": "unterrichte",
+        "du": "unterrichtest",
+        "er/sie/es": "unterrichtet",
+        "wir": "unterrichten",
+        "ihr": "unterrichtet",
+        "sie/Sie": "unterrichten"
+      }
+    },
+    {
+      "id": "udemsd09xmo4",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Arbeiter",
+      "meaning": "工人",
+      "category": "people",
+      "example": "Er ist Arbeiter.",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo5",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Polizei",
+      "meaning": "警察機關、警方",
+      "category": "people",
+      "example": "Die Polizei kommt.",
+      "note": "不是指單一警察，而是整個警察機關。"
+    },
+    {
+      "id": "udemsd09xmo11",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Gitarrist",
+      "meaning": "吉他手",
+      "category": "people",
+      "example": "",
+      "note": "表示從事某種職業或身份的人"
+    },
+    {
+      "id": "udemsd09xmo12",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Journalist",
+      "meaning": "記者",
+      "category": "people",
+      "example": "",
+      "note": "表示從事某種職業或身份的人"
+    },
+    {
+      "id": "udemsd09xmo13",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Tourist",
+      "meaning": "遊客",
+      "category": "people",
+      "example": "",
+      "note": "表示從事某種職業或身份的人"
+    },
+    {
+      "id": "udemsd09xmo14",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Spezialist",
+      "meaning": "專家",
+      "category": "people",
+      "example": "",
+      "note": "表示從事某種職業或身份的人"
+    },
+    {
+      "id": "udemsd09xmo15",
+      "article": "",
+      "pos": "形容詞",
+      "word": "Japanisch",
+      "meaning": "日文",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo16",
+      "article": "",
+      "pos": "形容詞",
+      "word": "Koreanisch",
+      "meaning": "韓文",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo17",
+      "article": "",
+      "pos": "形容詞",
+      "word": "Französisch",
+      "meaning": "法文",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo19",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Bahnhof",
+      "meaning": "火車站",
+      "category": "places",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo20",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Straßenbahn",
+      "meaning": "電車",
+      "category": "places",
+      "example": "",
+      "note": "由 Straße + Bahn 組成"
+    },
+    {
+      "id": "udemsd09xmo21",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "U-Bahn",
+      "meaning": "地鐵",
+      "category": "places",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo22",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Hauptbahnhof",
+      "meaning": "主要火車站",
+      "category": "places",
+      "example": "",
+      "note": "縮寫為 Hbf.，Haupt意為主要、最大的"
+    },
+    {
+      "id": "udemsd09xmo23",
+      "article": "",
+      "pos": "複數名詞",
+      "word": "Bahnhöfe",
+      "meaning": "火車站（複數）",
+      "category": "places",
+      "example": "",
+      "note": "der Bahnhof 的複數形"
+    },
+    {
+      "id": "udemsd09xmo24",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Studium",
+      "meaning": "大學學業",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo25",
+      "article": "",
+      "pos": "動詞",
+      "word": "studieren",
+      "meaning": "就讀、主修",
+      "category": "verb",
+      "example": "",
+      "note": "",
+      "conjugation": {
+        "ich": "studiere",
+        "du": "studierst",
+        "er/sie/es": "studiert",
+        "wir": "studieren",
+        "ihr": "studiert",
+        "sie/Sie": "studieren"
+      }
+    },
+    {
+      "id": "udemsd09xmo26",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Studienplatz",
+      "meaning": "大學名額",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo27",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Studiengang",
+      "meaning": "科系",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo28",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Studienzeit",
+      "meaning": "求學期間",
+      "category": "time",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo29",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Gebühr",
+      "meaning": "費用",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo30",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Studiengebühr",
+      "meaning": "學費",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo31",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Parkgebühr",
+      "meaning": "停車費",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo32",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Anmeldegebühr",
+      "meaning": "報名費",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo33",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Semestergebühr",
+      "meaning": "學雜費",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo34",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Prüfungsgebühr",
+      "meaning": "考試費",
+      "category": "other",
+      "example": "",
+      "note": ""
     }
   ],
   "englishGrammar": [
@@ -3895,6 +4207,14 @@
       "example": "die Freundschaft, die Mannschaft",
       "explanation": "-schaft 常表示群體、關係、狀態或領域。",
       "mastered": false
+    },
+    {
+      "id": "uggmsd09xmo18",
+      "category": "vocab_pattern",
+      "rule": "字尾 -ist",
+      "example": "Gitarrist, Journalist, Tourist, Spezialist",
+      "explanation": "表示從事某種職業或身份的人，看到 -ist 很多都是「某一類的人」。",
+      "mastered": false
     }
   ],
   "germanSentences": [
@@ -4401,6 +4721,46 @@
       "unitTitle": "kein 格位變化",
       "german": "Ich helfe keinen Kindern.",
       "chinese": "我沒有幫助任何孩子。"
+    },
+    {
+      "id": "usmsd09xmo6",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文單字 6",
+      "german": "Ich verkaufe mein Auto.",
+      "chinese": "我賣掉我的車。"
+    },
+    {
+      "id": "usmsd09xmo7",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文單字 7",
+      "german": "Er lehrt an der Universität.",
+      "chinese": "他在大學任教。"
+    },
+    {
+      "id": "usmsd09xmo8",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文單字 8",
+      "german": "Ich unterrichte Deutsch.",
+      "chinese": "我教德文。"
+    },
+    {
+      "id": "usmsd09xmo9",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文單字 9",
+      "german": "Er ist Arbeiter.",
+      "chinese": "他是工人。"
+    },
+    {
+      "id": "usmsd09xmo10",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文單字 10",
+      "german": "Die Polizei kommt.",
+      "chinese": "警方來了。"
     }
   ],
   "wordRoots": [
