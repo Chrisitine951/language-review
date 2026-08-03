@@ -742,7 +742,7 @@
         </div>
 
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          IELTS English App v2.1.0<br>德文功能已搬到 german.html
+          IELTS English App v2.3.0<br>德文功能已搬到 german.html
         </div>
       </div>
     </div>
@@ -954,12 +954,16 @@ function isAutoSyncOn() { return localStorage.getItem('lr_autosync') !== '0'; }
 //   - planItems 不合併：使用者刪掉計畫項目是刻意動作，DESIGN.md 明訂「刪掉的項目不會自己
 //     長回來」。聯集會讓刪掉的項目復活，違反既有設計決策。
 //   - inboxItems 不合併：那是「待確認」的暫存區，存進資料庫後就該清空，合併會讓已處理的
-//     項目跑回來。
-//   - reviewSchedule / irregularSchedule / egiuDone 不合併：它們是狀態（現在排到第幾階段、
-//     哪天複習）不是紀錄，合併語意不明（兩台都複習過同一個字要取哪一份？），維持
-//     last-write-wins。單人多裝置下影響有限，真的出問題再處理。
-// ⚠️ 合併的取捨：在 A 裝置刪掉一筆紀錄後，若 B 裝置還留著舊的副本，那筆會被合併回來。
-//   相較於「整包洗掉別台的紀錄」，這個代價可接受得多——重複出現看得見，資料消失看不見。
+//     項目跑回來；而且收集箱項目沒有 id 可去重，聯集會產生重複項目。
+//     ⚠️ 代價：在 A 裝置分析完還沒按儲存就跑去 B 裝置操作，那批暫存可能消失。
+//     使用習慣上請「分析完就儘快按儲存到資料庫」，不要留在收集箱過夜。
+//   - reviewSchedule / irregularSchedule / egiuDone / grammarStats：
+//     ✅ v2.3.0 起改成合併（原本不合併，是這次補上的缺口）。理由見 absorbRemoteRecords
+//     內的註解——覆蓋會讓複習進度「倒退」，而且很難察覺。合併規則是「只前進不後退」：
+//     排程取練習次數較多者、EGIU 打卡取聯集、統計取較大值。
+// ⚠️ 合併的取捨：在 A 裝置刪掉一筆紀錄（或取消一個 EGIU 打卡）後，若 B 裝置還留著舊副本，
+//   那筆會被合併回來。相較於「整包洗掉別台的紀錄」，這個代價可接受得多——
+//   重複出現看得見可以再刪，資料消失看不見。
 // ============================================================
 const MERGED_RECORD_KEYS = ['practiceRecords', 'breakdowns', 'essayRecords', 'diaryEntries', 'engooRecords'];
 // 以 id 聯集兩個紀錄陣列；同 id 時以 primary（通常是本機這份，代表使用者最近的編輯）為準
@@ -975,6 +979,7 @@ function mergeRecordArrays(primary, secondary) {
   return out;
 }
 // 推送前呼叫：把雲端有、本機沒有的紀錄先補進本機記憶體，這樣送上去的那份不會漏掉別台的東西
+// 回傳「補回了幾筆」（含排程與 EGIU 打卡的變動數），0 代表本機已經涵蓋雲端所有內容
 function absorbRemoteRecords(remoteJson) {
   if (!remoteJson) return 0;
   let added = 0;
@@ -990,7 +995,62 @@ function absorbRemoteRecords(remoteJson) {
   added = (practiceRecords.length - before.practiceRecords) + (breakdowns.length - before.breakdowns)
         + (essayRecords.length - before.essayRecords) + (diaryEntries.length - before.diaryEntries)
         + (engooRecords.length - before.engooRecords);
+
+  // ---- v2.3.0：排程與打卡也要合併（原本只合併上面那幾個陣列，這裡是補上的缺口）----
+  // 為什麼：單字複習排程被整包覆蓋時，進度會「倒退」——手機把某字練到第 4 階段，
+  // 電腦用舊狀態推上去就退回第 2 階段，那幾次複習等於白做，而且很難察覺
+  // （只會覺得「這個字怎麼又跑出來了」）。EGIU 打卡同理，這就是 Unit 1–7 和 Unit 10
+  // 會分散在不同雲端版本、必須手動合併的原因。
+  const schedBefore = scheduleFingerprint(reviewSchedule) + scheduleFingerprint(irregularSchedule);
+  reviewSchedule = mergeSchedules(reviewSchedule, remoteJson.reviewSchedule);
+  irregularSchedule = mergeSchedules(irregularSchedule, remoteJson.irregularSchedule);
+  if (scheduleFingerprint(reviewSchedule) + scheduleFingerprint(irregularSchedule) !== schedBefore) added++;
+
+  // EGIU 打卡：聯集（同一單元兩邊都有就取較早的完成日，代表第一次讀完的時間）
+  if (remoteJson.egiuDone && typeof remoteJson.egiuDone === 'object') {
+    const egiuBefore = Object.keys(egiuDone).length;
+    Object.keys(remoteJson.egiuDone).forEach(k => {
+      if (!egiuDone[k]) egiuDone[k] = remoteJson.egiuDone[k];
+      else if (remoteJson.egiuDone[k] < egiuDone[k]) egiuDone[k] = remoteJson.egiuDone[k];
+    });
+    if (Object.keys(egiuDone).length !== egiuBefore) added++;
+  }
+
+  // 文法答對/答錯統計：純計數器，取較大值（不會少算她的練習量）
+  if (remoteJson.grammarStats) {
+    const g = remoteJson.grammarStats;
+    const merged = {
+      correct: Math.max(grammarStats.correct || 0, g.correct || 0),
+      wrong: Math.max(grammarStats.wrong || 0, g.wrong || 0),
+      total: Math.max(grammarStats.total || 0, g.total || 0),
+    };
+    if (merged.correct !== (grammarStats.correct || 0) || merged.wrong !== (grammarStats.wrong || 0)
+        || merged.total !== (grammarStats.total || 0)) added++;
+    grammarStats = merged;
+  }
   return added;
+}
+// 排程指紋：用來判斷合併後有沒有實際變動（不用逐字比對物件）
+function scheduleFingerprint(sched) {
+  return Object.keys(sched || {}).reduce((sum, k) => {
+    const s = sched[k] || {};
+    return sum + (s.correct || 0) + (s.incorrect || 0) + (s.stage || 0);
+  }, 0);
+}
+// 逐字合併複習排程：同一個字取「總練習次數（correct+incorrect）」較多的那一份；
+// 相同時取 nextReview 較晚的（代表比較近期才複習過）。
+// 這樣不論哪一台先推，複習進度都只會前進不會倒退。
+function mergeSchedules(local, remote) {
+  const out = Object.assign({}, remote || {});
+  Object.keys(local || {}).forEach(k => {
+    const a = local[k], b = out[k];
+    if (!b) { out[k] = a; return; }
+    const ta = (a.correct || 0) + (a.incorrect || 0);
+    const tb = (b.correct || 0) + (b.incorrect || 0);
+    if (ta > tb) out[k] = a;
+    else if (ta === tb && (a.nextReview || 0) > (b.nextReview || 0)) out[k] = a;
+  });
+  return out;
 }
 function buildProgressObject() {
   return {
@@ -1003,21 +1063,15 @@ function buildProgressObject() {
 }
 function applyProgressObject(p) {
   if (!p) return;
-  if (p.reviewSchedule) reviewSchedule = p.reviewSchedule;
-  if (p.irregularSchedule && typeof p.irregularSchedule === 'object') irregularSchedule = p.irregularSchedule;
-  if (p.grammarStats) grammarStats = p.grammarStats;
+  // 排程、EGIU 打卡、文法統計一律「合併」不取代（v2.3.0）——
+  // 雲端比較新不代表本機這幾次複習/打卡就該被丟掉。實作直接沿用 absorbRemoteRecords，
+  // 兩條路徑用同一份邏輯，不會出現「推送有合併、拉取卻覆蓋」的不一致。
+  absorbRemoteRecords(p);
   if (p.todayStats && p.todayStats.date === new Date().toDateString()) todayStats = p.todayStats;
-  // 紀錄類陣列一律「合併」不取代——雲端比較新不代表本機這幾筆就該被丟掉
-  // （這裡以雲端為 primary：拉取的情境下雲端那份是別台剛存的、比較完整）
-  diaryEntries = mergeRecordArrays(p.diaryEntries, diaryEntries);
-  engooRecords = mergeRecordArrays(p.engooRecords, engooRecords);
-  practiceRecords = mergeRecordArrays(p.practiceRecords, practiceRecords);
-  breakdowns = mergeRecordArrays(p.breakdowns, breakdowns);
-  essayRecords = mergeRecordArrays(p.essayRecords, essayRecords);
-  // 以下維持取代（理由見上方註解）
+  // 紀錄類陣列已在 absorbRemoteRecords 內合併完成，這裡不再重複處理
+  // 以下維持取代（理由見上方註解：刪除是刻意動作／暫存區）
   if (Array.isArray(p.inboxItems)) inboxItems = p.inboxItems;
   if (Array.isArray(p.planItems)) planItems = p.planItems;
-  if (p.egiuDone && typeof p.egiuDone === 'object') egiuDone = p.egiuDone;
   if (Array.isArray(p.planImportedWeeks)) planImportedWeeks = p.planImportedWeeks;
   saveData();
 }
