@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785166217166,
+  "savedAt": 1785748300699,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -706,7 +706,17 @@
       "words": ""
     }
   ],
-  "inboxItems": [],
+  "inboxItems": [
+    {
+      "type": "practice",
+      "skill": "reading",
+      "material": "The Introduction of SATs (List of Headings)",
+      "date": "2026-08-03",
+      "score": "3/7 (43%)",
+      "causes": "沒有先概括整段主旨，直接從選項尋找相同單字，被原文同字、段首資訊與局部細節干擾",
+      "notes": "先用中文寫出段落摘要，再判斷哪個標題能涵蓋整段內容"
+    }
+  ],
   "planItems": [
     {
       "id": 1785166217166,
