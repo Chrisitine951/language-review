@@ -637,6 +637,11 @@ const PLAN_TIPS = [
 // ============================================================
 const IELTS_PLAN_START = '2026-07-20';
 const IELTS_PLAN_TOTAL_WEEKS = 18;
+// 【快取診斷用】改大表時務必一起改這個版本號，並同步更新 english.html 裡
+// <script src="data-ielts.js?v=...">的版本。設定頁會顯示這個值——如果她說
+// 「大表沒更新」，先叫她看這個數字對不對，就能立刻分辨是「檔案沒上傳」
+// 還是「瀏覽器拿到舊快取」（2026-08-04 踩過：無痕模式是新的、一般瀏覽是舊的）。
+const IELTS_PLAN_VERSION = '2.4.0';
 const IELTS_STUDY_PLAN = [
   // ===== 第一階段：方法建立（W1–3）=====
   { week: '2026-07-20', no: 1, phase: '第一階段・方法建立（W1–3）', egiu: 'Unit 1–7', items: [
