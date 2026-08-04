@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785822413886,
+  "savedAt": 1785822542405,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -1168,6 +1168,76 @@
       "done": false,
       "score": "",
       "fromPlan": true
+    },
+    {
+      "id": 1785822542405,
+      "week": "2026-08-10",
+      "skill": "reading",
+      "day": 0,
+      "text": "劍10 T1 P1 不限時＋拆解檢核（每題都過）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822542406,
+      "week": "2026-08-10",
+      "skill": "reading",
+      "day": 1,
+      "text": "劍10 T1 P2 不限時＋拆解檢核",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822542407,
+      "week": "2026-08-10",
+      "skill": "speaking",
+      "day": 2,
+      "text": "Cambly＋語料整理",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822542408,
+      "week": "2026-08-10",
+      "skill": "writing",
+      "day": 4,
+      "text": "寫作範文背誦/解析 1 篇",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822542409,
+      "week": "2026-08-10",
+      "skill": "listening",
+      "day": 5,
+      "text": "劍10 T2 聽力完整一回＋六步驟檢討",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822542410,
+      "week": "2026-08-10",
+      "skill": "writing",
+      "day": 6,
+      "text": "🔄 機動日：每週回顧＋補做落後的；沒落後就休息",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822542411,
+      "week": "2026-08-10",
+      "skill": "material",
+      "day": 6,
+      "text": "EGIU Unit 28–36",
+      "done": false,
+      "score": "",
+      "fromPlan": true
     }
   ],
   "practiceRecords": [
@@ -1472,7 +1542,8 @@
   "planImportedWeeks": [
     "2026-07-27",
     "2026-07-20",
-    "2026-08-03"
+    "2026-08-03",
+    "2026-08-10"
   ],
   "irregularSchedule": {}
 }
