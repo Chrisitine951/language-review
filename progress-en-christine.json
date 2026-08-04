@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785822734227,
+  "savedAt": 1785823163527,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -1100,76 +1100,6 @@
       "fromPlan": true
     },
     {
-      "id": 1785822722096,
-      "week": "2026-08-03",
-      "skill": "reading",
-      "day": 0,
-      "text": "平行閱讀法 讀完剩餘章節",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785822722097,
-      "week": "2026-08-03",
-      "skill": "reading",
-      "day": 1,
-      "text": "平行閱讀法 全書重點整理（五步驟／三重現／七類信號詞）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785822722098,
-      "week": "2026-08-03",
-      "skill": "speaking",
-      "day": 2,
-      "text": "Cambly＋口說範例回答解析 第2篇",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785822722099,
-      "week": "2026-08-03",
-      "skill": "writing",
-      "day": 4,
-      "text": "寫作範文背誦/解析 第2篇",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785822722100,
-      "week": "2026-08-03",
-      "skill": "listening",
-      "day": 5,
-      "text": "【暖身】劍10 T1 聽力完整一回＋六步驟檢討（約3小時）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785822722101,
-      "week": "2026-08-03",
-      "skill": "writing",
-      "day": 6,
-      "text": "🔄 機動日：每週回顧（讀完了！下週開始做題）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785822722102,
-      "week": "2026-08-03",
-      "skill": "material",
-      "day": 6,
-      "text": "EGIU Unit 19–27",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
       "id": 1785822734227,
       "week": "2026-08-10",
       "skill": "reading",
@@ -1235,6 +1165,86 @@
       "skill": "material",
       "day": 6,
       "text": "EGIU Unit 28–36",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785823163526,
+      "week": "2026-08-03",
+      "skill": "speaking",
+      "day": 0,
+      "text": "口說課 30 分鐘（Cambly 專門老師）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785823163527,
+      "week": "2026-08-03",
+      "skill": "reading",
+      "day": 0,
+      "text": "平行閱讀法 第二章 最後兩節",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785823163528,
+      "week": "2026-08-03",
+      "skill": "reading",
+      "day": 1,
+      "text": "平行閱讀法 第三章（五步驟方法論）讀完，全書收尾",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785823163529,
+      "week": "2026-08-03",
+      "skill": "speaking",
+      "day": 2,
+      "text": "口說課 30 分鐘＋課後語料整理",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785823163530,
+      "week": "2026-08-03",
+      "skill": "writing",
+      "day": 4,
+      "text": "範文分析 1 篇＋抽語料進「Task 2 佳句」（不背整篇）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785823163531,
+      "week": "2026-08-03",
+      "skill": "listening",
+      "day": 5,
+      "text": "【第一次】劍10 T1 聽力完整一回＋六步驟檢討（約3小時，重點是找出弱點在哪）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785823163532,
+      "week": "2026-08-03",
+      "skill": "writing",
+      "day": 6,
+      "text": "🔄 機動日：每週回顧（平行閱讀法讀完了！下週開始做題）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785823163533,
+      "week": "2026-08-03",
+      "skill": "material",
+      "day": 6,
+      "text": "EGIU Unit 14–20",
       "done": false,
       "score": "",
       "fromPlan": true
@@ -1542,8 +1552,8 @@
   "planImportedWeeks": [
     "2026-07-27",
     "2026-07-20",
-    "2026-08-03",
-    "2026-08-10"
+    "2026-08-10",
+    "2026-08-03"
   ],
   "irregularSchedule": {}
 }
