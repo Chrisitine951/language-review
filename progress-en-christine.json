@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785812136854,
+  "savedAt": 1785812216691,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -830,76 +830,6 @@
   "inboxItems": [],
   "planItems": [
     {
-      "id": 1784526398249,
-      "week": "2026-07-20",
-      "skill": "reading",
-      "day": 0,
-      "text": "Cambly口說課",
-      "done": true,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784526398250,
-      "week": "2026-07-20",
-      "skill": "listening",
-      "day": 1,
-      "text": "平行閱讀法五步驟精讀，p.12第一節（到練習一）+EGIU Unit4",
-      "done": true,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784526398251,
-      "week": "2026-07-20",
-      "skill": "speaking",
-      "day": 2,
-      "text": "平行閱讀法第一節選擇題 練習二三、第二節summary 例一（p.30）+EGIU Unit5",
-      "done": true,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784526398252,
-      "week": "2026-07-20",
-      "skill": "writing",
-      "day": 4,
-      "text": "Simon Task 2 四段結構＋13句法熟讀（先不寫全篇）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784526398253,
-      "week": "2026-07-20",
-      "skill": "reading",
-      "day": 5,
-      "text": "劍10 T1 P2 不限時＋拆解檢核",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784526398254,
-      "week": "2026-07-20",
-      "skill": "writing",
-      "day": 6,
-      "text": "Task 2 Opinion 模板背誦＋每週回顧",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1784526398255,
-      "week": "2026-07-20",
-      "skill": "material",
-      "day": 5,
-      "text": "EGIU Unit 1–9（平日1單元、假日可2，週六快速複習）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
       "id": 1785811970889,
       "week": "2026-08-03",
       "skill": "reading",
@@ -966,6 +896,136 @@
       "day": 6,
       "text": "EGIU Unit 19–27",
       "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812177816,
+      "week": "2026-07-27",
+      "skill": "reading",
+      "day": 0,
+      "text": "平行閱讀法 第二章（填空題）精讀",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812177817,
+      "week": "2026-07-27",
+      "skill": "reading",
+      "day": 1,
+      "text": "平行閱讀法 第二章 其餘題型",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812177818,
+      "week": "2026-07-27",
+      "skill": "speaking",
+      "day": 2,
+      "text": "Cambly＋口說範例回答解析 1 篇（記進「每週範文紀錄」）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812177819,
+      "week": "2026-07-27",
+      "skill": "writing",
+      "day": 4,
+      "text": "寫作範文背誦/解析 1 篇（記進「每週範文紀錄」）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812177820,
+      "week": "2026-07-27",
+      "skill": "reading",
+      "day": 5,
+      "text": "平行閱讀法 第三章（五步驟方法論）精讀",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812177821,
+      "week": "2026-07-27",
+      "skill": "writing",
+      "day": 6,
+      "text": "🔄 機動日：每週回顧＋補做落後的；沒落後就休息",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812177822,
+      "week": "2026-07-27",
+      "skill": "material",
+      "day": 6,
+      "text": "EGIU Unit 10–18",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812181926,
+      "week": "2026-07-20",
+      "skill": "reading",
+      "day": 0,
+      "text": "平行閱讀法 第一章（三種語言重現）精讀",
+      "done": true,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812181927,
+      "week": "2026-07-20",
+      "skill": "speaking",
+      "day": 2,
+      "text": "Cambly＋課後把語料丟收集箱",
+      "done": true,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812181928,
+      "week": "2026-07-20",
+      "skill": "writing",
+      "day": 4,
+      "text": "Simon Task 2 四段結構＋13句法熟讀（先不寫全篇）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812181929,
+      "week": "2026-07-20",
+      "skill": "reading",
+      "day": 5,
+      "text": "平行閱讀法 第二章（題型分析）開始",
+      "done": true,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812181930,
+      "week": "2026-07-20",
+      "skill": "writing",
+      "day": 6,
+      "text": "🔄 機動日：每週回顧＋補做落後的；沒落後就休息",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785812181931,
+      "week": "2026-07-20",
+      "skill": "material",
+      "day": 6,
+      "text": "EGIU Unit 1–7（每日1單元）",
+      "done": true,
       "score": "",
       "fromPlan": true
     }
@@ -1160,8 +1220,9 @@
     "7": "2026-07-28"
   },
   "planImportedWeeks": [
-    "2026-07-20",
-    "2026-08-03"
+    "2026-08-03",
+    "2026-07-27",
+    "2026-07-20"
   ],
   "irregularSchedule": {}
 }
