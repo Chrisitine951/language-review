@@ -733,16 +733,17 @@
         </div>
         <div class="settings-section settings-group-body" id="sg-body-backup">
           <div class="card" style="display:flex; flex-direction:column; gap:10px;">
-            <div style="font-size:13px; color:var(--text2); line-height:1.6;">匯出後會下載一個 <strong>.json</strong> 檔案，存到 iCloud 或任何地方。換手機時用匯入還原。</div>
+            <div style="font-size:13px; color:var(--text2); line-height:1.6;">匯出後會下載一個 <strong>.json</strong> 檔案，存到 iCloud 或任何地方。換手機時用匯入還原。<br>
+              <span style="color:var(--text3); font-size:12px;">匯入可一次選多個檔案，並且會問你要「合併」還是「覆蓋」。<strong>合併</strong>只增不減，適合把散落在不同備份或 GitHub 歷史版本裡的紀錄兜回來。</span></div>
             <button class="settings-save-btn" onclick="exportData()" style="background:var(--green);">📤 匯出所有資料</button>
-            <button class="settings-save-btn" onclick="document.getElementById('import-file').click()" style="background:var(--surface2); color:var(--text);">📥 匯入資料</button>
-            <input type="file" id="import-file" accept=".json" style="display:none;" onchange="importData(event)">
+            <button class="settings-save-btn" onclick="document.getElementById('import-file').click()" style="background:var(--surface2); color:var(--text);">📥 匯入資料（可多選）</button>
+            <input type="file" id="import-file" accept=".json" multiple style="display:none;" onchange="importData(event)">
             <div id="import-status"></div>
           </div>
         </div>
 
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          IELTS English App v2.3.0<br>德文功能已搬到 german.html
+          IELTS English App v2.3.1<br>德文功能已搬到 german.html
         </div>
       </div>
     </div>
@@ -3915,40 +3916,113 @@ function exportData() {
   URL.revokeObjectURL(url);
   showToast('✅ 已匯出，請把檔案存到 iCloud 或安全的地方');
 }
+// ============================================================
+// 匯入（v2.3.1 起支援「合併模式」）
+//
+// 【為什麼要有合併模式】2026-08-03 發生過一次真實資料遺失：兩台裝置互相覆蓋，
+// 導致不同的紀錄散落在 GitHub 的多個歷史 commit 裡，沒有任何單一版本是完整的。
+// 當時是靠人工把各版本兜起來，很花時間。有了合併模式，她可以直接從 GitHub 下載
+// 那幾個歷史版本的 JSON，一個一個匯入，App 自己聯集——不用再靠人工比對。
+//
+// 兩種模式：
+//   合併（預設，安全）：只增不減。走 absorbRemoteRecords 那套「只前進不後退」的規則，
+//     現有資料一筆都不會消失，適合救回散落在多個版本裡的紀錄。
+//   覆蓋：整包取代目前進度，適合「換手機、要完整還原某一份備份」的情境。
+// 支援一次選多個檔案，會依序處理（合併模式下順序不影響最終結果）。
+// ============================================================
 function importData(event) {
-  const file = event.target.files[0];
-  if (!file) return;
+  const files = Array.from(event.target.files || []);
+  if (files.length === 0) return;
   const statusEl = document.getElementById('import-status');
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    try {
-      const data = JSON.parse(e.target.result);
-      if (!data.reviewSchedule && !data.planItems && !data.diaryEntries) throw new Error('不是本 App 的備份檔');
-      if (!confirm('匯入會覆蓋目前的英文進度（單字排程、計畫、練習紀錄…），確定嗎？')) { event.target.value = ''; return; }
-      if (data.reviewSchedule) reviewSchedule = data.reviewSchedule;
-      if (data.grammarStats) grammarStats = data.grammarStats;
-      if (Array.isArray(data.diaryEntries)) diaryEntries = data.diaryEntries;
-      if (Array.isArray(data.engooRecords)) engooRecords = data.engooRecords;
-      if (Array.isArray(data.inboxItems)) inboxItems = data.inboxItems;
-      if (Array.isArray(data.planItems)) planItems = data.planItems;
-      if (Array.isArray(data.practiceRecords)) practiceRecords = data.practiceRecords;
-      if (Array.isArray(data.breakdowns)) breakdowns = data.breakdowns;
-      if (Array.isArray(data.essayRecords)) essayRecords = data.essayRecords;
-      if (data.egiuDone && typeof data.egiuDone === 'object') egiuDone = data.egiuDone;
-      if (Array.isArray(data.planImportedWeeks)) planImportedWeeks = data.planImportedWeeks;
-      if (data.irregularSchedule && typeof data.irregularSchedule === 'object') irregularSchedule = data.irregularSchedule;
-      if (data.examDate) localStorage.setItem('lren_exam_date', data.examDate);
-      if (data.examTarget) localStorage.setItem('lren_exam_target', data.examTarget);
-      saveData();
-      updateHome(); initSettings();
-      statusEl.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 匯入成功！</div>`;
-      showToast('✅ 資料已匯入');
-    } catch(err) {
-      statusEl.innerHTML = `<div class="ai-result" style="color:var(--danger);">❌ 匯入失敗：${escHtml(err.message)}</div>`;
+  const mergeMode = confirm(
+    `要用哪一種方式匯入這 ${files.length} 個檔案？\n\n` +
+    `【確定】＝合併模式（建議）\n` +
+    `　只增不減，現有資料一筆都不會消失。\n` +
+    `　適合：把散落在多個備份/歷史版本裡的紀錄兜回來。\n\n` +
+    `【取消】＝覆蓋模式\n` +
+    `　整包取代目前的進度。\n` +
+    `　適合：換手機，要完整還原某一份備份。`
+  );
+  if (!mergeMode) {
+    if (!confirm('⚠️ 覆蓋模式會清掉目前的英文進度（單字排程、計畫、練習紀錄…），確定嗎？')) {
+      event.target.value = ''; return;
     }
+  }
+  let done = 0, failed = 0, totalAdded = 0;
+  const errors = [];
+  const finish = () => {
+    saveData();
+    updateHome(); initSettings();
+    if (currentPage === 'ielts') initIelts();
+    if (currentPage === 'grammar') initGrammar();
+    if (currentPage === 'records') initRecords();
+    const summary = mergeMode
+      ? `✅ 已合併 ${done} 個檔案，補進 ${totalAdded} 筆先前沒有的資料。<br>
+         <span style="font-size:12px; color:var(--text2);">目前共有練習紀錄 ${practiceRecords.length} 筆、EGIU 打卡 ${Object.keys(egiuDone).length} 個單元、單字排程 ${Object.keys(reviewSchedule).length} 個。</span>`
+      : `✅ 已覆蓋匯入 ${done} 個檔案`;
+    statusEl.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">${summary}
+      ${failed ? `<br><span style="color:var(--amber);">⚠️ ${failed} 個檔案讀取失敗：${escHtml(errors.join('；'))}</span>` : ''}
+      ${mergeMode ? '<br><span style="font-size:12px; color:var(--text3);">確認資料正確後，記得到上面按「☁️ 立即同步」推上雲端。</span>' : ''}</div>`;
+    showToast(mergeMode ? `✅ 已合併 ${done} 個檔案` : '✅ 資料已匯入');
     event.target.value = '';
   };
-  reader.readAsText(file);
+  // 依序處理每個檔案（FileReader 是非同步的，用遞迴串起來，避免同時寫入互相蓋掉）
+  const processNext = (i) => {
+    if (i >= files.length) { finish(); return; }
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const data = JSON.parse(e.target.result);
+        if (!data.reviewSchedule && !data.planItems && !data.diaryEntries && !data.practiceRecords) {
+          throw new Error('不是本 App 的備份檔');
+        }
+        if (mergeMode) {
+          // 合併：直接複用同步那套邏輯，規則完全一致（只前進不後退）
+          totalAdded += absorbRemoteRecords(data);
+          // 計畫項目在同步時刻意不合併（刪掉的不該復活），但「匯入舊備份」是不同情境：
+          // 她是主動要把舊資料兜回來，這裡以 id 聯集，缺的補上、現有的不動
+          if (Array.isArray(data.planItems)) {
+            const before = planItems.length;
+            planItems = mergeRecordArrays(planItems, data.planItems);
+            totalAdded += planItems.length - before;
+          }
+          if (Array.isArray(data.planImportedWeeks)) {
+            data.planImportedWeeks.forEach(w => { if (!planImportedWeeks.includes(w)) planImportedWeeks.push(w); });
+          }
+          // 收集箱待確認項目沒有 id，無法可靠去重 → 只在本機是空的時候才補進來，
+          // 避免把已經處理掉的項目又倒回來，也避免產生重複
+          if (Array.isArray(data.inboxItems) && data.inboxItems.length && inboxItems.length === 0) {
+            inboxItems = data.inboxItems.slice();
+            totalAdded += inboxItems.length;
+          }
+        } else {
+          if (data.reviewSchedule) reviewSchedule = data.reviewSchedule;
+          if (data.grammarStats) grammarStats = data.grammarStats;
+          if (Array.isArray(data.diaryEntries)) diaryEntries = data.diaryEntries;
+          if (Array.isArray(data.engooRecords)) engooRecords = data.engooRecords;
+          if (Array.isArray(data.inboxItems)) inboxItems = data.inboxItems;
+          if (Array.isArray(data.planItems)) planItems = data.planItems;
+          if (Array.isArray(data.practiceRecords)) practiceRecords = data.practiceRecords;
+          if (Array.isArray(data.breakdowns)) breakdowns = data.breakdowns;
+          if (Array.isArray(data.essayRecords)) essayRecords = data.essayRecords;
+          if (data.egiuDone && typeof data.egiuDone === 'object') egiuDone = data.egiuDone;
+          if (Array.isArray(data.planImportedWeeks)) planImportedWeeks = data.planImportedWeeks;
+          if (data.irregularSchedule && typeof data.irregularSchedule === 'object') irregularSchedule = data.irregularSchedule;
+        }
+        if (data.examDate) localStorage.setItem('lren_exam_date', data.examDate);
+        if (data.examTarget) localStorage.setItem('lren_exam_target', data.examTarget);
+        done++;
+      } catch(err) {
+        failed++;
+        errors.push(`${files[i].name}（${err.message}）`);
+      }
+      processNext(i + 1);
+    };
+    reader.onerror = () => { failed++; errors.push(`${files[i].name}（讀取失敗）`); processNext(i + 1); };
+    reader.readAsText(files[i]);
+  };
+  statusEl.innerHTML = `<div class="ai-loading" style="margin-top:8px;">處理 ${files.length} 個檔案中…</div>`;
+  processNext(0);
 }
 
 // ============================================================
