@@ -7,10 +7,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="雅思英文">
 <title>IELTS English</title>
-<link rel="stylesheet" href="core.css?v=2.4.0">
-<script src="data.js?v=2.4.0"></script>
-<script src="data-ielts.js?v=2.4.0"></script>
-<script src="core.js?v=2.4.0"></script>
+<link rel="stylesheet" href="core.css?v=2.4.1">
+<script src="data.js?v=2.4.1"></script>
+<script src="data-ielts.js?v=2.4.1"></script>
+<script src="core.js?v=2.4.1"></script>
 <style>
   /* 英文 App 主色＝藍色（德文 App 是紅色，兩支 App 一眼可分辨） */
   :root { --primary: var(--en); --primary-light: var(--en-light); }
@@ -140,6 +140,7 @@
         <button class="filter-chip" onclick="setVocabSource('cambly', this)">Cambly</button>
         <button class="filter-chip" onclick="setVocabSource('engoo', this)">Engoo</button>
       </div>
+      <div id="deck-info" style="font-size:12px; color:var(--text3); padding:0 16px 4px; line-height:1.6;"></div>
 
       <div id="flashcard-mode">
         <div class="flashcard-container">
@@ -749,7 +750,7 @@
         </div>
 
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          IELTS English App v2.4.0<br>
+          IELTS English App v2.4.1<br>
           大表版本 <span id="settings-plan-version">—</span>　<span id="settings-cache-hint" style="color:var(--amber);"></span><br>
           德文功能已搬到 german.html
         </div>
@@ -1518,6 +1519,20 @@ function setVocabMode(mode) {
   if (mode === 'type') { buildDeck(); renderTyping(); }
   if (mode === 'irregular') { setIrregularSubMode(irregularSubMode); }
 }
+// ============================================================
+// 建立這一輪的單字牌組（v2.4.1 修：新字被到期複習餓死的 bug）
+//
+// 【舊行為的問題】原本是 `due.slice(0,20)` 先填滿，再用 `20 - dueSlice.length` 補新字。
+// 當到期複習的字 ≥20 個（她有 130 個已排程單字，長期都超過），剩餘名額就是 0，
+// **新加入的單字永遠不會出現**——使用者實際回報「最近加的單字都很少出現，
+// 一直是我看過/滑過的那些」（2026-08-04）。
+//
+// 【新行為】固定保留 NEW_WORD_QUOTA 張給新字；若新字不夠就把名額還給到期複習，
+// 若到期的不夠多則反過來多補新字。兩邊都不會餓死對方。
+// 最後整副洗牌，讓新舊字穿插出現（比「複習完才輪到新字」有變化，也比較不容易分心）。
+// ============================================================
+const DECK_SIZE = 20;
+const NEW_WORD_QUOTA = 6; // 每一輪至少留給新字的張數（前提是真的還有新字）
 function buildDeck() {
   const vocab = sourcePool();
   const now = Date.now();
@@ -1528,14 +1543,34 @@ function buildDeck() {
     else if (s.nextReview <= now) due.push(w);
   });
   shuffle(due); shuffle(fresh);
-  const dueSlice = due.slice(0, 20);
-  currentDeck = [...dueSlice, ...fresh.slice(0, 20 - dueSlice.length)];
+  const freshTake = Math.min(fresh.length, NEW_WORD_QUOTA);
+  const dueTake = Math.min(due.length, DECK_SIZE - freshTake);
+  // 到期的不夠填滿時，剩下的名額再多給新字
+  const freshExtra = Math.min(fresh.length - freshTake, DECK_SIZE - dueTake - freshTake);
+  currentDeck = shuffle([...due.slice(0, dueTake), ...fresh.slice(0, freshTake + freshExtra)]);
+  // 兩種都沒有（全部都在未來的複習排程裡）→ 退回「最接近到期」的 20 個，畫面不會空白
   if (currentDeck.length === 0) {
     const scheduled = vocab.map(w => ({ w, s: getSchedule(w.id) })).filter(x => x.s.nextReview > 0)
-      .sort((a, b) => a.s.nextReview - b.s.nextReview).slice(0, 20).map(x => x.w);
-    currentDeck = scheduled.length ? scheduled : [...vocab].slice(0, 20);
+      .sort((a, b) => a.s.nextReview - b.s.nextReview).slice(0, DECK_SIZE).map(x => x.w);
+    currentDeck = scheduled.length ? scheduled : [...vocab].slice(0, DECK_SIZE);
   }
+  // 讓她看得到這一輪的組成，以及還積了多少到期複習沒清
+  window._deckInfo = { due: dueTake, fresh: freshTake + freshExtra, dueBacklog: due.length, freshLeft: fresh.length };
   currentCardIdx = 0; cardFlipped = false;
+  renderDeckInfo();
+}
+function renderDeckInfo() {
+  const el = document.getElementById('deck-info');
+  if (!el) return;
+  const d = window._deckInfo;
+  if (!d) { el.textContent = ''; return; }
+  const parts = [];
+  if (d.due) parts.push(`🔁 到期複習 ${d.due}`);
+  if (d.fresh) parts.push(`🆕 新單字 ${d.fresh}`);
+  let txt = `本輪 ${parts.join('＋')} 張`;
+  if (d.dueBacklog > d.due) txt += `　（還有 ${d.dueBacklog - d.due} 個到期複習排在後面）`;
+  if (d.freshLeft > d.fresh) txt += `　（未學過的還有 ${d.freshLeft - d.fresh} 個）`;
+  el.textContent = txt;
 }
 function renderFlashcard() {
   if (currentDeck.length === 0) return;
