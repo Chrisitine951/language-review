@@ -7,10 +7,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="雅思英文">
 <title>IELTS English</title>
-<link rel="stylesheet" href="core.css">
-<script src="data.js"></script>
-<script src="data-ielts.js"></script>
-<script src="core.js"></script>
+<link rel="stylesheet" href="core.css?v=2.4.0">
+<script src="data.js?v=2.4.0"></script>
+<script src="data-ielts.js?v=2.4.0"></script>
+<script src="core.js?v=2.4.0"></script>
 <style>
   /* 英文 App 主色＝藍色（德文 App 是紅色，兩支 App 一眼可分辨） */
   :root { --primary: var(--en); --primary-light: var(--en-light); }
@@ -718,6 +718,12 @@
           </div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">文法題</div><div class="settings-item-sub" id="settings-grammar-count">—</div></div><span class="tag tag-green">文法</span></div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">雅思練習紀錄</div><div class="settings-item-sub" id="settings-practice-count">—</div></div><span class="tag tag-amber">雅思</span></div>
+          <div class="settings-item" style="flex-direction: column; align-items: stretch;">
+            <div class="settings-item-title">🔍 檢查重複的紀錄</div>
+            <div class="settings-item-sub" style="line-height:1.6;">多台裝置同步或合併匯入舊備份後，同一筆紀錄可能會出現兩次（內容一樣但編號不同）。這裡會找出來讓你確認，保留資料最完整的那筆。</div>
+            <button class="settings-save-btn" style="background:var(--surface2); color:var(--text);" onclick="scanDuplicates()">開始檢查</button>
+            <div id="dup-scan-result"></div>
+          </div>
           <div class="settings-item">
             <div class="settings-item-left"><div class="settings-item-title">重置今日進度</div><div class="settings-item-sub">清除今天的翻牌記錄</div></div>
             <button onclick="resetToday()" style="font-size:13px; color:var(--de); font-weight:600;">重置</button>
@@ -743,7 +749,9 @@
         </div>
 
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          IELTS English App v2.3.1<br>德文功能已搬到 german.html
+          IELTS English App v2.4.0<br>
+          大表版本 <span id="settings-plan-version">—</span>　<span id="settings-cache-hint" style="color:var(--amber);"></span><br>
+          德文功能已搬到 german.html
         </div>
       </div>
     </div>
@@ -3864,6 +3872,15 @@ function initSettings() {
   document.getElementById('settings-en-count').textContent = `${ENGLISH_VOCABULARY.length} 個單字`;
   document.getElementById('settings-grammar-count').textContent = `${ENGLISH_GRAMMAR.length} 道題`;
   document.getElementById('settings-practice-count').textContent = `${practiceRecords.length} 筆・拆解 ${breakdowns.length} 筆・作文 ${essayRecords.length} 篇`;
+  // 大表版本顯示（快取診斷用）：若 data-ielts.js 是瀏覽器快取裡的舊版，這裡就會顯示舊版本號或「未知」
+  const EXPECTED_PLAN_VERSION = '2.4.0'; // 跟 data-ielts.js 的 IELTS_PLAN_VERSION 對照，不一致代表載到舊快取
+  const pv = (typeof IELTS_PLAN_VERSION !== 'undefined') ? IELTS_PLAN_VERSION : '未知（舊版檔案）';
+  const pvEl = document.getElementById('settings-plan-version');
+  const hintEl = document.getElementById('settings-cache-hint');
+  if (pvEl) pvEl.textContent = pv;
+  if (hintEl) {
+    hintEl.textContent = (pv === EXPECTED_PLAN_VERSION) ? '' : '⚠️ 載到舊快取，請重新整理';
+  }
   const enSched = Object.keys(reviewSchedule).filter(k => k.startsWith('en_')).length;
   document.getElementById('settings-schedule-count').textContent = `${enSched} 個單字已排程`;
   const last = Number(localStorage.getItem('lren_lastsync') || 0);
@@ -3900,6 +3917,136 @@ function resetAllSchedule() {
   showToast('✅ 英文複習排程已清除');
 }
 // 匯出／匯入（v2.1.0：加入 egiuDone、planImportedWeeks）
+// ============================================================
+// 重複紀錄偵測（v2.3.2）
+//
+// 【為什麼需要】同步的合併規則是「以 id 聯集」——這能防止資料被洗掉，但如果同一件事
+// 在兩台裝置各自被記過一次（各自產生不同的 id），聯集就會讓它出現兩次。
+// 匯入多個歷史備份時也一樣。id 不同所以程式無法自動判定，只能靠內容比對後讓她確認。
+//
+// 【判定規則】刻意保守，只抓「幾乎確定是同一筆」的：
+//   練習紀錄：科目＋材料名稱＋日期 三者都相同
+//   拆解檢核：題目前 40 字＋日期 相同
+//   作文批改：題目前 40 字＋日期＋Task 類型 相同
+//   日記／Engoo：日期＋內容（或標題）相同
+// 只差一個字的材料名稱（例如 "Unit 5" vs "Unit 5 "）會先 trim 再比，但
+// "Unit 5" vs "Unit 05" 會被當成不同筆——寧可漏抓也不要誤刪她真正不同的紀錄。
+// ============================================================
+function normKey(s) { return String(s || '').trim().toLowerCase().replace(/\s+/g, ' '); }
+// 每一類紀錄怎麼算「同一筆」，以及怎麼比較「哪一筆比較完整」
+const DUP_GROUPS = [
+  {
+    key: 'practiceRecords', label: '練習紀錄',
+    get: () => practiceRecords, set: (v) => { practiceRecords = v; },
+    sig: r => ['p', normKey(r.skill), normKey(r.material), normKey(r.date)].join('|'),
+    desc: r => `${r.date || '無日期'}｜${r.skill || ''}｜${r.material || ''}`,
+    // 完整度：有錯因、有學習狀態、有筆記、筆記越長分數越高
+    score: r => (r.causes || []).length * 10 + (r.status ? 10 : 0) + (r.notes ? 5 + Math.min(String(r.notes).length / 50, 10) : 0) + (r.score ? 3 : 0),
+  },
+  {
+    key: 'breakdowns', label: '閱讀拆解檢核',
+    get: () => breakdowns, set: (v) => { breakdowns = v; },
+    sig: r => ['b', normKey(String(r.question || '').slice(0, 40)), normKey(r.date)].join('|'),
+    desc: r => `${r.date || '無日期'}｜${String(r.question || '').slice(0, 30)}…`,
+    score: r => (r.keyLesson ? 10 : 0) + (r.score || 0) / 100,
+  },
+  {
+    key: 'essayRecords', label: '作文批改',
+    get: () => essayRecords, set: (v) => { essayRecords = v; },
+    sig: r => ['e', normKey(String(r.question || '').slice(0, 40)), normKey(r.date), normKey(r.task)].join('|'),
+    desc: r => `${r.date || '無日期'}｜${r.task || ''}｜${String(r.question || '').slice(0, 30)}…`,
+    score: r => (r.priority ? 10 : 0) + (r.essay ? Math.min(String(r.essay).length / 100, 10) : 0),
+  },
+  {
+    key: 'diaryEntries', label: '日記',
+    get: () => diaryEntries, set: (v) => { diaryEntries = v; },
+    sig: r => ['d', normKey(r.date), normKey(String(r.text || '').slice(0, 60))].join('|'),
+    desc: r => `${r.date || '無日期'}｜${String(r.text || '').slice(0, 30)}…`,
+    score: r => String(r.text || '').length / 100,
+  },
+  {
+    key: 'engooRecords', label: 'Engoo 紀錄',
+    get: () => engooRecords, set: (v) => { engooRecords = v; },
+    sig: r => ['g', normKey(r.date), normKey(String(r.title || '').slice(0, 60))].join('|'),
+    desc: r => `${r.date || '無日期'}｜${String(r.title || '').slice(0, 30)}…`,
+    score: r => String(r.words || '').length / 100,
+  },
+];
+// 掃描：找出每一類裡「簽章相同但 id 不同」的群組
+function findDuplicates() {
+  const found = [];
+  DUP_GROUPS.forEach(g => {
+    const bySig = {};
+    (g.get() || []).forEach(r => {
+      if (!r) return;
+      const s = g.sig(r);
+      (bySig[s] = bySig[s] || []).push(r);
+    });
+    Object.keys(bySig).forEach(s => {
+      if (bySig[s].length > 1) found.push({ group: g, sig: s, items: bySig[s] });
+    });
+  });
+  return found;
+}
+function scanDuplicates() {
+  const el = document.getElementById('dup-scan-result');
+  const dups = findDuplicates();
+  if (dups.length === 0) {
+    el.innerHTML = `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 沒有找到重複的紀錄。<br>
+      <span style="font-size:12px; color:var(--text2);">已檢查：練習紀錄 ${practiceRecords.length} 筆、拆解 ${breakdowns.length} 筆、作文 ${essayRecords.length} 篇、日記 ${diaryEntries.length} 篇、Engoo ${engooRecords.length} 筆。</span></div>`;
+    return;
+  }
+  const totalExtra = dups.reduce((s, d) => s + d.items.length - 1, 0);
+  window._dupFound = dups;
+  el.innerHTML = `<div class="ai-result" style="color:var(--amber); border-left-color:var(--amber);">
+    ⚠️ 找到 <strong>${dups.length}</strong> 組重複，共有 <strong>${totalExtra}</strong> 筆多餘的紀錄。
+    <div style="margin-top:8px; font-size:12px; line-height:1.8; color:var(--text2);">
+      ${dups.map((d, i) => `<div style="padding:6px 0; border-top:1px solid var(--border);">
+        <strong>${escHtml(d.group.label)}</strong>（${d.items.length} 筆一樣）<br>
+        ${escHtml(d.group.desc(d.items[0]))}
+      </div>`).join('')}
+    </div>
+    <div style="margin-top:8px; font-size:12px; color:var(--text3);">清除時每組只會保留「內容最完整」的那一筆（錯因、學習狀態、筆記最齊全的），其餘刪除。</div>
+  </div>
+  <button class="settings-save-btn" style="background:var(--de);" onclick="removeDuplicates()">🗑️ 清除 ${totalExtra} 筆多餘紀錄</button>`;
+}
+function removeDuplicates() {
+  const dups = window._dupFound;
+  if (!dups || dups.length === 0) { showToast('請先按「開始檢查」'); return; }
+  const totalExtra = dups.reduce((s, d) => s + d.items.length - 1, 0);
+  if (!confirm(`確定要刪除 ${totalExtra} 筆重複的紀錄嗎？\n每組會保留內容最完整的那一筆，此動作無法復原。\n\n建議先到「資料備份」匯出一份再執行。`)) return;
+  // 每組挑出要保留的 id（完整度最高；相同時保留 id 較小的＝先建立的那筆）
+  const keepIds = new Set();
+  const dropIds = new Set();
+  dups.forEach(d => {
+    const sorted = [...d.items].sort((a, b) => {
+      const sa = d.group.score(a), sb = d.group.score(b);
+      if (sb !== sa) return sb - sa;
+      return String(a.id).localeCompare(String(b.id));
+    });
+    keepIds.add(String(sorted[0].id));
+    sorted.slice(1).forEach(r => dropIds.add(String(r.id)));
+  });
+  // 逐類過濾：只刪掉被標記的 id，而且保留下來的那筆不會被誤刪
+  let removed = 0;
+  DUP_GROUPS.forEach(g => {
+    const before = (g.get() || []).length;
+    g.set((g.get() || []).filter(r => !(dropIds.has(String(r.id)) && !keepIds.has(String(r.id)))));
+    removed += before - g.get().length;
+  });
+  saveData();
+  updateHome(); initSettings();
+  if (currentPage === 'ielts') initIelts();
+  if (currentPage === 'grammar') initGrammar();
+  if (currentPage === 'records') initRecords();
+  window._dupFound = null;
+  document.getElementById('dup-scan-result').innerHTML =
+    `<div class="ai-result" style="color:var(--green); border-left-color:var(--green);">✅ 已刪除 ${removed} 筆重複紀錄。<br>
+     <span style="font-size:12px; color:var(--text2);">目前練習紀錄 ${practiceRecords.length} 筆、拆解 ${breakdowns.length} 筆、作文 ${essayRecords.length} 篇。<br>
+     記得到「☁️ 自動同步進度」按「立即同步」推上雲端，其他裝置才會跟著更新。</span></div>`;
+  showToast(`✅ 已清除 ${removed} 筆重複`);
+}
+
 function exportData() {
   const data = {
     version: '2.1.0', app: 'english', exportedAt: new Date().toISOString(),
