@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785813087653,
+  "savedAt": 1785822319422,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -830,76 +830,6 @@
   "inboxItems": [],
   "planItems": [
     {
-      "id": 1785811970889,
-      "week": "2026-08-03",
-      "skill": "reading",
-      "day": 0,
-      "text": "平行閱讀法 讀完剩餘章節",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785811970890,
-      "week": "2026-08-03",
-      "skill": "reading",
-      "day": 1,
-      "text": "平行閱讀法 全書重點整理（五步驟／三重現／七類信號詞）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785811970891,
-      "week": "2026-08-03",
-      "skill": "speaking",
-      "day": 2,
-      "text": "Cambly＋口說範例回答解析 第2篇",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785811970892,
-      "week": "2026-08-03",
-      "skill": "writing",
-      "day": 4,
-      "text": "寫作範文背誦/解析 第2篇",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785811970893,
-      "week": "2026-08-03",
-      "skill": "listening",
-      "day": 5,
-      "text": "【暖身】劍10 T1 聽力完整一回＋六步驟檢討（約3小時）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785811970894,
-      "week": "2026-08-03",
-      "skill": "writing",
-      "day": 6,
-      "text": "🔄 機動日：每週回顧（讀完了！下週開始做題）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785811970895,
-      "week": "2026-08-03",
-      "skill": "material",
-      "day": 6,
-      "text": "EGIU Unit 19–27",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
       "id": 1785812177816,
       "week": "2026-07-27",
       "skill": "reading",
@@ -1100,76 +1030,6 @@
       "fromPlan": true
     },
     {
-      "id": 1785748611581,
-      "week": "2026-08-03",
-      "skill": "reading",
-      "day": 0,
-      "text": "劍10 T2 P2 不限時＋拆解檢核",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785748611582,
-      "week": "2026-08-03",
-      "skill": "listening",
-      "day": 1,
-      "text": "劍10 T2 聽力整回不限時訂正＋Shadowing",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785748611583,
-      "week": "2026-08-03",
-      "skill": "speaking",
-      "day": 2,
-      "text": "Cambly＋核心語料第2份＋自錄15分鐘",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785748611584,
-      "week": "2026-08-03",
-      "skill": "writing",
-      "day": 4,
-      "text": "Task 1 圖表詞彙（Bar／Line）＋範例改寫",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785748611585,
-      "week": "2026-08-03",
-      "skill": "reading",
-      "day": 5,
-      "text": "劍10 T2 P3 不限時",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785748611586,
-      "week": "2026-08-03",
-      "skill": "writing",
-      "day": 6,
-      "text": "Task 2 Problem/Solution 模板＋每週回顧",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785748611587,
-      "week": "2026-08-03",
-      "skill": "material",
-      "day": 5,
-      "text": "EGIU Unit 19–27（週六複習）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
       "id": 1784526398249,
       "week": "2026-07-20",
       "skill": "reading",
@@ -1235,6 +1095,76 @@
       "skill": "material",
       "day": 5,
       "text": "EGIU Unit 1–9（平日1單元、假日可2，週六快速複習）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822319422,
+      "week": "2026-08-03",
+      "skill": "reading",
+      "day": 0,
+      "text": "平行閱讀法 讀完剩餘章節",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822319423,
+      "week": "2026-08-03",
+      "skill": "reading",
+      "day": 1,
+      "text": "平行閱讀法 全書重點整理（五步驟／三重現／七類信號詞）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822319424,
+      "week": "2026-08-03",
+      "skill": "speaking",
+      "day": 2,
+      "text": "Cambly＋口說範例回答解析 第2篇",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822319425,
+      "week": "2026-08-03",
+      "skill": "writing",
+      "day": 4,
+      "text": "寫作範文背誦/解析 第2篇",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822319426,
+      "week": "2026-08-03",
+      "skill": "listening",
+      "day": 5,
+      "text": "【暖身】劍10 T1 聽力完整一回＋六步驟檢討（約3小時）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822319427,
+      "week": "2026-08-03",
+      "skill": "writing",
+      "day": 6,
+      "text": "🔄 機動日：每週回顧（讀完了！下週開始做題）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785822319428,
+      "week": "2026-08-03",
+      "skill": "material",
+      "day": 6,
+      "text": "EGIU Unit 19–27",
       "done": false,
       "score": "",
       "fromPlan": true
@@ -1540,9 +1470,9 @@
     "12": "2026-08-03"
   },
   "planImportedWeeks": [
-    "2026-08-03",
     "2026-07-27",
-    "2026-07-20"
+    "2026-07-20",
+    "2026-08-03"
   ],
   "irregularSchedule": {}
 }
