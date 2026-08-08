@@ -971,6 +971,26 @@
       ],
       "summary": "「ab-（離開）」加上「use（使用）」，原本是「偏離正軌的使用」，引申為「濫用、虐待」。",
       "savedAt": "2026-08-08T11:27:25.230Z"
+    },
+    {
+      "id": "ulkmskaisvro",
+      "word": "acclaim",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ac",
+          "meaning": "向著、朝向（加強語氣）",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個重複子音（c）只是加強語氣，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "claim",
+          "meaning": "喊叫、宣稱",
+          "grimmNote": "喉音互換 g / k / c：發音位置相同的 c/k/g 轉換，對應到原始的喊叫聲（如 cry）。"
+        }
+      ],
+      "summary": "acclaim 由表示加強語氣的字首 ac- 加上代表喊叫的字根 claim 組成，字面上的意思就是「朝著某人大聲喊叫、喝采」，演變至今成為「歡呼、稱讚」的意思。",
+      "savedAt": "2026-08-08T11:28:32.439Z"
     }
   ],
   "userRoots": []
