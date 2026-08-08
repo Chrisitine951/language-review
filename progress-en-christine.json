@@ -1,5 +1,5 @@
 {
-  "savedAt": 1786182369710,
+  "savedAt": 1786182431411,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -706,9 +706,98 @@
       "words": ""
     }
   ],
-  "inboxItems": [],
+  "inboxItems": [
+    {
+      "type": "en_vocab",
+      "word": "by means of",
+      "meaning": "藉由、透過；IELTS 同義改寫：using",
+      "partOfSpeech": "phrase",
+      "example": "Information can be collected by means of computers.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "population",
+      "meaning": "人口；IELTS 同義改寫：people that live there",
+      "partOfSpeech": "n.",
+      "example": "The local population depends heavily on tourism.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "wildlife",
+      "meaning": "野生動物；IELTS 同義改寫：animal life",
+      "partOfSpeech": "n.",
+      "example": "The area has a wide variety of wildlife.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "vegetation",
+      "meaning": "植被；IELTS 同義改寫：plant life",
+      "partOfSpeech": "n.",
+      "example": "Climate change may affect local vegetation.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "ocean floor",
+      "meaning": "海床；IELTS 同義改寫：sea bed / sea beds",
+      "partOfSpeech": "phrase",
+      "example": "Scientists use modern technology to study the ocean floor.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "geographical features",
+      "meaning": "地理特徵；IELTS 原文可能以具體地形描述，例如 sandstone plateaux and cliffs",
+      "partOfSpeech": "phrase",
+      "example": "The region has several distinctive geographical features.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "field trip activities",
+      "meaning": "實地考察活動；IELTS 改寫：things students on the trip could actually do",
+      "partOfSpeech": "phrase",
+      "example": "The proposal includes several field trip activities.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "handout",
+      "meaning": "講義、發放資料；IELTS 題目中可與 worksheet 形成情境上的替換",
+      "partOfSpeech": "n.",
+      "example": "The teacher gave us a handout before class.",
+      "source": "ielts"
+    },
+    {
+      "type": "en_vocab",
+      "word": "worksheet",
+      "meaning": "學習單、練習講義；IELTS 題目中可與 handout 形成情境上的替換",
+      "partOfSpeech": "n.",
+      "example": "Students were given worksheets containing additional exercises.",
+      "source": "ielts"
+    }
+  ],
   "planItems": [],
   "practiceRecords": [
+    {
+      "id": 1786182402362.3506,
+      "skill": "listening",
+      "date": "2026-08-08",
+      "material": "Cambridge IELTS 8 Test 1",
+      "score": "19/40 (Band 5.0), 第二次 25/40 (Band 6.0)",
+      "causes": [
+        "關鍵資訊漏聽",
+        "詞形與拼字錯誤",
+        "同義改寫辨識較慢",
+        "受干擾項影響",
+        "Section 4 長句與學術詞彙理解不足",
+        "注意力中斷"
+      ],
+      "notes": "Section 1-2 應預判答案類型並注意單複數；Section 3 需防範干擾選項；Section 4 加強長句理解與同義改寫辨識，利用上下文預判詞性。"
+    },
     {
       "id": 1784222073816.5935,
       "skill": "reading",
