@@ -1377,6 +1377,102 @@
       "partOfSpeech": "phrase",
       "example": "The test is intended to reduce social bias, but in fact it may create an additional barrier",
       "source": "other"
+    },
+    {
+      "id": "uenmsk6wt8g1",
+      "word": "by means of",
+      "meaning": "藉由、透過；IELTS 同義改寫：using",
+      "partOfSpeech": "phrase",
+      "source": "ielts",
+      "example": "Information can be collected by means of computers."
+    },
+    {
+      "id": "uenmsk6wt8g2",
+      "word": "population",
+      "meaning": "人口；IELTS 同義改寫：people that live there",
+      "partOfSpeech": "n.",
+      "source": "ielts",
+      "example": "The local population depends heavily on tourism."
+    },
+    {
+      "id": "uenmsk6wt8g3",
+      "word": "wildlife",
+      "meaning": "野生動物；IELTS 同義改寫：animal life",
+      "partOfSpeech": "n.",
+      "source": "ielts",
+      "example": "The area has a wide variety of wildlife."
+    },
+    {
+      "id": "uenmsk6wt8g4",
+      "word": "vegetation",
+      "meaning": "植被；IELTS 同義改寫：plant life",
+      "partOfSpeech": "n.",
+      "source": "ielts",
+      "example": "Climate change may affect local vegetation."
+    },
+    {
+      "id": "uenmsk6wt8g5",
+      "word": "ocean floor",
+      "meaning": "海床；IELTS 同義改寫：sea bed / sea beds",
+      "partOfSpeech": "phrase",
+      "source": "ielts",
+      "example": "Scientists use modern technology to study the ocean floor."
+    },
+    {
+      "id": "uenmsk6wt8g6",
+      "word": "geographical features",
+      "meaning": "地理特徵；IELTS 原文可能以具體地形描述，例如 sandstone plateaux and cliffs",
+      "partOfSpeech": "phrase",
+      "source": "ielts",
+      "example": "The region has several distinctive geographical features."
+    },
+    {
+      "id": "uenmsk6wt8g7",
+      "word": "field trip activities",
+      "meaning": "實地考察活動；IELTS 改寫：things students on the trip could actually do",
+      "partOfSpeech": "phrase",
+      "source": "ielts",
+      "example": "The proposal includes several field trip activities."
+    },
+    {
+      "id": "uenmsk6wt8g8",
+      "word": "handout",
+      "meaning": "講義、發放資料；IELTS 題目中可與 worksheet 形成情境上的替換",
+      "partOfSpeech": "n.",
+      "source": "ielts",
+      "example": "The teacher gave us a handout before class."
+    },
+    {
+      "id": "uenmsk6wt8g9",
+      "word": "worksheet",
+      "meaning": "學習單、練習講義；IELTS 題目中可與 handout 形成情境上的替換",
+      "partOfSpeech": "n.",
+      "source": "ielts",
+      "example": "Students were given worksheets containing additional exercises."
+    },
+    {
+      "id": "uenmsk6wt8g10",
+      "word": "pianist",
+      "meaning": "鋼琴家、鋼琴演奏者；注意 piano 是樂器，pianist 才是人",
+      "partOfSpeech": "n.",
+      "source": "other",
+      "example": "She is a professional pianist."
+    },
+    {
+      "id": "uenmsk6wt8g11",
+      "word": "distortion",
+      "meaning": "扭曲、失真、變形",
+      "partOfSpeech": "n.",
+      "source": "other",
+      "example": "A two-dimensional map involves some degree of distortion."
+    },
+    {
+      "id": "uenmsk6wt8g12",
+      "word": "impact",
+      "meaning": "影響；本次聽力曾聽懂但拼字錯誤",
+      "partOfSpeech": "n.",
+      "source": "other",
+      "example": "Tourism can have a significant impact on the local environment."
     }
   ],
   "germanVocabulary": [
