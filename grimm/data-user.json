@@ -465,6 +465,32 @@
       ],
       "summary": "anguish 經由加強語氣前綴與核心字根結合，原意指被勒住或卡住而無法呼吸的痛苦狀態。",
       "savedAt": "2026-08-08T10:02:14.634Z"
+    },
+    {
+      "id": "ulkmsk8dgz42",
+      "word": "accuce",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ac",
+          "meaning": "向、朝向（加強語氣）",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音（c）只是加強語氣，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "cus",
+          "meaning": "控告、責備",
+          "grimmNote": "喉音互換 g / k / c：c 與其他喉音在同族字中可以互相替換。"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "動詞或名詞字尾",
+          "grimmNote": "母音通轉 / 詞性變化"
+        }
+      ],
+      "summary": "字首 ac- 表加強語氣，核心字根 cus 意指控告、責備，組合起來就是指向某人進行控告的單字。",
+      "savedAt": "2026-08-08T10:28:24.496Z"
     }
   ],
   "userRoots": []
