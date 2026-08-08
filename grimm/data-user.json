@@ -1081,6 +1081,26 @@
       ],
       "summary": "「accomplish」由加強語氣的字首 ac- 加上表示「一起」的 com- 與表示「填滿」的字根組合而成，字面上的意思是「完全填滿、徹底達成」，演變為「完成、實現」。",
       "savedAt": "2026-08-08T11:30:33.372Z"
+    },
+    {
+      "id": "ulkmskanv2qs",
+      "word": "account",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ac-",
+          "meaning": "朝向、加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音（c）無實質意義，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "count",
+          "meaning": "計算、數數",
+          "grimmNote": "源自拉丁語 computare，其中的 p/b（唇音互換）與 c（喉音）在字源演變中對應。"
+        }
+      ],
+      "summary": "ac-（加強語氣）加上 count（計算），字面意思就是「仔細計算、結算」，進而演變為「說明、帳目、認為」。",
+      "savedAt": "2026-08-08T11:32:28.562Z"
     }
   ],
   "userRoots": []
