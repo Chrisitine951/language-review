@@ -1101,6 +1101,32 @@
       ],
       "summary": "ac-（加強語氣）加上 count（計算），字面意思就是「仔細計算、結算」，進而演變為「說明、帳目、認為」。",
       "savedAt": "2026-08-08T11:32:28.562Z"
+    },
+    {
+      "id": "ulkmskar1vru",
+      "word": "advocate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ad",
+          "meaning": "朝向",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與 d 只是加強語氣、沒有實質意義，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "voc",
+          "meaning": "喊叫、發聲",
+          "grimmNote": "核心字根，與 voice（聲音）同源，透過喉音與唇音變化互通。"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾，表動作",
+          "grimmNote": "常見的動詞字尾，用來構成使動或動作詞彙。"
+        }
+      ],
+      "summary": "「advocate」由加強語氣的前綴 ad- 加上代表喊叫的字根 voc，再加上動詞字尾 -ate 組成，原意為「向著…喊叫、為…發聲」，演變為「擁護、倡導、辯護」。",
+      "savedAt": "2026-08-08T11:34:57.351Z"
     }
   ],
   "userRoots": []
