@@ -667,6 +667,26 @@
       ],
       "summary": "「adolescence」由表示「朝向」的 ad- 加上表示「長大」的 root olesc，再加上名詞字尾 -ence 組成，字面意思就是「正朝著長大成人邁進的狀態」，也就是「青春期」。",
       "savedAt": "2026-08-08T11:03:02.573Z"
+    },
+    {
+      "id": "ulkmsk9nuh8a",
+      "word": "adopt",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ad",
+          "meaning": "朝向；加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 ad- 僅用來加強語氣，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "opt",
+          "meaning": "選擇、挑選",
+          "grimmNote": "對應到源自印歐語系的選擇概念，與 option、select 等字同源。"
+        }
+      ],
+      "summary": "adopt 由表示加強語氣的前綴 ad- 與代表「選擇」的字根 opt 組成，字面意思是「朝向某個目標去挑選」，因此引申為「收養、採取、採納」。",
+      "savedAt": "2026-08-08T11:04:28.172Z"
     }
   ],
   "userRoots": []
