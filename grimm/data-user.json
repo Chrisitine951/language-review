@@ -221,6 +221,32 @@
       ],
       "summary": "單字「drop in」由表示「落下」的字根「drop」與表示「在內、進入」的字首「in」組成，共同形成「順道拜訪」或「偶然遇到」之意，暗示快速且不經意的進入。",
       "savedAt": "2026-08-03T06:58:04.605Z"
+    },
+    {
+      "id": "ulkmsjxpjah1",
+      "word": "aggregate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ag",
+          "meaning": "加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：單字開頭的 a 與重複子音中的第一個 g（來自字首 ad- 的同化）通常只是加強語氣、沒有實質意義。"
+        },
+        {
+          "type": "root",
+          "text": "greg",
+          "meaning": "群、集合（指羊群、人群）",
+          "grimmNote": "雙子音規則：單字裡的連續兩個 g 中，第一個 g 屬於字首 ag-，第二個 g 則為字根 greg- 的開頭。此處的 greg 為拉丁文 'grex'（意為『羊群、人群』）的字根形式。"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾",
+          "grimmNote": "-ate＝動詞或形容詞字尾。此處為動詞字尾。"
+        }
+      ],
+      "summary": "「aggregate」這個單字由表示「加強語氣」的字首「ag-」、表示「群、集合」的字根「greg-」和動詞字尾「-ate」組成，意思是「將一群事物集合起來，形成總數或總體」。",
+      "savedAt": "2026-08-08T05:29:51.593Z"
     }
   ],
   "userRoots": []
