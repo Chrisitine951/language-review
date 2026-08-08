@@ -925,6 +925,32 @@
       ],
       "summary": "absurd 由表示「離開」的字首 ab- 加上源自「聾」的字根 surd 組成，字面意思是「聽不進去、不合常理的」，也就是荒謬的。",
       "savedAt": "2026-08-08T11:26:00.346Z"
+    },
+    {
+      "id": "ulkmskagh5xm",
+      "word": "abundance",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ab",
+          "meaning": "分離、離開、否定",
+          "grimmNote": "常用字首 ab-，表示向外或離開。"
+        },
+        {
+          "type": "root",
+          "text": "und",
+          "meaning": "波浪、流動",
+          "grimmNote": "源自古印歐語，核心意象為「波浪起伏」；其中的 d 與舌音互換有關，母音 u 屬於母音通轉系列。"
+        },
+        {
+          "type": "suffix",
+          "text": "ance",
+          "meaning": "名詞字尾（表性質或狀態）",
+          "grimmNote": "常見的複合名詞字尾，由 -ant 演變而來，用以構成抽象名詞。"
+        }
+      ],
+      "summary": "abundance 由表示離開的字首 ab- 與代表波浪的字根 und 結合，字面原意為「波浪滿溢而出、多到滿出來」，因此引申為豐富與充裕。",
+      "savedAt": "2026-08-08T11:26:43.941Z"
     }
   ],
   "userRoots": []
