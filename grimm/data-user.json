@@ -247,6 +247,26 @@
       ],
       "summary": "「aggregate」這個單字由表示「加強語氣」的字首「ag-」、表示「群、集合」的字根「greg-」和動詞字尾「-ate」組成，意思是「將一群事物集合起來，形成總數或總體」。",
       "savedAt": "2026-08-08T05:29:51.593Z"
+    },
+    {
+      "id": "ulkmsjxqz2j2",
+      "word": "adverse",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ad",
+          "meaning": "向、朝向",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "verse",
+          "meaning": "轉、轉動",
+          "grimmNote": "字根來自拉丁文 *vertere* (to turn)，其中 t 轉 s，符合「舌音互換 d / t / s」規則。"
+        }
+      ],
+      "summary": "這個單字由字首 ad-（向、朝向）和字根 verse（轉動，來自 vert 經舌音互換）組成，原意為「轉向或朝向」，引申為「轉為對立、相反」之意。",
+      "savedAt": "2026-08-08T05:30:58.699Z"
     }
   ],
   "userRoots": []
