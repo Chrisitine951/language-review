@@ -589,6 +589,32 @@
       ],
       "summary": "「adhere」由表示加強語氣的字首 ad- 與代表黏著的字根 here 組成，字面上的意思就是緊緊黏在上面、堅持不懈。",
       "savedAt": "2026-08-08T10:41:41.660Z"
+    },
+    {
+      "id": "ulkmsk99lly7",
+      "word": "adjacent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ad-",
+          "meaning": "朝向、向",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：字首 ad- 的 d 重複，真正的字根從後方開始"
+        },
+        {
+          "type": "root",
+          "text": "jac",
+          "meaning": "投、擲、拋",
+          "grimmNote": "源自拉丁語 jacere（投擲），與英文 throw、jet 屬於同源字"
+        },
+        {
+          "type": "suffix",
+          "text": "-ent",
+          "meaning": "形容詞字尾（正在…的）",
+          "grimmNote": "構成形容詞，表示狀態"
+        }
+      ],
+      "summary": "由表「朝向」的字首 ad- 與表「投擲」的字根 jac 結合，原意為「投擲在旁邊」，引申為「緊鄰的、毗鄰的」。",
+      "savedAt": "2026-08-08T10:53:23.494Z"
     }
   ],
   "userRoots": []
