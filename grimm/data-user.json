@@ -1023,6 +1023,38 @@
       ],
       "summary": "accommodate 由表示加強語氣的字首 ac-、表示「共同」的 com-、表示「標準、量度」的字根 mod，以及動詞字尾 -ate 組成，字面上的意思是「使符合共同的標準或尺度」，進而引申為「容納、提供食宿、配合」。",
       "savedAt": "2026-08-08T11:28:54.118Z"
+    },
+    {
+      "id": "ulkmskak6q0q",
+      "word": "accompany",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ac-",
+          "meaning": "加強語氣、朝向",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音沒有實質意義，真正的字根從後面開始。"
+        },
+        {
+          "type": "prefix",
+          "text": "com-",
+          "meaning": "一起、共同",
+          "grimmNote": "com- / con-＝一起、共同（源自 come）"
+        },
+        {
+          "type": "root",
+          "text": "pan",
+          "meaning": "麵包、食物",
+          "grimmNote": "源自古印歐語，表示食物或供給"
+        },
+        {
+          "type": "suffix",
+          "text": "-y",
+          "meaning": "名詞字尾（動作或狀態）",
+          "grimmNote": "-y＝名詞字尾"
+        }
+      ],
+      "summary": "accompany 由加強語氣字首 ac-、表示「一起」的 com- 與表示「麵包、食物」的字根 pan 結合，字面意思就是「一起分麵包吃」，演變為陪伴、隨行。",
+      "savedAt": "2026-08-08T11:29:37.032Z"
     }
   ],
   "userRoots": []
