@@ -687,6 +687,26 @@
       ],
       "summary": "adopt 由表示加強語氣的前綴 ad- 與代表「選擇」的字根 opt 組成，字面意思是「朝向某個目標去挑選」，因此引申為「收養、採取、採納」。",
       "savedAt": "2026-08-08T11:04:28.172Z"
+    },
+    {
+      "id": "ulkmsk9oj4qb",
+      "word": "adore",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ad-",
+          "meaning": "朝向、去",
+          "grimmNote": "a＋重複子音＝加強語氣（結構），此處 ad- 表示朝向、強調"
+        },
+        {
+          "type": "root",
+          "text": "ore",
+          "meaning": "說話、祈禱",
+          "grimmNote": "源自拉丁語 orare（開口說話、祈禱），其中母音 o 與 e 透過母音通轉"
+        }
+      ],
+      "summary": "adore 由加強語氣字首 ad- 加上代表「說話、祈禱」的字根 ore 組成，原意為「向神明開口祈禱、表達崇敬」，演變至今為「愛慕、崇拜」。",
+      "savedAt": "2026-08-08T11:05:00.122Z"
     }
   ],
   "userRoots": []
