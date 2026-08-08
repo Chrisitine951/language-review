@@ -1,5 +1,5 @@
 {
-  "savedAt": 1786182025783,
+  "savedAt": 1786182200723,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -718,7 +718,7 @@
     {
       "type": "en_vocab",
       "word": "worksheets",
-      "meaning": "題目中的同義替換，可指練習講義",
+      "meaning": "練習講義、學習單",
       "partOfSpeech": "n.",
       "example": "Students were provided with worksheets containing additional exercises.",
       "source": "other"
@@ -734,7 +734,7 @@
     {
       "type": "en_vocab",
       "word": "by means of",
-      "meaning": "藉由、透過某種方式",
+      "meaning": "藉由、透過",
       "partOfSpeech": "phrase",
       "example": "The data can be gathered by means of digital technology.",
       "source": "other"
@@ -742,7 +742,7 @@
     {
       "type": "en_vocab",
       "word": "wildlife",
-      "meaning": "某地區的野生動物總稱",
+      "meaning": "野生動物總稱",
       "partOfSpeech": "n.",
       "example": "The area has a wide variety of wildlife.",
       "source": "other"
@@ -772,62 +772,39 @@
       "source": "other"
     },
     {
-      "type": "en_vocab",
-      "word": "sea bed",
-      "meaning": "海底、海床",
-      "partOfSpeech": "n.",
-      "example": "Modern technology enables researchers to examine the sea bed in greater detail.",
-      "source": "other"
-    },
-    {
-      "type": "en_vocab",
-      "word": "ocean floor",
-      "meaning": "海床、大洋底部",
-      "partOfSpeech": "n.",
-      "example": "Scientists are studying the ocean floor.",
-      "source": "other"
-    },
-    {
       "type": "t2_phrase",
-      "word": "handouts / worksheets",
-      "meaning": "講義／練習講義",
-      "usage": "Students were provided with worksheets containing additional exercises.",
+      "word": "Students were provided with worksheets containing additional exercises.",
+      "meaning": "學生獲得了包含額外練習的學習單。",
+      "usage": "用於寫作中表達提供學生練習資料",
       "topic": "教育"
     },
     {
       "type": "t2_phrase",
-      "word": "local population",
-      "meaning": "當地人口",
-      "usage": "The local population is highly dependent on tourism.",
+      "word": "The local population is highly dependent on tourism.",
+      "meaning": "當地人口高度依賴旅遊業。",
+      "usage": "用於寫作中討論人口與經濟活動的關係",
       "topic": "人口"
     },
     {
       "type": "t2_phrase",
-      "word": "by means of digital technology",
-      "meaning": "藉由數位科技",
-      "usage": "The data can be gathered by means of digital technology.",
+      "word": "The data can be gathered by means of digital technology.",
+      "meaning": "數據可以透過數位科技來收集。",
+      "usage": "用於寫作中描述方法與科技應用",
       "topic": "科技"
     },
     {
       "type": "t2_phrase",
-      "word": "impact on local animal life",
-      "meaning": "對當地動物生態的影響",
-      "usage": "Human activity may have a significant impact on local animal life.",
+      "word": "Human activity may have a significant impact on local animal life.",
+      "meaning": "人類活動可能對當地動物生態產生重大影響。",
+      "usage": "用於寫作中探討人類對自然的影響",
       "topic": "環境"
     },
     {
       "type": "t2_phrase",
-      "word": "affect local vegetation",
-      "meaning": "影響當地植被",
-      "usage": "Climate change may significantly affect local vegetation.",
+      "word": "Climate change may significantly affect local vegetation.",
+      "meaning": "氣候變遷可能會顯著影響當地植被。",
+      "usage": "用於寫作中討論氣候變遷與環境的關係",
       "topic": "環境"
-    },
-    {
-      "type": "t2_phrase",
-      "word": "examine the sea bed",
-      "meaning": "檢視海床",
-      "usage": "Modern technology enables researchers to examine the sea bed in greater detail.",
-      "topic": "通用"
     }
   ],
   "planItems": [],
