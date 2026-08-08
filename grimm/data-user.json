@@ -491,6 +491,26 @@
       ],
       "summary": "字首 ac- 表加強語氣，核心字根 cus 意指控告、責備，組合起來就是指向某人進行控告的單字。",
       "savedAt": "2026-08-08T10:28:24.496Z"
+    },
+    {
+      "id": "ulkmsk8j7bc3",
+      "word": "acquaint",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ac",
+          "meaning": "加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音沒有實質意義，真正的字根從後面開始"
+        },
+        {
+          "type": "root",
+          "text": "quaint",
+          "meaning": "知道、認識",
+          "grimmNote": "源自古法語 coint（精巧的、熟知的），追溯至拉丁語 cognoscere（知道），其中喉音 g/k/c 互換，母音 a/e/i/o/u 通轉"
+        }
+      ],
+      "summary": "ac- 加強語氣加上表示「知道、認識」的字根，字面意思就是「讓人熟知、認識」。",
+      "savedAt": "2026-08-08T10:32:51.912Z"
     }
   ],
   "userRoots": []
