@@ -511,6 +511,38 @@
       ],
       "summary": "ac- 加強語氣加上表示「知道、認識」的字根，字面意思就是「讓人熟知、認識」。",
       "savedAt": "2026-08-08T10:32:51.912Z"
+    },
+    {
+      "id": "ulkmsk8nlsz4",
+      "word": "acquisition",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ac",
+          "meaning": "向外、朝向；加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音沒有實質意義，真正字根從後面開始"
+        },
+        {
+          "type": "prefix",
+          "text": "qu",
+          "meaning": "尋求、追求",
+          "grimmNote": "喉音互換 g / k / c (qu)"
+        },
+        {
+          "type": "root",
+          "text": "isi",
+          "meaning": "取得、獲得",
+          "grimmNote": "母音通轉 a / e / i / o / u / y：母音 e 與 i 互相替換，源自字根 -quir-（追求）"
+        },
+        {
+          "type": "suffix",
+          "text": "tion",
+          "meaning": "名詞字尾（表動作或結果）",
+          "grimmNote": "常用字尾，表抽象名詞"
+        }
+      ],
+      "summary": "ac- 加強語氣加上 -quis-（追求）與名詞字尾，字面上的意思就是「追求而得到」，演變為取得、獲得。",
+      "savedAt": "2026-08-08T10:36:17.315Z"
     }
   ],
   "userRoots": []
