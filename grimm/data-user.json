@@ -287,6 +287,26 @@
       ],
       "summary": "單字 abnormal 由表示「否定」的字首 ab-，加上意為「正常的、標準的」字根 normal 組成，表示「不正常的」。",
       "savedAt": "2026-08-08T05:37:27.172Z"
+    },
+    {
+      "id": "ulkmsjy3si04",
+      "word": "abolish",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ab",
+          "meaning": "分離、離開、否定",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "olish",
+          "meaning": "終止、使消滅",
+          "grimmNote": "字根源自拉丁文 `alere` (滋養、生長) 結合動詞化字尾 `-iscere`。其中，`alere` 的母音 `a` 通轉為 `o`，流音 `r` 省略，形成 `ol`。字尾 `-iscere` 的母音 `i` 保持不變，舌音 `s` 演變為 `sh` (舌音變化)，喉音 `c` 則弱化脫落。"
+        }
+      ],
+      "summary": "單字「abolish」由字首 `ab-`（表示分離、否定）和字根 `olish` 組成，字根 `olish` 源自拉丁文 `alere`（滋養、生長），兩者結合表示「停止滋養或生長」，引申為「廢除、終止」某事。",
+      "savedAt": "2026-08-08T05:40:56.712Z"
     }
   ],
   "userRoots": []
