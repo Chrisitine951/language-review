@@ -641,6 +641,32 @@
       ],
       "summary": "由加強語氣的前綴 ad- 加上表示「小、從屬」的字根 min，以及表示人的字尾 -ister 組成，本義為「在下方協助、服侍、管理」。",
       "savedAt": "2026-08-08T10:58:03.051Z"
+    },
+    {
+      "id": "ulkmsk9m0fh9",
+      "word": "adolescence",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ad",
+          "meaning": "朝向、去",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：字首 ad- 的 d 重複，此處 d 實際對應到後方 root 的開頭，亦可視為朝向之意"
+        },
+        {
+          "type": "root",
+          "text": "olesc",
+          "meaning": "長大、成長",
+          "grimmNote": "源自拉丁語 alescere（長大），母音通轉 e 替代 a，舌音互換 t/s（拉丁語 -esc- 轉為 -esc-）"
+        },
+        {
+          "type": "suffix",
+          "text": "ence",
+          "meaning": "名詞字尾（表狀態或過程）",
+          "grimmNote": "母音通轉 e/a，複合名詞字尾"
+        }
+      ],
+      "summary": "「adolescence」由表示「朝向」的 ad- 加上表示「長大」的 root olesc，再加上名詞字尾 -ence 組成，字面意思就是「正朝著長大成人邁進的狀態」，也就是「青春期」。",
+      "savedAt": "2026-08-08T11:03:02.573Z"
     }
   ],
   "userRoots": []
