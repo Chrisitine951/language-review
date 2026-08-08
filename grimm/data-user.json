@@ -753,6 +753,32 @@
       ],
       "summary": "accuse 由表示加強語氣的字首 ac- 加上代表指責的字根 cuse 組成，字面上的意思是「大聲指責、控告」。",
       "savedAt": "2026-08-08T11:13:07.411Z"
+    },
+    {
+      "id": "ulkmska0qw2e",
+      "word": "accute",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ac",
+          "meaning": "加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音沒有實質意義，真正的字根從後面開始"
+        },
+        {
+          "type": "root",
+          "text": "cut",
+          "meaning": "尖銳、切割",
+          "grimmNote": "喉音互換 g / k / c：原字根中的 k/c 轉換"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "形容詞字尾",
+          "grimmNote": "母音通轉 e"
+        }
+      ],
+      "summary": "ac- 加強語氣，結合表示「尖銳、切割」的字根 cut，字面意思就是「像刀鋒一樣非常尖銳的」，引申為「敏銳的、急性的」。",
+      "savedAt": "2026-08-08T11:14:30.050Z"
     }
   ],
   "userRoots": []
