@@ -353,6 +353,32 @@
       ],
       "summary": "單字「abort」是由字首 ab-（表示分離、離開）與字根 ort（源自拉丁文 oriri，意為生長、出生、升起）組成。兩者結合表示「離開生長」或「停止出生」，引申為終止或墮胎。",
       "savedAt": "2026-08-08T05:48:52.835Z"
+    },
+    {
+      "id": "ulkmsjyeotr7",
+      "word": "abortion",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ab",
+          "meaning": "分離、離開",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "ort",
+          "meaning": "升起、出生",
+          "grimmNote": "此字根來自拉丁文 *oriri*（升起，出生），與英文單字 origin（起源）和 rise（升起）為同源字。其中，`o` (ort) 與 `i` (origin/rise) 為「母音通轉 a / e / i / o / u / y」；`t` (ort) 與 `s` (rise) 為「舌音互換 d / t / s」。"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾，表示動作或結果",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "「abortion」這個字是由表示「分離、離開」的字首 `ab-`，加上表示「升起、出生」的字根 `ort`，以及表示動作或結果的名詞字尾 `-ion` 所組成，字面意義為「使不再出生」或「離開了出生」。",
+      "savedAt": "2026-08-08T05:49:25.167Z"
     }
   ],
   "userRoots": []
