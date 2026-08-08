@@ -445,6 +445,26 @@
       ],
       "summary": "單字「abandon」由字首 a- (向、朝向) 與字根 bandon (命令、控制) 組成，原義為「將某物置於掌控之下」或「交出控制權」，引申為放棄、拋棄。",
       "savedAt": "2026-08-08T05:53:19.656Z"
+    },
+    {
+      "id": "ulkmsk7ftnu1",
+      "word": "anguish",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "an",
+          "meaning": "向內、加強",
+          "grimmNote": "源自拉丁文字首 ad- 的變體，此處為加強語氣的開頭部分。"
+        },
+        {
+          "type": "root",
+          "text": "guish",
+          "meaning": "掐住、使窒息、痛苦",
+          "grimmNote": "核心字根來自喉音互換 g / k / c。古印歐語源（如 ang-）本義為「窄、勒緊、窒息」，經由轉音衍生出表示痛苦與難受的字根。"
+        }
+      ],
+      "summary": "anguish 經由加強語氣前綴與核心字根結合，原意指被勒住或卡住而無法呼吸的痛苦狀態。",
+      "savedAt": "2026-08-08T10:02:14.634Z"
     }
   ],
   "userRoots": []
