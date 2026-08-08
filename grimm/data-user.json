@@ -267,6 +267,26 @@
       ],
       "summary": "這個單字由字首 ad-（向、朝向）和字根 verse（轉動，來自 vert 經舌音互換）組成，原意為「轉向或朝向」，引申為「轉為對立、相反」之意。",
       "savedAt": "2026-08-08T05:30:58.699Z"
+    },
+    {
+      "id": "ulkmsjxzatg3",
+      "word": "abnormal",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ab",
+          "meaning": "分離、離開、否定",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "normal",
+          "meaning": "正常的、標準的",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "單字 abnormal 由表示「否定」的字首 ab-，加上意為「正常的、標準的」字根 normal 組成，表示「不正常的」。",
+      "savedAt": "2026-08-08T05:37:27.172Z"
     }
   ],
   "userRoots": []
