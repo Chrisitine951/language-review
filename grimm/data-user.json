@@ -707,6 +707,32 @@
       ],
       "summary": "adore 由加強語氣字首 ad- 加上代表「說話、祈禱」的字根 ore 組成，原意為「向神明開口祈禱、表達崇敬」，演變至今為「愛慕、崇拜」。",
       "savedAt": "2026-08-08T11:05:00.122Z"
+    },
+    {
+      "id": "ulkmsk9vyz7c",
+      "word": "adverse",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ad-",
+          "meaning": "朝向、向著",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 ad- 只是加強語氣，真正的字根從後面開始"
+        },
+        {
+          "type": "root",
+          "text": "vers",
+          "meaning": "轉、面向",
+          "grimmNote": "利用「唇音互換 b / p / f / v / w」與「舌音互換 d / t / s」，其字根源自 vert（轉），指將方向轉過去"
+        },
+        {
+          "type": "suffix",
+          "text": "-e",
+          "meaning": "形容詞字尾",
+          "grimmNote": "母音通轉與字尾結構調整"
+        }
+      ],
+      "summary": "ad-（加強語氣）加上 vers（轉），字面意思是「轉向對立面的」，因此衍生出「不利的、逆向的」意思。",
+      "savedAt": "2026-08-08T11:10:47.251Z"
     }
   ],
   "userRoots": []
