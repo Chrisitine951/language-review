@@ -425,6 +425,26 @@
       ],
       "summary": "單字 abrasion 由字首 ab-（分離、離開）加上字根 ras（刮、擦）和名詞字尾 -ion 組合而成，表示「刮除、磨損」這個動作或其造成的結果。",
       "savedAt": "2026-08-08T05:51:31.844Z"
+    },
+    {
+      "id": "ulkmsjyjprca",
+      "word": "abandon",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "a",
+          "meaning": "向、朝向",
+          "grimmNote": "常用字首：a- 源自拉丁文 ad-，表示「向、朝向」。"
+        },
+        {
+          "type": "root",
+          "text": "bandon",
+          "meaning": "命令、控制、掌管",
+          "grimmNote": "字根 bandon 源自古法語 bandon，指「命令、控制、管轄權」。"
+        }
+      ],
+      "summary": "單字「abandon」由字首 a- (向、朝向) 與字根 bandon (命令、控制) 組成，原義為「將某物置於掌控之下」或「交出控制權」，引申為放棄、拋棄。",
+      "savedAt": "2026-08-08T05:53:19.656Z"
     }
   ],
   "userRoots": []
