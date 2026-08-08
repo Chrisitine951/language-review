@@ -615,6 +615,32 @@
       ],
       "summary": "由表「朝向」的字首 ad- 與表「投擲」的字根 jac 結合，原意為「投擲在旁邊」，引申為「緊鄰的、毗鄰的」。",
       "savedAt": "2026-08-08T10:53:23.494Z"
+    },
+    {
+      "id": "ulkmsk9flbf8",
+      "word": "administer",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ad-",
+          "meaning": "朝向、向著",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與 d 只是加強語氣，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "min",
+          "meaning": "小、少、低於（來自 minor）",
+          "grimmNote": "母音通轉：基本字根 min 與 mini（小）相通。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ister",
+          "meaning": "…之人（對比字尾，表示較低地位或從屬者，如 minister）",
+          "grimmNote": "複合字尾，表從屬或執行職務的人。"
+        }
+      ],
+      "summary": "由加強語氣的前綴 ad- 加上表示「小、從屬」的字根 min，以及表示人的字尾 -ister 組成，本義為「在下方協助、服侍、管理」。",
+      "savedAt": "2026-08-08T10:58:03.051Z"
     }
   ],
   "userRoots": []
