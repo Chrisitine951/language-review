@@ -307,6 +307,32 @@
       ],
       "summary": "單字「abolish」由字首 `ab-`（表示分離、否定）和字根 `olish` 組成，字根 `olish` 源自拉丁文 `alere`（滋養、生長），兩者結合表示「停止滋養或生長」，引申為「廢除、終止」某事。",
       "savedAt": "2026-08-08T05:40:56.712Z"
+    },
+    {
+      "id": "ulkmsjy6j7r5",
+      "word": "aboriginal",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ab",
+          "meaning": "分離、離開",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "origin",
+          "meaning": "起源、開端",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "al",
+          "meaning": "形容詞字尾",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "單字「aboriginal」由字首「ab-」（分離、離開）、字根「origin」（起源、開端）和形容詞字尾「-al」組成，意指「從起源開始的」或「最初的、土著的」。",
+      "savedAt": "2026-08-08T05:43:04.647Z"
     }
   ],
   "userRoots": []
