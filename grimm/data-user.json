@@ -733,6 +733,26 @@
       ],
       "summary": "ad-（加強語氣）加上 vers（轉），字面意思是「轉向對立面的」，因此衍生出「不利的、逆向的」意思。",
       "savedAt": "2026-08-08T11:10:47.251Z"
+    },
+    {
+      "id": "ulkmsk9yz4jd",
+      "word": "accuse",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ac-",
+          "meaning": "朝向、向著（加強語氣）",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音（c）無實質意義，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "cuse",
+          "meaning": "指責、控告",
+          "grimmNote": "喉音互換 g / k / c：此處保留 c 的喉音，源自拉丁語 causam（訴訟、原因）。"
+        }
+      ],
+      "summary": "accuse 由表示加強語氣的字首 ac- 加上代表指責的字根 cuse 組成，字面上的意思是「大聲指責、控告」。",
+      "savedAt": "2026-08-08T11:13:07.411Z"
     }
   ],
   "userRoots": []
