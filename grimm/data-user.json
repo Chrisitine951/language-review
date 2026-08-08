@@ -885,6 +885,26 @@
       ],
       "summary": "abridge 由加強語氣字首 a- 結合表示「短」的字根組成，字面意思就是「使之變短」，引申為「刪節、節略」。",
       "savedAt": "2026-08-08T11:19:37.713Z"
+    },
+    {
+      "id": "ulkmskaeo1jk",
+      "word": "abstract",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ab",
+          "meaning": "分離、離開",
+          "grimmNote": "常用字首 ab-＝分離、離開"
+        },
+        {
+          "type": "root",
+          "text": "stract",
+          "meaning": "拉、抽",
+          "grimmNote": "源自拉丁語 trahere（拉），t 與 c（喉音互換 g / k / c）或舌音互換相關，字根表抽離"
+        }
+      ],
+      "summary": "由表示「離開」的字首 ab- 與表示「拉」的字根組合而成，字面意思就是「向外拉開、抽離」，進而衍生出抽象、深奧的意思。",
+      "savedAt": "2026-08-08T11:25:19.543Z"
     }
   ],
   "userRoots": []
