@@ -399,6 +399,32 @@
       ],
       "summary": "單字 abound 由字首 ab- (離開、從...而出) 與字根 ound (波浪、流動) 組成，其字面意義為「從波浪中湧出」，引申為「大量存在、豐富」。",
       "savedAt": "2026-08-08T05:50:15.810Z"
+    },
+    {
+      "id": "ulkmsjyhekk9",
+      "word": "abrasion",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ab",
+          "meaning": "分離、離開",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "ras",
+          "meaning": "刮、擦",
+          "grimmNote": "此字根源自拉丁文的 radere (刮擦)，其中 d 轉變成 s，符合「舌音互換 d / t / s」規則。"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾（表示動作或結果）",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "單字 abrasion 由字首 ab-（分離、離開）加上字根 ras（刮、擦）和名詞字尾 -ion 組合而成，表示「刮除、磨損」這個動作或其造成的結果。",
+      "savedAt": "2026-08-08T05:51:31.844Z"
     }
   ],
   "userRoots": []
