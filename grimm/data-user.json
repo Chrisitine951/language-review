@@ -859,6 +859,32 @@
       ],
       "summary": "abort 由表示分離的字首 ab- 與表示生長、升起的字根 ort 組成，字面上的意思是「使之無法順利生長或半途夭折」，引申為流產、人工流產或計畫失敗。",
       "savedAt": "2026-08-08T11:18:11.355Z"
+    },
+    {
+      "id": "ulkmska7ca9j",
+      "word": "abridge",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "a",
+          "meaning": "朝向、加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）的變體，此處作加強語氣用"
+        },
+        {
+          "type": "root",
+          "text": "bridg",
+          "meaning": "短、簡短",
+          "grimmNote": "透過喉音互換 g / k / c，源自拉丁語 brevis（短），字根變體為 brev/bridg"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "動詞字尾",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "abridge 由加強語氣字首 a- 結合表示「短」的字根組成，字面意思就是「使之變短」，引申為「刪節、節略」。",
+      "savedAt": "2026-08-08T11:19:37.713Z"
     }
   ],
   "userRoots": []
