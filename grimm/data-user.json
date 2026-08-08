@@ -333,6 +333,26 @@
       ],
       "summary": "單字「aboriginal」由字首「ab-」（分離、離開）、字根「origin」（起源、開端）和形容詞字尾「-al」組成，意指「從起源開始的」或「最初的、土著的」。",
       "savedAt": "2026-08-08T05:43:04.647Z"
+    },
+    {
+      "id": "ulkmsjydzvn6",
+      "word": "abort",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ab",
+          "meaning": "分離、離開、否定",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "ort",
+          "meaning": "生長、出生、升起",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "單字「abort」是由字首 ab-（表示分離、離開）與字根 ort（源自拉丁文 oriri，意為生長、出生、升起）組成。兩者結合表示「離開生長」或「停止出生」，引申為終止或墮胎。",
+      "savedAt": "2026-08-08T05:48:52.835Z"
     }
   ],
   "userRoots": []
