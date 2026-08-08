@@ -951,6 +951,26 @@
       ],
       "summary": "abundance 由表示離開的字首 ab- 與代表波浪的字根 und 結合，字面原意為「波浪滿溢而出、多到滿出來」，因此引申為豐富與充裕。",
       "savedAt": "2026-08-08T11:26:43.941Z"
+    },
+    {
+      "id": "ulkmskahd0un",
+      "word": "abuse",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ab",
+          "meaning": "分離、離開",
+          "grimmNote": "常用字首 ab-（分離、離開）"
+        },
+        {
+          "type": "root",
+          "text": "use",
+          "meaning": "使用、利用",
+          "grimmNote": "源自古印歐語，經由拉丁文词根 us-（使用），母音 e 依母音通轉規則變化"
+        }
+      ],
+      "summary": "「ab-（離開）」加上「use（使用）」，原本是「偏離正軌的使用」，引申為「濫用、虐待」。",
+      "savedAt": "2026-08-08T11:27:25.230Z"
     }
   ],
   "userRoots": []
