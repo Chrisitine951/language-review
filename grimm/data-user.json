@@ -379,6 +379,26 @@
       ],
       "summary": "「abortion」這個字是由表示「分離、離開」的字首 `ab-`，加上表示「升起、出生」的字根 `ort`，以及表示動作或結果的名詞字尾 `-ion` 所組成，字面意義為「使不再出生」或「離開了出生」。",
       "savedAt": "2026-08-08T05:49:25.167Z"
+    },
+    {
+      "id": "ulkmsjyfrwi8",
+      "word": "abound",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ab",
+          "meaning": "離開、從...而出",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "ound",
+          "meaning": "波浪、流動",
+          "grimmNote": "母音通轉：此處的 ound 源自古拉丁文 unda (波浪、流動)，母音 o 與 u 之間發生了通轉。"
+        }
+      ],
+      "summary": "單字 abound 由字首 ab- (離開、從...而出) 與字根 ound (波浪、流動) 組成，其字面意義為「從波浪中湧出」，引申為「大量存在、豐富」。",
+      "savedAt": "2026-08-08T05:50:15.810Z"
     }
   ],
   "userRoots": []
