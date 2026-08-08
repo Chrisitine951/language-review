@@ -1,5 +1,5 @@
 {
-  "savedAt": 1785941345599,
+  "savedAt": 1785813087653,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -35,8 +35,8 @@
     },
     "en_en168": {
       "stage": 4,
-      "nextReview": 1788417648611,
-      "correct": 4,
+      "nextReview": 1785419774550,
+      "correct": 3,
       "incorrect": 1
     },
     "en_en068": {
@@ -101,15 +101,15 @@
     },
     "en_en085": {
       "stage": 4,
-      "nextReview": 1788417765946,
-      "correct": 4,
+      "nextReview": 1785419588499,
+      "correct": 3,
       "incorrect": 1
     },
     "en_en057": {
       "stage": 1,
-      "nextReview": 1785912091880,
+      "nextReview": 1784000396674,
       "correct": 1,
-      "incorrect": 7
+      "incorrect": 6
     },
     "en_en009": {
       "stage": 1,
@@ -130,9 +130,9 @@
       "incorrect": 0
     },
     "en_en011": {
-      "stage": 2,
-      "nextReview": 1786430587198,
-      "correct": 4,
+      "stage": 1,
+      "nextReview": 1784029084829,
+      "correct": 3,
       "incorrect": 1
     },
     "en_en019": {
@@ -154,9 +154,9 @@
       "incorrect": 0
     },
     "en_en007": {
-      "stage": 4,
-      "nextReview": 1788417795251,
-      "correct": 5,
+      "stage": 3,
+      "nextReview": 1785507696273,
+      "correct": 4,
       "incorrect": 3
     },
     "en_en123": {
@@ -275,9 +275,9 @@
     },
     "en_en059": {
       "stage": 1,
-      "nextReview": 1785912062244,
+      "nextReview": 1784696507949,
       "correct": 1,
-      "incorrect": 6
+      "incorrect": 5
     },
     "en_en183": {
       "stage": 4,
@@ -328,9 +328,9 @@
       "incorrect": 0
     },
     "en_en120": {
-      "stage": 4,
-      "nextReview": 1788417726084,
-      "correct": 3,
+      "stage": 3,
+      "nextReview": 1785819621586,
+      "correct": 2,
       "incorrect": 4
     },
     "en_en086": {
@@ -382,9 +382,9 @@
       "incorrect": 4
     },
     "en_en210": {
-      "stage": 4,
-      "nextReview": 1788417656392,
-      "correct": 3,
+      "stage": 3,
+      "nextReview": 1784779373938,
+      "correct": 2,
       "incorrect": 0
     },
     "en_en131": {
@@ -526,9 +526,9 @@
       "incorrect": 2
     },
     "en_en073": {
-      "stage": 4,
-      "nextReview": 1788417752415,
-      "correct": 3,
+      "stage": 3,
+      "nextReview": 1784779235433,
+      "correct": 2,
       "incorrect": 0
     },
     "en_en231": {
@@ -568,9 +568,9 @@
       "incorrect": 1
     },
     "en_en234": {
-      "stage": 3,
-      "nextReview": 1787035350187,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784518598229,
+      "correct": 1,
       "incorrect": 2
     },
     "en_en134": {
@@ -580,10 +580,10 @@
       "incorrect": 0
     },
     "en_en060": {
-      "stage": 1,
-      "nextReview": 1785912137360,
+      "stage": 2,
+      "nextReview": 1784280339177,
       "correct": 1,
-      "incorrect": 3
+      "incorrect": 2
     },
     "en_en050": {
       "stage": 3,
@@ -598,9 +598,9 @@
       "incorrect": 5
     },
     "en_en200": {
-      "stage": 3,
-      "nextReview": 1787035316491,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784902862350,
+      "correct": 1,
       "incorrect": 3
     },
     "en_en089": {
@@ -616,9 +616,9 @@
       "incorrect": 0
     },
     "en_en058": {
-      "stage": 4,
-      "nextReview": 1788417694116,
-      "correct": 3,
+      "stage": 3,
+      "nextReview": 1785507772952,
+      "correct": 2,
       "incorrect": 1
     },
     "en_en095": {
@@ -737,9 +737,9 @@
     },
     "en_uenmrnrr7sg4": {
       "stage": 1,
-      "nextReview": 1785912164024,
+      "nextReview": 1784696404934,
       "correct": 0,
-      "incorrect": 3
+      "incorrect": 2
     },
     "en_uenmrnrr7sg37": {
       "stage": 1,
@@ -760,9 +760,9 @@
       "incorrect": 0
     },
     "en_uenmrnrr7sg27": {
-      "stage": 3,
-      "nextReview": 1787035264362,
-      "correct": 2,
+      "stage": 2,
+      "nextReview": 1784903464474,
+      "correct": 1,
       "incorrect": 0
     },
     "en_uenmrnrr7sg9": {
@@ -773,69 +773,15 @@
     },
     "en_uenmrnrr7sg14": {
       "stage": 1,
-      "nextReview": 1785912080058,
+      "nextReview": 1784385069657,
       "correct": 0,
-      "incorrect": 2
+      "incorrect": 1
     },
     "en_uenmrnrr7sg45": {
       "stage": 3,
       "nextReview": 1786438359353,
       "correct": 2,
       "incorrect": 0
-    },
-    "en_en023": {
-      "stage": 1,
-      "nextReview": 1785912038169,
-      "correct": 0,
-      "incorrect": 1
-    },
-    "en_uenmrlppnhv14": {
-      "stage": 2,
-      "nextReview": 1786430452186,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_en184": {
-      "stage": 1,
-      "nextReview": 1785912106866,
-      "correct": 0,
-      "incorrect": 1
-    },
-    "en_en263": {
-      "stage": 2,
-      "nextReview": 1786430510150,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_en270": {
-      "stage": 2,
-      "nextReview": 1786430567528,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmsd0m5xz6": {
-      "stage": 2,
-      "nextReview": 1786430573064,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg43": {
-      "stage": 2,
-      "nextReview": 1786430578614,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenmrnrr7sg38": {
-      "stage": 2,
-      "nextReview": 1786430583898,
-      "correct": 1,
-      "incorrect": 0
-    },
-    "en_uenms5zse5v5": {
-      "stage": 1,
-      "nextReview": 1785912192576,
-      "correct": 0,
-      "incorrect": 1
     }
   },
   "grammarStats": {
@@ -844,8 +790,9 @@
     "total": 41
   },
   "todayStats": {
-    "flipped": 0,
-    "grammarPracticed": 0
+    "flipped": 2,
+    "grammarPracticed": 0,
+    "date": "Tue Aug 04 2026"
   },
   "diaryEntries": [],
   "engooRecords": [
@@ -882,6 +829,76 @@
   ],
   "inboxItems": [],
   "planItems": [
+    {
+      "id": 1785811970889,
+      "week": "2026-08-03",
+      "skill": "reading",
+      "day": 0,
+      "text": "平行閱讀法 讀完剩餘章節",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785811970890,
+      "week": "2026-08-03",
+      "skill": "reading",
+      "day": 1,
+      "text": "平行閱讀法 全書重點整理（五步驟／三重現／七類信號詞）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785811970891,
+      "week": "2026-08-03",
+      "skill": "speaking",
+      "day": 2,
+      "text": "Cambly＋口說範例回答解析 第2篇",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785811970892,
+      "week": "2026-08-03",
+      "skill": "writing",
+      "day": 4,
+      "text": "寫作範文背誦/解析 第2篇",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785811970893,
+      "week": "2026-08-03",
+      "skill": "listening",
+      "day": 5,
+      "text": "【暖身】劍10 T1 聽力完整一回＋六步驟檢討（約3小時）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785811970894,
+      "week": "2026-08-03",
+      "skill": "writing",
+      "day": 6,
+      "text": "🔄 機動日：每週回顧（讀完了！下週開始做題）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785811970895,
+      "week": "2026-08-03",
+      "skill": "material",
+      "day": 6,
+      "text": "EGIU Unit 19–27",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
     {
       "id": 1785812177816,
       "week": "2026-07-27",
@@ -1083,6 +1100,76 @@
       "fromPlan": true
     },
     {
+      "id": 1785748611581,
+      "week": "2026-08-03",
+      "skill": "reading",
+      "day": 0,
+      "text": "劍10 T2 P2 不限時＋拆解檢核",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785748611582,
+      "week": "2026-08-03",
+      "skill": "listening",
+      "day": 1,
+      "text": "劍10 T2 聽力整回不限時訂正＋Shadowing",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785748611583,
+      "week": "2026-08-03",
+      "skill": "speaking",
+      "day": 2,
+      "text": "Cambly＋核心語料第2份＋自錄15分鐘",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785748611584,
+      "week": "2026-08-03",
+      "skill": "writing",
+      "day": 4,
+      "text": "Task 1 圖表詞彙（Bar／Line）＋範例改寫",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785748611585,
+      "week": "2026-08-03",
+      "skill": "reading",
+      "day": 5,
+      "text": "劍10 T2 P3 不限時",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785748611586,
+      "week": "2026-08-03",
+      "skill": "writing",
+      "day": 6,
+      "text": "Task 2 Problem/Solution 模板＋每週回顧",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
+      "id": 1785748611587,
+      "week": "2026-08-03",
+      "skill": "material",
+      "day": 5,
+      "text": "EGIU Unit 19–27（週六複習）",
+      "done": false,
+      "score": "",
+      "fromPlan": true
+    },
+    {
       "id": 1784526398249,
       "week": "2026-07-20",
       "skill": "reading",
@@ -1151,159 +1238,120 @@
       "done": false,
       "score": "",
       "fromPlan": true
-    },
-    {
-      "id": 1785822734227,
-      "week": "2026-08-10",
-      "skill": "reading",
-      "day": 0,
-      "text": "劍10 T1 P1 不限時＋拆解檢核（每題都過）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785822734228,
-      "week": "2026-08-10",
-      "skill": "reading",
-      "day": 1,
-      "text": "劍10 T1 P2 不限時＋拆解檢核",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785822734229,
-      "week": "2026-08-10",
-      "skill": "speaking",
-      "day": 2,
-      "text": "Cambly＋語料整理",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785822734230,
-      "week": "2026-08-10",
-      "skill": "writing",
-      "day": 4,
-      "text": "寫作範文背誦/解析 1 篇",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785822734231,
-      "week": "2026-08-10",
-      "skill": "listening",
-      "day": 5,
-      "text": "劍10 T2 聽力完整一回＋六步驟檢討",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785822734232,
-      "week": "2026-08-10",
-      "skill": "writing",
-      "day": 6,
-      "text": "🔄 機動日：每週回顧＋補做落後的；沒落後就休息",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785822734233,
-      "week": "2026-08-10",
-      "skill": "material",
-      "day": 6,
-      "text": "EGIU Unit 28–36",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785823163526,
-      "week": "2026-08-03",
-      "skill": "speaking",
-      "day": 0,
-      "text": "口說課 30 分鐘（Cambly 專門老師）",
-      "done": true,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785823163527,
-      "week": "2026-08-03",
-      "skill": "reading",
-      "day": 0,
-      "text": "平行閱讀法 第二章 最後兩節",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785823163528,
-      "week": "2026-08-03",
-      "skill": "reading",
-      "day": 1,
-      "text": "平行閱讀法 第三章（五步驟方法論）讀完，全書收尾",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785823163529,
-      "week": "2026-08-03",
-      "skill": "speaking",
-      "day": 2,
-      "text": "口說課 30 分鐘＋課後語料整理",
-      "done": true,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785823163530,
-      "week": "2026-08-03",
-      "skill": "writing",
-      "day": 4,
-      "text": "範文分析 1 篇＋抽語料進「Task 2 佳句」（不背整篇）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785823163531,
-      "week": "2026-08-03",
-      "skill": "listening",
-      "day": 5,
-      "text": "【第一次】劍10 T1 聽力完整一回＋六步驟檢討（約3小時，重點是找出弱點在哪）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785823163532,
-      "week": "2026-08-03",
-      "skill": "writing",
-      "day": 6,
-      "text": "🔄 機動日：每週回顧（平行閱讀法讀完了！下週開始做題）",
-      "done": false,
-      "score": "",
-      "fromPlan": true
-    },
-    {
-      "id": 1785823163533,
-      "week": "2026-08-03",
-      "skill": "material",
-      "day": 6,
-      "text": "EGIU Unit 14–20",
-      "done": false,
-      "score": "",
-      "fromPlan": true
     }
   ],
   "practiceRecords": [
+    {
+      "id": 1784787010554,
+      "skill": "grammar",
+      "date": "2026-07-22",
+      "material": "Unit 5",
+      "score": "50",
+      "causes": [
+        "時態與動詞形式",
+        "助動詞與問句／否定句",
+        "拼字與書寫疏漏"
+      ],
+      "status": "知道如何使用，但作答不穩定",
+      "notes": "過去簡單式整體掌握良好。需繼續熟悉不規則動詞，並注意 did／didn’t 後面使用動詞原形。完成後應檢查動詞拼字、漏字及單字之間的空格。"
+    },
+    {
+      "id": 1784786979108,
+      "skill": "grammar",
+      "date": "2026-07-22",
+      "material": "Unit 4",
+      "score": "85",
+      "causes": [
+        "時態與動詞形式",
+        "句型結構與語序",
+        "語意判斷"
+      ],
+      "status": "記得規則，但不會判斷情境",
+      "notes": "主要問題是依動詞意義判斷能否使用現在進行式。know、believe、want、need、remember、seem 等狀態動詞通常使用現在簡單式；think 表示「認為」時用簡單式，表示「正在考慮」時可用進行式。am／is／are being 用來描述某人當下可控制的行為。"
+    },
+    {
+      "id": 1784786945887,
+      "skill": "grammar",
+      "date": "2026-07-19",
+      "material": "Unit 3",
+      "score": "80",
+      "causes": [
+        "時態與動詞形式",
+        "助動詞與問句／否定句",
+        "句型結構與語序",
+        "語意判斷"
+      ],
+      "status": "記得規則，但不會判斷情境",
+      "notes": "容易混淆現在簡單式與現在進行式。固定習慣、事實及長期狀態使用現在簡單式；現在正在發生、暫時情況或正在變化的事情使用現在進行式。另需注意「always＋現在進行式」可表達抱怨或事情發生得過於頻繁。"
+    },
+    {
+      "id": 1784786915165,
+      "skill": "grammar",
+      "date": "2026-07-18",
+      "material": "Unit 2",
+      "score": "85",
+      "causes": [
+        "助動詞與問句／否定句",
+        "主詞—動詞一致",
+        "句型結構與語序"
+      ],
+      "status": "知道如何使用，但作答不穩定",
+      "notes": "現在簡單式肯定句與否定句大致掌握，主要問題出現在 do／does 問句。需先判斷句子的主詞，第三人稱單數使用 does，且 does 後面的主要動詞要恢復原形。"
+    },
+    {
+      "id": 1784786887553,
+      "skill": "grammar",
+      "date": "2026-07-18",
+      "material": "Unit 1",
+      "score": "95",
+      "causes": [
+        "時態與動詞形式",
+        "助動詞與問句／否定句",
+        "句型結構與語序"
+      ],
+      "status": "知道如何使用，但作答不穩定",
+      "notes": "已掌握現在進行式「am／is／are＋V-ing」的基本概念。需注意問句中不能漏掉 be 動詞，並檢查 V-ing 拼字及主詞對應的 am／is／are。"
+    },
+    {
+      "id": 1784776567481.2766,
+      "skill": "reading",
+      "date": "2026-07-23",
+      "material": "New-Age Transport（閱讀練習）",
+      "score": "",
+      "causes": [
+        "過度要求原文與選項必須完全同義",
+        "對上下位概念辨識不足",
+        "對題型目的判斷錯誤"
+      ],
+      "notes": "區分直接原因與間接原因；不要僅比較字面，要判斷包含關係；NOT mentioned題型要確認角色是否符合。"
+    },
+    {
+      "id": 1784711722447.1611,
+      "skill": "reading",
+      "date": "2026-07-22",
+      "material": "雅思閱讀題型分析/練習",
+      "score": "6/6 (強化題)",
+      "causes": [
+        "未完整確認前後語意",
+        "忽略邏輯小詞",
+        "時間線索判斷錯誤",
+        "字面翻譯"
+      ],
+      "notes": "閱讀時需特別注意 before, rather than, including, less than 等詞彙，並區分過去與目前的觀點。"
+    },
+    {
+      "id": 1784222073816.5935,
+      "skill": "reading",
+      "date": "2026-07-16",
+      "material": "IELTS Academic Reading Passage 1: Attitudes to Language",
+      "score": "9 / 13",
+      "causes": [
+        "同義替換辨識",
+        "Summary 定位",
+        "YES / NO / NOT GIVEN 還不熟"
+      ],
+      "notes": "閱讀理解能力比較難建立，不熟悉 IELTS 出題邏輯。IELTS 最常考同義替換，例如 influence = affect, judge = assessment, unreal pictures = misrepresented。Summary 題通常不是考推論，而是考原文定位和同義替換，建議解題順序是先找到關鍵人名（如 Joseph Priestley），回到原文定位，優先找與原文幾乎一致的詞，再從選項中挑最符合的同義詞。YES / NO / NOT GIVEN 題不要推論，作者有寫就是有，沒有寫就是沒有。文章架構分為：語言容易吵架、Prescriptivism、十八世紀文法家、Descriptivism、Joseph Priestley、作者立場（兩派都被誤解）。"
+    },
     {
       "id": 1785323100139.1084,
       "skill": "reading",
@@ -1368,112 +1416,6 @@
       ],
       "status": "記得規則，但不會判斷情境",
       "notes": "主要問題是一般過去式與過去進行式容易對調。判斷時先找出「原本正在進行的背景」，使用 was／were + V-ing；後來插入或已完成的事件使用一般過去式。例如：I was cooking when the phone rang。不要只看動作長短，要看動作在句中的時間關係。另外需留意 hear → heard 等不規則動詞。"
-    },
-    {
-      "id": 1784787010554,
-      "skill": "grammar",
-      "date": "2026-07-22",
-      "material": "Unit 5",
-      "score": "50",
-      "causes": [
-        "過去式（時態判斷錯誤）",
-        "其他文法規則",
-        "規則有印象但不確定怎麼用"
-      ],
-      "notes": "過去簡單式整體掌握良好，能使用規則與不規則過去式。需繼續注意 did／didn’t 後面使用原形動詞，並在完成後檢查不規則動詞、拼字與漏空格問題。"
-    },
-    {
-      "id": 1784786979108,
-      "skill": "grammar",
-      "date": "2026-07-22",
-      "material": "Unit 4",
-      "score": "85",
-      "causes": [
-        "主詞動詞一致忘記檢查",
-        "其他文法規則",
-        "規則忘記了，需要重新複習",
-        "規則有印象但不確定怎麼用"
-      ],
-      "notes": "主要問題是狀態動詞通常不用現在進行式，例如 know、believe、want、need、seem。think、feel、look 等動詞要依句意判斷；am／is／are being 只用於某人當下表現出的行為。"
-    },
-    {
-      "id": 1784786945887,
-      "skill": "grammar",
-      "date": "2026-07-19",
-      "material": "Unit 3",
-      "score": "80",
-      "causes": [
-        "主詞動詞一致忘記檢查",
-        "其他文法規則",
-        "規則忘記了，需要重新複習",
-        "規則有印象但不確定怎麼用"
-      ],
-      "notes": "對現在簡單式與現在進行式已有基本概念，但遇到「固定習慣、暫時情況、當下正在發生」時仍容易混淆。也要注意 always＋現在進行式可表達抱怨或事情發生得太頻繁。"
-    },
-    {
-      "id": 1784786915165,
-      "skill": "grammar",
-      "date": "2026-07-18",
-      "material": "Unit 2",
-      "score": "85",
-      "causes": [
-        "主詞動詞一致忘記檢查",
-        "其他文法規則",
-        "規則有印象但不確定怎麼用"
-      ],
-      "notes": "肯定句與否定句表現穩定，主要錯在 do／does 問句。需要先判斷真正的主詞，再決定使用 do 或 does，後面的主要動詞維持原形。"
-    },
-    {
-      "id": 1784786887553,
-      "skill": "grammar",
-      "date": "2026-07-18",
-      "material": "Unit 1",
-      "score": "95",
-      "causes": [
-        "其他文法規則",
-        "規則有印象但不確定怎麼用"
-      ],
-      "notes": "現在進行式的基本結構掌握良好。少數錯誤來自 V-ing 拼字及問句語序，作答後要檢查 am／is／are 是否完整。"
-    },
-    {
-      "id": 1784776567481.2766,
-      "skill": "reading",
-      "date": "2026-07-23",
-      "material": "New-Age Transport（閱讀練習）",
-      "score": "",
-      "causes": [
-        "過度要求原文與選項必須完全同義",
-        "對上下位概念辨識不足",
-        "對題型目的判斷錯誤"
-      ],
-      "notes": "區分直接原因與間接原因；不要僅比較字面，要判斷包含關係；NOT mentioned題型要確認角色是否符合。"
-    },
-    {
-      "id": 1784711722447.1611,
-      "skill": "reading",
-      "date": "2026-07-22",
-      "material": "雅思閱讀題型分析/練習",
-      "score": "6/6 (強化題)",
-      "causes": [
-        "未完整確認前後語意",
-        "忽略邏輯小詞",
-        "時間線索判斷錯誤",
-        "字面翻譯"
-      ],
-      "notes": "閱讀時需特別注意 before, rather than, including, less than 等詞彙，並區分過去與目前的觀點。"
-    },
-    {
-      "id": 1784222073816.5935,
-      "skill": "reading",
-      "date": "2026-07-16",
-      "material": "IELTS Academic Reading Passage 1: Attitudes to Language",
-      "score": "9 / 13",
-      "causes": [
-        "同義替換辨識",
-        "Summary 定位",
-        "YES / NO / NOT GIVEN 還不熟"
-      ],
-      "notes": "閱讀理解能力比較難建立，不熟悉 IELTS 出題邏輯。IELTS 最常考同義替換，例如 influence = affect, judge = assessment, unreal pictures = misrepresented。Summary 題通常不是考推論，而是考原文定位和同義替換，建議解題順序是先找到關鍵人名（如 Joseph Priestley），回到原文定位，優先找與原文幾乎一致的詞，再從選項中挑最符合的同義詞。YES / NO / NOT GIVEN 題不要推論，作者有寫就是有，沒有寫就是沒有。文章架構分為：語言容易吵架、Prescriptivism、十八世紀文法家、Descriptivism、Joseph Priestley、作者立場（兩派都被誤解）。"
     },
     {
       "id": 1785753607095,
@@ -1598,10 +1540,9 @@
     "12": "2026-08-03"
   },
   "planImportedWeeks": [
+    "2026-08-03",
     "2026-07-27",
-    "2026-07-20",
-    "2026-08-10",
-    "2026-08-03"
+    "2026-07-20"
   ],
   "irregularSchedule": {}
 }
