@@ -1,5 +1,5 @@
 {
-  "savedAt": 1786182200723,
+  "savedAt": 1786182369710,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -706,107 +706,7 @@
       "words": ""
     }
   ],
-  "inboxItems": [
-    {
-      "type": "en_vocab",
-      "word": "handouts",
-      "meaning": "課堂發放的講義或資料",
-      "partOfSpeech": "n.",
-      "example": "The teacher gave us some handouts before class.",
-      "source": "other"
-    },
-    {
-      "type": "en_vocab",
-      "word": "worksheets",
-      "meaning": "練習講義、學習單",
-      "partOfSpeech": "n.",
-      "example": "Students were provided with worksheets containing additional exercises.",
-      "source": "other"
-    },
-    {
-      "type": "en_vocab",
-      "word": "population",
-      "meaning": "某地區的人口",
-      "partOfSpeech": "n.",
-      "example": "The local population is highly dependent on tourism.",
-      "source": "other"
-    },
-    {
-      "type": "en_vocab",
-      "word": "by means of",
-      "meaning": "藉由、透過",
-      "partOfSpeech": "phrase",
-      "example": "The data can be gathered by means of digital technology.",
-      "source": "other"
-    },
-    {
-      "type": "en_vocab",
-      "word": "wildlife",
-      "meaning": "野生動物總稱",
-      "partOfSpeech": "n.",
-      "example": "The area has a wide variety of wildlife.",
-      "source": "other"
-    },
-    {
-      "type": "en_vocab",
-      "word": "animal life",
-      "meaning": "動物生態",
-      "partOfSpeech": "n.",
-      "example": "Human activity may have a significant impact on local animal life.",
-      "source": "other"
-    },
-    {
-      "type": "en_vocab",
-      "word": "vegetation",
-      "meaning": "某地區整體植被",
-      "partOfSpeech": "n.",
-      "example": "Climate change may significantly affect local vegetation.",
-      "source": "other"
-    },
-    {
-      "type": "en_vocab",
-      "word": "plant life",
-      "meaning": "植物生態",
-      "partOfSpeech": "n.",
-      "example": "There isn't much plant life in this area.",
-      "source": "other"
-    },
-    {
-      "type": "t2_phrase",
-      "word": "Students were provided with worksheets containing additional exercises.",
-      "meaning": "學生獲得了包含額外練習的學習單。",
-      "usage": "用於寫作中表達提供學生練習資料",
-      "topic": "教育"
-    },
-    {
-      "type": "t2_phrase",
-      "word": "The local population is highly dependent on tourism.",
-      "meaning": "當地人口高度依賴旅遊業。",
-      "usage": "用於寫作中討論人口與經濟活動的關係",
-      "topic": "人口"
-    },
-    {
-      "type": "t2_phrase",
-      "word": "The data can be gathered by means of digital technology.",
-      "meaning": "數據可以透過數位科技來收集。",
-      "usage": "用於寫作中描述方法與科技應用",
-      "topic": "科技"
-    },
-    {
-      "type": "t2_phrase",
-      "word": "Human activity may have a significant impact on local animal life.",
-      "meaning": "人類活動可能對當地動物生態產生重大影響。",
-      "usage": "用於寫作中探討人類對自然的影響",
-      "topic": "環境"
-    },
-    {
-      "type": "t2_phrase",
-      "word": "Climate change may significantly affect local vegetation.",
-      "meaning": "氣候變遷可能會顯著影響當地植被。",
-      "usage": "用於寫作中討論氣候變遷與環境的關係",
-      "topic": "環境"
-    }
-  ],
+  "inboxItems": [],
   "planItems": [],
   "practiceRecords": [
     {
