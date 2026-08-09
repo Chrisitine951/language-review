@@ -1,5 +1,5 @@
 {
-  "savedAt": 1786182431411,
+  "savedAt": 1786182449804,
   "username": "christine",
   "app": "english",
   "reviewSchedule": {
@@ -706,80 +706,7 @@
       "words": ""
     }
   ],
-  "inboxItems": [
-    {
-      "type": "en_vocab",
-      "word": "by means of",
-      "meaning": "藉由、透過；IELTS 同義改寫：using",
-      "partOfSpeech": "phrase",
-      "example": "Information can be collected by means of computers.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "population",
-      "meaning": "人口；IELTS 同義改寫：people that live there",
-      "partOfSpeech": "n.",
-      "example": "The local population depends heavily on tourism.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "wildlife",
-      "meaning": "野生動物；IELTS 同義改寫：animal life",
-      "partOfSpeech": "n.",
-      "example": "The area has a wide variety of wildlife.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "vegetation",
-      "meaning": "植被；IELTS 同義改寫：plant life",
-      "partOfSpeech": "n.",
-      "example": "Climate change may affect local vegetation.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "ocean floor",
-      "meaning": "海床；IELTS 同義改寫：sea bed / sea beds",
-      "partOfSpeech": "phrase",
-      "example": "Scientists use modern technology to study the ocean floor.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "geographical features",
-      "meaning": "地理特徵；IELTS 原文可能以具體地形描述，例如 sandstone plateaux and cliffs",
-      "partOfSpeech": "phrase",
-      "example": "The region has several distinctive geographical features.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "field trip activities",
-      "meaning": "實地考察活動；IELTS 改寫：things students on the trip could actually do",
-      "partOfSpeech": "phrase",
-      "example": "The proposal includes several field trip activities.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "handout",
-      "meaning": "講義、發放資料；IELTS 題目中可與 worksheet 形成情境上的替換",
-      "partOfSpeech": "n.",
-      "example": "The teacher gave us a handout before class.",
-      "source": "ielts"
-    },
-    {
-      "type": "en_vocab",
-      "word": "worksheet",
-      "meaning": "學習單、練習講義；IELTS 題目中可與 handout 形成情境上的替換",
-      "partOfSpeech": "n.",
-      "example": "Students were given worksheets containing additional exercises.",
-      "source": "ielts"
-    }
-  ],
+  "inboxItems": [],
   "planItems": [],
   "practiceRecords": [
     {
