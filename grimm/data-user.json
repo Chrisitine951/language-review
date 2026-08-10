@@ -1187,6 +1187,32 @@
       ],
       "summary": "字首 af- 加強語氣，結合代表「做」的字根 fect，合起來就是「對某事做動作、產生影響」。",
       "savedAt": "2026-08-10T06:34:52.993Z"
+    },
+    {
+      "id": "ulkmsmuym6q4",
+      "word": "affection",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "af",
+          "meaning": "朝向（加強語氣）",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音 f 只是加強語氣，真正的字根從後面開始。其中的 f 屬於唇音互換 b / p / f / v / w。"
+        },
+        {
+          "type": "root",
+          "text": "fect",
+          "meaning": "做、建造、產生",
+          "grimmNote": "源自拉丁字根 fac-/fec-（做），其中的 c 與 t 遵循舌音互換 d / t / s，f 屬於唇音互換 b / p / f / v / w。"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾（表狀態或動作的結果）",
+          "grimmNote": "常見名詞字尾，無額外轉音。"
+        }
+      ],
+      "summary": "affection 由加強語氣字首 af- 加上代表「做」的字根 fect 與名詞字尾 -ion 組成，字面上的意思就是「內心被做到某種狀態」，引申為情感、喜愛。",
+      "savedAt": "2026-08-10T06:36:14.930Z"
     }
   ],
   "userRoots": []
