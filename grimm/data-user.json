@@ -1239,6 +1239,26 @@
       ],
       "summary": "affiliate 由加強語氣字首 af- 加上代表「兒子／線」的字根 fili 與動詞字尾 -ate 組成，字面意思是「使成為兒子（或分支），即加入、使附屬」。",
       "savedAt": "2026-08-10T06:36:59.787Z"
+    },
+    {
+      "id": "ulkmsnfoa9f1",
+      "word": "affirm",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "af-",
+          "meaning": "朝向、加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音 f 只是加強語氣，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "firm",
+          "meaning": "堅固、確定",
+          "grimmNote": "唇音互換 b / p / f / v / w：源自表示堅固的古印歐語根，其中的子音保持穩定。"
+        }
+      ],
+      "summary": "「affirm」是由加強語氣字首 af- 加上表示「堅固、確定」的字根 firm 組合而成，字面上的意思是「使之堅固」，引申為「堅決主張、肯定、證實」。",
+      "savedAt": "2026-08-10T16:16:04.851Z"
     }
   ],
   "userRoots": []
