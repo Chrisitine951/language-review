@@ -1127,6 +1127,26 @@
       ],
       "summary": "「advocate」由加強語氣的前綴 ad- 加上代表喊叫的字根 voc，再加上動詞字尾 -ate 組成，原意為「向著…喊叫、為…發聲」，演變為「擁護、倡導、辯護」。",
       "savedAt": "2026-08-08T11:34:57.351Z"
+    },
+    {
+      "id": "ulkmsmusa2g1",
+      "word": "aerial",
+      "parts": [
+        {
+          "type": "root",
+          "text": "aer",
+          "meaning": "空氣、大氣",
+          "grimmNote": "源自希臘文 aēr（空氣、天空）"
+        },
+        {
+          "type": "suffix",
+          "text": "ial",
+          "meaning": "形容詞字尾，屬於...的",
+          "grimmNote": "-al 為常見形容詞字尾"
+        }
+      ],
+      "summary": "「aerial」由表示「空氣」的字根與形容詞字尾組成，意指「空氣的、大氣的、航空的」。",
+      "savedAt": "2026-08-10T06:31:19.288Z"
     }
   ],
   "userRoots": []
