@@ -1147,6 +1147,26 @@
       ],
       "summary": "「aerial」由表示「空氣」的字根與形容詞字尾組成，意指「空氣的、大氣的、航空的」。",
       "savedAt": "2026-08-10T06:31:19.288Z"
+    },
+    {
+      "id": "ulkmsmuue3i2",
+      "word": "aesthetic",
+      "parts": [
+        {
+          "type": "root",
+          "text": "aesth",
+          "meaning": "感覺、感知",
+          "grimmNote": "源自希臘文aisthēsis，經由喉音與母音通轉對應到現代字根"
+        },
+        {
+          "type": "suffix",
+          "text": "etic",
+          "meaning": "形容詞字尾，表「與…有關的」",
+          "grimmNote": "由形容詞字尾 -ic 複合而成"
+        }
+      ],
+      "summary": "aesthetic（美學的、審美的）源自古希臘文的「感覺、感知」，加上形容詞字尾，原意為「感官知覺的」，後來演變成專指對美與藝術的感知能力。",
+      "savedAt": "2026-08-10T06:32:57.822Z"
     }
   ],
   "userRoots": []
