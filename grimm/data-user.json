@@ -1213,6 +1213,32 @@
       ],
       "summary": "affection 由加強語氣字首 af- 加上代表「做」的字根 fect 與名詞字尾 -ion 組成，字面上的意思就是「內心被做到某種狀態」，引申為情感、喜愛。",
       "savedAt": "2026-08-10T06:36:14.930Z"
+    },
+    {
+      "id": "ulkmsmuzksr5",
+      "word": "affiliate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "af-",
+          "meaning": "朝向",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：af- 由 ad- 同化而來，開頭的 a 與第一個子音 f 只是加強語氣、沒有實質意義"
+        },
+        {
+          "type": "root",
+          "text": "fili",
+          "meaning": "兒子、線、絲",
+          "grimmNote": "唇音互換 b / p / f / v / w：源自古字根，與 son（兒子）同源，衍生出「像兒子一樣的、從屬的」之意"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "動詞字尾，使成為",
+          "grimmNote": "常見的動詞字尾，表示「使成為某種狀態或做某事」"
+        }
+      ],
+      "summary": "affiliate 由加強語氣字首 af- 加上代表「兒子／線」的字根 fili 與動詞字尾 -ate 組成，字面意思是「使成為兒子（或分支），即加入、使附屬」。",
+      "savedAt": "2026-08-10T06:36:59.787Z"
     }
   ],
   "userRoots": []
