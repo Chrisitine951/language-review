@@ -1279,6 +1279,32 @@
       ],
       "summary": "affix 由加強語氣字首 af- 與表示「固定」的字根 fix 組成，字面意思就是「緊緊釘上去」，引申為「黏貼、附加」。",
       "savedAt": "2026-08-10T16:17:38.965Z"
+    },
+    {
+      "id": "ulkmsq5bq581",
+      "word": "glance",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "g",
+          "meaning": "向下；朝向",
+          "grimmNote": "源自 ob- / oc- 的變體，此處作加強或方向指引"
+        },
+        {
+          "type": "root",
+          "text": "l",
+          "meaning": "光線；發光",
+          "grimmNote": "流音 l 與 r 互換，對應光亮的根源"
+        },
+        {
+          "type": "root",
+          "text": "ance",
+          "meaning": "名詞字尾（表動作或狀態）",
+          "grimmNote": "母音通轉與字尾變化"
+        }
+      ],
+      "summary": "glance 由表方向的字首與表光線的字根組合而成，本義為「光線一閃而過」，引申為「瞥一眼、閃過」。",
+      "savedAt": "2026-08-12T13:49:41.276Z"
     }
   ],
   "userRoots": []
