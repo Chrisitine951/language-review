@@ -1305,6 +1305,20 @@
       ],
       "summary": "glance 由表方向的字首與表光線的字根組合而成，本義為「光線一閃而過」，引申為「瞥一眼、閃過」。",
       "savedAt": "2026-08-12T13:49:41.276Z"
+    },
+    {
+      "id": "ulkmsq5gzkq2",
+      "word": "pave",
+      "parts": [
+        {
+          "type": "root",
+          "text": "pave",
+          "meaning": "鋪路、鋪石",
+          "grimmNote": "保留原始唇音 p，母音使用 a/e 通轉"
+        }
+      ],
+      "summary": "「pave」由原始唇音字根構成，直接保留了鋪平、拍打出平坦表面的古老意義。",
+      "savedAt": "2026-08-12T13:53:46.778Z"
     }
   ],
   "userRoots": []
