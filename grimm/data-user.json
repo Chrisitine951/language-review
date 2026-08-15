@@ -1339,6 +1339,26 @@
       ],
       "summary": "字首 ig-（進入）加上代表火的字根 -nite，組合起來就是「使進入火中」即「點燃、燃燒」。",
       "savedAt": "2026-08-15T15:56:59.579Z"
+    },
+    {
+      "id": "ulkmsukabpm2",
+      "word": "reindeer",
+      "parts": [
+        {
+          "type": "root",
+          "text": "reind",
+          "meaning": "鹿（源自 run/deer 的混合概念，或指奔跑的動物）",
+          "grimmNote": "rein源自 run（奔跑），與 deer（鹿）結合，因流音互換與子音演變形成複合字"
+        },
+        {
+          "type": "suffix",
+          "text": "eer",
+          "meaning": "從事某事的人或物；此處指具有特定特徵的動物",
+          "grimmNote": "表名詞或物之字尾"
+        }
+      ],
+      "summary": "reindeer 由表示「奔跑」的字根與表示「鹿」的動物名稱結合而成，字面意思就是「會奔跑的鹿」。",
+      "savedAt": "2026-08-15T15:59:34.858Z"
     }
   ],
   "userRoots": []
