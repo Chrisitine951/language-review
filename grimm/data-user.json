@@ -1319,6 +1319,26 @@
       ],
       "summary": "「pave」由原始唇音字根構成，直接保留了鋪平、拍打出平坦表面的古老意義。",
       "savedAt": "2026-08-12T13:53:46.778Z"
+    },
+    {
+      "id": "ulkmsuk6zwb1",
+      "word": "ignite",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ig-",
+          "meaning": "在內、進入",
+          "grimmNote": "in- 演變而來，因接續子音而同化為 ig-，意指進入"
+        },
+        {
+          "type": "root",
+          "text": "nite",
+          "meaning": "火、發光",
+          "grimmNote": "源自古印歐語根，與 Latin ignis（火）同源，喉音 g 與拉丁文的 g 相應"
+        }
+      ],
+      "summary": "字首 ig-（進入）加上代表火的字根 -nite，組合起來就是「使進入火中」即「點燃、燃燒」。",
+      "savedAt": "2026-08-15T15:56:59.579Z"
     }
   ],
   "userRoots": []
