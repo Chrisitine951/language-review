@@ -1359,6 +1359,32 @@
       ],
       "summary": "reindeer 由表示「奔跑」的字根與表示「鹿」的動物名稱結合而成，字面意思就是「會奔跑的鹿」。",
       "savedAt": "2026-08-15T15:59:34.858Z"
+    },
+    {
+      "id": "ulkmsytmpzi1",
+      "word": "squarely",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "s",
+          "meaning": "加強語氣、向外或向下",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "quar",
+          "meaning": "四方形、角的形狀（源自四個角）",
+          "grimmNote": "唇音互換 b/p/f/v/w 與喉音的演變，指四個角的形狀"
+        },
+        {
+          "type": "suffix",
+          "text": "ely",
+          "meaning": "…地（副詞字尾，由形容詞字尾 -el 加上 -y 複合而成）",
+          "grimmNote": "母音通轉 y 與形容詞/副詞字尾變化"
+        }
+      ],
+      "summary": "squarely 由表示四方形的字根加上副詞字尾組合而成，原意為「四方形地、筆直地、公正地」。",
+      "savedAt": "2026-08-18T15:32:14.478Z"
     }
   ],
   "userRoots": []
