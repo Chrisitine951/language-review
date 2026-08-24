@@ -1881,6 +1881,26 @@
       ],
       "summary": "terrestrial 由表示「土地」的字根 terr 加上形容詞字尾組合而成，字面意思是「屬於地球的、陸地的」。",
       "savedAt": "2026-08-24T13:45:02.689Z"
+    },
+    {
+      "id": "ulkmt7b0bnna",
+      "word": "penalty",
+      "parts": [
+        {
+          "type": "root",
+          "text": "pen",
+          "meaning": "懲罰、痛苦",
+          "grimmNote": "源自古印歐語源，本義為「痛、罰」"
+        },
+        {
+          "type": "suffix",
+          "text": "alty",
+          "meaning": "名詞字尾（由 -al 形容詞字尾與 -ty 名詞字尾複合而成）",
+          "grimmNote": "舌音互換 d/t/s 與母音通轉的綜合名詞結尾"
+        }
+      ],
+      "summary": "penalty 由表示「懲罰、痛苦」的字根 pen 加上複合名詞字尾 -alty 組成，原意即為「痛苦的代價或懲罰」。",
+      "savedAt": "2026-08-24T14:00:51.971Z"
     }
   ],
   "userRoots": []
