@@ -1569,6 +1569,32 @@
       ],
       "summary": "fitness 由表示「適合、狀態良好」的字根 fit 加上表示狀態的名詞字尾 -ness 組合而成，字面意思就是「身體狀態合宜、健壯」。",
       "savedAt": "2026-08-24T12:59:37.474Z"
+    },
+    {
+      "id": "ulkmt78vn5s9",
+      "word": "excrete",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ex-",
+          "meaning": "出去、向外",
+          "grimmNote": "常見字首，表示動作的方向為向外。"
+        },
+        {
+          "type": "root",
+          "text": "cret",
+          "meaning": "分泌、生長、篩選",
+          "grimmNote": "源自印歐語根 *krei-（篩選、分開），透過喉音互換與母音通轉演變而來。"
+        },
+        {
+          "type": "suffix",
+          "text": "-e",
+          "meaning": "動詞字尾",
+          "grimmNote": "用來構成動詞的無義字尾，協助調整詞性。"
+        }
+      ],
+      "summary": "excrete 由表「向外」的字首 ex- 與表「分泌、篩選」的字根 cret 結合而成，字面意思就是「向外分泌」或「排出體外」。",
+      "savedAt": "2026-08-24T13:01:14.368Z"
     }
   ],
   "userRoots": []
