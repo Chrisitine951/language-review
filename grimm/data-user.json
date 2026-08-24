@@ -1941,6 +1941,26 @@
       ],
       "summary": "「sediment」（沉澱物）由表示分離的字首 se- 與表示坐下、沉下的字根 sid 結合，字面意義就是「坐下來、沉落到底部的東西」。",
       "savedAt": "2026-08-24T14:04:22.131Z"
+    },
+    {
+      "id": "ulkmt7b60j4d",
+      "word": "revise",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常用字首 re-（再次、重複、回來）"
+        },
+        {
+          "type": "root",
+          "text": "vis",
+          "meaning": "看",
+          "grimmNote": "屬於唇音互換 b / p / f / v / w，源自古字尾音轉換"
+        }
+      ],
+      "summary": "字首 re-（再次、重複）加上表示「看」的字根 vis，字面意思就是「再次看過」，也就是「修正、複習」。",
+      "savedAt": "2026-08-24T14:05:17.488Z"
     }
   ],
   "userRoots": []
