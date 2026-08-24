@@ -1529,6 +1529,26 @@
       ],
       "summary": "diabetes（糖尿病）由表示「通過、穿過」的字首和表示「走、流過」的字根組成，字面原意指「過多的尿液穿過身體流出」，精準描述了該疾病的特徵。",
       "savedAt": "2026-08-24T12:56:21.339Z"
+    },
+    {
+      "id": "ulkmt78s6gc7",
+      "word": "reserve",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常見字首 re-"
+        },
+        {
+          "type": "root",
+          "text": "serve",
+          "meaning": "保持、保留、服務",
+          "grimmNote": "源自古印歐語，其中包含唇音互換 b/p/f/v/w（如 serve 與 save、keep 的轉音親戚關係）"
+        }
+      ],
+      "summary": "re-（再次、保留）加上表示保持或服務的 root（serve），合起來就是再次保留、預留的意思。",
+      "savedAt": "2026-08-24T12:58:32.748Z"
     }
   ],
   "userRoots": []
