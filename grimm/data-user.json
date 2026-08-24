@@ -1981,6 +1981,26 @@
       ],
       "summary": "gizmo 是 20 世紀美國軍俚語演變而來的單字，指一時想不起名字的「小玩意」或「機械零件」。",
       "savedAt": "2026-08-24T14:06:56.405Z"
+    },
+    {
+      "id": "ulkmt7bafouf",
+      "word": "gossip",
+      "parts": [
+        {
+          "type": "root",
+          "text": "goss",
+          "meaning": "神、上帝 (God的變體)",
+          "grimmNote": "喉音互換 g / k / c：goss 源自古英文 god（上帝）"
+        },
+        {
+          "type": "suffix",
+          "text": "ip",
+          "meaning": "親戚、朋友 (源自 sib，指神聖的親屬關係/教父母)",
+          "grimmNote": "唇音互換 b / p / f / v / w：ip 源自 sib（親戚），b 與 p 互換"
+        }
+      ],
+      "summary": "gossip 本義指「神的親戚（教父母）」，後來演變成聚在一起像教父母般聊天、八卦的意思。",
+      "savedAt": "2026-08-24T14:08:43.758Z"
     }
   ],
   "userRoots": []
