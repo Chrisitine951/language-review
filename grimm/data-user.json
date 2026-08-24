@@ -1635,6 +1635,26 @@
       ],
       "summary": "dis-（分離）加上 pose（放置），原意為「把東西分開擺放」，引申為「配置、處理、佈置」的意思。",
       "savedAt": "2026-08-24T13:05:43.493Z"
+    },
+    {
+      "id": "ulkmt7943hzc",
+      "word": "constrain",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "常用字首 con-，源自 come，表示「一起、共同」。"
+        },
+        {
+          "type": "root",
+          "text": "strain",
+          "meaning": "拉緊、束縛",
+          "grimmNote": "由 string（拉緊、繫）轉來。其中字尾的 t 與原字根的 g 屬於舌音互換與喉音互換的演變，母音 i 經由母音通轉變成 ai。"
+        }
+      ],
+      "summary": "con-（共同）加上表示拉緊的字根 strain，字面上的意思就是「大家一起拉緊、綁在一起」，演變為現代的「約束、限制」。",
+      "savedAt": "2026-08-24T13:07:48.791Z"
     }
   ],
   "userRoots": []
