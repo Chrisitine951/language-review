@@ -1595,6 +1595,26 @@
       ],
       "summary": "excrete 由表「向外」的字首 ex- 與表「分泌、篩選」的字根 cret 結合而成，字面意思就是「向外分泌」或「排出體外」。",
       "savedAt": "2026-08-24T13:01:14.368Z"
+    },
+    {
+      "id": "ulkmt7908gea",
+      "word": "behalf",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "be-",
+          "meaning": "在…旁、加強語氣",
+          "grimmNote": "由介系詞 by 演變而來，此處作為加強語氣的前綴"
+        },
+        {
+          "type": "root",
+          "text": "half",
+          "meaning": "一半、側邊、方向",
+          "grimmNote": "源自古英文的 healf（側面、部分），字根原意指「在某人的一側或旁邊」"
+        }
+      ],
+      "summary": "behalf 由表示加強語氣的前綴 be- 與代表一半、側邊的字根 half 組合而成，原意指「在某人的身側」，引申為「代表、為了某人的利益」。",
+      "savedAt": "2026-08-24T13:04:48.590Z"
     }
   ],
   "userRoots": []
