@@ -1549,6 +1549,26 @@
       ],
       "summary": "re-（再次、保留）加上表示保持或服務的 root（serve），合起來就是再次保留、預留的意思。",
       "savedAt": "2026-08-24T12:58:32.748Z"
+    },
+    {
+      "id": "ulkmt78tkea8",
+      "word": "fitness",
+      "parts": [
+        {
+          "type": "root",
+          "text": "fit",
+          "meaning": "適合的、健壯的",
+          "grimmNote": "源自日耳曼語族，原意為「準備妥當、合身」"
+        },
+        {
+          "type": "suffix",
+          "text": "ness",
+          "meaning": "名詞字尾，表示狀態或性質",
+          "grimmNote": "由形容詞字尾 -y 轉變而來的抽象名詞字尾，表狀態"
+        }
+      ],
+      "summary": "fitness 由表示「適合、狀態良好」的字根 fit 加上表示狀態的名詞字尾 -ness 組合而成，字面意思就是「身體狀態合宜、健壯」。",
+      "savedAt": "2026-08-24T12:59:37.474Z"
     }
   ],
   "userRoots": []
