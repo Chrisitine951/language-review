@@ -1503,6 +1503,32 @@
       ],
       "summary": "con-（一起、共同）加上 test（作證、測試），合起來就是「大家聚在一起互相見證、比試」，演變成現在的「競賽、比賽」或「抗爭」。",
       "savedAt": "2026-08-24T12:53:32.372Z"
+    },
+    {
+      "id": "ulkmt78pd236",
+      "word": "diabetes",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "di",
+          "meaning": "通過、穿過",
+          "grimmNote": "源自字首 di-（通過、穿過），對應字根 dia-"
+        },
+        {
+          "type": "root",
+          "text": "abet",
+          "meaning": "走、行",
+          "grimmNote": "源自希臘文 bainein（走），經由 **母音通轉**（i/a）與 **舌音互換**（t 源自 d 的變體），表「穿過、流過」"
+        },
+        {
+          "type": "suffix",
+          "text": "es",
+          "meaning": "名詞字尾（表狀態、過程）",
+          "grimmNote": "希臘語名詞結尾，用來構成醫學名詞的狀態"
+        }
+      ],
+      "summary": "diabetes（糖尿病）由表示「通過、穿過」的字首和表示「走、流過」的字根組成，字面原意指「過多的尿液穿過身體流出」，精準描述了該疾病的特徵。",
+      "savedAt": "2026-08-24T12:56:21.339Z"
     }
   ],
   "userRoots": []
