@@ -1721,6 +1721,26 @@
       ],
       "summary": "ornament 由表示「裝飾、排列」的字根 orn 加上名詞字尾 -ment 組成，字面意思就是「用來裝飾的東西」。",
       "savedAt": "2026-08-24T13:35:27.037Z"
+    },
+    {
+      "id": "ulkmt7a4sa62",
+      "word": "triumph",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "tri",
+          "meaning": "三",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "umph",
+          "meaning": "吶喊、歡呼",
+          "grimmNote": "與拉丁文 triumphus（凱旋遊行、歡呼）同源，字根帶有慶祝勝利的含意"
+        }
+      ],
+      "summary": "「tri（三）」加上表示勝利歡呼的字根，原指古羅馬的三重凱旋慶典，演變為如今的「勝利、顯赫的成功」。",
+      "savedAt": "2026-08-24T13:36:20.526Z"
     }
   ],
   "userRoots": []
