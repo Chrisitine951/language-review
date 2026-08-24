@@ -1483,6 +1483,26 @@
       ],
       "summary": "de-（向下、向外）加上 duce（引導），字面意思是「把答案或結論引導出來」，因此衍生出「推論、演繹」的意思。",
       "savedAt": "2026-08-24T12:51:16.542Z"
+    },
+    {
+      "id": "ulkmt78lqok5",
+      "word": "contest",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "源自常用字首 con-（源自 come），表示一起、共同。"
+        },
+        {
+          "type": "root",
+          "text": "test",
+          "meaning": "作證、測試、試驗",
+          "grimmNote": "源自古字根 test（源自 testis，意為見證人），利用舌音互換 d/t/s 與喉音互換等規則演變而來。"
+        }
+      ],
+      "summary": "con-（一起、共同）加上 test（作證、測試），合起來就是「大家聚在一起互相見證、比試」，演變成現在的「競賽、比賽」或「抗爭」。",
+      "savedAt": "2026-08-24T12:53:32.372Z"
     }
   ],
   "userRoots": []
