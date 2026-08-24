@@ -1615,6 +1615,26 @@
       ],
       "summary": "behalf 由表示加強語氣的前綴 be- 與代表一半、側邊的字根 half 組合而成，原意指「在某人的身側」，引申為「代表、為了某人的利益」。",
       "savedAt": "2026-08-24T13:04:48.590Z"
+    },
+    {
+      "id": "ulkmt791ethb",
+      "word": "dispose",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "dis-",
+          "meaning": "分離、離開、否定",
+          "grimmNote": "常見字首，表示分開或移開"
+        },
+        {
+          "type": "root",
+          "text": "pose",
+          "meaning": "放置、擺放",
+          "grimmNote": "源自拉丁語動詞 ponere（放置），經過語音演變轉化為 pose"
+        }
+      ],
+      "summary": "dis-（分離）加上 pose（放置），原意為「把東西分開擺放」，引申為「配置、處理、佈置」的意思。",
+      "savedAt": "2026-08-24T13:05:43.493Z"
     }
   ],
   "userRoots": []
