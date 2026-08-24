@@ -1463,6 +1463,26 @@
       ],
       "summary": "sub-（在下方）結合 -stitu-（站立），字面意思是「站在下方準備頂替」，演變為今天的「代替、替換」。",
       "savedAt": "2026-08-24T12:50:15.001Z"
+    },
+    {
+      "id": "ulkmt78itvi4",
+      "word": "deduce",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下；離開",
+          "grimmNote": "常見字首，表向下、離開或加強語氣。"
+        },
+        {
+          "type": "root",
+          "text": "duce",
+          "meaning": "引導、帶領",
+          "grimmNote": "源自古印歐語，與 lead 為同源字（l 與 d 的轉音，以及喉音 g/k/c 與 d/t 的演變）。"
+        }
+      ],
+      "summary": "de-（向下、向外）加上 duce（引導），字面意思是「把答案或結論引導出來」，因此衍生出「推論、演繹」的意思。",
+      "savedAt": "2026-08-24T12:51:16.542Z"
     }
   ],
   "userRoots": []
