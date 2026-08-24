@@ -2001,6 +2001,26 @@
       ],
       "summary": "gossip 本義指「神的親戚（教父母）」，後來演變成聚在一起像教父母般聊天、八卦的意思。",
       "savedAt": "2026-08-24T14:08:43.758Z"
+    },
+    {
+      "id": "ulkmt7bc46yg",
+      "word": "donate",
+      "parts": [
+        {
+          "type": "root",
+          "text": "don",
+          "meaning": "給予",
+          "grimmNote": "源自印歐語根 *deh₃-（給予），舌音互換 d 與 t，對應英文的 give"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾，表動作化",
+          "grimmNote": "常見的動詞字尾，表示使之發生或執行動作"
+        }
+      ],
+      "summary": "donate 由表「給予」的字根 don 加上動詞字尾 ate 組成，字面上的意思就是「給出去、給予」。",
+      "savedAt": "2026-08-24T14:10:02.170Z"
     }
   ],
   "userRoots": []
