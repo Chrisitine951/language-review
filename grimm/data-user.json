@@ -1915,6 +1915,32 @@
       ],
       "summary": "grid 作為基礎字根，直接保留了表示「交錯線條、格子」的原始喉音與舌音結構。",
       "savedAt": "2026-08-24T14:01:18.532Z"
+    },
+    {
+      "id": "ulkmt7b4ttfc",
+      "word": "sediment",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "se-",
+          "meaning": "分離、離開",
+          "grimmNote": "常見字首，表向外分離或離開"
+        },
+        {
+          "type": "root",
+          "text": "sid",
+          "meaning": "坐",
+          "grimmNote": "源自印歐語系，基礎字義為「坐著、沉降」"
+        },
+        {
+          "type": "suffix",
+          "text": "-iment",
+          "meaning": "名詞字尾（表狀態、結果或事物）",
+          "grimmNote": "由複合字尾組成，用來將動詞或字根轉化為具體名詞"
+        }
+      ],
+      "summary": "「sediment」（沉澱物）由表示分離的字首 se- 與表示坐下、沉下的字根 sid 結合，字面意義就是「坐下來、沉落到底部的東西」。",
+      "savedAt": "2026-08-24T14:04:22.131Z"
     }
   ],
   "userRoots": []
