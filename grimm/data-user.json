@@ -1437,6 +1437,32 @@
       ],
       "summary": "cathedral 由表示「向下」的字首與表示「坐位、主教座」的字根組合而成，字面意思是「主教的座位所在的大教堂」。",
       "savedAt": "2026-08-24T12:48:43.087Z"
+    },
+    {
+      "id": "ulkmt78hie13",
+      "word": "substitute",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "sub",
+          "meaning": "在...下方；代替",
+          "grimmNote": "源自字首 ob- 的變體，意思是向下、朝向，此處引申為「在下方準備頂替」"
+        },
+        {
+          "type": "root",
+          "text": "stitu",
+          "meaning": "站立；設置",
+          "grimmNote": "源自字根 sta/st（站立），母音通轉 i/u 替換，並經歷子音變化"
+        },
+        {
+          "type": "suffix",
+          "text": "ute",
+          "meaning": "動詞或形容詞字尾",
+          "grimmNote": "表動詞字尾，構成使動或動作意義"
+        }
+      ],
+      "summary": "sub-（在下方）結合 -stitu-（站立），字面意思是「站在下方準備頂替」，演變為今天的「代替、替換」。",
+      "savedAt": "2026-08-24T12:50:15.001Z"
     }
   ],
   "userRoots": []
