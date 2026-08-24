@@ -1411,6 +1411,32 @@
       ],
       "summary": "conscious 由表「共同」的前綴 con-、表「知道」的字根 sci 及形容詞字尾 -ous 組成，字面意思就是「大家一起知道的、心知肚明的」，引申為「有意識的、神智清醒的」。",
       "savedAt": "2026-08-24T12:47:54.777Z"
+    },
+    {
+      "id": "ulkmt78fjgv2",
+      "word": "cathedral",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "cathe",
+          "meaning": "向下、向下看",
+          "grimmNote": "源自字首 kata-（向下），借自希臘文"
+        },
+        {
+          "type": "root",
+          "text": "dr",
+          "meaning": "坐位、座椅、基座",
+          "grimmNote": "源自字源 hedra（坐位、椅子），h 依據喉音弱化或古希臘文對應而來"
+        },
+        {
+          "type": "suffix",
+          "text": "al",
+          "meaning": "形容詞字尾，表屬性",
+          "grimmNote": "-al＝形容詞字尾"
+        }
+      ],
+      "summary": "cathedral 由表示「向下」的字首與表示「坐位、主教座」的字根組合而成，字面意思是「主教的座位所在的大教堂」。",
+      "savedAt": "2026-08-24T12:48:43.087Z"
     }
   ],
   "userRoots": []
