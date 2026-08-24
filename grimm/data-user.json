@@ -1655,6 +1655,20 @@
       ],
       "summary": "con-（共同）加上表示拉緊的字根 strain，字面上的意思就是「大家一起拉緊、綁在一起」，演變為現代的「約束、限制」。",
       "savedAt": "2026-08-24T13:07:48.791Z"
+    },
+    {
+      "id": "ulkmt798x0vd",
+      "word": "knob",
+      "parts": [
+        {
+          "type": "root",
+          "text": "knob",
+          "meaning": "球形把手、突起物",
+          "grimmNote": "對應喉音互換 k 與唇音 b 的基礎結構"
+        }
+      ],
+      "summary": "knob 作為單一字根直接表意，代表突起的球形把手或塊狀物。",
+      "savedAt": "2026-08-24T13:11:33.679Z"
     }
   ],
   "userRoots": []
