@@ -1781,6 +1781,32 @@
       ],
       "summary": "timber 原意指建築用的木材，透過原始印歐語演變而來，與表示「房間」的字有深刻的親戚關係。",
       "savedAt": "2026-08-24T13:38:33.030Z"
+    },
+    {
+      "id": "ulkmt7a9mxn5",
+      "word": "consistent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con-",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 come 的字首變體，表示共同、聚集。"
+        },
+        {
+          "type": "root",
+          "text": "sist",
+          "meaning": "站立、維持",
+          "grimmNote": "源自古印歐語，核心意義為「站立（stand）」。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ent",
+          "meaning": "形容詞字尾，表狀態或性質",
+          "grimmNote": "常用形容詞字尾，表示「正處於...狀態的」。"
+        }
+      ],
+      "summary": "「con-（共同）」加上「sist（站立）」，字面意思是「大家站在一起、立場一致」，進而演變出「一致的、始終如一的」之意。",
+      "savedAt": "2026-08-24T13:40:06.875Z"
     }
   ],
   "userRoots": []
