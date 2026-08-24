@@ -1385,6 +1385,32 @@
       ],
       "summary": "squarely 由表示四方形的字根加上副詞字尾組合而成，原意為「四方形地、筆直地、公正地」。",
       "savedAt": "2026-08-18T15:32:14.478Z"
+    },
+    {
+      "id": "ulkmt78ei6x1",
+      "word": "conscious",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 com- / con-＝一起、共同（源自 come）"
+        },
+        {
+          "type": "root",
+          "text": "sci",
+          "meaning": "知道、了解",
+          "grimmNote": "源自古印歐語字根，與 know 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "ous",
+          "meaning": "多（形容詞字尾）",
+          "grimmNote": "-y / -ous / -ious＝多（形容詞字尾）"
+        }
+      ],
+      "summary": "conscious 由表「共同」的前綴 con-、表「知道」的字根 sci 及形容詞字尾 -ous 組成，字面意思就是「大家一起知道的、心知肚明的」，引申為「有意識的、神智清醒的」。",
+      "savedAt": "2026-08-24T12:47:54.777Z"
     }
   ],
   "userRoots": []
