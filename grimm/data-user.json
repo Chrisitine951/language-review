@@ -1901,6 +1901,20 @@
       ],
       "summary": "penalty 由表示「懲罰、痛苦」的字根 pen 加上複合名詞字尾 -alty 組成，原意即為「痛苦的代價或懲罰」。",
       "savedAt": "2026-08-24T14:00:51.971Z"
+    },
+    {
+      "id": "ulkmt7b0w5gb",
+      "word": "grid",
+      "parts": [
+        {
+          "type": "root",
+          "text": "grid",
+          "meaning": "格子、網格",
+          "grimmNote": "源自古日耳曼語，基本字根以喉音 g 與舌音 d 構成，與英文的 grate（格子柵欄）透過喉音互換（g/c）與舌音變化為同源字。"
+        }
+      ],
+      "summary": "grid 作為基礎字根，直接保留了表示「交錯線條、格子」的原始喉音與舌音結構。",
+      "savedAt": "2026-08-24T14:01:18.532Z"
     }
   ],
   "userRoots": []
