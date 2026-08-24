@@ -1855,6 +1855,32 @@
       ],
       "summary": "「ore」作為獨立字根，直接保留了古代表示金屬與礦石的原意。",
       "savedAt": "2026-08-24T13:43:12.895Z"
+    },
+    {
+      "id": "ulkmt7afz6p9",
+      "word": "terrestrial",
+      "parts": [
+        {
+          "type": "root",
+          "text": "terr",
+          "meaning": "土地、地球",
+          "grimmNote": "源自古印歐語，表示大地、土地的字根"
+        },
+        {
+          "type": "suffix",
+          "text": "estri",
+          "meaning": "形容詞字尾變化，表「與...有關的」",
+          "grimmNote": "母音通轉 e/i 替換，連結字根與形容詞字尾"
+        },
+        {
+          "type": "suffix",
+          "text": "al",
+          "meaning": "形容詞字尾，用以構成「關於…的」之形容詞",
+          "grimmNote": "常見形容詞字尾 -al"
+        }
+      ],
+      "summary": "terrestrial 由表示「土地」的字根 terr 加上形容詞字尾組合而成，字面意思是「屬於地球的、陸地的」。",
+      "savedAt": "2026-08-24T13:45:02.689Z"
     }
   ],
   "userRoots": []
