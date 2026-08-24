@@ -1669,6 +1669,32 @@
       ],
       "summary": "knob 作為單一字根直接表意，代表突起的球形把手或塊狀物。",
       "savedAt": "2026-08-24T13:11:33.679Z"
+    },
+    {
+      "id": "ulkmt799rore",
+      "word": "recreation",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複",
+          "grimmNote": "常見字首，表示動作的重複或返回。"
+        },
+        {
+          "type": "root",
+          "text": "creat",
+          "meaning": "創造、生長",
+          "grimmNote": "源自古印歐語字根，與 grow 同源（喉音 g/k 轉音與流音變化）。"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾，表狀態或行為過程",
+          "grimmNote": "常見名詞字尾，將動詞轉為名詞。"
+        }
+      ],
+      "summary": "recreation 由表示「再次」的字首 re- 加上意指「創造、生長」的字根 creat，與名詞字尾 -ion 結合，字面意思就是「再次被創造、重新恢復精力」，也就是我們現在說的「消遣、娛樂、休閒」。",
+      "savedAt": "2026-08-24T13:12:13.419Z"
     }
   ],
   "userRoots": []
