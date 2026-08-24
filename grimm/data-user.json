@@ -1695,6 +1695,32 @@
       ],
       "summary": "recreation 由表示「再次」的字首 re- 加上意指「創造、生長」的字根 creat，與名詞字尾 -ion 結合，字面意思就是「再次被創造、重新恢復精力」，也就是我們現在說的「消遣、娛樂、休閒」。",
       "savedAt": "2026-08-24T13:12:13.419Z"
+    },
+    {
+      "id": "ulkmt7a3n0d1",
+      "word": "ornament",
+      "parts": [
+        {
+          "type": "root",
+          "text": "orn",
+          "meaning": "裝飾、配備",
+          "grimmNote": "源自古印歐語字根，與 order（排列、次序）同源，指將事物排好、裝飾妥當。"
+        },
+        {
+          "type": "suffix",
+          "text": "-a-",
+          "meaning": "連接母音",
+          "grimmNote": "母音通轉：用於連接字根與字尾的輔助母音。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ment",
+          "meaning": "名詞字尾，表具體事物或結果",
+          "grimmNote": "由動詞轉為名詞的常見結構，表示「裝飾的物品、飾品」。"
+        }
+      ],
+      "summary": "ornament 由表示「裝飾、排列」的字根 orn 加上名詞字尾 -ment 組成，字面意思就是「用來裝飾的東西」。",
+      "savedAt": "2026-08-24T13:35:27.037Z"
     }
   ],
   "userRoots": []
