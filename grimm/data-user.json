@@ -2021,6 +2021,32 @@
       ],
       "summary": "donate 由表「給予」的字根 don 加上動詞字尾 ate 組成，字面上的意思就是「給出去、給予」。",
       "savedAt": "2026-08-24T14:10:02.170Z"
+    },
+    {
+      "id": "ulkmt7be4s6h",
+      "word": "rehearsal",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常見字首 re-（再次、重複）"
+        },
+        {
+          "type": "root",
+          "text": "hear",
+          "meaning": "聽",
+          "grimmNote": "套用「喉音弱化 c/k ↔ h」規則，古字根源自拉丁文的 c/k 轉變成英文的 h"
+        },
+        {
+          "type": "suffix",
+          "text": "sal",
+          "meaning": "名詞字尾（表動作或結果）",
+          "grimmNote": "-al 為名詞/形容詞字尾，在此構成名詞 rehearsal（排練、預演）"
+        }
+      ],
+      "summary": "rehearsal 由表「再次」的字首 re- 加上與「聽」相關的字根 hear，以及名詞字尾 -al 組成，字面意思是「再次聆聽與練習」，演變為現代的「排練、預演」。",
+      "savedAt": "2026-08-24T14:11:36.246Z"
     }
   ],
   "userRoots": []
