@@ -2167,6 +2167,26 @@
       ],
       "summary": "fringe 直接作為一個完整字根演變而來，代表邊緣與裝飾之意。",
       "savedAt": "2026-08-25T14:35:37.444Z"
+    },
+    {
+      "id": "ulkmt8rq6h72",
+      "word": "glitter",
+      "parts": [
+        {
+          "type": "root",
+          "text": "glit",
+          "meaning": "閃爍、發光",
+          "grimmNote": "喉音互換 g 與流音 l 的組合，核心表光芒閃動"
+        },
+        {
+          "type": "suffix",
+          "text": "-er",
+          "meaning": "表反覆動作的字尾",
+          "grimmNote": "流音 r 結尾，表示動作持續或重複（閃爍不停）"
+        }
+      ],
+      "summary": "「glit」表示閃爍，加上表反覆的字尾「-er」，組合成持續閃爍、發光的 glitter。",
+      "savedAt": "2026-08-25T14:36:38.347Z"
     }
   ],
   "userRoots": []
