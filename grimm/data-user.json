@@ -2133,6 +2133,26 @@
       ],
       "summary": "ornament 由核心字根 or（裝飾）加上複合字尾組成，意指用來裝飾的物件。",
       "savedAt": "2026-08-25T10:38:42.862Z"
+    },
+    {
+      "id": "ulkmt8jefik3",
+      "word": "shallow",
+      "parts": [
+        {
+          "type": "root",
+          "text": "shall",
+          "meaning": "淺的；淺灘",
+          "grimmNote": "對應古英文 sceald，代表水平面低下"
+        },
+        {
+          "type": "suffix",
+          "text": "ow",
+          "meaning": "形容詞或名詞字尾（表狀態或小）",
+          "grimmNote": "母音通轉與字尾延伸，用來構成現代形容詞 shallow"
+        }
+      ],
+      "summary": "shallow 由表低平的詞幹加上字尾演變而來，用來形容水深或程度「淺的」。",
+      "savedAt": "2026-08-25T10:43:33.261Z"
     }
   ],
   "userRoots": []
