@@ -2047,6 +2047,26 @@
       ],
       "summary": "rehearsal 由表「再次」的字首 re- 加上與「聽」相關的字根 hear，以及名詞字尾 -al 組成，字面意思是「再次聆聽與練習」，演變為現代的「排練、預演」。",
       "savedAt": "2026-08-24T14:11:36.246Z"
+    },
+    {
+      "id": "ulkmt8awm8n1",
+      "word": "esthetic",
+      "parts": [
+        {
+          "type": "root",
+          "text": "esthet",
+          "meaning": "感覺、知覺",
+          "grimmNote": "源自希臘語 aisthetikos，字根本義為「感覺、感知」"
+        },
+        {
+          "type": "suffix",
+          "text": "ic",
+          "meaning": "形容詞字尾，表「關於…的」",
+          "grimmNote": "常見形容詞字尾，構成學科或性質名稱"
+        }
+      ],
+      "summary": "esthetic 由表示「感覺、知覺」的字根與形容詞字尾組成，原意為「感覺得到的、美學的」。",
+      "savedAt": "2026-08-25T06:45:45.239Z"
     }
   ],
   "userRoots": []
