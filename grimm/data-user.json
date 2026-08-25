@@ -2067,6 +2067,32 @@
       ],
       "summary": "esthetic 由表示「感覺、知覺」的字根與形容詞字尾組成，原意為「感覺得到的、美學的」。",
       "savedAt": "2026-08-25T06:45:45.239Z"
+    },
+    {
+      "id": "ulkmt8b00412",
+      "word": "severe",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "se",
+          "meaning": "分離、離開",
+          "grimmNote": "使用常見字首 se-，表示「分離、離開」"
+        },
+        {
+          "type": "root",
+          "text": "ver",
+          "meaning": "真實、嚴格",
+          "grimmNote": "字根 ver 帶有真實、嚴格之意，其中 v 屬於「唇音互換 b / p / f / v / w」家族"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "形容詞字尾",
+          "grimmNote": "字尾 e 作為字型結構助長"
+        }
+      ],
+      "summary": "se-（分離）加上表示真實與嚴格的字根，組合出形容詞 severe（嚴厲的、嚴重的）。",
+      "savedAt": "2026-08-25T06:48:23.185Z"
     }
   ],
   "userRoots": []
