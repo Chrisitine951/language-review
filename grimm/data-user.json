@@ -2153,6 +2153,20 @@
       ],
       "summary": "shallow 由表低平的詞幹加上字尾演變而來，用來形容水深或程度「淺的」。",
       "savedAt": "2026-08-25T10:43:33.261Z"
+    },
+    {
+      "id": "ulkmt8rovhg1",
+      "word": "fringe",
+      "parts": [
+        {
+          "type": "root",
+          "text": "fringe",
+          "meaning": "邊緣、穗飾",
+          "grimmNote": "對應喉音與唇音變化，與古日耳曼語族及拉丁語源相關"
+        }
+      ],
+      "summary": "fringe 直接作為一個完整字根演變而來，代表邊緣與裝飾之意。",
+      "savedAt": "2026-08-25T14:35:37.444Z"
     }
   ],
   "userRoots": []
