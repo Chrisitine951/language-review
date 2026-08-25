@@ -2187,6 +2187,32 @@
       ],
       "summary": "「glit」表示閃爍，加上表反覆的字尾「-er」，組合成持續閃爍、發光的 glitter。",
       "savedAt": "2026-08-25T14:36:38.347Z"
+    },
+    {
+      "id": "ulkmt8s9pwv3",
+      "word": "nuance",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "n",
+          "meaning": "進入、在內",
+          "grimmNote": "in- 的變體，鼻音互換 n / m 且簡化"
+        },
+        {
+          "type": "root",
+          "text": "ua",
+          "meaning": "水、流動",
+          "grimmNote": "源自 aqua（水），母音通轉 a / e / i / o / u / y"
+        },
+        {
+          "type": "suffix",
+          "text": "nce",
+          "meaning": "名詞字尾，表狀態或性質",
+          "grimmNote": "由動詞/形容詞轉為名詞的複合字尾"
+        }
+      ],
+      "summary": "nuance 從「水（aqua）」的流動與細微變化演變而來，指事物像水波紋一樣「細微的差別」。",
+      "savedAt": "2026-08-25T14:51:49.999Z"
     }
   ],
   "userRoots": []
