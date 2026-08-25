@@ -2113,6 +2113,26 @@
       ],
       "summary": "traitor 由代表「交付」的字根與表示「人的字尾 -tor」組合而成，字面意思就是「把人交出去、出賣同伴的人」，即為叛徒。",
       "savedAt": "2026-08-25T10:36:29.205Z"
+    },
+    {
+      "id": "ulkmt8j87fy2",
+      "word": "ornament",
+      "parts": [
+        {
+          "type": "root",
+          "text": "or",
+          "meaning": "裝飾、配備",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "-nament",
+          "meaning": "名詞字尾，表工具或狀態",
+          "grimmNote": "由動詞字尾 -ate 結合名詞字尾 -ment 轉化而來"
+        }
+      ],
+      "summary": "ornament 由核心字根 or（裝飾）加上複合字尾組成，意指用來裝飾的物件。",
+      "savedAt": "2026-08-25T10:38:42.862Z"
     }
   ],
   "userRoots": []
