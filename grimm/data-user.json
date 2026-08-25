@@ -2093,6 +2093,26 @@
       ],
       "summary": "se-（分離）加上表示真實與嚴格的字根，組合出形容詞 severe（嚴厲的、嚴重的）。",
       "savedAt": "2026-08-25T06:48:23.185Z"
+    },
+    {
+      "id": "ulkmt8j5cb91",
+      "word": "traitor",
+      "parts": [
+        {
+          "type": "root",
+          "text": "trai",
+          "meaning": "交給、背叛",
+          "grimmNote": "源自拉丁語 tradere（trans- 跨越 + dare 給），字根 t-r- 帶有「跨越、交付」之意，其中的舌音 d 轉變成 t"
+        },
+        {
+          "type": "suffix",
+          "text": "tor",
+          "meaning": "...的人（表主動或身分）",
+          "grimmNote": "名詞字尾，表示執行動作的人（源自拉丁語 -tor，等同於英文的 -er）"
+        }
+      ],
+      "summary": "traitor 由代表「交付」的字根與表示「人的字尾 -tor」組合而成，字面意思就是「把人交出去、出賣同伴的人」，即為叛徒。",
+      "savedAt": "2026-08-25T10:36:29.205Z"
     }
   ],
   "userRoots": []
