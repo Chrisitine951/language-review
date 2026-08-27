@@ -2719,6 +2719,32 @@
       ],
       "summary": "mandatory 由表「命令」的字根 mand 加上表性質的字尾 -atory 組成，字面意思是「命令所要求的、強制性的」。",
       "savedAt": "2026-08-27T16:47:06.278Z"
+    },
+    {
+      "id": "ulkmtbrdjqw4",
+      "word": "matriculation",
+      "parts": [
+        {
+          "type": "root",
+          "text": "matric",
+          "meaning": "母親；母校；名冊",
+          "grimmNote": "源自拉丁語 mater（母親），經轉音與字根演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "ul",
+          "meaning": "小（指 diminutive，構成名詞字尾的一部分）",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ation",
+          "meaning": "名詞字尾，表動作或過程（由 -ate 動詞字尾與 -ion 名詞字尾結合）",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "matriculation 由表示「母親／母校」的字根 matric 加上表「小」的字尾與名詞字尾組合而成，原意為「被列入母校名冊中」，現指大學入學或錄取入學。",
+      "savedAt": "2026-08-27T16:50:07.544Z"
     }
   ],
   "userRoots": []
