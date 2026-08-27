@@ -2233,6 +2233,20 @@
       ],
       "summary": "hierarchy 由表示「神聖的」的 hier 與表示「統治」的 archy 組合而成，原意為「神聖的統治」或「聖職階層」，後來引申為一般的「階層、等級制度」。",
       "savedAt": "2026-08-27T03:33:01.618Z"
+    },
+    {
+      "id": "ulkmtayxvig2",
+      "word": "mould",
+      "parts": [
+        {
+          "type": "root",
+          "text": "mould",
+          "meaning": "模具、模型；塑造",
+          "grimmNote": "原始字根，與 model 同源，透過母音通轉 o/o 衍生"
+        }
+      ],
+      "summary": "「mould」源自原始字根，本義指形體與模型，後來演變出「模具」與「塑造」的意思。",
+      "savedAt": "2026-08-27T03:34:07.048Z"
     }
   ],
   "userRoots": []
