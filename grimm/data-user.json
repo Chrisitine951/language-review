@@ -2555,6 +2555,26 @@
       ],
       "summary": "「shepherd」由表示「羊」的字根與表示「看守者」的字尾組成，字面意思就是「看羊的人」（牧羊人）。",
       "savedAt": "2026-08-27T03:59:11.832Z"
+    },
+    {
+      "id": "ulkmtazyesfg",
+      "word": "horticulture",
+      "parts": [
+        {
+          "type": "root",
+          "text": "horti",
+          "meaning": "花園、菜園",
+          "grimmNote": "利用「喉音弱化 c/k ↔ h」規則，源自古印歐語中代表圍欄、 enclosures 的字根（對應英文的 yard / garden）"
+        },
+        {
+          "type": "suffix",
+          "text": "culture",
+          "meaning": "耕種、栽培、文化",
+          "grimmNote": "源自拉丁語 cultura，由 colere（居住、耕種）衍生而來的名詞字尾"
+        }
+      ],
+      "summary": "horticulture 由表示「花園」的字根與表示「耕種」的字尾組合成「園藝學」。",
+      "savedAt": "2026-08-27T04:02:31.647Z"
     }
   ],
   "userRoots": []
