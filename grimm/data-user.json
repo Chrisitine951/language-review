@@ -2745,6 +2745,26 @@
       ],
       "summary": "matriculation 由表示「母親／母校」的字根 matric 加上表「小」的字尾與名詞字尾組合而成，原意為「被列入母校名冊中」，現指大學入學或錄取入學。",
       "savedAt": "2026-08-27T16:50:07.544Z"
+    },
+    {
+      "id": "ulkmtbrij2c5",
+      "word": "punctual",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "punc",
+          "meaning": "點、刺、戳",
+          "grimmNote": "源自拉丁字根 punct-，其中 t 依照「舌音互換 d / t / s」與 c 相關連，本義為尖端或點。"
+        },
+        {
+          "type": "suffix",
+          "text": "tual",
+          "meaning": "形容詞字尾，表示具有…性質的",
+          "grimmNote": "結合了 -ate（動詞或形容詞字尾）與 -al（形容詞字尾）的複合字尾，用來構成形容詞。"
+        }
+      ],
+      "summary": "punctual 由表示「點」的字根與形容詞字尾組成，原意是指「精確對準每一個時間點（點）」的，因此引申為「準時的」。",
+      "savedAt": "2026-08-27T16:53:59.940Z"
     }
   ],
   "userRoots": []
