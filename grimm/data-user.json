@@ -2279,6 +2279,38 @@
       ],
       "summary": "assemble 由加強語氣的 a、表示分離的 se-（s）、表示一起的 sem-（源自 con- 鼻音互換）與表被動的 -able 組成，字面意思是「被集中在一起」，引申為組合、集合。",
       "savedAt": "2026-08-27T03:35:04.091Z"
+    },
+    {
+      "id": "ulkmtaz11zi4",
+      "word": "etiquette",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ad-",
+          "meaning": "朝向、去",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個 d 通常只是加強語氣，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "ict",
+          "meaning": "說、宣告",
+          "grimmNote": "喉音互換 g / k / c：這裡的 c 源自印歐語根 *deik-（指、說），透過喉音與舌音的對應演變而來。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ique",
+          "meaning": "形容詞或名詞字尾（源自法文借字）",
+          "grimmNote": "母音通轉 e / i / o / u：字尾的 i 與 e 互相通轉，用來構成法文來源的借字。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ette",
+          "meaning": "小（指小詞字尾）",
+          "grimmNote": "雙子音規則（結構）：tt 中第二個 t 不具意義，只是維持音節結構；整體表示「小東西、規矩小卡片（古義指張貼在宮廷的禮儀告示牌）」。"
+        }
+      ],
+      "summary": "etiquette 從源頭的「說、宣告」加上指小詞演變而來，原本指宮廷中標示禮儀規範的小告示牌，後來引申為「禮貌、規矩」。",
+      "savedAt": "2026-08-27T03:36:35.406Z"
     }
   ],
   "userRoots": []
