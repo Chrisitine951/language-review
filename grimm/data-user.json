@@ -2627,6 +2627,26 @@
       ],
       "summary": "「amplify」由加強語氣字首「am-」加上源自「full」（滿）的字根「pli」與動詞字尾「-fy」組成，字面意思就是「使之更滿、放大」。",
       "savedAt": "2026-08-27T04:07:08.267Z"
+    },
+    {
+      "id": "ulkmtb0krw3j",
+      "word": "bureaucracy",
+      "parts": [
+        {
+          "type": "root",
+          "text": "bureau",
+          "meaning": "辦公桌、局、處",
+          "grimmNote": "源自法語，與字根 bura（粗毛布）有關，原本指蓋在辦公桌上的綠色呢絨桌布"
+        },
+        {
+          "type": "suffix",
+          "text": "cracy",
+          "meaning": "統治、政體",
+          "grimmNote": "源自希臘語 kratia（統治），其中喉音 k 與 c 互換，母音 o 與 a 根據母音通轉規則變化"
+        }
+      ],
+      "summary": "bureau（辦公桌）加上表示統治的 -cracy，組合起來就是指由辦公室官員掌權的「官僚體制」。",
+      "savedAt": "2026-08-27T04:19:55.059Z"
     }
   ],
   "userRoots": []
