@@ -2601,6 +2601,32 @@
       ],
       "summary": "monument 由表示「記憶、心智」的字根加上名詞字尾組成，字面意思就是「讓人們留存記憶、提醒後人的東西」，也就是紀念碑。",
       "savedAt": "2026-08-27T04:05:16.539Z"
+    },
+    {
+      "id": "ulkmtb04c8bi",
+      "word": "amplify",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "am",
+          "meaning": "加強語氣（a＋重複子音規則的變體，原為 am-）",
+          "grimmNote": "a＋重複子音＝加強語氣：單字開頭的 a 與 m 只是加強語氣、沒有實質意義，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "pli",
+          "meaning": "滿的、多（源自同源字full）",
+          "grimmNote": "唇音互換 b / p / f / v / w 與母音通轉：字根 pli 源自 full（滿），p 與 f 唇音互換，u 與 i 母音通轉。"
+        },
+        {
+          "type": "suffix",
+          "text": "fy",
+          "meaning": "使成為、動詞字尾",
+          "grimmNote": "源自facere（做），使之達成某種狀態的動詞字尾。"
+        }
+      ],
+      "summary": "「amplify」由加強語氣字首「am-」加上源自「full」（滿）的字根「pli」與動詞字尾「-fy」組成，字面意思就是「使之更滿、放大」。",
+      "savedAt": "2026-08-27T04:07:08.267Z"
     }
   ],
   "userRoots": []
