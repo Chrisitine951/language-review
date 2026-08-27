@@ -2515,6 +2515,26 @@
       ],
       "summary": "sophomore 字面意思是「聰明的笨蛋」，由「智慧（soph）」加上「愚蠢（mor）」結合而成，用來形容大二學生——已經懂了一些事（聰明），但其實還很青澀（愚蠢）。",
       "savedAt": "2026-08-27T03:56:18.794Z"
+    },
+    {
+      "id": "ulkmtazrz17e",
+      "word": "arouse",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "a-",
+          "meaning": "加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與子音只是加強語氣、沒有實質意義，真正的字根從後面開始"
+        },
+        {
+          "type": "root",
+          "text": "rouse",
+          "meaning": "喚醒、激起",
+          "grimmNote": "源自古印歐語根，透過母音通轉與子音變化衍生出動詞 rouse"
+        }
+      ],
+      "summary": "a- 加強語氣加上 rouse（喚醒），組合成「喚醒、激起」的動作。",
+      "savedAt": "2026-08-27T03:57:31.291Z"
     }
   ],
   "userRoots": []
