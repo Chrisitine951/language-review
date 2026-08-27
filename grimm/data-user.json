@@ -2403,6 +2403,32 @@
       ],
       "summary": "quarrel 由表強調的字根與表示爭辯與抱怨的語源結合，演變為爭吵之意。",
       "savedAt": "2026-08-27T03:48:19.078Z"
+    },
+    {
+      "id": "ulkmtazhf3r9",
+      "word": "notorious",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "no",
+          "meaning": "不、無",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "tor",
+          "meaning": "知道、認識（源自古印歐語根 *gno-）",
+          "grimmNote": "喉音互換 g / k / c 轉為 t（舌音）：古印歐語的 g 轉變為拉丁語的 t，即 gnot- / not-（知道）"
+        },
+        {
+          "type": "suffix",
+          "text": "ious",
+          "meaning": "多（形容詞字尾）",
+          "grimmNote": "-ous / -ious＝多（形容詞字尾）"
+        }
+      ],
+      "summary": "由表否定的字首 no- 加上表示「知道、認識」的字根 tor（源自 *gno-），再接形容詞字尾 -ious 組成，字面意思是「大家都知道的（通常指壞事）」，即惡名昭彰的、聲名狼藉的。",
+      "savedAt": "2026-08-27T03:49:18.903Z"
     }
   ],
   "userRoots": []
