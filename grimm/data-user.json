@@ -2831,6 +2831,32 @@
       ],
       "summary": "com-（一起）結合 mit（送），字面意思是「大家一起送過去」，引申為「委託、承諾、犯罪（把自己送進去）」。",
       "savedAt": "2026-08-27T17:07:16.442Z"
+    },
+    {
+      "id": "ulkmtbs2smn9",
+      "word": "opacity",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "op",
+          "meaning": "向下；朝向",
+          "grimmNote": "源自 ob-（向下；朝向），因接在清子音前而同化為 op-"
+        },
+        {
+          "type": "root",
+          "text": "ac",
+          "meaning": "尖端；刺；尖銳",
+          "grimmNote": "源自古印歐語根 ak-（尖），喉音互換 c 保持不變"
+        },
+        {
+          "type": "suffix",
+          "text": "ity",
+          "meaning": "名詞字尾，表性質或狀態",
+          "grimmNote": "複合名詞字尾，用來構成抽象名詞"
+        }
+      ],
+      "summary": "opacity 由表示「朝向」的字首 op- 與表示「尖銳、透視」的字根透過母音通轉及字尾 -ity 組合而成，原意為光線無法穿透的狀態，演變為「不透明度」。",
+      "savedAt": "2026-08-27T17:09:45.455Z"
     }
   ],
   "userRoots": []
