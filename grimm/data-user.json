@@ -2383,6 +2383,26 @@
       ],
       "summary": "dis-（分離、離開）加上 semin（種子），字面意思是「把種子分散播出去」，演變成「散布、傳播」的意思。",
       "savedAt": "2026-08-27T03:46:08.041Z"
+    },
+    {
+      "id": "ulkmtazg4xy8",
+      "word": "quarrel",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "qu",
+          "meaning": "表強調或疑問（源自疑問詞字根）",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "arrel",
+          "meaning": "爭吵、爭辯",
+          "grimmNote": "其中的 r 和 l 屬於流音互換；尾音部分與拉丁語 querella（抱怨、爭吵）同源"
+        }
+      ],
+      "summary": "quarrel 由表強調的字根與表示爭辯與抱怨的語源結合，演變為爭吵之意。",
+      "savedAt": "2026-08-27T03:48:19.078Z"
     }
   ],
   "userRoots": []
