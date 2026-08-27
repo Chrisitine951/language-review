@@ -2877,6 +2877,32 @@
       ],
       "summary": "fragment 由表示「破裂」的字根 frag 加上名詞字尾 ment 組成，字面上的意思就是「被打破後留下的東西」，也就是「碎片」。",
       "savedAt": "2026-08-27T17:10:49.207Z"
+    },
+    {
+      "id": "ulkmtbs7hxrb",
+      "word": "merchant",
+      "parts": [
+        {
+          "type": "root",
+          "text": "merc",
+          "meaning": "交易、買賣",
+          "grimmNote": "源自古印歐語字根，與拉丁語 merx（商品、貨物）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "h",
+          "meaning": "（無實質意義或音變保留）",
+          "grimmNote": "古拉丁語轉化過程中的音變保留"
+        },
+        {
+          "type": "suffix",
+          "text": "ant",
+          "meaning": "人（名詞字尾，表從事某動作的人）",
+          "grimmNote": "源自拉丁語分詞字尾 -antem，表示主動做事的「人」"
+        }
+      ],
+      "summary": "merchant 由表示「交易」的字根 merc 加上表示「人」的字尾 ant 組成，意指從事商業交易的人（商人）。",
+      "savedAt": "2026-08-27T17:13:24.879Z"
     }
   ],
   "userRoots": []
