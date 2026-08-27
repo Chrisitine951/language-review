@@ -2699,6 +2699,26 @@
       ],
       "summary": "brist（硬毛）加上 -le（小尾綴），原意指動物身上的短而硬的毛，引申為「發怒時毛髮豎起」或「刷子」。",
       "savedAt": "2026-08-27T16:46:14.611Z"
+    },
+    {
+      "id": "ulkmtbr9nvq3",
+      "word": "mandatory",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "mand",
+          "meaning": "命令、委託",
+          "grimmNote": "源自拉丁字根 mandare（手 manus ＋ 給 dare），其中的 d 屬於舌音互換族群"
+        },
+        {
+          "type": "suffix",
+          "text": "atory",
+          "meaning": "地方；具有...性質的（名詞／形容詞字尾）",
+          "grimmNote": "由 -ory（地方、性質的名詞／形容詞字尾）衍生，母音 o 與其他母音可依母音通轉規則變化"
+        }
+      ],
+      "summary": "mandatory 由表「命令」的字根 mand 加上表性質的字尾 -atory 組成，字面意思是「命令所要求的、強制性的」。",
+      "savedAt": "2026-08-27T16:47:06.278Z"
     }
   ],
   "userRoots": []
