@@ -2535,6 +2535,26 @@
       ],
       "summary": "a- 加強語氣加上 rouse（喚醒），組合成「喚醒、激起」的動作。",
       "savedAt": "2026-08-27T03:57:31.291Z"
+    },
+    {
+      "id": "ulkmtazu4m0f",
+      "word": "shepherd",
+      "parts": [
+        {
+          "type": "root",
+          "text": "shep",
+          "meaning": "羊",
+          "grimmNote": "源自古英文 scēap（綿羊），經喉音弱化與子音簡化演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "herd",
+          "meaning": "人、看守者",
+          "grimmNote": "源自古英文hierde，指看守或照顧動物的人（與 herd 成員同源）"
+        }
+      ],
+      "summary": "「shepherd」由表示「羊」的字根與表示「看守者」的字尾組成，字面意思就是「看羊的人」（牧羊人）。",
+      "savedAt": "2026-08-27T03:59:11.832Z"
     }
   ],
   "userRoots": []
