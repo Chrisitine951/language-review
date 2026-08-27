@@ -2357,6 +2357,32 @@
       ],
       "summary": "bishop 原意指「向下監視的人」（監督者），由 bi（雙/全面）與 shop（觀察、監視）組合演變而來。",
       "savedAt": "2026-08-27T03:42:49.420Z"
+    },
+    {
+      "id": "ulkmtazdbu17",
+      "word": "disseminate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "dis-",
+          "meaning": "分離、離開",
+          "grimmNote": "常用字首 dis-，表示分離、離開。"
+        },
+        {
+          "type": "root",
+          "text": "semin",
+          "meaning": "種子",
+          "grimmNote": "源自拉丁語 semen（種子），字根 semin- 衍生出播種、散布的概念。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "動詞字尾，使…",
+          "grimmNote": "常用動詞字尾 -ate，用來構成動詞。"
+        }
+      ],
+      "summary": "dis-（分離、離開）加上 semin（種子），字面意思是「把種子分散播出去」，演變成「散布、傳播」的意思。",
+      "savedAt": "2026-08-27T03:46:08.041Z"
     }
   ],
   "userRoots": []
