@@ -2337,6 +2337,26 @@
       ],
       "summary": "con-（一起）加上 tent（拉扯、競爭），字面意思是「大家拉扯在一起」，引申為「爭論、競爭、爭吵」。",
       "savedAt": "2026-08-27T03:41:55.881Z"
+    },
+    {
+      "id": "ulkmtaz92ks6",
+      "word": "bishop",
+      "parts": [
+        {
+          "type": "root",
+          "text": "bi",
+          "meaning": "兩個；雙",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "shop",
+          "meaning": "觀看；監視（源自古英文 sceawian，對應視察之意）",
+          "grimmNote": "唇音互換 b / p / f / v / w 與喉音弱化"
+        }
+      ],
+      "summary": "bishop 原意指「向下監視的人」（監督者），由 bi（雙/全面）與 shop（觀察、監視）組合演變而來。",
+      "savedAt": "2026-08-27T03:42:49.420Z"
     }
   ],
   "userRoots": []
