@@ -2311,6 +2311,32 @@
       ],
       "summary": "etiquette 從源頭的「說、宣告」加上指小詞演變而來，原本指宮廷中標示禮儀規範的小告示牌，後來引申為「禮貌、規矩」。",
       "savedAt": "2026-08-27T03:36:35.406Z"
+    },
+    {
+      "id": "ulkmtaz7x9l5",
+      "word": "contention",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 come，表示「一起」"
+        },
+        {
+          "type": "root",
+          "text": "tent",
+          "meaning": "伸展、拉扯",
+          "grimmNote": "源自 tend（延伸、拉），舌音互換 d 變 t"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾，表狀態或行為",
+          "grimmNote": "名詞字尾"
+        }
+      ],
+      "summary": "con-（一起）加上 tent（拉扯、競爭），字面意思是「大家拉扯在一起」，引申為「爭論、競爭、爭吵」。",
+      "savedAt": "2026-08-27T03:41:55.881Z"
     }
   ],
   "userRoots": []
