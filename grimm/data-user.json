@@ -2483,6 +2483,38 @@
       ],
       "summary": "「knit」是一個以喉音 k 與舌音 t 構成的原始日耳曼語源單字，原意指用結或線編織。",
       "savedAt": "2026-08-27T03:54:33.918Z"
+    },
+    {
+      "id": "ulkmtazqf3ed",
+      "word": "sophomore",
+      "parts": [
+        {
+          "type": "root",
+          "text": "soph",
+          "meaning": "智慧",
+          "grimmNote": "源自古希臘語 sophos（智慧），對應拉丁文 sapere（知道）"
+        },
+        {
+          "type": "suffix",
+          "text": "o",
+          "meaning": "連結母音",
+          "grimmNote": "母音通轉與連結作用"
+        },
+        {
+          "type": "root",
+          "text": "mor",
+          "meaning": "愚蠢、遲鈍",
+          "grimmNote": "源自希臘語 moros（愚蠢），與英文 mope 或拉丁 moratus 有關"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "名詞字尾",
+          "grimmNote": "無實義之字尾"
+        }
+      ],
+      "summary": "sophomore 字面意思是「聰明的笨蛋」，由「智慧（soph）」加上「愚蠢（mor）」結合而成，用來形容大二學生——已經懂了一些事（聰明），但其實還很青澀（愚蠢）。",
+      "savedAt": "2026-08-27T03:56:18.794Z"
     }
   ],
   "userRoots": []
