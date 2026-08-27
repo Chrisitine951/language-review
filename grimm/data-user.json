@@ -2791,6 +2791,26 @@
       ],
       "summary": "「propaganda」由表示向前的字首 pro- 與表示播種、生長的字根 pag 結合，原意為「播種、使之繁殖」，後來引申為「散播思想、宣傳」。",
       "savedAt": "2026-08-27T16:57:00.500Z"
+    },
+    {
+      "id": "ulkmtbrx1ml7",
+      "word": "mortify",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "mor",
+          "meaning": "死",
+          "grimmNote": "源自拉丁字根，與死亡、使死相關"
+        },
+        {
+          "type": "suffix",
+          "text": "-tify",
+          "meaning": "使成為、動詞字尾",
+          "grimmNote": "由 -fy（使成為，源自 facere 做）結合，其中 t 為字根延伸"
+        }
+      ],
+      "summary": "mortify 由表示「死」的字根加上使動字尾組成，原意為「使死」或「使屈辱到死」，引申為羞辱、使難堪。",
+      "savedAt": "2026-08-27T17:05:17.181Z"
     }
   ],
   "userRoots": []
