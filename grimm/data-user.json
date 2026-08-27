@@ -2449,6 +2449,26 @@
       ],
       "summary": "shut（關閉）加上表物的字尾 -er，指用來開關遮蔽的物品，如窗板或相機快門。",
       "savedAt": "2026-08-27T03:51:02.358Z"
+    },
+    {
+      "id": "ulkmtazlstwb",
+      "word": "withstand",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "with",
+          "meaning": "向後、對抗",
+          "grimmNote": "源自古英文 with-，表示「向後、反抗、反對」"
+        },
+        {
+          "type": "root",
+          "text": "stand",
+          "meaning": "站立",
+          "grimmNote": "源自印歐語系字根 *sta-（站立），其中的 d 為過去分詞或衍生字尾，舌音互換 d/t 家族"
+        }
+      ],
+      "summary": "字首 with-（向後、對抗）加上字根 stand（站立），字面意思即「站在對立面、頂住」，演變為「承受、抵抗、忍受」。",
+      "savedAt": "2026-08-27T03:52:43.316Z"
     }
   ],
   "userRoots": []
