@@ -2647,6 +2647,38 @@
       ],
       "summary": "bureau（辦公桌）加上表示統治的 -cracy，組合起來就是指由辦公室官員掌權的「官僚體制」。",
       "savedAt": "2026-08-27T04:19:55.059Z"
+    },
+    {
+      "id": "ulkmtbr6mvf1",
+      "word": "controversial",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 com- / con-（一起、共同，源自 come），此處表示「反對雙方」共同參與"
+        },
+        {
+          "type": "root",
+          "text": "trov",
+          "meaning": "轉動、轉向",
+          "grimmNote": "由源自「轉」的字根演變而來，其中母音 o / o 通轉，喉音 c 轉為 t、流音與唇音變化形成 trov"
+        },
+        {
+          "type": "suffix",
+          "text": "ers",
+          "meaning": "轉折、反方向",
+          "grimmNote": "舌音 d/t 轉 s，表示動作方向的轉變"
+        },
+        {
+          "type": "suffix",
+          "text": "ial",
+          "meaning": "形容詞字尾，具有…性質的",
+          "grimmNote": "由名詞或形容詞字尾 -al 組成，表具有爭議的性質"
+        }
+      ],
+      "summary": "con-（共同）加上表示「轉向、對立」的字根與字尾，形容意見互相轉向衝突、引起爭議的狀態。",
+      "savedAt": "2026-08-27T16:44:45.003Z"
     }
   ],
   "userRoots": []
