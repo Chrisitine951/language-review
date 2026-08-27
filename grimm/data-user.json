@@ -2575,6 +2575,32 @@
       ],
       "summary": "horticulture 由表示「花園」的字根與表示「耕種」的字尾組合成「園藝學」。",
       "savedAt": "2026-08-27T04:02:31.647Z"
+    },
+    {
+      "id": "ulkmtb01y0rh",
+      "word": "monument",
+      "parts": [
+        {
+          "type": "root",
+          "text": "mon",
+          "meaning": "心智、記憶、警告",
+          "grimmNote": "源自古印歐語根，與 mind 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "u",
+          "meaning": "母音過渡",
+          "grimmNote": "母音通轉 a/e/i/o/u/y 規則，用於連接字根與字尾"
+        },
+        {
+          "type": "root",
+          "text": "ment",
+          "meaning": "工具、手段、結果（名詞字尾）",
+          "grimmNote": "源自動詞字尾或表工具的名詞字尾，鼻音互換 n/m 家族"
+        }
+      ],
+      "summary": "monument 由表示「記憶、心智」的字根加上名詞字尾組成，字面意思就是「讓人們留存記憶、提醒後人的東西」，也就是紀念碑。",
+      "savedAt": "2026-08-27T04:05:16.539Z"
     }
   ],
   "userRoots": []
