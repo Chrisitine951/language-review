@@ -2469,6 +2469,20 @@
       ],
       "summary": "字首 with-（向後、對抗）加上字根 stand（站立），字面意思即「站在對立面、頂住」，演變為「承受、抵抗、忍受」。",
       "savedAt": "2026-08-27T03:52:43.316Z"
+    },
+    {
+      "id": "ulkmtazo666c",
+      "word": "knit",
+      "parts": [
+        {
+          "type": "root",
+          "text": "knit",
+          "meaning": "編織、結織",
+          "grimmNote": "以喉音 k 起頭，接舌音 t"
+        }
+      ],
+      "summary": "「knit」是一個以喉音 k 與舌音 t 構成的原始日耳曼語源單字，原意指用結或線編織。",
+      "savedAt": "2026-08-27T03:54:33.918Z"
     }
   ],
   "userRoots": []
