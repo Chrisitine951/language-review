@@ -2923,6 +2923,26 @@
       ],
       "summary": "「cater」由表示追尋、尋找的字根「cat」加上表示反覆動作或人的字尾「er」組成，原本意思是「提供食物、打理一切（去張羅所需的人）」，演變至今為「迎合、承辦伙食」。",
       "savedAt": "2026-08-27T17:18:01.216Z"
+    },
+    {
+      "id": "ulkmtbsmko3d",
+      "word": "commence",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "com-",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 com-（一起、共同，源自 come）"
+        },
+        {
+          "type": "root",
+          "text": "mence",
+          "meaning": "開始、發端",
+          "grimmNote": "根據喉音互換 g / k / c 及母音通轉，源自古印歐語根 *mag-（大、長成），演變出拉丁文 initium / mensure 等概念"
+        }
+      ],
+      "summary": "com-（一起）結合表示長成、發端的字根 -mence，字面上的意思就是「大家一起開始、共同著手」。",
+      "savedAt": "2026-08-27T17:25:08.259Z"
     }
   ],
   "userRoots": []
