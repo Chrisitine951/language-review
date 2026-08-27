@@ -2765,6 +2765,32 @@
       ],
       "summary": "punctual 由表示「點」的字根與形容詞字尾組成，原意是指「精確對準每一個時間點（點）」的，因此引申為「準時的」。",
       "savedAt": "2026-08-27T16:53:59.940Z"
+    },
+    {
+      "id": "ulkmtbrmedw6",
+      "word": "propaganda",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pro",
+          "meaning": "向前、在前",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "pag",
+          "meaning": "播種、繁殖、使生長",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "anda",
+          "meaning": "名詞字尾（源自拉丁語動名詞變化）",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "「propaganda」由表示向前的字首 pro- 與表示播種、生長的字根 pag 結合，原意為「播種、使之繁殖」，後來引申為「散播思想、宣傳」。",
+      "savedAt": "2026-08-27T16:57:00.500Z"
     }
   ],
   "userRoots": []
