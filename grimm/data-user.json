@@ -2429,6 +2429,26 @@
       ],
       "summary": "由表否定的字首 no- 加上表示「知道、認識」的字根 tor（源自 *gno-），再接形容詞字尾 -ious 組成，字面意思是「大家都知道的（通常指壞事）」，即惡名昭彰的、聲名狼藉的。",
       "savedAt": "2026-08-27T03:49:18.903Z"
+    },
+    {
+      "id": "ulkmtazjmxia",
+      "word": "shutter",
+      "parts": [
+        {
+          "type": "root",
+          "text": "shut",
+          "meaning": "關閉",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ter",
+          "meaning": "...的工具（表物）",
+          "grimmNote": "-er 表人或物，此處指用來關閉的器具，如百葉窗、快門"
+        }
+      ],
+      "summary": "shut（關閉）加上表物的字尾 -er，指用來開關遮蔽的物品，如窗板或相機快門。",
+      "savedAt": "2026-08-27T03:51:02.358Z"
     }
   ],
   "userRoots": []
