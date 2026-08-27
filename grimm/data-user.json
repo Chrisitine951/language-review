@@ -2247,6 +2247,38 @@
       ],
       "summary": "「mould」源自原始字根，本義指形體與模型，後來演變出「模具」與「塑造」的意思。",
       "savedAt": "2026-08-27T03:34:07.048Z"
+    },
+    {
+      "id": "ulkmtayz3iz3",
+      "word": "assemble",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "a",
+          "meaning": "加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音只是加強語氣、沒有實質意義，真正的字根從後面開始。"
+        },
+        {
+          "type": "prefix",
+          "text": "s",
+          "meaning": "分離、離開",
+          "grimmNote": "se-＝分離、離開、否定（雙子音規則簡化）"
+        },
+        {
+          "type": "prefix",
+          "text": "sem",
+          "meaning": "一起、聚集",
+          "grimmNote": "com- / con- 轉音：鼻音互換 n/m，com- 變成 sem-，表示一起、聚集"
+        },
+        {
+          "type": "suffix",
+          "text": "ble",
+          "meaning": "可以被…的",
+          "grimmNote": "-able＝可以被…的（帶被動意味）"
+        }
+      ],
+      "summary": "assemble 由加強語氣的 a、表示分離的 se-（s）、表示一起的 sem-（源自 con- 鼻音互換）與表被動的 -able 組成，字面意思是「被集中在一起」，引申為組合、集合。",
+      "savedAt": "2026-08-27T03:35:04.091Z"
     }
   ],
   "userRoots": []
