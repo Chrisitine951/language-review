@@ -2903,6 +2903,26 @@
       ],
       "summary": "merchant 由表示「交易」的字根 merc 加上表示「人」的字尾 ant 組成，意指從事商業交易的人（商人）。",
       "savedAt": "2026-08-27T17:13:24.879Z"
+    },
+    {
+      "id": "ulkmtbsdf5sc",
+      "word": "cater",
+      "parts": [
+        {
+          "type": "root",
+          "text": "cat",
+          "meaning": "尋找、追求、捕捉",
+          "grimmNote": "屬於喉音互換 g / k / c，源自古代表示「追逐、尋找」的字根（如 chase、catch）"
+        },
+        {
+          "type": "suffix",
+          "text": "er",
+          "meaning": "人、物；有時表動作反覆",
+          "grimmNote": "常見名詞字尾，表示從事該動作的人或物"
+        }
+      ],
+      "summary": "「cater」由表示追尋、尋找的字根「cat」加上表示反覆動作或人的字尾「er」組成，原本意思是「提供食物、打理一切（去張羅所需的人）」，演變至今為「迎合、承辦伙食」。",
+      "savedAt": "2026-08-27T17:18:01.216Z"
     }
   ],
   "userRoots": []
