@@ -2811,6 +2811,26 @@
       ],
       "summary": "mortify 由表示「死」的字根加上使動字尾組成，原意為「使死」或「使屈辱到死」，引申為羞辱、使難堪。",
       "savedAt": "2026-08-27T17:05:17.181Z"
+    },
+    {
+      "id": "ulkmtbrzlne8",
+      "word": "commit",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "com-",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 come，表「共同」"
+        },
+        {
+          "type": "root",
+          "text": "mit",
+          "meaning": "送、派遣",
+          "grimmNote": "喉音互換 c / k ↔ h 或一般字根變化，mit 原意為送"
+        }
+      ],
+      "summary": "com-（一起）結合 mit（送），字面意思是「大家一起送過去」，引申為「委託、承諾、犯罪（把自己送進去）」。",
+      "savedAt": "2026-08-27T17:07:16.442Z"
     }
   ],
   "userRoots": []
