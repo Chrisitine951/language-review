@@ -2857,6 +2857,26 @@
       ],
       "summary": "opacity 由表示「朝向」的字首 op- 與表示「尖銳、透視」的字根透過母音通轉及字尾 -ity 組合而成，原意為光線無法穿透的狀態，演變為「不透明度」。",
       "savedAt": "2026-08-27T17:09:45.455Z"
+    },
+    {
+      "id": "ulkmtbs45tja",
+      "word": "fragment",
+      "parts": [
+        {
+          "type": "root",
+          "text": "frag",
+          "meaning": "破裂、打破",
+          "grimmNote": "屬於喉音互換 g / k / c，源自原始印歐語根 *bhreg-（打破）"
+        },
+        {
+          "type": "suffix",
+          "text": "ment",
+          "meaning": "名詞字尾，表結果或工具、物",
+          "grimmNote": "常見名詞字尾，用來將動詞或字根轉為表「……的東西、結果」"
+        }
+      ],
+      "summary": "fragment 由表示「破裂」的字根 frag 加上名詞字尾 ment 組成，字面上的意思就是「被打破後留下的東西」，也就是「碎片」。",
+      "savedAt": "2026-08-27T17:10:49.207Z"
     }
   ],
   "userRoots": []
