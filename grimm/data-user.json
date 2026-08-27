@@ -2213,6 +2213,26 @@
       ],
       "summary": "nuance 從「水（aqua）」的流動與細微變化演變而來，指事物像水波紋一樣「細微的差別」。",
       "savedAt": "2026-08-25T14:51:49.999Z"
+    },
+    {
+      "id": "ulkmtaywh0y1",
+      "word": "hierarchy",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "hier",
+          "meaning": "神聖的、聖潔的",
+          "grimmNote": "源自希臘文 hieros（神聖的），對應英文的 holy（喉音弱化 h 與 k 的親戚關係）"
+        },
+        {
+          "type": "suffix",
+          "text": "archy",
+          "meaning": "統治、政權",
+          "grimmNote": "源自希臘文 arche（統治、開始），對應古英文的 arc/arch"
+        }
+      ],
+      "summary": "hierarchy 由表示「神聖的」的 hier 與表示「統治」的 archy 組合而成，原意為「神聖的統治」或「聖職階層」，後來引申為一般的「階層、等級制度」。",
+      "savedAt": "2026-08-27T03:33:01.618Z"
     }
   ],
   "userRoots": []
