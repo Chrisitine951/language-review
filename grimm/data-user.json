@@ -3201,6 +3201,32 @@
       ],
       "summary": "由表「恐懼」的字根與「製造」的字尾組成，原意為「令人恐懼的」，後來語意轉化為「極好的、了不起的」。",
       "savedAt": "2026-08-28T15:42:21.470Z"
+    },
+    {
+      "id": "ulkmtd4kn4q4",
+      "word": "contention",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con-",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 come，表示「共同、一起」"
+        },
+        {
+          "type": "root",
+          "text": "tent",
+          "meaning": "伸展、拉扯",
+          "grimmNote": "源自 tend（伸展、拉扯），d/t 屬於「舌音互換 d / t / s」"
+        },
+        {
+          "type": "suffix",
+          "text": "-ion",
+          "meaning": "名詞字尾，表動作或狀態",
+          "grimmNote": "常用名詞字尾"
+        }
+      ],
+      "summary": "con-（共同）加上 tent（拉扯）與名詞字尾 -ion，字面意思是「大家拉扯在一起」，引申為「爭論、競賽、競爭」。",
+      "savedAt": "2026-08-28T15:47:19.706Z"
     }
   ],
   "userRoots": []
