@@ -3095,6 +3095,26 @@
       ],
       "summary": "barren 由表示光禿、無法生長的字根 bar 加上結尾組成，字面意思就是土地光禿禿、無法耕種的「貧瘠」狀態。",
       "savedAt": "2026-08-28T08:05:46.795Z"
+    },
+    {
+      "id": "ulkmtcono5w6",
+      "word": "restore",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常見字首，表示動作的重複或返回"
+        },
+        {
+          "type": "root",
+          "text": "store",
+          "meaning": "儲存、保管",
+          "grimmNote": "保留原始字根結構"
+        }
+      ],
+      "summary": "「restore」由表示「再次」的字首 re- 與表示「儲存、保管」的字根 store 組成，字面意思就是「再次存放、使回到原狀」，進而引申為「恢復、修復」。",
+      "savedAt": "2026-08-28T08:21:47.156Z"
     }
   ],
   "userRoots": []
