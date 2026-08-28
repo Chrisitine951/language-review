@@ -3075,6 +3075,26 @@
       ],
       "summary": "bleed（流血）是從同族名詞 blood 透過母音通轉（oo/oa 轉 e）衍生而來的動詞。",
       "savedAt": "2026-08-28T08:02:37.528Z"
+    },
+    {
+      "id": "ulkmtco33575",
+      "word": "barren",
+      "parts": [
+        {
+          "type": "root",
+          "text": "bar",
+          "meaning": "貧瘠的、荒涼的",
+          "grimmNote": "對應流音互換 l / r 與雙子音規則，與 pile（堆積）或 barrier（障礙）同源，指土地無法長出東西、光禿禿的狀態"
+        },
+        {
+          "type": "suffix",
+          "text": "ren",
+          "meaning": "形容詞或名詞字尾（表狀態）",
+          "grimmNote": "母音通轉 e 與 n 鼻音結尾，用以形成形容詞，表示具備某種性質"
+        }
+      ],
+      "summary": "barren 由表示光禿、無法生長的字根 bar 加上結尾組成，字面意思就是土地光禿禿、無法耕種的「貧瘠」狀態。",
+      "savedAt": "2026-08-28T08:05:46.795Z"
     }
   ],
   "userRoots": []
