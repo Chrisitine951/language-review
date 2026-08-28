@@ -3035,6 +3035,32 @@
       ],
       "summary": "recreation 由字首 re-（再次）加上 creat（創造）與名詞字尾 -ion 組成，字面意思是「再次被創造」，引申為消除疲勞、恢復身心靈的「消遣、娛樂、休閒」。",
       "savedAt": "2026-08-28T07:10:54.676Z"
+    },
+    {
+      "id": "ulkmtcnm8s83",
+      "word": "obstacle",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ob",
+          "meaning": "向下；朝向",
+          "grimmNote": "常用字首 ob-，表示朝向、對抗"
+        },
+        {
+          "type": "root",
+          "text": "sta",
+          "meaning": "站立",
+          "grimmNote": "源自印歐語系字根 *sta-（站立），與 stand 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "cle",
+          "meaning": "小（名詞字尾）",
+          "grimmNote": "包含指小字尾 -el，母音通轉 e 變 i/o，表微小的事物"
+        }
+      ],
+      "summary": "由表示「朝向、對抗」的字首 ob- 結合意為「站立」的字根 sta，再加上指小字尾 -cle 構成，字面意思就是「擋在面前站著的小東西」，引申為「障礙、阻礙」。",
+      "savedAt": "2026-08-28T07:52:40.952Z"
     }
   ],
   "userRoots": []
