@@ -3115,6 +3115,26 @@
       ],
       "summary": "「restore」由表示「再次」的字首 re- 與表示「儲存、保管」的字根 store 組成，字面意思就是「再次存放、使回到原狀」，進而引申為「恢復、修復」。",
       "savedAt": "2026-08-28T08:21:47.156Z"
+    },
+    {
+      "id": "ulkmtd2j7jk1",
+      "word": "marble",
+      "parts": [
+        {
+          "type": "root",
+          "text": "marb",
+          "meaning": "閃耀、發光",
+          "grimmNote": "源自古希臘語 marmaros（閃閃發光的石頭），m 與 r 的流音互換"
+        },
+        {
+          "type": "suffix",
+          "text": "le",
+          "meaning": "小（名詞字尾）",
+          "grimmNote": "表「小」的指小字尾 -el / -le，指小圓石"
+        }
+      ],
+      "summary": "marble 由表閃耀的字根與表小的字尾組成，原本是指「會發光的石頭（大理石）」。",
+      "savedAt": "2026-08-28T14:50:13.616Z"
     }
   ],
   "userRoots": []
