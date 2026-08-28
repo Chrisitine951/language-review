@@ -2943,6 +2943,32 @@
       ],
       "summary": "com-（一起）結合表示長成、發端的字根 -mence，字面上的意思就是「大家一起開始、共同著手」。",
       "savedAt": "2026-08-27T17:25:08.259Z"
+    },
+    {
+      "id": "ulkmtcclpr61",
+      "word": "inherit",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常用字首 in-，表示進入"
+        },
+        {
+          "type": "root",
+          "text": "her",
+          "meaning": "繼承、嗣",
+          "grimmNote": "源自古印歐語，與 heir（繼承人）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "-it",
+          "meaning": "名詞/動詞結尾",
+          "grimmNote": "源自拉丁語動詞字尾"
+        }
+      ],
+      "summary": "inherit 由表示「進入」的字首 in- 加上表示「繼承」的字根 her 組成，字面意思就是「進入繼承狀態」。",
+      "savedAt": "2026-08-28T02:44:20.514Z"
     }
   ],
   "userRoots": []
