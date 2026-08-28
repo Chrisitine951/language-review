@@ -3253,6 +3253,20 @@
       ],
       "summary": "installment 由字首 in-（進入）加上代表放置的 stall（安放），再接名詞字尾 -ment 組成，原意為「分期安放/支付的款項」。",
       "savedAt": "2026-08-28T15:56:59.469Z"
+    },
+    {
+      "id": "ulkmtd4yjga6",
+      "word": "herb",
+      "parts": [
+        {
+          "type": "root",
+          "text": "herb",
+          "meaning": "草本植物",
+          "grimmNote": "對應拉丁文 herba，字首 h 乃是由古印歐語的喉音弱化 c/k ↔ h 而來"
+        }
+      ],
+      "summary": "「herb」來自古老字根，其中的 h 是由喉音弱化 c/k ↔ h 演變而來的草本植物稱呼。",
+      "savedAt": "2026-08-28T15:58:08.122Z"
     }
   ],
   "userRoots": []
