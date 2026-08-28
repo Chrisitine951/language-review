@@ -3155,6 +3155,32 @@
       ],
       "summary": "com-（一起）加上字根 mence（開始），共同展開、開始的動作。",
       "savedAt": "2026-08-28T15:03:28.093Z"
+    },
+    {
+      "id": "ulkmtd3qhd92",
+      "word": "mandatory",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "mand",
+          "meaning": "命令、手",
+          "grimmNote": "源自拉丁文 manus（手），經由舌音互換 d/t/s 演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "at",
+          "meaning": "動詞或形容詞字尾，表動作或性質",
+          "grimmNote": "源自拉丁語詞尾，轉化為動作屬性"
+        },
+        {
+          "type": "suffix",
+          "text": "ory",
+          "meaning": "地方或性質的名詞/形容詞字尾，表「具有…性質的」",
+          "grimmNote": "常用字尾 -ory，表示相關的地方或性質"
+        }
+      ],
+      "summary": "mandatory 由表「手、命令」的字根（源自 manus）加上複合字尾組成，字面意思就是「手裡拿著命令的、強制的」。",
+      "savedAt": "2026-08-28T15:23:52.557Z"
     }
   ],
   "userRoots": []
