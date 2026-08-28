@@ -3135,6 +3135,26 @@
       ],
       "summary": "marble 由表閃耀的字根與表小的字尾組成，原本是指「會發光的石頭（大理石）」。",
       "savedAt": "2026-08-28T14:50:13.616Z"
+    },
+    {
+      "id": "ulkmtd308kd1",
+      "word": "commence",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "com-",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 com-（一起、共同）"
+        },
+        {
+          "type": "root",
+          "text": "mence",
+          "meaning": "開始、發端",
+          "grimmNote": "母音通轉 e 變自原始字根，結合鼻音互換與喉音互換演變而來"
+        }
+      ],
+      "summary": "com-（一起）加上字根 mence（開始），共同展開、開始的動作。",
+      "savedAt": "2026-08-28T15:03:28.093Z"
     }
   ],
   "userRoots": []
