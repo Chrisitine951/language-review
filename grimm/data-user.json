@@ -3227,6 +3227,32 @@
       ],
       "summary": "con-（共同）加上 tent（拉扯）與名詞字尾 -ion，字面意思是「大家拉扯在一起」，引申為「爭論、競賽、競爭」。",
       "savedAt": "2026-08-28T15:47:19.706Z"
+    },
+    {
+      "id": "ulkmtd4x2h95",
+      "word": "installment",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "進入、在內",
+          "grimmNote": "in-＝在內、進入"
+        },
+        {
+          "type": "root",
+          "text": "stall",
+          "meaning": "放置、安放",
+          "grimmNote": "源自日耳曼語族，與 stand 同源（舌音互換 d/t/s）"
+        },
+        {
+          "type": "suffix",
+          "text": "-ment",
+          "meaning": "名詞字尾（表動作或結果）",
+          "grimmNote": "常見名詞字尾"
+        }
+      ],
+      "summary": "installment 由字首 in-（進入）加上代表放置的 stall（安放），再接名詞字尾 -ment 組成，原意為「分期安放/支付的款項」。",
+      "savedAt": "2026-08-28T15:56:59.469Z"
     }
   ],
   "userRoots": []
