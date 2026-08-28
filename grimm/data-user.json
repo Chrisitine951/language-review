@@ -2989,6 +2989,26 @@
       ],
       "summary": "porridge 由表示鍋子與稀糊狀物的唇音字根演變而來，加上表示食物與名詞的尾綴，用來指煮好的濃湯或麥粥。",
       "savedAt": "2026-08-28T03:47:51.749Z"
+    },
+    {
+      "id": "ulkmtclw0b01",
+      "word": "infer",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字首，表示進入內部"
+        },
+        {
+          "type": "root",
+          "text": "fer",
+          "meaning": "帶、拿、背 (carry/bear)",
+          "grimmNote": "對應古印歐語字根 *bher-，根據唇音互換 b/p/f/v，b 轉化為 f"
+        }
+      ],
+      "summary": "infer 由字首 in-（在內、進入）加上字根 fer（帶、拿）組成，字面意思是「把外面的想法帶進心裡」，引申為「推論、推斷」。",
+      "savedAt": "2026-08-28T07:04:17.292Z"
     }
   ],
   "userRoots": []
