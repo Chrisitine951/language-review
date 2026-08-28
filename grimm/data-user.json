@@ -3359,6 +3359,32 @@
       ],
       "summary": "「parcel」由表示一部分的字根與表示小的字尾組合而成，原意為「小部分」或「小包」。",
       "savedAt": "2026-08-28T16:11:06.839Z"
+    },
+    {
+      "id": "ulkmtd5jdi3b",
+      "word": "refectory",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常見字首 re- 表再次、重複"
+        },
+        {
+          "type": "root",
+          "text": "fect",
+          "meaning": "做、製作",
+          "grimmNote": "源自拉丁字根 facere，其中的 c 經由唇音互換與喉音轉換對應到原意，此處取其衍生形"
+        },
+        {
+          "type": "suffix",
+          "text": "-ory",
+          "meaning": "地方",
+          "grimmNote": "名詞字尾 -ory 表地方，組合起來即為「重新做飯或用餐的地方」（食堂）"
+        }
+      ],
+      "summary": "refectory 由表示「再次」的字首 re- 與代表「做」的字根 fect，再加上表「地方」的名詞字尾 -ory 組成，字面意思是再次用餐或進食的地方，也就是修道院或學校的食堂。",
+      "savedAt": "2026-08-28T16:14:20.187Z"
     }
   ],
   "userRoots": []
