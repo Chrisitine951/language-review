@@ -3339,6 +3339,26 @@
       ],
       "summary": "propaganda 從「向前固定插枝」演變而來，意指「播種、繁衍觀念」，最終引申為現代的「宣傳、政治宣傳」。",
       "savedAt": "2026-08-28T16:06:00.035Z"
+    },
+    {
+      "id": "ulkmtd5f8bba",
+      "word": "parcel",
+      "parts": [
+        {
+          "type": "root",
+          "text": "parc",
+          "meaning": "小部分、一部分",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "el",
+          "meaning": "小（指名詞字尾，表小東西）",
+          "grimmNote": "-et / -let / -el＝小"
+        }
+      ],
+      "summary": "「parcel」由表示一部分的字根與表示小的字尾組合而成，原意為「小部分」或「小包」。",
+      "savedAt": "2026-08-28T16:11:06.839Z"
     }
   ],
   "userRoots": []
