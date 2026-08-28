@@ -3009,6 +3009,32 @@
       ],
       "summary": "infer 由字首 in-（在內、進入）加上字根 fer（帶、拿）組成，字面意思是「把外面的想法帶進心裡」，引申為「推論、推斷」。",
       "savedAt": "2026-08-28T07:04:17.292Z"
+    },
+    {
+      "id": "ulkmtcm4ixf2",
+      "word": "recreation",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re",
+          "meaning": "再次、重複",
+          "grimmNote": "常見字首 re-，表示重複或再次"
+        },
+        {
+          "type": "root",
+          "text": "creat",
+          "meaning": "創造、生長",
+          "grimmNote": "源自古印歐語，與 grow（生長）同源，喉音 g/k/c 與唇音 w/v 的轉音關係；字尾 -ate 為動詞字尾，在此與字根融合成核心語意「創造」"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾，表狀態或行為過程",
+          "grimmNote": "複合名詞字尾 -ion，將動詞轉為名詞"
+        }
+      ],
+      "summary": "recreation 由字首 re-（再次）加上 creat（創造）與名詞字尾 -ion 組成，字面意思是「再次被創造」，引申為消除疲勞、恢復身心靈的「消遣、娛樂、休閒」。",
+      "savedAt": "2026-08-28T07:10:54.676Z"
     }
   ],
   "userRoots": []
