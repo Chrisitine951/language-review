@@ -3061,6 +3061,20 @@
       ],
       "summary": "由表示「朝向、對抗」的字首 ob- 結合意為「站立」的字根 sta，再加上指小字尾 -cle 構成，字面意思就是「擋在面前站著的小東西」，引申為「障礙、阻礙」。",
       "savedAt": "2026-08-28T07:52:40.952Z"
+    },
+    {
+      "id": "ulkmtcnz13s4",
+      "word": "bleed",
+      "parts": [
+        {
+          "type": "root",
+          "text": "bleed",
+          "meaning": "流血",
+          "grimmNote": "母音通轉 e 變 i（blood→bleed，名詞變動詞或衍生長音）"
+        }
+      ],
+      "summary": "bleed（流血）是從同族名詞 blood 透過母音通轉（oo/oa 轉 e）衍生而來的動詞。",
+      "savedAt": "2026-08-28T08:02:37.528Z"
     }
   ],
   "userRoots": []
