@@ -2969,6 +2969,26 @@
       ],
       "summary": "inherit 由表示「進入」的字首 in- 加上表示「繼承」的字根 her 組成，字面意思就是「進入繼承狀態」。",
       "savedAt": "2026-08-28T02:44:20.514Z"
+    },
+    {
+      "id": "ulkmtceveit1",
+      "word": "porridge",
+      "parts": [
+        {
+          "type": "root",
+          "text": "p",
+          "meaning": "稀粥、糊狀物",
+          "grimmNote": "唇音互換 b / p / f / v / w，源自古代表示煮沸或糊狀物的基礎音（如 pot）"
+        },
+        {
+          "type": "suffix",
+          "text": "orridge",
+          "meaning": "名詞字尾（由古英文衍生之複合結構）",
+          "grimmNote": "母音通轉 a / e / i / o / u / y 與流音變化，與 broth / pot 等字同源，演變成指麥粥的食物名稱"
+        }
+      ],
+      "summary": "porridge 由表示鍋子與稀糊狀物的唇音字根演變而來，加上表示食物與名詞的尾綴，用來指煮好的濃湯或麥粥。",
+      "savedAt": "2026-08-28T03:47:51.749Z"
     }
   ],
   "userRoots": []
