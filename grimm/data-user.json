@@ -3287,6 +3287,32 @@
       ],
       "summary": "wear（耗損、疲勞）加上形容詞字尾 -y，整字字義為「耗損過度的、疲憊的」。",
       "savedAt": "2026-08-28T16:03:50.723Z"
+    },
+    {
+      "id": "ulkmtd586rt8",
+      "word": "propaganda",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pro-",
+          "meaning": "向前、公開",
+          "grimmNote": "常見字首，表示朝向前方或公開展示"
+        },
+        {
+          "type": "root",
+          "text": "pag",
+          "meaning": "繁衍、插枝、固定、宣傳",
+          "grimmNote": "源自古印歐語根，經由母音通轉與唇音互換，與 pack（打包、固定）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "-anda",
+          "meaning": "需要被…的事物（複數/ gerundive 形容詞字尾）",
+          "grimmNote": "拉丁語被動分詞字尾，帶有「應該被做的事」的意思"
+        }
+      ],
+      "summary": "propaganda 從「向前固定插枝」演變而來，意指「播種、繁衍觀念」，最終引申為現代的「宣傳、政治宣傳」。",
+      "savedAt": "2026-08-28T16:05:38.249Z"
     }
   ],
   "userRoots": []
