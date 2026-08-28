@@ -3267,6 +3267,26 @@
       ],
       "summary": "「herb」來自古老字根，其中的 h 是由喉音弱化 c/k ↔ h 演變而來的草本植物稱呼。",
       "savedAt": "2026-08-28T15:58:08.122Z"
+    },
+    {
+      "id": "ulkmtd55vsz7",
+      "word": "weary",
+      "parts": [
+        {
+          "type": "root",
+          "text": "wear",
+          "meaning": "疲勞、耗損",
+          "grimmNote": "包含唇音互換 b / p / f / v / w，源自表示轉動或耗費的古老字根"
+        },
+        {
+          "type": "suffix",
+          "text": "y",
+          "meaning": "多（形容詞字尾）",
+          "grimmNote": "母音通轉及形容詞字尾規則，表示充滿該狀態"
+        }
+      ],
+      "summary": "wear（耗損、疲勞）加上形容詞字尾 -y，整字字義為「耗損過度的、疲憊的」。",
+      "savedAt": "2026-08-28T16:03:50.723Z"
     }
   ],
   "userRoots": []
