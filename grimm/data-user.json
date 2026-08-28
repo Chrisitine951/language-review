@@ -3181,6 +3181,26 @@
       ],
       "summary": "mandatory 由表「手、命令」的字根（源自 manus）加上複合字尾組成，字面意思就是「手裡拿著命令的、強制的」。",
       "savedAt": "2026-08-28T15:23:52.557Z"
+    },
+    {
+      "id": "ulkmtd4e90e3",
+      "word": "terrific",
+      "parts": [
+        {
+          "type": "root",
+          "text": "terr",
+          "meaning": "恐懼、害怕",
+          "grimmNote": "源自古印歐語，與 terror 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "ific",
+          "meaning": "製造…的、令人感到…的",
+          "grimmNote": "形容詞字尾，源自 facere（做、製造）"
+        }
+      ],
+      "summary": "由表「恐懼」的字根與「製造」的字尾組成，原意為「令人恐懼的」，後來語意轉化為「極好的、了不起的」。",
+      "savedAt": "2026-08-28T15:42:21.470Z"
     }
   ],
   "userRoots": []
