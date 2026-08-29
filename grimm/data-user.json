@@ -3431,6 +3431,26 @@
       ],
       "summary": "ex-（向外）加上 tinct（熄滅）與名詞字尾 -ion，字面意思就是「完全熄滅、使之滅絕」的過程。",
       "savedAt": "2026-08-29T09:10:36.141Z"
+    },
+    {
+      "id": "ulkmte5yqnge",
+      "word": "distill",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "dis",
+          "meaning": "分離、離開",
+          "grimmNote": "常見字首 dis-，表示分離或向下"
+        },
+        {
+          "type": "root",
+          "text": "till",
+          "meaning": "滴落、水滴",
+          "grimmNote": "利用母音通轉與舌音互換的概念，衍生自表示水滴或流動的字根"
+        }
+      ],
+      "summary": "「dis-」（分離、離開）加上「till」（水滴），合起來就是將液體一點一滴分離出來，也就是「蒸餾」。",
+      "savedAt": "2026-08-29T09:14:03.244Z"
     }
   ],
   "userRoots": []
