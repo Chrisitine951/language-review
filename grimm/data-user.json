@@ -3756,6 +3756,26 @@
       ],
       "summary": "propaganda（宣傳）由表示「向前」的字首 pro- 結合意為「固定、播種」的字根 pag，再加上表示被動的字尾 -anda 組成，字面意思是「向前播種、散布出去的言論」，引申為政治或政策的宣傳。",
       "savedAt": "2026-08-29T18:23:42.021Z"
+    },
+    {
+      "id": "ulkmtepmrq09",
+      "word": "cricket",
+      "parts": [
+        {
+          "type": "root",
+          "text": "cric",
+          "meaning": "製造吱吱聲或喀噠聲",
+          "grimmNote": "模擬昆蟲叫聲的擬聲字根，利用喉音互換 k/c 模擬聲音"
+        },
+        {
+          "type": "suffix",
+          "text": "et",
+          "meaning": "小",
+          "grimmNote": "-et 指「小」，組合起來意即「會發出吱吱聲的小昆蟲」也就是蟋蟀"
+        }
+      ],
+      "summary": "「cricket」是由模擬叫聲的字根與表示「小」的字尾組合而成，意指會發出唧唧聲的小昆蟲（蟋蟀）。",
+      "savedAt": "2026-08-29T18:24:37.080Z"
     }
   ],
   "userRoots": []
