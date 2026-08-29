@@ -3868,6 +3868,20 @@
       ],
       "summary": "由表「睡眠」的字根 dorm 結合形容詞字尾 ant（正在…的）組成，字面意思就是「正在睡覺的、休眠的」。",
       "savedAt": "2026-08-29T18:31:02.857Z"
+    },
+    {
+      "id": "ulkmtepvt2ze",
+      "word": "dump",
+      "parts": [
+        {
+          "type": "root",
+          "text": "dump",
+          "meaning": "傾倒；丟棄",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "dump 作為基礎單字，以原形直接表達傾倒與丟棄的動作。",
+      "savedAt": "2026-08-29T18:31:38.747Z"
     }
   ],
   "userRoots": []
