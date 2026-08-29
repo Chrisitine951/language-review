@@ -3802,6 +3802,32 @@
       ],
       "summary": "se-（分離）加上 greg（群體）與 -ate（動詞字尾），字面意思就是「使從群體中分離出來」，也就是隔離、 segregat。",
       "savedAt": "2026-08-29T18:26:33.787Z"
+    },
+    {
+      "id": "ulkmtepsysqb",
+      "word": "solicitor",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "soli",
+          "meaning": "全、整塊；孤獨、獨自",
+          "grimmNote": "源自字根 sol-（完整或獨自），此處轉化為朝向目標的單一方向"
+        },
+        {
+          "type": "root",
+          "text": "cit",
+          "meaning": "激勵、喚起、傳喚",
+          "grimmNote": "源自動詞字根 cit-（呼喚、激勵），喉音互換與母音通轉的變體"
+        },
+        {
+          "type": "suffix",
+          "text": "or",
+          "meaning": "...的人（名詞字尾）",
+          "grimmNote": "表人的名詞字尾，指從事該動作的人"
+        }
+      ],
+      "summary": "soli（全心/獨自）加上 cit（呼喚、激勵）與 -or（人），字面意思是「被全心全意呼喚、委託去辦事的人」，演變為法律上的「事務律師、檢察官」。",
+      "savedAt": "2026-08-29T18:29:26.186Z"
     }
   ],
   "userRoots": []
