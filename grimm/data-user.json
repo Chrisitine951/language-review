@@ -3563,6 +3563,32 @@
       ],
       "summary": "biscuit 字面意思是「烤兩次的東西」，由 bi（兩次）與源自 cook 的字根加上表示小的字尾組合而成，因為餅乾是透過烤兩次來達到乾燥保存的目的。",
       "savedAt": "2026-08-29T09:23:00.507Z"
+    },
+    {
+      "id": "ulkmtep45nu1",
+      "word": "ingredient",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字首，表示進入內部"
+        },
+        {
+          "type": "root",
+          "text": "gred",
+          "meaning": "走、步",
+          "grimmNote": "源自拉丁字根 gredi（走），其中的 d 屬於舌音互換族群，與 go 的喉音 g 有深層連結"
+        },
+        {
+          "type": "suffix",
+          "text": "-ient",
+          "meaning": "形容詞或名詞字尾（表…的人或物）",
+          "grimmNote": "由 -ent 衍生，母音 i 與 e 屬於母音通轉"
+        }
+      ],
+      "summary": "ingredient 的字面意思就是「走進去裡面的東西」，也就是構成某個東西的「成分」或「原料」。",
+      "savedAt": "2026-08-29T18:10:08.682Z"
     }
   ],
   "userRoots": []
