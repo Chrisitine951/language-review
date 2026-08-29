@@ -4086,6 +4086,20 @@
       ],
       "summary": "dwindle 由核心字根 dwind（減少）加上表反覆動作的字尾 -le 組成，形容事物「漸漸變小、日益減少」。",
       "savedAt": "2026-08-29T18:46:10.777Z"
+    },
+    {
+      "id": "ulkmteqf29bo",
+      "word": "arch",
+      "parts": [
+        {
+          "type": "root",
+          "text": "arch",
+          "meaning": "主要的、首要的、統治",
+          "grimmNote": "源自原始印歐語，保留喉音 k/c 轉 h 的親戚關係（如 chief）"
+        }
+      ],
+      "summary": "「arch」作為字根或獨立單字，核心意義為「首要的、統治的」。",
+      "savedAt": "2026-08-29T18:46:37.103Z"
     }
   ],
   "userRoots": []
