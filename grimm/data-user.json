@@ -3491,6 +3491,26 @@
       ],
       "summary": "單字「sort」直接源自古代印歐語系中表示「份額、命運、分類」的字根，演變至今保留了「分類、種類」的核心意義。",
       "savedAt": "2026-08-29T09:18:46.154Z"
+    },
+    {
+      "id": "ulkmte65yqoh",
+      "word": "pledge",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pl",
+          "meaning": "向前、推動",
+          "grimmNote": "唇音互換 b / p / f / v / w 與流音組合之變體，表向前推進"
+        },
+        {
+          "type": "root",
+          "text": "edge",
+          "meaning": "邊緣、誓言、刃",
+          "grimmNote": "源自古日耳曼語，經舌音互換 d / t / s 及母音通轉"
+        }
+      ],
+      "summary": "pl-（向前）結合表邊緣或限制的字根，引申為「將自己推向承諾的邊緣」，即為誓言與保證（pledge）。",
+      "savedAt": "2026-08-29T09:19:40.320Z"
     }
   ],
   "userRoots": []
