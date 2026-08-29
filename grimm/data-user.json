@@ -3960,6 +3960,26 @@
       ],
       "summary": "ex-（向外）加上代表「填滿、發揮」的字根 plo，字面意思就是「把潛力完全發揮出來」，引申為「剝削」或「開發利用」。",
       "savedAt": "2026-08-29T18:35:14.932Z"
+    },
+    {
+      "id": "ulkmteq3v7si",
+      "word": "circuit",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "circu",
+          "meaning": "環繞、圓圈",
+          "grimmNote": "源自字根ire（走），前方結合成環繞著走的意涵"
+        },
+        {
+          "type": "suffix",
+          "text": "it",
+          "meaning": "名詞或動詞字尾，表示動作或結果",
+          "grimmNote": "源自ire（走）的名詞/動詞變化，舌音互換 d/t 的變化"
+        }
+      ],
+      "summary": "circuit 由「環繞」與「走」結合而成，字面意思就是「繞一圈走」，引申為電路、迴路或巡回。",
+      "savedAt": "2026-08-29T18:37:54.760Z"
     }
   ],
   "userRoots": []
