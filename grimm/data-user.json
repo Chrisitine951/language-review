@@ -3537,6 +3537,32 @@
       ],
       "summary": "lecturer 由表「說、挑選」的字根 lect 加上名詞字尾 -ur 與表示人的字尾 -er 組合而成，字面意思是「負責演說、講課的人」。",
       "savedAt": "2026-08-29T09:22:21.914Z"
+    },
+    {
+      "id": "ulkmte6a97fj",
+      "word": "biscuit",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "bi",
+          "meaning": "二次、兩次",
+          "grimmNote": "源自古印歐語，表示「二」"
+        },
+        {
+          "type": "root",
+          "text": "scu",
+          "meaning": "烘烤、煮",
+          "grimmNote": "舌音互換 d/t/s，與 cook (煮) 同源，喉音 g/k/c 與舌音 s 轉換"
+        },
+        {
+          "type": "suffix",
+          "text": "it",
+          "meaning": "小的東西",
+          "grimmNote": "源自字尾 -et/-it，表示「小」"
+        }
+      ],
+      "summary": "biscuit 字面意思是「烤兩次的東西」，由 bi（兩次）與源自 cook 的字根加上表示小的字尾組合而成，因為餅乾是透過烤兩次來達到乾燥保存的目的。",
+      "savedAt": "2026-08-29T09:23:00.507Z"
     }
   ],
   "userRoots": []
