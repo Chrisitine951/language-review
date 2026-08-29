@@ -3511,6 +3511,32 @@
       ],
       "summary": "pl-（向前）結合表邊緣或限制的字根，引申為「將自己推向承諾的邊緣」，即為誓言與保證（pledge）。",
       "savedAt": "2026-08-29T09:19:40.320Z"
+    },
+    {
+      "id": "ulkmte69ffei",
+      "word": "lecturer",
+      "parts": [
+        {
+          "type": "root",
+          "text": "lect",
+          "meaning": "說、收集",
+          "grimmNote": "源自古印歐語字根，原意為挑選、收集或說話"
+        },
+        {
+          "type": "suffix",
+          "text": "ur",
+          "meaning": "過程或結果（名詞字尾）",
+          "grimmNote": "母音通轉 e 變 u，流音互換 l/r 相關變化"
+        },
+        {
+          "type": "suffix",
+          "text": "-er",
+          "meaning": "人（名詞字尾）",
+          "grimmNote": "表示從事該動作的人"
+        }
+      ],
+      "summary": "lecturer 由表「說、挑選」的字根 lect 加上名詞字尾 -ur 與表示人的字尾 -er 組合而成，字面意思是「負責演說、講課的人」。",
+      "savedAt": "2026-08-29T09:22:21.914Z"
     }
   ],
   "userRoots": []
