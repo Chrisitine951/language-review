@@ -3655,6 +3655,35 @@
       ],
       "summary": "opacity 由表示朝向的字首 op-、與眼睛視線相關的字根 ac、以及名詞字尾 -ity 組成，字面意思是「視線無法穿透的狀態」，即「不透明度」。",
       "savedAt": "2026-08-29T18:12:56.386Z"
+    },
+    {
+      "id": "ulkmtep9ep35",
+      "word": "impose",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "im-",
+          "meaning": "在內、進入",
+          "s_meaning": "",
+          "grimmNote": "源自 in-（在內、進入），因後面接雙唇音 p 而同化成 im-"
+        },
+        {
+          "type": "root",
+          "text": "pos",
+          "meaning": "放置",
+          "s_meaning": "",
+          "grimmNote": "源自印歐語字根，與 position、pose 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "動詞字尾",
+          "s_meaning": "",
+          "grimmNote": "無實質意義的字尾"
+        }
+      ],
+      "summary": "由字首 in-（進入、往內）轉化為 im- 加上字根 pos（放置），字面意思就是「放進去」，引申為「強加（義務、稅金等）於人」或「把意愿強加給別人」。",
+      "savedAt": "2026-08-29T18:14:13.671Z"
     }
   ],
   "userRoots": []
