@@ -3882,6 +3882,32 @@
       ],
       "summary": "dump 作為基礎單字，以原形直接表達傾倒與丟棄的動作。",
       "savedAt": "2026-08-29T18:31:38.747Z"
+    },
+    {
+      "id": "ulkmtepwh7xf",
+      "word": "ambulance",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "am",
+          "meaning": "動詞或名詞字首（源自 am- / an-，表動作或相關狀態）",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "bul",
+          "meaning": "移動、走動、滾動",
+          "grimmNote": "唇音互換 b / p / f / v / w：此處的 b 對應到表示移動或行走的古代語根（與 walk/pace 等同源概念）"
+        },
+        {
+          "type": "suffix",
+          "text": "ance",
+          "meaning": "名詞字尾（表狀態、過程或工具）",
+          "grimmNote": "母音通轉 a / e / i / o / u / y：-ance 衍生自名詞字尾，用來構成具體事物的名詞"
+        }
+      ],
+      "summary": "ambulance 由表示行動的語根結合字首與名詞字尾組成，原意指「移動的傷兵醫院」，後來演變為現代的「救護車」。",
+      "savedAt": "2026-08-29T18:32:10.029Z"
     }
   ],
   "userRoots": []
