@@ -3710,6 +3710,26 @@
       ],
       "summary": "「scallion」（青蔥）由加強語氣的字首 sc- 結合表示蔥蒜類的字根 all，再加上名詞字尾 -ion 構成。",
       "savedAt": "2026-08-29T18:15:23.144Z"
+    },
+    {
+      "id": "ulkmtepj6z97",
+      "word": "victim",
+      "parts": [
+        {
+          "type": "root",
+          "text": "vict",
+          "meaning": "征服、打敗",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "im",
+          "meaning": "名詞字尾，指人或物",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "victim 原意為被征服或被當作祭品的人，字根 vict 代表征服，加上表人的字尾後演變為「受害者」。",
+      "savedAt": "2026-08-29T18:21:50.229Z"
     }
   ],
   "userRoots": []
