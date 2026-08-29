@@ -3405,6 +3405,32 @@
       ],
       "summary": "字首 e-（向外）加上字根 merge（沉沒、浸泡），字面意思就是「從液體中浸泡出來」，引申為「浮現、出現」。",
       "savedAt": "2026-08-29T09:09:56.488Z"
+    },
+    {
+      "id": "ulkmte5uauld",
+      "word": "extinction",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ex",
+          "meaning": "出去、向外",
+          "grimmNote": "常見字首 ex-，表示向外、離開。"
+        },
+        {
+          "type": "root",
+          "text": "tinct",
+          "meaning": "熄滅、刺滅",
+          "grimmNote": "源自拉丁語動詞 stinguere（熄滅），st- 與 t- 透過「舌音互換 d / t / s」演變，這裡保留 tinct 作為滅絕、熄滅的字根。"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾，表狀態或過程",
+          "grimmNote": "複合名詞字尾，將動詞或形容詞轉化為抽象名詞。"
+        }
+      ],
+      "summary": "ex-（向外）加上 tinct（熄滅）與名詞字尾 -ion，字面意思就是「完全熄滅、使之滅絕」的過程。",
+      "savedAt": "2026-08-29T09:10:36.141Z"
     }
   ],
   "userRoots": []
