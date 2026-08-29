@@ -3451,6 +3451,32 @@
       ],
       "summary": "「dis-」（分離、離開）加上「till」（水滴），合起來就是將液體一點一滴分離出來，也就是「蒸餾」。",
       "savedAt": "2026-08-29T09:14:03.244Z"
+    },
+    {
+      "id": "ulkmte61bgzf",
+      "word": "enthusiastic",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "en-",
+          "meaning": "使、進入",
+          "grimmNote": "常用字首：en-＝動作化、令其如何"
+        },
+        {
+          "type": "root",
+          "text": "theos",
+          "meaning": "神",
+          "grimmNote": "源自希臘文 theos（神），對應英文的 god"
+        },
+        {
+          "type": "suffix",
+          "text": "-iastic",
+          "meaning": "充滿...的、狂熱的",
+          "grimmNote": "由形容詞字尾 -astic 複合而成，其中 -y / -ous 常轉化為 -iastic 表多或具備某種狀態"
+        }
+      ],
+      "summary": "enthusiastic 由字首 en-（進入）加上代表「神」的字根 theos 以及形容詞字尾組成，字面意思就是「心中有神附身、充滿神力與狂熱的」。",
+      "savedAt": "2026-08-29T09:16:03.539Z"
     }
   ],
   "userRoots": []
