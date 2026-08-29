@@ -3684,6 +3684,32 @@
       ],
       "summary": "由字首 in-（進入、往內）轉化為 im- 加上字根 pos（放置），字面意思就是「放進去」，引申為「強加（義務、稅金等）於人」或「把意愿強加給別人」。",
       "savedAt": "2026-08-29T18:14:13.671Z"
+    },
+    {
+      "id": "ulkmtepawaw6",
+      "word": "scallion",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "sc",
+          "meaning": "無實質意義的前綴或加強語氣",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "all",
+          "meaning": "蔥、蒜、鱗莖植物",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾，表狀態或事物",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "「scallion」（青蔥）由加強語氣的字首 sc- 結合表示蔥蒜類的字根 all，再加上名詞字尾 -ion 構成。",
+      "savedAt": "2026-08-29T18:15:23.144Z"
     }
   ],
   "userRoots": []
