@@ -4046,6 +4046,26 @@
       ],
       "summary": "allure 由表示加強語氣的字首 al- 與意為「引誘」的字根 lure 組合而成，字面意思就是強烈地吸引或誘惑。",
       "savedAt": "2026-08-29T18:40:41.480Z"
+    },
+    {
+      "id": "ulkmteq8567m",
+      "word": "sincere",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "sin",
+          "meaning": "分離、離開",
+          "grimmNote": "源自 ab-/se- 的變體，表示將混雜的事物分開"
+        },
+        {
+          "type": "root",
+          "text": "cere",
+          "meaning": "長、生長；實實在在的",
+          "grimmNote": "與 grow、create 同源，指純粹長成、沒有雜質的"
+        }
+      ],
+      "summary": "sincere 由表示「分離」的字首與表示「生長」的字根組合，原意指「沒有雜質、純粹的」，引申為「真誠的」。",
+      "savedAt": "2026-08-29T18:41:14.287Z"
     }
   ],
   "userRoots": []
