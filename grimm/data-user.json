@@ -3776,6 +3776,32 @@
       ],
       "summary": "「cricket」是由模擬叫聲的字根與表示「小」的字尾組合而成，意指會發出唧唧聲的小昆蟲（蟋蟀）。",
       "savedAt": "2026-08-29T18:24:37.080Z"
+    },
+    {
+      "id": "ulkmtepp9rva",
+      "word": "segregate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "se-",
+          "meaning": "分離、離開",
+          "grimmNote": "常用字首 se- 表「分離、離開」"
+        },
+        {
+          "type": "root",
+          "text": "greg",
+          "meaning": "群體、聚集",
+          "grimmNote": "字根 greg 源自古印歐語，與群體相關"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾，使成為",
+          "grimmNote": "常用字尾 -ate 表動詞化"
+        }
+      ],
+      "summary": "se-（分離）加上 greg（群體）與 -ate（動詞字尾），字面意思就是「使從群體中分離出來」，也就是隔離、 segregat。",
+      "savedAt": "2026-08-29T18:26:33.787Z"
     }
   ],
   "userRoots": []
