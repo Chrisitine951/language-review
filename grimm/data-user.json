@@ -3730,6 +3730,32 @@
       ],
       "summary": "victim 原意為被征服或被當作祭品的人，字根 vict 代表征服，加上表人的字尾後演變為「受害者」。",
       "savedAt": "2026-08-29T18:21:50.229Z"
+    },
+    {
+      "id": "ulkmtepll8l8",
+      "word": "propaganda",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pro-",
+          "meaning": "向前、公開",
+          "grimmNote": "常見字首，表示朝前或公開發布。"
+        },
+        {
+          "type": "root",
+          "text": "pag",
+          "meaning": "固定、插進去、播種",
+          "grimmNote": "源自古印歐語，與 page（頁）和 plant（植物）同源，原本指把木樁固定或播種。"
+        },
+        {
+          "type": "suffix",
+          "text": "-anda",
+          "meaning": "需要被…的事物（被動名詞字尾）",
+          "grimmNote": "源自拉丁語動名詞被動分詞字尾 -andus 的複數形，表示「應該被播送、宣傳的事物」。"
+        }
+      ],
+      "summary": "propaganda（宣傳）由表示「向前」的字首 pro- 結合意為「固定、播種」的字根 pag，再加上表示被動的字尾 -anda 組成，字面意思是「向前播種、散布出去的言論」，引申為政治或政策的宣傳。",
+      "savedAt": "2026-08-29T18:23:42.021Z"
     }
   ],
   "userRoots": []
