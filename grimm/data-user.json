@@ -3848,6 +3848,26 @@
       ],
       "summary": "「hockey」由表示鉤子的「hook」結合指小詞尾「-y」組成，原意指帶有鉤狀的棍子所進行的運動。",
       "savedAt": "2026-08-29T18:30:07.072Z"
+    },
+    {
+      "id": "ulkmtepv1e1d",
+      "word": "dormant",
+      "parts": [
+        {
+          "type": "root",
+          "text": "dorm",
+          "meaning": "睡眠",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ant",
+          "meaning": "形容詞字尾，表「正在…的」",
+          "grimmNote": "母音通轉 a / e / i / o / u / y 相關變化"
+        }
+      ],
+      "summary": "由表「睡眠」的字根 dorm 結合形容詞字尾 ant（正在…的）組成，字面意思就是「正在睡覺的、休眠的」。",
+      "savedAt": "2026-08-29T18:31:02.857Z"
     }
   ],
   "userRoots": []
