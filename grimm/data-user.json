@@ -3828,6 +3828,26 @@
       ],
       "summary": "soli（全心/獨自）加上 cit（呼喚、激勵）與 -or（人），字面意思是「被全心全意呼喚、委託去辦事的人」，演變為法律上的「事務律師、檢察官」。",
       "savedAt": "2026-08-29T18:29:26.186Z"
+    },
+    {
+      "id": "ulkmteptucgc",
+      "word": "hockey",
+      "parts": [
+        {
+          "type": "root",
+          "text": "hook",
+          "meaning": "勾子、鉤狀物",
+          "grimmNote": "字尾的 c 依據「喉音弱化 c / k ↔ h」規則，對應到 h 音，原意指曲棍球棍的鉤狀造型。"
+        },
+        {
+          "type": "suffix",
+          "text": "ey",
+          "meaning": "小（指小詞尾）",
+          "grimmNote": "形容詞或名詞字尾 -y，在此表小巧或具體化事物。"
+        }
+      ],
+      "summary": "「hockey」由表示鉤子的「hook」結合指小詞尾「-y」組成，原意指帶有鉤狀的棍子所進行的運動。",
+      "savedAt": "2026-08-29T18:30:07.072Z"
     }
   ],
   "userRoots": []
