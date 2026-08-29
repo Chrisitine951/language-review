@@ -4066,6 +4066,26 @@
       ],
       "summary": "sincere 由表示「分離」的字首與表示「生長」的字根組合，原意指「沒有雜質、純粹的」，引申為「真誠的」。",
       "savedAt": "2026-08-29T18:41:14.287Z"
+    },
+    {
+      "id": "ulkmteqehy1n",
+      "word": "dwindle",
+      "parts": [
+        {
+          "type": "root",
+          "text": "dwind",
+          "meaning": "減少、縮小",
+          "grimmNote": "源自日耳曼語支的原始字根，與德語 schwinden（減少、消逝）同源，其中 s 脫落，w 屬於唇音互換 b / p / f / v / w，d 屬於舌音互換 d / t / s"
+        },
+        {
+          "type": "suffix",
+          "text": "le",
+          "meaning": "表反覆動作的小型化或持續性字尾",
+          "grimmNote": "-le 表重複或持續進行的動作，使動詞呈現「漸漸減少」的過程"
+        }
+      ],
+      "summary": "dwindle 由核心字根 dwind（減少）加上表反覆動作的字尾 -le 組成，形容事物「漸漸變小、日益減少」。",
+      "savedAt": "2026-08-29T18:46:10.777Z"
     }
   ],
   "userRoots": []
