@@ -4026,6 +4026,26 @@
       ],
       "summary": "de-（向下、打開）加上 tect（覆蓋），原本意思是「把遮蓋物打開」，演變為「偵測、查出」。",
       "savedAt": "2026-08-29T18:39:28.999Z"
+    },
+    {
+      "id": "ulkmteq7fuwl",
+      "word": "allure",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "al-",
+          "meaning": "加強語氣、朝向",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音 l 只是加強語氣，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "lure",
+          "meaning": "誘惑、引誘",
+          "grimmNote": "核心字根，借自法語與日耳曼語族，原意為用來引誘獵鷹的器具（lure）。"
+        }
+      ],
+      "summary": "allure 由表示加強語氣的字首 al- 與意為「引誘」的字根 lure 組合而成，字面意思就是強烈地吸引或誘惑。",
+      "savedAt": "2026-08-29T18:40:41.480Z"
     }
   ],
   "userRoots": []
