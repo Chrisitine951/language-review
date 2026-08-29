@@ -3629,6 +3629,32 @@
       ],
       "summary": "notorious 由表示「知道」的字根加上表示「充滿…的」字尾組成，字面意思就是「大家都知道的」，引申為聲名狼藉、惡名昭彰。",
       "savedAt": "2026-08-29T18:12:08.567Z"
+    },
+    {
+      "id": "ulkmtep7r2a4",
+      "word": "opacity",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "op",
+          "meaning": "朝向；遮蔽",
+          "grimmNote": "源自 ob-（向下、朝向），經由子音同化變為 op-"
+        },
+        {
+          "type": "root",
+          "text": "ac",
+          "meaning": "眼睛；看見",
+          "grimmNote": "源自喉音互換 c 相關字根（如 ocular 的 eye），指視線受阻"
+        },
+        {
+          "type": "suffix",
+          "text": "ity",
+          "meaning": "名詞字尾，表性質與狀態",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "opacity 由表示朝向的字首 op-、與眼睛視線相關的字根 ac、以及名詞字尾 -ity 組成，字面意思是「視線無法穿透的狀態」，即「不透明度」。",
+      "savedAt": "2026-08-29T18:12:56.386Z"
     }
   ],
   "userRoots": []
