@@ -3385,6 +3385,26 @@
       ],
       "summary": "refectory 由表示「再次」的字首 re- 與代表「做」的字根 fect，再加上表「地方」的名詞字尾 -ory 組成，字面意思是再次用餐或進食的地方，也就是修道院或學校的食堂。",
       "savedAt": "2026-08-28T16:14:20.187Z"
+    },
+    {
+      "id": "ulkmte5tg94c",
+      "word": "emerge",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "e-",
+          "meaning": "出去、向外",
+          "grimmNote": "使用常用字首 e-（源自 ex-），表示向外。"
+        },
+        {
+          "type": "root",
+          "text": "merge",
+          "meaning": "沉沒、浸泡、結合",
+          "grimmNote": "源自拉丁語 mergere（浸入、沒入），與英文的 merge 同源。"
+        }
+      ],
+      "summary": "字首 e-（向外）加上字根 merge（沉沒、浸泡），字面意思就是「從液體中浸泡出來」，引申為「浮現、出現」。",
+      "savedAt": "2026-08-29T09:09:56.488Z"
     }
   ],
   "userRoots": []
