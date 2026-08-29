@@ -3609,6 +3609,26 @@
       ],
       "summary": "由表「進入」的字首 in- 與表「滴落」的字根 still 組合而成，字面意思就是「一滴一滴注入」，引申為「灌輸、傾注」。",
       "savedAt": "2026-08-29T18:11:32.918Z"
+    },
+    {
+      "id": "ulkmtep6q5z3",
+      "word": "notorious",
+      "parts": [
+        {
+          "type": "root",
+          "text": "not",
+          "meaning": "知道、認識",
+          "grimmNote": "源自古印歐語字根 *gnō-（知道），經由喉音轉化與母音通轉，衍生出 know、note、notice 等親戚字。"
+        },
+        {
+          "type": "suffix",
+          "text": "orious",
+          "meaning": "充滿…的（形容詞字尾）",
+          "grimmNote": "由形容詞字尾 -y / -ous / -ious 演變而來，表示「充滿...的、具有...特質的」。"
+        }
+      ],
+      "summary": "notorious 由表示「知道」的字根加上表示「充滿…的」字尾組成，字面意思就是「大家都知道的」，引申為聲名狼藉、惡名昭彰。",
+      "savedAt": "2026-08-29T18:12:08.567Z"
     }
   ],
   "userRoots": []
