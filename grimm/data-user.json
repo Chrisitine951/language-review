@@ -3934,6 +3934,32 @@
       ],
       "summary": "cutlery 由表示「切割」的字根與表「集合場所與物品」的字尾組成，原意指「刀具的集合」，現在專指餐具。",
       "savedAt": "2026-08-29T18:33:59.636Z"
+    },
+    {
+      "id": "ulkmteq0fw4h",
+      "word": "exploit",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ex-",
+          "meaning": "出去、向外",
+          "grimmNote": "常見字首，表示向外、出發"
+        },
+        {
+          "type": "root",
+          "text": "plo",
+          "meaning": "填滿、完成",
+          "grimmNote": "與 ple / ply 同源（字根意義為「滿」）"
+        },
+        {
+          "type": "suffix",
+          "text": "-it",
+          "meaning": "動詞或形容詞字尾",
+          "grimmNote": "舌音互換 d/t 的變體，常形成過去分詞或動作結果"
+        }
+      ],
+      "summary": "ex-（向外）加上代表「填滿、發揮」的字根 plo，字面意思就是「把潛力完全發揮出來」，引申為「剝削」或「開發利用」。",
+      "savedAt": "2026-08-29T18:35:14.932Z"
     }
   ],
   "userRoots": []
