@@ -4006,6 +4006,26 @@
       ],
       "summary": "humiliate 由表「進入、向下」的字首與表「地面、低處」的字根組成，字面意思是「使落到地面、使低人一等」，引申為「羞辱、使丟臉」。",
       "savedAt": "2026-08-29T18:38:32.245Z"
+    },
+    {
+      "id": "ulkmteq5vxjk",
+      "word": "detect",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下、離開、否定",
+          "grimmNote": "常見字首，表示向下或離開。"
+        },
+        {
+          "type": "root",
+          "text": "tect",
+          "meaning": "覆蓋、遮掩",
+          "grimmNote": "其中 t 與 g/k/c 喉音互換關係（覆蓋 cover 的同源字根）"
+        }
+      ],
+      "summary": "de-（向下、打開）加上 tect（覆蓋），原本意思是「把遮蓋物打開」，演變為「偵測、查出」。",
+      "savedAt": "2026-08-29T18:39:28.999Z"
     }
   ],
   "userRoots": []
