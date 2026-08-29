@@ -3980,6 +3980,32 @@
       ],
       "summary": "circuit 由「環繞」與「走」結合而成，字面意思就是「繞一圈走」，引申為電路、迴路或巡回。",
       "savedAt": "2026-08-29T18:37:54.760Z"
+    },
+    {
+      "id": "ulkmteq4o51j",
+      "word": "humiliate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "hu",
+          "meaning": "在內、進入",
+          "grimmNote": "in- 經鼻音互換轉化為 hu"
+        },
+        {
+          "type": "prefix",
+          "text": "mil",
+          "meaning": "地面、低處",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "iate",
+          "meaning": "動詞字尾，使成為…",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "humiliate 由表「進入、向下」的字首與表「地面、低處」的字根組成，字面意思是「使落到地面、使低人一等」，引申為「羞辱、使丟臉」。",
+      "savedAt": "2026-08-29T18:38:32.245Z"
     }
   ],
   "userRoots": []
