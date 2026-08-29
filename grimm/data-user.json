@@ -3908,6 +3908,32 @@
       ],
       "summary": "ambulance 由表示行動的語根結合字首與名詞字尾組成，原意指「移動的傷兵醫院」，後來演變為現代的「救護車」。",
       "savedAt": "2026-08-29T18:32:10.029Z"
+    },
+    {
+      "id": "ulkmtepytskg",
+      "word": "cutlery",
+      "parts": [
+        {
+          "type": "root",
+          "text": "cut",
+          "meaning": "切割、砍",
+          "grimmNote": "喉音互換 g / k / c，源自古日耳曼語的切割動作根源"
+        },
+        {
+          "type": "suffix",
+          "text": "-l-",
+          "meaning": "流音滑音",
+          "grimmNote": "流音互換 l / r，用於連接字根與字尾的輔音結構"
+        },
+        {
+          "type": "suffix",
+          "text": "-ery",
+          "meaning": "地方；物品集合地（名詞字尾）",
+          "grimmNote": "常見名詞字尾，表「存放或製作某物的場所、或相關物品的集合」"
+        }
+      ],
+      "summary": "cutlery 由表示「切割」的字根與表「集合場所與物品」的字尾組成，原意指「刀具的集合」，現在專指餐具。",
+      "savedAt": "2026-08-29T18:33:59.636Z"
     }
   ],
   "userRoots": []
