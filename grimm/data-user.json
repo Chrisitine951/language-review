@@ -3589,6 +3589,26 @@
       ],
       "summary": "ingredient 的字面意思就是「走進去裡面的東西」，也就是構成某個東西的「成分」或「原料」。",
       "savedAt": "2026-08-29T18:10:08.682Z"
+    },
+    {
+      "id": "ulkmtep5ynq2",
+      "word": "instill",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字首，表示進入內部"
+        },
+        {
+          "type": "root",
+          "text": "still",
+          "meaning": "滴落、流淌；靜止",
+          "grimmNote": "源自古印歐語，與 drop 或流動有關，引申為「一滴一滴注入」"
+        }
+      ],
+      "summary": "由表「進入」的字首 in- 與表「滴落」的字根 still 組合而成，字面意思就是「一滴一滴注入」，引申為「灌輸、傾注」。",
+      "savedAt": "2026-08-29T18:11:32.918Z"
     }
   ],
   "userRoots": []
