@@ -4178,6 +4178,26 @@
       ],
       "summary": "humiliate 由表群體與使成為的字尾組成，字面上有如「將人貶低至群體之下、踐失尊嚴」，引申為羞辱、使丟臉。",
       "savedAt": "2026-08-30T17:37:47.615Z"
+    },
+    {
+      "id": "ulkmtg3iibq2",
+      "word": "bribe",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "b",
+          "meaning": "向、朝向 (ob- 變體)",
+          "grimmNote": "使用了 ob- / oc-＝向下；朝向，子音簡化"
+        },
+        {
+          "type": "root",
+          "text": "ribe",
+          "meaning": "劃分、刻痕、分發",
+          "grimmNote": "與 write 同源，透過唇音互換與母音通轉演變而來"
+        }
+      ],
+      "summary": "bribe 的字源本義是指「分發、分配所得」，後來演變指私下分好處、行賄。",
+      "savedAt": "2026-08-30T17:40:59.078Z"
     }
   ],
   "userRoots": []
