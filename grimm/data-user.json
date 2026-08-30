@@ -4100,6 +4100,32 @@
       ],
       "summary": "「arch」作為字根或獨立單字，核心意義為「首要的、統治的」。",
       "savedAt": "2026-08-29T18:46:37.103Z"
+    },
+    {
+      "id": "ulkmtfcsrkop",
+      "word": "qualify",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "qu",
+          "meaning": "向前、追求",
+          "grimmNote": "源自字首同源或弱化音變"
+        },
+        {
+          "type": "root",
+          "text": "al",
+          "meaning": "營養、生長、養育（源自 alere）",
+          "grimmNote": "流音互換 l / r 與母音通轉"
+        },
+        {
+          "type": "suffix",
+          "text": "ify",
+          "meaning": "動詞字尾：使成為、化為",
+          "grimmNote": "常見動詞字尾，表使具有某種性質"
+        }
+      ],
+      "summary": "qualify 由表追求的字首與表養育、使成長的字根組合，字面義為「使具備相應的條件或資格」。",
+      "savedAt": "2026-08-30T05:13:07.992Z"
     }
   ],
   "userRoots": []
