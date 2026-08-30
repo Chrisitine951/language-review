@@ -4152,6 +4152,32 @@
       ],
       "summary": "re-（再次、反覆）加上 lig（綁、繫）與名詞字尾 -ion，字面意思是「再次被綁在一起、重新連結」，也就是人對神或信仰的緊密繫屬，演變為「宗教、虔誠」。",
       "savedAt": "2026-08-30T05:42:21.244Z"
+    },
+    {
+      "id": "ulkmtg3eelb1",
+      "word": "humiliate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "hu",
+          "meaning": "（字首變體，源自同音或簡化）",
+          "grimmNote": "喉音弱化 c / k ↔ h 或相關結構變體"
+        },
+        {
+          "type": "prefix",
+          "text": "mili",
+          "meaning": "群體、士兵（源自軍隊）",
+          "grimmNote": "鼻音互換 n / m"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾，使成為……",
+          "grimmNote": "常見動詞字尾"
+        }
+      ],
+      "summary": "humiliate 由表群體與使成為的字尾組成，字面上有如「將人貶低至群體之下、踐失尊嚴」，引申為羞辱、使丟臉。",
+      "savedAt": "2026-08-30T17:37:47.615Z"
     }
   ],
   "userRoots": []
