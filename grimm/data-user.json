@@ -4126,6 +4126,32 @@
       ],
       "summary": "qualify 由表追求的字首與表養育、使成長的字根組合，字面義為「使具備相應的條件或資格」。",
       "savedAt": "2026-08-30T05:13:07.992Z"
+    },
+    {
+      "id": "ulkmtfduce4q",
+      "word": "religion",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常用字首 re- 表再次或反覆"
+        },
+        {
+          "type": "root",
+          "text": "lig",
+          "meaning": "綁、繫",
+          "grimmNote": "喉音互換與基本字根變化"
+        },
+        {
+          "type": "suffix",
+          "text": "-ion",
+          "meaning": "名詞字尾（狀態、性質）",
+          "grimmNote": "常見名詞字尾"
+        }
+      ],
+      "summary": "re-（再次、反覆）加上 lig（綁、繫）與名詞字尾 -ion，字面意思是「再次被綁在一起、重新連結」，也就是人對神或信仰的緊密繫屬，演變為「宗教、虔誠」。",
+      "savedAt": "2026-08-30T05:42:21.244Z"
     }
   ],
   "userRoots": []
