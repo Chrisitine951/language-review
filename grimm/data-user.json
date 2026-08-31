@@ -4198,6 +4198,32 @@
       ],
       "summary": "bribe 的字源本義是指「分發、分配所得」，後來演變指私下分好處、行賄。",
       "savedAt": "2026-08-30T17:40:59.078Z"
+    },
+    {
+      "id": "ulkmtguxuxq1",
+      "word": "reputation",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常用的字首，表示重複或加強動作"
+        },
+        {
+          "type": "root",
+          "text": "put",
+          "meaning": "思考、計算、放置",
+          "grimmNote": "核心語意來源自計算、估價、認為（對應到拉丁文 putare）"
+        },
+        {
+          "type": "suffix",
+          "text": "ation",
+          "meaning": "名詞字尾（由 -ate 動詞字尾與 -ion 名詞字尾複合而成）",
+          "grimmNote": "母音通轉：字尾的 i 與 e 互換，並加上複合名詞字尾形成抽象名詞"
+        }
+      ],
+      "summary": "reputation 由「再次/不斷 (re-)」＋「計算、估價 (put)」＋「名詞字尾 (-ation)」組成，字面意思是「被大家不斷衡量、計算的評價」，因此演變為「名譽、聲望」。",
+      "savedAt": "2026-08-31T06:28:44.894Z"
     }
   ],
   "userRoots": []
