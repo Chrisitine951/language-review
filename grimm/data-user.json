@@ -4250,6 +4250,32 @@
       ],
       "summary": "injure 由表示進入的 in- 結合詞根 jur（法律、正義）組成，原意為「違反法律、侵害正義」，演變至今成為「傷害、損害」之意。",
       "savedAt": "2026-09-01T06:06:13.497Z"
+    },
+    {
+      "id": "ulkmtieqy4t1",
+      "word": "humiliate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "hu",
+          "meaning": "向下；朝向",
+          "grimmNote": "源自 ob- 經由喉音弱化 c/k ↔ h 以及子音轉化，在此表向下"
+        },
+        {
+          "type": "root",
+          "text": "mili",
+          "meaning": "地面；土地",
+          "grimmNote": "源自 humus（土壤/地面），m 與 n 鼻音互換、l 與 r 流音互換，指處在最低的地面"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾，令其如何",
+          "grimmNote": "動詞字尾，表動作化"
+        }
+      ],
+      "summary": "「humiliate」由表示「向下」的字首與代表「地面（humus）」的字根組合而成，字面意思是「使落到地面、使卑微」，也就是「羞辱、使丟臉」。",
+      "savedAt": "2026-09-01T08:31:00.941Z"
     }
   ],
   "userRoots": []
