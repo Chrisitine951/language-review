@@ -4374,6 +4374,26 @@
       ],
       "summary": "「gourmet」由表示吃的字根與表小或人的字尾組成，原本指對食物講究、品嚐美食的小人物，演變為現在的美食家。",
       "savedAt": "2026-09-01T15:38:39.188Z"
+    },
+    {
+      "id": "ulkmtiunm5t2",
+      "word": "strict",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "s",
+          "meaning": "加強語氣、向外",
+          "grimmNote": "字首 s- 常具有加強語氣的作用，強調動作的緊繃與確實。"
+        },
+        {
+          "type": "root",
+          "text": "trict",
+          "meaning": "拉緊、繫緊",
+          "grimmNote": "核心字根 stric 源自印歐語系，藉由舌音互換 d/t/s，與 string（繩子、繫）同源。字尾的 ct 中的 c 與 t 結合，雙子音規則與字根融為一體，表動作的落實。"
+        }
+      ],
+      "summary": "strict 由加強語氣的 s- 與表示「拉緊」的字根 stric 組合而成，字面意思就是「被拉得緊緊的」，因此引申出「嚴格的、緊密的」之意。",
+      "savedAt": "2026-09-01T15:56:19.313Z"
     }
   ],
   "userRoots": []
