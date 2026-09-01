@@ -4394,6 +4394,26 @@
       ],
       "summary": "strict 由加強語氣的 s- 與表示「拉緊」的字根 stric 組合而成，字面意思就是「被拉得緊緊的」，因此引申出「嚴格的、緊密的」之意。",
       "savedAt": "2026-09-01T15:56:19.313Z"
+    },
+    {
+      "id": "ulkmtiv06g63",
+      "word": "paralyze",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "para-",
+          "meaning": "超越、在旁邊、防禦",
+          "grimmNote": "源自希臘文字首 para-，表示在旁、超越或異常"
+        },
+        {
+          "type": "root",
+          "text": "lyz",
+          "meaning": "鬆開、解開、癱瘓",
+          "grimmNote": "源自希臘文字根 lyein（解開），其中的 z 經由舌音互換與字尾結合變化，原意為束縛被解開而失去力量"
+        }
+      ],
+      "summary": "para-（在旁、異常）加上 lyez（解開、鬆開），字面意思是「力量被解開、無法動彈」，演變為「使癱瘓」。",
+      "savedAt": "2026-09-01T16:06:05.478Z"
     }
   ],
   "userRoots": []
