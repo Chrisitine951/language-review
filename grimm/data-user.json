@@ -4302,6 +4302,38 @@
       ],
       "summary": "字首 im-（進入、朝向）加上表示「突出、懸掛」的字根 min，再接形容詞字尾 -ent，組合起來就是「事情正懸在頭頂上、即將發生」的 imminent（逼近的、即將發生的）。",
       "savedAt": "2026-09-01T08:32:55.777Z"
+    },
+    {
+      "id": "ulkmtieujap3",
+      "word": "sceptical",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "s",
+          "meaning": "加強語氣",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "cep",
+          "meaning": "拿、抓、看",
+          "grimmNote": "屬於喉音互換 g / k / c 的變體，源自古印歐語字根，與 catch、capere 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "t",
+          "meaning": "（無實質意義的音節延伸）",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ical",
+          "meaning": "形容詞字尾（由 -ic 與形容詞字尾 -al 組成）",
+          "grimmNote": "-al 是形容詞字尾"
+        }
+      ],
+      "summary": "sceptical 由字根 cep（抓取、審視）衍生，字面意思是「持保留態度、反覆審視的」，透過字根與字尾組合轉化為形容詞「懷疑的」。",
+      "savedAt": "2026-09-01T08:33:48.337Z"
     }
   ],
   "userRoots": []
