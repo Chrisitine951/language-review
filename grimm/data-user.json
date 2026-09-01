@@ -4354,6 +4354,26 @@
       ],
       "summary": "「eaves」（屋簷）由向外的字首 e- 結合表示邊緣的字根 aves 組成，字面上的意思就是「向外延伸出去的邊緣」。",
       "savedAt": "2026-09-01T08:35:13.100Z"
+    },
+    {
+      "id": "ulkmtiu0w5w1",
+      "word": "gourmet",
+      "parts": [
+        {
+          "type": "root",
+          "text": "gourm",
+          "meaning": "吃、貪吃",
+          "grimmNote": "屬於喉音互換 g / k / c，與表示狼吞虎咽的字根同源"
+        },
+        {
+          "type": "suffix",
+          "text": "et",
+          "meaning": "小（指小詞字尾）",
+          "grimmNote": "常用字尾 -et，表示「小」或「人」"
+        }
+      ],
+      "summary": "「gourmet」由表示吃的字根與表小或人的字尾組成，原本指對食物講究、品嚐美食的小人物，演變為現在的美食家。",
+      "savedAt": "2026-09-01T15:38:39.188Z"
     }
   ],
   "userRoots": []
