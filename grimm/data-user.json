@@ -4224,6 +4224,32 @@
       ],
       "summary": "reputation 由「再次/不斷 (re-)」＋「計算、估價 (put)」＋「名詞字尾 (-ation)」組成，字面意思是「被大家不斷衡量、計算的評價」，因此演變為「名譽、聲望」。",
       "savedAt": "2026-08-31T06:28:44.894Z"
+    },
+    {
+      "id": "ulkmti9kqux1",
+      "word": "injure",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入；或作否定",
+          "grimmNote": "常見字首 in-"
+        },
+        {
+          "type": "root",
+          "text": "jur",
+          "meaning": "法律、正義、傷害",
+          "grimmNote": "源自古印歐語，與 iudex（法官）同源，經喉音互換與舌音演變"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "動詞字尾，無實義",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "injure 由表示進入的 in- 結合詞根 jur（法律、正義）組成，原意為「違反法律、侵害正義」，演變至今成為「傷害、損害」之意。",
+      "savedAt": "2026-09-01T06:06:13.497Z"
     }
   ],
   "userRoots": []
