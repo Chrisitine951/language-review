@@ -4334,6 +4334,26 @@
       ],
       "summary": "sceptical 由字根 cep（抓取、審視）衍生，字面意思是「持保留態度、反覆審視的」，透過字根與字尾組合轉化為形容詞「懷疑的」。",
       "savedAt": "2026-09-01T08:33:48.337Z"
+    },
+    {
+      "id": "ulkmtiewcp84",
+      "word": "eaves",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "e-",
+          "meaning": "向外、出去",
+          "grimmNote": "源自字首 ex- 轉音，表向外延伸"
+        },
+        {
+          "type": "root",
+          "text": "aves",
+          "meaning": "邊緣、屋簷",
+          "grimmNote": "透過 唇音互換 b / p / f / v / w，源自指涉突出、邊緣部位的古日耳曼語根"
+        }
+      ],
+      "summary": "「eaves」（屋簷）由向外的字首 e- 結合表示邊緣的字根 aves 組成，字面上的意思就是「向外延伸出去的邊緣」。",
+      "savedAt": "2026-09-01T08:35:13.100Z"
     }
   ],
   "userRoots": []
