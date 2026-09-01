@@ -4276,6 +4276,32 @@
       ],
       "summary": "「humiliate」由表示「向下」的字首與代表「地面（humus）」的字根組合而成，字面意思是「使落到地面、使卑微」，也就是「羞辱、使丟臉」。",
       "savedAt": "2026-09-01T08:31:00.941Z"
+    },
+    {
+      "id": "ulkmtieteqp2",
+      "word": "imminent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "im-",
+          "meaning": "在內、進入",
+          "grimmNote": "in- 的變體，因後面接 m 而同化為 im-"
+        },
+        {
+          "type": "root",
+          "text": "min",
+          "meaning": "突出、懸掛",
+          "grimmNote": "源自古印歐語字根，與 tower、mount 等字同源"
+        },
+        {
+          "type": "suffix",
+          "text": "-ent",
+          "meaning": "形容詞字尾，表狀態",
+          "grimmNote": "表「正在…的」狀態"
+        }
+      ],
+      "summary": "字首 im-（進入、朝向）加上表示「突出、懸掛」的字根 min，再接形容詞字尾 -ent，組合起來就是「事情正懸在頭頂上、即將發生」的 imminent（逼近的、即將發生的）。",
+      "savedAt": "2026-09-01T08:32:55.777Z"
     }
   ],
   "userRoots": []
