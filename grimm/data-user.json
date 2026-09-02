@@ -4460,6 +4460,26 @@
       ],
       "summary": "「discard」由表示分離的字首 dis- 與代表心的字根 card 組成，字面意思是「從心中拿開」，引申為「拋棄、丟棄」。",
       "savedAt": "2026-09-02T14:14:39.760Z"
+    },
+    {
+      "id": "ulkmtk6hoa13",
+      "word": "trial",
+      "parts": [
+        {
+          "type": "root",
+          "text": "tr",
+          "meaning": "穿過、跨過、走",
+          "grimmNote": "源自古印歐語字根，與 penetrate 的穿透概念相關"
+        },
+        {
+          "type": "suffix",
+          "text": "ial",
+          "meaning": "形容詞字尾，表「與…有關的」",
+          "grimmNote": "由名詞/形容詞字尾 -y 結合母音通轉與流音變化而來"
+        }
+      ],
+      "summary": "trial（審判、試驗）的核心概念是「走過、穿過」某個過程或考驗，衍生出「實際經歷、測試、審判」的意思。",
+      "savedAt": "2026-09-02T14:15:23.689Z"
     }
   ],
   "userRoots": []
