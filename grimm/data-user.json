@@ -4414,6 +4414,32 @@
       ],
       "summary": "para-（在旁、異常）加上 lyez（解開、鬆開），字面意思是「力量被解開、無法動彈」，演變為「使癱瘓」。",
       "savedAt": "2026-09-01T16:06:05.478Z"
+    },
+    {
+      "id": "ulkmtk6ek4s1",
+      "word": "vicinity",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "vi",
+          "meaning": "向外；分開（源自 ex- 經弱化或母音通轉）",
+          "grimmNote": "母音通轉 a / e / i / o / u / y：此處的 vi- 對應常見的開頭音，表示朝向或延伸。"
+        },
+        {
+          "type": "root",
+          "text": "cin",
+          "meaning": "鄰近；居住地（源自 vicus 鄰里、村落）",
+          "grimmNote": "唇音互換 b / p / f / v / w：字根中的 v 與 c/k 家族相關，指聚居的地方。"
+        },
+        {
+          "type": "suffix",
+          "text": "ity",
+          "meaning": "名詞字尾，表示性質、狀態",
+          "grimmNote": "常用字首字尾：-ity 為名詞字尾，用來構成抽象名詞。"
+        }
+      ],
+      "summary": "vicinity 由表示地方的字根結合名詞字尾組成，原意為「鄰近、附近地區」。",
+      "savedAt": "2026-09-02T14:12:58.348Z"
     }
   ],
   "userRoots": []
