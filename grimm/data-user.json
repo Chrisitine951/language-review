@@ -4440,6 +4440,26 @@
       ],
       "summary": "vicinity 由表示地方的字根結合名詞字尾組成，原意為「鄰近、附近地區」。",
       "savedAt": "2026-09-02T14:12:58.348Z"
+    },
+    {
+      "id": "ulkmtk6gqds2",
+      "word": "discard",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "dis",
+          "meaning": "分離、離開、否定",
+          "grimmNote": "常用字首 dis- 表示分離、離開"
+        },
+        {
+          "type": "root",
+          "text": "card",
+          "meaning": "心、卡片、丟棄",
+          "grimmNote": "源自拉丁語 cor/cardis（心），經由舌音互換 d/t（cord 轉成 card），原意為「從心中拿開、拋開」"
+        }
+      ],
+      "summary": "「discard」由表示分離的字首 dis- 與代表心的字根 card 組成，字面意思是「從心中拿開」，引申為「拋棄、丟棄」。",
+      "savedAt": "2026-09-02T14:14:39.760Z"
     }
   ],
   "userRoots": []
