@@ -4606,6 +4606,32 @@
       ],
       "summary": "由表「共同」的字首 cor- 結合代表「回應」的字根 spond，再加上表示「人」的字尾 -ent 組成，字面意思是「共同互相回應的人」，也就是現在的記者或通訊員。",
       "savedAt": "2026-09-03T17:16:34.501Z"
+    },
+    {
+      "id": "ulkmtlskfoe3",
+      "word": "inventory",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in",
+          "meaning": "在內、進入",
+          "grimmNote": "in-＝在內、進入"
+        },
+        {
+          "type": "root",
+          "text": "vent",
+          "meaning": "來、走（源自 come）",
+          "grimmNote": "com- / con-＝一起、共同（源自 come），字根 vent 的 v 對應 c，唇音互換 b / p / f / v / w"
+        },
+        {
+          "type": "suffix",
+          "text": "ory",
+          "meaning": "地方（名詞字尾）",
+          "grimmNote": "-um / -ery / -ory / -ary＝地方（名詞字尾）"
+        }
+      ],
+      "summary": "inventory 由表示「在內」的 in- 結合表示「來、走」的字根 vent 與名詞字尾 -ory 組成，字面意思是「走進去查看並記錄東西所在的地方」，也就是盤點清單。",
+      "savedAt": "2026-09-03T17:21:10.238Z"
     }
   ],
   "userRoots": []
