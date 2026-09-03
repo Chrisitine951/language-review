@@ -4678,6 +4678,32 @@
       ],
       "summary": "invade 由字首 in-（進入）加上表示「去、走」的字根 vad 組成，字面意思就是「走進去」，引申為「侵略、入侵」。",
       "savedAt": "2026-09-03T17:25:48.575Z"
+    },
+    {
+      "id": "ulkmtlswb6k6",
+      "word": "lubricate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "lu",
+          "meaning": "滑、滑溜（源自流音 l 的滑順意象）",
+          "grimmNote": "流音互換 l / r：l 與 r 發音位置相近，此處保留滑順的 l 音。"
+        },
+        {
+          "type": "root",
+          "text": "bric",
+          "meaning": "塗抹、油脂（與滑動相關的動作）",
+          "grimmNote": "唇音互換 b / p / f / v / w：此處的 b 對應到與塗抹、油脂相關的古老詞源。"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾，使…",
+          "grimmNote": "常見動詞字尾 -ate，表示動作化、使成為。"
+        }
+      ],
+      "summary": "lubricate 由表示滑溜的詞根與動詞字尾組成，字面意思就是「使之滑溜、潤滑」。",
+      "savedAt": "2026-09-03T17:30:24.284Z"
     }
   ],
   "userRoots": []
