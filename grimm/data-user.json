@@ -4554,6 +4554,32 @@
       ],
       "summary": "「virtue」（美德、優點）源自表示「男子氣概與勇氣（vir）」的字根，經演變指一個人才具備的內在力量與品格。",
       "savedAt": "2026-09-03T09:31:00.165Z"
+    },
+    {
+      "id": "ulkmtlsd5sm1",
+      "word": "intervene",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "inter-",
+          "meaning": "在...之間",
+          "grimmNote": "常見字首，表示在...之間或相互"
+        },
+        {
+          "type": "root",
+          "text": "ven",
+          "meaning": "來",
+          "grimmNote": "源自古印歐語，屬於唇音互換 b/p/f/v/w 家族（拉丁語 venire 的字根 ven-）"
+        },
+        {
+          "type": "suffix",
+          "text": "-e",
+          "meaning": "動詞結尾",
+          "grimmNote": "無實質意義的字尾，用於構成動詞"
+        }
+      ],
+      "summary": "intervene 由表「在...之間」的字首 inter- 加上表「來」的字根 ven 組合而成，字面意思就是「在中間來」，引申為「干涉、介入」。",
+      "savedAt": "2026-09-03T17:15:30.838Z"
     }
   ],
   "userRoots": []
