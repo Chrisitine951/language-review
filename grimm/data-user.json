@@ -4534,6 +4534,26 @@
       ],
       "summary": "pro-（向前）加上 test（作證、聲明），字面意思就是「向前大聲作證/聲明」，演變為公開抗議、抗議的意思。",
       "savedAt": "2026-09-03T01:45:12.612Z"
+    },
+    {
+      "id": "ulkmtlbrsn91",
+      "word": "virtue",
+      "parts": [
+        {
+          "type": "root",
+          "text": "vir",
+          "meaning": "男子、勇氣、力量",
+          "grimmNote": "源自古印歐語，屬於核心字根，代表力量與男人味"
+        },
+        {
+          "type": "suffix",
+          "text": "tue",
+          "meaning": "名詞字尾（源自 -tutum / -tude 演變，表狀態或性質）",
+          "grimmNote": "母音通轉 e / u 與子音演變，最終形成表示抽象名詞的字尾"
+        }
+      ],
+      "summary": "「virtue」（美德、優點）源自表示「男子氣概與勇氣（vir）」的字根，經演變指一個人才具備的內在力量與品格。",
+      "savedAt": "2026-09-03T09:31:00.165Z"
     }
   ],
   "userRoots": []
