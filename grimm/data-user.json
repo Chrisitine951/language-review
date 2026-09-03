@@ -4580,6 +4580,32 @@
       ],
       "summary": "intervene 由表「在...之間」的字首 inter- 加上表「來」的字根 ven 組合而成，字面意思就是「在中間來」，引申為「干涉、介入」。",
       "savedAt": "2026-09-03T17:15:30.838Z"
+    },
+    {
+      "id": "ulkmtlseix12",
+      "word": "correspondent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "cor-",
+          "meaning": "共同、一起",
+          "grimmNote": "com- 遇到 r 轉音為 cor-，表共同、一起"
+        },
+        {
+          "type": "root",
+          "text": "respond",
+          "meaning": "回答、回應",
+          "grimmNote": "re-（回來、再次）結合 spond（承諾、答應），透過母音通轉 e/o，指相互回應、通信"
+        },
+        {
+          "type": "suffix",
+          "text": "-ent",
+          "meaning": "人（表主動或身分）",
+          "grimmNote": "形容詞或名詞字尾，在此指「負責寫信回應的人」即特派員、記者"
+        }
+      ],
+      "summary": "由表「共同」的字首 cor- 結合代表「回應」的字根 spond，再加上表示「人」的字尾 -ent 組成，字面意思是「共同互相回應的人」，也就是現在的記者或通訊員。",
+      "savedAt": "2026-09-03T17:16:34.501Z"
     }
   ],
   "userRoots": []
