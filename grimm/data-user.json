@@ -4632,6 +4632,26 @@
       ],
       "summary": "inventory 由表示「在內」的 in- 結合表示「來、走」的字根 vent 與名詞字尾 -ory 組成，字面意思是「走進去查看並記錄東西所在的地方」，也就是盤點清單。",
       "savedAt": "2026-09-03T17:21:10.238Z"
+    },
+    {
+      "id": "ulkmtlsoalk4",
+      "word": "offend",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "of-",
+          "meaning": "朝向、向著（源自 ob-）",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）與字首變體：ob- 為了發音順暢同化為 of-"
+        },
+        {
+          "type": "root",
+          "text": "fend",
+          "meaning": "打、擊、防禦（源自 fendere）",
+          "grimmNote": "唇音互換 b / p / f / v / w：保留 f 音，原意為「向著某人打擊、衝撞」，引申為觸犯、得罪"
+        }
+      ],
+      "summary": "of-（朝向）加上 fend（打擊），字面意思是「朝著別人打過去」，也就是「觸犯、得罪、冒犯」。",
+      "savedAt": "2026-09-03T17:24:10.280Z"
     }
   ],
   "userRoots": []
