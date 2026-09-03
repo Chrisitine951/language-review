@@ -4652,6 +4652,32 @@
       ],
       "summary": "of-（朝向）加上 fend（打擊），字面意思是「朝著別人打過去」，也就是「觸犯、得罪、冒犯」。",
       "savedAt": "2026-09-03T17:24:10.280Z"
+    },
+    {
+      "id": "ulkmtlsqefz5",
+      "word": "invade",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in",
+          "meaning": "在內、進入",
+          "grimmNote": "常用字首 in-（在內、進入）"
+        },
+        {
+          "type": "root",
+          "text": "vad",
+          "meaning": "去、走",
+          "grimmNote": "源自古印歐語，其中 v 與 d 分別透過唇音互換與舌音互換衍生"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "動詞字尾",
+          "grimmNote": "無實質意義的字尾，用以構成動詞"
+        }
+      ],
+      "summary": "invade 由字首 in-（進入）加上表示「去、走」的字根 vad 組成，字面意思就是「走進去」，引申為「侵略、入侵」。",
+      "savedAt": "2026-09-03T17:25:48.575Z"
     }
   ],
   "userRoots": []
