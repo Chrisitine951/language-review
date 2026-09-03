@@ -4500,6 +4500,20 @@
       ],
       "summary": "字首 col-（一起、共同）加上表示「打、擊」的字根 lid，共同碰撞在一起，就是「collide（衝突、碰撞）」的由來。",
       "savedAt": "2026-09-03T01:39:37.834Z"
+    },
+    {
+      "id": "ulkmtkuzc7b2",
+      "word": "mourn",
+      "parts": [
+        {
+          "type": "root",
+          "text": "mourn",
+          "meaning": "哀悼、悲傷",
+          "grimmNote": "由原始字根組成，母音 o 與 u 透過母音通轉相通，鼻音 n 與 m 亦具同源聯絡。"
+        }
+      ],
+      "summary": "「mourn」是一個直接表達內心悲痛與哀悼的原生字根，透過母音與鼻音的微調演變而來。",
+      "savedAt": "2026-09-03T01:40:58.631Z"
     }
   ],
   "userRoots": []
