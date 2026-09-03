@@ -4480,6 +4480,26 @@
       ],
       "summary": "trial（審判、試驗）的核心概念是「走過、穿過」某個過程或考驗，衍生出「實際經歷、測試、審判」的意思。",
       "savedAt": "2026-09-02T14:15:23.689Z"
+    },
+    {
+      "id": "ulkmtkuxluy1",
+      "word": "collide",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "col",
+          "meaning": "一起、共同",
+          "grimmNote": "com- 的變體，源自 come，因後方接 l 而同化為 col-"
+        },
+        {
+          "type": "root",
+          "text": "lid",
+          "meaning": "打、擊",
+          "grimmNote": "與拉丁語 lidere/laedere（打擊、碰撞）同源，其中的 d 屬於舌音互換"
+        }
+      ],
+      "summary": "字首 col-（一起、共同）加上表示「打、擊」的字根 lid，共同碰撞在一起，就是「collide（衝突、碰撞）」的由來。",
+      "savedAt": "2026-09-03T01:39:37.834Z"
     }
   ],
   "userRoots": []
