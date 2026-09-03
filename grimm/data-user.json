@@ -4514,6 +4514,26 @@
       ],
       "summary": "「mourn」是一個直接表達內心悲痛與哀悼的原生字根，透過母音與鼻音的微調演變而來。",
       "savedAt": "2026-09-03T01:40:58.631Z"
+    },
+    {
+      "id": "ulkmtkv4s6c3",
+      "word": "protest",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pro",
+          "meaning": "向前、在前",
+          "grimmNote": "常見字首，表示向前或公開"
+        },
+        {
+          "type": "root",
+          "text": "test",
+          "meaning": "作證、作証明",
+          "grimmNote": "源自古印歐語，由 test-（看見、作證）衍生，舌音互換 d/t 的變化形"
+        }
+      ],
+      "summary": "pro-（向前）加上 test（作證、聲明），字面意思就是「向前大聲作證/聲明」，演變為公開抗議、抗議的意思。",
+      "savedAt": "2026-09-03T01:45:12.612Z"
     }
   ],
   "userRoots": []
