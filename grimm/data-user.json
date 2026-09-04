@@ -5020,6 +5020,26 @@
       ],
       "summary": "由表示悲傷痛苦的字根 griev 加上動詞字尾 e 構成，原意為使人感到悲傷痛苦。",
       "savedAt": "2026-09-04T18:48:15.497Z"
+    },
+    {
+      "id": "ulkmtnb5huha",
+      "word": "skeleton",
+      "parts": [
+        {
+          "type": "root",
+          "text": "skele",
+          "meaning": "乾枯、乾燥",
+          "grimmNote": "源自希臘語，與 dry（乾燥）同源，其中的 k 與 d 透過舌音互換與喉音互換演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "ton",
+          "meaning": "名詞字尾（表物體）",
+          "grimmNote": "由表小的字尾 -et 演變而來，n 為常見結尾子音"
+        }
+      ],
+      "summary": "skeleton 由表示「乾燥」的字根與結尾組成，字面意思就是「乾燥的東西」，也就是指人或動物死後乾燥的骨架。",
+      "savedAt": "2026-09-04T18:49:12.089Z"
     }
   ],
   "userRoots": []
