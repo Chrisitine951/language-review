@@ -4836,6 +4836,26 @@
       ],
       "summary": "字首 im-（進入）加上字根 ped（腳），意思是把腳絆住、使動彈不得，也就是阻礙的意思。",
       "savedAt": "2026-09-04T18:39:14.647Z"
+    },
+    {
+      "id": "ulkmtnat9sw2",
+      "word": "thorough",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "thor",
+          "meaning": "穿越、穿過（源自古英文單字，與 through 同源）",
+          "grimmNote": "舌音互換 d / t / s 與喉音弱化 c / k ↔ h 相關，古代字根表「穿過」"
+        },
+        {
+          "type": "suffix",
+          "text": "ough",
+          "meaning": "副詞／形容詞字尾（表徹底地、完全地）",
+          "grimmNote": "母音通轉 a / e / i / o / u / y 與古代拼字演變遺留的結構"
+        }
+      ],
+      "summary": "thorough 由表示「穿過」的 thor 加上表徹底的字尾組成，字面意思就是「從頭到尾穿過去」，引申為「徹底的、全然的」。",
+      "savedAt": "2026-09-04T18:39:41.792Z"
     }
   ],
   "userRoots": []
