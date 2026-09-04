@@ -4770,6 +4770,26 @@
       ],
       "summary": "單字「adorn」透過加強語氣字首 ad- 結合表示裝飾的字根 orn，形成「裝飾、點綴」的意思。",
       "savedAt": "2026-09-04T02:14:07.791Z"
+    },
+    {
+      "id": "ulkmtmwzjaz1",
+      "word": "courtship",
+      "parts": [
+        {
+          "type": "root",
+          "text": "court",
+          "meaning": "宮廷、院子；追求、求愛",
+          "grimmNote": "源自古印歐語，核心意念為圍繞或聚集的場所。"
+        },
+        {
+          "type": "suffix",
+          "text": "ship",
+          "meaning": "名詞字尾，表示狀態、身分或性質",
+          "grimmNote": "常見名詞字尾，用來將動詞或名詞轉為表示抽象概念的名詞（如 friend -> friendship）。"
+        }
+      ],
+      "summary": "court（追求）加上表示狀態的字尾 ship，組合起來指「求愛的狀態」即為求愛、戀愛。",
+      "savedAt": "2026-09-04T12:12:39.419Z"
     }
   ],
   "userRoots": []
