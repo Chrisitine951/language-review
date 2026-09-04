@@ -4790,6 +4790,26 @@
       ],
       "summary": "court（追求）加上表示狀態的字尾 ship，組合起來指「求愛的狀態」即為求愛、戀愛。",
       "savedAt": "2026-09-04T12:12:39.419Z"
+    },
+    {
+      "id": "ulkmtmx1itm2",
+      "word": "ritual",
+      "parts": [
+        {
+          "type": "root",
+          "text": "ritu",
+          "meaning": "儀式、典章",
+          "grimmNote": "源自拉丁語 ritus（習俗、儀式），核心字根與 rite 同源。"
+        },
+        {
+          "type": "suffix",
+          "text": "al",
+          "meaning": "...的（形容詞字尾）",
+          "grimmNote": "常用形容詞字尾，用以構成名詞或形容詞，表示具有...性質的。"
+        }
+      ],
+      "summary": "ritual 由表示「儀式」的字根 ritu 與形容詞字尾 -al 結合而成，意即「與儀式或習俗有關的」。",
+      "savedAt": "2026-09-04T12:14:12.106Z"
     }
   ],
   "userRoots": []
