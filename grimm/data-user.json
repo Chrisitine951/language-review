@@ -4856,6 +4856,32 @@
       ],
       "summary": "thorough 由表示「穿過」的 thor 加上表徹底的字尾組成，字面意思就是「從頭到尾穿過去」，引申為「徹底的、全然的」。",
       "savedAt": "2026-09-04T18:39:41.792Z"
+    },
+    {
+      "id": "ulkmtnau9gh3",
+      "word": "bewilder",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "be-",
+          "meaning": "使成為、加上（源自 by，表動作施加）",
+          "grimmNote": "常見動詞前置詞，用來加強語氣或將名詞/形容詞轉為動詞"
+        },
+        {
+          "type": "root",
+          "text": "wild",
+          "meaning": "野蠻的、荒野的、失去控制的",
+          "grimmNote": "字根原意指荒野、迷失方向或不受拘束的狀態"
+        },
+        {
+          "type": "suffix",
+          "text": "-er",
+          "meaning": "動詞結尾或使動意涵",
+          "grimmNote": "在此與前綴配合，構成動詞使成為野蠻或迷失狀態"
+        }
+      ],
+      "summary": "be-（使成為）加上 wild（荒野、迷失），字面意思是「使人像在荒野中一樣迷失方向、不知所措」，演變為「使迷惑、困惑」。",
+      "savedAt": "2026-09-04T18:40:28.001Z"
     }
   ],
   "userRoots": []
