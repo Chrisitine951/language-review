@@ -5000,6 +5000,26 @@
       ],
       "summary": "exterminate 由「向外 (ex-)」加上代表「界線/末端 (termin)」的字根與動詞字尾組成，字面意思就是「驅逐出界線外」或「消滅至盡頭」，引申為「根絕、消滅」。",
       "savedAt": "2026-09-04T18:47:21.684Z"
+    },
+    {
+      "id": "ulkmtnb4a6h9",
+      "word": "grieve",
+      "parts": [
+        {
+          "type": "root",
+          "text": "griev",
+          "meaning": "悲傷、痛苦",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "動詞字尾，無實質意義",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "由表示悲傷痛苦的字根 griev 加上動詞字尾 e 構成，原意為使人感到悲傷痛苦。",
+      "savedAt": "2026-09-04T18:48:15.497Z"
     }
   ],
   "userRoots": []
