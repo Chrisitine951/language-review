@@ -4882,6 +4882,26 @@
       ],
       "summary": "be-（使成為）加上 wild（荒野、迷失），字面意思是「使人像在荒野中一樣迷失方向、不知所措」，演變為「使迷惑、困惑」。",
       "savedAt": "2026-09-04T18:40:28.001Z"
+    },
+    {
+      "id": "ulkmtnavu6g4",
+      "word": "campaign",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "cam",
+          "meaning": "一起、共同",
+          "grimmNote": "com- / con-＝一起、共同，藉由鼻音互換（m 與 n）變體為 cam-"
+        },
+        {
+          "type": "root",
+          "text": "paign",
+          "meaning": "平原、戰場",
+          "grimmNote": "源自拉丁文 campula（平原、野戰場），其中 p-g 為喉音互換與唇音組合的古老字根，演變出專指軍事行動或競選活動的 campa- 字根"
+        }
+      ],
+      "summary": "campaign 由表示「共同」的字首 cam- 與表示「平原、戰場」的字根 paign 組合而成，原本指在平原上展開的軍事行動，後來引申為競選或宣傳活動。",
+      "savedAt": "2026-09-04T18:41:41.512Z"
     }
   ],
   "userRoots": []
