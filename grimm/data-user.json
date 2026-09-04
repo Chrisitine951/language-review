@@ -4922,6 +4922,26 @@
       ],
       "summary": "patron 從「父親」(patr) 的字根衍生而來，加上表示人的字尾，字面上的意思就是扮演父親般庇護、贊助他人的人。",
       "savedAt": "2026-09-04T18:43:01.694Z"
+    },
+    {
+      "id": "ulkmtnaywm56",
+      "word": "treason",
+      "parts": [
+        {
+          "type": "root",
+          "text": "trea",
+          "meaning": "背叛；交付",
+          "grimmNote": "源自拉丁語 tradere（交出、背叛），其中的 d 經由舌音互換 d / t 變成 t，母音 a / e 經由母音通轉替換"
+        },
+        {
+          "type": "suffix",
+          "text": "son",
+          "meaning": "名詞字尾（表行為或狀態）",
+          "grimmNote": "由動詞字尾演變而來的名詞結尾"
+        }
+      ],
+      "summary": "treason 由表示「交出、交付」的字根加上名詞字尾組成，原本意思是「將信任交出去、背叛」。",
+      "savedAt": "2026-09-04T18:44:04.637Z"
     }
   ],
   "userRoots": []
