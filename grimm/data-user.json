@@ -5040,6 +5040,26 @@
       ],
       "summary": "skeleton 由表示「乾燥」的字根與結尾組成，字面意思就是「乾燥的東西」，也就是指人或動物死後乾燥的骨架。",
       "savedAt": "2026-09-04T18:49:12.089Z"
+    },
+    {
+      "id": "ulkmtnbaaayb",
+      "word": "hijack",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "hi",
+          "meaning": "向下；朝向",
+          "grimmNote": "源自 ob- / oc- 的變體，經過喉音弱化與母音通轉"
+        },
+        {
+          "type": "root",
+          "text": "jack",
+          "meaning": "抓住；取走",
+          "grimmNote": "喉音互換 g/k 與母音通轉的衍生字根"
+        }
+      ],
+      "summary": "「hijack」由表示「朝向」的字首與表示「抓住」的字根組合而成，字面意思為「朝著人或物抓過去」，引申為劫持、搭便車。",
+      "savedAt": "2026-09-04T18:52:55.594Z"
     }
   ],
   "userRoots": []
