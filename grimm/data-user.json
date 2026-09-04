@@ -4810,6 +4810,32 @@
       ],
       "summary": "ritual 由表示「儀式」的字根 ritu 與形容詞字尾 -al 結合而成，意即「與儀式或習俗有關的」。",
       "savedAt": "2026-09-04T12:14:12.106Z"
+    },
+    {
+      "id": "ulkmtnasouv1",
+      "word": "impede",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "im-",
+          "meaning": "進入、向內",
+          "grimmNote": "in- 的變體，鼻音互換 n 轉 m 形成 im-"
+        },
+        {
+          "type": "root",
+          "text": "ped",
+          "meaning": "腳、足",
+          "grimmNote": "舌音互換 d / t / s（對應 foot/pedal 的 ped）"
+        },
+        {
+          "type": "suffix",
+          "text": "-e",
+          "meaning": "動詞字尾",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "字首 im-（進入）加上字根 ped（腳），意思是把腳絆住、使動彈不得，也就是阻礙的意思。",
+      "savedAt": "2026-09-04T18:39:14.647Z"
     }
   ],
   "userRoots": []
