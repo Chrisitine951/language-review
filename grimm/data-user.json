@@ -4942,6 +4942,38 @@
       ],
       "summary": "treason 由表示「交出、交付」的字根加上名詞字尾組成，原本意思是「將信任交出去、背叛」。",
       "savedAt": "2026-09-04T18:44:04.637Z"
+    },
+    {
+      "id": "ulkmtnb1boz7",
+      "word": "trousers",
+      "parts": [
+        {
+          "type": "root",
+          "text": "trou",
+          "meaning": "洞、狹窄的通道",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "s",
+          "meaning": "複數名詞字尾",
+          "grimmNote": "對應舌音互換 d / t / s 與複數結構"
+        },
+        {
+          "type": "suffix",
+          "text": "er",
+          "meaning": "物、器具",
+          "grimmNote": "名詞字尾，指用來裝腿的衣物"
+        },
+        {
+          "type": "suffix",
+          "text": "s",
+          "meaning": "複數名詞字尾",
+          "grimmNote": "褲子因有兩隻褲管而為複數型態"
+        }
+      ],
+      "summary": "trousers 由表示「洞或狹窄通道」的字根演變而來，指包覆雙腿的兩管洞口衣物，加上表物的字尾與複數結構成為「褲子」。",
+      "savedAt": "2026-09-04T18:45:57.491Z"
     }
   ],
   "userRoots": []
