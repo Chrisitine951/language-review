@@ -4902,6 +4902,26 @@
       ],
       "summary": "campaign 由表示「共同」的字首 cam- 與表示「平原、戰場」的字根 paign 組合而成，原本指在平原上展開的軍事行動，後來引申為競選或宣傳活動。",
       "savedAt": "2026-09-04T18:41:41.512Z"
+    },
+    {
+      "id": "ulkmtnaxk1q5",
+      "word": "patron",
+      "parts": [
+        {
+          "type": "root",
+          "text": "patr",
+          "meaning": "父親",
+          "grimmNote": "對應印歐語系祖先「父親」的字根，利用 唇音互換 b / p / f / v / w 中的 p 發音"
+        },
+        {
+          "type": "suffix",
+          "text": "on",
+          "meaning": "名詞字尾，表示人或物",
+          "grimmNote": "常見名詞字尾，指扮演父親般照顧、庇護角色的人"
+        }
+      ],
+      "summary": "patron 從「父親」(patr) 的字根衍生而來，加上表示人的字尾，字面上的意思就是扮演父親般庇護、贊助他人的人。",
+      "savedAt": "2026-09-04T18:43:01.694Z"
     }
   ],
   "userRoots": []
