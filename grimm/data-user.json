@@ -4704,6 +4704,26 @@
       ],
       "summary": "lubricate 由表示滑溜的詞根與動詞字尾組成，字面意思就是「使之滑溜、潤滑」。",
       "savedAt": "2026-09-03T17:30:24.284Z"
+    },
+    {
+      "id": "ulkmtm9t3x37",
+      "word": "passive",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pas",
+          "meaning": "承受、感受、受苦",
+          "grimmNote": "源自 path-/pass-（承受、受苦、經歷），其中的舌音互換 d/t/s 讓 pathos 的 t 轉變成 s，即 pass-。"
+        },
+        {
+          "type": "suffix",
+          "text": "sive",
+          "meaning": "可以被…的；具被動意味的形容詞字尾",
+          "grimmNote": "包含常用字尾 -ive（具…特性的），其中的唇音互換 b/p/f/v 讓原來的 -able/-ible 轉變成 -ive，且字尾 -ee/ -ive 帶有被動意味。"
+        }
+      ],
+      "summary": "「passive」由表示承受的字根 pas- 結合表示被動特性的字尾 -sive 組成，字面意思是「可以被承受的、被動的」。",
+      "savedAt": "2026-09-04T01:23:48.375Z"
     }
   ],
   "userRoots": []
