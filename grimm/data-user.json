@@ -4974,6 +4974,32 @@
       ],
       "summary": "trousers 由表示「洞或狹窄通道」的字根演變而來，指包覆雙腿的兩管洞口衣物，加上表物的字尾與複數結構成為「褲子」。",
       "savedAt": "2026-09-04T18:45:57.491Z"
+    },
+    {
+      "id": "ulkmtnb34no8",
+      "word": "exterminate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ex-",
+          "meaning": "出去、向外",
+          "grimmNote": "常見字首，表示向外、離開"
+        },
+        {
+          "type": "root",
+          "text": "termin",
+          "meaning": "界線、末端",
+          "grimmNote": "源自拉丁字根，與 term（界限、期限）同源，舌音互換 d/t 的變化"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "動詞字尾，使…",
+          "grimmNote": "常見動詞或形容詞字尾"
+        }
+      ],
+      "summary": "exterminate 由「向外 (ex-)」加上代表「界線/末端 (termin)」的字根與動詞字尾組成，字面意思就是「驅逐出界線外」或「消滅至盡頭」，引申為「根絕、消滅」。",
+      "savedAt": "2026-09-04T18:47:21.684Z"
     }
   ],
   "userRoots": []
