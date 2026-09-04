@@ -4724,6 +4724,32 @@
       ],
       "summary": "「passive」由表示承受的字根 pas- 結合表示被動特性的字尾 -sive 組成，字面意思是「可以被承受的、被動的」。",
       "savedAt": "2026-09-04T01:23:48.375Z"
+    },
+    {
+      "id": "ulkmtma271y8",
+      "word": "oblivious",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ob-",
+          "meaning": "朝向、覆蓋",
+          "grimmNote": "常見字首，表示朝向或覆蓋在上方。"
+        },
+        {
+          "type": "root",
+          "text": "liv",
+          "meaning": "生活、活著",
+          "grimmNote": "源自 live 的字根，透過母音通轉 e 變為 i。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ous",
+          "meaning": "多（形容詞字尾）",
+          "grimmNote": "形容詞字尾，表示充滿..."
+        }
+      ],
+      "summary": "ob-（覆蓋）加上 liv（生活/意識）再接 -ous（形容詞字尾），字面意思就是「被遮蔽了意識、毫不在意的」，演變為現代的「遺忘的、茫然不知的」。",
+      "savedAt": "2026-09-04T01:30:52.342Z"
     }
   ],
   "userRoots": []
