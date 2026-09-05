@@ -5126,6 +5126,26 @@
       ],
       "summary": "con-（一起）加上 son（聲音），指發音時嘴唇與舌頭互相接觸而發出的「共同聲音」，即「子音」。",
       "savedAt": "2026-09-05T13:12:58.399Z"
+    },
+    {
+      "id": "ulkmtoen0cm4",
+      "word": "steward",
+      "parts": [
+        {
+          "type": "root",
+          "text": "stew",
+          "meaning": "火爐、燉煮之處",
+          "grimmNote": "源自古英文 stig（房屋、大廳），透過母音通轉 e/i 變化而來"
+        },
+        {
+          "type": "suffix",
+          "text": "ard",
+          "meaning": "人（通常帶有負面或特定職務色彩，如 drunkard）",
+          "grimmNote": "日耳曼語源的字尾，用來指稱從事特定事務或身處特定場所的人"
+        }
+      ],
+      "summary": "steward 本義是「看管房屋或大廳的人」，由 stew（房屋/爐灶）加上表示人的字尾 -ard 組合而成，演變為管家或機上服務員。",
+      "savedAt": "2026-09-05T13:14:34.246Z"
     }
   ],
   "userRoots": []
