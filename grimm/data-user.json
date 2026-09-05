@@ -5100,6 +5100,32 @@
       ],
       "summary": "turbulent 由表示旋渦與騷動的字根 turb 加上形容詞字尾 -ulent 組成，字面意思就是「充滿旋渦與混亂的」，用來形容動盪不安、狂暴的情境。",
       "savedAt": "2026-09-05T12:53:30.573Z"
+    },
+    {
+      "id": "ulkmtoekye73",
+      "word": "consonant",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "com- / con-＝一起、共同（源自 come）"
+        },
+        {
+          "type": "root",
+          "text": "son",
+          "meaning": "聲音",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ant",
+          "meaning": "形容詞字尾、…的人或物",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "con-（一起）加上 son（聲音），指發音時嘴唇與舌頭互相接觸而發出的「共同聲音」，即「子音」。",
+      "savedAt": "2026-09-05T13:12:58.399Z"
     }
   ],
   "userRoots": []
