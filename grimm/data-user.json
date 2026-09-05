@@ -5080,6 +5080,26 @@
       ],
       "summary": "jeopardise 由表示「危險」的字根opard與動詞字尾ise組成，字面意思就是「使陷入危險」。",
       "savedAt": "2026-09-05T12:36:40.843Z"
+    },
+    {
+      "id": "ulkmtodvxal2",
+      "word": "turbulent",
+      "parts": [
+        {
+          "type": "root",
+          "text": "turb",
+          "meaning": "旋渦、騷動",
+          "grimmNote": "核心字根，與轉動、混亂有關"
+        },
+        {
+          "type": "suffix",
+          "text": "ulent",
+          "meaning": "多…的（形容詞字尾，由 -ous / -ious 類推並透過母音通轉與唇音變化衍生）",
+          "grimmNote": "母音通轉 u/e 與形容詞字尾組合"
+        }
+      ],
+      "summary": "turbulent 由表示旋渦與騷動的字根 turb 加上形容詞字尾 -ulent 組成，字面意思就是「充滿旋渦與混亂的」，用來形容動盪不安、狂暴的情境。",
+      "savedAt": "2026-09-05T12:53:30.573Z"
     }
   ],
   "userRoots": []
