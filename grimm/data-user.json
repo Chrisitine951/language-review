@@ -5060,6 +5060,26 @@
       ],
       "summary": "「hijack」由表示「朝向」的字首與表示「抓住」的字根組合而成，字面意思為「朝著人或物抓過去」，引申為劫持、搭便車。",
       "savedAt": "2026-09-04T18:52:55.594Z"
+    },
+    {
+      "id": "ulkmtodaa6j1",
+      "word": "jeopardise",
+      "parts": [
+        {
+          "type": "root",
+          "text": "jeopard",
+          "meaning": "危險、冒險",
+          "grimmNote": "源自拉丁語 iocus（玩笑、戲謔）經轉音與演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "ise",
+          "meaning": "使…（動詞字尾）",
+          "grimmNote": "由名詞或形容詞轉為動詞的字尾"
+        }
+      ],
+      "summary": "jeopardise 由表示「危險」的字根opard與動詞字尾ise組成，字面意思就是「使陷入危險」。",
+      "savedAt": "2026-09-05T12:36:40.843Z"
     }
   ],
   "userRoots": []
