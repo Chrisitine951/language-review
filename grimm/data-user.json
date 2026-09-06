@@ -5238,6 +5238,26 @@
       ],
       "summary": "ridiculous 由表示「笑」的字根加上複合字尾與形容詞字尾組成，字面意思就是「充滿惹人笑的、荒謬的」。",
       "savedAt": "2026-09-06T06:46:52.285Z"
+    },
+    {
+      "id": "ulkmtpwbyqi1",
+      "word": "gratitude",
+      "parts": [
+        {
+          "type": "root",
+          "text": "grati",
+          "meaning": "感激、喜悅",
+          "grimmNote": "源自古印歐語字根，與 dear、please 同源，核心意義為「令人喜悅的、感恩的」"
+        },
+        {
+          "type": "suffix",
+          "text": "tude",
+          "meaning": "名詞字尾，表狀態或性質",
+          "grimmNote": "舌音互換 d/t/s 的變體，常見於抽象名詞字尾"
+        }
+      ],
+      "summary": "gratitude 由表示「感激」的字根 grati 結合名詞字尾 -tude 組成，意指充滿感激的狀態。",
+      "savedAt": "2026-09-06T14:17:38.202Z"
     }
   ],
   "userRoots": []
