@@ -5166,6 +5166,26 @@
       ],
       "summary": "startle 由表「驚跳」的字根 start 加上表反覆動作的字尾 -le 組成，意思是「使嚇一跳、驚動」。",
       "savedAt": "2026-09-06T06:30:29.561Z"
+    },
+    {
+      "id": "ulkmtpft5ni2",
+      "word": "possess",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "po-",
+          "meaning": "向前、朝向（源自 ob- 經轉音）",
+          "grimmNote": "使用 ob-（向下；朝向），b 轉音為 p"
+        },
+        {
+          "type": "root",
+          "text": "ssess",
+          "meaning": "坐、佔有（源自 sedere「坐」）",
+          "grimmNote": "雙子音規則：ss 的第二個 s 僅為結構所需；d 透過舌音互換轉成 s（sed→ses），母音 e 變為 a（sed→sas/sess）"
+        }
+      ],
+      "summary": "possess 由表示「朝向」的字首 po- 加上表示「坐」的字根 -sess 組成，字面上的意思是「坐在上面、佔據」，演變為「擁有、持有」。",
+      "savedAt": "2026-09-06T06:35:06.846Z"
     }
   ],
   "userRoots": []
