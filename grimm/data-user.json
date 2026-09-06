@@ -5258,6 +5258,26 @@
       ],
       "summary": "gratitude 由表示「感激」的字根 grati 結合名詞字尾 -tude 組成，意指充滿感激的狀態。",
       "savedAt": "2026-09-06T14:17:38.202Z"
+    },
+    {
+      "id": "ulkmtpzmwbr1",
+      "word": "embark",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "em",
+          "meaning": "進入、使之如何（源自 in-，鼻音互換 m/n）",
+          "grimmNote": "鼻音互換 n / m：in- 變體為 em-"
+        },
+        {
+          "type": "root",
+          "text": "bark",
+          "meaning": "船、小船（源自拉丁語 barca，本義指木塊、小船）",
+          "grimmNote": "唇音互換 b / p / f / v / w 及喉音互換 g / k / c 的基礎字根"
+        }
+      ],
+      "summary": "字首 em-（進入、使之如何）加上字根 bark（船），合起來就是「上船、登舟」，引申為「著手、開始（新事業）」。",
+      "savedAt": "2026-09-06T15:50:07.143Z"
     }
   ],
   "userRoots": []
