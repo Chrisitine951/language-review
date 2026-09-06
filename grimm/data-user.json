@@ -5212,6 +5212,32 @@
       ],
       "summary": "reimburse 由表「再次、回來」的 re-、表「進入」的 im- 與表「錢袋」的 burse 組合而成，字面意思就是「把錢再次放回錢袋裡」，引申為「報銷、償還」。",
       "savedAt": "2026-09-06T06:39:41.456Z"
+    },
+    {
+      "id": "ulkmtpg89z14",
+      "word": "ridiculous",
+      "parts": [
+        {
+          "type": "root",
+          "text": "rid",
+          "meaning": "笑、嘲笑",
+          "grimmNote": "源自古印歐語根，對應拉丁語 rīdēre（笑）"
+        },
+        {
+          "type": "suffix",
+          "text": "icul",
+          "meaning": "表名詞或形容詞的小型化與中介詞尾",
+          "grimmNote": "由基礎字根延伸的複合字尾，包含母音通轉與流音變化"
+        },
+        {
+          "type": "suffix",
+          "text": "ous",
+          "meaning": "多...的（形容詞字尾）",
+          "grimmNote": "常用形容詞字尾，表「充滿...的」"
+        }
+      ],
+      "summary": "ridiculous 由表示「笑」的字根加上複合字尾與形容詞字尾組成，字面意思就是「充滿惹人笑的、荒謬的」。",
+      "savedAt": "2026-09-06T06:46:52.285Z"
     }
   ],
   "userRoots": []
