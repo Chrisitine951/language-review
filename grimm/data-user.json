@@ -5146,6 +5146,26 @@
       ],
       "summary": "steward 本義是「看管房屋或大廳的人」，由 stew（房屋/爐灶）加上表示人的字尾 -ard 組合而成，演變為管家或機上服務員。",
       "savedAt": "2026-09-05T13:14:34.246Z"
+    },
+    {
+      "id": "ulkmtpfn7p51",
+      "word": "startle",
+      "parts": [
+        {
+          "type": "root",
+          "text": "start",
+          "meaning": "發出尖叫、嚇一跳",
+          "grimmNote": "源自日耳曼語族，本義為因驚嚇而猛然跳動或震動。"
+        },
+        {
+          "type": "suffix",
+          "text": "le",
+          "meaning": "表反覆動作的動詞或小化字尾",
+          "grimmNote": "-le 常用於表示動作的反覆或持續，使「突然一驚」變成「使連續驚嚇、驚動」的動詞 startle。"
+        }
+      ],
+      "summary": "startle 由表「驚跳」的字根 start 加上表反覆動作的字尾 -le 組成，意思是「使嚇一跳、驚動」。",
+      "savedAt": "2026-09-06T06:30:29.561Z"
     }
   ],
   "userRoots": []
