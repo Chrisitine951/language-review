@@ -5186,6 +5186,32 @@
       ],
       "summary": "possess 由表示「朝向」的字首 po- 加上表示「坐」的字根 -sess 組成，字面上的意思是「坐在上面、佔據」，演變為「擁有、持有」。",
       "savedAt": "2026-09-06T06:35:06.846Z"
+    },
+    {
+      "id": "ulkmtpfz1jk3",
+      "word": "reimburse",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常用字首 re-，表示再次、回到原本狀態"
+        },
+        {
+          "type": "prefix",
+          "text": "im-",
+          "meaning": "在內、進入",
+          "grimmNote": "常用字首 in- 因接在唇音 b 前方，鼻音 n 同化為 m，變成 im-（鼻音互換 n / m）"
+        },
+        {
+          "type": "root",
+          "text": "burse",
+          "meaning": "錢袋、皮包",
+          "grimmNote": "源自古法語 bourse，核心意思是「錢袋」。其中的 b 與袋子、金錢的意象相關"
+        }
+      ],
+      "summary": "reimburse 由表「再次、回來」的 re-、表「進入」的 im- 與表「錢袋」的 burse 組合而成，字面意思就是「把錢再次放回錢袋裡」，引申為「報銷、償還」。",
+      "savedAt": "2026-09-06T06:39:41.456Z"
     }
   ],
   "userRoots": []
