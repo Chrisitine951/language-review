@@ -5634,6 +5634,20 @@
       ],
       "summary": "sub-（向下）加上 pend（懸掛），字面意思就是「懸掛在下面」，引申為「懸缺、暫停、中止」。",
       "savedAt": "2026-09-07T06:02:42.928Z"
+    },
+    {
+      "id": "ulkmtqu8wrqf",
+      "word": "scheme",
+      "parts": [
+        {
+          "type": "root",
+          "text": "scheme",
+          "meaning": "計畫、陰謀、圖表",
+          "grimmNote": "源自希臘文 schema（形狀、計畫），字根本身完整保留"
+        }
+      ],
+      "summary": "scheme 直接源自古希臘文，原意為「形狀、輪廓」，後來演變出「在腦海中勾勒的計畫或圖表」的意思。",
+      "savedAt": "2026-09-07T06:07:02.630Z"
     }
   ],
   "userRoots": []
