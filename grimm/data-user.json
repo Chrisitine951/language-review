@@ -5426,6 +5426,32 @@
       ],
       "summary": "sink 作為基本字根，直接保留了表示向下沈落的喉音 k。",
       "savedAt": "2026-09-07T05:44:18.162Z"
+    },
+    {
+      "id": "ulkmtqtimgm7",
+      "word": "proponent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pro",
+          "meaning": "向前、贊成",
+          "grimmNote": "常見字首 pro-（向前、在前）"
+        },
+        {
+          "type": "root",
+          "text": "pon",
+          "meaning": "放置、放",
+          "grimmNote": "源自古印歐語，屬於置放義的字根"
+        },
+        {
+          "type": "suffix",
+          "text": "ent",
+          "meaning": "…的人（主動／狀態）",
+          "grimmNote": "常見名詞/形容詞字尾 -ent（表動作的執行者）"
+        }
+      ],
+      "summary": "字首 pro-（向前）加上字根 pon（放置）與名詞字尾 -ent，合起來指「把立場放在前面、表態支持的人」，即支持者、提倡者。",
+      "savedAt": "2026-09-07T05:46:36.214Z"
     }
   ],
   "userRoots": []
