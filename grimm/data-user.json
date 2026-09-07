@@ -5682,6 +5682,20 @@
       ],
       "summary": "microbe 由表示「小」的 micr 與表示「生命」的 obe 結合成「微小生命（微生物）」的意思。",
       "savedAt": "2026-09-07T12:18:05.944Z"
+    },
+    {
+      "id": "ulkmtr7jysd3",
+      "word": "stripe",
+      "parts": [
+        {
+          "type": "root",
+          "text": "stripe",
+          "meaning": "條紋、線條",
+          "grimmNote": "包含唇音 p 與舌音 s、t 的基本字根結構"
+        }
+      ],
+      "summary": "「stripe」是一個維持原始結構的單字，基本字根直接表意為條紋或線條。",
+      "savedAt": "2026-09-07T12:19:33.469Z"
     }
   ],
   "userRoots": []
