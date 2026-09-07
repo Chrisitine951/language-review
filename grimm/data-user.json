@@ -5452,6 +5452,32 @@
       ],
       "summary": "字首 pro-（向前）加上字根 pon（放置）與名詞字尾 -ent，合起來指「把立場放在前面、表態支持的人」，即支持者、提倡者。",
       "savedAt": "2026-09-07T05:46:36.214Z"
+    },
+    {
+      "id": "ulkmtqtkd378",
+      "word": "anonymous",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "an",
+          "meaning": "否定（源自 un-，鼻音互換 n/m 與母音通轉）",
+          "grimmNote": "母音通轉 a/e/i/o/u/y（un- 變 an-）"
+        },
+        {
+          "type": "root",
+          "text": "onym",
+          "meaning": "名字、名稱",
+          "grimmNote": "對應 name，喉音與唇音轉化"
+        },
+        {
+          "type": "suffix",
+          "text": "ous",
+          "meaning": "多（形容詞字尾）",
+          "grimmNote": "形容詞字尾 -ous＝多"
+        }
+      ],
+      "summary": "「an-（否定）」加上「-onym（名字）」，字面意思就是「沒有名字的、匿名的」。",
+      "savedAt": "2026-09-07T05:47:57.379Z"
     }
   ],
   "userRoots": []
