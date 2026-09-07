@@ -5358,6 +5358,32 @@
       ],
       "summary": "com-（一起、共同）結合 mut（移動、改變）與表人的字尾 -er，字面意思就是「每天一起移動、往返於家與工作地點的人」，也就是通勤族。",
       "savedAt": "2026-09-07T05:42:30.571Z"
+    },
+    {
+      "id": "ulkmtqtdvvo3",
+      "word": "diligent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "di-",
+          "meaning": "穿過、向外",
+          "grimmNote": "源自字首 dis- 的變體，表示動作徹底、完全。"
+        },
+        {
+          "type": "root",
+          "text": "lig",
+          "meaning": "選擇、挑選",
+          "grimmNote": "屬於喉音互換與母音通轉，與 collect/choose 同源。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ent",
+          "meaning": "形容詞字尾，表「正在…的、具有…性質的」",
+          "grimmNote": "標準形容詞字尾，表示主動或具備某特質。"
+        }
+      ],
+      "summary": "diligent（勤勉的）由表示徹底的字首 di- 與意為「挑選、收集」的字根 lig 結合，字面直譯為「會徹底挑選、認真挑選的人」，引申為做事一絲不苟、勤奮不懈。",
+      "savedAt": "2026-09-07T05:42:55.140Z"
     }
   ],
   "userRoots": []
