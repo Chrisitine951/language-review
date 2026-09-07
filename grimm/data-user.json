@@ -5478,6 +5478,38 @@
       ],
       "summary": "「an-（否定）」加上「-onym（名字）」，字面意思就是「沒有名字的、匿名的」。",
       "savedAt": "2026-09-07T05:47:57.379Z"
+    },
+    {
+      "id": "ulkmtqtlcho9",
+      "word": "trustworthy",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "tru",
+          "meaning": "真實、堅固",
+          "grimmNote": "源自 tree，經由母音通轉 u / ee 轉變而來，原意為堅固如樹"
+        },
+        {
+          "type": "root",
+          "text": "st",
+          "meaning": "站立、堅定",
+          "grimmNote": "來自 stand，經由舌音互換 d→t，並省略 n 轉變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "-w-",
+          "meaning": "連結音節",
+          "grimmNote": "唇音互換 b / p / f / v / w，作為連接與加強發音的過渡字根"
+        },
+        {
+          "type": "suffix",
+          "text": "-orthy",
+          "meaning": "值得的",
+          "grimmNote": "源自 worth，經由母音通轉 o / y，複合形成形容詞字尾"
+        }
+      ],
+      "summary": "trustworthy 由表示「堅固如樹」的 tru、代表「站立」的 st 結合，再加上形容詞字尾 -worthy，字面意思就是「站得穩、值得信賴的」。",
+      "savedAt": "2026-09-07T05:48:43.260Z"
     }
   ],
   "userRoots": []
