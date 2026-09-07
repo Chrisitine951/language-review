@@ -5412,6 +5412,20 @@
       ],
       "summary": "「crust」源自古印歐語，核心意涵為表面堅硬的外層或外殼。",
       "savedAt": "2026-09-07T05:43:51.666Z"
+    },
+    {
+      "id": "ulkmtqtfnxu6",
+      "word": "sink",
+      "parts": [
+        {
+          "type": "root",
+          "text": "sink",
+          "meaning": "下沉、沉沒",
+          "grimmNote": "保留原始的喉音 k，代表向下沈落的動作"
+        }
+      ],
+      "summary": "sink 作為基本字根，直接保留了表示向下沈落的喉音 k。",
+      "savedAt": "2026-09-07T05:44:18.162Z"
     }
   ],
   "userRoots": []
