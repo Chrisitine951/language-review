@@ -5298,6 +5298,26 @@
       ],
       "summary": "mutation 由表示「改變」的字根 mut 加上複合名詞字尾 -ation 組成，字面意思就是「改變的過程」，也就是生物學上的「突變」。",
       "savedAt": "2026-09-07T03:54:51.067Z"
+    },
+    {
+      "id": "ulkmtqpjmfh2",
+      "word": "overwhelming",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "over",
+          "meaning": "在…之上；超越",
+          "grimmNote": "源自介系詞 over，表示超越、過度"
+        },
+        {
+          "type": "prefix",
+          "text": "whelm",
+          "meaning": "淹沒、壓倒",
+          "grimmNote": "whelm 的 w 屬於唇音互換 b / p / f / v / w 家族"
+        }
+      ],
+      "summary": "由表「超越」的 over 與表「淹沒」的 whelm 結合，字面意思為「淹沒到頂、難以承受」，演變為壓倒性的、勢不可擋的。",
+      "savedAt": "2026-09-07T03:55:24.365Z"
     }
   ],
   "userRoots": []
