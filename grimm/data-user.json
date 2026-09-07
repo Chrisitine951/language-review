@@ -5576,6 +5576,32 @@
       ],
       "summary": "feudalism 由表示「封地、采邑」的字根 feud 加上形容詞字尾 -al 與名詞字尾 -ism 組合而成，字面意思就是「關於封建采邑的制度」，即「封建主義」。",
       "savedAt": "2026-09-07T05:59:47.491Z"
+    },
+    {
+      "id": "ulkmtqu0ueyd",
+      "word": "millennium",
+      "parts": [
+        {
+          "type": "root",
+          "text": "mill",
+          "meaning": "千",
+          "grimmNote": "源自拉丁語 mille（千），其中的 l 與流音互換有關，且字尾的雙子音 ll 為結構規則，第二個 l 僅為字型結構"
+        },
+        {
+          "type": "root",
+          "text": "enn",
+          "meaning": "年",
+          "grimmNote": "源自拉丁語 annus（年），母音 e 與 a 透過母音通轉，雙子音 nn 為結構規則，第二個 n 僅為維持音節"
+        },
+        {
+          "type": "suffix",
+          "text": "ium",
+          "meaning": "...的地方或名詞字尾",
+          "grimmNote": "-um 為常見名詞字尾，表場所或事物"
+        }
+      ],
+      "summary": "millennium 由代表「千」的 mill（源自mille）與代表「年」的 enn（源自annus）加上名詞字尾 -ium 結合而成，字面意思就是「一千年」。",
+      "savedAt": "2026-09-07T06:00:46.330Z"
     }
   ],
   "userRoots": []
