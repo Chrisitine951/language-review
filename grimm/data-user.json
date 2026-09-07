@@ -5384,6 +5384,20 @@
       ],
       "summary": "diligent（勤勉的）由表示徹底的字首 di- 與意為「挑選、收集」的字根 lig 結合，字面直譯為「會徹底挑選、認真挑選的人」，引申為做事一絲不苟、勤奮不懈。",
       "savedAt": "2026-09-07T05:42:55.140Z"
+    },
+    {
+      "id": "ulkmtqtejtm4",
+      "word": "trench",
+      "parts": [
+        {
+          "type": "root",
+          "text": "trench",
+          "meaning": "深溝、壕溝",
+          "grimmNote": "源自古法語 trencher（切割），由基本動作「切」衍生出「被切出來的深溝」之意"
+        }
+      ],
+      "summary": "trench 源自表示「切割」的字根，引申指在地表上「切割」出來的深溝或壕溝。",
+      "savedAt": "2026-09-07T05:43:26.171Z"
     }
   ],
   "userRoots": []
