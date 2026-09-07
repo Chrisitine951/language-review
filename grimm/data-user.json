@@ -5278,6 +5278,26 @@
       ],
       "summary": "字首 em-（進入、使之如何）加上字根 bark（船），合起來就是「上船、登舟」，引申為「著手、開始（新事業）」。",
       "savedAt": "2026-09-06T15:50:07.143Z"
+    },
+    {
+      "id": "ulkmtqpiwqj1",
+      "word": "mutation",
+      "parts": [
+        {
+          "type": "root",
+          "text": "mut",
+          "meaning": "改變、變化",
+          "grimmNote": "基礎動詞字根，表示移動或改變"
+        },
+        {
+          "type": "suffix",
+          "text": "ation",
+          "meaning": "名詞字尾，表動作的過程或結果",
+          "grimmNote": "由形容詞/動詞字尾 -ate 結合名詞字尾 -ion 複合而成"
+        }
+      ],
+      "summary": "mutation 由表示「改變」的字根 mut 加上複合名詞字尾 -ation 組成，字面意思就是「改變的過程」，也就是生物學上的「突變」。",
+      "savedAt": "2026-09-07T03:54:51.067Z"
     }
   ],
   "userRoots": []
