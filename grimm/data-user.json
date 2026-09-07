@@ -5530,6 +5530,26 @@
       ],
       "summary": "pollen（花粉）由表示細末的字根 poll 加上表物質的字尾 en 組成，原意指植物花朵的精華細末。",
       "savedAt": "2026-09-07T05:54:54.069Z"
+    },
+    {
+      "id": "ulkmtqtu3sub",
+      "word": "timid",
+      "parts": [
+        {
+          "type": "root",
+          "text": "tim",
+          "meaning": "恐懼、膽小",
+          "grimmNote": "對應拉丁語 timere（害怕），字根原義為顫抖、恐懼。"
+        },
+        {
+          "type": "suffix",
+          "text": "id",
+          "meaning": "形容詞字尾，表狀態",
+          "grimmNote": "常見的形容詞字尾，表示具備某種狀態（如 humid, rapid）。"
+        }
+      ],
+      "summary": "由表示「恐懼」的字根 tim 加上形容詞字尾 id 組成，字面意思就是「充滿恐懼的、膽小的」。",
+      "savedAt": "2026-09-07T05:55:31.902Z"
     }
   ],
   "userRoots": []
