@@ -5510,6 +5510,26 @@
       ],
       "summary": "trustworthy 由表示「堅固如樹」的 tru、代表「站立」的 st 結合，再加上形容詞字尾 -worthy，字面意思就是「站得穩、值得信賴的」。",
       "savedAt": "2026-09-07T05:48:43.260Z"
+    },
+    {
+      "id": "ulkmtqttalva",
+      "word": "pollen",
+      "parts": [
+        {
+          "type": "root",
+          "text": "poll",
+          "meaning": "細小粉末；精華",
+          "grimmNote": "對應唇音互換 b/p/f/v/w 與流音規則，本義指植物的花粉或細屑"
+        },
+        {
+          "type": "suffix",
+          "text": "en",
+          "meaning": "名詞或形容詞字尾（表物質或小）",
+          "grimmNote": "常用字尾，用來構成物質名詞"
+        }
+      ],
+      "summary": "pollen（花粉）由表示細末的字根 poll 加上表物質的字尾 en 組成，原意指植物花朵的精華細末。",
+      "savedAt": "2026-09-07T05:54:54.069Z"
     }
   ],
   "userRoots": []
