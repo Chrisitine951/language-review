@@ -5602,6 +5602,38 @@
       ],
       "summary": "millennium 由代表「千」的 mill（源自mille）與代表「年」的 enn（源自annus）加上名詞字尾 -ium 結合而成，字面意思就是「一千年」。",
       "savedAt": "2026-09-07T06:00:46.330Z"
+    },
+    {
+      "id": "ulkmtqu3cdse",
+      "word": "suspension",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "su",
+          "meaning": "向下、在下面",
+          "grimmNote": "源自子音弱化或變化，通常來自 sub-（向下、在下面），b 與 p/f/v 唇音互換或簡化"
+        },
+        {
+          "type": "prefix",
+          "text": "s",
+          "meaning": "加強語氣",
+          "grimmNote": "雙子音規則與結構：ss 的第二個 s 不具意義，保留第一個 s 作為字根串接"
+        },
+        {
+          "type": "prefix",
+          "text": "pen",
+          "meaning": "懸掛、吊著",
+          "grimmNote": "源自動詞字根 pend/pense（懸掛、花費），d/t/s 舌音互換"
+        },
+        {
+          "type": "suffix",
+          "text": "sion",
+          "meaning": "名詞字尾（動作或狀態）",
+          "grimmNote": "由動詞轉名詞的複合字尾，-ion 為常見名詞字尾"
+        }
+      ],
+      "summary": "sub-（向下）加上 pend（懸掛），字面意思就是「懸掛在下面」，引申為「懸缺、暫停、中止」。",
+      "savedAt": "2026-09-07T06:02:42.928Z"
     }
   ],
   "userRoots": []
