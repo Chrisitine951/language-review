@@ -5398,6 +5398,20 @@
       ],
       "summary": "trench 源自表示「切割」的字根，引申指在地表上「切割」出來的深溝或壕溝。",
       "savedAt": "2026-09-07T05:43:26.171Z"
+    },
+    {
+      "id": "ulkmtqtf3hu5",
+      "word": "crust",
+      "parts": [
+        {
+          "type": "root",
+          "text": "crust",
+          "meaning": "地殼、硬皮、麵包皮",
+          "grimmNote": "由原始印歐語字根轉變而來，c 與 s 分別對應喉音與舌音的原始發音"
+        }
+      ],
+      "summary": "「crust」源自古印歐語，核心意涵為表面堅硬的外層或外殼。",
+      "savedAt": "2026-09-07T05:43:51.666Z"
     }
   ],
   "userRoots": []
