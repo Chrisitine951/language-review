@@ -5332,6 +5332,32 @@
       ],
       "summary": "league 的字根透過喉音 g 演變而來，本意是「綁在一起」的誓約或團體，最終演變為現代的同盟與聯盟。",
       "savedAt": "2026-09-07T05:42:08.846Z"
+    },
+    {
+      "id": "ulkmtqtdcx72",
+      "word": "commuter",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "com-",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 come，表「一起、共同」的字首"
+        },
+        {
+          "type": "root",
+          "text": "mut",
+          "meaning": "改變、移動",
+          "grimmNote": "透過母音通轉與字根演變，表示「改變、移動」"
+        },
+        {
+          "type": "suffix",
+          "text": "-er",
+          "meaning": "人、物",
+          "grimmNote": "名詞字尾，表示「做動作的人」"
+        }
+      ],
+      "summary": "com-（一起、共同）結合 mut（移動、改變）與表人的字尾 -er，字面意思就是「每天一起移動、往返於家與工作地點的人」，也就是通勤族。",
+      "savedAt": "2026-09-07T05:42:30.571Z"
     }
   ],
   "userRoots": []
