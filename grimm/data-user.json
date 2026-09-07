@@ -5550,6 +5550,32 @@
       ],
       "summary": "由表示「恐懼」的字根 tim 加上形容詞字尾 id 組成，字面意思就是「充滿恐懼的、膽小的」。",
       "savedAt": "2026-09-07T05:55:31.902Z"
+    },
+    {
+      "id": "ulkmtqtzl0jc",
+      "word": "feudalism",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "feud",
+          "meaning": "封地、采邑、爭端",
+          "grimmNote": "源自古日耳曼語，指分封給臣下的土地"
+        },
+        {
+          "type": "suffix",
+          "text": "-al",
+          "meaning": "形容詞字尾，表「關於…的」",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "-ism",
+          "meaning": "名詞字尾，表主義、制度、學派",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "feudalism 由表示「封地、采邑」的字根 feud 加上形容詞字尾 -al 與名詞字尾 -ism 組合而成，字面意思就是「關於封建采邑的制度」，即「封建主義」。",
+      "savedAt": "2026-09-07T05:59:47.491Z"
     }
   ],
   "userRoots": []
