@@ -5696,6 +5696,32 @@
       ],
       "summary": "「stripe」是一個維持原始結構的單字，基本字根直接表意為條紋或線條。",
       "savedAt": "2026-09-07T12:19:33.469Z"
+    },
+    {
+      "id": "ulkmtschc941",
+      "word": "scrutinize",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "sc",
+          "meaning": "向下；朝向",
+          "grimmNote": "源自 ob- 經由語音同化轉變而來"
+        },
+        {
+          "type": "root",
+          "text": "rutin",
+          "meaning": "小路、溝痕（源自 rout/rut）",
+          "grimmNote": "母音通轉及舌音互換，字根代表細小的痕跡或刻痕"
+        },
+        {
+          "type": "suffix",
+          "text": "ize",
+          "meaning": "使…；動詞字尾",
+          "grimmNote": "構成動詞，意為「在細微痕跡中尋找」"
+        }
+      ],
+      "summary": "scrutinize 由表示向下的字首 sc- 結合代表溝痕的字根 rutin，加上動詞字尾 -ize 組成，字面上的意思是「在細微的溝痕中仔細尋找」，進而引申為「詳細檢查、審視」。",
+      "savedAt": "2026-09-08T07:25:15.208Z"
     }
   ],
   "userRoots": []
