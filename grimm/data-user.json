@@ -5722,6 +5722,26 @@
       ],
       "summary": "scrutinize 由表示向下的字首 sc- 結合代表溝痕的字根 rutin，加上動詞字尾 -ize 組成，字面上的意思是「在細微的溝痕中仔細尋找」，進而引申為「詳細檢查、審視」。",
       "savedAt": "2026-09-08T07:25:15.208Z"
+    },
+    {
+      "id": "ulkmtsclk5n2",
+      "word": "wither",
+      "parts": [
+        {
+          "type": "root",
+          "text": "with",
+          "meaning": "向後、抵抗、分開",
+          "grimmNote": "源自古英文 with-（向後、對抗），與 wider / weather 等字同源，本義指植物「枯萎、對抗風雨而乾枯」"
+        },
+        {
+          "type": "suffix",
+          "text": "er",
+          "meaning": "表動作反覆、狀態持續的動詞字尾",
+          "grimmNote": "-er 表動作持續發生，使植物逐漸失去水分"
+        }
+      ],
+      "summary": "wither（枯萎）由表示對抗、分離的字根與表反覆動作的字尾組成，形容植物因水分流失或對抗惡劣環境而逐漸乾枯的狀態。",
+      "savedAt": "2026-09-08T07:28:32.075Z"
     }
   ],
   "userRoots": []
