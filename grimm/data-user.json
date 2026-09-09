@@ -5742,6 +5742,32 @@
       ],
       "summary": "wither（枯萎）由表示對抗、分離的字根與表反覆動作的字尾組成，形容植物因水分流失或對抗惡劣環境而逐漸乾枯的狀態。",
       "savedAt": "2026-09-08T07:28:32.075Z"
+    },
+    {
+      "id": "ulkmttsbtvt1",
+      "word": "porcelain",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "por",
+          "meaning": "向前、朝向；或為唇音相關前綴",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "cel",
+          "meaning": "與凹陷、容器相關（源自古印歐語，指貝殼）",
+          "grimmNote": "喉音互換 g / k / c，此處保留 c 的音"
+        },
+        {
+          "type": "suffix",
+          "text": "ain",
+          "meaning": "形容詞或名詞字尾（源自 -anus/-alis 轉化）",
+          "grimmNote": "母音通轉 a / e / i / o / u / y 與流音變化"
+        }
+      ],
+      "summary": "「porcelain」（瓷器）源自義大利文 porcellana（意為「寶螺」，因瓷器表面光澤與貝殼相似），字根與貝殼的凹陷形狀及材質相關，經母音通轉與字尾演變而來。",
+      "savedAt": "2026-09-09T07:36:38.153Z"
     }
   ],
   "userRoots": []
