@@ -5814,6 +5814,32 @@
       ],
       "summary": "thrive 源自北歐語言，本義是「抓取、握住」，引申為「掌握機會而繁榮興旺」。",
       "savedAt": "2026-09-09T07:49:07.153Z"
+    },
+    {
+      "id": "ulkmttt5n8t4",
+      "word": "souvenir",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "sou",
+          "meaning": "在底下；秘密地",
+          "grimmNote": "源自 sub-（在下方、秘密地），透過流音 l/r 變化或口語弱化形成"
+        },
+        {
+          "type": "root",
+          "text": "ven",
+          "meaning": "來",
+          "grimmNote": "源自venire（來），屬於唇音互換 b/p/f/v/w 家族"
+        },
+        {
+          "type": "suffix",
+          "text": "ir",
+          "meaning": "名詞字尾",
+          "grimmNote": "法語借詞的詞尾，用來構成名詞"
+        }
+      ],
+      "summary": "souvenir 由表示「秘密地/下方」的字首與表示「來」的字根組合而成，原意為「從心底深處浮現、湧現出來的東西」，引申為「紀念品、回憶」。",
+      "savedAt": "2026-09-09T07:59:49.229Z"
     }
   ],
   "userRoots": []
