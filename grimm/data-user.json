@@ -5794,6 +5794,26 @@
       ],
       "summary": "字首 un-（否定、向下）加上代表「皮、底層」的字根 derm，字面意思是「破壞底層、挖基腳」，演變為「暗中破壞、削弱」。",
       "savedAt": "2026-09-09T07:39:34.816Z"
+    },
+    {
+      "id": "ulkmttsrvtd3",
+      "word": "thrive",
+      "parts": [
+        {
+          "type": "root",
+          "text": "thriv",
+          "meaning": "繁榮、興旺",
+          "grimmNote": "源自古諾斯語 þrífask，字面意思是「抓取自己」，由 grab/grasp 家族演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "動詞字尾",
+          "grimmNote": "母音通轉與字尾調整"
+        }
+      ],
+      "summary": "thrive 源自北歐語言，本義是「抓取、握住」，引申為「掌握機會而繁榮興旺」。",
+      "savedAt": "2026-09-09T07:49:07.153Z"
     }
   ],
   "userRoots": []
