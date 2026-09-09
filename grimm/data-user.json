@@ -5840,6 +5840,32 @@
       ],
       "summary": "souvenir 由表示「秘密地/下方」的字首與表示「來」的字根組合而成，原意為「從心底深處浮現、湧現出來的東西」，引申為「紀念品、回憶」。",
       "savedAt": "2026-09-09T07:59:49.229Z"
+    },
+    {
+      "id": "ulkmtttbse65",
+      "word": "vertebrate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "vert",
+          "meaning": "轉、旋轉",
+          "grimmNote": "源自印歐語字根，原意為轉動（vertere），對應英文的 turn"
+        },
+        {
+          "type": "root",
+          "text": "ebr",
+          "meaning": "脊椎、骨節",
+          "grimmNote": "其中的 b 屬於「唇音互換 b / p / f / v / w」，與骨頭、支撐的結構相關"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "具有…的（形容詞或動詞字尾）",
+          "grimmNote": "常用字尾，用來構成動詞或形容詞"
+        }
+      ],
+      "summary": "vertebrate（脊椎動物）由表示「轉動、關節」的字根 vert 結合代表骨節的 ebr 與形容詞字尾 -ate 組成，字面上有許多轉動關節的骨骼結構者。",
+      "savedAt": "2026-09-09T08:04:35.838Z"
     }
   ],
   "userRoots": []
