@@ -5906,6 +5906,32 @@
       ],
       "summary": "juvenile 由表示「年輕的」的字根 juven 結合形容詞字尾 -ile 組成，字面上的意思就是「年輕的、少年的」。",
       "savedAt": "2026-09-09T08:09:22.963Z"
+    },
+    {
+      "id": "ulkmttw1p3i1",
+      "word": "destitute",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下；離開",
+          "grimmNote": "常見字首，表示向下或離開。"
+        },
+        {
+          "type": "root",
+          "text": "stit",
+          "meaning": "立、站",
+          "grimmNote": "源自立正的動詞字根，利用「舌音互換 d / t / s」與 stand 同源。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ute",
+          "meaning": "形容詞或動詞字尾",
+          "grimmNote": "常見字尾，輔助構成單字結構。"
+        }
+      ],
+      "summary": "de-（向下、離開）加上 stit（站立）再結合 -ute 字尾，原本指「站不起來、流落街頭」的狀態，引申為「貧窮的、赤貧的」。",
+      "savedAt": "2026-09-09T09:20:43.854Z"
     }
   ],
   "userRoots": []
