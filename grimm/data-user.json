@@ -5768,6 +5768,32 @@
       ],
       "summary": "「porcelain」（瓷器）源自義大利文 porcellana（意為「寶螺」，因瓷器表面光澤與貝殼相似），字根與貝殼的凹陷形狀及材質相關，經母音通轉與字尾演變而來。",
       "savedAt": "2026-09-09T07:36:38.153Z"
+    },
+    {
+      "id": "ulkmttsfm742",
+      "word": "undermine",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "un-",
+          "meaning": "否定、不",
+          "grimmNote": "常用字首：un- 表示否定、相反的動作。"
+        },
+        {
+          "type": "root",
+          "text": "derm",
+          "meaning": "皮、底層",
+          "grimmNote": "源自古印歐語，經由母音通轉 e/a，對應到 skin（皮膚）等字根概念。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ine",
+          "meaning": "動詞字尾，使成為…",
+          "grimmNote": "常用字尾：表動作或使之成為某種狀態。"
+        }
+      ],
+      "summary": "字首 un-（否定、向下）加上代表「皮、底層」的字根 derm，字面意思是「破壞底層、挖基腳」，演變為「暗中破壞、削弱」。",
+      "savedAt": "2026-09-09T07:39:34.816Z"
     }
   ],
   "userRoots": []
