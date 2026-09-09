@@ -5866,6 +5866,26 @@
       ],
       "summary": "vertebrate（脊椎動物）由表示「轉動、關節」的字根 vert 結合代表骨節的 ebr 與形容詞字尾 -ate 組成，字面上有許多轉動關節的骨骼結構者。",
       "savedAt": "2026-09-09T08:04:35.838Z"
+    },
+    {
+      "id": "ulkmtttcmlv6",
+      "word": "carpenter",
+      "parts": [
+        {
+          "type": "root",
+          "text": "carp",
+          "meaning": "收割、砍削、挑剔",
+          "grimmNote": "源自喉音互換 g/k/c，與拉丁語 carpere（剪裁、收割）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "enter",
+          "meaning": "表人或相關事物的名詞字尾（源自 -tor/-ter）",
+          "grimmNote": "母音通轉 e/o，與表人的字尾 -or 互換"
+        }
+      ],
+      "summary": "carpenter 由表示「切割、砍削」的字根 carp 加上表示人的字尾 enter 組成，字面意思就是「從事木頭切割的人」，也就是木匠。",
+      "savedAt": "2026-09-09T08:05:14.995Z"
     }
   ],
   "userRoots": []
