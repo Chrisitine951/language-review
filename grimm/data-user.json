@@ -5886,6 +5886,26 @@
       ],
       "summary": "carpenter 由表示「切割、砍削」的字根 carp 加上表示人的字尾 enter 組成，字面意思就是「從事木頭切割的人」，也就是木匠。",
       "savedAt": "2026-09-09T08:05:14.995Z"
+    },
+    {
+      "id": "ulkmttthxxv7",
+      "word": "juvenile",
+      "parts": [
+        {
+          "type": "root",
+          "text": "juven",
+          "meaning": "年輕的、生氣勃勃的",
+          "grimmNote": "源自印歐語根 *yu-en-（年輕），字根中包含與 youthful 同源的成分"
+        },
+        {
+          "type": "suffix",
+          "text": "ile",
+          "meaning": "形容詞字尾，表「具有…性質的」",
+          "grimmNote": "常見形容詞字尾，母音 i 與字根的 e 透過「母音通轉」互相呼應"
+        }
+      ],
+      "summary": "juvenile 由表示「年輕的」的字根 juven 結合形容詞字尾 -ile 組成，字面上的意思就是「年輕的、少年的」。",
+      "savedAt": "2026-09-09T08:09:22.963Z"
     }
   ],
   "userRoots": []
