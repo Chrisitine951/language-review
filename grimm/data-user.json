@@ -6044,6 +6044,32 @@
       ],
       "summary": "字首 ob-（向下）加上表示覆蓋的字根 scure，合起來就是「向下遮蔽、使之看不清楚」，演變成「模糊的、晦澀的」的意思。",
       "savedAt": "2026-09-10T08:08:12.136Z"
+    },
+    {
+      "id": "ulkmtvjosfo1",
+      "word": "contingency",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 com- / con-（一起、共同，源自 come）"
+        },
+        {
+          "type": "root",
+          "text": "ting",
+          "meaning": "接觸、觸碰",
+          "grimmNote": "源自拉丁字根 tang/ting（接觸），g 與 k/c 屬於喉音互換"
+        },
+        {
+          "type": "suffix",
+          "text": "ency",
+          "meaning": "名詞字尾（由 -ent 形容詞字尾加上 -y 名詞字尾組合而成，表性質或狀態）",
+          "grimmNote": "-y 是多（形容詞字尾），與 -ity 同為名詞字尾"
+        }
+      ],
+      "summary": "contingency 由「con-（共同）」加上表示「接觸、發生」的字根與複合字尾組成，原本指事情「共同接觸、碰上」的狀態，引申為偶然發生、應變措施或「意外狀況」。",
+      "savedAt": "2026-09-10T13:10:18.612Z"
     }
   ],
   "userRoots": []
