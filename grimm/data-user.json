@@ -5958,6 +5958,26 @@
       ],
       "summary": "ecliptic（黃道）由表示「向外」的字首 e- 結合代表「切斷、遺留（指日月食光芒被遮蔽）」的字根 clip，再加上形容詞字尾 -tic 組成，字面上的意思是「與日月食（光芒缺損）相關的軌道」。",
       "savedAt": "2026-09-09T09:25:58.884Z"
+    },
+    {
+      "id": "ulkmtv7ssy01",
+      "word": "pamphlet",
+      "parts": [
+        {
+          "type": "root",
+          "text": "pamph",
+          "meaning": "薄片、紙頁",
+          "grimmNote": "源自希腊语 pamphilos（全爱的），字根演变为指薄纸或小册子"
+        },
+        {
+          "type": "suffix",
+          "text": "let",
+          "meaning": "小",
+          "grimmNote": "常用字尾，表示“小”的意思（-et / -let / -el）"
+        }
+      ],
+      "summary": "pamphlet 由表示薄片纸页的字根与表示“小”的字尾 -let 组合而成，意指“小册子”。",
+      "savedAt": "2026-09-10T07:37:30.504Z"
     }
   ],
   "userRoots": []
