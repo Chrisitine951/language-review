@@ -6148,6 +6148,32 @@
       ],
       "summary": "reconcile 由表示「再次」的字首 re- 與代表「一起召集、商議」的字根組合而成，字面意思就是「再次聚集在一起」，引申為重修舊好、和解。",
       "savedAt": "2026-09-10T13:53:52.565Z"
+    },
+    {
+      "id": "ulkmtvlz92c2",
+      "word": "prosecute",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pro-",
+          "meaning": "向前、在前",
+          "grimmNote": "常見字首，表示向前或朝向。"
+        },
+        {
+          "type": "suffix",
+          "text": "sec",
+          "meaning": "跟隨、追逐",
+          "grimmNote": "源自古印歐語根，經由母音通轉與子音演變。"
+        },
+        {
+          "type": "suffix",
+          "text": "ute",
+          "meaning": "動詞字尾",
+          "grimmNote": "拉丁語動詞字尾，表動作執行。"
+        }
+      ],
+      "summary": "pro-（向前）加上 sec（追隨），字面意思是「向前追隨、窮追不捨」，引申為法律上的「起訴、檢控」。",
+      "savedAt": "2026-09-10T14:14:25.956Z"
     }
   ],
   "userRoots": []
