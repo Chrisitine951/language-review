@@ -5978,6 +5978,32 @@
       ],
       "summary": "pamphlet 由表示薄片纸页的字根与表示“小”的字尾 -let 组合而成，意指“小册子”。",
       "savedAt": "2026-09-10T07:37:30.504Z"
+    },
+    {
+      "id": "ulkmtv7vsil2",
+      "word": "increment",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字首 in-（在內、進入）"
+        },
+        {
+          "type": "root",
+          "text": "cre",
+          "meaning": "生長、增加",
+          "grimmNote": "與 grow 同源，喉音互換 g ↔ c"
+        },
+        {
+          "type": "suffix",
+          "text": "-ment",
+          "meaning": "名詞字尾（動作或結果）",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "in-（進入）加上 cre（生長）與 -ment（名詞字尾），合起來指「內部不斷生長增加」，即為「增加、增長」。",
+      "savedAt": "2026-09-10T07:39:49.918Z"
     }
   ],
   "userRoots": []
