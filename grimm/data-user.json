@@ -6122,6 +6122,32 @@
       ],
       "summary": "contingency 由「con-（共同）」加上表示「接觸、發生」的字根與複合字尾組成，原本指事情「共同接觸、碰上」的狀態，引申為偶然發生、應變措施或「意外狀況」。",
       "savedAt": "2026-09-10T13:11:37.641Z"
+    },
+    {
+      "id": "ulkmtvl8tdh1",
+      "word": "reconcile",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常用字首 re- 表再次、重複"
+        },
+        {
+          "type": "root",
+          "text": "concil",
+          "meaning": "召集、商議、調解",
+          "grimmNote": "源自拉丁字根 cil/cal（呼喊、召集），前面加上 com-（一起、共同）轉變為 concil，其中母音 o 與 i 透過「母音通轉 a / e / i / o / u / y」互相轉換"
+        },
+        {
+          "type": "suffix",
+          "text": "-e",
+          "meaning": "動詞字尾",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "reconcile 由表示「再次」的字首 re- 與代表「一起召集、商議」的字根組合而成，字面意思就是「再次聚集在一起」，引申為重修舊好、和解。",
+      "savedAt": "2026-09-10T13:53:52.565Z"
     }
   ],
   "userRoots": []
