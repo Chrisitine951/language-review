@@ -6024,6 +6024,26 @@
       ],
       "summary": "rigor（嚴格、僵硬）加上形容詞字尾 -ous（多），組合成「充滿嚴格、一絲不苟」的 rigorous。",
       "savedAt": "2026-09-10T07:43:19.918Z"
+    },
+    {
+      "id": "ulkmtv8w9yf4",
+      "word": "obscure",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ob-",
+          "meaning": "向下；朝向",
+          "grimmNote": "常見字首，表示方向或向下壓抑"
+        },
+        {
+          "type": "root",
+          "text": "scure",
+          "meaning": "覆蓋、遮蔽",
+          "grimmNote": "與拉丁文 obscurus（黑暗的、遮蔽的）同源，其中的 c 與喉音互換或母音通轉有關"
+        }
+      ],
+      "summary": "字首 ob-（向下）加上表示覆蓋的字根 scure，合起來就是「向下遮蔽、使之看不清楚」，演變成「模糊的、晦澀的」的意思。",
+      "savedAt": "2026-09-10T08:08:12.136Z"
     }
   ],
   "userRoots": []
