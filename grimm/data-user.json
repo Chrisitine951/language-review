@@ -6004,6 +6004,26 @@
       ],
       "summary": "in-（進入）加上 cre（生長）與 -ment（名詞字尾），合起來指「內部不斷生長增加」，即為「增加、增長」。",
       "savedAt": "2026-09-10T07:39:49.918Z"
+    },
+    {
+      "id": "ulkmtv80ajy3",
+      "word": "rigorous",
+      "parts": [
+        {
+          "type": "root",
+          "text": "rigor",
+          "meaning": "嚴格、嚴苛",
+          "grimmNote": "源自古印歐語字根，原意為「僵硬、發直」"
+        },
+        {
+          "type": "suffix",
+          "text": "-ous",
+          "meaning": "多（形容詞字尾）",
+          "grimmNote": "形容詞字尾，表「充滿...的」"
+        }
+      ],
+      "summary": "rigor（嚴格、僵硬）加上形容詞字尾 -ous（多），組合成「充滿嚴格、一絲不苟」的 rigorous。",
+      "savedAt": "2026-09-10T07:43:19.918Z"
     }
   ],
   "userRoots": []
