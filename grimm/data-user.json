@@ -6240,6 +6240,32 @@
       ],
       "summary": "「con-（共同）」加上「sort（命運、類別）」與名詞字尾「-ium」，字面意思就是「命運與志趣相投、聚在一起的人們所形成的團體或財團」。",
       "savedAt": "2026-09-11T01:29:27.847Z"
+    },
+    {
+      "id": "ulkmtwa55mc4",
+      "word": "handkerchief",
+      "parts": [
+        {
+          "type": "root",
+          "text": "hand",
+          "meaning": "手",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "ker",
+          "meaning": "蓋子、遮蔽物（源自 cover）",
+          "grimmNote": "喉音弱化 c/k ↔ h 以及母音通轉 e/o，cover 轉化為 ker"
+        },
+        {
+          "type": "suffix",
+          "text": "chief",
+          "meaning": "頭領、主要的（源自head）",
+          "grimmNote": "唇音互換 f/p 以及喉音弱化 c/h，head 轉化為 chief"
+        }
+      ],
+      "summary": "由「手（hand）」加上「覆蓋（cover 的變體 ker）」與「頭（head 的變體 chief）」組成，原本是指「拿在手上或覆蓋在頭上的方巾」，現在演變為手帕。",
+      "savedAt": "2026-09-11T01:30:52.212Z"
     }
   ],
   "userRoots": []
