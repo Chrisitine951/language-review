@@ -6384,6 +6384,32 @@
       ],
       "summary": "affluent 由加強語氣字首 af- 加上表示「流」的字根 flu，再接形容詞字尾 -ent 組成，字面意思是「水流不斷、財源滾滾而來」，引申為「富裕的、豐富的」。",
       "savedAt": "2026-09-11T01:41:42.167Z"
+    },
+    {
+      "id": "ulkmtwaltd0a",
+      "word": "avenue",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "a",
+          "meaning": "朝向、去",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）的變體，這裡的 a- 表示朝向、趨向"
+        },
+        {
+          "type": "root",
+          "text": "ven",
+          "meaning": "來、去",
+          "grimmNote": "源自拉丁語venire（來），其中的 v 屬於 唇音互換 b / p / f / v / w，與 come 的 c-m 有深層親戚關係"
+        },
+        {
+          "type": "suffix",
+          "text": "ue",
+          "meaning": "名詞字尾",
+          "grimmNote": "母音通轉 a / e / i / o / u / y 與字尾結構變化"
+        }
+      ],
+      "summary": "avenue 由表「朝向」的字首 a- 加上表「來、去」的字根 ven 組成，字面意思是「通往某處的路、林蔭大道」，也就是讓人們「走過來、走過去」的地方。",
+      "savedAt": "2026-09-11T01:43:49.476Z"
     }
   ],
   "userRoots": []
