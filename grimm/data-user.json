@@ -6338,6 +6338,26 @@
       ],
       "summary": "「e-（向外）」加上「vac（空的）」，字面意思是「把人或物從裡面弄出去、變成空的」，因此引申為「撤離、疏散」。",
       "savedAt": "2026-09-11T01:39:08.361Z"
+    },
+    {
+      "id": "ulkmtwaggpr8",
+      "word": "robust",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ro",
+          "meaning": "向下；朝向",
+          "grimmNote": "源自 ob-，因口語流變轉化為 ro-"
+        },
+        {
+          "type": "root",
+          "text": "bust",
+          "meaning": "強健、茁壯",
+          "grimmNote": "源自古印歐語字根，與 grow（生長）同源，其中舌音 d/t 互換"
+        }
+      ],
+      "summary": "robust 由表示方向的字首 ro-（源自 ob-）與表示生長強健的字根 bust 結合而成，字面意思就是「向上向下生長得很茁壯」，引申為「強健的、粗壯的」。",
+      "savedAt": "2026-09-11T01:39:39.807Z"
     }
   ],
   "userRoots": []
