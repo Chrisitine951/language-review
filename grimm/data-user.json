@@ -6214,6 +6214,32 @@
       ],
       "summary": "preach 由「向前（pre-）」與「宣講、說（ach，源自說話的字根）」組成，意思是站在眾人面前大聲宣講、傳道。",
       "savedAt": "2026-09-11T01:28:25.372Z"
+    },
+    {
+      "id": "ulkmtwa3civ3",
+      "word": "consortium",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con-",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 come，表示共同、聚集"
+        },
+        {
+          "type": "root",
+          "text": "sort",
+          "meaning": "命運、機運、種類、分類",
+          "grimmNote": "對應古印歐語源，意指分配、命運或抽籤歸類"
+        },
+        {
+          "type": "suffix",
+          "text": "-ium",
+          "meaning": "地方、組織或集合名詞字尾",
+          "grimmNote": "拉丁文名詞字尾，用來指一個群體或機構的所在地"
+        }
+      ],
+      "summary": "「con-（共同）」加上「sort（命運、類別）」與名詞字尾「-ium」，字面意思就是「命運與志趣相投、聚在一起的人們所形成的團體或財團」。",
+      "savedAt": "2026-09-11T01:29:27.847Z"
     }
   ],
   "userRoots": []
