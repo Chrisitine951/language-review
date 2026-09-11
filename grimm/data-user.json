@@ -6476,6 +6476,26 @@
       ],
       "summary": "peripheral 由表示「周圍」的字首 peri- 與表示「攜帶、延伸」的字根 pher 加上形容詞字尾 -al 組成，字面意思是「帶在周圍的」，引申為「周邊的、外圍的」。",
       "savedAt": "2026-09-11T01:49:12.543Z"
+    },
+    {
+      "id": "ulkmtwf7fbe1",
+      "word": "reckon",
+      "parts": [
+        {
+          "type": "root",
+          "text": "reck",
+          "meaning": "計算、認為、顧及",
+          "grimmNote": "源自日耳曼語族，與古英文 rēcan（照顧、關心）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "-on",
+          "meaning": "名詞或動詞字尾，表反覆動作",
+          "grimmNote": "表動作的持續或反覆"
+        }
+      ],
+      "summary": "reck（計算、認為）加上動詞字尾 -on，原意為「在心中計算、估量」，演變為現代的「認為、料想、計算」。",
+      "savedAt": "2026-09-11T03:52:36.170Z"
     }
   ],
   "userRoots": []
