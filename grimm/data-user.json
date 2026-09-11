@@ -6174,6 +6174,26 @@
       ],
       "summary": "pro-（向前）加上 sec（追隨），字面意思是「向前追隨、窮追不捨」，引申為法律上的「起訴、檢控」。",
       "savedAt": "2026-09-10T14:14:25.956Z"
+    },
+    {
+      "id": "ulkmtwa0t1h1",
+      "word": "hover",
+      "parts": [
+        {
+          "type": "root",
+          "text": "hov",
+          "meaning": "懸停、盤旋",
+          "grimmNote": "對應古英文中的字根，與 heave（舉起、起伏）同源，唇音互換 b / p / f / v / w 中 v 與發音相關"
+        },
+        {
+          "type": "suffix",
+          "text": "er",
+          "meaning": "表反覆動作的字尾",
+          "grimmNote": "表動作反覆，指持續在空中上下或原地盤旋"
+        }
+      ],
+      "summary": "hover 由表示起伏的字根與表反覆動作的字尾組成，意指持續在空中上下起伏地盤旋。",
+      "savedAt": "2026-09-11T01:27:29.285Z"
     }
   ],
   "userRoots": []
