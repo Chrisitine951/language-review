@@ -6496,6 +6496,26 @@
       ],
       "summary": "reck（計算、認為）加上動詞字尾 -on，原意為「在心中計算、估量」，演變為現代的「認為、料想、計算」。",
       "savedAt": "2026-09-11T03:52:36.170Z"
+    },
+    {
+      "id": "ulkmtwsr0q41",
+      "word": "invade",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常用字首 in-（在內、進入）"
+        },
+        {
+          "type": "root",
+          "text": "vade",
+          "meaning": "走、行",
+          "grimmNote": "字根 vade 透過唇音互換 b/p/f/v，與源自「走」的字根有關（如 base 的底部概念，或法文 aller 的遠親）"
+        }
+      ],
+      "summary": "invade 由字首 in-（進入）加上字根 vade（走）組成，字面意思就是「走進去」，引申為「侵略、入侵」。",
+      "savedAt": "2026-09-11T10:11:45.388Z"
     }
   ],
   "userRoots": []
