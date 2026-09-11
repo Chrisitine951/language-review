@@ -6516,6 +6516,32 @@
       ],
       "summary": "invade 由字首 in-（進入）加上字根 vade（走）組成，字面意思就是「走進去」，引申為「侵略、入侵」。",
       "savedAt": "2026-09-11T10:11:45.388Z"
+    },
+    {
+      "id": "ulkmtx97mp71",
+      "word": "destitute",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de",
+          "meaning": "離開、向下",
+          "grimmNote": "常見字首，表向下、離開或否定"
+        },
+        {
+          "type": "root",
+          "text": "stitu",
+          "meaning": "立、站",
+          "grimmNote": "源自古印歐語，與 stand 同源，利用舌音互換 d 變成 t"
+        },
+        {
+          "type": "suffix",
+          "text": "te",
+          "meaning": "形容詞或動詞字尾",
+          "grimmNote": "用作字尾，形成形容詞或動詞結構"
+        }
+      ],
+      "summary": "de-（離開）加上 stitu（站），原本指「站開、不站在一起」，引申為失去依靠、一無所有、貧困的。",
+      "savedAt": "2026-09-11T17:52:34.219Z"
     }
   ],
   "userRoots": []
