@@ -6194,6 +6194,26 @@
       ],
       "summary": "hover 由表示起伏的字根與表反覆動作的字尾組成，意指持續在空中上下起伏地盤旋。",
       "savedAt": "2026-09-11T01:27:29.285Z"
+    },
+    {
+      "id": "ulkmtwa20bg2",
+      "word": "preach",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pre",
+          "meaning": "向前、在前面",
+          "grimmNote": "源自前綴 pre-，表示在前、預先"
+        },
+        {
+          "type": "root",
+          "text": "ach",
+          "meaning": "說、宣講",
+          "grimmNote": "透過喉音弱化 c/k ↔ h，對應到拉丁語源的 dic/dict（說、宣告），d 與 t 舌音互換，且 d/t 脫落後留下母音與喉音"
+        }
+      ],
+      "summary": "preach 由「向前（pre-）」與「宣講、說（ach，源自說話的字根）」組成，意思是站在眾人面前大聲宣講、傳道。",
+      "savedAt": "2026-09-11T01:28:25.372Z"
     }
   ],
   "userRoots": []
