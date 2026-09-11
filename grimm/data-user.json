@@ -6358,6 +6358,32 @@
       ],
       "summary": "robust 由表示方向的字首 ro-（源自 ob-）與表示生長強健的字根 bust 結合而成，字面意思就是「向上向下生長得很茁壯」，引申為「強健的、粗壯的」。",
       "savedAt": "2026-09-11T01:39:39.807Z"
+    },
+    {
+      "id": "ulkmtwaj34n9",
+      "word": "affluent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "af-",
+          "meaning": "朝向、去",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 af- 只是加強語氣、沒有實質意義，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "flu",
+          "meaning": "流、流動",
+          "grimmNote": "對應流動的概念（源自 flow/fluent）。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ent",
+          "meaning": "形容詞字尾、多…的",
+          "grimmNote": "表狀態或性質的形容詞字尾。"
+        }
+      ],
+      "summary": "affluent 由加強語氣字首 af- 加上表示「流」的字根 flu，再接形容詞字尾 -ent 組成，字面意思是「水流不斷、財源滾滾而來」，引申為「富裕的、豐富的」。",
+      "savedAt": "2026-09-11T01:41:42.167Z"
     }
   ],
   "userRoots": []
