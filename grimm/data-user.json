@@ -6410,6 +6410,26 @@
       ],
       "summary": "avenue 由表「朝向」的字首 a- 加上表「來、去」的字根 ven 組成，字面意思是「通往某處的路、林蔭大道」，也就是讓人們「走過來、走過去」的地方。",
       "savedAt": "2026-09-11T01:43:49.476Z"
+    },
+    {
+      "id": "ulkmtwanyj9b",
+      "word": "portrait",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "por",
+          "meaning": "向前、朝向（源自 pro- 的變體）",
+          "grimmNote": "母音通轉 a / e / i / o / u / y 與流音互換：pro- 轉為 por-"
+        },
+        {
+          "type": "root",
+          "text": "trait",
+          "meaning": "拉、畫、描繪",
+          "grimmNote": "舌音互換 d / t / s：源自 trahere（拉），其過去分詞 tractus 轉為 trait"
+        }
+      ],
+      "summary": "portrait 由表示向前的字首 por- 與表示描繪的字根 trait 組成，字面意思是「向前描繪出來」的畫面，因此演變為「肖像、畫像」。",
+      "savedAt": "2026-09-11T01:45:29.493Z"
     }
   ],
   "userRoots": []
