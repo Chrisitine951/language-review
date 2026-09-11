@@ -6286,6 +6286,32 @@
       ],
       "summary": "saucer 由表示「鹽、調味汁」的字根 sauc（源自 salt，l 轉 u）加上表器具的字尾 -er 組成，原本指「盛醬汁的小碟子」，後來演變為指茶杯底下的「茶碟、茶托」。",
       "savedAt": "2026-09-11T01:32:53.978Z"
+    },
+    {
+      "id": "ulkmtwacr8s6",
+      "word": "coordinate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "co",
+          "meaning": "共同、一起",
+          "grimmNote": "源自 com-（com- / con-＝一起、共同，源自 come），字尾m在元音前脫落簡化為co-"
+        },
+        {
+          "type": "root",
+          "text": "ordin",
+          "meaning": "順序、排列",
+          "grimmNote": "源自拉丁字根ordin-（順序、階級），與order同源，其中 d 屬於 舌音互換 d / t / s 家族"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "使…、動詞字尾",
+          "grimmNote": "動詞字尾 -ate，表動作化"
+        }
+      ],
+      "summary": "co-（共同）加上 ordin（順序）與動詞字尾 -ate，意思就是「使具有共同的順序」，也就是「協調、統籌」。",
+      "savedAt": "2026-09-11T01:36:46.828Z"
     }
   ],
   "userRoots": []
