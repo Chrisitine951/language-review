@@ -6266,6 +6266,26 @@
       ],
       "summary": "由「手（hand）」加上「覆蓋（cover 的變體 ker）」與「頭（head 的變體 chief）」組成，原本是指「拿在手上或覆蓋在頭上的方巾」，現在演變為手帕。",
       "savedAt": "2026-09-11T01:30:52.212Z"
+    },
+    {
+      "id": "ulkmtwa7rkq5",
+      "word": "saucer",
+      "parts": [
+        {
+          "type": "root",
+          "text": "sauc",
+          "meaning": "鹽、調味汁（源自 salt）",
+          "grimmNote": "包含雙子音規則與字尾變化，sauc- 源自 sal-（鹽），l 轉音為 u，配合舌音互換與字尾演變"
+        },
+        {
+          "type": "suffix",
+          "text": "er",
+          "meaning": "用具、…的人或物",
+          "grimmNote": "名詞字尾，表示用來裝盛或與該事物相關的器具（盛醬汁的碟子）"
+        }
+      ],
+      "summary": "saucer 由表示「鹽、調味汁」的字根 sauc（源自 salt，l 轉 u）加上表器具的字尾 -er 組成，原本指「盛醬汁的小碟子」，後來演變為指茶杯底下的「茶碟、茶托」。",
+      "savedAt": "2026-09-11T01:32:53.978Z"
     }
   ],
   "userRoots": []
