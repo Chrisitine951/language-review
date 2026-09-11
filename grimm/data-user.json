@@ -6312,6 +6312,32 @@
       ],
       "summary": "co-（共同）加上 ordin（順序）與動詞字尾 -ate，意思就是「使具有共同的順序」，也就是「協調、統籌」。",
       "savedAt": "2026-09-11T01:36:46.828Z"
+    },
+    {
+      "id": "ulkmtwafsg97",
+      "word": "evacuate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "e-",
+          "meaning": "向外、出去",
+          "grimmNote": "常用字首 e-（源自 ex-），表示向外。"
+        },
+        {
+          "type": "root",
+          "text": "vac",
+          "meaning": "空的",
+          "grimmNote": "源自拉丁字根 vac（空的），與 vacant、vacuum 同源。"
+        },
+        {
+          "type": "suffix",
+          "text": "-uate",
+          "meaning": "動詞字尾，使…",
+          "grimmNote": "複合字尾，由名詞/形容詞字尾 -u-（母音通轉）加上動詞字尾 -ate 組成，表示「使成為某種狀態」。"
+        }
+      ],
+      "summary": "「e-（向外）」加上「vac（空的）」，字面意思是「把人或物從裡面弄出去、變成空的」，因此引申為「撤離、疏散」。",
+      "savedAt": "2026-09-11T01:39:08.361Z"
     }
   ],
   "userRoots": []
