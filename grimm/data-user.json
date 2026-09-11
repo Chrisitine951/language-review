@@ -6430,6 +6430,26 @@
       ],
       "summary": "portrait 由表示向前的字首 por- 與表示描繪的字根 trait 組成，字面意思是「向前描繪出來」的畫面，因此演變為「肖像、畫像」。",
       "savedAt": "2026-09-11T01:45:29.493Z"
+    },
+    {
+      "id": "ulkmtwapv9yc",
+      "word": "buffalo",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "buf",
+          "meaning": "牛、水牛",
+          "grimmNote": "唇音互換 b / p / f / v / w：源自古希臘語 boulos / bos（牛），其中的 f 與古印歐語的 b 互換"
+        },
+        {
+          "type": "suffix",
+          "text": "falo",
+          "meaning": "表名詞字尾（源自拉丁語 -alus/-ulus 的變體）",
+          "grimmNote": "唇音互換 b / p / f / v / w：保留了與字首相關的唇音結構，形成疊字發音以指稱動物"
+        }
+      ],
+      "summary": "buffalo 由表示「牛」的字根與動物名詞字尾組合而成，透過唇音互換演變為指稱水牛或美洲野牛的詞彙。",
+      "savedAt": "2026-09-11T01:46:58.582Z"
     }
   ],
   "userRoots": []
