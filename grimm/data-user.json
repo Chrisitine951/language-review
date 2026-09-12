@@ -6712,6 +6712,26 @@
       ],
       "summary": "「avalanche」由加強語氣字首與表示山谷及向下衝擊的字根組合而成，字面意思就是「從山谷或高處猛烈崩落的雪石流」。",
       "savedAt": "2026-09-12T04:21:28.712Z"
+    },
+    {
+      "id": "ulkmtxvr86f8",
+      "word": "gallery",
+      "parts": [
+        {
+          "type": "root",
+          "text": "gall",
+          "meaning": "長、延伸；通道、走廊",
+          "grimmNote": "源自古印歐語字根，與走廊或延伸的空間有關"
+        },
+        {
+          "type": "suffix",
+          "text": "ery",
+          "meaning": "地方（名詞字尾）",
+          "grimmNote": "常用的地方名詞字尾，組合起來指「長形的走廊或展示空間」"
+        }
+      ],
+      "summary": "gallery 由表示延伸的字根 gall 加上表地方的字尾 ery 組成，原本指長形的通道，後來演變成展示藝術品的地方。",
+      "savedAt": "2026-09-12T04:23:40.071Z"
     }
   ],
   "userRoots": []
