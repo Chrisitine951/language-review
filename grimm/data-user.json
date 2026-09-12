@@ -6614,6 +6614,32 @@
       ],
       "summary": "字首 de-（向下、離開）結合表示迅速發送的字根 spatch，原意為向下、迅速派遣出去，演變為現今的「派遣、急件」。",
       "savedAt": "2026-09-12T04:13:37.492Z"
+    },
+    {
+      "id": "ulkmtxvi1y34",
+      "word": "contemplate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con-",
+          "meaning": "一起、共同",
+          "grimmNote": "常見字首，源自 come，表「一起、共同」"
+        },
+        {
+          "type": "root",
+          "text": "templ",
+          "meaning": "神殿、切分出的聖地",
+          "grimmNote": "源自拉丁字根 templum（源自古印歐語「切分」的概念，與 temple、template 同源）"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "動詞字尾，使…",
+          "grimmNote": "動詞字尾，表動作"
+        }
+      ],
+      "summary": "「con-（共同）」加上「templ（神殿、切分出的聖地）」再結合格局字尾「-ate」，原本是指古代祭司在神殿劃分特定區域來觀察天象、占卜，引申為「在心中共同劃分、仔細思索、沉思」。",
+      "savedAt": "2026-09-12T04:16:32.091Z"
     }
   ],
   "userRoots": []
