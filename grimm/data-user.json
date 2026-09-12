@@ -6732,6 +6732,26 @@
       ],
       "summary": "gallery 由表示延伸的字根 gall 加上表地方的字尾 ery 組成，原本指長形的通道，後來演變成展示藝術品的地方。",
       "savedAt": "2026-09-12T04:23:40.071Z"
+    },
+    {
+      "id": "ulkmtxvrv4y9",
+      "word": "rational",
+      "parts": [
+        {
+          "type": "root",
+          "text": "ration",
+          "meaning": "理性、理由、比例",
+          "grimmNote": "源自拉丁語 rati-（計算、思考），由古老印歐語根轉換而來。"
+        },
+        {
+          "type": "suffix",
+          "text": "al",
+          "meaning": "形容詞字尾，表「關於…的」",
+          "grimmNote": "常見的形容詞字尾 -al，用以將名詞轉化為形容詞。"
+        }
+      ],
+      "summary": "rational 由表示思考與計算的字根 ration 加上形容詞字尾 al 組成，字面意思是「具備理性或計算能力的」。",
+      "savedAt": "2026-09-12T04:24:09.826Z"
     }
   ],
   "userRoots": []
