@@ -6686,6 +6686,32 @@
       ],
       "summary": "ex-（向外）加上 sert（放入、安放），字面意思就是「用力把力量或能力放出來」，演變為發揮、施加（力量、影響等）或努力。",
       "savedAt": "2026-09-12T04:20:52.118Z"
+    },
+    {
+      "id": "ulkmtxvoetk7",
+      "word": "avalanche",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "a",
+          "meaning": "朝向；加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）"
+        },
+        {
+          "type": "root",
+          "text": "val",
+          "meaning": "強健、強大、在下方形成力量",
+          "grimmNote": "唇音互換 b / p / f / v / w：保留 v 的核心音（源自拉丁語 valles/valis 的山谷、向下之意）"
+        },
+        {
+          "type": "suffix",
+          "text": "anche",
+          "meaning": "名詞字尾（表狀態或過程）",
+          "grimmNote": "外來語借入之複合名詞字尾"
+        }
+      ],
+      "summary": "「avalanche」由加強語氣字首與表示山谷及向下衝擊的字根組合而成，字面意思就是「從山谷或高處猛烈崩落的雪石流」。",
+      "savedAt": "2026-09-12T04:21:28.712Z"
     }
   ],
   "userRoots": []
