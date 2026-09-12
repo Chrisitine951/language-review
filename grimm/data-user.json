@@ -6806,6 +6806,32 @@
       ],
       "summary": "patrol 源自表示「父親、保護」的字根演變而來，引申為巡邏、守護的行動。",
       "savedAt": "2026-09-12T13:36:23.995Z"
+    },
+    {
+      "id": "ulkmtyg3utm3",
+      "word": "intervene",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "inter",
+          "meaning": "在...之間",
+          "grimmNote": "常見字首，表示在...之間"
+        },
+        {
+          "type": "root",
+          "text": "ven",
+          "meaning": "來",
+          "grimmNote": "唇音互換 b / p / f / v / w，源自拉丁語venire（來）的詞幹ven-"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "動詞字尾",
+          "grimmNote": "母音通轉 a / e / i / o / u / y，作為字尾不發音"
+        }
+      ],
+      "summary": "inter-（在...之間）加上 ven（來），合起來就是「來到兩者之間」，也就是「干涉、介入」。",
+      "savedAt": "2026-09-12T13:53:21.610Z"
     }
   ],
   "userRoots": []
