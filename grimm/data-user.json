@@ -6786,6 +6786,26 @@
       ],
       "summary": "blast 原意為吹氣或發出強烈聲響，經由氣流爆破的意象演變成指強風、爆炸或猛烈抨擊。",
       "savedAt": "2026-09-12T12:45:08.843Z"
+    },
+    {
+      "id": "ulkmtyfi1mi2",
+      "word": "patrol",
+      "parts": [
+        {
+          "type": "root",
+          "text": "patr",
+          "meaning": "父親、保護、巡視",
+          "grimmNote": "源自古印歐語字根，與 father 的唇音互換 p/f 有關"
+        },
+        {
+          "type": "suffix",
+          "text": "ol",
+          "meaning": "名詞字尾，表狀態或行動",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "patrol 源自表示「父親、保護」的字根演變而來，引申為巡邏、守護的行動。",
+      "savedAt": "2026-09-12T13:36:23.995Z"
     }
   ],
   "userRoots": []
