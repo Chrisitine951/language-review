@@ -6594,6 +6594,26 @@
       ],
       "summary": "tactic 由表示觸碰與安排的字根透過舌音與喉音轉換衍生而來，原意為「妥善安排或接觸的戰術」。",
       "savedAt": "2026-09-12T04:09:10.328Z"
+    },
+    {
+      "id": "ulkmtxveb843",
+      "word": "despatch",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de",
+          "meaning": "向下；離開、分離",
+          "grimmNote": "de- 表向下或離開、分離的常用字首"
+        },
+        {
+          "type": "root",
+          "text": "spatch",
+          "meaning": "急派、迅速發送",
+          "grimmNote": "由 dispatch 變體而來，唇音互換 p 保持不變，母音通轉 e / i 交換"
+        }
+      ],
+      "summary": "字首 de-（向下、離開）結合表示迅速發送的字根 spatch，原意為向下、迅速派遣出去，演變為現今的「派遣、急件」。",
+      "savedAt": "2026-09-12T04:13:37.492Z"
     }
   ],
   "userRoots": []
