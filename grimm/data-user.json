@@ -6752,6 +6752,26 @@
       ],
       "summary": "rational 由表示思考與計算的字根 ration 加上形容詞字尾 al 組成，字面意思是「具備理性或計算能力的」。",
       "savedAt": "2026-09-12T04:24:09.826Z"
+    },
+    {
+      "id": "ulkmtxvxphp1",
+      "word": "dilute",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "di-",
+          "meaning": "向下；離開",
+          "grimmNote": "常見字首，表示向下或分離。"
+        },
+        {
+          "type": "root",
+          "text": "lute",
+          "meaning": "沖洗；弄濕",
+          "grimmNote": "源自古印歐語系，流音互換 l 與 r，與lavare（洗）同源，指用水沖淡。"
+        }
+      ],
+      "summary": "字首 di-（向下、分離）加上表示沖洗的字根 lute，組合起來就是「向下沖洗、沖淡」，演變出現代英文的「稀釋」之意。",
+      "savedAt": "2026-09-12T04:28:42.445Z"
     }
   ],
   "userRoots": []
