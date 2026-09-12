@@ -6666,6 +6666,26 @@
       ],
       "summary": "invoice 由表示「進入」的字首 in- 結合表示「聲音、呼喊」的字根 voic（發出聲音、開出單據）組成，字面意思就是「送入內部的請款呼喊/清單」。",
       "savedAt": "2026-09-12T04:20:06.940Z"
+    },
+    {
+      "id": "ulkmtxvnml26",
+      "word": "exert",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ex-",
+          "meaning": "出去、向外",
+          "grimmNote": "常見字首，表示動作向外或離去"
+        },
+        {
+          "type": "root",
+          "text": "sert",
+          "meaning": "插入、放入；連接",
+          "grimmNote": "字根原意為結合或安放"
+        }
+      ],
+      "summary": "ex-（向外）加上 sert（放入、安放），字面意思就是「用力把力量或能力放出來」，演變為發揮、施加（力量、影響等）或努力。",
+      "savedAt": "2026-09-12T04:20:52.118Z"
     }
   ],
   "userRoots": []
