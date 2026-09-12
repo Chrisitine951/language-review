@@ -6542,6 +6542,32 @@
       ],
       "summary": "de-（離開）加上 stitu（站），原本指「站開、不站在一起」，引申為失去依靠、一無所有、貧困的。",
       "savedAt": "2026-09-11T17:52:34.219Z"
+    },
+    {
+      "id": "ulkmtxv72s91",
+      "word": "tornado",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "tor",
+          "meaning": "轉、旋轉",
+          "grimmNote": "源自印歐語根轉音，表旋轉動作"
+        },
+        {
+          "type": "suffix",
+          "text": "nad",
+          "meaning": "…的人或物（名詞字尾）",
+          "grimmNote": "舌音互換 d 與 t，衍生自西班牙文動詞字尾 -ar 的名詞化"
+        },
+        {
+          "type": "suffix",
+          "text": "o",
+          "meaning": "名詞字尾",
+          "grimmNote": "母音通轉"
+        }
+      ],
+      "summary": "tornado 由表示「旋轉」的字根與名詞字尾組成，字面意思就是「旋轉、打轉的東西」，用來指會旋轉的暴風——龍捲風。",
+      "savedAt": "2026-09-12T04:07:59.961Z"
     }
   ],
   "userRoots": []
