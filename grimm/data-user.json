@@ -6568,6 +6568,32 @@
       ],
       "summary": "tornado 由表示「旋轉」的字根與名詞字尾組成，字面意思就是「旋轉、打轉的東西」，用來指會旋轉的暴風——龍捲風。",
       "savedAt": "2026-09-12T04:07:59.961Z"
+    },
+    {
+      "id": "ulkmtxv8l2w2",
+      "word": "tactic",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ta",
+          "meaning": "朝向、加強語氣",
+          "grimmNote": "結構規則：雙子音規則與字首變體，此處對應舌音 t"
+        },
+        {
+          "type": "root",
+          "text": "ct",
+          "meaning": "接觸、觸碰、安排",
+          "grimmNote": "舌音互換 d / t / s 與喉音互換 g / k / c 的組合，源自原始印歐語字根 *tag-（觸碰、安排）"
+        },
+        {
+          "type": "suffix",
+          "text": "ic",
+          "meaning": "形容詞字尾，…的",
+          "grimmNote": "常見形容詞字尾，表示性質或相關"
+        }
+      ],
+      "summary": "tactic 由表示觸碰與安排的字根透過舌音與喉音轉換衍生而來，原意為「妥善安排或接觸的戰術」。",
+      "savedAt": "2026-09-12T04:09:10.328Z"
     }
   ],
   "userRoots": []
