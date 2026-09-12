@@ -6640,6 +6640,32 @@
       ],
       "summary": "「con-（共同）」加上「templ（神殿、切分出的聖地）」再結合格局字尾「-ate」，原本是指古代祭司在神殿劃分特定區域來觀察天象、占卜，引申為「在心中共同劃分、仔細思索、沉思」。",
       "savedAt": "2026-09-12T04:16:32.091Z"
+    },
+    {
+      "id": "ulkmtxvmnq45",
+      "word": "invoice",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字首 in-（在內、進入）"
+        },
+        {
+          "type": "root",
+          "text": "voic",
+          "meaning": "聲音、呼喊、發聲",
+          "grimmNote": "核心字根 voic，源自拉丁文 voc-（聲音）。其中 v 與其他唇音互換無直接變動，但字尾母音遵循「母音通轉 a / e / i / o / u / y」由 e 轉為 i"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "名詞或動詞字尾",
+          "grimmNote": "字尾 e 輔助發音與詞性變化"
+        }
+      ],
+      "summary": "invoice 由表示「進入」的字首 in- 結合表示「聲音、呼喊」的字根 voic（發出聲音、開出單據）組成，字面意思就是「送入內部的請款呼喊/清單」。",
+      "savedAt": "2026-09-12T04:20:06.940Z"
     }
   ],
   "userRoots": []
