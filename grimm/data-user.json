@@ -6910,6 +6910,38 @@
       ],
       "summary": "字首 sim-（共同）加上語根 ul（相像）與動詞字尾 -ate，組合起來就是「使變得相似、模仿」，也就是模擬的意思。",
       "savedAt": "2026-09-13T03:32:05.330Z"
+    },
+    {
+      "id": "ulkmtzrrf981",
+      "word": "anecdote",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "an-",
+          "meaning": "不、無、非（否定字首）",
+          "grimmNote": "un- / an- 否定字首，鼻音互換或母音通轉"
+        },
+        {
+          "type": "root",
+          "text": "ec-",
+          "meaning": "出去、向外（源自 ex-）",
+          "grimmNote": "ex- 轉出，x 簡化為 c"
+        },
+        {
+          "type": "root",
+          "text": "dot",
+          "meaning": "給予、給出（源自動詞 give / dose）",
+          "grimmNote": "唇音互換與舌音互換：d-t 舌音互換，指給出去的東西"
+        },
+        {
+          "type": "suffix",
+          "text": "-e",
+          "meaning": "名詞字尾",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "anecdote 由否定字首 an- 加上 ex-（變體 ec-）與代表「給予」的 dot 組成，本義指「未曾出版、私下給予外人知道的小故事」。",
+      "savedAt": "2026-09-13T12:07:23.132Z"
     }
   ],
   "userRoots": []
