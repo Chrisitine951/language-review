@@ -7238,6 +7238,26 @@
       ],
       "summary": "dis-（分離、打開）加上 close（關閉），字面意思就是「把關閉的東西打開」，也就是「揭露、公開」。",
       "savedAt": "2026-09-13T18:02:12.816Z"
+    },
+    {
+      "id": "ulkmu04gycj4",
+      "word": "amuse",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "a",
+          "meaning": "使、令其如何（源自en-的變體或加強語氣）",
+          "grimmNote": "字首變體"
+        },
+        {
+          "type": "root",
+          "text": "muse",
+          "meaning": "沉思、悶悶不樂、打發時間",
+          "grimmNote": "母音通轉 e/u 相關變化"
+        }
+      ],
+      "summary": "a-（令其如何）加上 muse（沉思、發呆），原意為「讓人陷入沉思」，後來演變為「逗樂、娛樂」。",
+      "savedAt": "2026-09-13T18:03:09.667Z"
     }
   ],
   "userRoots": []
