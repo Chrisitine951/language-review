@@ -6942,6 +6942,32 @@
       ],
       "summary": "anecdote 由否定字首 an- 加上 ex-（變體 ec-）與代表「給予」的 dot 組成，本義指「未曾出版、私下給予外人知道的小故事」。",
       "savedAt": "2026-09-13T12:07:23.132Z"
+    },
+    {
+      "id": "ulkmtzrskoq2",
+      "word": "vulnerable",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "vul",
+          "meaning": "受傷、打擊",
+          "grimmNote": "源自古印歐語 root *wel-（傷害），其中的唇音 l/r 流音與古拉丁文 vulnus（傷口）相通。"
+        },
+        {
+          "type": "suffix",
+          "text": "ner",
+          "meaning": "動詞/名詞延伸中介詞尾",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "able",
+          "meaning": "可以被…的（帶被動意味）",
+          "grimmNote": "常用形容詞字尾，表示具有某種能力或性質"
+        }
+      ],
+      "summary": "vulnerable（脆弱的）由表示「受傷」的字根加上表被動的字尾組成，字面意思是「容易受到傷害的」。",
+      "savedAt": "2026-09-13T12:08:16.826Z"
     }
   ],
   "userRoots": []
