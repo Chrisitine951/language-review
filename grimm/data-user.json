@@ -7080,6 +7080,32 @@
       ],
       "summary": "textile 由表示「編織」的字根 text 加上形容詞字尾 -ile 組成，字面意思是「可以被編織的」，後來演變成「紡織品、織物」。",
       "savedAt": "2026-09-13T13:48:27.596Z"
+    },
+    {
+      "id": "ulkmtzvn9p86",
+      "word": "authority",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "au",
+          "meaning": "加強語氣（源自 ad-）",
+          "grimmNote": "a＋重複子音的變體，d 音脫落留下 a，純粹加強語氣"
+        },
+        {
+          "type": "root",
+          "text": "thor",
+          "meaning": "成長、使之生長（源自古印歐語 *aug-）",
+          "grimmNote": "喉音互換 g 轉成 h（aug 變 auh 再轉 thor），流音 r 為字根結構的一部分"
+        },
+        {
+          "type": "suffix",
+          "text": "ity",
+          "meaning": "名詞字尾，表性質或狀態",
+          "grimmNote": "常見名詞字尾，無轉音"
+        }
+      ],
+      "summary": "authority 由表示加強的字首與代表「生長、使之成形」的字根組成，字面原意為「使事物成長或賦予創生力量的人或權威」。",
+      "savedAt": "2026-09-13T13:56:07.772Z"
     }
   ],
   "userRoots": []
