@@ -6832,6 +6832,32 @@
       ],
       "summary": "inter-（在...之間）加上 ven（來），合起來就是「來到兩者之間」，也就是「干涉、介入」。",
       "savedAt": "2026-09-12T13:53:21.610Z"
+    },
+    {
+      "id": "ulkmtz99qr21",
+      "word": "plagiarize",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pl",
+          "meaning": "捕捉、拿取（源自撲、取之意）",
+          "grimmNote": "唇音互換 b / p / f / v / w 與流音 l / r 的結合，捕捉之意"
+        },
+        {
+          "type": "root",
+          "text": "agi",
+          "meaning": "驅使、行動、狩獵",
+          "grimmNote": "喉音互換 g / k / c，原意為驅趕或獵取"
+        },
+        {
+          "type": "suffix",
+          "text": "arize",
+          "meaning": "動詞字尾，使成為…",
+          "grimmNote": "複合字尾，表示執行某種動作"
+        }
+      ],
+      "summary": "plagiarize 由捕捉（pl）與驅使行動（agi）結合，原意指「捕獲、拐走他人的人口或獵物」，演變至今成為「偷取他人文字或想法」的剽竊、抄襲之意。",
+      "savedAt": "2026-09-13T03:29:45.134Z"
     }
   ],
   "userRoots": []
