@@ -7258,6 +7258,26 @@
       ],
       "summary": "a-（令其如何）加上 muse（沉思、發呆），原意為「讓人陷入沉思」，後來演變為「逗樂、娛樂」。",
       "savedAt": "2026-09-13T18:03:09.667Z"
+    },
+    {
+      "id": "ulkmu04j7eh5",
+      "word": "enterprise",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "enter",
+          "meaning": "進入、在內",
+          "grimmNote": "由源自 in- 的字首轉化而來，配合母音通轉 e / i"
+        },
+        {
+          "type": "root",
+          "text": "prise",
+          "meaning": "抓取、動手做",
+          "grimmNote": "源自古印歐語字根，pr- 配合唇音互換與母音通轉"
+        }
+      ],
+      "summary": "「enter（進入）」加上「prise（抓取）」，字面意思是「帶頭衝進去抓機會」，演變成今日的企業與艱鉅任務（enterprise）。",
+      "savedAt": "2026-09-13T18:04:54.713Z"
     }
   ],
   "userRoots": []
