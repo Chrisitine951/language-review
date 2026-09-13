@@ -7014,6 +7014,32 @@
       ],
       "summary": "ex-（向外）加上代表凹陷的字根 cav（如 cave 洞穴），再加上動詞字尾 -ate，組合起來就是「向外挖出一個洞」，即為「挖掘」。",
       "savedAt": "2026-09-13T13:27:48.613Z"
+    },
+    {
+      "id": "ulkmtzv92913",
+      "word": "render",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常用字首 re-（再次、重複、回來）"
+        },
+        {
+          "type": "root",
+          "text": "nd",
+          "meaning": "給予、交出",
+          "grimmNote": "舌音互換 d 與鼻音 n 的組合，古印歐語字根源頭與 give（給）相關"
+        },
+        {
+          "type": "suffix",
+          "text": "-er",
+          "meaning": "表動作或使之...的動詞字尾",
+          "grimmNote": "常用動詞/名詞字尾 -er"
+        }
+      ],
+      "summary": "re-（回來）加上表示給予的字根與動詞字尾 -er，組合起來就是「把東西交回來、給予、呈現」，演變為現今的 render（使得、交出、呈現）。",
+      "savedAt": "2026-09-13T13:45:04.934Z"
     }
   ],
   "userRoots": []
