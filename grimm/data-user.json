@@ -7040,6 +7040,26 @@
       ],
       "summary": "re-（回來）加上表示給予的字根與動詞字尾 -er，組合起來就是「把東西交回來、給予、呈現」，演變為現今的 render（使得、交出、呈現）。",
       "savedAt": "2026-09-13T13:45:04.934Z"
+    },
+    {
+      "id": "ulkmtzvbv5f4",
+      "word": "trumpet",
+      "parts": [
+        {
+          "type": "root",
+          "text": "trum",
+          "meaning": "管、喇叭",
+          "grimmNote": "對應古代表示管狀物的語音，唇音互換 b/p 的變化（如 tube 的相關衍生）"
+        },
+        {
+          "type": "suffix",
+          "text": "pet",
+          "meaning": "小（指小尾綴 -et 的變體，此處結合發音）",
+          "grimmNote": "舌音互換 d/t/s，字尾 -et 表示「小」，合起來即為「小號、喇叭」"
+        }
+      ],
+      "summary": "trumpet 由表示管狀的字根與表示小的字尾組合而成，意指「小號」。",
+      "savedAt": "2026-09-13T13:47:15.699Z"
     }
   ],
   "userRoots": []
