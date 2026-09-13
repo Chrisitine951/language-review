@@ -6858,6 +6858,32 @@
       ],
       "summary": "plagiarize 由捕捉（pl）與驅使行動（agi）結合，原意指「捕獲、拐走他人的人口或獵物」，演變至今成為「偷取他人文字或想法」的剽竊、抄襲之意。",
       "savedAt": "2026-09-13T03:29:45.134Z"
+    },
+    {
+      "id": "ulkmtz9aglh2",
+      "word": "plagiarize",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pl",
+          "meaning": "捕捉、獵取",
+          "grimmNote": "唇音互換 p 相關字根演變"
+        },
+        {
+          "type": "root",
+          "text": "agiar",
+          "meaning": "獵物、網子",
+          "grimmNote": "喉音互換與母音通轉的衍生變化"
+        },
+        {
+          "type": "suffix",
+          "text": "ize",
+          "meaning": "動詞字尾，使成為",
+          "grimmNote": "常見動詞字尾，表動作化"
+        }
+      ],
+      "summary": "plagiarize 從「捕捉獵物」的字根演變而來，引申為「捕獲別人的心血/著作」，再加上動詞字尾構成「剽竊、抄襲」。",
+      "savedAt": "2026-09-13T03:30:18.629Z"
     }
   ],
   "userRoots": []
