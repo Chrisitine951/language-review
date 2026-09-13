@@ -6884,6 +6884,32 @@
       ],
       "summary": "plagiarize 從「捕捉獵物」的字根演變而來，引申為「捕獲別人的心血/著作」，再加上動詞字尾構成「剽竊、抄襲」。",
       "savedAt": "2026-09-13T03:30:18.629Z"
+    },
+    {
+      "id": "ulkmtz9cqxe3",
+      "word": "simulate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "sim",
+          "meaning": "同、相似",
+          "grimmNote": "由 com- / con-（一起、共同）經鼻音互換 n→m，再與後方輔音同化形成 sim-"
+        },
+        {
+          "type": "root",
+          "text": "ul",
+          "meaning": "相像、模仿",
+          "grimmNote": "核心語根，與 similar（相似的）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾，使成為…",
+          "grimmNote": "-ate＝動詞或形容詞字尾"
+        }
+      ],
+      "summary": "字首 sim-（共同）加上語根 ul（相像）與動詞字尾 -ate，組合起來就是「使變得相似、模仿」，也就是模擬的意思。",
+      "savedAt": "2026-09-13T03:32:05.330Z"
     }
   ],
   "userRoots": []
