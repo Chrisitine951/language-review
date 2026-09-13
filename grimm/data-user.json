@@ -7106,6 +7106,32 @@
       ],
       "summary": "authority 由表示加強的字首與代表「生長、使之成形」的字根組成，字面原意為「使事物成長或賦予創生力量的人或權威」。",
       "savedAt": "2026-09-13T13:56:07.772Z"
+    },
+    {
+      "id": "ulkmtzw6keo1",
+      "word": "baptise",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ba",
+          "meaning": "向上、進入",
+          "grimmNote": "唇音互換 b / p / f / v / w，源自向上或深入的動作"
+        },
+        {
+          "type": "root",
+          "text": "pt",
+          "meaning": "浸、洗、淹沒",
+          "grimmNote": "唇音互換 p / b，與 dip（浸泡）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "ise",
+          "meaning": "動詞字尾，使成為…",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "「baptise」由表深入的字首、表浸泡的字根與動詞字尾組成，字面意思就是「使浸入水中」也就是施洗。",
+      "savedAt": "2026-09-13T14:11:08.112Z"
     }
   ],
   "userRoots": []
