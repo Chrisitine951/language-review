@@ -6988,6 +6988,32 @@
       ],
       "summary": "sanitary 由表示「健康」的字根 san 加上形容詞與地方字尾 -ary 組成，原意指「維護健康的、衛生的」。",
       "savedAt": "2026-09-13T13:27:17.099Z"
+    },
+    {
+      "id": "ulkmtzumumd2",
+      "word": "excavate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ex",
+          "meaning": "向外、出去",
+          "grimmNote": "常用字首 ex-（出去、向外）"
+        },
+        {
+          "type": "root",
+          "text": "cav",
+          "meaning": "洞、凹陷",
+          "grimmNote": "對應 cave（洞穴），喉音互換 g/k/c 的延伸"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾（使成為…）",
+          "grimmNote": "常用動詞字尾 -ate"
+        }
+      ],
+      "summary": "ex-（向外）加上代表凹陷的字根 cav（如 cave 洞穴），再加上動詞字尾 -ate，組合起來就是「向外挖出一個洞」，即為「挖掘」。",
+      "savedAt": "2026-09-13T13:27:48.613Z"
     }
   ],
   "userRoots": []
