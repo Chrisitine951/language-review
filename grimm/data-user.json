@@ -7218,6 +7218,26 @@
       ],
       "summary": "alter 由表示「別的」的字根 al 結合表變化的字尾 ter 組成，核心意義就是「使變成別的、改變」。",
       "savedAt": "2026-09-13T17:59:21.738Z"
+    },
+    {
+      "id": "ulkmu04fqhc3",
+      "word": "disclose",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "dis-",
+          "meaning": "分離、離開、否定",
+          "grimmNote": "常見字首，表示與原本的狀態分離或相反"
+        },
+        {
+          "type": "root",
+          "text": "close",
+          "meaning": "關閉、封閉",
+          "grimmNote": "源自古印歐語系，藉由舌音互換與喉音變化演變而來"
+        }
+      ],
+      "summary": "dis-（分離、打開）加上 close（關閉），字面意思就是「把關閉的東西打開」，也就是「揭露、公開」。",
+      "savedAt": "2026-09-13T18:02:12.816Z"
     }
   ],
   "userRoots": []
