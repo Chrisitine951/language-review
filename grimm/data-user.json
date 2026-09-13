@@ -7198,6 +7198,26 @@
       ],
       "summary": "demolish 由表向下的字首 de- 結合意為粉碎的字根 mol，再加上動詞字尾 -ish 組成，字面意思是「向下粉碎」，引申為「拆毀、破壞」。",
       "savedAt": "2026-09-13T17:57:15.180Z"
+    },
+    {
+      "id": "ulkmu04c2h62",
+      "word": "alter",
+      "parts": [
+        {
+          "type": "root",
+          "text": "al",
+          "meaning": "其他、別的",
+          "grimmNote": "源自拉丁語 alius（other，別的、不同的）"
+        },
+        {
+          "type": "suffix",
+          "text": "ter",
+          "meaning": "表比較或形容詞字尾，引申為「使……變成別的、更改」",
+          "grimmNote": "舌音互換 d / t / s：這裡的 ter 與另一組代表「二、別的」的字根（如 duo / two / other 中的 ther）互通，表二選一或轉變"
+        }
+      ],
+      "summary": "alter 由表示「別的」的字根 al 結合表變化的字尾 ter 組成，核心意義就是「使變成別的、改變」。",
+      "savedAt": "2026-09-13T17:59:21.738Z"
     }
   ],
   "userRoots": []
