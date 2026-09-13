@@ -7172,6 +7172,32 @@
       ],
       "summary": "stumble 由表示「踏、踩」的字根 stum 加上表示反覆動作的字尾 ble 組成，意思是「反覆踩到東西而絆倒、踉蹌」。",
       "savedAt": "2026-09-13T14:31:18.595Z"
+    },
+    {
+      "id": "ulkmu049cto1",
+      "word": "demolish",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下；離開、否定",
+          "grimmNote": "常見字首，表示向下或向下拉開"
+        },
+        {
+          "type": "root",
+          "text": "mol",
+          "meaning": "磨損、粉碎",
+          "grimmNote": "源自古印歐語根，與 mill（磨坊）同源，喉音與唇音轉變"
+        },
+        {
+          "type": "suffix",
+          "text": "-ish",
+          "meaning": "動詞或形容詞字尾，表動作化",
+          "grimmNote": "常見動詞字尾，構成使動用法"
+        }
+      ],
+      "summary": "demolish 由表向下的字首 de- 結合意為粉碎的字根 mol，再加上動詞字尾 -ish 組成，字面意思是「向下粉碎」，引申為「拆毀、破壞」。",
+      "savedAt": "2026-09-13T17:57:15.180Z"
     }
   ],
   "userRoots": []
