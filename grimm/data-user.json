@@ -7132,6 +7132,26 @@
       ],
       "summary": "「baptise」由表深入的字首、表浸泡的字根與動詞字尾組成，字面意思就是「使浸入水中」也就是施洗。",
       "savedAt": "2026-09-13T14:11:08.112Z"
+    },
+    {
+      "id": "ulkmtzwun4q6",
+      "word": "stumble",
+      "parts": [
+        {
+          "type": "root",
+          "text": "stum",
+          "meaning": "絆倒、踢",
+          "grimmNote": "原始字根，與 stamp（踏、踩）同源，透過母音通轉與唇音互換演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "ble",
+          "meaning": "反覆動作、小",
+          "grimmNote": "常見字尾，表示動作的重複或持續（這裡指反覆地絆倒、踉蹌）"
+        }
+      ],
+      "summary": "stumble 由表示「踏、踩」的字根 stum 加上表示反覆動作的字尾 ble 組成，意思是「反覆踩到東西而絆倒、踉蹌」。",
+      "savedAt": "2026-09-13T14:29:51.386Z"
     }
   ],
   "userRoots": []
