@@ -6968,6 +6968,26 @@
       ],
       "summary": "vulnerable（脆弱的）由表示「受傷」的字根加上表被動的字尾組成，字面意思是「容易受到傷害的」。",
       "savedAt": "2026-09-13T12:08:16.826Z"
+    },
+    {
+      "id": "ulkmtzum6az1",
+      "word": "sanitary",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "san",
+          "meaning": "健康、健全",
+          "grimmNote": "源自古印歐語帶有「健康」之意的字根，與 sound（健全）同源，透過舌音互換與母音通轉演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "itary",
+          "meaning": "地方；構成形容詞的字尾（-ary＝地方、性質）",
+          "grimmNote": "-ary 作為名詞或形容詞字尾，表示與該字根相關的性質或場所，在此組合成「與衛生、健康有關的」"
+        }
+      ],
+      "summary": "sanitary 由表示「健康」的字根 san 加上形容詞與地方字尾 -ary 組成，原意指「維護健康的、衛生的」。",
+      "savedAt": "2026-09-13T13:27:17.099Z"
     }
   ],
   "userRoots": []
