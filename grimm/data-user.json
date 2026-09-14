@@ -7364,6 +7364,32 @@
       ],
       "summary": "liquor 源自拉丁語，原本就是指「液體、水流」，後來專指酒精飲料「酒」。",
       "savedAt": "2026-09-14T11:17:07.691Z"
+    },
+    {
+      "id": "ulkmu15fzv85",
+      "word": "faculty",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "fac",
+          "meaning": "做、建造（源自 facere，字根 fac- 來自古印歐語的 *dhe- 或 *fac-，其中 f 經由唇音互換 b/p/f/v 對應到其他語言的 b/p 等，此處直接保留為基礎動作詞根）",
+          "grimmNote": "唇音互換 b / p / f / v / w：此處保留為動詞字根 fac-（做、製造）"
+        },
+        {
+          "type": "suffix",
+          "text": "ul",
+          "meaning": "小（名詞或形容詞衍生字尾，等同於 -let / -el）",
+          "grimmNote": "-et / -let / -el＝小：表示微小的工具或部分"
+        },
+        {
+          "type": "suffix",
+          "text": "ty",
+          "meaning": "名詞字尾，表性質或狀態（等同於 -ity）",
+          "grimmNote": "-ity / -age＝名詞字尾：構成抽象名詞"
+        }
+      ],
+      "summary": "faculty 由表示「做、製造」的字根 fac- 加上表「小」的字尾 -ul 以及名詞字尾 -ty 組合而成，原本指「做事的能力或才能」，後來演變為大學中的「科系、教職員（具有某種專業能力的人）」的意思。",
+      "savedAt": "2026-09-14T11:18:10.772Z"
     }
   ],
   "userRoots": []
