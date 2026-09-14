@@ -7444,6 +7444,32 @@
       ],
       "summary": "字首 de- 表示向下、完全，結合表示吞吃的字根 vour，字面意思就是「向下徹底吞吃」，也就是狼吞虎咽、吞沒的意思。",
       "savedAt": "2026-09-14T15:23:06.444Z"
+    },
+    {
+      "id": "ulkmu1ehstv2",
+      "word": "senate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "se",
+          "meaning": "分離、離開",
+          "grimmNote": "常見字首 se-（分離、離開），與 secede 等字同源"
+        },
+        {
+          "type": "root",
+          "text": "nat",
+          "meaning": "老人、年長",
+          "grimmNote": "源自拉丁文 sen-（老），透過「母音通轉 e / a」，e 轉成 a 形成字根 nat"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "名詞或動詞字尾",
+          "grimmNote": "字尾，無實質意義"
+        }
+      ],
+      "summary": "senate 由表示「分離、離開」的字首 se- 結合代表「老、年長」的字根 sen（經母音通轉變為 nat）組成，原本指「由長老組成、從平民中分離出來的議事會」。",
+      "savedAt": "2026-09-14T15:31:31.507Z"
     }
   ],
   "userRoots": []
