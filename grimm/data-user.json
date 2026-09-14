@@ -7350,6 +7350,20 @@
       ],
       "summary": "counsellor 由「共同（con-）」加上「召集商議（sel）」與表人的字尾「-or」組成，字面意思就是「大家聚在一起共同商議的人」，也就是「顧問、輔導員」。",
       "savedAt": "2026-09-14T11:15:55.418Z"
+    },
+    {
+      "id": "ulkmu15en6z4",
+      "word": "liquor",
+      "parts": [
+        {
+          "type": "root",
+          "text": "liquor",
+          "meaning": "酒、液體",
+          "grimmNote": "源自拉丁語 liquor（意為液體、水流），字根直接對應流動的概念"
+        }
+      ],
+      "summary": "liquor 源自拉丁語，原本就是指「液體、水流」，後來專指酒精飲料「酒」。",
+      "savedAt": "2026-09-14T11:17:07.691Z"
     }
   ],
   "userRoots": []
