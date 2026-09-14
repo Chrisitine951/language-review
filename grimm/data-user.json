@@ -7278,6 +7278,32 @@
       ],
       "summary": "「enter（進入）」加上「prise（抓取）」，字面意思是「帶頭衝進去抓機會」，演變成今日的企業與艱鉅任務（enterprise）。",
       "savedAt": "2026-09-13T18:04:54.713Z"
+    },
+    {
+      "id": "ulkmu13k6r81",
+      "word": "arithmetic",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ar",
+          "meaning": "朝向（ad- 的變體，接同化子音）",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）與同化作用"
+        },
+        {
+          "type": "root",
+          "text": "ithm",
+          "meaning": "計算、數數",
+          "grimmNote": "源自古希臘語 arithmos（數字），其中 th 來自舌音互換與送氣化"
+        },
+        {
+          "type": "suffix",
+          "text": "etic",
+          "meaning": "…的（形容詞字尾）",
+          "grimmNote": "組合字尾 -et（小）加上形容詞字尾 -ic"
+        }
+      ],
+      "summary": "arithmetic（算術）由表示朝向的字首加上代表計算數數的字根，再透過複合字尾組成，字面上的意思就是「與計算數數相關的學問」。",
+      "savedAt": "2026-09-14T10:25:27.092Z"
     }
   ],
   "userRoots": []
