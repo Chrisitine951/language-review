@@ -7490,6 +7490,20 @@
       ],
       "summary": "charcoal 由表「燒焦」的 char 與表「煤炭」的 coal 組合而成，字面意思就是「燒焦的木頭」，即木炭。",
       "savedAt": "2026-09-14T16:36:24.419Z"
+    },
+    {
+      "id": "ulkmu1gu1ut4",
+      "word": "oath",
+      "parts": [
+        {
+          "type": "root",
+          "text": "oath",
+          "meaning": "誓言、誓約",
+          "grimmNote": "原始印歐語字根代表說話、宣誓，字尾的 th 為舌音互換與名詞字尾的演變"
+        }
+      ],
+      "summary": "oath 是直接源自日耳曼語族的古老單字，原本就代表發誓與莊嚴的誓言。",
+      "savedAt": "2026-09-14T16:37:02.309Z"
     }
   ],
   "userRoots": []
