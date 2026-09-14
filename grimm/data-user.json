@@ -7470,6 +7470,26 @@
       ],
       "summary": "senate 由表示「分離、離開」的字首 se- 結合代表「老、年長」的字根 sen（經母音通轉變為 nat）組成，原本指「由長老組成、從平民中分離出來的議事會」。",
       "savedAt": "2026-09-14T15:31:31.507Z"
+    },
+    {
+      "id": "ulkmu1gt8mb3",
+      "word": "charcoal",
+      "parts": [
+        {
+          "type": "root",
+          "text": "char",
+          "meaning": "燃燒、燒焦",
+          "grimmNote": "對應喉音互換 c ↔ h 與母音通轉，與古英文燒焦或碳的語源相關"
+        },
+        {
+          "type": "root",
+          "text": "coal",
+          "meaning": "木炭、煤炭",
+          "grimmNote": "對應喉音 c 與母音通轉的古老碳字根"
+        }
+      ],
+      "summary": "charcoal 由表「燒焦」的 char 與表「煤炭」的 coal 組合而成，字面意思就是「燒焦的木頭」，即木炭。",
+      "savedAt": "2026-09-14T16:36:24.419Z"
     }
   ],
   "userRoots": []
