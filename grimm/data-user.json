@@ -7424,6 +7424,26 @@
       ],
       "summary": "burgeon 由表示凸起發芽的字根與字尾組成，原本意思是植物發芽、萌芽，後來引申為迅速成長、發展。",
       "savedAt": "2026-09-14T11:23:41.625Z"
+    },
+    {
+      "id": "ulkmu1e6z4c1",
+      "word": "devour",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下、完全",
+          "grimmNote": "常見字首，表示向下或徹底完成動作。"
+        },
+        {
+          "type": "root",
+          "text": "vour",
+          "meaning": "吞吃、吃",
+          "grimmNote": "源自拉丁語 vorare（吞吃），其中的唇音 v 對應到發音部位相近的子音轉換。"
+        }
+      ],
+      "summary": "字首 de- 表示向下、完全，結合表示吞吃的字根 vour，字面意思就是「向下徹底吞吃」，也就是狼吞虎咽、吞沒的意思。",
+      "savedAt": "2026-09-14T15:23:06.444Z"
     }
   ],
   "userRoots": []
