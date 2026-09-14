@@ -7304,6 +7304,26 @@
       ],
       "summary": "arithmetic（算術）由表示朝向的字首加上代表計算數數的字根，再透過複合字尾組成，字面上的意思就是「與計算數數相關的學問」。",
       "savedAt": "2026-09-14T10:25:27.092Z"
+    },
+    {
+      "id": "ulkmu14y86z2",
+      "word": "frighten",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "fright",
+          "meaning": "驚恐、害怕",
+          "grimmNote": "源自古英文形容詞，對應唇音互換與舌音互換"
+        },
+        {
+          "type": "suffix",
+          "text": "en",
+          "meaning": "動作化、令其如何",
+          "grimmNote": "常見動詞字尾，表使成為..."
+        }
+      ],
+      "summary": "「frighten」由表示「驚恐」的字根加上動詞字尾「en」組成，意為使人驚恐或害怕。",
+      "savedAt": "2026-09-14T11:04:21.755Z"
     }
   ],
   "userRoots": []
