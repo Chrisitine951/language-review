@@ -7324,6 +7324,32 @@
       ],
       "summary": "「frighten」由表示「驚恐」的字根加上動詞字尾「en」組成，意為使人驚恐或害怕。",
       "savedAt": "2026-09-14T11:04:21.755Z"
+    },
+    {
+      "id": "ulkmu15d3fc3",
+      "word": "counsellor",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "coun",
+          "meaning": "共同、一起",
+          "grimmNote": "源自 com- / con-（一起、共同），因音韻變化轉為 coun-"
+        },
+        {
+          "type": "root",
+          "text": "sel",
+          "meaning": "召集、商議、建議",
+          "grimmNote": "源自拉丁字根 sal-/sel-（呼喊、召集），與口語的 call 同源（喉音 g / k / c 互換及母音通轉）"
+        },
+        {
+          "type": "suffix",
+          "text": "lor",
+          "meaning": "人（源自 -er，轉音成為 -or）",
+          "grimmNote": "流音 r 與表人的 -er 結合，指進行該動作的人"
+        }
+      ],
+      "summary": "counsellor 由「共同（con-）」加上「召集商議（sel）」與表人的字尾「-or」組成，字面意思就是「大家聚在一起共同商議的人」，也就是「顧問、輔導員」。",
+      "savedAt": "2026-09-14T11:15:55.418Z"
     }
   ],
   "userRoots": []
