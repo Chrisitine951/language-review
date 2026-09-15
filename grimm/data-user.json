@@ -7690,6 +7690,32 @@
       ],
       "summary": "curriculum 由表示「跑」的字根 cur 加上指小與地方字尾組成，原本意思是「小跑道」，後來引申為人生或學習的「課程、學程」。",
       "savedAt": "2026-09-15T10:49:33.002Z"
+    },
+    {
+      "id": "ulkmu2tqa3x2",
+      "word": "ignorant",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ig-",
+          "meaning": "不、無、否定",
+          "grimmNote": "源自否定字首 in- 的變體，因為接在後方字根前而同化為 ig-"
+        },
+        {
+          "type": "root",
+          "text": "nor",
+          "meaning": "知道、認識",
+          "grimmNote": "喉音互換 g/k/c，與 know、can 同源，核心意義為「知道」"
+        },
+        {
+          "type": "suffix",
+          "text": "-ant",
+          "meaning": "…的（形容詞字尾）",
+          "grimmNote": "表示狀態或性質的形容詞字尾"
+        }
+      ],
+      "summary": "ignorant 由否定字首 ig- 加上表示「知道」的字根 nor 與形容詞字尾 -ant 組成，字面意思就是「不知道的、無知的」。",
+      "savedAt": "2026-09-15T15:25:47.565Z"
     }
   ],
   "userRoots": []
