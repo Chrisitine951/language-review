@@ -7524,6 +7524,26 @@
       ],
       "summary": "en-（動作化）加上 roll（捲），原本指將名字捲入或寫入官方名冊中，演變為現在的「登記、註冊、加入」。",
       "savedAt": "2026-09-15T03:54:52.420Z"
+    },
+    {
+      "id": "ulkmu25bu5j2",
+      "word": "linger",
+      "parts": [
+        {
+          "type": "root",
+          "text": "ling",
+          "meaning": "長久、持續",
+          "grimmNote": "來自古代表示「長久」、「延伸」的語根，透過喉音互換 g 與原始長音關聯"
+        },
+        {
+          "type": "suffix",
+          "text": "er",
+          "meaning": "動作反覆、持續做某事",
+          "grimmNote": "常見字尾 -er，在此表動作的反覆或持續狀態"
+        }
+      ],
+      "summary": "linger 由表示長久的字根與表反覆的 -er 字尾組成，原意為「長時間待著、流連忘返」。",
+      "savedAt": "2026-09-15T04:02:42.920Z"
     }
   ],
   "userRoots": []
