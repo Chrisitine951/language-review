@@ -7570,6 +7570,26 @@
       ],
       "summary": "de-（向下/加強）加上 sign（記號）與動詞字尾 -ate，字面意思就是「向下做記號」或「明確標示出來」，也就是「指定、指派」。",
       "savedAt": "2026-09-15T04:03:43.879Z"
+    },
+    {
+      "id": "ulkmu29h0vx1",
+      "word": "mattress",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "mat-",
+          "meaning": "鋪疊、墊子",
+          "grimmNote": "源自阿拉伯語 maṭraḥ（意為丟棄之物、坐墊、床鋪），經由古法語與拉丁語演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "-tress",
+          "meaning": "名詞字尾（表示物品）",
+          "grimmNote": "雙子音規則：tt 與 ss 為結構上的重複子音，用以穩定音節與加強語氣"
+        }
+      ],
+      "summary": "mattress（床墊）源自中東語系經歐洲語言借入，字尾包含重複子音結構，本義指鋪在地上讓人躺臥的墊子。",
+      "savedAt": "2026-09-15T05:58:43.389Z"
     }
   ],
   "userRoots": []
