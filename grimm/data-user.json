@@ -7670,6 +7670,26 @@
       ],
       "summary": "clasp 作為獨立字根，原始語意即為緊緊抓握或扣住。",
       "savedAt": "2026-09-15T07:57:39.501Z"
+    },
+    {
+      "id": "ulkmu2jv13e1",
+      "word": "curriculum",
+      "parts": [
+        {
+          "type": "root",
+          "text": "cur",
+          "meaning": "跑、流動",
+          "grimmNote": "源自印歐語系字根，原本意思是「跑」或「流動」（喉音互換 c/k，與 car、current 同源）"
+        },
+        {
+          "type": "suffix",
+          "text": "riculum",
+          "meaning": "小跑道、賽跑的過程（名詞字尾）",
+          "grimmNote": "由指小詞字尾 -el / -let（母音通轉 e/u）與名詞字尾 -um 複合而成，原本指「小跑道、賽車場」，引申為學習的「跑道」即「課程」"
+        }
+      ],
+      "summary": "curriculum 由表示「跑」的字根 cur 加上指小與地方字尾組成，原本意思是「小跑道」，後來引申為人生或學習的「課程、學程」。",
+      "savedAt": "2026-09-15T10:49:33.002Z"
     }
   ],
   "userRoots": []
