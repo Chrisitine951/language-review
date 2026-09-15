@@ -7636,6 +7636,26 @@
       ],
       "summary": "discipline 由表示分離的字首 dis- 結合表示抓取與行列的字根，演變出「依循規矩、訓練約束」的意思。",
       "savedAt": "2026-09-15T07:44:02.220Z"
+    },
+    {
+      "id": "ulkmu2dn1vr3",
+      "word": "furnace",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "fur-",
+          "meaning": "火爐、爐灶",
+          "grimmNote": "源自古印歐語根，經唇音互換與母音通轉演變"
+        },
+        {
+          "type": "suffix",
+          "text": "-nace",
+          "meaning": "名詞字尾（表場所或器具）",
+          "grimmNote": "由地方字尾 -ary / -um 等演變而來的複合字尾"
+        }
+      ],
+      "summary": "furnace 由表示火爐的字根與名詞字尾組成，意指用來燃燒產生強烈高溫的「爐子」。",
+      "savedAt": "2026-09-15T07:55:23.079Z"
     }
   ],
   "userRoots": []
