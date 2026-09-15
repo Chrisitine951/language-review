@@ -7544,6 +7544,32 @@
       ],
       "summary": "linger 由表示長久的字根與表反覆的 -er 字尾組成，原意為「長時間待著、流連忘返」。",
       "savedAt": "2026-09-15T04:02:42.920Z"
+    },
+    {
+      "id": "ulkmu25d56v3",
+      "word": "designate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下；加強語氣",
+          "grimmNote": "常見字首，表示向下、離開或加強語氣。"
+        },
+        {
+          "type": "root",
+          "text": "sign",
+          "meaning": "記號、標誌",
+          "grimmNote": "源自拉丁字根，對應古印歐語「記號」。其中 g 與喉音互換、或直接保留核心子音 s-g-n。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "動詞字尾（使…）",
+          "grimmNote": "動詞字尾，用以形成「使成為…」的動作意義。"
+        }
+      ],
+      "summary": "de-（向下/加強）加上 sign（記號）與動詞字尾 -ate，字面意思就是「向下做記號」或「明確標示出來」，也就是「指定、指派」。",
+      "savedAt": "2026-09-15T04:03:43.879Z"
     }
   ],
   "userRoots": []
