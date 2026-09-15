@@ -7590,6 +7590,26 @@
       ],
       "summary": "mattress（床墊）源自中東語系經歐洲語言借入，字尾包含重複子音結構，本義指鋪在地上讓人躺臥的墊子。",
       "savedAt": "2026-09-15T05:58:43.389Z"
+    },
+    {
+      "id": "ulkmu2d35981",
+      "word": "naive",
+      "parts": [
+        {
+          "type": "root",
+          "text": "naiv",
+          "meaning": "天真的、幼稚的、原汁原味的",
+          "grimmNote": "源自拉丁文 nativus（生下來的、天生的），字根 nat-（出生）經由鼻音互換 n/m 或母音通轉演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "形容詞字尾（源自法文借字拼法）",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "naive 源自拉丁文「天生的」，原意是「天生如此、未受人工雕琢」，後來引申為「天真無邪、不經世事」。",
+      "savedAt": "2026-09-15T07:39:54.332Z"
     }
   ],
   "userRoots": []
