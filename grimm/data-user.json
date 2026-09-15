@@ -7656,6 +7656,20 @@
       ],
       "summary": "furnace 由表示火爐的字根與名詞字尾組成，意指用來燃燒產生強烈高溫的「爐子」。",
       "savedAt": "2026-09-15T07:55:23.079Z"
+    },
+    {
+      "id": "ulkmu2dpz594",
+      "word": "clasp",
+      "parts": [
+        {
+          "type": "root",
+          "text": "clasp",
+          "meaning": "抓緊、緊握",
+          "grimmNote": "由基礎抓取字根演變而來，結合喉音與唇音變化"
+        }
+      ],
+      "summary": "clasp 作為獨立字根，原始語意即為緊緊抓握或扣住。",
+      "savedAt": "2026-09-15T07:57:39.501Z"
     }
   ],
   "userRoots": []
