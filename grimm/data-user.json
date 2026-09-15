@@ -7610,6 +7610,32 @@
       ],
       "summary": "naive 源自拉丁文「天生的」，原意是「天生如此、未受人工雕琢」，後來引申為「天真無邪、不經世事」。",
       "savedAt": "2026-09-15T07:39:54.332Z"
+    },
+    {
+      "id": "ulkmu2d8gj02",
+      "word": "discipline",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "dis-",
+          "meaning": "分離、離開、否定",
+          "grimmNote": "常見字首 dis-，表示分離或否定"
+        },
+        {
+          "type": "root",
+          "text": "cip",
+          "meaning": "拿、抓取",
+          "grimmNote": "源自古印歐語的抓取概念，其中的 c 與 h/g 等喉音互換或子音演變有關"
+        },
+        {
+          "type": "suffix",
+          "text": "line",
+          "meaning": "線、行列、學習",
+          "grimmNote": "源自拉丁語 *līnea（線），與 line（線）同源，經由舌音互換與字尾演變而來"
+        }
+      ],
+      "summary": "discipline 由表示分離的字首 dis- 結合表示抓取與行列的字根，演變出「依循規矩、訓練約束」的意思。",
+      "savedAt": "2026-09-15T07:44:02.220Z"
     }
   ],
   "userRoots": []
