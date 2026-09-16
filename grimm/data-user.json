@@ -7762,6 +7762,26 @@
       ],
       "summary": "「para（防禦）」加上「chut（降落）」，組合成用來防禦降落衝擊的物品，即為降落傘（parachute）。",
       "savedAt": "2026-09-16T13:16:45.845Z"
+    },
+    {
+      "id": "ulkmu44od6j2",
+      "word": "instinct",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字首，表示進入或在內部。"
+        },
+        {
+          "type": "root",
+          "text": "stinct",
+          "meaning": "刺、刺戳、刺痛（源自 sting）",
+          "grimmNote": "字根 stinct 來自原始印歐語的 st-（刺、戳）。依據「舌音互換 d / t / s」，原始的 st-（如 sting 的 -ng 鼻音或古印歐語的 *stēg-）轉變為 t，並加上結尾子音。"
+        }
+      ],
+      "summary": "instinct（本能）由表示「在內、進入」的 in- 結合表示「刺、刺戳」的字根 stinct 組成，字面意思是「內心深處受到刺動、激發的力量」，引申為生來的「本能」。",
+      "savedAt": "2026-09-16T13:20:00.187Z"
     }
   ],
   "userRoots": []
