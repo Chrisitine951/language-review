@@ -7736,6 +7736,32 @@
       ],
       "summary": "arduous 由表「高、陡峭」的字根加上表形容詞的 -uous 組成，字面意思是「像爬陡坡一樣的」，因此引申為「艱鉅的、費力的」。",
       "savedAt": "2026-09-16T10:42:16.286Z"
+    },
+    {
+      "id": "ulkmu44k7851",
+      "word": "parachute",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "para",
+          "meaning": "防禦、保護（源自義大利語）",
+          "grimmNote": "常見字首，表示抵擋、保護"
+        },
+        {
+          "type": "root",
+          "text": "chut",
+          "meaning": "降落、急降（源自法語 chute）",
+          "grimmNote": "喉音互換 c ↔ h 的變體表現"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "名詞字尾",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "「para（防禦）」加上「chut（降落）」，組合成用來防禦降落衝擊的物品，即為降落傘（parachute）。",
+      "savedAt": "2026-09-16T13:16:45.845Z"
     }
   ],
   "userRoots": []
