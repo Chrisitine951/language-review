@@ -7716,6 +7716,26 @@
       ],
       "summary": "ignorant 由否定字首 ig- 加上表示「知道」的字根 nor 與形容詞字尾 -ant 組成，字面意思就是「不知道的、無知的」。",
       "savedAt": "2026-09-15T15:25:47.565Z"
+    },
+    {
+      "id": "ulkmu3z1ise1",
+      "word": "arduous",
+      "parts": [
+        {
+          "type": "root",
+          "text": "ard",
+          "meaning": "高、陡峭、燃燒",
+          "grimmNote": "源自古印歐語字根，與拉丁語 arduus（陡峭的、艱難的）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "uous",
+          "meaning": "多...的（形容詞字尾）",
+          "grimmNote": "母音通轉：字尾由拉丁語字尾 -uus 轉變為英語的 -ous，表充滿該性質"
+        }
+      ],
+      "summary": "arduous 由表「高、陡峭」的字根加上表形容詞的 -uous 組成，字面意思是「像爬陡坡一樣的」，因此引申為「艱鉅的、費力的」。",
+      "savedAt": "2026-09-16T10:42:16.286Z"
     }
   ],
   "userRoots": []
