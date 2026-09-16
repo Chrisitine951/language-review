@@ -7782,6 +7782,26 @@
       ],
       "summary": "instinct（本能）由表示「在內、進入」的 in- 結合表示「刺、刺戳」的字根 stinct 組成，字面意思是「內心深處受到刺動、激發的力量」，引申為生來的「本能」。",
       "savedAt": "2026-09-16T13:20:00.187Z"
+    },
+    {
+      "id": "ulkmu44t2c43",
+      "word": "embryo",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "em-",
+          "meaning": "動作化、令其如何",
+          "grimmNote": "源自常用的字首 em-，表示進入某種狀態或動作化"
+        },
+        {
+          "type": "root",
+          "text": "bryo",
+          "meaning": "生長、萌芽",
+          "grimmNote": "源自古印歐語根，透過母音通轉 y 與 i，與 sprout、barren 等生長相關字根同源"
+        }
+      ],
+      "summary": "embryo（胚胎）是由表示「進入…狀態」的字首 em- 加上代表「生長、萌芽」的字根 bryo 組成，意指「在體內開始生長萌芽的生命」。",
+      "savedAt": "2026-09-16T13:23:39.412Z"
     }
   ],
   "userRoots": []
