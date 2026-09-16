@@ -7816,6 +7816,32 @@
       ],
       "summary": "「poll」源自指頭部的古老字根，透過點算「人頭」演變出投票與民意調查的意思。",
       "savedAt": "2026-09-16T13:26:41.744Z"
+    },
+    {
+      "id": "ulkmu450jz25",
+      "word": "auxiliary",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "au",
+          "meaning": "加強語氣、朝向",
+          "grimmNote": "由 ad- 轉變而來，d 脫落並同化，表朝向、增加"
+        },
+        {
+          "type": "root",
+          "text": "xili",
+          "meaning": "生長、增加、幫助",
+          "grimmNote": "源自古印歐語字根 *h₂eug-（增加、成長）。其中的 g/k 喉音與 l 流音轉換，形成 xili 結構（x 包含 k 的音）"
+        },
+        {
+          "type": "suffix",
+          "text": "ary",
+          "meaning": "地方；形容詞字尾，表…的",
+          "grimmNote": "常用名詞與形容詞字尾 -ary，表相關性質或地方"
+        }
+      ],
+      "summary": "auxiliary（輔助的）由表示「朝向」的前綴加上源自「增加、成長」的核心字根與形容詞字尾組成，字面上的意思就是「用來增加或支援的力量」。",
+      "savedAt": "2026-09-16T13:29:28.862Z"
     }
   ],
   "userRoots": []
