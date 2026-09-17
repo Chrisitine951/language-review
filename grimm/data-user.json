@@ -7954,6 +7954,32 @@
       ],
       "summary": "statesman 由表示「站立、國家」的 state 加上複數 s，再結合表示「人」的 man 組成，字面意思是「國家的人」，引申為「政治家、國務家」。",
       "savedAt": "2026-09-17T15:42:53.494Z"
+    },
+    {
+      "id": "ulkmu5pgy6m4",
+      "word": "diligent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "di",
+          "meaning": "在內、進入",
+          "grimmNote": "源自 in-，經母音通轉 i/u/o 變化而來"
+        },
+        {
+          "type": "root",
+          "text": "lig",
+          "meaning": "選擇、挑選",
+          "grimmNote": "源自古印歐語字根 leg-，喉音 g 與 k 互換，母音通轉 e/i"
+        },
+        {
+          "type": "suffix",
+          "text": "ent",
+          "meaning": "形容詞字尾，正在…的、具有…特質的",
+          "grimmNote": "由拉丁語分詞字尾演變而來"
+        }
+      ],
+      "summary": "diligent（勤勉的）的組成故事是：字首 di-（在內、進入）加上字根 lig（選擇、挑選），字面意思是「能在其中細心挑選、精益求精的人」，因此衍生出勤奮、努力的含意。",
+      "savedAt": "2026-09-17T15:49:52.270Z"
     }
   ],
   "userRoots": []
