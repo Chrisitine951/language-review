@@ -7882,6 +7882,32 @@
       ],
       "summary": "speculate 由表示「看」的字根 spec 加上動詞字尾 -ulate 組成，字面意思是「在心裡不斷觀看、推測」。",
       "savedAt": "2026-09-17T14:15:02.343Z"
+    },
+    {
+      "id": "ulkmu5o0d6r1",
+      "word": "cataclysmic",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "cata-",
+          "meaning": "向下",
+          "grimmNote": "源自希臘文字首 cata-（向下、朝下）"
+        },
+        {
+          "type": "root",
+          "text": "clysm",
+          "meaning": "沖洗、淹沒",
+          "grimmNote": "源自希臘文 klyzein（沖洗），其中的喉音 k 依照「喉音互換 g / k / c」與字首的 c 相應，字尾 m 屬於「鼻音互換 n / m」的變體"
+        },
+        {
+          "type": "suffix",
+          "text": "-ic",
+          "meaning": "形容詞字尾，…的",
+          "grimmNote": "常見形容詞字尾，表屬性"
+        }
+      ],
+      "summary": "cata-（向下）加上 clysm（沖洗、淹沒）與形容詞字尾 -ic，字面意思為「向下大水沖洗」，引申為「大災難的、毀滅性的」。",
+      "savedAt": "2026-09-17T15:08:58.947Z"
     }
   ],
   "userRoots": []
