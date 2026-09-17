@@ -7908,6 +7908,26 @@
       ],
       "summary": "cata-（向下）加上 clysm（沖洗、淹沒）與形容詞字尾 -ic，字面意思為「向下大水沖洗」，引申為「大災難的、毀滅性的」。",
       "savedAt": "2026-09-17T15:08:58.947Z"
+    },
+    {
+      "id": "ulkmu5owddm2",
+      "word": "impede",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "im-",
+          "meaning": "在內、進入",
+          "grimmNote": "in- 變體，因接 p 雙子音同化成 im-"
+        },
+        {
+          "type": "root",
+          "text": "pede",
+          "meaning": "腳",
+          "grimmNote": "源自拉丁語 pes/ped（腳），d/t/s 舌音互換與母音通轉"
+        }
+      ],
+      "summary": "字首 im-（進入）加上源自「腳」的字根 pede，原意是「把腳絆住」，引申為妨礙、阻礙。",
+      "savedAt": "2026-09-17T15:33:52.186Z"
     }
   ],
   "userRoots": []
