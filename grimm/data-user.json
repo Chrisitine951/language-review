@@ -8006,6 +8006,32 @@
       ],
       "summary": "vulnerable（脆弱的）由表示「傷口、打擊」的字根加上「可以被…的」字尾組成，字面意思就是「可以被傷害的、易受攻擊的」。",
       "savedAt": "2026-09-17T15:55:20.856Z"
+    },
+    {
+      "id": "ulkmu5pqa5d6",
+      "word": "infection",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字首，表示進入內部"
+        },
+        {
+          "type": "root",
+          "text": "fect",
+          "meaning": "做、建造（源自 facere）",
+          "grimmNote": "字根 fect 來自 fac-，其中的唇音 f 與喉音 c 經由字根演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾，表狀態或過程",
+          "grimmNote": "複合名詞字尾，用來構成抽象名詞"
+        }
+      ],
+      "summary": "「in-（進入）」加上「fect（做）」與名詞字尾「-ion」，字面意思是「使不好的東西進入體內做壞事」，也就是「傳染、感染」。",
+      "savedAt": "2026-09-17T15:57:07.681Z"
     }
   ],
   "userRoots": []
