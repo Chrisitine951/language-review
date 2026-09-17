@@ -7928,6 +7928,32 @@
       ],
       "summary": "字首 im-（進入）加上源自「腳」的字根 pede，原意是「把腳絆住」，引申為妨礙、阻礙。",
       "savedAt": "2026-09-17T15:33:52.186Z"
+    },
+    {
+      "id": "ulkmu5p7z1y3",
+      "word": "statesman",
+      "parts": [
+        {
+          "type": "root",
+          "text": "state",
+          "meaning": "站立、狀態、國家",
+          "grimmNote": "源自古印歐語字根 *sta-（站立），經舌音互換 d/t/s 衍生而來"
+        },
+        {
+          "type": "suffix",
+          "text": "s",
+          "meaning": "複數字尾",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "man",
+          "meaning": "人、男人",
+          "grimmNote": "基本英文單字，指站立的人、國家的人民或代表"
+        }
+      ],
+      "summary": "statesman 由表示「站立、國家」的 state 加上複數 s，再結合表示「人」的 man 組成，字面意思是「國家的人」，引申為「政治家、國務家」。",
+      "savedAt": "2026-09-17T15:42:53.494Z"
     }
   ],
   "userRoots": []
