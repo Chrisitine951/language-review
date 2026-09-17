@@ -7980,6 +7980,32 @@
       ],
       "summary": "diligent（勤勉的）的組成故事是：字首 di-（在內、進入）加上字根 lig（選擇、挑選），字面意思是「能在其中細心挑選、精益求精的人」，因此衍生出勤奮、努力的含意。",
       "savedAt": "2026-09-17T15:49:52.270Z"
+    },
+    {
+      "id": "ulkmu5pnzq05",
+      "word": "vulnerable",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "vul",
+          "meaning": "傷口、打擊",
+          "grimmNote": "源自古印歐語根，唇音互換 b/p/f/v/w 與喉音弱化等的變體，與 wound（傷口）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "ner",
+          "meaning": "名詞/形容詞中介結構成份",
+          "grimmNote": "流音互換與詞性衍生結構成份"
+        },
+        {
+          "type": "suffix",
+          "text": "able",
+          "meaning": "可以被…的（帶被動意味）",
+          "grimmNote": "形容詞字尾，表能夠被怎樣"
+        }
+      ],
+      "summary": "vulnerable（脆弱的）由表示「傷口、打擊」的字根加上「可以被…的」字尾組成，字面意思就是「可以被傷害的、易受攻擊的」。",
+      "savedAt": "2026-09-17T15:55:20.856Z"
     }
   ],
   "userRoots": []
