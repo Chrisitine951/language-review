@@ -7862,6 +7862,26 @@
       ],
       "summary": "treat（處理、對待）加上名詞字尾 -y，原本指雙方「處理、交涉」的過程，最終演變為正式的「條約」。",
       "savedAt": "2026-09-17T14:06:00.064Z"
+    },
+    {
+      "id": "ulkmu5m2zt34",
+      "word": "speculate",
+      "parts": [
+        {
+          "type": "root",
+          "text": "spec",
+          "meaning": "看、觀察",
+          "grimmNote": "屬於喉音互換 g / k / c，源自古印歐語根 *spek-（看），與 spy、scope 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "ulate",
+          "meaning": "動詞字尾，表「做出…的動作」",
+          "grimmNote": "由 -ul（表動作反覆的字尾）加上動詞字尾 -ate 結合而成"
+        }
+      ],
+      "summary": "speculate 由表示「看」的字根 spec 加上動詞字尾 -ulate 組成，字面意思是「在心裡不斷觀看、推測」。",
+      "savedAt": "2026-09-17T14:15:02.343Z"
     }
   ],
   "userRoots": []
