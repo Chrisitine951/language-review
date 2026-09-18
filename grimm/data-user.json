@@ -8292,6 +8292,26 @@
       ],
       "summary": "petition 由表示「追求」的字根 petit 加上名詞字尾 -ion 組成，字面上的意思就是「向外追求或請求的動作」，也就是請願、訴狀。",
       "savedAt": "2026-09-18T15:36:11.582Z"
+    },
+    {
+      "id": "ulkmu74gglqb",
+      "word": "comrade",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "com",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 come 的字首變體，表示共同、一起"
+        },
+        {
+          "type": "root",
+          "text": "rade",
+          "meaning": "房間、床舖、團體",
+          "grimmNote": "源自古日爾曼語的 *hrōda- 或拉丁語 camera（房間），其中喉音互換 c ↔ h，流音與母音通轉"
+        }
+      ],
+      "summary": "comrade 由表示「一起」的 com- 與表示「同一房間或帳篷的伙伴」的 rade 組成，原意為室友或同袍。",
+      "savedAt": "2026-09-18T15:37:09.903Z"
     }
   ],
   "userRoots": []
