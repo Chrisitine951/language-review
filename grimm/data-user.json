@@ -8074,6 +8074,32 @@
       ],
       "summary": "「cruise」源自意指「十字交叉、四處航行」的字根，原意為在海面上四處巡航遊覽。",
       "savedAt": "2026-09-18T07:27:25.427Z"
+    },
+    {
+      "id": "ulkmu73trzi1",
+      "word": "precipitate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pre-",
+          "meaning": "向前、在…之前",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "cipi",
+          "meaning": "頭、頂端、落下",
+          "grimmNote": "源自 caput（頭），其中母音通轉 e / i，喉音互換 c / p / t 相關變化（字尾的 t 來自過去分詞或詞性變化）"
+        },
+        {
+          "type": "suffix",
+          "text": "-tate",
+          "meaning": "動詞字尾（使成為…）",
+          "grimmNote": "舌音互換與字尾結構變化"
+        }
+      ],
+      "summary": "由「pre-（向前）」加上「cipi（頭）」與動詞字尾組成，原意為「頭朝前傾斜、從高處頭部朝下跌落」，引申為「猛然落下、促成、加速」。",
+      "savedAt": "2026-09-18T15:19:31.566Z"
     }
   ],
   "userRoots": []
