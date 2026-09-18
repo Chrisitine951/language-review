@@ -8232,6 +8232,26 @@
       ],
       "summary": "由代表「古老」的字根 archae 透過連接母音 o 接上代表「學問、研究」的字根 log 與名詞字尾 y 組合成「考古學」。",
       "savedAt": "2026-09-18T15:30:31.927Z"
+    },
+    {
+      "id": "ulkmu748zkz8",
+      "word": "lithosphere",
+      "parts": [
+        {
+          "type": "root",
+          "text": "litho",
+          "meaning": "石頭、岩石",
+          "grimmNote": "源自希臘文字根 lithos（石頭），對應古英文中的字源"
+        },
+        {
+          "type": "root",
+          "text": "sphere",
+          "meaning": "球體、地帶、圈",
+          "grimmNote": "源自希臘文 sphaira（球、球體）"
+        }
+      ],
+      "summary": "由代表「岩石」的字根 litho 與代表「球體」的字根 sphere 組合而成，字面意思即為「岩石圈」。",
+      "savedAt": "2026-09-18T15:31:21.251Z"
     }
   ],
   "userRoots": []
