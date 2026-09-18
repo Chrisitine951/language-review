@@ -8114,6 +8114,32 @@
       ],
       "summary": "「curb」源自古老字根，本義指彎曲的繩索或限制馬匹的馬勒，演變為抑制與控制之意。",
       "savedAt": "2026-09-18T15:23:35.251Z"
+    },
+    {
+      "id": "ulkmu740cdj3",
+      "word": "dividend",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "di-",
+          "meaning": "分離、離開",
+          "grimmNote": "源自 dis-，表分離、離開"
+        },
+        {
+          "type": "root",
+          "text": "vid",
+          "meaning": "看、分開",
+          "grimmNote": "源自字根 vid（看），經由區分而看到、分開；與 wise/wit 的舌音互換 d/t 相關"
+        },
+        {
+          "type": "suffix",
+          "text": "-end",
+          "meaning": "東西、名詞字尾（表受詞）",
+          "grimmNote": "源自動詞或分詞字尾，指「被分配、被分出去的東西」"
+        }
+      ],
+      "summary": "dividend 由表示「分離」的 di- 加上表示「看/分」的 vid 與名詞字尾組成，字面意思就是「分開來看、被分配出去的東西」，也就是股票的「股利」或「紅利」。",
+      "savedAt": "2026-09-18T15:24:37.927Z"
     }
   ],
   "userRoots": []
