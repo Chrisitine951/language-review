@@ -8252,6 +8252,26 @@
       ],
       "summary": "由代表「岩石」的字根 litho 與代表「球體」的字根 sphere 組合而成，字面意思即為「岩石圈」。",
       "savedAt": "2026-09-18T15:31:21.251Z"
+    },
+    {
+      "id": "ulkmu74a8jb9",
+      "word": "convict",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "源自常用字首 con-（源自 come），表示「一起、共同」"
+        },
+        {
+          "type": "root",
+          "text": "vict",
+          "meaning": "征服、勝過",
+          "grimmNote": "源自古印歐語字根，經由喉音互換 g/k/c（vict 原型與 vinc-/vanquish 相關），透過母音通轉 i/a，意思是征服、勝過"
+        }
+      ],
+      "summary": "con-（共同）加上 vict（征服），字面意思就是「大家一起征服、定罪」，引申為「囚犯、定罪」。",
+      "savedAt": "2026-09-18T15:32:19.511Z"
     }
   ],
   "userRoots": []
