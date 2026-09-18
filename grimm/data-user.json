@@ -8312,6 +8312,32 @@
       ],
       "summary": "comrade 由表示「一起」的 com- 與表示「同一房間或帳篷的伙伴」的 rade 組成，原意為室友或同袍。",
       "savedAt": "2026-09-18T15:37:09.903Z"
+    },
+    {
+      "id": "ulkmu74j2myc",
+      "word": "anatomy",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ana-",
+          "meaning": "向上、向外、分開",
+          "grimmNote": "源自介系詞字首 ana-（向上、向外、徹底）"
+        },
+        {
+          "type": "root",
+          "text": "tom",
+          "meaning": "切、割",
+          "grimmNote": "源自古印歐語字根，與 tomb、template 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "-y",
+          "meaning": "名詞字尾（表狀態、過程或學科）",
+          "grimmNote": "母音通轉與名詞字尾"
+        }
+      ],
+      "summary": "「ana-（向上/分開）」加上「tom（切）」再結合成名詞字尾「-y」，字面意思就是「把它切開來看」，也就是解剖學或解剖。",
+      "savedAt": "2026-09-18T15:39:11.770Z"
     }
   ],
   "userRoots": []
