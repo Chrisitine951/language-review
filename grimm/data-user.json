@@ -8364,6 +8364,32 @@
       ],
       "summary": "ex-（向外）加上 hilar（歡樂），字面意思是「使歡樂向外發散」，也就是「使高興、使振奮」。",
       "savedAt": "2026-09-18T15:43:45.914Z"
+    },
+    {
+      "id": "ulkmu74s9h3e",
+      "word": "deficit",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de",
+          "meaning": "向下；離開",
+          "grimmNote": "常見字首 de-，表示向下或離開"
+        },
+        {
+          "type": "root",
+          "text": "fic",
+          "meaning": "做、製作（來自 fac/fic）",
+          "grimmNote": "字根 fic 源自 facere（做），其中的 c 屬於喉音互換"
+        },
+        {
+          "type": "suffix",
+          "text": "-it",
+          "meaning": "名詞字尾（表結果或狀態）",
+          "grimmNote": "源自拉丁語名詞字尾，表示做出來的結果"
+        }
+      ],
+      "summary": "de-（向下）加上 fic（做）與 -it（結果），字面意思就是「做出來的結果向下短缺」，引申為「赤字、虧損」。",
+      "savedAt": "2026-09-18T15:46:20.535Z"
     }
   ],
   "userRoots": []
