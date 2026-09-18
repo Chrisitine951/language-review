@@ -8180,6 +8180,26 @@
       ],
       "summary": "wage 從古代「下賭注、作保證」的動作演變而來，最終固定為現代英文中支付給員工的「薪資、工資」。",
       "savedAt": "2026-09-18T15:27:14.707Z"
+    },
+    {
+      "id": "ulkmu744w966",
+      "word": "manoeuvre",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "man",
+          "meaning": "手",
+          "grimmNote": "源自古印歐語根，對應手 (manual) 的概念"
+        },
+        {
+          "type": "root",
+          "text": "oeuvre",
+          "meaning": "工作、作品、做動作",
+          "grimmNote": "源自拉丁文 opera（工作），透過流音與母音通轉演變而來"
+        }
+      ],
+      "summary": "「manoeuvre」字面意思是「用手工作」，演變為現代的「調動、策略、操縱」。",
+      "savedAt": "2026-09-18T15:28:10.314Z"
     }
   ],
   "userRoots": []
