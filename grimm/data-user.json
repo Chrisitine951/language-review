@@ -8200,6 +8200,38 @@
       ],
       "summary": "「manoeuvre」字面意思是「用手工作」，演變為現代的「調動、策略、操縱」。",
       "savedAt": "2026-09-18T15:28:10.314Z"
+    },
+    {
+      "id": "ulkmu747xiv7",
+      "word": "archaeology",
+      "parts": [
+        {
+          "type": "root",
+          "text": "archae",
+          "meaning": "古老、原始",
+          "grimmNote": "源自希臘語，喉音互換與母音通轉的古老字根，與 archive（檔案）同源，代表古老的事物"
+        },
+        {
+          "type": "suffix",
+          "text": "o",
+          "meaning": "連接母音",
+          "grimmNote": "複合字中常用的連接母音，無實質意義"
+        },
+        {
+          "type": "root",
+          "text": "log",
+          "meaning": "言說、學問、研究",
+          "grimmNote": "喉音互換與母音通轉的字根，源自 PIE *leɡ-（收集、說話），常見於各種學科名稱如 biology"
+        },
+        {
+          "type": "suffix",
+          "text": "y",
+          "meaning": "名詞字尾（表…學）",
+          "grimmNote": "常見的學科名詞字尾，表示學問或系統性的知識"
+        }
+      ],
+      "summary": "由代表「古老」的字根 archae 透過連接母音 o 接上代表「學問、研究」的字根 log 與名詞字尾 y 組合成「考古學」。",
+      "savedAt": "2026-09-18T15:30:31.927Z"
     }
   ],
   "userRoots": []
