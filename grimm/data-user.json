@@ -8272,6 +8272,26 @@
       ],
       "summary": "con-（共同）加上 vict（征服），字面意思就是「大家一起征服、定罪」，引申為「囚犯、定罪」。",
       "savedAt": "2026-09-18T15:32:19.511Z"
+    },
+    {
+      "id": "ulkmu74f7lqa",
+      "word": "petition",
+      "parts": [
+        {
+          "type": "root",
+          "text": "petit",
+          "meaning": "追求、請求",
+          "grimmNote": "源自拉丁語 petere（尋求、攻擊、前往），其中 t 屬於舌音互換組"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾，表動作或狀態",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "petition 由表示「追求」的字根 petit 加上名詞字尾 -ion 組成，字面上的意思就是「向外追求或請求的動作」，也就是請願、訴狀。",
+      "savedAt": "2026-09-18T15:36:11.582Z"
     }
   ],
   "userRoots": []
