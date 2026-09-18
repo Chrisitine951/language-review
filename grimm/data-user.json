@@ -8390,6 +8390,26 @@
       ],
       "summary": "de-（向下）加上 fic（做）與 -it（結果），字面意思就是「做出來的結果向下短缺」，引申為「赤字、虧損」。",
       "savedAt": "2026-09-18T15:46:20.535Z"
+    },
+    {
+      "id": "ulkmu74t7m9f",
+      "word": "worship",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "worth",
+          "meaning": "價值、值得",
+          "grimmNote": "唇音互換 b / p / f / v / w：worth 的 th 轉為 sh，worth 演變為 wors-"
+        },
+        {
+          "type": "suffix",
+          "text": "-hip",
+          "meaning": "狀態、身分、身分地位",
+          "grimmNote": "表狀態或身分的常見字尾，組合起來指「賦予某人或某事物至高價值、尊崇的狀態」"
+        }
+      ],
+      "summary": "worship 由 worth（價值）加上表狀態的字尾 -ship 組成，字面原意是「給予某人崇高的價值或尊崇」，後來演變為「崇拜、敬奉」。",
+      "savedAt": "2026-09-18T15:47:04.785Z"
     }
   ],
   "userRoots": []
