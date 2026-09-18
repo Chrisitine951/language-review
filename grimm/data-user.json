@@ -8338,6 +8338,32 @@
       ],
       "summary": "「ana-（向上/分開）」加上「tom（切）」再結合成名詞字尾「-y」，字面意思就是「把它切開來看」，也就是解剖學或解剖。",
       "savedAt": "2026-09-18T15:39:11.770Z"
+    },
+    {
+      "id": "ulkmu74oy62d",
+      "word": "exhilarate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ex-",
+          "meaning": "出去、向外",
+          "grimmNote": "常見字首，表示向外、出發"
+        },
+        {
+          "type": "root",
+          "text": "hilar",
+          "meaning": "歡樂、高興",
+          "grimmNote": "喉音弱化 c/k ↔ h，對應到代表歡慶、跳躍的字根（如 cheer）"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "動詞字尾，使成...",
+          "grimmNote": "常見動詞字尾"
+        }
+      ],
+      "summary": "ex-（向外）加上 hilar（歡樂），字面意思是「使歡樂向外發散」，也就是「使高興、使振奮」。",
+      "savedAt": "2026-09-18T15:43:45.914Z"
     }
   ],
   "userRoots": []
