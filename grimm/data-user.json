@@ -8160,6 +8160,26 @@
       ],
       "summary": "shabby 由表示核心狀態的語干搭配形容詞字尾 -y 組成，原意指「破爛不堪、衣衫藍褸的」。",
       "savedAt": "2026-09-18T15:26:04.479Z"
+    },
+    {
+      "id": "ulkmu743pcj5",
+      "word": "wage",
+      "parts": [
+        {
+          "type": "root",
+          "text": "wag",
+          "meaning": "承諾、誓言、賭注",
+          "grimmNote": "源自日耳曼語族，保留原始的喉音 g 與唇音 w 結構"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "名詞字尾",
+          "grimmNote": "母音通轉與字尾調整"
+        }
+      ],
+      "summary": "wage 從古代「下賭注、作保證」的動作演變而來，最終固定為現代英文中支付給員工的「薪資、工資」。",
+      "savedAt": "2026-09-18T15:27:14.707Z"
     }
   ],
   "userRoots": []
