@@ -8410,6 +8410,26 @@
       ],
       "summary": "worship 由 worth（價值）加上表狀態的字尾 -ship 組成，字面原意是「給予某人崇高的價值或尊崇」，後來演變為「崇拜、敬奉」。",
       "savedAt": "2026-09-18T15:47:04.785Z"
+    },
+    {
+      "id": "ulkmu7wy23w1",
+      "word": "glacier",
+      "parts": [
+        {
+          "type": "root",
+          "text": "glac",
+          "meaning": "冰、滑溜",
+          "grimmNote": "喉音互換 g / k / c，源自印歐語系表示冰的字根"
+        },
+        {
+          "type": "suffix",
+          "text": "ier",
+          "meaning": "名詞字尾，表人和物",
+          "grimmNote": "源自法文借字字尾，用來構成名詞"
+        }
+      ],
+      "summary": "glacier 由表示「冰」的字根與名詞字尾組合而成，意指結冰的河流或冰河。",
+      "savedAt": "2026-09-19T04:54:40.172Z"
     }
   ],
   "userRoots": []
