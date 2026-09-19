@@ -8430,6 +8430,26 @@
       ],
       "summary": "glacier 由表示「冰」的字根與名詞字尾組合而成，意指結冰的河流或冰河。",
       "savedAt": "2026-09-19T04:54:40.172Z"
+    },
+    {
+      "id": "ulkmu7xavxp2",
+      "word": "veteran",
+      "parts": [
+        {
+          "type": "root",
+          "text": "veter",
+          "meaning": "老、舊、經歷豐富",
+          "grimmNote": "源自古印歐語，與拉丁文 vetus（老、年長）同源，其中的 v 與 t 分別對應唇音與舌音"
+        },
+        {
+          "type": "suffix",
+          "text": "-an",
+          "meaning": "…的人（名詞字尾）",
+          "grimmNote": "表人的名詞字尾，指具備某種特質或經歷的人"
+        }
+      ],
+      "summary": "veteran（老兵、老手）由表示「老、經歷豐富」的字根 veter 加上表示人的名詞字尾 -an 組成，字面意思就是「經歷豐富、資深的老人」。",
+      "savedAt": "2026-09-19T05:04:38.701Z"
     }
   ],
   "userRoots": []
