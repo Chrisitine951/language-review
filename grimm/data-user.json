@@ -8528,6 +8528,26 @@
       ],
       "summary": "com-（一起）加上 puls（推）與形容詞字尾 -ory，字面意思是「大家都一起被推著走的」，也就是「強制性的、義務的」。",
       "savedAt": "2026-09-19T11:41:12.326Z"
+    },
+    {
+      "id": "ulkmu8i0zgr1",
+      "word": "nocturnal",
+      "parts": [
+        {
+          "type": "root",
+          "text": "noct",
+          "meaning": "夜晚",
+          "grimmNote": "對應古印歐語字根 *nókʷts（夜晚），字首 n 經由鼻音互換，喉音 c 經由喉音互換"
+        },
+        {
+          "type": "suffix",
+          "text": "-urnal",
+          "meaning": "形容詞字尾，表……的",
+          "grimmNote": "由 -urn（時間）加上形容詞字尾 -al 複合而成"
+        }
+      ],
+      "summary": "nocturnal 由表示「夜晚」的字根 noct 與形容詞字尾 -urnal 結合而成，字面意思就是「屬於夜晚的、夜行性的」。",
+      "savedAt": "2026-09-19T14:44:48.651Z"
     }
   ],
   "userRoots": []
