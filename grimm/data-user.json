@@ -8548,6 +8548,26 @@
       ],
       "summary": "nocturnal 由表示「夜晚」的字根 noct 與形容詞字尾 -urnal 結合而成，字面意思就是「屬於夜晚的、夜行性的」。",
       "savedAt": "2026-09-19T14:44:48.651Z"
+    },
+    {
+      "id": "ulkmu8i5sm22",
+      "word": "veteran",
+      "parts": [
+        {
+          "type": "root",
+          "text": "veter",
+          "meaning": "老、年長",
+          "grimmNote": "對應古印歐語中表示「年老、歷練」的字根，字尾 -an 表人"
+        },
+        {
+          "type": "suffix",
+          "text": "an",
+          "meaning": "…的人",
+          "grimmNote": "常見的名詞/形容詞字尾，表具有某種特質或身分的人"
+        }
+      ],
+      "summary": "veteran（老兵、經驗豐富的人）由表「年長」的字根 veter 加上表「人」的字尾 an 組合而成，字面意思就是「歷經歲月的人」。",
+      "savedAt": "2026-09-19T14:48:33.050Z"
     }
   ],
   "userRoots": []
