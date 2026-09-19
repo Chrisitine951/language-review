@@ -8476,6 +8476,32 @@
       ],
       "summary": "utterance 由表否定或起始的 u- 結合表「說出、向外發聲」的 utter，再加上名詞字尾 -ance 構成，字面意思即「把話向外說出的狀態」，也就是「發言、話語」。",
       "savedAt": "2026-09-19T05:07:37.208Z"
+    },
+    {
+      "id": "ulkmu8bc2r41",
+      "word": "elicit",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "e-",
+          "meaning": "向外、出去",
+          "grimmNote": "常見字首 ex- 弱化為 e-，表示向外。"
+        },
+        {
+          "type": "root",
+          "text": "lic",
+          "meaning": "引出、誘出",
+          "grimmNote": "源自古印歐語根，經由喉音互換與母音通轉演變，與 lac-/luring 等引誘概念同源。"
+        },
+        {
+          "type": "suffix",
+          "text": "-it",
+          "meaning": "動詞或過去分詞結尾",
+          "grimmNote": "常見動詞結尾，用以構成字義。"
+        }
+      ],
+      "summary": "由表「向外」的字首 e- 加上表示「引出」的字根 lic 組合而成，字面意思就是「引出來」，引申為「引出、誘出（潛在的資訊、反應等）」。",
+      "savedAt": "2026-09-19T11:37:28.816Z"
     }
   ],
   "userRoots": []
