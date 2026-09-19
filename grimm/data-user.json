@@ -8450,6 +8450,32 @@
       ],
       "summary": "veteran（老兵、老手）由表示「老、經歷豐富」的字根 veter 加上表示人的名詞字尾 -an 組成，字面意思就是「經歷豐富、資深的老人」。",
       "savedAt": "2026-09-19T05:04:38.701Z"
+    },
+    {
+      "id": "ulkmu7xepo83",
+      "word": "utterance",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "u",
+          "meaning": "否定",
+          "grimmNote": "un- 的變體，表否定或動作的反轉"
+        },
+        {
+          "type": "root",
+          "text": "tter",
+          "meaning": "說、出聲",
+          "grimmNote": "源行動詞 utter（說出、發出聲音），其中的 tt 符合雙子音規則，實際字根為 ut-，與 outer/out（向外）同源，指「把話向外說」"
+        },
+        {
+          "type": "suffix",
+          "text": "ance",
+          "meaning": "名詞字尾，表狀態或性質",
+          "grimmNote": "常置於動詞後方，形成表狀態或行為的名詞"
+        }
+      ],
+      "summary": "utterance 由表否定或起始的 u- 結合表「說出、向外發聲」的 utter，再加上名詞字尾 -ance 構成，字面意思即「把話向外說出的狀態」，也就是「發言、話語」。",
+      "savedAt": "2026-09-19T05:07:37.208Z"
     }
   ],
   "userRoots": []
