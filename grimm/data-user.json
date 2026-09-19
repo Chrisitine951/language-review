@@ -8568,6 +8568,32 @@
       ],
       "summary": "veteran（老兵、經驗豐富的人）由表「年長」的字根 veter 加上表「人」的字尾 an 組合而成，字面意思就是「歷經歲月的人」。",
       "savedAt": "2026-09-19T14:48:33.050Z"
+    },
+    {
+      "id": "ulkmu8i7px93",
+      "word": "elicit",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "e-",
+          "meaning": "向外、出去",
+          "grimmNote": "常見字首 e-（源自 ex-），表示向外。"
+        },
+        {
+          "type": "root",
+          "text": "lic",
+          "meaning": "引出、誘出",
+          "grimmNote": "字根源自拉丁文 lacere（誘惑、引出），其中的 c 對應到古印歐語系，與引導、說出有關。"
+        },
+        {
+          "type": "suffix",
+          "text": "-it",
+          "meaning": "動詞字尾",
+          "grimmNote": "表示動作的結尾或過去分詞衍生。"
+        }
+      ],
+      "summary": "由字首 e-（向外）加上字根 lic（引出）組合而成，字面意思就是「向外引出」，也就是引誘、誘發或引出真相。",
+      "savedAt": "2026-09-19T14:50:02.877Z"
     }
   ],
   "userRoots": []
