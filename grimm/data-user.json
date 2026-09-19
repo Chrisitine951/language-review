@@ -8502,6 +8502,32 @@
       ],
       "summary": "由表「向外」的字首 e- 加上表示「引出」的字根 lic 組合而成，字面意思就是「引出來」，引申為「引出、誘出（潛在的資訊、反應等）」。",
       "savedAt": "2026-09-19T11:37:28.816Z"
+    },
+    {
+      "id": "ulkmu8bgv7q2",
+      "word": "compulsory",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "com",
+          "meaning": "共同、一起",
+          "grimmNote": "常用字首 com-（源自 come），表示一起、共同。"
+        },
+        {
+          "type": "root",
+          "text": "puls",
+          "meaning": "推、驅使",
+          "grimmNote": "核心字根 puls，源自印歐語系，經由唇音互換 b / p / f / v / w，與 push（推）同源。"
+        },
+        {
+          "type": "suffix",
+          "text": "ory",
+          "meaning": "地方；形容詞字尾（具有...性質的）",
+          "grimmNote": "常用字尾 -ory，表示地方或具有...性質的形容詞字尾。"
+        }
+      ],
+      "summary": "com-（一起）加上 puls（推）與形容詞字尾 -ory，字面意思是「大家都一起被推著走的」，也就是「強制性的、義務的」。",
+      "savedAt": "2026-09-19T11:41:12.326Z"
     }
   ],
   "userRoots": []
