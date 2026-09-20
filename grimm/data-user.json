@@ -8752,6 +8752,32 @@
       ],
       "summary": "perceive 由「徹底 (per-)」加上「抓取 (ceive)」組成，字面意思就是「徹底抓住」，引申為在心智上「察覺、理解」。",
       "savedAt": "2026-09-20T06:50:24.085Z"
+    },
+    {
+      "id": "ulkmu9grrwf6",
+      "word": "algebra",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "al",
+          "meaning": "定冠詞（the）",
+          "grimmNote": "源自阿拉伯語定冠詞 al-"
+        },
+        {
+          "type": "root",
+          "text": "gebr",
+          "meaning": "復原、整頓、結合",
+          "grimmNote": "源自阿拉伯語「al-jabr」，意指「把破碎的骨頭接起來」或「移項化簡」，其中的 b 與 p 屬於「唇音互換 b / p / f / v / w」"
+        },
+        {
+          "type": "suffix",
+          "text": "a",
+          "meaning": "名詞字尾",
+          "grimmNote": "拉丁化名詞字尾，母音通轉的一部分"
+        }
+      ],
+      "summary": "algebra 源自阿拉伯語的「移項化簡」（al-jabr），原意是將方程式中減去的負數移位「復原」平衡，經由拉丁文引入英文成為代數學。",
+      "savedAt": "2026-09-20T06:57:25.503Z"
     }
   ],
   "userRoots": []
