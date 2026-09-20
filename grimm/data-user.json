@@ -8706,6 +8706,32 @@
       ],
       "summary": "由表「向下」的字首與表「躺下」的字根組合而成，字面意思就是「向下躺下」，引申為屈服、投降或因病去世。",
       "savedAt": "2026-09-20T06:45:44.695Z"
+    },
+    {
+      "id": "ulkmu9gfpz34",
+      "word": "quarantine",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "qua",
+          "meaning": "四、四十",
+          "grimmNote": "源自數字「四」（four/quadra），根據喉音互換 g / k / c 規則演變而來"
+        },
+        {
+          "type": "root",
+          "text": "rant",
+          "meaning": "空間、時段、期限",
+          "grimmNote": "源自表示時間或空間的字根，舌音互換 d / t / s 規則"
+        },
+        {
+          "type": "suffix",
+          "text": "ine",
+          "meaning": "名詞字尾（表性質、狀態或地方）",
+          "grimmNote": "常見名詞字尾，用以構成抽象名詞"
+        }
+      ],
+      "summary": "quarantine 從字面上的「四十」演變而來，原指中世紀威尼斯為防堵黑死病，規定外來船只必須在海上隔離四十天（quaranta日），後來泛指「隔離、檢疫」。",
+      "savedAt": "2026-09-20T06:48:03.135Z"
     }
   ],
   "userRoots": []
