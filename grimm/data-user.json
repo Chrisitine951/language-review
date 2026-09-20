@@ -8804,6 +8804,26 @@
       ],
       "summary": "arbitrary 從字面上看是「走到某處去作判定」，因此演變成隨心所欲、任意而為的「專斷的、隨機的」意思。",
       "savedAt": "2026-09-20T13:03:27.544Z"
+    },
+    {
+      "id": "ulkmu9wv3dn1",
+      "word": "perceive",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "per-",
+          "meaning": "徹底、完全",
+          "grimmNote": "源自古印歐語，表加強語氣或完全到底"
+        },
+        {
+          "type": "root",
+          "text": "ceive",
+          "meaning": "拿、抓、取",
+          "grimmNote": "源自拉丁語 capere（抓取），其中母音 e 與 a 透過「母音通轉 a / e / i / o / u / y」互換，而喉音 c 維持不變"
+        }
+      ],
+      "summary": "per-（徹底）加上 -ceive（抓取），字面意思就是「徹底抓住」一個觀念或資訊，演變為現代的「察覺、理解」。",
+      "savedAt": "2026-09-20T14:27:54.203Z"
     }
   ],
   "userRoots": []
