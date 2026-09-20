@@ -8732,6 +8732,26 @@
       ],
       "summary": "quarantine 從字面上的「四十」演變而來，原指中世紀威尼斯為防堵黑死病，規定外來船只必須在海上隔離四十天（quaranta日），後來泛指「隔離、檢疫」。",
       "savedAt": "2026-09-20T06:48:03.135Z"
+    },
+    {
+      "id": "ulkmu9giqqd5",
+      "word": "perceive",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "per",
+          "meaning": "徹底、完全",
+          "grimmNote": "源自前綴 per-（完全、過境），加強語氣"
+        },
+        {
+          "type": "root",
+          "text": "ceive",
+          "meaning": "拿、取、抓取",
+          "grimmNote": "源自拉丁語 capere（抓取），其中母音 e 與 a 進行了「母音通轉」，而唇音 v 與字根的 p/f 屬於「唇音互換」家族"
+        }
+      ],
+      "summary": "perceive 由「徹底 (per-)」加上「抓取 (ceive)」組成，字面意思就是「徹底抓住」，引申為在心智上「察覺、理解」。",
+      "savedAt": "2026-09-20T06:50:24.085Z"
     }
   ],
   "userRoots": []
