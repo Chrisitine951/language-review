@@ -8686,6 +8686,26 @@
       ],
       "summary": "decimal 由表示「十」的字根 dec 加上形容詞字尾 -imal 構成，字面意思就是「關於十的、十進位的」。",
       "savedAt": "2026-09-20T06:44:48.609Z"
+    },
+    {
+      "id": "ulkmu9gcr5j3",
+      "word": "succumb",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "suc",
+          "meaning": "向下；朝向",
+          "grimmNote": "源自 ob- / oc- 的變體，因為後方接 c 而同化成為 suc-（向下）"
+        },
+        {
+          "type": "root",
+          "text": "cumb",
+          "meaning": "躺、臥",
+          "grimmNote": "與拉丁文 cubare（躺下）同源，其中的 b 與 m 屬於鼻音互換或結構變化，字根核心表示向下躺、屈服"
+        }
+      ],
+      "summary": "由表「向下」的字首與表「躺下」的字根組合而成，字面意思就是「向下躺下」，引申為屈服、投降或因病去世。",
+      "savedAt": "2026-09-20T06:45:44.695Z"
     }
   ],
   "userRoots": []
