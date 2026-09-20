@@ -8778,6 +8778,32 @@
       ],
       "summary": "algebra 源自阿拉伯語的「移項化簡」（al-jabr），原意是將方程式中減去的負數移位「復原」平衡，經由拉丁文引入英文成為代數學。",
       "savedAt": "2026-09-20T06:57:25.503Z"
+    },
+    {
+      "id": "ulkmu9tuhx41",
+      "word": "arbitrary",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ar",
+          "meaning": "朝向、去",
+          "grimmNote": "a＋重複子音＝加強語氣（結構），源自 ad- 的變體"
+        },
+        {
+          "type": "root",
+          "text": "bitr",
+          "meaning": "去、走、判定",
+          "grimmNote": "字根源自古印歐語，其中 b 與 p 唇音互換，r 為流音，原意與「走去」、「裁決」有關（如 in-ter-pret、breeze等同源）"
+        },
+        {
+          "type": "suffix",
+          "text": "ary",
+          "meaning": "地方；形容詞字尾，表示具備此性質的",
+          "grimmNote": "常見名詞與形容詞字尾 -um / -ery / -ory / -ary＝地方或性質"
+        }
+      ],
+      "summary": "arbitrary 從字面上看是「走到某處去作判定」，因此演變成隨心所欲、任意而為的「專斷的、隨機的」意思。",
+      "savedAt": "2026-09-20T13:03:27.544Z"
     }
   ],
   "userRoots": []
