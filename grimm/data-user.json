@@ -8824,6 +8824,32 @@
       ],
       "summary": "per-（徹底）加上 -ceive（抓取），字面意思就是「徹底抓住」一個觀念或資訊，演變為現代的「察覺、理解」。",
       "savedAt": "2026-09-20T14:27:54.203Z"
+    },
+    {
+      "id": "ulkmu9ww0yb2",
+      "word": "desolate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下、離開、完全",
+          "grimmNote": "常見字首，表示向下或離開。"
+        },
+        {
+          "type": "root",
+          "text": "sol",
+          "meaning": "單獨、荒涼",
+          "grimmNote": "源自古印歐語，與 sole（單獨的）同源，母音通轉 o 與 a。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "動詞或形容詞字尾，使成為…",
+          "grimmNote": "常見動詞或形容詞字尾，表狀態或動作化。"
+        }
+      ],
+      "summary": "字首 de-（完全、向下）加上字根 sol（單獨、荒涼）與字尾 -ate，組合起來就是「完全處於單獨、無人煙的狀態」，即荒涼的、孤寂的。",
+      "savedAt": "2026-09-20T14:28:37.715Z"
     }
   ],
   "userRoots": []
