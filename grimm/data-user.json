@@ -8614,6 +8614,38 @@
       ],
       "summary": "由形容詞字根 fast（穩固的）加上動詞字尾 en（使…），組合而成「使牢固、扣緊」的意思。",
       "savedAt": "2026-09-19T14:51:41.406Z"
+    },
+    {
+      "id": "ulkmu97oaly1",
+      "word": "controversy",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 com- / con-（一起、共同），源自 come"
+        },
+        {
+          "type": "root",
+          "text": "tro",
+          "meaning": "轉、向",
+          "grimmNote": "源自古印歐語字根，表示轉動或方向"
+        },
+        {
+          "type": "root",
+          "text": "vers",
+          "meaning": "轉、翻轉",
+          "grimmNote": "源自拉丁語 vertere（轉），與 verse、vert 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "y",
+          "meaning": "名詞字尾",
+          "grimmNote": "-y 表示名詞或狀態"
+        }
+      ],
+      "summary": "由表示「共同」的字首 con- 結合代表「轉」的字根 tro-、vers，以及名詞字尾 -y 組成，字面意思是「大家意見轉向不同方向」，引申為「爭論、論戰」。",
+      "savedAt": "2026-09-20T02:42:46.582Z"
     }
   ],
   "userRoots": []
