@@ -8850,6 +8850,38 @@
       ],
       "summary": "字首 de-（完全、向下）加上字根 sol（單獨、荒涼）與字尾 -ate，組合起來就是「完全處於單獨、無人煙的狀態」，即荒涼的、孤寂的。",
       "savedAt": "2026-09-20T14:28:37.715Z"
+    },
+    {
+      "id": "ulkmu9xch7r3",
+      "word": "astonish",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "a",
+          "meaning": "加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音沒有實質意義，真正的字根從後面開始"
+        },
+        {
+          "type": "prefix",
+          "text": "s",
+          "meaning": "向外、離開",
+          "grimmNote": "舌音互換 d / t / s：此處對應表示向外、散開的字首（如 ex- 的變體）"
+        },
+        {
+          "type": "root",
+          "text": "ton",
+          "meaning": "雷鳴、巨大的聲音",
+          "grimmNote": "源自古印歐語，模仿雷聲或巨大聲響的狀聲根（同源於 thunder）"
+        },
+        {
+          "type": "suffix",
+          "text": "ish",
+          "meaning": "動詞字尾（使成為...）",
+          "grimmNote": "常見動詞字尾，表示使動或進行某個動作"
+        }
+      ],
+      "summary": "a- 加強語氣，結合表示雷鳴與巨大聲響的字根，字面意思是「被雷聲震懾、驚嚇」，演變為使人驚訝、大吃一驚。",
+      "savedAt": "2026-09-20T14:41:25.287Z"
     }
   ],
   "userRoots": []
