@@ -8646,6 +8646,26 @@
       ],
       "summary": "由表示「共同」的字首 con- 結合代表「轉」的字根 tro-、vers，以及名詞字尾 -y 組成，字面意思是「大家意見轉向不同方向」，引申為「爭論、論戰」。",
       "savedAt": "2026-09-20T02:42:46.582Z"
+    },
+    {
+      "id": "ulkmu9g9tof1",
+      "word": "diameter",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "dia",
+          "meaning": "通過、穿過",
+          "grimmNote": "源自古印歐語的介系詞字首，表示 through / across"
+        },
+        {
+          "type": "root",
+          "text": "meter",
+          "meaning": "測量、計量",
+          "grimmNote": "源自希臘語 metron（測量），與 meter / measure 同源，其中 d 與 t 屬於舌音互換"
+        }
+      ],
+      "summary": "「dia-（穿過）」加上「-meter（測量）」，合起來就是「穿過中心去測量」，也就是圓的「直徑」。",
+      "savedAt": "2026-09-20T06:43:27.999Z"
     }
   ],
   "userRoots": []
