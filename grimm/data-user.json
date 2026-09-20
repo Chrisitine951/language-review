@@ -8666,6 +8666,26 @@
       ],
       "summary": "「dia-（穿過）」加上「-meter（測量）」，合起來就是「穿過中心去測量」，也就是圓的「直徑」。",
       "savedAt": "2026-09-20T06:43:27.999Z"
+    },
+    {
+      "id": "ulkmu9gbjvl2",
+      "word": "decimal",
+      "parts": [
+        {
+          "type": "root",
+          "text": "dec",
+          "meaning": "十",
+          "grimmNote": "源自印歐語系表示「十」的字根，對應希臘文 deka、拉丁文 decem。"
+        },
+        {
+          "type": "suffix",
+          "text": "imal",
+          "meaning": "形容詞字尾，表「關於…的」",
+          "grimmNote": "由名詞/形容詞字尾 -al 組成，其中 i 為母音通轉，將底數十轉化為小數或十進位的形容詞。"
+        }
+      ],
+      "summary": "decimal 由表示「十」的字根 dec 加上形容詞字尾 -imal 構成，字面意思就是「關於十的、十進位的」。",
+      "savedAt": "2026-09-20T06:44:48.609Z"
     }
   ],
   "userRoots": []
