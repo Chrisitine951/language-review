@@ -8922,6 +8922,32 @@
       ],
       "summary": "scaffold 由表示「向下/朝向」的字首與意指「木板/台架」的字根組合而成，原意為建造房屋時搭建的支撐平台。",
       "savedAt": "2026-09-21T01:23:41.942Z"
+    },
+    {
+      "id": "ulkmuakcev32",
+      "word": "divorce",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "di",
+          "meaning": "分離、離開",
+          "grimmNote": "源自 dis-（分離、離開），尾音 s 脫落的變體"
+        },
+        {
+          "type": "root",
+          "text": "vor",
+          "meaning": "轉動、轉向",
+          "grimmNote": "源自古印歐語字根，唇音互換 v / w，與 veer（轉向）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "ce",
+          "meaning": "名詞字尾",
+          "grimmNote": "字尾結構"
+        }
+      ],
+      "summary": "di-（分離、離開）加上 -vor（轉向），原本意思是「各走各的路、心轉開了」，演變為現代的「離婚」。",
+      "savedAt": "2026-09-21T01:25:13.408Z"
     }
   ],
   "userRoots": []
