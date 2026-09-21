@@ -8962,6 +8962,26 @@
       ],
       "summary": "cliff 由原始日耳曼語演變而來，指陡峭的岩壁，其中的雙子音 ff 僅用來加強語氣與維持音節結構。",
       "savedAt": "2026-09-21T01:26:16.805Z"
+    },
+    {
+      "id": "ulkmuakl5q84",
+      "word": "depict",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de",
+          "meaning": "向下；離開",
+          "grimmNote": "常見字首，表向下或加強語氣"
+        },
+        {
+          "type": "root",
+          "text": "pict",
+          "meaning": "畫、描繪",
+          "grimmNote": "源自印歐語系，與 paint 同源（唇音互換 p 保持不變，舌音 t 與 d 互換）"
+        }
+      ],
+      "summary": "de-（向下）加上 pict（畫），字面意思是「向下畫出來」，引申為「描繪、描述」。",
+      "savedAt": "2026-09-21T01:32:01.472Z"
     }
   ],
   "userRoots": []
