@@ -9040,6 +9040,26 @@
       ],
       "summary": "stationery 由表示站立的字根與表地方的字尾組成，原本指固定攤位上的商販，後來專指販售紙筆等文具的地方。",
       "savedAt": "2026-09-21T03:10:21.199Z"
+    },
+    {
+      "id": "ulkmuao79vf7",
+      "word": "liberty",
+      "parts": [
+        {
+          "type": "root",
+          "text": "lib",
+          "meaning": "自由、渴望",
+          "grimmNote": "源自古印歐語字根，與 love（愛）同源，唇音互換 b 與 v，表達「隨心所欲、喜愛」之意。"
+        },
+        {
+          "type": "suffix",
+          "text": "erty",
+          "meaning": "名詞字尾（表性質或狀態）",
+          "grimmNote": "包含形容詞字尾 -ert（源自拉丁語 -atus 類變體）與名詞字尾 -y，組合形成抽象名詞字尾 -erty，表「……的狀態」"
+        }
+      ],
+      "summary": "liberty 由表示「喜愛、隨心所欲」的字根 lib 加上名詞字尾 -erty 組成，字面上的意思就是「隨心所欲、做自己喜歡的事的狀態」，也就是自由。",
+      "savedAt": "2026-09-21T03:13:12.123Z"
     }
   ],
   "userRoots": []
