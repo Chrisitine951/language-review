@@ -8948,6 +8948,20 @@
       ],
       "summary": "di-（分離、離開）加上 -vor（轉向），原本意思是「各走各的路、心轉開了」，演變為現代的「離婚」。",
       "savedAt": "2026-09-21T01:25:13.408Z"
+    },
+    {
+      "id": "ulkmuakdrs53",
+      "word": "cliff",
+      "parts": [
+        {
+          "type": "root",
+          "text": "cliff",
+          "meaning": "懸崖、峭壁",
+          "grimmNote": "包含雙子音規則，ff 的第二個 f 為加強語氣"
+        }
+      ],
+      "summary": "cliff 由原始日耳曼語演變而來，指陡峭的岩壁，其中的雙子音 ff 僅用來加強語氣與維持音節結構。",
+      "savedAt": "2026-09-21T01:26:16.805Z"
     }
   ],
   "userRoots": []
