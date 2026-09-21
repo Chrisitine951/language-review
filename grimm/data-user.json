@@ -8902,6 +8902,26 @@
       ],
       "summary": "infer 由表示「在內、進入」的字首 in- 與表示「帶來、攜帶」的字根 fer 組合而成，字面意思就是「把意思帶入心中」，引申為「推論、推斷」。",
       "savedAt": "2026-09-20T15:18:37.010Z"
+    },
+    {
+      "id": "ulkmuakagae1",
+      "word": "scaffold",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "sc-",
+          "meaning": "向下、朝向",
+          "grimmNote": "源自 ob- / oc-（向下、朝向），經由子音變體與簡化而來"
+        },
+        {
+          "type": "root",
+          "text": "affold",
+          "meaning": "木板、台架",
+          "grimmNote": "其中的 a- 加上重複子音為加強語氣結構；fold 經由唇音互換 b / f 等相關造字邏輯，與板子、支架意象相通"
+        }
+      ],
+      "summary": "scaffold 由表示「向下/朝向」的字首與意指「木板/台架」的字根組合而成，原意為建造房屋時搭建的支撐平台。",
+      "savedAt": "2026-09-21T01:23:41.942Z"
     }
   ],
   "userRoots": []
