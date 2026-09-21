@@ -9008,6 +9008,38 @@
       ],
       "summary": "「col-（共同）」加上「-lis（打架、衝突）」與名詞字尾「-ion」，合起來就是雙方「共同碰撞、打架」，也就是「衝突、碰撞」。",
       "savedAt": "2026-09-21T03:08:29.931Z"
+    },
+    {
+      "id": "ulkmuao3lzj6",
+      "word": "stationery",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "st",
+          "meaning": "站立、固定",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "at",
+          "meaning": "去、朝向",
+          "grimmNote": "舌音互換 d / t / s：字根原貌與 stand 的 st- 相關，表站立之處"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ery",
+          "meaning": "地方",
+          "grimmNote": "名詞字尾：表場所，指販售文具或固定擺放文具的地方"
+        }
+      ],
+      "summary": "stationery 由表示站立的字根與表地方的字尾組成，原本指固定攤位上的商販，後來專指販售紙筆等文具的地方。",
+      "savedAt": "2026-09-21T03:10:21.199Z"
     }
   ],
   "userRoots": []
