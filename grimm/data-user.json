@@ -8982,6 +8982,32 @@
       ],
       "summary": "de-（向下）加上 pict（畫），字面意思是「向下畫出來」，引申為「描繪、描述」。",
       "savedAt": "2026-09-21T01:32:01.472Z"
+    },
+    {
+      "id": "ulkmuao184r5",
+      "word": "collision",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "col",
+          "meaning": "一起、共同",
+          "grimmNote": "com- 遇到 l 時同化變體，意思是「一起、共同」"
+        },
+        {
+          "type": "root",
+          "text": "lis",
+          "meaning": "打架、衝突",
+          "grimmNote": "源自拉丁文 lis（訴訟、爭吵），對應喉音互換與字根演變"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾，表動作或狀態",
+          "grimmNote": "常見名詞字尾，將動詞狀態名詞化"
+        }
+      ],
+      "summary": "「col-（共同）」加上「-lis（打架、衝突）」與名詞字尾「-ion」，合起來就是雙方「共同碰撞、打架」，也就是「衝突、碰撞」。",
+      "savedAt": "2026-09-21T03:08:29.931Z"
     }
   ],
   "userRoots": []
