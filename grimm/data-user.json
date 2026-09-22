@@ -9094,6 +9094,26 @@
       ],
       "summary": "majesty 由表示「大、偉大」的字根 maj 加上複合名詞字尾 -esty 組成，原意為「偉大的狀態」，後來專指君主的「陛下、崇高」。",
       "savedAt": "2026-09-22T06:33:42.484Z"
+    },
+    {
+      "id": "ulkmucau0nr3",
+      "word": "mason",
+      "parts": [
+        {
+          "type": "root",
+          "text": "mas",
+          "meaning": "做、建造、揉捏（源自土牆、泥瓦建造的古老概念）",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "on",
+          "meaning": "名詞字尾，表人或物",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "mason 由表示「建造、揉捏」的字根與表示人的字尾組合而成，原意為從事石造或泥瓦工作的「石匠、泥水匠」。",
+      "savedAt": "2026-09-22T06:34:30.999Z"
     }
   ],
   "userRoots": []
