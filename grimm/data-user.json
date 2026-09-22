@@ -9074,6 +9074,26 @@
       ],
       "summary": "blot 作為基礎字根，直接表示墨漬或汙點，同時也演變為動詞表示弄髒或塗抹。",
       "savedAt": "2026-09-22T06:32:09.806Z"
+    },
+    {
+      "id": "ulkmucasz842",
+      "word": "majesty",
+      "parts": [
+        {
+          "type": "root",
+          "text": "maj",
+          "meaning": "偉大、大",
+          "grimmNote": "源自古印歐語字根，與 mega（大）同源，喉音 g 與齒齦音 j 互換"
+        },
+        {
+          "type": "suffix",
+          "text": "esty",
+          "meaning": "名詞字尾，表性質或狀態",
+          "grimmNote": "由形容詞字尾 -est 加上名詞字尾 -y 複合而成，母音通轉 e/y"
+        }
+      ],
+      "summary": "majesty 由表示「大、偉大」的字根 maj 加上複合名詞字尾 -esty 組成，原意為「偉大的狀態」，後來專指君主的「陛下、崇高」。",
+      "savedAt": "2026-09-22T06:33:42.484Z"
     }
   ],
   "userRoots": []
