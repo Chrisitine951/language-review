@@ -9332,6 +9332,32 @@
       ],
       "summary": "miserable 由表示「不幸/壞」的字根 mis 加上表示狀態的 er，再接上表示「可以被…的」形容詞字尾 able 組成，字面意思是「可以感受到不幸的、悲慘的」。",
       "savedAt": "2026-09-23T15:42:55.233Z"
+    },
+    {
+      "id": "ulkmue9xqrta",
+      "word": "eccentric",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ec-",
+          "meaning": "向外、出",
+          "grimmNote": "由 ex-（出去、向外）因接續字根字首化而簡化為 ec-"
+        },
+        {
+          "type": "root",
+          "text": "centr",
+          "meaning": "中心、圓心",
+          "grimmNote": "源自希臘文 kentron，喉音互換 c ↔ k，字根代表中心"
+        },
+        {
+          "type": "suffix",
+          "text": "-ic",
+          "meaning": "形容詞字尾，…的",
+          "grimmNote": "常見形容詞字尾"
+        }
+      ],
+      "summary": "由 ex-（向外）與 centr（中心）結合，字面意思為「離開中心的」，因此衍生出「古怪的、反常的」之意。",
+      "savedAt": "2026-09-23T15:44:57.545Z"
     }
   ],
   "userRoots": []
