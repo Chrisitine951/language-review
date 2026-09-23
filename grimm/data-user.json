@@ -9306,6 +9306,32 @@
       ],
       "summary": "「as-」（加強語氣）加上「sault」（跳躍），字面意思是「用力跳向某人」，引申為「攻擊、襲擊」。",
       "savedAt": "2026-09-23T15:39:51.216Z"
+    },
+    {
+      "id": "ulkmue9v4e99",
+      "word": "miserable",
+      "parts": [
+        {
+          "type": "root",
+          "text": "mis",
+          "meaning": "糟糕、不幸、憎恨",
+          "grimmNote": "源自古印歐語，表示壞的、錯誤的意涵"
+        },
+        {
+          "type": "suffix",
+          "text": "er",
+          "meaning": "表人或物、或表動作狀態的字尾",
+          "grimmNote": "常見的名詞/形容詞衍生字尾"
+        },
+        {
+          "type": "suffix",
+          "text": "able",
+          "meaning": "可以被…的",
+          "grimmNote": "形容詞字尾，帶有被動意味"
+        }
+      ],
+      "summary": "miserable 由表示「不幸/壞」的字根 mis 加上表示狀態的 er，再接上表示「可以被…的」形容詞字尾 able 組成，字面意思是「可以感受到不幸的、悲慘的」。",
+      "savedAt": "2026-09-23T15:42:55.233Z"
     }
   ],
   "userRoots": []
