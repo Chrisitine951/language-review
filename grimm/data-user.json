@@ -9194,6 +9194,26 @@
       ],
       "summary": "「scout」源自古法文，原始意義為「傾聽、聆聽」，後來演變為「仔細聆聽、探聽敵情」的偵查員與尋找行為。",
       "savedAt": "2026-09-23T15:33:37.679Z"
+    },
+    {
+      "id": "ulkmue9jpff4",
+      "word": "butcher",
+      "parts": [
+        {
+          "type": "root",
+          "text": "butch",
+          "meaning": "公山羊、雄獸",
+          "grimmNote": "源自日耳曼語族，與 bock（公羊）同源，唇音互換 b/p/f/v/w"
+        },
+        {
+          "type": "suffix",
+          "text": "er",
+          "meaning": "從事某事的人",
+          "grimmNote": "名詞字尾，表示「做…的人」（宰殺公羊或牲畜的人）"
+        }
+      ],
+      "summary": "butcher 從字面上看就是「宰殺公羊或牲畜的人」，由代表公羊的字根加上表示人的字尾組合而成。",
+      "savedAt": "2026-09-23T15:34:02.619Z"
     }
   ],
   "userRoots": []
