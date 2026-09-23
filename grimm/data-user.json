@@ -9134,6 +9134,32 @@
       ],
       "summary": "「narrate」由表示「知道、說」的字根 nar 加上動詞字尾 -ate 組成，字面意思是「把知道的事情說出來」，演變為「敘述、講故事」。",
       "savedAt": "2026-09-22T06:36:54.294Z"
+    },
+    {
+      "id": "ulkmue83e0a1",
+      "word": "incentive",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字首，表示進入內部"
+        },
+        {
+          "type": "root",
+          "text": "cent",
+          "meaning": "唱歌、吟唱",
+          "grimmNote": "喉音互換 c / k 與字源相通"
+        },
+        {
+          "type": "suffix",
+          "text": "-ive",
+          "meaning": "形容詞字尾，表傾向或性質",
+          "grimmNote": "源自拉丁語字尾，形成形容詞或名詞"
+        }
+      ],
+      "summary": "incentive 由表示「進入」的 in- 結合與唱歌相關的字根 cent，再加上字尾 -ive 組成，原意為「用歌聲或音樂鼓舞、激勵」，演變為今日的「激勵、誘因」。",
+      "savedAt": "2026-09-23T14:53:21.706Z"
     }
   ],
   "userRoots": []
