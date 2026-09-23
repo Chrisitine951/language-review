@@ -9160,6 +9160,26 @@
       ],
       "summary": "incentive 由表示「進入」的 in- 結合與唱歌相關的字根 cent，再加上字尾 -ive 組成，原意為「用歌聲或音樂鼓舞、激勵」，演變為今日的「激勵、誘因」。",
       "savedAt": "2026-09-23T14:53:21.706Z"
+    },
+    {
+      "id": "ulkmue9i7yu2",
+      "word": "expire",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ex-",
+          "meaning": "出去、向外",
+          "grimmNote": "常見字首，表示動作的方向朝外"
+        },
+        {
+          "type": "root",
+          "text": "pire",
+          "meaning": "呼吸、吹氣",
+          "grimmNote": "源自古印歐語，經由母音通轉（i/a 互換），與 spir（呼吸、靈魂）同源"
+        }
+      ],
+      "summary": "ex-（向外）加上 -pire（呼吸），原本指「呼出最後一口氣」，引申為「期滿、失效」。",
+      "savedAt": "2026-09-23T15:32:53.334Z"
     }
   ],
   "userRoots": []
