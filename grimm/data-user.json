@@ -9260,6 +9260,32 @@
       ],
       "summary": "neglect 由否定字首 ne- 加上表示「收集、挑選」的字根組合而成，字面上的意思是「不去收集、不去挑選」，因此衍生出現代的「忽視、疏怠」之意。",
       "savedAt": "2026-09-23T15:37:31.513Z"
+    },
+    {
+      "id": "ulkmue9pihp7",
+      "word": "deputy",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下；朝向",
+          "grimmNote": "源自 ob- / de- 相關介系詞，表示向下或從屬位置"
+        },
+        {
+          "type": "root",
+          "text": "put",
+          "meaning": "放置、安排、指定",
+          "grimmNote": "對應古印歐語根，意指擺放或委任"
+        },
+        {
+          "type": "suffix",
+          "text": "-y",
+          "meaning": "名詞字尾",
+          "grimmNote": "母音通轉與字尾變化，構成職稱或身分名詞"
+        }
+      ],
+      "summary": "deputy 由表示向下的字首 de- 結合表示放置、委任的字根 put，再加上名詞字尾 -y 組成，字面意思是「被放置在下方的人」，即接受委任、協助主管的「副職、代理人」。",
+      "savedAt": "2026-09-23T15:38:33.565Z"
     }
   ],
   "userRoots": []
