@@ -9240,6 +9240,26 @@
       ],
       "summary": "squirrel 由代表陰影或尾巴的字根 quir 加上指小字尾 -el 構成，字面意思就是「拖著大尾巴的小動物」。",
       "savedAt": "2026-09-23T15:35:47.546Z"
+    },
+    {
+      "id": "ulkmue9o6m16",
+      "word": "neglect",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ne-",
+          "meaning": "否定、不",
+          "grimmNote": "常見否定字首，源自同源的 un- 或不的否定概念"
+        },
+        {
+          "type": "root",
+          "text": "glect",
+          "meaning": "收集、挑選",
+          "grimmNote": "其中的 g 源自喉音互換 g / k / c，與 gather（收集）同源，原本意思是「去收集、去挑選」"
+        }
+      ],
+      "summary": "neglect 由否定字首 ne- 加上表示「收集、挑選」的字根組合而成，字面上的意思是「不去收集、不去挑選」，因此衍生出現代的「忽視、疏怠」之意。",
+      "savedAt": "2026-09-23T15:37:31.513Z"
     }
   ],
   "userRoots": []
