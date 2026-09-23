@@ -9214,6 +9214,32 @@
       ],
       "summary": "butcher 從字面上看就是「宰殺公羊或牲畜的人」，由代表公羊的字根加上表示人的字尾組合而成。",
       "savedAt": "2026-09-23T15:34:02.619Z"
+    },
+    {
+      "id": "ulkmue9lye25",
+      "word": "squirrel",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "s",
+          "meaning": "加強語氣或起首音",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "quir",
+          "meaning": "尾巴；掩護、藏匿",
+          "grimmNote": "源自古希臘語 skiuros，由 skia（影子、尾巴）演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "rel",
+          "meaning": "小（指尾巴很大的小動物）",
+          "grimmNote": "包含流音互換 l/r，結合指小字尾 -el（小），合起來意指「拖著大尾巴的小動物」"
+        }
+      ],
+      "summary": "squirrel 由代表陰影或尾巴的字根 quir 加上指小字尾 -el 構成，字面意思就是「拖著大尾巴的小動物」。",
+      "savedAt": "2026-09-23T15:35:47.546Z"
     }
   ],
   "userRoots": []
