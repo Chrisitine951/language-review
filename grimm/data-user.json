@@ -9180,6 +9180,20 @@
       ],
       "summary": "ex-（向外）加上 -pire（呼吸），原本指「呼出最後一口氣」，引申為「期滿、失效」。",
       "savedAt": "2026-09-23T15:32:53.334Z"
+    },
+    {
+      "id": "ulkmue9j66n3",
+      "word": "scout",
+      "parts": [
+        {
+          "type": "root",
+          "text": "scout",
+          "meaning": "偵查員、尋找、物色",
+          "grimmNote": "源自古法文 escouter（聆聽、傾聽），字根與英文 hearken / hear 透過喉音弱化 c/k ↔ h 相關，本義為「聽探、偵察」"
+        }
+      ],
+      "summary": "「scout」源自古法文，原始意義為「傾聽、聆聽」，後來演變為「仔細聆聽、探聽敵情」的偵查員與尋找行為。",
+      "savedAt": "2026-09-23T15:33:37.679Z"
     }
   ],
   "userRoots": []
