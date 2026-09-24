@@ -9410,6 +9410,32 @@
       ],
       "summary": "pre-（預先）加上 serv（保護、看守），字面意思是「預先保護好」，演變為「保存、維護」。",
       "savedAt": "2026-09-24T01:24:59.152Z"
+    },
+    {
+      "id": "ulkmueur2l92",
+      "word": "pervade",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "per-",
+          "meaning": "穿過、完全",
+          "grimmNote": "源自常用字首 ex-/per- 等的延伸，表向外、完全"
+        },
+        {
+          "type": "root",
+          "text": "vad",
+          "meaning": "走、前進",
+          "grimmNote": "根據「唇音互換 b / p / f / v / w」，與拉丁文 vadere（去、走）同源，v 與 w/p 可以互換"
+        },
+        {
+          "type": "suffix",
+          "text": "-e",
+          "meaning": "動詞字尾",
+          "grimmNote": "無實質意義的結尾音節"
+        }
+      ],
+      "summary": "per-（完全、穿過）加上 vad（走、前進），字面意思就是「完全走過去」，引申為（氣味、光線或影響力等）瀰漫、滲透、 pervade 整體。",
+      "savedAt": "2026-09-24T01:27:38.205Z"
     }
   ],
   "userRoots": []
