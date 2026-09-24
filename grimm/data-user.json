@@ -9482,6 +9482,32 @@
       ],
       "summary": "tack（釘子／固定）加上表反覆動作的字尾 -le，字面意思是「反覆去抓住或固定問題」，引申為動詞「著手對付、處理（困難任務）」。",
       "savedAt": "2026-09-24T10:01:39.950Z"
+    },
+    {
+      "id": "ulkmufd5hww2",
+      "word": "everlasting",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ever",
+          "meaning": "永遠、總是",
+          "grimmNote": "源自古英文ǣfre，表示「每一個、總是」"
+        },
+        {
+          "type": "root",
+          "text": "last",
+          "meaning": "持續、持久",
+          "grimmNote": "透過舌音互換 d / t / s 與流音規則，或直接對應古英文læstan（持續）"
+        },
+        {
+          "type": "suffix",
+          "text": "ing",
+          "meaning": "現在分詞／形容詞字尾，表「正在…的」或「具備此性質的」",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "ever（永遠）加上 last（持續）與形容詞字尾 -ing，字面意思就是「永遠持續下去的」，也就是永恆的。",
+      "savedAt": "2026-09-24T10:02:44.336Z"
     }
   ],
   "userRoots": []
