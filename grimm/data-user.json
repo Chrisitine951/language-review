@@ -9614,6 +9614,32 @@
       ],
       "summary": "bully 從「公牛」的字根演變而來，原本形容像公牛般好鬥、強壯、橫衝直撞的人，後來轉化為動詞與名詞的「霸凌、欺負人」。",
       "savedAt": "2026-09-24T10:10:09.432Z"
+    },
+    {
+      "id": "ulkmufdfszn8",
+      "word": "diploma",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "di",
+          "meaning": "透過、穿過",
+          "grimmNote": "源自介系詞，表示通過或分開。"
+        },
+        {
+          "type": "root",
+          "text": "plom",
+          "meaning": "摺疊、重疊",
+          "grimmNote": "源自古印歐語根，經由唇音互換與母音通轉演變而來。"
+        },
+        {
+          "type": "suffix",
+          "text": "a",
+          "meaning": "名詞字尾",
+          "grimmNote": "表名詞結尾的古老語尾。"
+        }
+      ],
+      "summary": "diploma 由表「透過」的字首 di 與表「摺疊」的字根 plom 結合而成，原意指「摺疊兩次的文書」，後來演變成畢業證書或公文。",
+      "savedAt": "2026-09-24T10:10:45.251Z"
     }
   ],
   "userRoots": []
