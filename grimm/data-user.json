@@ -9384,6 +9384,32 @@
       ],
       "summary": "由表「朝向」的字首結合表「走」的字根，字面意思為「不斷向前走」，演變為「連續、繼承」。",
       "savedAt": "2026-09-23T16:14:50.518Z"
+    },
+    {
+      "id": "ulkmueunnv41",
+      "word": "preserve",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pre",
+          "meaning": "在…之前、預先",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "serv",
+          "meaning": "保護、看守、奴僕",
+          "grimmNote": "v 與 p 屬於「唇音互換 b / p / f / v / w」，serv 與 keep/save 家族相通"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "動詞字尾",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "pre-（預先）加上 serv（保護、看守），字面意思是「預先保護好」，演變為「保存、維護」。",
+      "savedAt": "2026-09-24T01:24:59.152Z"
     }
   ],
   "userRoots": []
