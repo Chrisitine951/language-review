@@ -9542,6 +9542,32 @@
       ],
       "summary": "單字 lame 作為基礎字根，直接演變出表示行動不便或理由牽強的含義。",
       "savedAt": "2026-09-24T10:04:14.071Z"
+    },
+    {
+      "id": "ulkmufd9do65",
+      "word": "accumulate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ac-",
+          "meaning": "朝向；加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音（c）無實質意義，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "cumul",
+          "meaning": "堆疊、聚集",
+          "grimmNote": "源自古印歐語，表示「堆、山丘」的概念。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "動詞字尾（做成…、使成為）",
+          "grimmNote": "常見的動詞字尾，用以將字根轉化為動作。"
+        }
+      ],
+      "summary": "ac-（加強語氣）加上 cumul（堆疊）與 -ate（動詞字尾），字面意思就是「不斷往上堆疊、聚集起來」。",
+      "savedAt": "2026-09-24T10:05:45.462Z"
     }
   ],
   "userRoots": []
