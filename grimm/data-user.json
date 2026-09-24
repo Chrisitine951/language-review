@@ -9568,6 +9568,32 @@
       ],
       "summary": "ac-（加強語氣）加上 cumul（堆疊）與 -ate（動詞字尾），字面意思就是「不斷往上堆疊、聚集起來」。",
       "savedAt": "2026-09-24T10:05:45.462Z"
+    },
+    {
+      "id": "ulkmufdbpn16",
+      "word": "estate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "e",
+          "meaning": "出去、向外",
+          "grimmNote": "ex- / e-＝出去、向外，此處簡化為 e"
+        },
+        {
+          "type": "root",
+          "text": "sta",
+          "meaning": "站立、放置",
+          "grimmNote": "源自印歐語系字根 sta（站立），舌音互換 d / t / s 的 t"
+        },
+        {
+          "type": "suffix",
+          "text": "te",
+          "meaning": "名詞或形容詞字尾",
+          "grimmNote": "-ate＝動詞或形容詞字尾，此處作為名詞結尾"
+        }
+      ],
+      "summary": "estate 由「向外 (e)」加上「站立 (sta)」與名詞字尾 (te) 組成，原本指「站立或建立在某處的產業或地位」，引申為房地產與財產。",
+      "savedAt": "2026-09-24T10:07:34.285Z"
     }
   ],
   "userRoots": []
