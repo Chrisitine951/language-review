@@ -9436,6 +9436,32 @@
       ],
       "summary": "per-（完全、穿過）加上 vad（走、前進），字面意思就是「完全走過去」，引申為（氣味、光線或影響力等）瀰漫、滲透、 pervade 整體。",
       "savedAt": "2026-09-24T01:27:38.205Z"
+    },
+    {
+      "id": "ulkmuf2m1or1",
+      "word": "diplomat",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "di",
+          "meaning": "透過、穿過（源自 dia- 的流音省略）",
+          "grimmNote": "母音通轉及流音省略規則"
+        },
+        {
+          "type": "root",
+          "text": "plo",
+          "meaning": "折疊、包覆（源自 ple, ply）",
+          "grimmNote": "唇音互換 b/p/f/v/w 與母音通轉"
+        },
+        {
+          "type": "suffix",
+          "text": "mat",
+          "meaning": "物品、文件（名詞字尾）",
+          "grimmNote": "舌音互換 d/t/s"
+        }
+      ],
+      "summary": "diplomat（外交官）字面上的意思是「把文件對折交給對方的人」，由表示「穿過/兩者」的字首、表示「折疊」的字根以及名詞字尾組合而成。",
+      "savedAt": "2026-09-24T05:07:40.683Z"
     }
   ],
   "userRoots": []
