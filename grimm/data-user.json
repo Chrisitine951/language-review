@@ -9508,6 +9508,26 @@
       ],
       "summary": "ever（永遠）加上 last（持續）與形容詞字尾 -ing，字面意思就是「永遠持續下去的」，也就是永恆的。",
       "savedAt": "2026-09-24T10:02:44.336Z"
+    },
+    {
+      "id": "ulkmufd67r33",
+      "word": "prophet",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pro",
+          "meaning": "向前、在…之前",
+          "grimmNote": "源自古印歐語，表示「向前」或「在…前面」"
+        },
+        {
+          "type": "root",
+          "text": "phet",
+          "meaning": "說、宣告",
+          "grimmNote": "透過喉音弱化 c/k ↔ h 以及唇音互換 b/p/f/v，源自原始印歐語詞根 *bha-（說話、宣告），其拉丁語變體為 fari（說）"
+        }
+      ],
+      "summary": "「prophet」（先知）由表示「向前、在…之前」的字首 pro- 與表示「說、宣告」的字根組成，字面意思就是「在事件發生之前就預先說出來的人」。",
+      "savedAt": "2026-09-24T10:03:17.823Z"
     }
   ],
   "userRoots": []
