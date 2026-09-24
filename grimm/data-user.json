@@ -9640,6 +9640,26 @@
       ],
       "summary": "diploma 由表「透過」的字首 di 與表「摺疊」的字根 plom 結合而成，原意指「摺疊兩次的文書」，後來演變成畢業證書或公文。",
       "savedAt": "2026-09-24T10:10:45.251Z"
+    },
+    {
+      "id": "ulkmufehwgl9",
+      "word": "protest",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pro",
+          "meaning": "向前、在前",
+          "grimmNote": "常見字首，表示向前、公開"
+        },
+        {
+          "type": "root",
+          "text": "test",
+          "meaning": "作證、見證",
+          "grimmNote": "源自拉丁語 testari（作證），其中字尾的 t 呼應原意"
+        }
+      ],
+      "summary": "字首 pro-（向前、公開）加上字根 test（作證），合起來就是「公開作證反對」，演變為抗議、聲明。",
+      "savedAt": "2026-09-24T10:40:22.677Z"
     }
   ],
   "userRoots": []
