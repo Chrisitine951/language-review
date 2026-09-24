@@ -9594,6 +9594,26 @@
       ],
       "summary": "estate 由「向外 (e)」加上「站立 (sta)」與名詞字尾 (te) 組成，原本指「站立或建立在某處的產業或地位」，引申為房地產與財產。",
       "savedAt": "2026-09-24T10:07:34.285Z"
+    },
+    {
+      "id": "ulkmufdf1co7",
+      "word": "bully",
+      "parts": [
+        {
+          "type": "root",
+          "text": "bull",
+          "meaning": "公牛",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "y",
+          "meaning": "形容詞字尾，表多…的",
+          "grimmNote": "-y 形容詞字尾，表多…的"
+        }
+      ],
+      "summary": "bully 從「公牛」的字根演變而來，原本形容像公牛般好鬥、強壯、橫衝直撞的人，後來轉化為動詞與名詞的「霸凌、欺負人」。",
+      "savedAt": "2026-09-24T10:10:09.432Z"
     }
   ],
   "userRoots": []
