@@ -9794,6 +9794,32 @@
       ],
       "summary": "「clan」是一個源自古代印歐語的基礎單字，核心字根直接表達「聚集成群的宗族與家族」。",
       "savedAt": "2026-09-25T14:07:48.532Z"
+    },
+    {
+      "id": "ulkmuh1g9fr7",
+      "word": "delicate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下；離開",
+          "grimmNote": "常見字首 de-，表示向下或離開。"
+        },
+        {
+          "type": "root",
+          "text": "lic",
+          "meaning": "引誘、吸引、取悅（源自拉丁文 delicere 的字根）",
+          "grimmNote": "與 lure（引誘）同源，l / r 流音互換。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "形容詞或動詞字尾",
+          "grimmNote": "形容詞字尾，表示具備某种性質的。"
+        }
+      ],
+      "summary": "delicate 由表示「向下、離開」的字首 de- 結合意為「引誘、取悅」的字根 lic，再加上形容詞字尾 -ate 組成，原本形容人容易被誘惑、心智軟弱，演變至今用來形容事物「精緻的、脆弱的」。",
+      "savedAt": "2026-09-25T14:10:43.527Z"
     }
   ],
   "userRoots": []
