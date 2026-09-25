@@ -9706,6 +9706,26 @@
       ],
       "summary": "germ（發芽）結合表示進入的 in 與動詞字尾 -ate，組合出「使發芽、生長」的意思。",
       "savedAt": "2026-09-25T13:59:08.431Z"
+    },
+    {
+      "id": "ulkmuh149a42",
+      "word": "germinate",
+      "parts": [
+        {
+          "type": "root",
+          "text": "germin",
+          "meaning": "發芽、萌芽",
+          "grimmNote": "源自印歐語根基底，喉音互換 g / k / c 的核心字根"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾，表示「做…、使成為」",
+          "grimmNote": "-ate 作為動詞字尾，用以形成動詞"
+        }
+      ],
+      "summary": "germinate 由表示「發芽」的字根 germin 加上動詞字尾 -ate 組成，意思是「使發芽、萌芽」。",
+      "savedAt": "2026-09-25T14:01:23.452Z"
     }
   ],
   "userRoots": []
