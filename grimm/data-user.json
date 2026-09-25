@@ -9740,6 +9740,26 @@
       ],
       "summary": "praise（稱讚）源自拉丁文「賦予價值」，字面上的意思就是「給予某人或某物高度的價值與肯定」。",
       "savedAt": "2026-09-25T14:02:00.505Z"
+    },
+    {
+      "id": "ulkmuh15rax4",
+      "word": "exclude",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ex-",
+          "meaning": "出去、向外",
+          "grimmNote": "常見字首，表示向外、離開。"
+        },
+        {
+          "type": "root",
+          "text": "clude",
+          "meaning": "關閉、關起來",
+          "grimmNote": "源自古印歐語，其中包含母音通轉 e/u 與喉音 c 的變化。"
+        }
+      ],
+      "summary": "ex-（向外）加上 -clude（關閉），字面意思就是「關在外面」，也就是把人或事物排除在外、不予納入。",
+      "savedAt": "2026-09-25T14:02:33.466Z"
     }
   ],
   "userRoots": []
