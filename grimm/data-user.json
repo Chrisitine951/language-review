@@ -9660,6 +9660,26 @@
       ],
       "summary": "字首 pro-（向前、公開）加上字根 test（作證），合起來就是「公開作證反對」，演變為抗議、聲明。",
       "savedAt": "2026-09-24T10:40:22.677Z"
+    },
+    {
+      "id": "ulkmuggnr3z1",
+      "word": "volatile",
+      "parts": [
+        {
+          "type": "root",
+          "text": "vol",
+          "meaning": "飛、轉動",
+          "grimmNote": "源自古印歐語，表示「飛翔、轉動」的字根"
+        },
+        {
+          "type": "suffix",
+          "text": "-atile",
+          "meaning": "容易…的、具有…性質的",
+          "grimmNote": "由形容詞字尾 -al 結合母音通轉及其他字尾演變而來，複合形成「易變的、揮發性的」"
+        }
+      ],
+      "summary": "volatile 由表示「飛、轉動」的字根 vol 加上複合形容詞字尾组成，字面意思是「會飛走的、容易揮發或善變的」。",
+      "savedAt": "2026-09-25T04:28:41.087Z"
     }
   ],
   "userRoots": []
