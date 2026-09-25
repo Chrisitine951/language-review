@@ -9680,6 +9680,32 @@
       ],
       "summary": "volatile 由表示「飛、轉動」的字根 vol 加上複合形容詞字尾组成，字面意思是「會飛走的、容易揮發或善變的」。",
       "savedAt": "2026-09-25T04:28:41.087Z"
+    },
+    {
+      "id": "ulkmuh11d3j1",
+      "word": "germinate",
+      "parts": [
+        {
+          "type": "root",
+          "text": "germ",
+          "meaning": "發芽、胚芽",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "in",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字中表達動作或方向的字尾"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾，使成為",
+          "grimmNote": "常用來構成動詞的字尾"
+        }
+      ],
+      "summary": "germ（發芽）結合表示進入的 in 與動詞字尾 -ate，組合出「使發芽、生長」的意思。",
+      "savedAt": "2026-09-25T13:59:08.431Z"
     }
   ],
   "userRoots": []
