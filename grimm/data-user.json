@@ -9726,6 +9726,20 @@
       ],
       "summary": "germinate 由表示「發芽」的字根 germin 加上動詞字尾 -ate 組成，意思是「使發芽、萌芽」。",
       "savedAt": "2026-09-25T14:01:23.452Z"
+    },
+    {
+      "id": "ulkmuh151vd3",
+      "word": "praise",
+      "parts": [
+        {
+          "type": "root",
+          "text": "praise",
+          "meaning": "稱讚、讚賞",
+          "grimmNote": "字根直接對應源自古法語的 praisier（拉丁語 pretium，意為價值、價格），透過唇音互換與母音通轉演變而來。"
+        }
+      ],
+      "summary": "praise（稱讚）源自拉丁文「賦予價值」，字面上的意思就是「給予某人或某物高度的價值與肯定」。",
+      "savedAt": "2026-09-25T14:02:00.505Z"
     }
   ],
   "userRoots": []
