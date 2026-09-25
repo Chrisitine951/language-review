@@ -9760,6 +9760,26 @@
       ],
       "summary": "ex-（向外）加上 -clude（關閉），字面意思就是「關在外面」，也就是把人或事物排除在外、不予納入。",
       "savedAt": "2026-09-25T14:02:33.466Z"
+    },
+    {
+      "id": "ulkmuh17h3f5",
+      "word": "falcon",
+      "parts": [
+        {
+          "type": "root",
+          "text": "falc",
+          "meaning": "彎曲、鐮刀",
+          "grimmNote": "對應唇音互換 f/p 與喉音互換 c/k，本義指其鉤狀的爪子與嘴喙"
+        },
+        {
+          "type": "suffix",
+          "text": "on",
+          "meaning": "名詞字尾（表物或小）",
+          "grimmNote": "常見名詞字尾，指具有彎曲特徵的鳥類"
+        }
+      ],
+      "summary": "falcon 源自拉丁語，本義指「擁有鐮刀般鉤爪與嘴喙的猛禽（獵鷹）」。",
+      "savedAt": "2026-09-25T14:03:53.547Z"
     }
   ],
   "userRoots": []
