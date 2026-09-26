@@ -9914,6 +9914,26 @@
       ],
       "summary": "con-（共同）加上 fess（說），字面意思就是「大家一起說出來」，引申為「坦白、招供、告解」。",
       "savedAt": "2026-09-26T03:14:49.112Z"
+    },
+    {
+      "id": "ulkmui7qsuh1",
+      "word": "restore",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常見字首，表示動作的重複或返回"
+        },
+        {
+          "type": "root",
+          "text": "store",
+          "meaning": "儲存、保管",
+          "grimmNote": "核心字根，與歷史上的存放、建立概念相關"
+        }
+      ],
+      "summary": "re-（再次、回來）加上 store（儲存），字面意思就是「再次儲存、把東西放回原處」，演變為今日的「恢復、修復」。",
+      "savedAt": "2026-09-26T09:54:39.113Z"
     }
   ],
   "userRoots": []
