@@ -9880,6 +9880,20 @@
       ],
       "summary": "「franchise」源自「自由（Frank）」的概念，演變為給予自由、特許或經銷權的權利。",
       "savedAt": "2026-09-26T03:01:56.638Z"
+    },
+    {
+      "id": "ulkmuht26s94",
+      "word": "patch",
+      "parts": [
+        {
+          "type": "root",
+          "text": "patch",
+          "meaning": "補釘、小塊土地",
+          "grimmNote": "包含雙子音規則與唇音互換，字根原始結構為 p-t-k（p/f, t/d, k/h），對應到 Germanic 語系的 patch / piece 概念"
+        }
+      ],
+      "summary": "patch 作為獨立字根使用，原始意指一小片、一塊布或土地，經歷唇音互換與雙子音結構演變至今。",
+      "savedAt": "2026-09-26T03:03:36.154Z"
     }
   ],
   "userRoots": []
