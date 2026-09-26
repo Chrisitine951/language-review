@@ -9834,6 +9834,32 @@
       ],
       "summary": "「reef」源自北歐語源，原本指突出的橫木或骨架，後來用來形容海面上或海面下一條條突起的岩石障礙，即為「暗礁」。",
       "savedAt": "2026-09-26T02:13:52.128Z"
+    },
+    {
+      "id": "ulkmuhrbthk2",
+      "word": "affection",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "af-",
+          "meaning": "加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音沒有實質意義，真正的字根從後面開始"
+        },
+        {
+          "type": "root",
+          "text": "fect",
+          "meaning": "做、建造、製造",
+          "grimmNote": "源自拉丁字根 facere（做），其中的 c 透過喉音互換 g / k / c 轉變為 t"
+        },
+        {
+          "type": "suffix",
+          "text": "-ion",
+          "meaning": "名詞字尾（表動作或狀態）",
+          "grimmNote": "常見的複合名詞字尾，用來將動詞轉為名詞"
+        }
+      ],
+      "summary": "affection 由加強語氣的字首 af- 結合表示「做、製造」的字根 fect（facere 的變體），再加上名詞字尾 -ion 構成，原本指內心被「製造或激發」的情感，演變為喜愛與感情。",
+      "savedAt": "2026-09-26T02:15:06.248Z"
     }
   ],
   "userRoots": []
