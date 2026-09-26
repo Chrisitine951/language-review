@@ -9860,6 +9860,26 @@
       ],
       "summary": "affection 由加強語氣的字首 af- 結合表示「做、製造」的字根 fect（facere 的變體），再加上名詞字尾 -ion 構成，原本指內心被「製造或激發」的情感，演變為喜愛與感情。",
       "savedAt": "2026-09-26T02:15:06.248Z"
+    },
+    {
+      "id": "ulkmuht01zy3",
+      "word": "franchise",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "fran",
+          "meaning": "自由；豁免",
+          "grimmNote": "源自法蘭克（Frank），指自由人"
+        },
+        {
+          "type": "suffix",
+          "text": "chise",
+          "meaning": "給予權利、特許權",
+          "grimmNote": "源自日耳曼語族的自由概念，透過字尾組合形成名詞/動詞"
+        }
+      ],
+      "summary": "「franchise」源自「自由（Frank）」的概念，演變為給予自由、特許或經銷權的權利。",
+      "savedAt": "2026-09-26T03:01:56.638Z"
     }
   ],
   "userRoots": []
