@@ -9894,6 +9894,26 @@
       ],
       "summary": "patch 作為獨立字根使用，原始意指一小片、一塊布或土地，經歷唇音互換與雙子音結構演變至今。",
       "savedAt": "2026-09-26T03:03:36.154Z"
+    },
+    {
+      "id": "ulkmuhtgm1k5",
+      "word": "confess",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con-",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 come，表示共同、全部"
+        },
+        {
+          "type": "root",
+          "text": "fess",
+          "meaning": "說、承認",
+          "grimmNote": "源自拉丁語 fateri（說、坦白），與 speak 屬於同一語系（唇音 f 與喉音/齒音的對應演變）"
+        }
+      ],
+      "summary": "con-（共同）加上 fess（說），字面意思就是「大家一起說出來」，引申為「坦白、招供、告解」。",
+      "savedAt": "2026-09-26T03:14:49.112Z"
     }
   ],
   "userRoots": []
