@@ -10164,6 +10164,26 @@
       ],
       "summary": "法蘭克（Franc）原意為「自由」，加上前綴 en- 轉化為動詞，再衍生出名詞 franchise（特許權、經銷權，即給予自由營業的權利）。",
       "savedAt": "2026-09-27T13:51:40.700Z"
+    },
+    {
+      "id": "ulkmujvo5bl6",
+      "word": "franchise",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "fran",
+          "meaning": "自由、特權",
+          "grimmNote": "源自日耳曼語族的字根，與 free（自由）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "chise",
+          "meaning": "給予…權利、特許權",
+          "grimmNote": "源自古法語，字尾結合了名詞與動詞化變化"
+        }
+      ],
+      "summary": "franchise 由表示「自由」的詞根與權利字尾組成，原意為「給予自由或特許權」，演變至今指商業上的加盟特許經營權。",
+      "savedAt": "2026-09-27T13:52:12.273Z"
     }
   ],
   "userRoots": []
