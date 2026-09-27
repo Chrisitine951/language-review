@@ -10086,6 +10086,32 @@
       ],
       "summary": "chimney 源自希臘語的「爐子」，透過喉音弱化與字尾演變，最終指稱家中排放煙霧的煙囪。",
       "savedAt": "2026-09-27T13:39:51.517Z"
+    },
+    {
+      "id": "ulkmujvmmub3",
+      "word": "franchise",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "en-",
+          "meaning": "動作化、令其如何",
+          "grimmNote": "en- 表示動作化、令其如何"
+        },
+        {
+          "type": "root",
+          "text": "franc",
+          "meaning": "自由、免除束縛",
+          "grimmNote": "源自古日耳曼語的自由之人，經由喉音互換等演變"
+        },
+        {
+          "type": "suffix",
+          "text": "-ise",
+          "meaning": "名詞或動詞字尾（表動作或狀態）",
+          "grimmNote": "-ise 作為複合字尾構成動詞或名詞"
+        }
+      ],
+      "summary": "法蘭克（Franc）原意為「自由」，加上前綴 en- 轉化為動詞，再衍生出名詞 franchise（特許權、經銷權，即給予自由營業的權利）。",
+      "savedAt": "2026-09-27T13:51:01.667Z"
     }
   ],
   "userRoots": []
