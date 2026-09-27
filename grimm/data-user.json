@@ -10066,6 +10066,26 @@
       ],
       "summary": "con-（共同）加上 tent（抓取、爭奪）與 -ion（名詞字尾），字面意思就是「大家聚在一起互相抓取、爭奪」，演變為「爭論、競爭、爭辯」。",
       "savedAt": "2026-09-27T12:36:38.191Z"
+    },
+    {
+      "id": "ulkmujv89r12",
+      "word": "chimney",
+      "parts": [
+        {
+          "type": "root",
+          "text": "chimn",
+          "meaning": "火爐、煙囪",
+          "grimmNote": "源自希臘語 kaminos（爐子），其中的喉音 k 弱化成 h，演變為拉丁語 caminus，再透過鼻音互換 m 與 n（或字體衍生日常變化），形成 chimney 的字根。"
+        },
+        {
+          "type": "suffix",
+          "text": "ey",
+          "meaning": "名詞字尾（表地方或物件）",
+          "grimmNote": "母音通轉與字尾變化，構成表示「排煙之處（爐灶/煙囪）」的名詞。"
+        }
+      ],
+      "summary": "chimney 源自希臘語的「爐子」，透過喉音弱化與字尾演變，最終指稱家中排放煙霧的煙囪。",
+      "savedAt": "2026-09-27T13:39:51.517Z"
     }
   ],
   "userRoots": []
