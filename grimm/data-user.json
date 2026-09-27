@@ -9954,6 +9954,32 @@
       ],
       "summary": "sanction 由代表神聖或法律的字根與名詞字尾組成，原意為制定法律或賦予神聖的強制力，演變為「批准、制裁」。",
       "savedAt": "2026-09-27T02:32:26.609Z"
+    },
+    {
+      "id": "ulkmuj7kryf2",
+      "word": "prominent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pro-",
+          "meaning": "向前、在前",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "min",
+          "meaning": "突出、伸出",
+          "grimmNote": "透過母音通轉與鼻音互換等機制演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "-ent",
+          "meaning": "形容詞字尾，表「正在…的」",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "字首 pro-（向前）加上表示突出的字根 min，以及形容詞字尾 -ent，組成了意思為「向前突出、顯著的、傑出的」的 prominent。",
+      "savedAt": "2026-09-27T02:37:44.199Z"
     }
   ],
   "userRoots": []
