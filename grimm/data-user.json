@@ -10000,6 +10000,26 @@
       ],
       "summary": "「garment」由核心字根 garm（衣服、裝備）加上名詞字尾 -ent 組合而成，原意指身上穿戴的衣物或裝備。",
       "savedAt": "2026-09-27T08:59:16.934Z"
+    },
+    {
+      "id": "ulkmujl8i0w2",
+      "word": "compel",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "com-",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 come，表示共同、聚集"
+        },
+        {
+          "type": "root",
+          "text": "pel",
+          "meaning": "推、驅使",
+          "grimmNote": "屬於唇音互換與子音變化家族，與 push 的 p/sh 有關"
+        }
+      ],
+      "summary": "com-（一起）加上 -pel（推），字面意思就是「大家一起推」，引申為「強迫、迫使」。",
+      "savedAt": "2026-09-27T09:00:06.080Z"
     }
   ],
   "userRoots": []
