@@ -10040,6 +10040,32 @@
       ],
       "summary": "字首 as- 加強語氣，結合表示庇護的字根 -ylum，共同構成指稱「避難所、庇護所」的 asylum。",
       "savedAt": "2026-09-27T09:07:33.098Z"
+    },
+    {
+      "id": "ulkmujsyysu1",
+      "word": "contention",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con-",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 com- / con-（一起、共同）"
+        },
+        {
+          "type": "root",
+          "text": "tent",
+          "meaning": "抓住、容納、爭奪",
+          "grimmNote": "源自拉丁字根 tenere（握住、持有），其中 t 經由舌音互換 d/t 演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "-ion",
+          "meaning": "名詞字尾（表動作或狀態）",
+          "grimmNote": "名詞字尾，構成抽象名詞"
+        }
+      ],
+      "summary": "con-（共同）加上 tent（抓取、爭奪）與 -ion（名詞字尾），字面意思就是「大家聚在一起互相抓取、爭奪」，演變為「爭論、競爭、爭辯」。",
+      "savedAt": "2026-09-27T12:36:38.191Z"
     }
   ],
   "userRoots": []
