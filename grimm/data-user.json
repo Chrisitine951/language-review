@@ -9980,6 +9980,26 @@
       ],
       "summary": "字首 pro-（向前）加上表示突出的字根 min，以及形容詞字尾 -ent，組成了意思為「向前突出、顯著的、傑出的」的 prominent。",
       "savedAt": "2026-09-27T02:37:44.199Z"
+    },
+    {
+      "id": "ulkmujl7g3q1",
+      "word": "garment",
+      "parts": [
+        {
+          "type": "root",
+          "text": "garm",
+          "meaning": "衣服、裝備",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ent",
+          "meaning": "名詞字尾，表事物、器具或結果",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "「garment」由核心字根 garm（衣服、裝備）加上名詞字尾 -ent 組合而成，原意指身上穿戴的衣物或裝備。",
+      "savedAt": "2026-09-27T08:59:16.934Z"
     }
   ],
   "userRoots": []
