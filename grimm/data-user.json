@@ -10482,6 +10482,38 @@
       ],
       "summary": "pharmacy 由表示藥劑的字根與表示地方的字尾 -y 結合而成，字面意思就是「賣藥的地方」。",
       "savedAt": "2026-09-28T15:53:51.109Z"
+    },
+    {
+      "id": "ulkmulfj64nd",
+      "word": "aviation",
+      "parts": [
+        {
+          "type": "root",
+          "text": "av",
+          "meaning": "鳥",
+          "grimmNote": "源自印歐語根 *awi-（鳥），唇音互換 b/p/f/v/w 規則中，v 與 w 相通，對應到英文中表示鳥的簡單字（如 avian 中的 av-）"
+        },
+        {
+          "type": "suffix",
+          "text": "i",
+          "meaning": "母音連接字尾",
+          "grimmNote": "母音通轉 a/e/i/o/u/y 規則，用作詞幹與字尾間的連接母音"
+        },
+        {
+          "type": "suffix",
+          "text": "at",
+          "meaning": "動詞與動作性質字尾",
+          "grimmNote": "舌音互換 d/t/s 規則的變體，-ate 的縮短形式，表示動作或狀態"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾（表動作或結果）",
+          "grimmNote": "複合字尾，表示過程、行為或其結果的名詞"
+        }
+      ],
+      "summary": "aviation（航空、飛行）源自與「鳥（av-）」相關的字根，加上表動作與名詞的字尾組合而成，意指如鳥類一般在空中飛行的技術與活動。",
+      "savedAt": "2026-09-28T15:55:58.535Z"
     }
   ],
   "userRoots": []
