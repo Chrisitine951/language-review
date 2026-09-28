@@ -10414,6 +10414,20 @@
       ],
       "summary": "torrent（激流、洪流）由表示奔騰的字根 torr 加上表示狀態的字尾 ent 組合而成，形容水勢如奔馬般奔騰不息。",
       "savedAt": "2026-09-28T15:40:06.059Z"
+    },
+    {
+      "id": "ulkmulf1wta9",
+      "word": "gland",
+      "parts": [
+        {
+          "type": "root",
+          "text": "gland",
+          "meaning": "腺",
+          "grimmNote": "對應原始日耳曼語的 glandu-（橡實），因形狀相似而轉指體內的「腺」。字首的 g 屬於喉音互換（g/k/c），尾音的 d 屬於舌音互換（d/t/s）。"
+        }
+      ],
+      "summary": "gland 原本是指「橡實」，後來因為腺體長得像橡實而演變出「腺」的意思。",
+      "savedAt": "2026-09-28T15:42:33.310Z"
     }
   ],
   "userRoots": []
