@@ -10210,6 +10210,26 @@
       ],
       "summary": "由否定字首 in- 加上表示「尊貴、值得」的字根 dign，再接形容詞字尾 -ant 組成，字面意思是「覺得不受尊重、人格受辱」，引申為「憤慨的、鳴不平的」。",
       "savedAt": "2026-09-28T05:20:01.672Z"
+    },
+    {
+      "id": "ulkmukt8dm32",
+      "word": "radical",
+      "parts": [
+        {
+          "type": "root",
+          "text": "rad",
+          "meaning": "根部",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ical",
+          "meaning": "形容詞字尾，表「關於…的」",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "radical 由代表根部的 rad 加上形容詞字尾 -ical 組成，字面意思是「源自根本的、徹底的」。",
+      "savedAt": "2026-09-28T05:31:43.467Z"
     }
   ],
   "userRoots": []
