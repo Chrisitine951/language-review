@@ -10302,6 +10302,26 @@
       ],
       "summary": "「para-（旁邊）」加上「sit（坐）」，字面意思是「坐在別人的飯桌旁邊蹭飯吃的人」，演變為現代的「寄生蟲」。",
       "savedAt": "2026-09-28T15:25:14.981Z"
+    },
+    {
+      "id": "ulkmuleidsf4",
+      "word": "orphan",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "or",
+          "meaning": "出、向外（源自 ex- 的流音與母音通轉）",
+          "grimmNote": "母音通轉 e 轉 o，唇音/流音變化"
+        },
+        {
+          "type": "root",
+          "text": "phan",
+          "meaning": "失去、無親屬（對應至拉丁語 orbus、希臘語 orphanos）",
+          "grimmNote": "唇音 p 與 b 互換，母音通轉"
+        }
+      ],
+      "summary": "「orphan」（孤兒）源自古代印歐語根，字首 or- 表示向外、離開，結合表示失去親人的字根 phan（對應 b/p 唇音互換），形容被拋下、孤立無依的人。",
+      "savedAt": "2026-09-28T15:27:22.191Z"
     }
   ],
   "userRoots": []
