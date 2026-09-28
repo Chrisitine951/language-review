@@ -10348,6 +10348,32 @@
       ],
       "summary": "versatile 由表示「轉」的字根 vers 加上形容詞字尾組成，原意是指「轉得很靈活的」，引申為「多才多藝的、多用途的」。",
       "savedAt": "2026-09-28T15:35:24.671Z"
+    },
+    {
+      "id": "ulkmuleu2z26",
+      "word": "desperate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "分離、離開、否定",
+          "grimmNote": "常見字首，表示否定或向下、離開。"
+        },
+        {
+          "type": "root",
+          "text": "sper",
+          "meaning": "希望",
+          "grimmNote": "源自拉丁字根，與希望（hope）相關。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "形容詞字尾，表示具備某種狀態",
+          "grimmNote": "常見形容詞與動詞字尾。"
+        }
+      ],
+      "summary": "de-（離開、否定）加上 sper（希望）與形容詞字尾 -ate，字面意思就是「離開希望的」，也就是絕望的、拼命的。",
+      "savedAt": "2026-09-28T15:36:28.046Z"
     }
   ],
   "userRoots": []
