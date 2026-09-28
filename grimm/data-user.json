@@ -10322,6 +10322,32 @@
       ],
       "summary": "「orphan」（孤兒）源自古代印歐語根，字首 or- 表示向外、離開，結合表示失去親人的字根 phan（對應 b/p 唇音互換），形容被拋下、孤立無依的人。",
       "savedAt": "2026-09-28T15:27:22.191Z"
+    },
+    {
+      "id": "ulkmulesq2n5",
+      "word": "versatile",
+      "parts": [
+        {
+          "type": "root",
+          "text": "vers",
+          "meaning": "轉、旋轉",
+          "grimmNote": "源自古印歐語，核心意義為轉動；包含唇音互換 b / p / f / v / w 中的 v"
+        },
+        {
+          "type": "suffix",
+          "text": "at",
+          "meaning": "動詞或形容詞字尾（構成複合字尾 -ative 的一部分）",
+          "grimmNote": "母音通轉與連結字尾"
+        },
+        {
+          "type": "suffix",
+          "text": "ile",
+          "meaning": "可以被…的、具備…性質的",
+          "grimmNote": "形容詞字尾，結合前段構成 versatile（能轉動的、多才多藝的）"
+        }
+      ],
+      "summary": "versatile 由表示「轉」的字根 vers 加上形容詞字尾組成，原意是指「轉得很靈活的」，引申為「多才多藝的、多用途的」。",
+      "savedAt": "2026-09-28T15:35:24.671Z"
     }
   ],
   "userRoots": []
