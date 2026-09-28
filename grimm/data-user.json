@@ -10462,6 +10462,26 @@
       ],
       "summary": "「brass」為單一原始字根，直接演變自表示金屬黃銅的古語。",
       "savedAt": "2026-09-28T15:50:10.232Z"
+    },
+    {
+      "id": "ulkmulfgft1c",
+      "word": "pharmacy",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "phar",
+          "meaning": "藥劑、草藥",
+          "grimmNote": "源自古希臘語 pharmakon（藥物、毒藥），其中 ph 是唇音互換 f/p 的變化形式。"
+        },
+        {
+          "type": "suffix",
+          "text": "macy",
+          "meaning": "地方（名詞字尾）",
+          "grimmNote": "-y 為常見名詞字尾，結合字根表示「賣藥或配藥的地方」（藥局）。"
+        }
+      ],
+      "summary": "pharmacy 由表示藥劑的字根與表示地方的字尾 -y 結合而成，字面意思就是「賣藥的地方」。",
+      "savedAt": "2026-09-28T15:53:51.109Z"
     }
   ],
   "userRoots": []
