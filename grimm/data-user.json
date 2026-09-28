@@ -10230,6 +10230,26 @@
       ],
       "summary": "radical 由代表根部的 rad 加上形容詞字尾 -ical 組成，字面意思是「源自根本的、徹底的」。",
       "savedAt": "2026-09-28T05:31:43.467Z"
+    },
+    {
+      "id": "ulkmule947e1",
+      "word": "tremble",
+      "parts": [
+        {
+          "type": "root",
+          "text": "trem",
+          "meaning": "發抖、顫動",
+          "grimmNote": "原始字根，表示身體或物體因恐懼或寒冷而顫抖"
+        },
+        {
+          "type": "suffix",
+          "text": "ble",
+          "meaning": "重複或持續動作的字尾",
+          "grimmNote": "結合唇音互換與常見動詞字尾，表示持續、反覆的動作"
+        }
+      ],
+      "summary": "tremble 由表示「發抖」的字根 trem 加上表示持續動作的字尾 ble 組成，意思是持續地發抖或顫動。",
+      "savedAt": "2026-09-28T15:20:09.866Z"
     }
   ],
   "userRoots": []
