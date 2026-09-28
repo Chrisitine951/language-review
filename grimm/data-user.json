@@ -10448,6 +10448,20 @@
       ],
       "summary": "pillar 由表示柱子或條狀物的字根（源自 bar 的流音變化）加上字尾組合而成，意指支撐建築的「柱子」。",
       "savedAt": "2026-09-28T15:45:00.279Z"
+    },
+    {
+      "id": "ulkmulfbpdkb",
+      "word": "brass",
+      "parts": [
+        {
+          "type": "root",
+          "text": "brass",
+          "meaning": "黃銅",
+          "grimmNote": "對應原始日耳曼語的 brasa-，保留原始金屬材質的詞源結構"
+        }
+      ],
+      "summary": "「brass」為單一原始字根，直接演變自表示金屬黃銅的古語。",
+      "savedAt": "2026-09-28T15:50:10.232Z"
     }
   ],
   "userRoots": []
