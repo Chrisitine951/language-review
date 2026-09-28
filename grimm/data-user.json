@@ -10184,6 +10184,32 @@
       ],
       "summary": "franchise 由表示「自由」的詞根與權利字尾組成，原意為「給予自由或特許權」，演變至今指商業上的加盟特許經營權。",
       "savedAt": "2026-09-27T13:52:12.273Z"
+    },
+    {
+      "id": "ulkmukstc3s1",
+      "word": "indignant",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入；此處表否定",
+          "grimmNote": "常用字首 in-（在此表否定）"
+        },
+        {
+          "type": "root",
+          "text": "dign",
+          "meaning": "值得、尊貴",
+          "grimmNote": "源自古印歐語，與 decent、dignity 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "-ant",
+          "meaning": "形容詞字尾，表狀態或性質",
+          "grimmNote": "形容詞字尾 -ant"
+        }
+      ],
+      "summary": "由否定字首 in- 加上表示「尊貴、值得」的字根 dign，再接形容詞字尾 -ant 組成，字面意思是「覺得不受尊重、人格受辱」，引申為「憤慨的、鳴不平的」。",
+      "savedAt": "2026-09-28T05:20:01.672Z"
     }
   ],
   "userRoots": []
