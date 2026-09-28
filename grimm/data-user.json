@@ -10428,6 +10428,26 @@
       ],
       "summary": "gland 原本是指「橡實」，後來因為腺體長得像橡實而演變出「腺」的意思。",
       "savedAt": "2026-09-28T15:42:33.310Z"
+    },
+    {
+      "id": "ulkmulf527ra",
+      "word": "pillar",
+      "parts": [
+        {
+          "type": "root",
+          "text": "pil",
+          "meaning": "柱子、支柱",
+          "grimmNote": "流音互換 l / r：源自流音 r 的變化，與 bar（條狀物、木柱）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "lar",
+          "meaning": "名詞字尾（表物或具體結構），其中的 l 與前面重複或呼應",
+          "grimmNote": "-ar 為名詞/形容詞字尾，用來構成具體事物的名稱"
+        }
+      ],
+      "summary": "pillar 由表示柱子或條狀物的字根（源自 bar 的流音變化）加上字尾組合而成，意指支撐建築的「柱子」。",
+      "savedAt": "2026-09-28T15:45:00.279Z"
     }
   ],
   "userRoots": []
