@@ -10276,6 +10276,32 @@
       ],
       "summary": "「para-（旁邊）」加上「sit（坐）」，字面意思是「坐在別人的飯桌旁邊蹭飯吃的人」，演變為現代的「寄生蟲」。",
       "savedAt": "2026-09-28T15:25:09.812Z"
+    },
+    {
+      "id": "ulkmulefnmt3",
+      "word": "parasite",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "para",
+          "meaning": "在旁邊、旁邊",
+          "grimmNote": "源自希臘文字首 para-，表示旁、邊、副"
+        },
+        {
+          "type": "root",
+          "text": "sit",
+          "meaning": "坐",
+          "grimmNote": "原始印歐語字根，原意為坐著"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "名詞或動詞結尾",
+          "grimmNote": "母音通轉與字尾結構調節"
+        }
+      ],
+      "summary": "「para-（旁邊）」加上「sit（坐）」，字面意思是「坐在別人的飯桌旁邊蹭飯吃的人」，演變為現代的「寄生蟲」。",
+      "savedAt": "2026-09-28T15:25:14.981Z"
     }
   ],
   "userRoots": []
