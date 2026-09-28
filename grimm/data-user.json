@@ -10374,6 +10374,26 @@
       ],
       "summary": "de-（離開、否定）加上 sper（希望）與形容詞字尾 -ate，字面意思就是「離開希望的」，也就是絕望的、拼命的。",
       "savedAt": "2026-09-28T15:36:28.046Z"
+    },
+    {
+      "id": "ulkmulev0g87",
+      "word": "contempt",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con-",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 come 的前綴，表示共同、加強"
+        },
+        {
+          "type": "root",
+          "text": "tempt",
+          "meaning": "嘗試、試探",
+          "grimmNote": "核心字根，源自拉丁語 temptare（試探、評估），經由舌音互換 d/t 演變而來"
+        }
+      ],
+      "summary": "con-（共同）加上 tempt（試探），原本指「大家一齊對某人或某事進行評估、試探」，後來演變為「認為對方不值得起心動念去試探」，也就是鄙視、輕蔑的意思。",
+      "savedAt": "2026-09-28T15:37:11.432Z"
     }
   ],
   "userRoots": []
