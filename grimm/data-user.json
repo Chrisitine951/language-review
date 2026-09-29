@@ -10666,6 +10666,32 @@
       ],
       "summary": "「puppet」由表示小孩或小東西的字根加上指小詞字尾「-et」組成，字面意思是「小孩子玩的玩偶」。",
       "savedAt": "2026-09-29T03:54:43.982Z"
+    },
+    {
+      "id": "ulkmum5bu1b8",
+      "word": "egalitarian",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "e-",
+          "meaning": "出去、向外",
+          "grimmNote": "ex- / e-＝出去、向外"
+        },
+        {
+          "type": "root",
+          "text": "gal",
+          "meaning": "平等、均勻",
+          "grimmNote": "喉音互換 g / k / c 家族，與 equal（相等）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "-itarian",
+          "meaning": "…主義者、主張…的人（複合形容詞與名詞字尾）",
+          "grimmNote": "由形容詞字尾 -ary 與表示人的 -ian 結合而成"
+        }
+      ],
+      "summary": "egalitarian（平等主義的）由表示「向外」的字首 e- 結合代表「平等」的字根 gal，再加上複合字尾組成，字面意思就是「主張人與人之間向外展現平等的人」。",
+      "savedAt": "2026-09-29T03:58:06.287Z"
     }
   ],
   "userRoots": []
