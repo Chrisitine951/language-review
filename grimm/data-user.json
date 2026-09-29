@@ -10606,6 +10606,26 @@
       ],
       "summary": "de-（向下）加上表示磨損的字根，字面意思就是「向下磨損」，也就是對人或物造成損害的「損害、損失」。",
       "savedAt": "2026-09-29T03:40:47.212Z"
+    },
+    {
+      "id": "ulkmum4smrd5",
+      "word": "polish",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "po",
+          "meaning": "向下、朝向",
+          "grimmNote": "源自 ob- 經由子音同化與流音弱化變體為 po-"
+        },
+        {
+          "type": "root",
+          "text": "lish",
+          "meaning": "擦亮、打磨",
+          "grimmNote": "源自古印歐語根，對應到拉丁語 polire（打磨）"
+        }
+      ],
+      "summary": "字首 po-（向下、朝向）加上表示打磨的字根 -lish 組合成 polish（擦亮、打磨）。",
+      "savedAt": "2026-09-29T03:43:10.393Z"
     }
   ],
   "userRoots": []
