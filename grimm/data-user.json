@@ -10692,6 +10692,26 @@
       ],
       "summary": "egalitarian（平等主義的）由表示「向外」的字首 e- 結合代表「平等」的字根 gal，再加上複合字尾組成，字面意思就是「主張人與人之間向外展現平等的人」。",
       "savedAt": "2026-09-29T03:58:06.287Z"
+    },
+    {
+      "id": "ulkmum5g8gy9",
+      "word": "surrender",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "sur-",
+          "meaning": "向下、往回",
+          "grimmNote": "由源自 ob- / sub- 等表「向下」的字首演變而來（sub- 經同化作用變為 sur-）"
+        },
+        {
+          "type": "root",
+          "text": "render",
+          "meaning": "給予、交出",
+          "grimmNote": "字根部分對應拉丁文 reddere（re- 再次、回 + dare 給予），其中的 d/t/s 舌音互換及流音 r 的變化"
+        }
+      ],
+      "summary": "sur-（向下）加上 render（給予、交出），字面意思就是把東西交出來、放棄抵抗，演變為「投降、交出」。",
+      "savedAt": "2026-09-29T04:01:31.618Z"
     }
   ],
   "userRoots": []
