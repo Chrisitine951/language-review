@@ -10514,6 +10514,32 @@
       ],
       "summary": "aviation（航空、飛行）源自與「鳥（av-）」相關的字根，加上表動作與名詞的字尾組合而成，意指如鳥類一般在空中飛行的技術與活動。",
       "savedAt": "2026-09-28T15:55:58.535Z"
+    },
+    {
+      "id": "ulkmum406d71",
+      "word": "remainder",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常用字首 re- 表「再次、向後、回來」"
+        },
+        {
+          "type": "root",
+          "text": "main",
+          "meaning": "留在、停留、保持",
+          "grimmNote": "源自拉丁語 manere（停留），其中母音通轉 a 轉 e（main 變 min）"
+        },
+        {
+          "type": "suffix",
+          "text": "-der",
+          "meaning": "人、物；表名詞或動作的結果",
+          "grimmNote": "字尾 -er 表物，前面加上舌音輔助 d，形成 -der（餘留下來的東西）"
+        }
+      ],
+      "summary": "re-（回來、剩下）加上字根 main（停留）與名詞字尾 -der，字面意思是「留下來的東西」，也就是「餘數、剩餘」。",
+      "savedAt": "2026-09-29T03:21:02.779Z"
     }
   ],
   "userRoots": []
