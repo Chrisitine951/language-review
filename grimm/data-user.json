@@ -10712,6 +10712,20 @@
       ],
       "summary": "sur-（向下）加上 render（給予、交出），字面意思就是把東西交出來、放棄抵抗，演變為「投降、交出」。",
       "savedAt": "2026-09-29T04:01:31.618Z"
+    },
+    {
+      "id": "ulkmum5kvo1a",
+      "word": "gross",
+      "parts": [
+        {
+          "type": "root",
+          "text": "gross",
+          "meaning": "粗大的、總共的、噁心的",
+          "grimmNote": "包含雙子音規則，s 重複表加強語氣"
+        }
+      ],
+      "summary": "gross 源自原始印歐語根，透過雙子音加強語氣演變出「龐大、粗糙、整體」的涵義。",
+      "savedAt": "2026-09-29T04:05:08.305Z"
     }
   ],
   "userRoots": []
