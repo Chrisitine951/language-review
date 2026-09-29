@@ -10566,6 +10566,26 @@
       ],
       "summary": "aptitude 由表示朝向的字首加上表示「拿取、適合」的字根演變而來，字面意思就是「朝向適合的狀態」，也就是天資與才能。",
       "savedAt": "2026-09-29T03:26:55.594Z"
+    },
+    {
+      "id": "ulkmum4m7za3",
+      "word": "equity",
+      "parts": [
+        {
+          "type": "root",
+          "text": "equ",
+          "meaning": "相等、公平",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ity",
+          "meaning": "名詞字尾（表性質、狀態）",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "equity 由表示「相等」的字根 equ 加上名詞字尾 -ity 組成，字面意思是「相等的狀態」，引申為公平、公正與股權。",
+      "savedAt": "2026-09-29T03:38:11.304Z"
     }
   ],
   "userRoots": []
