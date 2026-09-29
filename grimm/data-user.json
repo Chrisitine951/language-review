@@ -10646,6 +10646,26 @@
       ],
       "summary": "razor（剃刀）由表示「刮」的字根與表示器具的字尾組成，意即「用來刮鬍子的器具」。",
       "savedAt": "2026-09-29T03:45:50.859Z"
+    },
+    {
+      "id": "ulkmum57hxq7",
+      "word": "puppet",
+      "parts": [
+        {
+          "type": "root",
+          "text": "pupp",
+          "meaning": "小孩、玩偶的源頭",
+          "grimmNote": "唇音互換 b / p / f / v / w，源自表示小孩或小東西的字根"
+        },
+        {
+          "type": "suffix",
+          "text": "et",
+          "meaning": "小（指小詞字尾）",
+          "grimmNote": "常見指小詞字尾 -et，表示「小的東西」"
+        }
+      ],
+      "summary": "「puppet」由表示小孩或小東西的字根加上指小詞字尾「-et」組成，字面意思是「小孩子玩的玩偶」。",
+      "savedAt": "2026-09-29T03:54:43.982Z"
     }
   ],
   "userRoots": []
