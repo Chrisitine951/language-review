@@ -10726,6 +10726,26 @@
       ],
       "summary": "gross 源自原始印歐語根，透過雙子音加強語氣演變出「龐大、粗糙、整體」的涵義。",
       "savedAt": "2026-09-29T04:05:08.305Z"
+    },
+    {
+      "id": "ulkmumj3vxf1",
+      "word": "maiden",
+      "parts": [
+        {
+          "type": "root",
+          "text": "maid",
+          "meaning": "少女、年輕未婚女子",
+          "grimmNote": "古代日耳曼語源，與古英文 mægð（少女）同源，屬於核心語根"
+        },
+        {
+          "type": "suffix",
+          "text": "-en",
+          "meaning": "小；形容詞或名詞字尾（表陰性或幼小）",
+          "grimmNote": "常見的指小與名詞字尾，用來指稱年輕的女性"
+        }
+      ],
+      "summary": "「maiden」由表示少女的核心語根「maid」加上指小與名詞字尾「-en」組合而成，原意即為「小女孩、年輕未婚女子」。",
+      "savedAt": "2026-09-29T10:23:50.115Z"
     }
   ],
   "userRoots": []
