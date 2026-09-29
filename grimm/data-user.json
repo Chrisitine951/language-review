@@ -10586,6 +10586,26 @@
       ],
       "summary": "equity 由表示「相等」的字根 equ 加上名詞字尾 -ity 組成，字面意思是「相等的狀態」，引申為公平、公正與股權。",
       "savedAt": "2026-09-29T03:38:11.304Z"
+    },
+    {
+      "id": "ulkmum4pka44",
+      "word": "detriment",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de",
+          "meaning": "向下；朝向；分離、離開",
+          "grimmNote": "源自常用字首 ob-/oc-/de- 的變體，表示向下或負面意涵。"
+        },
+        {
+          "type": "root",
+          "text": "triment",
+          "meaning": "磨損、損害",
+          "grimmNote": "核心字根來自拉丁文 terere（磨損），其中的母音 e 與 i 透過「母音通轉 a / e / i / o / u / y」互換；子音 t 與 m 分別保留核心結構，字尾結構成為名詞。"
+        }
+      ],
+      "summary": "de-（向下）加上表示磨損的字根，字面意思就是「向下磨損」，也就是對人或物造成損害的「損害、損失」。",
+      "savedAt": "2026-09-29T03:40:47.212Z"
     }
   ],
   "userRoots": []
