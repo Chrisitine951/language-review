@@ -10540,6 +10540,32 @@
       ],
       "summary": "re-（回來、剩下）加上字根 main（停留）與名詞字尾 -der，字面意思是「留下來的東西」，也就是「餘數、剩餘」。",
       "savedAt": "2026-09-29T03:21:02.779Z"
+    },
+    {
+      "id": "ulkmum47qlm2",
+      "word": "aptitude",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ap",
+          "meaning": "朝向、去",
+          "grimmNote": "應用 ad- 加上重複子音的結構規則（d 轉為 p），表加強語氣"
+        },
+        {
+          "type": "root",
+          "text": "tit",
+          "meaning": "拿、抓、適合",
+          "grimmNote": "源自字根 -apt（拿取、適合），其中 p 透過唇音互換轉為 t，並套用雙子音規則（tt 的第二個 t 僅為結構音）"
+        },
+        {
+          "type": "suffix",
+          "text": "ude",
+          "meaning": "名詞字尾，表狀態或性質",
+          "grimmNote": "常見名詞字尾 -ude，用來構成抽象名詞"
+        }
+      ],
+      "summary": "aptitude 由表示朝向的字首加上表示「拿取、適合」的字根演變而來，字面意思就是「朝向適合的狀態」，也就是天資與才能。",
+      "savedAt": "2026-09-29T03:26:55.594Z"
     }
   ],
   "userRoots": []
