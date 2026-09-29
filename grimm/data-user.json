@@ -10626,6 +10626,26 @@
       ],
       "summary": "字首 po-（向下、朝向）加上表示打磨的字根 -lish 組合成 polish（擦亮、打磨）。",
       "savedAt": "2026-09-29T03:43:10.393Z"
+    },
+    {
+      "id": "ulkmum4w2kr6",
+      "word": "razor",
+      "parts": [
+        {
+          "type": "root",
+          "text": "raz",
+          "meaning": "刮、擦",
+          "grimmNote": "源自古印歐語根，核心意義為刮或削"
+        },
+        {
+          "type": "suffix",
+          "text": "or",
+          "meaning": "器具、物（名詞字尾）",
+          "grimmNote": "-er / -or 表人或物，此處表示「用來刮的器具」"
+        }
+      ],
+      "summary": "razor（剃刀）由表示「刮」的字根與表示器具的字尾組成，意即「用來刮鬍子的器具」。",
+      "savedAt": "2026-09-29T03:45:50.859Z"
     }
   ],
   "userRoots": []
