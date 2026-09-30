@@ -1,0 +1,3617 @@
+{
+  "germanVocabulary": [
+    {
+      "id": "udemrekfzmh1",
+      "article": "",
+      "word": "heiß",
+      "meaning": "熱的/辣的",
+      "category": "adjective",
+      "example": "Es ist sehr heiß. / Ich bin heiß.",
+      "pos": "形容詞",
+      "note": ""
+    },
+    {
+      "id": "udemrekfzmh2",
+      "article": "",
+      "word": "sterben",
+      "meaning": "死亡",
+      "category": "verb",
+      "example": "Ich sterbe vor Hitze",
+      "pos": "動詞",
+      "note": "",
+      "conjugation": {
+        "ich": "sterbe",
+        "du": "stirbst",
+        "er/sie/es": "stirbt",
+        "wir": "sterben",
+        "ihr": "sterbt",
+        "sie/Sie": "sterben"
+      }
+    },
+    {
+      "id": "udemrekfzmh3",
+      "article": "die",
+      "word": "Hitze",
+      "meaning": "熱、酷熱",
+      "category": "nature",
+      "example": "Ich sterbe vor Hitze",
+      "pos": "陰性名詞",
+      "note": ""
+    },
+    {
+      "id": "udemrekfzmh4",
+      "article": "",
+      "word": "affenheiß",
+      "meaning": "超級熱的",
+      "category": "adjective",
+      "example": "Es ist affenheiß",
+      "pos": "形容詞",
+      "note": ""
+    },
+    {
+      "id": "udemrekfzmh5",
+      "article": "",
+      "word": "schmelzen",
+      "meaning": "融化",
+      "category": "verb",
+      "example": "Ich schmelze weg",
+      "pos": "動詞",
+      "note": "",
+      "conjugation": {
+        "ich": "schmelze",
+        "du": "schmilzt",
+        "er/sie/es": "schmilzt",
+        "wir": "schmelzen",
+        "ihr": "schmelzt",
+        "sie/Sie": "schmelzen"
+      }
+    },
+    {
+      "id": "udemrekfzmh11",
+      "article": "",
+      "word": "sehr",
+      "meaning": "很/非常",
+      "category": "adverb",
+      "example": "Es ist sehr heiß.",
+      "pos": "副詞"
+    },
+    {
+      "id": "udemrekfzmh13",
+      "article": "",
+      "word": "kalt",
+      "meaning": "冷的/冷酷的",
+      "category": "adjective",
+      "example": "Mir ist kalt. / Ich bin kalt.",
+      "pos": "形容詞",
+      "note": ""
+    },
+    {
+      "id": "udemrekfzmh14",
+      "article": "",
+      "word": "von",
+      "meaning": "來自/從",
+      "category": "preposition",
+      "example": "",
+      "pos": "介系詞"
+    },
+    {
+      "id": "udemreo7jra1",
+      "article": "",
+      "word": "Hallo!",
+      "meaning": "哈囉!",
+      "category": "greeting",
+      "example": "最常見,任何時間都可以",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra2",
+      "article": "",
+      "word": "Hi!",
+      "meaning": "嗨!",
+      "category": "greeting",
+      "example": "很口語,朋友之間",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra3",
+      "article": "",
+      "word": "Guten Morgen!",
+      "meaning": "早安!",
+      "category": "greeting",
+      "example": "約5:00-10:00",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra4",
+      "article": "",
+      "word": "Guten Tag!",
+      "meaning": "您好!",
+      "category": "greeting",
+      "example": "白天,正式場合",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra5",
+      "article": "",
+      "word": "Guten Abend!",
+      "meaning": "晚安/晚上好!",
+      "category": "greeting",
+      "example": "晚上見面時",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra6",
+      "article": "",
+      "word": "Grüß Gott!",
+      "meaning": "您好!",
+      "category": "greeting",
+      "example": "德國南部、奥地利",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra7",
+      "article": "",
+      "word": "Servus!",
+      "meaning": "哈囉/掰掰!",
+      "category": "greeting",
+      "example": "巴伐利亞、奥地利",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra8",
+      "article": "",
+      "word": "Moin!",
+      "meaning": "哈囉!",
+      "category": "greeting",
+      "example": "德國北部,一整天都可使用",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra9",
+      "article": "",
+      "word": "Gut, danke.",
+      "meaning": "不錯,謝謝。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra10",
+      "article": "",
+      "word": "Ganz gut.",
+      "meaning": "還不錯。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra11",
+      "article": "",
+      "word": "Sehr gut.",
+      "meaning": "很好。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra12",
+      "article": "",
+      "word": "Super!",
+      "meaning": "超棒!",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra13",
+      "article": "",
+      "word": "Prima!",
+      "meaning": "很棒!",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra14",
+      "article": "",
+      "word": "Alles gut.",
+      "meaning": "一切都好。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra15",
+      "article": "",
+      "word": "Passt schon.",
+      "meaning": "還行啦。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra16",
+      "article": "",
+      "word": "Es geht.",
+      "meaning": "普普通通。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra17",
+      "article": "",
+      "word": "Kann nicht klagen.",
+      "meaning": "還行,沒什麼好抱怨的。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra18",
+      "article": "",
+      "word": "Nicht schlecht.",
+      "meaning": "不錯。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra19",
+      "article": "",
+      "word": "So lala.",
+      "meaning": "馬馬虎虎。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra20",
+      "article": "",
+      "word": "Muss ja.",
+      "meaning": "還能怎樣呢。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra21",
+      "article": "",
+      "word": "Könnte besser sein.",
+      "meaning": "可以更好。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra22",
+      "article": "",
+      "word": "Nicht so gut.",
+      "meaning": "不太好。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra23",
+      "article": "",
+      "word": "Schlecht.",
+      "meaning": "很糟。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra24",
+      "article": "",
+      "word": "Sehr schlecht.",
+      "meaning": "非常糟。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra25",
+      "article": "",
+      "word": "Ich bin müde.",
+      "meaning": "我很累。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra26",
+      "article": "",
+      "word": "Ich bin krank.",
+      "meaning": "我生病了。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra27",
+      "article": "",
+      "word": "Ich bin erkältet.",
+      "meaning": "我感冒了。",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra28",
+      "article": "",
+      "word": "Freut mich!",
+      "meaning": "很高興認識你!",
+      "category": "greeting",
+      "example": "",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra29",
+      "article": "",
+      "word": "Freut mich, dich kennenzulernen.",
+      "meaning": "很高興認識你。",
+      "category": "greeting",
+      "example": "",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra30",
+      "article": "",
+      "word": "Schön, dich kennenzulernen.",
+      "meaning": "很高興認識你。",
+      "category": "greeting",
+      "example": "",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra31",
+      "article": "",
+      "word": "Ebenso!",
+      "meaning": "我也是!",
+      "category": "other",
+      "example": "",
+      "pos": "慣用語"
+    },
+    {
+      "id": "udemreo7jra32",
+      "article": "",
+      "word": "Tschüss!",
+      "meaning": "掰掰!",
+      "category": "greeting",
+      "example": "",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra33",
+      "article": "",
+      "word": "Ciao!",
+      "meaning": "掰!(義文,較口語)",
+      "category": "greeting",
+      "example": "",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra34",
+      "article": "",
+      "word": "Bis bald!",
+      "meaning": "回頭見!(短時間內會再見)",
+      "category": "greeting",
+      "example": "",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra35",
+      "article": "",
+      "word": "Bis später!",
+      "meaning": "晚點見!",
+      "category": "greeting",
+      "example": "",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra36",
+      "article": "",
+      "word": "Bis morgen!",
+      "meaning": "明天見!",
+      "category": "greeting",
+      "example": "",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra37",
+      "article": "",
+      "word": "Bis dann!",
+      "meaning": "待會見!",
+      "category": "greeting",
+      "example": "",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra38",
+      "article": "",
+      "word": "Auf Wiedersehen!",
+      "meaning": "下次再相見!(正式)",
+      "category": "greeting",
+      "example": "",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra39",
+      "article": "",
+      "word": "Gute Nacht!",
+      "meaning": "晚安!(睡覺前)",
+      "category": "greeting",
+      "example": "",
+      "pos": "招呼語"
+    },
+    {
+      "id": "udemreo7jra40",
+      "article": "",
+      "word": "kommen",
+      "meaning": "來",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "komme",
+        "du": "kommst",
+        "er/sie/es": "kommt",
+        "wir": "kommen",
+        "ihr": "kommt",
+        "sie/Sie": "kommen"
+      }
+    },
+    {
+      "id": "udemreo7jra41",
+      "article": "",
+      "word": "ankommen",
+      "meaning": "到達",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "komme an",
+        "du": "kommst an",
+        "er/sie/es": "kommt an",
+        "wir": "kommen an",
+        "ihr": "kommt an",
+        "sie/Sie": "kommen an"
+      }
+    },
+    {
+      "id": "udemreo7jra42",
+      "article": "",
+      "word": "anrufen",
+      "meaning": "打電話給",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "rufe an",
+        "du": "rufst an",
+        "er/sie/es": "ruft an",
+        "wir": "rufen an",
+        "ihr": "ruft an",
+        "sie/Sie": "rufen an"
+      }
+    },
+    {
+      "id": "udemreo7jra43",
+      "article": "",
+      "word": "anfangen",
+      "meaning": "開始",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "fange an",
+        "du": "fängst an",
+        "er/sie/es": "fängt an",
+        "wir": "fangen an",
+        "ihr": "fangt an",
+        "sie/Sie": "fangen an"
+      }
+    },
+    {
+      "id": "udemreo7jra44",
+      "article": "",
+      "word": "ansehen",
+      "meaning": "看",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "sehe an",
+        "du": "siehst an",
+        "er/sie/es": "sieht an",
+        "wir": "sehen an",
+        "ihr": "seht an",
+        "sie/Sie": "sehen an"
+      }
+    },
+    {
+      "id": "udemreo7jra45",
+      "article": "",
+      "word": "aufstehen",
+      "meaning": "起床",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞"
+    },
+    {
+      "id": "udemreo7jra46",
+      "article": "",
+      "word": "aufmachen",
+      "meaning": "打開",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "mache auf",
+        "du": "machst auf",
+        "er/sie/es": "macht auf",
+        "wir": "machen auf",
+        "ihr": "macht auf",
+        "sie/Sie": "machen auf"
+      }
+    },
+    {
+      "id": "udemreo7jra47",
+      "article": "",
+      "word": "ausgehen",
+      "meaning": "出門",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "gehe aus",
+        "du": "gehst aus",
+        "er/sie/es": "geht aus",
+        "wir": "gehen aus",
+        "ihr": "geht aus",
+        "sie/Sie": "gehen aus"
+      }
+    },
+    {
+      "id": "udemreo7jra48",
+      "article": "",
+      "word": "aussteigen",
+      "meaning": "下車",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "steige aus",
+        "du": "steigst aus",
+        "er/sie/es": "steigt aus",
+        "wir": "steigen aus",
+        "ihr": "steigt aus",
+        "sie/Sie": "steigen aus"
+      }
+    },
+    {
+      "id": "udemreo7jra49",
+      "article": "",
+      "word": "aussehen",
+      "meaning": "看起來",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "sehe aus",
+        "du": "siehst aus",
+        "er/sie/es": "sieht aus",
+        "wir": "sehen aus",
+        "ihr": "seht aus",
+        "sie/Sie": "sehen aus"
+      }
+    },
+    {
+      "id": "udemreo7jra50",
+      "article": "",
+      "word": "ausfüllen",
+      "meaning": "填寫",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "fülle aus",
+        "du": "füllst aus",
+        "er/sie/es": "füllt aus",
+        "wir": "füllen aus",
+        "ihr": "füllt aus",
+        "sie/Sie": "füllen aus"
+      }
+    },
+    {
+      "id": "udemreo7jra51",
+      "article": "",
+      "word": "einkaufen",
+      "meaning": "購物",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞"
+    },
+    {
+      "id": "udemreo7jra52",
+      "article": "",
+      "word": "einladen",
+      "meaning": "邀請",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "lade ein",
+        "du": "lädst ein",
+        "er/sie/es": "lädt ein",
+        "wir": "laden ein",
+        "ihr": "ladet ein",
+        "sie/Sie": "laden ein"
+      }
+    },
+    {
+      "id": "udemreo7jra53",
+      "article": "",
+      "word": "mitkommen",
+      "meaning": "一起來",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "komme mit",
+        "du": "kommst mit",
+        "er/sie/es": "kommt mit",
+        "wir": "kommen mit",
+        "ihr": "kommt mit",
+        "sie/Sie": "kommen mit"
+      }
+    },
+    {
+      "id": "udemreo7jra54",
+      "article": "",
+      "word": "mitbringen",
+      "meaning": "帶來",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "bringe mit",
+        "du": "bringst mit",
+        "er/sie/es": "bringt mit",
+        "wir": "bringen mit",
+        "ihr": "bringt mit",
+        "sie/Sie": "bringen mit"
+      }
+    },
+    {
+      "id": "udemreo7jra55",
+      "article": "",
+      "word": "nachfragen",
+      "meaning": "再詢問",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "frage nach",
+        "du": "fragst nach",
+        "er/sie/es": "fragt nach",
+        "wir": "fragen nach",
+        "ihr": "fragt nach",
+        "sie/Sie": "fragen nach"
+      }
+    },
+    {
+      "id": "udemreo7jra56",
+      "article": "",
+      "word": "nach Hause gehen",
+      "meaning": "回家",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞片語"
+    },
+    {
+      "id": "udemreo7jra57",
+      "article": "",
+      "word": "nachmachen",
+      "meaning": "模仿",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "mache nach",
+        "du": "machst nach",
+        "er/sie/es": "macht nach",
+        "wir": "machen nach",
+        "ihr": "macht nach",
+        "sie/Sie": "machen nach"
+      }
+    },
+    {
+      "id": "udemreo7jra58",
+      "article": "",
+      "word": "vorstellen",
+      "meaning": "介紹",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "stelle vor",
+        "du": "stellst vor",
+        "er/sie/es": "stellt vor",
+        "wir": "stellen vor",
+        "ihr": "stellt vor",
+        "sie/Sie": "stellen vor"
+      }
+    },
+    {
+      "id": "udemreo7jra59",
+      "article": "",
+      "word": "vorbereiten",
+      "meaning": "準備",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "bereite vor",
+        "du": "bereitest vor",
+        "er/sie/es": "bereitet vor",
+        "wir": "bereiten vor",
+        "ihr": "bereitet vor",
+        "sie/Sie": "bereiten vor"
+      }
+    },
+    {
+      "id": "udemreo7jra60",
+      "article": "",
+      "word": "vorlesen",
+      "meaning": "朗讀",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "lese vor",
+        "du": "liest vor",
+        "er/sie/es": "liest vor",
+        "wir": "lesen vor",
+        "ihr": "lest vor",
+        "sie/Sie": "lesen vor"
+      }
+    },
+    {
+      "id": "udemreo7jra61",
+      "article": "",
+      "word": "weggehen",
+      "meaning": "離開",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "gehe weg",
+        "du": "gehst weg",
+        "er/sie/es": "geht weg",
+        "wir": "gehen weg",
+        "ihr": "geht weg",
+        "sie/Sie": "gehen weg"
+      }
+    },
+    {
+      "id": "udemreo7jra62",
+      "article": "",
+      "word": "wegfahren",
+      "meaning": "駛離",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "fahre weg",
+        "du": "fährst weg",
+        "er/sie/es": "fährt weg",
+        "wir": "fahren weg",
+        "ihr": "fahrt weg",
+        "sie/Sie": "fahren weg"
+      }
+    },
+    {
+      "id": "udemreo7jra63",
+      "article": "",
+      "word": "zurückkommen",
+      "meaning": "回來",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "komme zurück",
+        "du": "kommst zurück",
+        "er/sie/es": "kommt zurück",
+        "wir": "kommen zurück",
+        "ihr": "kommt zurück",
+        "sie/Sie": "kommen zurück"
+      }
+    },
+    {
+      "id": "udemreo7jra64",
+      "article": "",
+      "word": "zurückgehen",
+      "meaning": "回去",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "gehe zurück",
+        "du": "gehst zurück",
+        "er/sie/es": "geht zurück",
+        "wir": "gehen zurück",
+        "ihr": "geht zurück",
+        "sie/Sie": "gehen zurück"
+      }
+    },
+    {
+      "id": "udemreo7jra65",
+      "article": "",
+      "word": "zurückgeben",
+      "meaning": "歸還",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "gebe zurück",
+        "du": "gibst zurück",
+        "er/sie/es": "gibt zurück",
+        "wir": "geben zurück",
+        "ihr": "gebt zurück",
+        "sie/Sie": "geben zurück"
+      }
+    },
+    {
+      "id": "udemreo7jra66",
+      "article": "",
+      "word": "zumachen",
+      "meaning": "關起來",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "mache zu",
+        "du": "machst zu",
+        "er/sie/es": "macht zu",
+        "wir": "machen zu",
+        "ihr": "macht zu",
+        "sie/Sie": "machen zu"
+      }
+    },
+    {
+      "id": "udemreo7jra67",
+      "article": "",
+      "word": "zuhören",
+      "meaning": "專心聽",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "höre zu",
+        "du": "hörst zu",
+        "er/sie/es": "hört zu",
+        "wir": "hören zu",
+        "ihr": "hört zu",
+        "sie/Sie": "hören zu"
+      }
+    },
+    {
+      "id": "udemreo7jra68",
+      "article": "",
+      "word": "zusehen",
+      "meaning": "看著",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "sehe zu",
+        "du": "siehst zu",
+        "er/sie/es": "sieht zu",
+        "wir": "sehen zu",
+        "ihr": "seht zu",
+        "sie/Sie": "sehen zu"
+      }
+    },
+    {
+      "id": "udemreo7jra69",
+      "article": "",
+      "word": "besuchen",
+      "meaning": "拜訪",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "besuche",
+        "du": "besuchst",
+        "er/sie/es": "besucht",
+        "wir": "besuchen",
+        "ihr": "besucht",
+        "sie/Sie": "besuchen"
+      }
+    },
+    {
+      "id": "udemreo7jra70",
+      "article": "",
+      "word": "bezahlen",
+      "meaning": "付款",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "bezahle",
+        "du": "bezahlst",
+        "er/sie/es": "bezahlt",
+        "wir": "bezahlen",
+        "ihr": "bezahlt",
+        "sie/Sie": "bezahlen"
+      }
+    },
+    {
+      "id": "udemreo7jra71",
+      "article": "",
+      "word": "vergessen",
+      "meaning": "忘記",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "vergesse",
+        "du": "vergisst",
+        "er/sie/es": "vergisst",
+        "wir": "vergessen",
+        "ihr": "vergesst",
+        "sie/Sie": "vergessen"
+      }
+    },
+    {
+      "id": "udemreo7jra72",
+      "article": "",
+      "word": "verkaufen",
+      "meaning": "販賣、出售",
+      "category": "verb",
+      "example": "Ich verkaufe mein Auto.",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "verkaufe",
+        "du": "verkaufst",
+        "er/sie/es": "verkauft",
+        "wir": "verkaufen",
+        "ihr": "verkauft",
+        "sie/Sie": "verkaufen"
+      },
+      "note": ""
+    },
+    {
+      "id": "udemreo7jra73",
+      "article": "",
+      "word": "verstehen",
+      "meaning": "理解",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞"
+    },
+    {
+      "id": "udemreo7jra74",
+      "article": "",
+      "word": "erzählen",
+      "meaning": "敘述",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "erzähle",
+        "du": "erzählst",
+        "er/sie/es": "erzählt",
+        "wir": "erzählen",
+        "ihr": "erzählt",
+        "sie/Sie": "erzählen"
+      }
+    },
+    {
+      "id": "udemreo7jra75",
+      "article": "",
+      "word": "erklären",
+      "meaning": "解釋",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "erkläre",
+        "du": "erklärst",
+        "er/sie/es": "erklärt",
+        "wir": "erklären",
+        "ihr": "erklärt",
+        "sie/Sie": "erklären"
+      }
+    },
+    {
+      "id": "udemreo7jra76",
+      "article": "",
+      "word": "entdecken",
+      "meaning": "發現",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "entdecke",
+        "du": "entdeckst",
+        "er/sie/es": "entdeckt",
+        "wir": "entdecken",
+        "ihr": "entdeckt",
+        "sie/Sie": "entdecken"
+      }
+    },
+    {
+      "id": "udemreo7jra77",
+      "article": "",
+      "word": "klagen",
+      "meaning": "抱怨",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "klage",
+        "du": "klagst",
+        "er/sie/es": "klagt",
+        "wir": "klagen",
+        "ihr": "klagt",
+        "sie/Sie": "klagen"
+      }
+    },
+    {
+      "id": "udemreo7jra78",
+      "article": "",
+      "word": "schlecht",
+      "meaning": "糟的",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreo7jra79",
+      "article": "",
+      "word": "müde",
+      "meaning": "累的",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreo7jra80",
+      "article": "",
+      "word": "krank",
+      "meaning": "生病的",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreo7jra81",
+      "article": "",
+      "word": "erkältet",
+      "meaning": "感冒的",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreo7jra82",
+      "article": "",
+      "word": "sich erkälten",
+      "meaning": "感冒",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞片語"
+    },
+    {
+      "id": "udemreo7jra83",
+      "article": "",
+      "word": "schön",
+      "meaning": "好的/棒的",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreo7jra84",
+      "article": "",
+      "word": "mitnehmen",
+      "meaning": "帶走",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "nehme mit",
+        "du": "nimmst mit",
+        "er/sie/es": "nimmt mit",
+        "wir": "nehmen mit",
+        "ihr": "nehmt mit",
+        "sie/Sie": "nehmen mit"
+      }
+    },
+    {
+      "id": "udemreo7jra85",
+      "article": "",
+      "word": "wegwerfen",
+      "meaning": "丟掉",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "werfe weg",
+        "du": "wirfst weg",
+        "er/sie/es": "wirft weg",
+        "wir": "werfen weg",
+        "ihr": "werft weg",
+        "sie/Sie": "werfen weg"
+      }
+    },
+    {
+      "id": "udemreo7jra86",
+      "article": "",
+      "word": "aufräumen",
+      "meaning": "整理",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "räume auf",
+        "du": "räumst auf",
+        "er/sie/es": "räumt auf",
+        "wir": "räumen auf",
+        "ihr": "räumt auf",
+        "sie/Sie": "räumen auf"
+      }
+    },
+    {
+      "id": "udemreo7jra87",
+      "article": "",
+      "word": "einsteigen",
+      "meaning": "上車",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "steige ein",
+        "du": "steigst ein",
+        "er/sie/es": "steigt ein",
+        "wir": "steigen ein",
+        "ihr": "steigt ein",
+        "sie/Sie": "steigen ein"
+      }
+    },
+    {
+      "id": "udemreoi48t1",
+      "article": "",
+      "word": "qualitativ",
+      "meaning": "定性的，本質上的",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreoi48t2",
+      "article": "die",
+      "word": "Sicherung",
+      "meaning": "保護, 確保, 防護",
+      "category": "other",
+      "example": "",
+      "pos": "陰性名詞"
+    },
+    {
+      "id": "udemreoi48t3",
+      "article": "",
+      "word": "sichern",
+      "meaning": "保護, 確保",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "sichere",
+        "du": "sicherst",
+        "er/sie/es": "sichert",
+        "wir": "sichern",
+        "ihr": "sichert",
+        "sie/Sie": "sichern"
+      }
+    },
+    {
+      "id": "udemreoi48t4",
+      "article": "der",
+      "word": "Forscher",
+      "meaning": "研究員",
+      "category": "people",
+      "example": "",
+      "pos": "陽性名詞"
+    },
+    {
+      "id": "udemreoi48t5",
+      "article": "die",
+      "word": "Forscherin",
+      "meaning": "研究員",
+      "category": "people",
+      "example": "",
+      "pos": "陰性名詞"
+    },
+    {
+      "id": "udemreoi48t6",
+      "article": "das",
+      "word": "Forschungsinstitut",
+      "meaning": "研究機構",
+      "category": "places",
+      "example": "",
+      "pos": "中性名詞"
+    },
+    {
+      "id": "udemreoi48t7",
+      "article": "der",
+      "word": "Ingenieur",
+      "meaning": "工程師",
+      "category": "people",
+      "example": "",
+      "pos": "陽性名詞"
+    },
+    {
+      "id": "udemreoi48t8",
+      "article": "die",
+      "word": "Ingenieurin",
+      "meaning": "工程師",
+      "category": "people",
+      "example": "",
+      "pos": "陰性名詞"
+    },
+    {
+      "id": "udemreoi48t9",
+      "article": "die",
+      "word": "Qualitätssicherungsingenieurin",
+      "meaning": "品質保證工程師",
+      "category": "people",
+      "example": "",
+      "pos": "陰性名詞"
+    },
+    {
+      "id": "udemreoi48t10",
+      "article": "der",
+      "word": "Freund",
+      "meaning": "男朋友",
+      "category": "people",
+      "example": "",
+      "pos": "陽性名詞"
+    },
+    {
+      "id": "udemreoi48t11",
+      "article": "die",
+      "word": "Freundin",
+      "meaning": "女朋友",
+      "category": "people",
+      "example": "",
+      "pos": "陰性名詞"
+    },
+    {
+      "id": "udemreoi48t12",
+      "article": "der",
+      "word": "Bruder",
+      "meaning": "兄弟",
+      "category": "people",
+      "example": "",
+      "pos": "陽性名詞"
+    },
+    {
+      "id": "udemreoi48t13",
+      "article": "die",
+      "word": "Schwester",
+      "meaning": "姊妹",
+      "category": "people",
+      "example": "",
+      "pos": "陰性名詞"
+    },
+    {
+      "id": "udemreoi48t14",
+      "article": "die",
+      "word": "Eltern",
+      "meaning": "父母",
+      "category": "people",
+      "example": "",
+      "pos": "複數名詞"
+    },
+    {
+      "id": "udemreoi48t15",
+      "article": "der",
+      "word": "Elternteil",
+      "meaning": "父母其中一方",
+      "category": "people",
+      "example": "",
+      "note": "Duden 主條目是 der，部分教材寫 das，兩種都看得到",
+      "pos": "陽性名詞"
+    },
+    {
+      "id": "udemreoi48t16",
+      "article": "das",
+      "word": "Teil",
+      "meaning": "部分",
+      "category": "other",
+      "example": "",
+      "pos": "中性名詞"
+    },
+    {
+      "id": "udemreoi48t17",
+      "article": "der",
+      "word": "Taiwaner",
+      "meaning": "台灣男性",
+      "category": "people",
+      "example": "",
+      "pos": "陽性名詞"
+    },
+    {
+      "id": "udemreoi48t18",
+      "article": "die",
+      "word": "Taiwanerin",
+      "meaning": "台灣女性",
+      "category": "people",
+      "example": "",
+      "pos": "陰性名詞"
+    },
+    {
+      "id": "udemreoi48t19",
+      "article": "",
+      "word": "Hsinchu",
+      "meaning": "新竹",
+      "category": "places",
+      "example": "",
+      "pos": "專有名詞"
+    },
+    {
+      "id": "udemreoi48t20",
+      "article": "",
+      "word": "Taipeh",
+      "meaning": "台北",
+      "category": "places",
+      "example": "",
+      "pos": "專有名詞"
+    },
+    {
+      "id": "udemreoi48t21",
+      "article": "die",
+      "word": "Fuhoustraße",
+      "meaning": "福後街",
+      "category": "places",
+      "example": "",
+      "pos": "陰性名詞"
+    },
+    {
+      "id": "udemreoi48t22",
+      "article": "",
+      "word": "rot",
+      "meaning": "紅色",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreoi48t23",
+      "article": "",
+      "word": "blau",
+      "meaning": "藍色",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreoi48t24",
+      "article": "",
+      "word": "gelb",
+      "meaning": "黃色",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreoi48t25",
+      "article": "",
+      "word": "grün",
+      "meaning": "綠色",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreoi48t26",
+      "article": "",
+      "word": "weiß",
+      "meaning": "白色",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreoi48t27",
+      "article": "",
+      "word": "orange",
+      "meaning": "橘色",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreoi48t28",
+      "article": "",
+      "word": "schwarz",
+      "meaning": "黑色的",
+      "category": "adjective",
+      "example": "schwarze Haare",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreoi48t29",
+      "article": "",
+      "word": "braun",
+      "meaning": "棕色的",
+      "category": "adjective",
+      "example": "braune Augen",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemreoi48t30",
+      "article": "das",
+      "word": "Hobby",
+      "meaning": "興趣",
+      "category": "other",
+      "example": "",
+      "pos": "中性名詞"
+    },
+    {
+      "id": "udemreoi48t31",
+      "article": "",
+      "word": "singen",
+      "meaning": "唱歌",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "singe",
+        "du": "singst",
+        "er/sie/es": "singt",
+        "wir": "singen",
+        "ihr": "singt",
+        "sie/Sie": "singen"
+      }
+    },
+    {
+      "id": "udemreoi48t32",
+      "article": "",
+      "word": "schwimmen",
+      "meaning": "游泳",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "schwimme",
+        "du": "schwimmst",
+        "er/sie/es": "schwimmt",
+        "wir": "schwimmen",
+        "ihr": "schwimmt",
+        "sie/Sie": "schwimmen"
+      }
+    },
+    {
+      "id": "udemreoi48t33",
+      "article": "die",
+      "word": "Forschung",
+      "meaning": "研究",
+      "category": "other",
+      "example": "",
+      "pos": "陰性名詞"
+    },
+    {
+      "id": "udemreoi48t34",
+      "article": "",
+      "word": "forschen",
+      "meaning": "研究",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "forsche",
+        "du": "forschst",
+        "er/sie/es": "forscht",
+        "wir": "forschen",
+        "ihr": "forscht",
+        "sie/Sie": "forschen"
+      }
+    },
+    {
+      "id": "udemreoi48t35",
+      "article": "der",
+      "word": "Kontakt",
+      "meaning": "聯絡",
+      "category": "other",
+      "example": "",
+      "pos": "陽性名詞"
+    },
+    {
+      "id": "udemreoi48t36",
+      "article": "",
+      "word": "kontaktieren",
+      "meaning": "聯絡",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "kontaktiere",
+        "du": "kontaktierst",
+        "er/sie/es": "kontaktiert",
+        "wir": "kontaktieren",
+        "ihr": "kontaktiert",
+        "sie/Sie": "kontaktieren"
+      }
+    },
+    {
+      "id": "udemreoi48t37",
+      "article": "das",
+      "word": "Verhältnis",
+      "meaning": "關係",
+      "category": "other",
+      "example": "",
+      "pos": "中性名詞"
+    },
+    {
+      "id": "udemreoi48t38",
+      "article": "",
+      "word": "Verhältnis haben",
+      "meaning": "有關係",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞片語"
+    },
+    {
+      "id": "udemreoi48t39",
+      "article": "",
+      "word": "ziehen",
+      "meaning": "搬家, 移動",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "ziehe",
+        "du": "ziehst",
+        "er/sie/es": "zieht",
+        "wir": "ziehen",
+        "ihr": "zieht",
+        "sie/Sie": "ziehen"
+      }
+    },
+    {
+      "id": "udemreoi48t40",
+      "article": "",
+      "word": "umziehen",
+      "meaning": "搬家",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "ziehe um",
+        "du": "ziehst um",
+        "er/sie/es": "zieht um",
+        "wir": "ziehen um",
+        "ihr": "zieht um",
+        "sie/Sie": "ziehen um"
+      }
+    },
+    {
+      "id": "udemreoi48t41",
+      "article": "",
+      "word": "in den Ruhestand gehen",
+      "meaning": "退休",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞片語"
+    },
+    {
+      "id": "udemreoi48t42",
+      "article": "",
+      "word": "in den Ruhestand schicken",
+      "meaning": "使人退休",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞片語"
+    },
+    {
+      "id": "udemreoi48t43",
+      "article": "der",
+      "word": "Ruhestand",
+      "meaning": "退休生活",
+      "category": "other",
+      "example": "in Ruhestand sein",
+      "pos": "陽性名詞"
+    },
+    {
+      "id": "udemreoi48t44",
+      "article": "",
+      "word": "derzeit",
+      "meaning": "目前, 現在",
+      "category": "time",
+      "example": "zurzeit",
+      "pos": "副詞"
+    },
+    {
+      "id": "udemreoi48t45",
+      "article": "",
+      "word": "genießen",
+      "meaning": "享受",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "genieße",
+        "du": "genießt",
+        "er/sie/es": "genießt",
+        "wir": "genießen",
+        "ihr": "genießt",
+        "sie/Sie": "genießen"
+      }
+    },
+    {
+      "id": "udemreoi48t46",
+      "article": "die",
+      "word": "Ruhe",
+      "meaning": "寧靜",
+      "category": "other",
+      "example": "",
+      "pos": "陰性名詞"
+    },
+    {
+      "id": "udemreoi48t47",
+      "article": "der",
+      "word": "Stand",
+      "meaning": "立場, 位置",
+      "category": "other",
+      "example": "",
+      "pos": "陽性名詞"
+    },
+    {
+      "id": "udemreoi48t48",
+      "article": "",
+      "word": "heißen",
+      "meaning": "我叫 (人名)",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞",
+      "conjugation": {
+        "ich": "heiße",
+        "du": "heißt",
+        "er/sie/es": "heißt",
+        "wir": "heißen",
+        "ihr": "heißt",
+        "sie/Sie": "heißen"
+      }
+    },
+    {
+      "id": "udemreoi48t49",
+      "article": "",
+      "word": "aus ... kommen",
+      "meaning": "來自 (國家)",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞片語"
+    },
+    {
+      "id": "udemreoi48t50",
+      "article": "",
+      "word": "in ... wohnen",
+      "meaning": "住在 (城市)",
+      "category": "verb",
+      "example": "",
+      "pos": "動詞片語"
+    },
+    {
+      "id": "udemreoi48t51",
+      "article": "",
+      "word": "nachdem",
+      "meaning": "在......之後",
+      "category": "other",
+      "example": "",
+      "pos": "連接詞"
+    },
+    {
+      "id": "udemreoi48t52",
+      "article": "",
+      "word": "wegen",
+      "meaning": "因為 (接屬格)",
+      "category": "other",
+      "example": "wegen der Arbeit",
+      "pos": "介系詞"
+    },
+    {
+      "id": "udemreoi48t53",
+      "article": "die",
+      "word": "Arbeit",
+      "meaning": "工作",
+      "category": "other",
+      "example": "",
+      "pos": "陰性名詞"
+    },
+    {
+      "id": "udemreoi48t58",
+      "article": "der",
+      "word": "Affe",
+      "meaning": "猴子",
+      "category": "animals",
+      "example": "",
+      "pos": "陽性名詞"
+    },
+    {
+      "id": "udemreoi48t59",
+      "article": "die",
+      "word": "Affen",
+      "meaning": "猴子 (複數)",
+      "category": "animals",
+      "example": "",
+      "pos": "複數名詞"
+    },
+    {
+      "id": "udemreoi48t61",
+      "article": "",
+      "word": "affenkalt",
+      "meaning": "超級冷",
+      "category": "adjective",
+      "example": "",
+      "pos": "形容詞"
+    },
+    {
+      "id": "udemrnm8v0j1",
+      "article": "",
+      "pos": "形容詞",
+      "word": "persönlich",
+      "meaning": "個人的、私人的",
+      "category": "adjective",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemrnm8v0j2",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Bekanntschaft",
+      "meaning": "熟人、認識的人",
+      "category": "people",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemrnm8v0j3",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Bekannte",
+      "meaning": "熟人（男性）",
+      "category": "people",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemrnm8v0j4",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Bekannte",
+      "meaning": "熟人（女性）",
+      "category": "people",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemrnm8v0j5",
+      "article": "",
+      "pos": "動詞",
+      "word": "kennen",
+      "meaning": "認識 (事物), 知道(某人）",
+      "category": "verb",
+      "example": "",
+      "note": "",
+      "conjugation": {
+        "ich": "kenne",
+        "du": "kennst",
+        "er/sie/es": "kennt",
+        "wir": "kennen",
+        "ihr": "kennt",
+        "sie/Sie": "kennen"
+      }
+    },
+    {
+      "id": "udemrnm8v0j6",
+      "article": "",
+      "pos": "動詞",
+      "word": "kennenlernen",
+      "meaning": "認識 (人)",
+      "category": "verb",
+      "example": "",
+      "note": "",
+      "conjugation": {
+        "ich": "lerne kennen",
+        "du": "lernst kennen",
+        "er/sie/es": "lernt kennen",
+        "wir": "lernen kennen",
+        "ihr": "lernt kennen",
+        "sie/Sie": "lernen kennen"
+      }
+    },
+    {
+      "id": "udemrnm8v0j7",
+      "article": "",
+      "pos": "動詞",
+      "word": "wohnen",
+      "meaning": "居住",
+      "category": "verb",
+      "example": "",
+      "note": "",
+      "conjugation": {
+        "ich": "wohne",
+        "du": "wohnst",
+        "er/sie/es": "wohnt",
+        "wir": "wohnen",
+        "ihr": "wohnt",
+        "sie/Sie": "wohnen"
+      }
+    },
+    {
+      "id": "udemrnm8v0j8",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Wasser",
+      "meaning": "水",
+      "category": "food",
+      "example": "",
+      "note": "不可數名詞"
+    },
+    {
+      "id": "udemrnm8v0j9",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Milch",
+      "meaning": "牛奶",
+      "category": "food",
+      "example": "",
+      "note": "不可數名詞"
+    },
+    {
+      "id": "udemrnm8v0j10",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Brot",
+      "meaning": "麵包",
+      "category": "food",
+      "example": "",
+      "note": "不可數名詞"
+    },
+    {
+      "id": "udemrnm8v0j11",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Reis",
+      "meaning": "米飯／稻米",
+      "category": "food",
+      "example": "",
+      "note": "不可數名詞"
+    },
+    {
+      "id": "udemrnm8v0j12",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Gemüse",
+      "meaning": "蔬菜",
+      "category": "food",
+      "example": "",
+      "note": "不可數名詞"
+    },
+    {
+      "id": "udemrnm8v0j13",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Obst",
+      "meaning": "水果",
+      "category": "food",
+      "example": "",
+      "note": "不可數名詞"
+    },
+    {
+      "id": "udemrnm8v0j14",
+      "article": "",
+      "pos": "動詞",
+      "word": "fahren",
+      "meaning": "搭車、前往",
+      "category": "verb",
+      "example": "Wir fahren nach München.",
+      "note": "a → ä 強變化動詞",
+      "conjugation": {
+        "ich": "fahre",
+        "du": "fährst",
+        "er/sie/es": "fährt",
+        "wir": "fahren",
+        "ihr": "fahrt",
+        "sie/Sie": "fahren"
+      }
+    },
+    {
+      "id": "udemrnm8v0j15",
+      "article": "",
+      "pos": "動詞",
+      "word": "schlafen",
+      "meaning": "睡覺",
+      "category": "verb",
+      "example": "",
+      "note": "a → ä 強變化動詞",
+      "conjugation": {
+        "ich": "schlafe",
+        "du": "schläfst",
+        "er/sie/es": "schläft",
+        "wir": "schlafen",
+        "ihr": "schlaft",
+        "sie/Sie": "schlafen"
+      }
+    },
+    {
+      "id": "udemrnm8v0j16",
+      "article": "",
+      "pos": "動詞",
+      "word": "laufen",
+      "meaning": "跑、走",
+      "category": "verb",
+      "example": "du läufst",
+      "note": "au → äu 強變化動詞",
+      "conjugation": {
+        "ich": "laufe",
+        "du": "läufst",
+        "er/sie/es": "läuft",
+        "wir": "laufen",
+        "ihr": "lauft",
+        "sie/Sie": "laufen"
+      }
+    },
+    {
+      "id": "udemrnm8v0j17",
+      "article": "",
+      "pos": "動詞",
+      "word": "tragen",
+      "meaning": "拿、穿",
+      "category": "verb",
+      "example": "",
+      "note": "a → ä 強變化動詞",
+      "conjugation": {
+        "ich": "trage",
+        "du": "trägst",
+        "er/sie/es": "trägt",
+        "wir": "tragen",
+        "ihr": "tragt",
+        "sie/Sie": "tragen"
+      }
+    },
+    {
+      "id": "udemrnm8v0j18",
+      "article": "",
+      "pos": "動詞",
+      "word": "halten",
+      "meaning": "停、握住",
+      "category": "verb",
+      "example": "",
+      "note": "a → ä 強變化動詞",
+      "conjugation": {
+        "ich": "halte",
+        "du": "hältst",
+        "er/sie/es": "hält",
+        "wir": "halten",
+        "ihr": "haltet",
+        "sie/Sie": "halten"
+      }
+    },
+    {
+      "id": "udemrnm8v0j19",
+      "article": "",
+      "pos": "動詞",
+      "word": "geben",
+      "meaning": "給",
+      "category": "verb",
+      "example": "du gibst",
+      "note": "e → i 強變化動詞",
+      "conjugation": {
+        "ich": "gebe",
+        "du": "gibst",
+        "er/sie/es": "gibt",
+        "wir": "geben",
+        "ihr": "gebt",
+        "sie/Sie": "geben"
+      }
+    },
+    {
+      "id": "udemrnm8v0j20",
+      "article": "",
+      "pos": "動詞",
+      "word": "essen",
+      "meaning": "吃",
+      "category": "verb",
+      "example": "Hast du schon gegessen?",
+      "note": "e → i 強變化動詞；強變化動詞，過去式為 aß，完成式為 gegessen",
+      "conjugation": {
+        "ich": "esse",
+        "du": "isst",
+        "er/sie/es": "isst",
+        "wir": "essen",
+        "ihr": "esst",
+        "sie/Sie": "essen"
+      }
+    },
+    {
+      "id": "udemrnm8v0j21",
+      "article": "",
+      "pos": "動詞",
+      "word": "sehen",
+      "meaning": "看",
+      "category": "verb",
+      "example": "",
+      "note": "e → ie 強變化動詞",
+      "conjugation": {
+        "ich": "sehe",
+        "du": "siehst",
+        "er/sie/es": "sieht",
+        "wir": "sehen",
+        "ihr": "seht",
+        "sie/Sie": "sehen"
+      }
+    },
+    {
+      "id": "udemrnm8v0j22",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Arzt",
+      "meaning": "醫生",
+      "category": "people",
+      "example": "der Arzt → die Ärztin",
+      "note": "變音為 Ärztin / Ärzte"
+    },
+    {
+      "id": "udemrnm8v0j23",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Ärztin",
+      "meaning": "女醫生",
+      "category": "people",
+      "example": "zum Arzt / zur Ärztin",
+      "note": ""
+    },
+    {
+      "id": "udemrnm8v0j24",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Anwalt",
+      "meaning": "律師",
+      "category": "people",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemrnm8v0j25",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Anwältin",
+      "meaning": "女律師",
+      "category": "people",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemrnm8v0j26",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Gast",
+      "meaning": "賓客（男女通用）",
+      "category": "people",
+      "example": "",
+      "note": "⚠️家教核對：原本記成 die Gästin，但 Gästin 不是標準德文，der Gast 男女都能用"
+    },
+    {
+      "id": "udemrnm8v0j28",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Student",
+      "meaning": "男大學生",
+      "category": "people",
+      "example": "der Student → die Studentin",
+      "note": "複數為 die Studenten"
+    },
+    {
+      "id": "udemrnm8v0j29",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Studentin",
+      "meaning": "女大學生",
+      "category": "people",
+      "example": "die Studentin → die Studentinnen",
+      "note": "複數為 die Studentinnen"
+    },
+    {
+      "id": "udemrnm8v0j30",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Universität",
+      "meaning": "大學",
+      "category": "places",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemrnm8v0j31",
+      "article": "",
+      "pos": "形容詞",
+      "word": "personal",
+      "meaning": "人稱的 (用來稱呼人或事物)",
+      "category": "adjective",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemrnm8v0j32",
+      "article": "",
+      "pos": "形容詞",
+      "word": "weltweit bekannt",
+      "meaning": "世界知名",
+      "category": "adjective",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udems3fwq3y1",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Kind",
+      "meaning": "孩子",
+      "category": "people",
+      "example": "Ich helfe keinen Kindern.",
+      "note": "複數為 die Kinder"
+    },
+    {
+      "id": "udems3fwq3y2",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Lehrer",
+      "meaning": "男老師",
+      "category": "people",
+      "example": "der Lehrer → die Lehrerin",
+      "note": "複數為 die Lehrer"
+    },
+    {
+      "id": "udems3fwq3y3",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Lehrerin",
+      "meaning": "女老師",
+      "category": "people",
+      "example": "die Lehrerin → die Lehrerinnen",
+      "note": "複數為 die Lehrerinnen"
+    },
+    {
+      "id": "udems3fwq3y8",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Friseur",
+      "meaning": "男理髮師",
+      "category": "people",
+      "example": "zum Friseur",
+      "note": "複數為 die Friseure"
+    },
+    {
+      "id": "udems3fwq3y9",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Friseurin",
+      "meaning": "女理髮師",
+      "category": "people",
+      "example": "die Friseurin → die Friseurinnen",
+      "note": ""
+    },
+    {
+      "id": "udems3fwq3y10",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Freundschaft",
+      "meaning": "友誼",
+      "category": "other",
+      "example": "die Freundschaft",
+      "note": "-schaft 結尾的名詞通常為陰性"
+    },
+    {
+      "id": "udems3fwq3y11",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Mannschaft",
+      "meaning": "隊伍、球隊",
+      "category": "other",
+      "example": "die Mannschaft",
+      "note": ""
+    },
+    {
+      "id": "udems3fwq3y12",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Wissenschaft",
+      "meaning": "科學",
+      "category": "other",
+      "example": "die Wissenschaft",
+      "note": ""
+    },
+    {
+      "id": "udems3fwq3y13",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Gesellschaft",
+      "meaning": "社會、公司",
+      "category": "other",
+      "example": "die Gesellschaft",
+      "note": ""
+    },
+    {
+      "id": "udems3fwq3y14",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Wirtschaft",
+      "meaning": "經濟",
+      "category": "other",
+      "example": "die Wirtschaft",
+      "note": ""
+    },
+    {
+      "id": "udems3fwq3z16",
+      "article": "",
+      "pos": "動詞",
+      "word": "fliegen",
+      "meaning": "搭飛機",
+      "category": "verb",
+      "example": "Ich fliege.",
+      "note": "",
+      "conjugation": {
+        "ich": "fliege",
+        "du": "fliegst",
+        "er/sie/es": "fliegt",
+        "wir": "fliegen",
+        "ihr": "fliegt",
+        "sie/Sie": "fliegen"
+      }
+    },
+    {
+      "id": "udems3fwq3z17",
+      "article": "",
+      "pos": "動詞",
+      "word": "gehen",
+      "meaning": "走路、前往",
+      "category": "verb",
+      "example": "Ich gehe zu meiner Mutter.",
+      "note": "",
+      "conjugation": {
+        "ich": "gehe",
+        "du": "gehst",
+        "er/sie/es": "geht",
+        "wir": "gehen",
+        "ihr": "geht",
+        "sie/Sie": "gehen"
+      }
+    },
+    {
+      "id": "udems3fwq3z18",
+      "article": "",
+      "pos": "動詞",
+      "word": "helfen",
+      "meaning": "幫助",
+      "category": "verb",
+      "example": "Ich helfe keinen Kindern.",
+      "note": "換音動詞 (e->i)",
+      "conjugation": {
+        "ich": "helfe",
+        "du": "hilfst",
+        "er/sie/es": "hilft",
+        "wir": "helfen",
+        "ihr": "helft",
+        "sie/Sie": "helfen"
+      }
+    },
+    {
+      "id": "udems3fwq3z19",
+      "article": "",
+      "pos": "動詞",
+      "word": "wissen",
+      "meaning": "知道",
+      "category": "verb",
+      "example": "Ich weiß das.",
+      "note": "不規則變化動詞",
+      "conjugation": {
+        "ich": "weiß",
+        "du": "weißt",
+        "er/sie/es": "weiß",
+        "wir": "wissen",
+        "ihr": "wisst",
+        "sie/Sie": "wissen"
+      }
+    },
+    {
+      "id": "udemsd054du1",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Krankenhaus",
+      "meaning": "醫院",
+      "category": "places",
+      "example": "Ich gehe ins Krankenhaus.",
+      "note": "德文複合名詞最後一個名詞決定詞性，因此 Krankenhaus 是 das。；複合名詞，複數為 Krankenhäuser"
+    },
+    {
+      "id": "udemsd054du2",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Fernsehen",
+      "meaning": "電視、電視節目",
+      "category": "objects",
+      "example": "Ich sehe gern fern.",
+      "note": "字面意思就是「遠距離觀看」。"
+    },
+    {
+      "id": "udemsd054du3",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Handschuh",
+      "meaning": "手套",
+      "category": "objects",
+      "example": "Ich brauche Handschuhe.",
+      "note": "複數：die Handschuhe。德文很多名詞都可以利用拆字理解。"
+    },
+    {
+      "id": "udemsd054du4",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Maschinenbau",
+      "meaning": "機械工程",
+      "category": "other",
+      "example": "Ich studiere Maschinenbau.",
+      "note": ""
+    },
+    {
+      "id": "udemsd054du5",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Hausmann",
+      "meaning": "家庭主夫",
+      "category": "people",
+      "example": "Er ist Hausmann.",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo2",
+      "article": "",
+      "pos": "動詞",
+      "word": "lehren",
+      "meaning": "教導、傳授",
+      "category": "verb",
+      "example": "Er lehrt an der Universität.",
+      "note": "偏正式，除了教授知識，也可表示教導人生觀、價值觀。",
+      "conjugation": {
+        "ich": "lehre",
+        "du": "lehrst",
+        "er/sie/es": "lehrt",
+        "wir": "lehren",
+        "ihr": "lehrt",
+        "sie/Sie": "lehren"
+      }
+    },
+    {
+      "id": "udemsd09xmo3",
+      "article": "",
+      "pos": "動詞",
+      "word": "unterrichten",
+      "meaning": "授課、教課",
+      "category": "verb",
+      "example": "Ich unterrichte Deutsch.",
+      "note": "較口語，通常表示實際授課，比 lehren 更常用。",
+      "conjugation": {
+        "ich": "unterrichte",
+        "du": "unterrichtest",
+        "er/sie/es": "unterrichtet",
+        "wir": "unterrichten",
+        "ihr": "unterrichtet",
+        "sie/Sie": "unterrichten"
+      }
+    },
+    {
+      "id": "udemsd09xmo4",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Arbeiter",
+      "meaning": "工人",
+      "category": "people",
+      "example": "Er ist Arbeiter.",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo5",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Polizei",
+      "meaning": "警察機關、警方",
+      "category": "people",
+      "example": "Die Polizei kommt.",
+      "note": "不是指單一警察，而是整個警察機關。"
+    },
+    {
+      "id": "udemsd09xmo11",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Gitarrist",
+      "meaning": "吉他手",
+      "category": "people",
+      "example": "",
+      "note": "表示從事某種職業或身份的人"
+    },
+    {
+      "id": "udemsd09xmo12",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Journalist",
+      "meaning": "記者",
+      "category": "people",
+      "example": "",
+      "note": "表示從事某種職業或身份的人"
+    },
+    {
+      "id": "udemsd09xmo13",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Tourist",
+      "meaning": "遊客",
+      "category": "people",
+      "example": "",
+      "note": "表示從事某種職業或身份的人"
+    },
+    {
+      "id": "udemsd09xmo14",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Spezialist",
+      "meaning": "專家",
+      "category": "people",
+      "example": "",
+      "note": "表示從事某種職業或身份的人"
+    },
+    {
+      "id": "udemsd09xmo15",
+      "article": "",
+      "pos": "形容詞",
+      "word": "Japanisch",
+      "meaning": "日文",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo16",
+      "article": "",
+      "pos": "形容詞",
+      "word": "Koreanisch",
+      "meaning": "韓文",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo17",
+      "article": "",
+      "pos": "形容詞",
+      "word": "Französisch",
+      "meaning": "法文",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo19",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Bahnhof",
+      "meaning": "火車站",
+      "category": "places",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo20",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Straßenbahn",
+      "meaning": "電車",
+      "category": "places",
+      "example": "",
+      "note": "由 Straße + Bahn 組成"
+    },
+    {
+      "id": "udemsd09xmo21",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "U-Bahn",
+      "meaning": "地鐵",
+      "category": "places",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo22",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Hauptbahnhof",
+      "meaning": "主要火車站",
+      "category": "places",
+      "example": "",
+      "note": "縮寫為 Hbf.，Haupt意為主要、最大的"
+    },
+    {
+      "id": "udemsd09xmo23",
+      "article": "",
+      "pos": "複數名詞",
+      "word": "Bahnhöfe",
+      "meaning": "火車站（複數）",
+      "category": "places",
+      "example": "",
+      "note": "der Bahnhof 的複數形"
+    },
+    {
+      "id": "udemsd09xmo24",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Studium",
+      "meaning": "大學學業",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo25",
+      "article": "",
+      "pos": "動詞",
+      "word": "studieren",
+      "meaning": "就讀、主修",
+      "category": "verb",
+      "example": "",
+      "note": "",
+      "conjugation": {
+        "ich": "studiere",
+        "du": "studierst",
+        "er/sie/es": "studiert",
+        "wir": "studieren",
+        "ihr": "studiert",
+        "sie/Sie": "studieren"
+      }
+    },
+    {
+      "id": "udemsd09xmo26",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Studienplatz",
+      "meaning": "大學名額",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo27",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Studiengang",
+      "meaning": "科系",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo28",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Studienzeit",
+      "meaning": "求學期間",
+      "category": "time",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo29",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Gebühr",
+      "meaning": "費用",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo30",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Studiengebühr",
+      "meaning": "學費",
+      "category": "other",
+      "example": "Die Studiengebühr ist teuer.",
+      "note": "複合名詞"
+    },
+    {
+      "id": "udemsd09xmo31",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Parkgebühr",
+      "meaning": "停車費",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo32",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Anmeldegebühr",
+      "meaning": "報名費",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo33",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Semestergebühr",
+      "meaning": "學雜費",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd09xmo34",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Prüfungsgebühr",
+      "meaning": "考試費",
+      "category": "other",
+      "example": "",
+      "note": ""
+    },
+    {
+      "id": "udemsd0g0zt2",
+      "article": "das",
+      "pos": "中性名詞",
+      "word": "Familienfoto",
+      "meaning": "家庭照片",
+      "category": "objects",
+      "example": "Das ist ein Familienfoto.",
+      "note": "複合名詞"
+    },
+    {
+      "id": "udemsd0g0zt4",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Möglichkeitsform",
+      "meaning": "可能式、條件式",
+      "category": "other",
+      "example": "Das ist die Möglichkeitsform.",
+      "note": "Fugen-s 複合名詞"
+    },
+    {
+      "id": "udemsd0g0zt5",
+      "article": "der",
+      "pos": "陽性名詞",
+      "word": "Arbeitsvertrag",
+      "meaning": "工作合約",
+      "category": "other",
+      "example": "Ich habe einen Arbeitsvertrag unterschrieben.",
+      "note": "Fugen-s 複合名詞"
+    },
+    {
+      "id": "udemsd0g0zt6",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Haustür",
+      "meaning": "大門、家門",
+      "category": "objects",
+      "example": "Die Haustür ist geschlossen.",
+      "note": "不加 s 的複合名詞"
+    },
+    {
+      "id": "udemsd0g0zt7",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Autotür",
+      "meaning": "車門",
+      "category": "objects",
+      "example": "Die Autotür ist offen.",
+      "note": "不加 s 的複合名詞"
+    },
+    {
+      "id": "udemsd0g0zt8",
+      "article": "die",
+      "pos": "陰性名詞",
+      "word": "Berufsschule",
+      "meaning": "職業學校",
+      "category": "places",
+      "example": "Er geht zur Berufsschule.",
+      "note": "不加 s 的複合名詞"
+    },
+    {
+      "id": "udemsd0g0zt11",
+      "article": "",
+      "pos": "動詞",
+      "word": "lernen",
+      "meaning": "學習",
+      "category": "verb",
+      "example": "Ich habe gelernt.",
+      "note": "弱變化動詞，完成式為 gelernt",
+      "conjugation": {
+        "ich": "lerne",
+        "du": "lernst",
+        "er/sie/es": "lernt",
+        "wir": "lernen",
+        "ihr": "lernt",
+        "sie/Sie": "lernen"
+      }
+    },
+    {
+      "id": "udemsd0g0zu17",
+      "article": "",
+      "pos": "形容詞",
+      "word": "nett",
+      "meaning": "友善、親切",
+      "category": "adjective",
+      "example": "Der Lehrer ist sehr nett.",
+      "note": ""
+    }
+  ],
+  "germanGrammar": [
+    {
+      "id": "uggmrnm8v0j33",
+      "category": "case_nominativ",
+      "rule": "德語定冠詞變格規則",
+      "example": "Nominativ: der Mann; Akkusativ: den Mann; Dativ: dem Mann; Genitiv: des Mannes",
+      "explanation": "德語定冠詞會根據名詞的性別、單複數以及在句子中的格位（Nominativ主格、Akkusativ受格、Dativ間接受格、Genitiv所有格）而變化。\n變格表：\nNominativ: der, die, das, die (plural)\nAkkusativ: den, die, das, die (plural)\nDativ: dem, der, dem, den (plural)\nGenitiv: des, der, des, der (plural)",
+      "mastered": false
+    },
+    {
+      "id": "uggmrnm8v0j34",
+      "category": "case_dativ",
+      "rule": "介系詞 in 的用法 (表示位置或方向)",
+      "example": "Ich gehe in das Haus. / Ich wohne in dem Haus.",
+      "explanation": "當介系詞 in 表示「在哪裡」（靜態位置）時，後面接 Dativ；當 in 表示「到哪裡」（動態方向）時，後面接 Akkusativ。",
+      "mastered": false
+    },
+    {
+      "id": "uggmrnm8v0j35",
+      "category": "case_dativ",
+      "rule": "介系詞 zu 總是接 Dativ",
+      "example": "Wir fahren zum Arzt.",
+      "explanation": "介系詞 zu 常與人名、機構或地點（通常是朝向某人或某地）連用，表示去...，其後名詞一律使用 Dativ (第三格)。",
+      "mastered": false
+    },
+    {
+      "id": "uggmrnm8v0j36",
+      "category": "vocab_pattern",
+      "rule": "介系詞與冠詞縮寫",
+      "example": "zu dem = zum; zu der = zur; in das = ins",
+      "explanation": "某些介系詞與定冠詞可以縮寫成一個詞，形成慣用語。",
+      "mastered": false
+    },
+    {
+      "id": "uggmrnm8v0j37",
+      "category": "vocab_pattern",
+      "rule": "A1 常見強變化動詞 (Vokalwechsel)",
+      "example": "fahren (du fährst, er fährt); geben (du gibst, er gibt)",
+      "explanation": "部分動詞在 du 和 er/sie/es 人稱時，詞幹母音會發生變化，如 a 變 ä (fahren, schlafen, laufen, tragen, halten)，e 變 i (geben, essen) 或 ie (sehen)。",
+      "mastered": false
+    },
+    {
+      "id": "uggmrnm8v0j38",
+      "category": "vocab_pattern",
+      "rule": "德語規則動詞詞尾變化",
+      "example": "ich fahre; du fährst; er/sie/es fährt; wir fahren; ihr fahrt; sie/Sie fahren",
+      "explanation": "德語規則動詞的詞尾變化遵循固定模式：ich (-e), du (-st), er/sie/es (-t), wir (-en), ihr (-t), sie/Sie (-en)。",
+      "mastered": false
+    },
+    {
+      "id": "uggmrnm8v0j39",
+      "category": "vocab_pattern",
+      "rule": "不規則動詞 sein 的變位",
+      "example": "ich bin; du bist; er/sie/es ist; wir sind; ihr seid; sie/Sie sind",
+      "explanation": "動詞 sein (是) 是不規則動詞，其變位需要特別記憶。",
+      "mastered": false
+    },
+    {
+      "id": "uggmrnm8v0j40",
+      "category": "vocab_pattern",
+      "rule": "名詞省略冠詞的用法",
+      "example": "Ich bin Student.",
+      "explanation": "在自我介紹職稱時（如 Ich bin Student），以及表示種類或一般性不可數名詞時，通常省略冠詞。",
+      "mastered": false
+    },
+    {
+      "id": "uggmrnm8v0j41",
+      "category": "vocab_pattern",
+      "rule": "不定冠詞後形容詞的詞尾變化 (陰性 Akkusativ)",
+      "example": "Taipeh ist eine bekannte Stadt.",
+      "explanation": "當不定冠詞後面接陰性名詞，且該名詞處於 Akkusativ (受格) 時，形容詞詞尾會加上 -e。",
+      "mastered": false
+    },
+    {
+      "id": "uggmrnm8v0j42",
+      "category": "clause",
+      "rule": "不定詞片語的詞序",
+      "example": "Ich gehe mit meiner Mutter Gemüse kaufen.",
+      "explanation": "在德語不定詞片語中，通常將受詞放在不定詞前面，即「先寫名詞(受詞)再寫動詞」。",
+      "mastered": false
+    },
+    {
+      "id": "uggmrnm8v0j43",
+      "category": "case_dativ",
+      "rule": "句子中人與物的格位分配 (間接受詞與直接受詞)",
+      "example": "Ich gehe mit meiner Mutter Gemüse kaufen.",
+      "explanation": "當一個句子中同時涉及人（通常為間接受詞）和事物（通常為直接受詞）時，人通常用 Dativ (第三格)，事物用 Akkusativ (第四格)。例如 `mit meiner Mutter` (Dativ) 和 `Gemüse` (Akkusativ)。",
+      "mastered": false
+    },
+    {
+      "id": "uggmrnm8v0j44",
+      "category": "vocab_pattern",
+      "rule": "前往國家的介系詞用法",
+      "example": "Wir fahren nach Österreich. / Wir fahren in die Schweiz.",
+      "explanation": "前往沒有定冠詞的國家使用 nach + Dativ (例如 Österreich)；前往有定冠詞的國家使用 in + Akkusativ (例如 die Schweiz)。",
+      "mastered": false
+    },
+    {
+      "id": "uggmrnm8v0j45",
+      "category": "idiom",
+      "rule": "固定搭配 Bekanntschaft machen",
+      "example": "Bekanntschaft machen",
+      "explanation": "意思為「認識（某人）、結識」。",
+      "mastered": false
+    },
+    {
+      "id": "uggms3fwq3z20",
+      "category": "vocab_pattern",
+      "rule": "kein 不是副詞也不是動詞，而是否定冠詞（Negativartikel），用來否定名詞。",
+      "example": "Nein, ich bin kein Student.",
+      "explanation": "kein 的變化類似 ein，但 ein 沒有複數形式，kein 則有複數形式。用來表示「沒有／不是任何一個」。",
+      "mastered": false
+    },
+    {
+      "id": "uggms3fwq3z21",
+      "category": "vocab_pattern",
+      "rule": "nicht 用來否定動詞、形容詞或整個句子。",
+      "example": "Nein, ich arbeite nicht.",
+      "explanation": "nicht 針對動作或狀態進行否定，位置通常放在句尾或被否定詞彙之前。",
+      "mastered": false
+    },
+    {
+      "id": "uggms3fwq3z22",
+      "category": "case_akkusativ",
+      "rule": "表示前往某地時，in＋Akkusativ 強調進入建築、場所或空間（ins = in das）。",
+      "example": "ins Kino, in die Schule, in den Park",
+      "explanation": "用於指向封閉空間或建築物內部。",
+      "mastered": false
+    },
+    {
+      "id": "uggms3fwq3z23",
+      "category": "case_dativ",
+      "rule": "表示前往某人、職業人士或服務場所時，使用 zu＋Dativ（zum = zu dem, zur = zu der）。",
+      "example": "zur Post, zum Friseur, zum Arzt",
+      "explanation": "用於前往特定人物或機構（非進入內部空間本身）。",
+      "mastered": false
+    },
+    {
+      "id": "uggms3fwq3z24",
+      "category": "vocab_pattern",
+      "rule": "以 -schaft 結尾的名詞通常都是陰性，冠詞使用 die。",
+      "example": "die Freundschaft, die Mannschaft",
+      "explanation": "-schaft 常表示群體、關係、狀態或領域。",
+      "mastered": false
+    },
+    {
+      "id": "uggmsd09xmo18",
+      "category": "vocab_pattern",
+      "rule": "字尾 -ist",
+      "example": "Gitarrist, Journalist, Tourist, Spezialist",
+      "explanation": "表示從事某種職業或身份的人，看到 -ist 很多都是「某一類的人」。",
+      "mastered": false
+    },
+    {
+      "id": "uggmsd0g0zt9",
+      "category": "vocab_pattern",
+      "rule": "複合名詞的詞性由最後一個名詞決定",
+      "example": "das Krankenhaus, das Familienfoto, die Studiengebühr",
+      "explanation": "在德文的複合名詞中，最右邊（最後一個）單字的詞性和性別，就是整個複合名詞的詞性和性別。",
+      "mastered": false
+    },
+    {
+      "id": "uggmsd0g0zt10",
+      "category": "vocab_pattern",
+      "rule": "複合名詞是否加 s（Fugen-s）",
+      "example": "Möglichkeitsform, Arbeitsvertrag vs. Haustür, Autotür, Berufsschule",
+      "explanation": "複合名詞之間是否需要插入 s 沒有絕對規則，但常出現在字尾為 -ung、-heit、-keit、-schaft 的單字後方。許多日常單字則不加 s，主要需依母語者習慣來記憶。",
+      "mastered": false
+    },
+    {
+      "id": "uggmsd0g0zu13",
+      "category": "vocab_pattern",
+      "rule": "德文口語中，大部分過去發生的事情都使用現在完成式（Perfekt），而不是過去式（Präteritum）。",
+      "example": "Hast du schon gegessen?",
+      "explanation": "在日常口語對話裡，表達過去發生的動作習慣上多用現在完成式（Perfekt）。",
+      "mastered": false
+    },
+    {
+      "id": "uggmsd0g0zu14",
+      "category": "vocab_pattern",
+      "rule": "弱變化動詞的現在完成式結構為：ge + 字幹 + t",
+      "example": "lernen → gelernt",
+      "explanation": "規則（弱變化）動詞形成現在完成式時，通常在動詞字幹前加上前綴 ge-，字尾加上 -t。",
+      "mastered": false
+    },
+    {
+      "id": "uggmsd0g0zu15",
+      "category": "vocab_pattern",
+      "rule": "強變化動詞 essen 的現在完成式與過去式變化",
+      "example": "essen → gegessen (完成式), aß (過去式)",
+      "explanation": "essen 屬於強變化動詞（不規則變化），字根會發生母音變化，需要另外特別記憶。",
+      "mastered": false
+    },
+    {
+      "id": "uggmsd0g0zu18",
+      "category": "vocab_pattern",
+      "rule": "德文沒有像英文一樣獨立的現在進行式。",
+      "example": "Ich lerne Deutsch.",
+      "explanation": "簡單現在式（Ich lerne Deutsch.）可同時表示「我正在學德文」或「我有在學德文」。",
+      "mastered": false
+    },
+    {
+      "id": "uggmsd0g0zu19",
+      "category": "vocab_pattern",
+      "rule": "德文基本語序：主詞 + 動詞 + 副詞 + 受詞。若要強調副詞，可把副詞提前，主詞與副詞交換位置，但動詞仍維持第二位（V2）。",
+      "example": "",
+      "explanation": "德文句型中動詞固定在第二位（V2 規則）。",
+      "mastered": false
+    },
+    {
+      "id": "uggmsd0g0zu20",
+      "category": "vocab_pattern",
+      "rule": "bei 表示工作地點，固定搭配為 arbeiten bei。",
+      "example": "Ich arbeite bei Siemens.",
+      "explanation": "表示在某公司或機構工作時，使用介系詞 bei 搭配 arbeiten。",
+      "mastered": false
+    },
+    {
+      "id": "uggmreo7jra88",
+      "category": "clause",
+      "rule": "假設語氣用途",
+      "example": "",
+      "explanation": "德文的假設語氣(Konjunktiv II)可用於表達客氣、假定語氣或可能性。",
+      "mastered": false
+    },
+    {
+      "id": "uggmreo7jra89",
+      "category": "clause",
+      "rule": "動詞原型位置",
+      "example": "",
+      "explanation": "在一個句子中如果出現兩個動詞，第二個動詞通常會以原型形式出現在句子的最後。",
+      "mastered": false
+    },
+    {
+      "id": "uggmreo7jra90",
+      "category": "vocab_pattern",
+      "rule": "動詞過去分詞與形容詞",
+      "example": "",
+      "explanation": "德文的動詞過去分詞 (Partizip II) 與形容詞有時形式相似但用法不同。例如，'sich erkälten' 的過去分詞用於完成式 ('Ich habe mich erkältet' - 我感冒了)，而 'erkältet' 也可以作為形容詞，意為『感冒的』 ('Ich bin erkältet' - 我感冒了，強調狀態)。",
+      "mastered": false
+    },
+    {
+      "id": "uggmreo7jra91",
+      "category": "idiom",
+      "rule": "不人稱句型 `Es freut mich`",
+      "example": "",
+      "explanation": "`Es freut mich` 是一個非人稱句型，意為『我很高興』。其中 `Es` 是虛主詞，`mich` 是第一人稱的受格形式，表示『使我高興』。此句型常用於表達因某事而感到高興。",
+      "mastered": false
+    },
+    {
+      "id": "uggmreo7jra92",
+      "category": "clause",
+      "rule": "不定詞帶 `zu`",
+      "example": "",
+      "explanation": "在德文中，不定詞句型 (Infinitiv mit zu) 中，`zu` 通常放在動詞原型之前。如果動詞是可分動詞 (trennbare Verben)，`zu` 會插入在前綴和動詞詞幹之間 (例如：`aufstehen` → `aufzustehen`)；如果動詞是不可分動詞 (untrennbare Verben) 或沒有前綴，`zu` 會放在整個動詞之前 (例如：`kennenlernen` → `kennenzulernen`)。",
+      "mastered": false
+    },
+    {
+      "id": "uggmreo7jra93",
+      "category": "clause",
+      "rule": "可分前綴動詞規則",
+      "example": "",
+      "explanation": "在德文的現在式句型中，可分前綴動詞的動詞詞幹會置於句子的第二位，而其前綴會移到句子的最後。",
+      "mastered": false
+    },
+    {
+      "id": "uggmreoi48t63",
+      "category": "idiom",
+      "rule": "德文表達身體感受的句型",
+      "example": "❌ Ich bin heiß.　✅ Mir ist heiß.",
+      "explanation": "德文表達身體感受（如冷、熱）時，通常使用「Mir ist...」句型，主詞為非人稱 Es，感受由人體「承受」。若使用「Ich bin...」則會形容人本身的特質（例如「我很辣」）。",
+      "mastered": false
+    }
+  ],
+  "germanSentences": [
+    {
+      "id": "usmrekfzmh6",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Es ist sehr heiß.",
+      "chinese": "好熱。"
+    },
+    {
+      "id": "usmrekfzmh7",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Mir ist heiß.",
+      "chinese": "我好熱。"
+    },
+    {
+      "id": "usmrekfzmh8",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich sterbe vor Hitze",
+      "chinese": "我快被熱死了！"
+    },
+    {
+      "id": "usmrekfzmh9",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Es ist affenheiß",
+      "chinese": "真的是超級熱！"
+    },
+    {
+      "id": "usmrekfzmh10",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich schmelze weg",
+      "chinese": "我要融化了！"
+    },
+    {
+      "id": "usmrekfzmh16",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "天氣",
+      "german": "Es ist sehr heiß.",
+      "chinese": "好熱。"
+    },
+    {
+      "id": "usmrekfzmh17",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "感受",
+      "german": "Mir ist heiß.",
+      "chinese": "我好熱"
+    },
+    {
+      "id": "usmrekfzmh18",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "感受",
+      "german": "Mir ist kalt.",
+      "chinese": "我好冷"
+    },
+    {
+      "id": "usmrekfzmh19",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "形容人",
+      "german": "Ich bin heiß.",
+      "chinese": "我很辣。"
+    },
+    {
+      "id": "usmrekfzmh20",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "形容人",
+      "german": "Ich bin kalt.",
+      "chinese": "我很冷酷。"
+    },
+    {
+      "id": "usmreo7jra94",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "打招呼講義(Begrüßung)",
+      "german": "Wie geht es dir?",
+      "chinese": "你好嗎?"
+    },
+    {
+      "id": "usmreo7jra95",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "打招呼講義(Begrüßung)",
+      "german": "Wie geht's?",
+      "chinese": "你好嗎?"
+    },
+    {
+      "id": "usmreo7jra96",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "打招呼講義(Begrüßung)",
+      "german": "Wie geht es Ihnen?",
+      "chinese": "您好嗎?"
+    },
+    {
+      "id": "usmreo7jra97",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文前綴講義(Präfixe)",
+      "german": "Ich stehe um 7 Uhr auf.",
+      "chinese": "我七點起床。"
+    },
+    {
+      "id": "usmreo7jra98",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文前綴講義(Präfixe)",
+      "german": "Er kommt heute mit.",
+      "chinese": "他今天會一起來。"
+    },
+    {
+      "id": "usmreo7jra99",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文前綴講義(Präfixe)",
+      "german": "Wir kaufen im Supermarkt ein.",
+      "chinese": "我們在超市購物。"
+    },
+    {
+      "id": "usmreo7jra100",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文前綴講義(Präfixe)",
+      "german": "Ich besuche meine Freundin.",
+      "chinese": "我拜訪我的朋友。"
+    },
+    {
+      "id": "usmreo7jra101",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文前綴講義(Präfixe)",
+      "german": "Er verkauft sein Auto.",
+      "chinese": "他賣掉他的車。"
+    },
+    {
+      "id": "usmreo7jra102",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文前綴講義(Präfixe)",
+      "german": "Sie versteht Deutsch.",
+      "chinese": "她懂德文。"
+    },
+    {
+      "id": "usmreo7jra103",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Kann nicht klagen.",
+      "chinese": "還行,沒什麼好抱怨的。"
+    },
+    {
+      "id": "usmreo7jra104",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Könnte besser sein.",
+      "chinese": "可以更好。"
+    },
+    {
+      "id": "usmreo7jra105",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich bin müde.",
+      "chinese": "我很累。"
+    },
+    {
+      "id": "usmreo7jra106",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich bin krank.",
+      "chinese": "我生病了。"
+    },
+    {
+      "id": "usmreo7jra107",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich bin erkältet.",
+      "chinese": "我感冒了。"
+    },
+    {
+      "id": "usmreoi48t64",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "陽性名詞受格",
+      "german": "Ich habe einen Freund.",
+      "chinese": "我有一個男朋友."
+    },
+    {
+      "id": "usmreoi48t65",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "片語/副詞",
+      "german": "Ich heiße Christine.",
+      "chinese": "我叫 Christine."
+    },
+    {
+      "id": "usmreoi48t66",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "片語/副詞",
+      "german": "Ich komme aus Taiwan.",
+      "chinese": "我來自台灣."
+    },
+    {
+      "id": "usmreoi48t67",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "片語/副詞",
+      "german": "Ich wohne in Hsinchu.",
+      "chinese": "我住在新竹."
+    },
+    {
+      "id": "usmreoi48t68",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "nachdem 子句",
+      "german": "Nachdem er nach Taipeh gezogen ist, haben wir weniger Kontakt.",
+      "chinese": "在他搬到台北之後, 我們比較少聯絡了."
+    },
+    {
+      "id": "usmreoi48t69",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "抽象/複雜詞",
+      "german": "Die Firma schickt ihn in den Ruhestand.",
+      "chinese": "公司讓他退休."
+    },
+    {
+      "id": "usmreoi48t70",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "天氣詞彙",
+      "german": "Es ist sehr heiß.",
+      "chinese": "好熱."
+    },
+    {
+      "id": "usmreoi48t71",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "天氣詞彙",
+      "german": "Mir ist heiß.",
+      "chinese": "我好熱."
+    },
+    {
+      "id": "usmreoi48t72",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "天氣詞彙",
+      "german": "Mir ist kalt.",
+      "chinese": "我好冷."
+    },
+    {
+      "id": "usmreoi48t73",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "天氣詞彙",
+      "german": "Ich bin heiß.",
+      "chinese": "我很辣."
+    },
+    {
+      "id": "usmreoi48t74",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "天氣詞彙",
+      "german": "Ich bin kalt.",
+      "chinese": "我很冷."
+    },
+    {
+      "id": "usmreoi48t75",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "天氣詞彙",
+      "german": "Ich sterbe vor Hitze.",
+      "chinese": "我快被熱死了."
+    },
+    {
+      "id": "usmreoi48t76",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "天氣詞彙",
+      "german": "Es ist attenheiß.",
+      "chinese": "真是超級熱."
+    },
+    {
+      "id": "usmrnm8v0j46",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Taipeh ist eine bekannte Stadt.",
+      "chinese": "台北是一個有名的城市。"
+    },
+    {
+      "id": "usmrnm8v0j47",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich gehe in das Haus.",
+      "chinese": "我走進房子。"
+    },
+    {
+      "id": "usmrnm8v0j48",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich gehe mit meiner Mutter Gemüse kaufen.",
+      "chinese": "我和我媽媽去買蔬菜。"
+    },
+    {
+      "id": "usmrnm8v0j49",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Wir fahren in die Schweiz.",
+      "chinese": "我們開車去瑞士。"
+    },
+    {
+      "id": "usmrnm8v0j50",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Die Uni ist sehr bekannt.",
+      "chinese": "這所大學很有名。"
+    },
+    {
+      "id": "usmrnm8v0j51",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Tom ist Student.",
+      "chinese": "Tom是學生。"
+    },
+    {
+      "id": "usmrnm8v0j52",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Ich bin Student.",
+      "chinese": "我是學生。"
+    },
+    {
+      "id": "usmrnm8v0j53",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Wir fahren nach Österreich.",
+      "chinese": "我們開車去奧地利。"
+    },
+    {
+      "id": "usmrnm8v0j54",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "收集箱新增",
+      "german": "Wir fahren zum Arzt.",
+      "chinese": "我們去看醫生。"
+    },
+    {
+      "id": "usms3fwq3z25",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Wie heißen Sie?",
+      "chinese": "您叫什麼名字？"
+    },
+    {
+      "id": "usms3fwq3z26",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Ich heiße ______.",
+      "chinese": "我叫＿＿＿＿。"
+    },
+    {
+      "id": "usms3fwq3z27",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Woher kommen Sie?",
+      "chinese": "您從哪裡來？"
+    },
+    {
+      "id": "usms3fwq3z28",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Ich komme aus Taiwan.",
+      "chinese": "我來自台灣。"
+    },
+    {
+      "id": "usms3fwq3z29",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Wo wohnen Sie?",
+      "chinese": "您住在哪裡？"
+    },
+    {
+      "id": "usms3fwq3z30",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Ich wohne in ______.",
+      "chinese": "我住在＿＿＿＿。"
+    },
+    {
+      "id": "usms3fwq3z31",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Sind Sie Student?",
+      "chinese": "您是學生嗎？"
+    },
+    {
+      "id": "usms3fwq3z32",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Ja, ich bin Student.",
+      "chinese": "是的，我是學生。"
+    },
+    {
+      "id": "usms3fwq3z33",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Nein, ich bin kein Student.",
+      "chinese": "不，我不是學生。"
+    },
+    {
+      "id": "usms3fwq3z34",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "基礎自我介紹句型",
+      "german": "Ich bin jetzt kein Student mehr.",
+      "chinese": "我現在已經不是學生了。"
+    },
+    {
+      "id": "usms3fwq3z35",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "Woher／Wo／Wohin",
+      "german": "Wohin fahren Sie?",
+      "chinese": "您要去哪裡？"
+    },
+    {
+      "id": "usms3fwq3z36",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "Woher／Wo／Wohin",
+      "german": "Wir fahren nach München.",
+      "chinese": "我們要去慕尼黑。"
+    },
+    {
+      "id": "usms3fwq3z37",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "表示「前往某地」的介系詞",
+      "german": "Ich gehe zu meiner Mutter.",
+      "chinese": "我要去找我的母親。"
+    },
+    {
+      "id": "usms3fwq3z38",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "Ja／Nein 問句",
+      "german": "Arbeiten Sie?",
+      "chinese": "您有工作嗎？"
+    },
+    {
+      "id": "usms3fwq3z39",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "Ja／Nein 問句",
+      "german": "Ja, ich arbeite.",
+      "chinese": "有，我工作。"
+    },
+    {
+      "id": "usms3fwq3z40",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "Ja／Nein 問句",
+      "german": "Nein, ich arbeite nicht.",
+      "chinese": "沒有，我不工作。"
+    },
+    {
+      "id": "usms3fwq3z41",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "kein 格位變化",
+      "german": "Ich helfe keinen Kindern.",
+      "chinese": "我沒有幫助任何孩子。"
+    },
+    {
+      "id": "usmsd09xmo6",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文單字 6",
+      "german": "Ich verkaufe mein Auto.",
+      "chinese": "我賣掉我的車。"
+    },
+    {
+      "id": "usmsd09xmo7",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文單字 7",
+      "german": "Er lehrt an der Universität.",
+      "chinese": "他在大學任教。"
+    },
+    {
+      "id": "usmsd09xmo8",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文單字 8",
+      "german": "Ich unterrichte Deutsch.",
+      "chinese": "我教德文。"
+    },
+    {
+      "id": "usmsd09xmo9",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文單字 9",
+      "german": "Er ist Arbeiter.",
+      "chinese": "他是工人。"
+    },
+    {
+      "id": "usmsd09xmo10",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文單字 10",
+      "german": "Die Polizei kommt.",
+      "chinese": "警方來了。"
+    },
+    {
+      "id": "usmsd0g0zu16",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文文法 4",
+      "german": "Hast du schon gegessen?",
+      "chinese": "你已經吃了嗎？"
+    },
+    {
+      "id": "usmsd0g0zu21",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文文法 7",
+      "german": "Ich lerne Deutsch.",
+      "chinese": "我正在學德文。 / 我有在學德文。"
+    },
+    {
+      "id": "usmsd0g0zu22",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文文法 9",
+      "german": "Ich arbeite bei Siemens.",
+      "chinese": "我在西門子工作。"
+    },
+    {
+      "id": "usmsd0g0zu23",
+      "stage": 0,
+      "part": 0,
+      "unitTitle": "德文單字 30",
+      "german": "Der Lehrer ist sehr nett.",
+      "chinese": "老師很親切。"
+    }
+  ]
+}
