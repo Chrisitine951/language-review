@@ -7,10 +7,16 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="德文">
 <title>Deutsch Lernen</title>
-<link rel="stylesheet" href="core.css?v=2.4.1">
-<script src="data.js?v=2.4.1"></script>
-<script src="data-de-nouns.js?v=2.4.0"></script>
-<script src="core.js?v=2.4.1"></script>
+<link rel="stylesheet" href="core.css?v=3.0.0">
+<script>
+  // v3.0.0：告訴 core.js 這支 App 用哪個使用者資料檔、有哪些欄位。
+  // 一定要在 core.js 之前宣告；名字不可改成 APP_CONFIG（舊 data.js 有同名全域 const，會遮蔽掉）。
+  window.LR_APP = { id: 'de', name: '德文', userDataPath: 'data-user-de.json',
+    userDataKeys: ['germanVocabulary', 'germanGrammar', 'germanSentences'] };
+  </script>
+<script src="data-de.js?v=3.0.0"></script>
+<script src="data-de-nouns.js?v=3.0.0"></script>
+<script src="core.js?v=3.0.0"></script>
 <style>
   /* 德文 App 主色＝紅色（英文 App 是藍色，兩支 App 一眼可分辨） */
   :root { --primary: var(--de); --primary-light: var(--de-light); }
@@ -457,7 +463,7 @@
         </div>
 
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Deutsch App v2.4.0<br>英文/雅思功能在 english.html
+          Deutsch App v3.0.0<br>英文/雅思功能在 english.html
         </div>
       </div>
     </div>
@@ -556,8 +562,10 @@ function deFullWord(w) {
 
 // ============================================================
 // STORAGE（沿用 v1 的 lr_ 前綴）
-// 注意：diaryEntries / engooRecords 是英文 App 的東西，這裡不碰，
-// 但同步時要「原封不動帶回去」，否則會把她在英文 App 的舊資料洗掉。
+// _passthrough 是歷史遺留（v3.0.0 查證）：英文 App 現在寫自己的 progress-en-<使用者>.json，
+// 已經不會碰這個檔案了，所以這裡實際上不會再收到 diaryEntries / engooRecords。
+// 保留這段是為了安全：舊的 progress-<使用者>.json 裡可能還躺著當年的欄位，
+// 原樣帶回去不會有壞處；真要清掉得動同步邏輯，不值得為了幾個沒人讀的欄位冒險。
 // ============================================================
 let _passthrough = {}; // 進度檔裡不屬於德文 App 的欄位，原樣保留
 function saveData() {
@@ -2621,7 +2629,7 @@ function resetAllSchedule() {
   reviewSchedule = {}; saveData(); showToast('複習排程已清除');
 }
 function exportData() {
-  const obj = { exportDate: new Date().toISOString(), version: '2.4.0', app: 'german', reviewSchedule, grammarStats, todayStats, inboxItems };
+  const obj = { exportDate: new Date().toISOString(), version: '3.0.0', app: 'german', reviewSchedule, grammarStats, todayStats, inboxItems };
   const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
