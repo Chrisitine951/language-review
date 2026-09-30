@@ -9,7 +9,7 @@
 <title>Deutsch Lernen</title>
 <link rel="stylesheet" href="core.css?v=2.4.1">
 <script src="data.js?v=2.4.1"></script>
-<script src="data-de-nouns.js?v=2.3.0"></script>
+<script src="data-de-nouns.js?v=2.4.0"></script>
 <script src="core.js?v=2.4.1"></script>
 <style>
   /* 德文 App 主色＝紅色（英文 App 是藍色，兩支 App 一眼可分辨） */
@@ -57,8 +57,8 @@
           <span class="quick-btn-sub" id="home-vocab-count">載入中…</span>
         </button>
         <button class="quick-btn" onclick="goTo('learn','nouns')">
-          <span class="quick-btn-icon">🔍</span><span class="quick-btn-title">名詞查詢</span>
-          <span class="quick-btn-sub" id="home-noun-count">性別・複數</span>
+          <span class="quick-btn-icon">🔍</span><span class="quick-btn-title">查詢</span>
+          <span class="quick-btn-sub" id="home-noun-count">名詞・數字</span>
         </button>
         <button class="quick-btn" onclick="goTo('learn','pronunciation')">
           <span class="quick-btn-icon">🔤</span><span class="quick-btn-title">發音規則</span>
@@ -157,10 +157,10 @@
     <!-- ========== 學習（名詞／發音／句型／文法）========== -->
     <div id="page-learn" class="page">
       <div class="topbar">
-        <div><div class="topbar-title">德文基礎</div><div class="topbar-sub">名詞 · 發音 · 句型 · 文法</div></div>
+        <div><div class="topbar-title">德文基礎</div><div class="topbar-sub">名詞 · 數字 · 發音 · 句型 · 文法</div></div>
       </div>
       <div class="lang-toggle" style="margin: 12px 16px 0;">
-        <button class="lang-toggle-btn active" id="de-tab-nouns" onclick="setDeTab('nouns')">🔍 名詞</button>
+        <button class="lang-toggle-btn active" id="de-tab-nouns" onclick="setDeTab('nouns')">🔍 查詢</button>
         <button class="lang-toggle-btn" id="de-tab-pr" onclick="setDeTab('pronunciation')">🔤 發音</button>
         <button class="lang-toggle-btn" id="de-tab-sentence" onclick="setDeTab('sentence')">💬 句型</button>
         <button class="lang-toggle-btn" id="de-tab-grammar" onclick="setDeTab('grammar')">📚 文法</button>
@@ -168,6 +168,12 @@
 
       <!-- ---------- 名詞查詢（v2.3.0） ---------- -->
       <div id="de-sub-nouns">
+        <div class="lang-toggle" style="margin: 12px 16px 0;">
+          <button class="lang-toggle-btn active" id="lk-mode-noun" onclick="setLookupMode('noun')">🔤 名詞</button>
+          <button class="lang-toggle-btn" id="lk-mode-number" onclick="setLookupMode('number')">🔢 數字</button>
+        </div>
+
+        <div id="lk-view-noun">
         <div class="diary-input-card" style="margin-top: 12px;">
           <div style="font-size:12px; color:var(--text3); line-height:1.7; margin-bottom:10px;">
             查名詞的<strong>性別</strong>和<strong>複數形</strong>。可以打 <strong>Vater</strong>、<strong>der Vater</strong>、<strong>Väter</strong>，也可以打中文「父親」反查。<br>
@@ -194,6 +200,52 @@
         <div class="section-header"><span class="section-title">依主題瀏覽（<span id="noun-total">0</span> 個名詞）</span></div>
         <div class="filter-row" id="noun-topic-row"></div>
         <div id="noun-topic-list"></div>
+        </div><!-- /lk-view-noun -->
+
+        <!-- ---------- 數字查詢（v2.4.0） ---------- -->
+        <div id="lk-view-number" style="display:none;">
+          <div class="diary-input-card" style="margin-top: 12px;">
+            <div style="font-size:12px; color:var(--text3); line-height:1.7; margin-bottom:10px;">
+              輸入<strong>阿拉伯數字</strong>看德文怎麼唸，或輸入<strong>德文數字</strong>換回阿拉伯數字。<br>
+              也吃時間（<strong>14:30</strong>）、日期（<strong>24.12.</strong>）、價格（<strong>3,50 €</strong>）。範圍 0–1,000,000。
+            </div>
+            <div class="typing-input-wrap">
+              <input class="typing-input" id="num-input" placeholder="47 / 14:30 / 24.12. / 3,50 € / siebenundvierzig" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+              <button class="typing-submit" onclick="doNumberLookup()">查詢</button>
+            </div>
+            <div class="noun-hist-row" id="num-examples"></div>
+          </div>
+          <div id="num-result"></div>
+
+          <div class="section-header"><span class="section-title">數字規則速查</span></div>
+          <div class="pr-card">
+            <div class="grammar-category-row" onclick="toggleRuleDetail('num-rule-detail')" style="margin-bottom:0;">
+              <span class="pr-title" style="margin-bottom:0;">🔢 原子詞與組合規則</span>
+              <span class="grammar-rule-toggle">展開 ▾</span>
+            </div>
+            <div class="grammar-rule-detail" id="num-rule-detail" style="background:transparent; padding:0;">
+              <div id="num-rule-tables"></div>
+            </div>
+          </div>
+          <div class="pr-card">
+            <div class="grammar-category-row" onclick="toggleRuleDetail('num-time-detail')" style="margin-bottom:0;">
+              <span class="pr-title" style="margin-bottom:0;">🕐 時間說法（含 halb 陷阱）</span>
+              <span class="grammar-rule-toggle">展開 ▾</span>
+            </div>
+            <div class="grammar-rule-detail" id="num-time-detail" style="background:transparent; padding:0;">
+              <div id="num-time-tables"></div>
+            </div>
+          </div>
+          <div class="pr-card">
+            <div class="grammar-category-row" onclick="toggleRuleDetail('num-date-detail')" style="margin-bottom:0;">
+              <span class="pr-title" style="margin-bottom:0;">📅 序數・星期・月份</span>
+              <span class="grammar-rule-toggle">展開 ▾</span>
+            </div>
+            <div class="grammar-rule-detail" id="num-date-detail" style="background:transparent; padding:0;">
+              <div id="num-date-tables"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="de-sub-pronunciation" style="display:none;">
@@ -377,6 +429,7 @@
         <div class="settings-section settings-group-body" id="sg-body-data">
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">德文單字</div><div class="settings-item-sub" id="settings-de-count">—</div></div><span class="tag tag-de">單字</span></div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">名詞字典</div><div class="settings-item-sub" id="settings-noun-count">—</div></div><span class="tag tag-de">名詞</span></div>
+          <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">數字查詢</div><div class="settings-item-sub">0–1,000,000 規則產生・序數／時間／價格・不佔資料庫</div></div><span class="tag tag-amber">規則</span></div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">文法規則</div><div class="settings-item-sub" id="settings-grammar-count">—</div></div><span class="tag tag-green">文法</span></div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">發音規則 / 句型</div><div class="settings-item-sub" id="settings-pr-count">—</div></div><span class="tag tag-amber">基礎</span></div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">動詞變化題庫</div><div class="settings-item-sub" id="settings-conj-count">—</div></div><span class="tag tag-de">動詞</span></div>
@@ -404,7 +457,7 @@
         </div>
 
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Deutsch App v2.3.0<br>英文/雅思功能在 english.html
+          Deutsch App v2.4.0<br>英文/雅思功能在 english.html
         </div>
       </div>
     </div>
@@ -467,6 +520,7 @@ let degrStats = { correct: 0, wrong: 0 }, degrCurrentQ = null, degrAnswered = fa
 let deconjStats = { correct: 0, wrong: 0 }, deconjAnswered = false;
 let touchStartX = 0, touchStartY = 0, isDragging = false;
 let nounTopic = 'all', nounHistory = [];
+let lookupMode = 'noun';   // v2.4.0：查詢分頁的子模式（noun / number）
 
 // ============================================================
 // 德文冠詞處理（v2.1.0）
@@ -799,7 +853,7 @@ function getDueWords() {
     .filter(w => w.nextReview > 0 && w.nextReview <= now);
 }
 // 分類篩選：從資料裡自動抓出有哪些 category，不寫死
-const CAT_LABEL = { greeting:'問候', people:'人物', food:'食物', objects:'物品', body:'身體', places:'地點', nature:'自然', verb:'動詞', adjective:'形容詞', time:'時間', other:'其他' };
+const CAT_LABEL = { greeting:'問候', people:'人物', food:'食物', objects:'物品', body:'身體', places:'地點', nature:'自然', verb:'動詞', adjective:'形容詞', adverb:'副詞', preposition:'介系詞', animals:'動物', time:'時間', other:'其他' };
 function renderCatChips() {
   const el = document.getElementById('vocab-cat-row');
   const cats = [...new Set(GERMAN_VOCABULARY.map(w => w.category || 'other'))];
@@ -978,6 +1032,7 @@ document.getElementById('typing-input').addEventListener('keydown', e => { if (e
 // ============================================================
 function initLearn() {
   renderNounLookupUI();
+  renderNumberUI();
   renderPronunciation();
   initSentencePractice();
   renderGermanGrammar();
@@ -1108,11 +1163,15 @@ function lookupNoun(q) {
     if (cjk) GERMAN_NOUNS.forEach(n => { if (String(n.meaning || '').includes(raw)) push(dictHit(n, false)); });
   }
   // ② 單字庫的名詞（有性別、沒複數）
+  // v2.4.0 去重：同一個字若字典已經收了（有複數形、資料更完整），就不再列單字庫那張，
+  // 否則查 Krankenhaus、Universität 這種兩邊都有的字會跳出兩張卡，很吵。
+  const dictWords = new Set(hits.map(h => nounKey(h.word)));
   if (typeof GERMAN_VOCABULARY !== 'undefined') {
     GERMAN_VOCABULARY.forEach(v => {
       if (!/名詞/.test(v.pos || '')) return;
       const s = deSplitWord(v);
       if (!s.article) return;
+      if (dictWords.has(nounKey(s.word))) return;
       const match = nounKey(s.word) === key || (cjk && String(v.meaning || '').includes(raw));
       if (match) push(vocabHit(v, s));
     });
@@ -1314,6 +1373,501 @@ function renderNounLookupUI() {
   renderNounTopicList();
 }
 document.getElementById('noun-input').addEventListener('keydown', e => { if (e.key === 'Enter') doNounLookup(); });
+document.getElementById('num-input').addEventListener('keydown', e => { if (e.key === 'Enter') doNumberLookup(); });
+
+// ============================================================
+// 數字查詢（v2.4.0）
+//
+// 【設計原則：能算出來的就不存】跟格位表、物主冠詞同一招。
+// 課綱要求 0–1,000,000，不可能存一百萬筆；德文數字只要存約 30 個「原子」
+// （null、eins–zwölf、十幾的不規則、zwanzig–neunzig、hundert、tausend、Million），
+// 其餘全部用規則組出來。所以這一整塊不開新資料檔，直接寫在程式裡。
+// 真的是「名詞」的那些（die Million、der Euro、der Montag…）才進 data-de-nouns.js。
+//
+// 【四個子功能】基本數字雙向轉換／序數與日期／時間／價格。
+// 全部純規則、離線可用、不需要 Gemini（Murray 沒設 API key 也能用）。
+//
+// 【台灣人真正的陷阱，UI 一定要點出來】
+//   ① 21 = einundzwanzig，個位在前十位在後（聽電話號碼和價格會整個打結）
+//   ② eins vs ein：單獨講 1 是 eins，接名詞是 ein Buch
+//   ③ 拼寫：sechs→sechzehn/sechzig 掉 s、sieben→siebzehn/siebzig 掉 en、drei→dreißig
+//   ④ halb drei ＝ 2:30 不是 3:30（德文的 halb 是「朝下一個整點走了一半」）
+//   ⑤ 一百萬以下寫成一個字，不空格
+// ============================================================
+
+// ---- 原子詞（只存這些）----
+const NUM_ONES = ['null','eins','zwei','drei','vier','fünf','sechs','sieben','acht','neun','zehn','elf','zwölf'];
+const NUM_TEENS = { 13:'dreizehn', 14:'vierzehn', 15:'fünfzehn', 16:'sechzehn', 17:'siebzehn', 18:'achtzehn', 19:'neunzehn' };
+const NUM_TENS  = { 20:'zwanzig', 30:'dreißig', 40:'vierzig', 50:'fünfzig', 60:'sechzig', 70:'siebzig', 80:'achtzig', 90:'neunzig' };
+const NUM_MAX = 1000000;
+const NUM_MONTHS = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+const NUM_WEEKDAYS = ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'];
+// 序數不規則：其餘 1–19 加 -te、20 以上加 -ste
+const NUM_ORD_IRREGULAR = { 1:'erste', 3:'dritte', 7:'siebte', 8:'achte' };
+
+// ---- 數字 → 德文 ----
+function numUnder100(n) {
+  if (n < 13) return NUM_ONES[n];
+  if (n < 20) return NUM_TEENS[n];
+  const t = Math.floor(n / 10) * 10, o = n % 10;
+  if (o === 0) return NUM_TENS[t];
+  // 個位在前、十位在後，中間夾 und，全部連成一個字
+  return (o === 1 ? 'ein' : NUM_ONES[o]) + 'und' + NUM_TENS[t];
+}
+function numUnder1000(n) {
+  const h = Math.floor(n / 100), r = n % 100;
+  let s = '';
+  // 這裡一律產生 einhundert：複合詞內部的 ein 不能省（1100 = eintausendeinhundert）
+  if (h > 0) s += (h === 1 ? 'ein' : NUM_ONES[h]) + 'hundert';
+  if (r > 0) s += numUnder100(r);
+  return s;
+}
+function numUnder1e6(n) {
+  const t = Math.floor(n / 1000), r = n % 1000;
+  let s = '';
+  if (t > 0) s += (t === 1 ? 'ein' : numUnder1000(t)) + 'tausend';
+  if (r > 0) s += numUnder1000(r);
+  return s;
+}
+// 完整形（einhundert / eintausend）
+function numberToGerman(n) {
+  if (n === 0) return 'null';
+  if (n >= 1e6) {
+    const m = Math.floor(n / 1e6), r = n % 1e6;
+    // Million 是陰性名詞 → eine Million（不是 ein Million），而且分開寫、字首大寫
+    let s = (m === 1 ? 'eine Million' : numUnder1e6(m) + ' Millionen');
+    if (r > 0) s += ' ' + numUnder1e6(r);
+    return s;
+  }
+  return numUnder1e6(n);
+}
+// 只有「整串的開頭」那個 ein 可以省；einundzwanzigtausend 的 ein 不能碰
+function numberToGermanShort(n) {
+  const s = numberToGerman(n);
+  if (/^einhundert/.test(s)) return s.slice(3);
+  if (/^eintausend/.test(s)) return s.slice(3);
+  return s;
+}
+
+// ---- 德文 → 數字（全程在 normalizeGerman 後的空間比對，所以 fuenf/dreissig 也吃）----
+const NUM_ONES_N = NUM_ONES.map(normalizeGerman);
+const NUM_TEENS_N = {}; Object.keys(NUM_TEENS).forEach(k => { NUM_TEENS_N[normalizeGerman(NUM_TEENS[k])] = Number(k); });
+const NUM_TENS_N  = {}; Object.keys(NUM_TENS).forEach(k  => { NUM_TENS_N[normalizeGerman(NUM_TENS[k])]  = Number(k); });
+
+function parseUnder100(s) {
+  if (s === '') return 0;
+  const i = NUM_ONES_N.indexOf(s);
+  if (i >= 0) return i;
+  if (NUM_TEENS_N[s] != null) return NUM_TEENS_N[s];
+  if (NUM_TENS_N[s] != null) return NUM_TENS_N[s];
+  const m = s.match(/^(.+?)und(.+)$/); // 非貪婪：einundzwanzig → ein / zwanzig
+  if (m) {
+    const o = m[1] === 'ein' ? 1 : NUM_ONES_N.indexOf(m[1]);
+    const t = NUM_TENS_N[m[2]];
+    if (o >= 1 && o <= 9 && t != null) return o + t;
+  }
+  return null;
+}
+function parseUnder1000(s) {
+  const i = s.indexOf('hundert');
+  if (i >= 0) {
+    const hp = s.slice(0, i), rest = s.slice(i + 7);
+    const h = (hp === '' || hp === 'ein') ? 1 : NUM_ONES_N.indexOf(hp);
+    if (!(h >= 1 && h <= 9)) return null;
+    const r = parseUnder100(rest);
+    if (r === null) return null;
+    return h * 100 + r;
+  }
+  return parseUnder100(s);
+}
+function parseUnder1e6(s) {
+  const i = s.indexOf('tausend');
+  if (i >= 0) {
+    const tp = s.slice(0, i), rest = s.slice(i + 7);
+    const t = (tp === '' || tp === 'ein') ? 1 : parseUnder1000(tp);
+    if (t === null || t < 1) return null;
+    const r = rest === '' ? 0 : parseUnder1000(rest);
+    if (r === null) return null;
+    return t * 1000 + r;
+  }
+  return parseUnder1000(s);
+}
+function germanToNumber(raw) {
+  const s = normalizeGerman(String(raw || '')).replace(/[\s\-.]/g, '');
+  if (!s) return null;
+  const mm = s.match(/^(.*?)million(en)?(.*)$/);
+  if (mm) {
+    const mp = mm[1], rest = mm[3];
+    const m = (mp === '' || mp === 'ein' || mp === 'eine') ? 1 : parseUnder1e6(mp);
+    if (m === null || m < 1) return null;
+    const r = rest === '' ? 0 : parseUnder1e6(rest);
+    if (r === null) return null;
+    return m * 1e6 + r;
+  }
+  return parseUnder1e6(s);
+}
+
+// ---- 序數與日期 ----
+function ordinalWord(n) {
+  if (!(n >= 1 && n <= 999)) return null;
+  if (n < 20) return NUM_ORD_IRREGULAR[n] || (numUnder100(n) + 'te');
+  const tail = n % 100;
+  if (tail >= 1 && tail <= 19) {
+    // 101 → hundert ＋ erste；不規則落在最後一個元素上
+    return numberToGermanShort(n - tail) + (NUM_ORD_IRREGULAR[tail] || (numUnder100(tail) + 'te'));
+  }
+  return numberToGermanShort(n) + 'ste';
+}
+// der erste Mai（主格 -e）→ am ersten Mai（Dativ -en）
+function ordinalDative(n) {
+  const o = ordinalWord(n);
+  return o ? o.slice(0, -1) + 'en' : null;
+}
+
+// ---- 時間 ----
+function timeToGerman(h, m) {
+  const official = (h === 1 ? 'ein' : numUnder100(h)) + ' Uhr' + (m > 0 ? ' ' + numUnder100(m) : '');
+  const h12 = (h % 12 === 0) ? 12 : h % 12;
+  const next = (h12 % 12 === 0) ? 1 : h12 + 1;
+  // 不接 Uhr 時 1 要用 eins：Viertel nach eins、halb eins
+  const hw = (x) => (x === 1 ? 'eins' : numUnder100(x));
+  let colloquial, extra = null;
+  if (m === 0) colloquial = (h12 === 1 ? 'ein' : numUnder100(h12)) + ' Uhr';
+  else if (m === 15) { colloquial = 'Viertel nach ' + hw(h12); extra = 'viertel ' + hw(next) + '（德東／南德的說法）'; }
+  else if (m === 30) colloquial = 'halb ' + hw(next);
+  else if (m === 45) { colloquial = 'Viertel vor ' + hw(next); extra = 'dreiviertel ' + hw(next) + '（德東／南德的說法）'; }
+  else if (m < 30) colloquial = numUnder100(m) + ' nach ' + hw(h12);
+  else colloquial = numUnder100(60 - m) + ' vor ' + hw(next);
+  // 20/25/35/40 分德國人更常用「以半點為基準」的說法
+  if (m === 20) extra = 'zehn vor halb ' + hw(next) + '（更常聽到）';
+  if (m === 25) extra = 'fünf vor halb ' + hw(next) + '（更常聽到）';
+  if (m === 35) extra = 'fünf nach halb ' + hw(next) + '（更常聽到）';
+  if (m === 40) extra = 'zehn nach halb ' + hw(next) + '（更常聽到）';
+  const roundish = (m % 5 === 0);
+  return { official, colloquial, extra, roundish, halbTrap: (m === 30) };
+}
+
+// ---- 價格 ----
+function priceToGerman(euros, cents) {
+  const e = (euros === 1 ? 'ein' : numberToGermanShort(euros));
+  const c = (cents === 1 ? 'ein' : numUnder100(cents));
+  // cents === 1 時「ein Euro ein」念起來不像話，口語形式直接用完整形式
+  if (euros > 0 && cents > 0) {
+    const formal = e + ' Euro ' + c + ' Cent';
+    return { casual: cents === 1 ? formal : e + ' Euro ' + c, formal };
+  }
+  if (euros > 0) return { casual: e + ' Euro', formal: e + ' Euro' };
+  return { casual: c + ' Cent', formal: c + ' Cent' };
+}
+
+// ---- 拼寫陷阱偵測（給結果卡標注用）----
+function numberTraps(n, word) {
+  const t = [];
+  if (/sechzehn|sechzig/.test(word)) t.push('<strong>sechs</strong> 到了 16／60 要掉 s：sech<strong>zehn</strong>、sech<strong>zig</strong>');
+  if (/siebzehn|siebzig/.test(word)) t.push('<strong>sieben</strong> 到了 17／70 要掉 en：sieb<strong>zehn</strong>、sieb<strong>zig</strong>');
+  if (/dreißig/.test(word)) t.push('30 是 drei<strong>ß</strong>ig，不是 dreizig——十位數裡唯一用 ß 的');
+  const tail = n % 100;
+  if (tail >= 21 && tail % 10 !== 0) {
+    const o = tail % 10, tens = Math.floor(tail / 10) * 10;
+    t.push('<strong>個位在前</strong>：' + (o === 1 ? 'ein' : NUM_ONES[o]) + '（' + o + '）＋ und ＋ ' + NUM_TENS[tens] + '（' + tens + '）。聽數字時整個順序是反的，這是聽力最常失分的地方');
+  }
+  if (n === 1) t.push('單獨講「1」是 <strong>eins</strong>；後面接名詞要變成 <strong>ein</strong>：ein Buch、ein Euro');
+  if (n >= 100 && n < NUM_MAX) t.push('一百萬以下<strong>寫成一個字</strong>，中間不空格也不加連字號');
+  if (n >= NUM_MAX) t.push('Million 是<strong>陰性名詞</strong>，所以是 <strong>eine</strong> Million，而且要分開寫、字首大寫');
+  return t;
+}
+
+// ---- 輸入判讀 ----
+// 一個輸入框吃五種格式，靠樣式判斷要出哪張卡
+function analyzeNumberInput(raw) {
+  const s = String(raw || '').trim();
+  if (!s) return null;
+  let m;
+  // 時間：14:30（冒號最明確）／14.30 Uhr
+  if ((m = s.match(/^(\d{1,2})\s*[:：]\s*(\d{1,2})$/)) || (m = s.match(/^(\d{1,2})[.．]\s*(\d{2})\s*uhr$/i))) {
+    const h = +m[1], mi = +m[2];
+    if (h <= 23 && mi <= 59) return { kind: 'time', h, m: mi };
+  }
+  // 日期：24.12.（結尾有句點＝德文日期寫法，最明確）
+  if ((m = s.match(/^(\d{1,2})[.．]\s*(\d{1,2})[.．]\s*$/)) && +m[1] <= 31 && +m[2] >= 1 && +m[2] <= 12) {
+    return { kind: 'date', day: +m[1], month: +m[2] };
+  }
+  // 沒有結尾句點的 14.30 / 5.12：日期和時間都說得通時兩張卡都出，不替她猜
+  if ((m = s.match(/^(\d{1,2})[.．](\d{1,2})$/))) {
+    const a = +m[1], b = +m[2];
+    const okDate = a >= 1 && a <= 31 && b >= 1 && b <= 12;
+    const okTime = a <= 23 && m[2].length === 2 && b <= 59;
+    if (okDate && okTime) return { kind: 'both', day: a, month: b, h: a, m: b };
+    if (okDate) return { kind: 'date', day: a, month: b };
+    if (okTime) return { kind: 'time', h: a, m: b };
+  }
+  if ((m = s.match(/^(\d{1,2})[.．]?\s*([A-Za-zÄÖÜäöüß]+)$/))) {
+    const mi = NUM_MONTHS.findIndex(x => normalizeGerman(x) === normalizeGerman(m[2]));
+    if (mi >= 0 && +m[1] >= 1 && +m[1] <= 31) return { kind: 'date', day: +m[1], month: mi + 1 };
+  }
+  // 價格：有 € 或 Euro，或用逗號當小數點
+  if (/€|euro/i.test(s) || /^\d{1,7}[,]\d{1,2}$/.test(s)) {
+    const cleaned = s.replace(/€|euro/ig, '').replace(/\s/g, '');
+    if ((m = cleaned.match(/^(\d{1,7})(?:[,.](\d{1,2}))?$/))) {
+      const euros = +m[1];
+      const cents = m[2] ? +(m[2].length === 1 ? m[2] + '0' : m[2]) : 0;
+      if (euros <= 9999999 && (euros > 0 || cents > 0)) return { kind: 'price', euros, cents };
+    }
+  }
+  // 純整數（允許 1.000 / 1 000 這種千分位）
+  if (/^\d{1,3}([. ]\d{3})+$/.test(s) || /^\d+$/.test(s)) {
+    const n = parseInt(s.replace(/[. ]/g, ''), 10);
+    if (Number.isFinite(n)) return { kind: 'number', n };
+  }
+  // 其餘當德文字反查
+  const n = germanToNumber(s);
+  if (n !== null) return { kind: 'reverse', n, raw: s };
+  return { kind: 'none', raw: s };
+}
+
+// ---- 渲染 ----
+function speakNum(el) { speak(el.dataset.say, 'de-DE'); }
+function numSpeakBtn(text, title) {
+  return `<button class="speak-btn-inline" data-say="${escAttr(text)}" onclick="speakNum(this)" title="${escAttr(title || '發音')}">🔊</button>`;
+}
+function numRow(label, valueHtml) {
+  return `<div class="noun-row"><span class="noun-row-label">${escHtml(label)}</span><span>${valueHtml}</span></div>`;
+}
+function numTrapBlock(traps) {
+  if (!traps.length) return '';
+  // traps 的內容是本檔自己產生的固定字串（含 <strong>），不是使用者輸入，故不轉義
+  return traps.map(t => `<div class="pr-notes" style="margin-top:8px;">⚠️ ${t}</div>`).join('');
+}
+
+function renderNumCardCardinal(n) {
+  const full = numberToGerman(n), short = numberToGermanShort(n);
+  const variant = (full !== short) ? full : null;
+  return `<div class="noun-card">
+    <div class="noun-headline">
+      <span style="color:var(--text3); font-size:20px;">${escHtml(n.toLocaleString('de-DE'))}</span>
+      <span style="font-weight:700; word-break:break-all;">${escHtml(short)}</span>
+      ${numSpeakBtn(short)}
+    </div>
+    ${variant ? numRow('也可寫成', `<strong>${escHtml(variant)}</strong>　（把開頭的 ein 補回來，兩種都對）`) : ''}
+    ${numTrapBlock(numberTraps(n, short))}
+    <div class="noun-tags"><span class="tag tag-de">基數</span></div>
+  </div>`;
+}
+function renderNumCardOrdinal(n) {
+  const o = ordinalWord(n), od = ordinalDative(n);
+  if (!o) return '';
+  const rule = n < 20 ? '1–19 加 <strong>-te</strong>' : '20 以上加 <strong>-ste</strong>';
+  const irr = NUM_ORD_IRREGULAR[n % 100] && (n % 100) < 20;
+  return `<div class="noun-card">
+    <div class="noun-headline">
+      <span style="color:var(--text3); font-size:20px;">${n}.</span>
+      <span style="font-weight:700;">${escHtml(o)}</span>
+      ${numSpeakBtn('der ' + o)}
+    </div>
+    ${numRow('主格', `der <strong>${escHtml(o)}</strong>　例：Heute ist der ${n}. ${escHtml(NUM_MONTHS[4])}.`)}
+    ${numRow('Dativ', `am <strong>${escHtml(od)}</strong>　例：Ich komme am ${n}. ${escHtml(NUM_MONTHS[4])}.`)}
+    <div class="pr-notes" style="margin-top:8px;">💡 規則：${rule}${irr ? '，但這個字是<strong>不規則</strong>的' : ''}。<strong>am</strong> 後面是 Dativ，字尾要從 -e 變成 <strong>-en</strong>——這是最容易漏掉的一步。</div>
+    <div class="noun-tags"><span class="tag tag-amber">序數</span><span class="tag tag-green">日期用得到</span></div>
+  </div>`;
+}
+function renderNumCardDate(day, month) {
+  const mon = NUM_MONTHS[month - 1];
+  const o = ordinalWord(day), od = ordinalDative(day);
+  const say = 'am ' + od + ' ' + mon;
+  return `<div class="noun-card">
+    <div class="noun-headline">
+      <span style="color:var(--text3); font-size:20px;">${day}.${month}.</span>
+      <span style="font-weight:700;">${day}. ${escHtml(mon)}</span>
+      ${numSpeakBtn(say)}
+    </div>
+    ${numRow('主格', `der <strong>${escHtml(o)}</strong> ${escHtml(mon)}`)}
+    ${numRow('在那天', `am <strong>${escHtml(od)}</strong> ${escHtml(mon)}　（am ＝ an dem，Dativ）`)}
+    ${numRow('寫法', `<strong>${day}.${month}.</strong> 或 <strong>${day}. ${escHtml(mon)}</strong>　（德文日期是日在前、月在後）`)}
+    <div class="pr-notes" style="margin-top:8px;">💡 月份全部是 <strong>der</strong>，所以「在五月」是 im Mai（in dem）；接日期時則用 am。</div>
+    <div class="noun-tags"><span class="tag tag-de">日期</span></div>
+  </div>`;
+}
+function renderNumCardTime(h, m) {
+  const t = timeToGerman(h, m);
+  const hh = String(h).padStart(2, '0'), mm = String(m).padStart(2, '0');
+  return `<div class="noun-card">
+    <div class="noun-headline">
+      <span style="color:var(--text3); font-size:20px;">${hh}:${mm}</span>
+      <span style="font-weight:700;">${escHtml(t.colloquial)}</span>
+      ${numSpeakBtn('Es ist ' + t.colloquial + '.')}
+    </div>
+    ${numRow('官方說法', `<strong>${escHtml(t.official)}</strong>　（車站、廣播、正式場合用 24 小時制）${numSpeakBtn('Es ist ' + t.official + '.')}`)}
+    ${numRow('口語說法', `<strong>${escHtml(t.colloquial)}</strong>　（日常對話用 12 小時制）`)}
+    ${t.extra ? numRow('也會說', escHtml(t.extra)) : ''}
+    ${t.halbTrap ? `<div class="pr-notes" style="margin-top:8px;">⚠️ <strong>halb 是往前看的！</strong>halb ${escHtml(t.colloquial.replace('halb ',''))} ＝ ${hh}:${mm}，意思是「朝下一個整點走了一半」，不是「${escHtml(String(h))} 點半再加一小時」。跟中文直覺相反，這題一定要記牢。</div>` : ''}
+    ${!t.roundish ? `<div class="pr-notes" style="margin-top:8px;">💡 這個分鐘數不是 5 的倍數，德國人日常幾乎只講官方說法（${escHtml(t.official)}）。上面的口語形式文法沒錯，但聽起來很不自然。</div>` : ''}
+    <div class="noun-tags"><span class="tag tag-de">時間</span></div>
+  </div>`;
+}
+function renderNumCardPrice(euros, cents) {
+  const p = priceToGerman(euros, cents);
+  const disp = euros + ',' + String(cents).padStart(2, '0') + ' €';
+  return `<div class="noun-card">
+    <div class="noun-headline">
+      <span style="color:var(--text3); font-size:20px;">${escHtml(disp)}</span>
+      <span style="font-weight:700;">${escHtml(p.casual)}</span>
+      ${numSpeakBtn('Das kostet ' + p.casual + '.')}
+    </div>
+    ${numRow('日常', `<strong>${escHtml(p.casual)}</strong>`)}
+    ${p.formal !== p.casual ? numRow('完整', `<strong>${escHtml(p.formal)}</strong>`) : ''}
+    <div class="pr-notes" style="margin-top:8px;">💡 德文用<strong>逗號</strong>當小數點、用句點當千分位，跟中文正好相反：${escHtml(disp)} 是三塊五，1.000 € 是一千歐元。</div>
+    <div class="pr-notes" style="margin-top:8px;">💡 Euro 和 Cent 接在數字後面<strong>不變複數</strong>：zwei Euro、fünfzig Cent。</div>
+    <div class="noun-tags"><span class="tag tag-de">價格</span></div>
+  </div>`;
+}
+function renderNumCardReverse(rawWord, n) {
+  return `<div class="noun-card">
+    <div class="noun-headline">
+      <span style="font-weight:700; word-break:break-all;">${escHtml(rawWord)}</span>
+      <span style="color:var(--text3);">＝</span>
+      <span style="font-weight:800; font-size:28px;">${escHtml(n.toLocaleString('de-DE'))}</span>
+      ${numSpeakBtn(numberToGermanShort(n))}
+    </div>
+    ${numRow('標準寫法', `<strong>${escHtml(numberToGermanShort(n))}</strong>`)}
+    ${numTrapBlock(numberTraps(n, numberToGermanShort(n)))}
+    <div class="noun-tags"><span class="tag tag-green">反查</span></div>
+  </div>`;
+}
+
+function doNumberLookup() {
+  const el = document.getElementById('num-input');
+  const res = analyzeNumberInput(el.value);
+  renderNumberResult(res, el.value);
+}
+function numFromExample(el) {
+  document.getElementById('num-input').value = el.dataset.q;
+  renderNumberResult(analyzeNumberInput(el.dataset.q), el.dataset.q);
+}
+function renderNumberResult(res, raw) {
+  const out = document.getElementById('num-result');
+  if (!out) return;
+  if (!res) { showToast('請先輸入數字或德文'); out.innerHTML = ''; return; }
+  let html = '';
+  if (res.kind === 'number') {
+    if (res.n > NUM_MAX) {
+      html = `<div class="noun-card guess">
+        <div style="font-size:14px; font-weight:600;">超過 1,000,000</div>
+        <div class="pr-notes" style="margin-top:8px;">A1 課綱要求到一百萬為止，這個工具也只做到那裡。更大的數字要用 Millionen／Milliarden 組，規則一樣。</div>
+      </div>`;
+    } else {
+      html = renderNumCardCardinal(res.n);
+      if (res.n >= 1 && res.n <= 31) html += renderNumCardOrdinal(res.n);
+    }
+  } else if (res.kind === 'reverse') {
+    html = renderNumCardReverse(res.raw, res.n);
+  } else if (res.kind === 'time') {
+    html = renderNumCardTime(res.h, res.m);
+  } else if (res.kind === 'date') {
+    html = renderNumCardDate(res.day, res.month);
+  } else if (res.kind === 'both') {
+    html = `<div class="pr-notes" style="margin:12px 16px 0;">這個寫法日期和時間都說得通，兩種都列出來。德文日期習慣在結尾加句點（<strong>${res.day}.${res.month}.</strong>），時間則用冒號（<strong>${String(res.h).padStart(2,'0')}:${String(res.m).padStart(2,'0')}</strong>）。</div>`
+      + renderNumCardDate(res.day, res.month) + renderNumCardTime(res.h, res.m);
+  } else if (res.kind === 'price') {
+    html = renderNumCardPrice(res.euros, res.cents);
+  } else {
+    html = `<div class="noun-card guess">
+      <div style="font-size:14px; font-weight:600;">看不懂「${escHtml(res.raw || raw || '')}」</div>
+      <div class="pr-notes" style="margin-top:8px;">可以試試：<strong>47</strong>（數字）、<strong>siebenundvierzig</strong>（德文）、<strong>14:30</strong>（時間）、<strong>24.12.</strong>（日期）、<strong>3,50 €</strong>（價格）。<br>德文拼字用 ae／oe／ue／ss 代替 ä／ö／ü／ß 也可以。</div>
+    </div>`;
+  }
+  out.innerHTML = html;
+}
+
+// ---- 規則速查表 ----
+const NUM_EXAMPLES = ['47', '1', '16', '21', '101', '1000', '1000000', '14:30', '24.12.', '3,50 €', 'siebenundvierzig'];
+function renderNumExamples() {
+  const el = document.getElementById('num-examples');
+  if (!el) return;
+  el.innerHTML = `<span style="font-size:11px; color:var(--text3); align-self:center;">試試看</span>` +
+    NUM_EXAMPLES.map(q => `<button class="filter-chip" data-q="${escAttr(q)}" onclick="numFromExample(this)">${escHtml(q)}</button>`).join('');
+}
+function renderNumRuleTables() {
+  const el = document.getElementById('num-rule-tables');
+  if (!el) return;
+  const basic = [];
+  for (let i = 0; i <= 12; i++) basic.push([String(i), NUM_ONES[i]]);
+  const teens = Object.keys(NUM_TEENS).map(k => [k, NUM_TEENS[k]]);
+  const tens = Object.keys(NUM_TENS).map(k => [k, NUM_TENS[k]]);
+  const twoCol = (caption, rows, mark) => `<div class="case-table-wrap"><table class="case-table">
+    <caption>${escHtml(caption)}</caption>
+    <thead><tr><th>數字</th><th>德文</th></tr></thead>
+    <tbody>${rows.map(r => `<tr><td>${escHtml(r[0])}</td><td><strong>${escHtml(r[1])}</strong>${mark && mark(r) ? ' ⚠️' : ''}</td></tr>`).join('')}</tbody>
+  </table></div>`;
+  const trapMark = (r) => /sech(zehn|zig)|sieb(zehn|zig)|dreißig/.test(r[1]);
+  el.innerHTML =
+    twoCol('0–12（要背的原子）', basic) +
+    twoCol('13–19（⚠️ ＝拼寫有陷阱）', teens, trapMark) +
+    twoCol('整十（⚠️ ＝拼寫有陷阱）', tens, trapMark) +
+    `<div class="case-table-wrap"><table class="case-table">
+      <caption>組合規則</caption>
+      <thead><tr><th>情況</th><th>怎麼組</th><th>例</th></tr></thead>
+      <tbody>
+        <tr><td>21–99</td><td><strong>個位 + und + 十位</strong>（順序跟中文相反）</td><td>47 → sieben·und·vierzig</td></tr>
+        <tr><td>百位</td><td>個位 + hundert（100 可省 ein）</td><td>300 → dreihundert；100 → (ein)hundert</td></tr>
+        <tr><td>千位</td><td>三位數 + tausend</td><td>21000 → einundzwanzigtausend</td></tr>
+        <tr><td>百萬</td><td><strong>分開寫、字首大寫</strong></td><td>eine Million；zwei Millionen</td></tr>
+        <tr><td>空格</td><td>一百萬以下<strong>全部連成一個字</strong></td><td>999999 → 一個字，不空格</td></tr>
+        <tr><td>1 的兩種形</td><td>單獨用 <strong>eins</strong>／接名詞用 <strong>ein</strong></td><td>Eins, zwei…／ein Buch、ein Euro</td></tr>
+      </tbody>
+    </table></div>
+    <div class="pr-notes">💡 拼寫三個陷阱：sech<strong>s</strong> 到 16／60 掉 s、sieb<strong>en</strong> 到 17／70 掉 en、30 是 drei<strong>ß</strong>ig。</div>`;
+}
+function renderNumTimeTables() {
+  const el = document.getElementById('num-time-tables');
+  if (!el) return;
+  const mins = [0, 15, 20, 30, 40, 45, 50];
+  const rows = mins.map(m => {
+    const t = timeToGerman(14, m);
+    return ['14:' + String(m).padStart(2, '0'), t.official, t.colloquial];
+  });
+  el.innerHTML = `<div class="case-table-wrap"><table class="case-table">
+    <caption>以 14 點為例（口語一律用 12 小時制）</caption>
+    <thead><tr><th>時間</th><th>官方</th><th>口語</th></tr></thead>
+    <tbody>${rows.map(r => `<tr><td>${escHtml(r[0])}</td><td>${escHtml(r[1])}</td><td><strong>${escHtml(r[2])}</strong></td></tr>`).join('')}</tbody>
+  </table></div>
+  <div class="pr-notes">⚠️ <strong>halb drei ＝ 2:30，不是 3:30。</strong>德文的 halb 是「朝<u>下一個</u>整點走了一半」，跟中文的「兩點半」思路相反。這是台灣人最常聽錯的一題。</div>
+  <div class="pr-notes">💡 問法：<strong>Wie spät ist es?</strong> 或 <strong>Wie viel Uhr ist es?</strong>；回答 <strong>Es ist …</strong>。約時間用 <strong>um</strong>：Um halb drei.（兩點半的時候）</div>`;
+}
+function renderNumDateTables() {
+  const el = document.getElementById('num-date-tables');
+  if (!el) return;
+  const ordRows = [1, 2, 3, 4, 7, 8, 11, 16, 20, 21, 31].map(n => [n + '.', ordinalWord(n), 'am ' + ordinalDative(n)]);
+  el.innerHTML = `<div class="case-table-wrap"><table class="case-table">
+    <caption>序數（⚠️ ＝不規則）</caption>
+    <thead><tr><th>數字</th><th>主格 der …</th><th>Dativ am …</th></tr></thead>
+    <tbody>${ordRows.map(r => `<tr><td>${escHtml(r[0])}</td><td><strong>${escHtml(r[1])}</strong>${NUM_ORD_IRREGULAR[parseInt(r[0], 10)] ? ' ⚠️' : ''}</td><td>${escHtml(r[2])}</td></tr>`).join('')}</tbody>
+  </table></div>
+  <div class="pr-notes">💡 規則：1–19 加 <strong>-te</strong>，20 以上加 <strong>-ste</strong>。不規則只有四個：erste、dritte、siebte、achte。</div>
+  <div class="case-table-wrap"><table class="case-table">
+    <caption>星期（全部 der，「在星期幾」用 am）</caption>
+    <tbody>${NUM_WEEKDAYS.map((d, i) => `<tr><td>${['一','二','三','四','五','六','日'][i]}</td><td><strong>${escHtml(d)}</strong></td><td>am ${escHtml(d)}</td></tr>`).join('')}</tbody>
+  </table></div>
+  <div class="case-table-wrap"><table class="case-table">
+    <caption>月份（全部 der，「在幾月」用 im）</caption>
+    <tbody>${NUM_MONTHS.map((d, i) => `<tr><td>${i + 1} 月</td><td><strong>${escHtml(d)}</strong></td><td>im ${escHtml(d)}</td></tr>`).join('')}</tbody>
+  </table></div>
+  <div class="pr-notes">💡 德文日期是<strong>日在前、月在後</strong>：24.12. ＝ 12 月 24 日，不是 12 月 24 號的相反。</div>`;
+}
+function renderNumberUI() {
+  renderNumExamples();
+  renderNumRuleTables();
+  renderNumTimeTables();
+  renderNumDateTables();
+}
+
+// ---- 名詞／數字 模式切換 ----
+function setLookupMode(mode) {
+  lookupMode = mode;
+  document.getElementById('lk-view-noun').style.display = mode === 'noun' ? 'block' : 'none';
+  document.getElementById('lk-view-number').style.display = mode === 'number' ? 'block' : 'none';
+  document.getElementById('lk-mode-noun').classList.toggle('active', mode === 'noun');
+  document.getElementById('lk-mode-number').classList.toggle('active', mode === 'number');
+}
 
 function renderPronunciation() {
   const el = document.getElementById('pronunciation-list');
@@ -2067,7 +2621,7 @@ function resetAllSchedule() {
   reviewSchedule = {}; saveData(); showToast('複習排程已清除');
 }
 function exportData() {
-  const obj = { exportDate: new Date().toISOString(), version: '2.3.0', app: 'german', reviewSchedule, grammarStats, todayStats, inboxItems };
+  const obj = { exportDate: new Date().toISOString(), version: '2.4.0', app: 'german', reviewSchedule, grammarStats, todayStats, inboxItems };
   const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
