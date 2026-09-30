@@ -1,11 +1,15 @@
 // ============================================================
 // data-ielts.js — 雅思專區資料庫（english.html 專用）
-// 最後更新：2026-07-15（v2.0.0）
+// 最後更新：2026-09-30（v3.0.0 英德拆檔：只更新註解裡的檔名，資料完全沒動）
 //
-// 【給接手的 AI】這個檔案放「方法論與參考資料」，和 data.js 的分工是：
-//   data.js      = Christine 累積的個人學習內容（單字、自己的文法錯誤…），會一直長大
+// 【給接手的 AI】這個檔案放「方法論與參考資料」，和 data-en.js 的分工是：
+//   data-en.js    = Christine 累積的個人學習內容（單字、自己的文法錯誤…），會一直長大
 //   data-ielts.js = 備考方法與規則（來自她的備考指南與工具書），相對穩定、很少變動
 //   進度與紀錄（練習成績、錯因）不放這裡，走 localStorage + progress-<user>.json
+//
+// 【目前沒被引用的宣告】PLAN_TIPS、IELTS_PLAN_START、PARAPHRASE_REGISTERS
+//   這三個在 english.html 的引用次數是 0（2026-09-30 查證）。刻意保留不刪：
+//   可能是規劃中的功能，而且依修改守則 5，刪除前要先確認並封存。
 //
 // 【版權注意】這裡只收錄「方法、規則、架構、單字表」這類事實與觀念整理，
 //   不收錄工具書的完整範文。範文請 Christine 看原書；App 只教她怎麼拆解與檢核。
@@ -548,7 +552,7 @@ const IELTS_TOPIC_LIST = [
 
 // ============================================================
 // 口說語料庫（串題用）——基底為空，內容由 Christine 在 App 內新增，
-// 存進 data-user.json 的 speakingNotes，啟動時 mergeUserData 併回這個陣列。
+// 存進 data-user-en.json 的 speakingNotes，啟動時 mergeUserData 併回這個陣列。
 // 格式：{ id, core, topics:[可以套用的題目], nouns, verbs, idioms, note }
 // ============================================================
 const SPEAKING_NOTES = [];
@@ -833,7 +837,7 @@ const IELTS_STUDY_PLAN = [
 // Paraphrase Bank／改寫語料庫（v2.2.0，英文 App 雅思口說區）
 //
 // 【設計】依 IELTS 語境整理「一個核心概念 → 多個可替換表達」，並標語域(register)。
-// - 固定資料放這裡（IELTS_PARAPHRASES）；收集箱新增的走 data-user.json 的 paraphrases，
+// - 固定資料放這裡（IELTS_PARAPHRASES）；收集箱新增的走 data-user-en.json 的 paraphrases，
 //   由 core.js mergeUserData() 以 id 去重合併進來（新增 id 前綴 upara_，永不衝突）。
 // - register 只有三值：
 //     spoken  = 主要適合口說／較自然的會話
