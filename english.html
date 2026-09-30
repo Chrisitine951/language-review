@@ -7,10 +7,16 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="雅思英文">
 <title>IELTS English</title>
-<link rel="stylesheet" href="core.css?v=2.4.1">
-<script src="data.js?v=2.4.1"></script>
-<script src="data-ielts.js?v=2.4.1"></script>
-<script src="core.js?v=2.4.1"></script>
+<link rel="stylesheet" href="core.css?v=3.0.0">
+<script>
+  // v3.0.0：告訴 core.js 這支 App 用哪個使用者資料檔、有哪些欄位。
+  // 一定要在 core.js 之前宣告；名字不可改成 APP_CONFIG（舊 data.js 有同名全域 const，會遮蔽掉）。
+  window.LR_APP = { id: 'en', name: '英文', userDataPath: 'data-user-en.json',
+    userDataKeys: ['englishVocabulary', 'englishGrammar', 'wordRoots', 'task2Phrases', 'speakingNotes', 'paraphrases'] };
+  </script>
+<script src="data-en.js?v=3.0.0"></script>
+<script src="data-ielts.js?v=3.0.0"></script>
+<script src="core.js?v=3.0.0"></script>
 <style>
   /* 英文 App 主色＝藍色（德文 App 是紅色，兩支 App 一眼可分辨） */
   :root { --primary: var(--en); --primary-light: var(--en-light); }
@@ -750,7 +756,7 @@
         </div>
 
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          IELTS English App v2.4.1<br>
+          IELTS English App v3.0.0<br>
           大表版本 <span id="settings-plan-version">—</span>　<span id="settings-cache-hint" style="color:var(--amber);"></span><br>
           德文功能已搬到 german.html
         </div>
