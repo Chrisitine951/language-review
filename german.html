@@ -9,6 +9,7 @@
 <title>Deutsch Lernen</title>
 <link rel="stylesheet" href="core.css?v=2.4.1">
 <script src="data.js?v=2.4.1"></script>
+<script src="data-de-nouns.js?v=2.3.0"></script>
 <script src="core.js?v=2.4.1"></script>
 <style>
   /* 德文 App 主色＝紅色（英文 App 是藍色，兩支 App 一眼可分辨） */
@@ -17,6 +18,20 @@
   #fc-conjug .case-table-wrap { margin: 8px 0 0; }
   #fc-conjug .case-table { font-size: 12px; }
   #fc-conjug .case-table caption { font-size: 11px; }
+  /* 名詞查詢（v2.3.0）：der/die/das 三色記憶法。
+     這三個色碼寫死在這裡而不用 core.css 變數，是因為它們是「性別語意色」，
+     不能跟著 App 主色（紅）跑，兩支 App 也不共用。 */
+  .noun-art { font-weight: 800; letter-spacing: -0.5px; }
+  .noun-art.der { color: #2563eb; }
+  .noun-art.die { color: #dc2626; }
+  .noun-art.das { color: #16a34a; }
+  .noun-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; margin: 12px 16px; }
+  .noun-card.guess { border-color: var(--amber); border-style: dashed; }
+  .noun-headline { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; font-size: 26px; line-height: 1.3; }
+  .noun-row { display: flex; gap: 8px; font-size: 13px; color: var(--text2); margin-top: 8px; line-height: 1.6; }
+  .noun-row-label { color: var(--text3); flex: 0 0 52px; }
+  .noun-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .noun-hist-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
 </style>
 </head>
 <body>
@@ -40,6 +55,10 @@
         <button class="quick-btn" onclick="switchPage('vocab')">
           <span class="quick-btn-icon">🇩🇪</span><span class="quick-btn-title">德文單字</span>
           <span class="quick-btn-sub" id="home-vocab-count">載入中…</span>
+        </button>
+        <button class="quick-btn" onclick="goTo('learn','nouns')">
+          <span class="quick-btn-icon">🔍</span><span class="quick-btn-title">名詞查詢</span>
+          <span class="quick-btn-sub" id="home-noun-count">性別・複數</span>
         </button>
         <button class="quick-btn" onclick="goTo('learn','pronunciation')">
           <span class="quick-btn-icon">🔤</span><span class="quick-btn-title">發音規則</span>
@@ -135,18 +154,49 @@
       </div>
     </div>
 
-    <!-- ========== 學習（發音／句型／文法）========== -->
+    <!-- ========== 學習（名詞／發音／句型／文法）========== -->
     <div id="page-learn" class="page">
       <div class="topbar">
-        <div><div class="topbar-title">德文基礎</div><div class="topbar-sub">A1 發音 · 句型 · 文法</div></div>
+        <div><div class="topbar-title">德文基礎</div><div class="topbar-sub">名詞 · 發音 · 句型 · 文法</div></div>
       </div>
       <div class="lang-toggle" style="margin: 12px 16px 0;">
-        <button class="lang-toggle-btn active" id="de-tab-pr" onclick="setDeTab('pronunciation')">🔤 發音</button>
+        <button class="lang-toggle-btn active" id="de-tab-nouns" onclick="setDeTab('nouns')">🔍 名詞</button>
+        <button class="lang-toggle-btn" id="de-tab-pr" onclick="setDeTab('pronunciation')">🔤 發音</button>
         <button class="lang-toggle-btn" id="de-tab-sentence" onclick="setDeTab('sentence')">💬 句型</button>
         <button class="lang-toggle-btn" id="de-tab-grammar" onclick="setDeTab('grammar')">📚 文法</button>
       </div>
 
-      <div id="de-sub-pronunciation">
+      <!-- ---------- 名詞查詢（v2.3.0） ---------- -->
+      <div id="de-sub-nouns">
+        <div class="diary-input-card" style="margin-top: 12px;">
+          <div style="font-size:12px; color:var(--text3); line-height:1.7; margin-bottom:10px;">
+            查名詞的<strong>性別</strong>和<strong>複數形</strong>。可以打 <strong>Vater</strong>、<strong>der Vater</strong>、<strong>Väter</strong>，也可以打中文「父親」反查。<br>
+            字典查不到時會用字尾規則<strong>推測</strong>並標明信心度——標「推測」的請先別背，拿去問老師。
+          </div>
+          <div class="typing-input-wrap">
+            <input class="typing-input" id="noun-input" placeholder="德文名詞或中文（ae=ä, oe=ö, ue=ü）" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <button class="typing-submit" onclick="doNounLookup()">查詢</button>
+          </div>
+          <div class="noun-hist-row" id="noun-history"></div>
+        </div>
+        <div id="noun-result"></div>
+        <div class="section-header"><span class="section-title">字尾規則速查</span></div>
+        <div class="pr-card">
+          <div class="grammar-category-row" onclick="toggleRuleDetail('noun-rule-detail')" style="margin-bottom:0;">
+            <span class="pr-title" style="margin-bottom:0;">📐 從字尾判斷性別</span>
+            <span class="grammar-rule-toggle">展開 ▾</span>
+          </div>
+          <div class="grammar-rule-detail" id="noun-rule-detail" style="background:transparent; padding:0;">
+            <div id="noun-rule-tables"></div>
+            <div class="pr-notes">💡 德文名詞大約六到七成可以從字尾推出性別，剩下的（Tisch／Haus／Zeit 這類）沒有規則，只能查表背。</div>
+          </div>
+        </div>
+        <div class="section-header"><span class="section-title">依主題瀏覽（<span id="noun-total">0</span> 個名詞）</span></div>
+        <div class="filter-row" id="noun-topic-row"></div>
+        <div id="noun-topic-list"></div>
+      </div>
+
+      <div id="de-sub-pronunciation" style="display:none;">
         <div class="section-header"><span class="section-title">德文發音規則</span></div>
         <div id="pronunciation-list"></div>
       </div>
@@ -286,7 +336,7 @@
         </div>
         <div class="settings-section settings-group-body" id="sg-body-github">
           <div class="settings-item" style="flex-direction: column; align-items: stretch;">
-            <div class="settings-item-sub" style="line-height:1.6;">只用德文功能的話，這一段可以完全不設定——單字、發音、句型、文法練習離線都能用。</div>
+            <div class="settings-item-sub" style="line-height:1.6;">只用德文功能的話，這一段可以完全不設定——單字、名詞查詢、發音、句型、文法練習離線都能用。</div>
             <div class="settings-item-title" style="margin-top:12px;">GitHub Token</div>
             <div class="settings-item-sub">Fine-grained token，只需這個 repo 的 Contents 讀寫權限</div>
             <input class="settings-input" id="github-token-input" type="password" placeholder="github_pat_...">
@@ -326,6 +376,7 @@
         </div>
         <div class="settings-section settings-group-body" id="sg-body-data">
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">德文單字</div><div class="settings-item-sub" id="settings-de-count">—</div></div><span class="tag tag-de">單字</span></div>
+          <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">名詞字典</div><div class="settings-item-sub" id="settings-noun-count">—</div></div><span class="tag tag-de">名詞</span></div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">文法規則</div><div class="settings-item-sub" id="settings-grammar-count">—</div></div><span class="tag tag-green">文法</span></div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">發音規則 / 句型</div><div class="settings-item-sub" id="settings-pr-count">—</div></div><span class="tag tag-amber">基礎</span></div>
           <div class="settings-item"><div class="settings-item-left"><div class="settings-item-title">動詞變化題庫</div><div class="settings-item-sub" id="settings-conj-count">—</div></div><span class="tag tag-de">動詞</span></div>
@@ -353,7 +404,7 @@
         </div>
 
         <div style="text-align:center; padding: 20px; font-size:12px; color:var(--text3);">
-          Deutsch App v2.2.9<br>英文/雅思功能在 english.html
+          Deutsch App v2.3.0<br>英文/雅思功能在 english.html
         </div>
       </div>
     </div>
@@ -383,8 +434,9 @@
 
 <script>
 // ============================================================
-// german.html — 德文 App（v2.2.9）
-// 共用邏輯（GitHub/Gemini/TTS/工具）在 core.js，樣式在 core.css。
+// german.html — 德文 App（v2.3.0）
+// 共用邏輯（GitHub/Gemini/TTS/工具）在 core.js，樣式在 core.css，
+// 名詞字典在 data-de-nouns.js。
 // 【localStorage 前綴規則】這支 App 沿用 v1 的 lr_ 前綴（零遷移，Murray 和
 //   Christine 的德文進度都原封不動）；英文 App 用 lren_。改前綴會弄丟她們的進度！
 // 【v2.1.0 新增】① 冠詞去重（deSplitWord/deFullWord）② 單字卡背面顯示變化表
@@ -392,6 +444,8 @@
 //   自動吃 data.js/收集箱裡有 conjugation 的動詞。
 // 【v2.2.9 修正】跨裝置同步不再整包覆蓋（見下方 mergeSchedules/absorbRemoteProgress）
 //   ＋ 新增「從雲端拉最新進度」手動按鈕。
+// 【v2.3.0 新增】名詞查詢（性別＋複數）：字典 → 單字庫 → 字尾規則推測三層，
+//   推測結果一律標信心度，不與事實混為一談（見 NOUN_GENDER_RULES 區塊）。
 // ============================================================
 
 // ============================================================
@@ -400,7 +454,7 @@
 let currentPage = 'home';
 let vocabMode = 'flip';
 let vocabCat = 'all';
-let deTab = 'pronunciation';
+let deTab = 'nouns';
 let deGrammarMode = 'browse';
 
 let currentDeck = [], currentCardIdx = 0, cardFlipped = false;
@@ -412,6 +466,7 @@ let grammarStats = { correct: 0, wrong: 0 };
 let degrStats = { correct: 0, wrong: 0 }, degrCurrentQ = null, degrAnswered = false;
 let deconjStats = { correct: 0, wrong: 0 }, deconjAnswered = false;
 let touchStartX = 0, touchStartY = 0, isDragging = false;
+let nounTopic = 'all', nounHistory = [];
 
 // ============================================================
 // 德文冠詞處理（v2.1.0）
@@ -466,6 +521,7 @@ function loadData() {
   reviewSchedule = get('lr_schedule', {});
   grammarStats = get('lr_gstats', { correct: 0, wrong: 0 });
   inboxItems = get('lr_inbox', []);
+  nounHistory = get('lr_de_nounhist', []);
   const saved = get('lr_today', null);
   if (saved && saved.date === new Date().toDateString()) todayStats = saved;
 }
@@ -492,6 +548,8 @@ function isAutoSyncOn() { return localStorage.getItem('lr_autosync') !== '0'; }
 //
 // ⚠️ 為什麼 inboxItems 不合併：它是「待確認」暫存區，存進資料庫後就該清空，
 //   而且德文的 inboxItems 沒有 id 可以去重，聯集會產生重複項目。維持 last-write-wins。
+// ⚠️ 為什麼 nounHistory（查詢紀錄）不進雲端：它是「最近查過什麼」的方便性資料，
+//   不是學習成果，弄丟也不心痛；跨裝置合併只會製造雜訊。留在本機。
 // ============================================================
 // 逐字合併複習排程：同一個字取「總練習次數（correct+incorrect）」較多的那一份；
 // 相同時取 nextReview 較晚的（代表比較近期才複習過）
@@ -694,6 +752,7 @@ function updateHome() {
   document.getElementById('home-date').textContent = `${now.getFullYear()}/${now.getMonth()+1}/${now.getDate()} (週${days[now.getDay()]})`;
   const due = getDueWords().length;
   document.getElementById('home-vocab-count').textContent = due > 0 ? `${due} 個到期複習` : `${GERMAN_VOCABULARY.length} 個單字`;
+  document.getElementById('home-noun-count').textContent = `${nounDictSize()} 個名詞・性別複數`;
   document.getElementById('home-pr-count').textContent = `${GERMAN_PRONUNCIATION.length} 條規則`;
   document.getElementById('home-sent-count').textContent = `${GERMAN_SENTENCES.length} 個句子`;
   // 動詞數＝內建題庫＋資料庫裡有變化表的動詞（v2.1.0）
@@ -915,9 +974,10 @@ function checkTyping() {
 document.getElementById('typing-input').addEventListener('keydown', e => { if (e.key === 'Enter') checkTyping(); });
 
 // ============================================================
-// 學習頁：發音 / 句型 / 文法
+// 學習頁：名詞 / 發音 / 句型 / 文法
 // ============================================================
 function initLearn() {
+  renderNounLookupUI();
   renderPronunciation();
   initSentencePractice();
   renderGermanGrammar();
@@ -926,13 +986,335 @@ function initLearn() {
 }
 function setDeTab(tab) {
   deTab = tab;
-  ['pronunciation','sentence','grammar'].forEach(t => {
+  ['nouns','pronunciation','sentence','grammar'].forEach(t => {
     document.getElementById('de-sub-' + t).style.display = t === tab ? 'block' : 'none';
   });
+  document.getElementById('de-tab-nouns').classList.toggle('active', tab === 'nouns');
   document.getElementById('de-tab-pr').classList.toggle('active', tab === 'pronunciation');
   document.getElementById('de-tab-sentence').classList.toggle('active', tab === 'sentence');
   document.getElementById('de-tab-grammar').classList.toggle('active', tab === 'grammar');
 }
+
+// ============================================================
+// 名詞查詢（v2.3.0）
+//
+// 【三層查詢，順序固定】
+//   ① data-de-nouns.js 的 GERMAN_NOUNS —— 字典，有性別＋複數，是事實
+//   ② data.js 的 GERMAN_VOCABULARY（pos 含「名詞」）—— 也是事實，但沒有複數形
+//   ③ 字尾規則推測 —— 只有前兩層都查不到才用，而且必須標成「推測」
+//
+// 【為什麼要嚴格區分事實與推測】德文性別記錯比不知道更糟。如果 App 用一樣的
+//   語氣告訴她 die Butter（事實）和 der Wasser（規則推測，而且是錯的），
+//   那就是在教她錯的東西。所以：
+//   - 推測卡片用虛線邊框 ＋ 琥珀色 ＋「推測」字樣，視覺上和字典卡不同
+//   - 低信心度規則（-er、單音節）不下結論，直接說「規則無法可靠判斷」
+//   - 推測結果一律不顯示複數形（複數規則的可靠度遠低於性別規則，猜錯更傷）
+//
+// 【為什麼不用 AI】這是查表＋規則，離線就該能用，Murray 沒設 API key 也要能查。
+//   符合 DESIGN.md 鐵則 4（AI 功能都要有降級路徑）——這裡是連降級都不需要。
+// ============================================================
+// conf: high=幾乎無例外／mid=有例外但傾向明顯／low=只給提示不下結論
+const NOUN_GENDER_RULES = [
+  // --- 高信心度 ---
+  { suffix: 'ung',    gender: 'die', conf: 'high', label: '-ung 結尾' },
+  { suffix: 'heit',   gender: 'die', conf: 'high', label: '-heit 結尾' },
+  { suffix: 'keit',   gender: 'die', conf: 'high', label: '-keit 結尾' },
+  { suffix: 'schaft', gender: 'die', conf: 'high', label: '-schaft 結尾' },
+  { suffix: 'tion',   gender: 'die', conf: 'high', label: '-tion 結尾' },
+  { suffix: 'sion',   gender: 'die', conf: 'high', label: '-sion 結尾' },
+  { suffix: 'tät',    gender: 'die', conf: 'high', label: '-tät 結尾' },
+  { suffix: 'enz',    gender: 'die', conf: 'high', label: '-enz 結尾' },
+  { suffix: 'ei',     gender: 'die', conf: 'high', label: '-ei 結尾' },
+  { suffix: 'chen',   gender: 'das', conf: 'high', label: '-chen 結尾（指小詞）', note: '語意上是女性也不例外：das Mädchen' },
+  { suffix: 'lein',   gender: 'das', conf: 'high', label: '-lein 結尾（指小詞）' },
+  { suffix: 'ment',   gender: 'das', conf: 'high', label: '-ment 結尾' },
+  { suffix: 'tum',    gender: 'das', conf: 'high', label: '-tum 結尾' },
+  { suffix: 'nis',    gender: 'das', conf: 'high', label: '-nis 結尾' },
+  { suffix: 'um',     gender: 'das', conf: 'high', label: '-um 結尾' },
+  { suffix: 'ismus',  gender: 'der', conf: 'high', label: '-ismus 結尾' },
+  { suffix: 'ling',   gender: 'der', conf: 'high', label: '-ling 結尾', note: '-ling ＝「⋯的人事物」：der Frühling' },
+  { suffix: 'ant',    gender: 'der', conf: 'high', label: '-ant 結尾' },
+  { suffix: 'ist',    gender: 'der', conf: 'high', label: '-ist 結尾' },
+  { suffix: 'eur',    gender: 'der', conf: 'high', label: '-eur 結尾（法文外來語）' },
+  // --- 中信心度 ---
+  { suffix: 'in',  gender: 'die', conf: 'mid', label: '-in 結尾', note: '限「女性職業／身分」；Termin、Benzin 這類不算' },
+  { suffix: 'ik',  gender: 'die', conf: 'mid', label: '-ik 結尾' },
+  { suffix: 'ur',  gender: 'die', conf: 'mid', label: '-ur 結尾' },
+  { suffix: 'ie',  gender: 'die', conf: 'mid', label: '-ie 結尾' },
+  { suffix: 'e',   gender: 'die', conf: 'mid', label: '-e 結尾（多音節）', minLen: 4, note: '例外不少：der Name、der Käse、der Affe、das Auge' },
+  // --- 低信心度（只給提示，不下結論）---
+  { suffix: 'er',  gender: 'der', conf: 'low', label: '-er 結尾', note: '若是「做⋯的人／工具」多為 der；但 das Fenster、das Zimmer、das Wasser、das Theater、die Mutter、die Schwester、die Butter 全是反例' },
+];
+const NOUN_CONF_META = {
+  high: { label: '高信心度', color: 'var(--green)' },
+  mid:  { label: '中信心度', color: 'var(--amber)' },
+  low:  { label: '低信心度', color: 'var(--de)' },
+};
+const NOUN_CONF_RANK = { high: 3, mid: 2, low: 1 };
+
+function nounDictSize() { return (typeof GERMAN_NOUNS !== 'undefined') ? GERMAN_NOUNS.length : 0; }
+// 比對用的 key：去掉冠詞、大小寫、變音差異（ae=ä 等，沿用打字模式的寬容規則）
+function nounKey(s) {
+  return normalizeGerman(String(s || '').trim().toLowerCase().replace(/^(der|die|das)\s+/, '').replace(/\s+/g, ' '));
+}
+function hasCJK(s) { return /[\u4e00-\u9fff]/.test(String(s || '')); }
+function capFirst(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+
+// 字尾規則推測：回傳 { gender, conf, label, note } 或 null
+// 多條規則同時命中時，先比信心度，再比字尾長度（越長越具體）
+function nounRuleGuess(word) {
+  const w = String(word || '').trim();
+  if (w.length < 3) return null;
+  const lw = w.toLowerCase();
+  // 動詞名詞化（das Essen／das Singen）：拿單字庫的動詞來認，比字尾規則可靠
+  if (/en$/.test(lw) && typeof GERMAN_VOCABULARY !== 'undefined'
+      && GERMAN_VOCABULARY.some(v => /動詞/.test(v.pos || '') && String(v.word || '').toLowerCase() === lw)) {
+    return { gender: 'das', conf: 'mid', label: '動詞名詞化', note: '動詞當名詞用時一律中性、首字大寫：das Essen、das Singen' };
+  }
+  const cands = [];
+  NOUN_GENDER_RULES.forEach(r => {
+    if (lw.length <= r.suffix.length) return;              // 整個字就是字尾 → 不算
+    if (r.minLen && w.length < r.minLen) return;
+    if (normalizeGerman(lw).endsWith(normalizeGerman(r.suffix))) {
+      cands.push(Object.assign({}, r, { len: r.suffix.length }));
+    }
+  });
+  // Ge- 前綴（das Gewitter、das Geschäft）；長度算 2，同信心度時輸給更長的字尾規則
+  if (/^ge/.test(lw) && lw.length > 4) {
+    cands.push({ gender: 'das', conf: 'mid', label: 'Ge- 前綴', len: 2, note: '例外：der Gedanke、die Geschichte' });
+  }
+  cands.sort((a, b) => NOUN_CONF_RANK[b.conf] - NOUN_CONF_RANK[a.conf] || b.len - a.len);
+  return cands[0] || null;
+}
+
+// 查詢：回傳 { raw, hits: [...], guess }
+// hits 的每一筆都是「事實」（來自字典或單字庫）；guess 只在完全沒有 hits 時才有值
+function lookupNoun(q) {
+  const raw = String(q || '').trim();
+  if (!raw) return null;
+  const key = nounKey(raw);
+  const cjk = hasCJK(raw);
+  const hits = [];
+  const seen = new Set();
+  const push = (h) => { if (!seen.has(h.key)) { seen.add(h.key); hits.push(h); } };
+
+  // ① 字典：德文原形 → 複數形 → 中文
+  if (typeof GERMAN_NOUNS !== 'undefined') {
+    GERMAN_NOUNS.forEach(n => {
+      const byWord = nounKey(n.word) === key;
+      const byPlural = n.plural && nounKey(n.plural) === key;
+      if (byWord || byPlural) push(dictHit(n, byPlural && !byWord));
+    });
+    if (cjk) GERMAN_NOUNS.forEach(n => { if (String(n.meaning || '').includes(raw)) push(dictHit(n, false)); });
+  }
+  // ② 單字庫的名詞（有性別、沒複數）
+  if (typeof GERMAN_VOCABULARY !== 'undefined') {
+    GERMAN_VOCABULARY.forEach(v => {
+      if (!/名詞/.test(v.pos || '')) return;
+      const s = deSplitWord(v);
+      if (!s.article) return;
+      const match = nounKey(s.word) === key || (cjk && String(v.meaning || '').includes(raw));
+      if (match) push(vocabHit(v, s));
+    });
+  }
+  // ③ 都查不到才推測（中文查不到就不推測——規則吃的是德文字尾）
+  const guess = (hits.length === 0 && !cjk) ? nounRuleGuess(capFirst(raw.replace(/^(der|die|das)\s+/i, ''))) : null;
+  return { raw, hits, guess };
+}
+function dictHit(n, matchedByPlural) {
+  return {
+    key: 'dn:' + n.id, word: n.word, article: n.article, plural: n.plural,
+    meaning: n.meaning, topic: n.topic, note: n.note || '', verify: !!n.verify,
+    source: '字典', srcLabel: (typeof GERMAN_NOUN_SRC_LABEL !== 'undefined' && GERMAN_NOUN_SRC_LABEL[n.src]) || n.src || '',
+    matchedByPlural: !!matchedByPlural, pluralKnown: true,
+  };
+}
+function vocabHit(v, s) {
+  return {
+    key: 'de:' + v.id, word: s.word, article: s.article, plural: null,
+    meaning: v.meaning || '', topic: CAT_LABEL[v.category] || v.category || '', note: v.note || '',
+    verify: false, source: '我的單字', srcLabel: '', matchedByPlural: false, pluralKnown: false,
+  };
+}
+
+function doNounLookup() {
+  const input = document.getElementById('noun-input');
+  const q = input.value.trim();
+  if (!q) { showToast('請先輸入要查的名詞'); return; }
+  const res = lookupNoun(q);
+  renderNounResult(res);
+  pushNounHistory(q);
+}
+function pushNounHistory(q) {
+  nounHistory = [q, ...nounHistory.filter(x => x.toLowerCase() !== q.toLowerCase())].slice(0, 20);
+  // 只存本機、不進雲端進度檔（純方便性資料，見上方同步區塊的說明）
+  try { localStorage.setItem('lr_de_nounhist', JSON.stringify(nounHistory)); } catch(e) {}
+  renderNounHistory();
+}
+function renderNounHistory() {
+  const el = document.getElementById('noun-history');
+  if (!el) return;
+  if (nounHistory.length === 0) { el.innerHTML = ''; return; }
+  el.innerHTML = `<span style="font-size:11px; color:var(--text3); align-self:center;">最近查過</span>` +
+    nounHistory.slice(0, 8).map(q =>
+      `<button class="filter-chip" data-q="${escAttr(q)}" onclick="lookupFromHistory(this)">${escHtml(q)}</button>`).join('') +
+    `<button class="filter-chip" onclick="clearNounHistory()" style="color:var(--text3);">清除</button>`;
+}
+function lookupFromHistory(el) {
+  document.getElementById('noun-input').value = el.dataset.q;
+  renderNounResult(lookupNoun(el.dataset.q));
+  pushNounHistory(el.dataset.q);
+}
+function clearNounHistory() {
+  nounHistory = [];
+  try { localStorage.removeItem('lr_de_nounhist'); } catch(e) {}
+  renderNounHistory();
+}
+function speakNoun(el) { speak(el.dataset.say, 'de-DE'); }
+
+function renderNounResult(res) {
+  const el = document.getElementById('noun-result');
+  if (!el) return;
+  if (!res) { el.innerHTML = ''; return; }
+  if (res.hits.length === 0 && !res.guess) {
+    el.innerHTML = `<div class="noun-card guess">
+      <div style="font-size:14px; font-weight:600;">查不到「${escHtml(res.raw)}」</div>
+      <div class="pr-notes" style="margin-top:8px;">字典和單字庫都沒有，字尾也套不上規則。可以下堂課問老師，或把講義丟進收集箱讓 AI 整理進單字庫。</div>
+    </div>`;
+    return;
+  }
+  let html = res.hits.map(h => renderNounHitCard(h)).join('');
+  if (res.guess) html += renderNounGuessCard(res.raw, res.guess);
+  el.innerHTML = html;
+}
+function renderNounHitCard(h) {
+  const say = h.article + ' ' + h.word + (h.plural ? ', die ' + h.plural : '');
+  let pluralText;
+  if (!h.pluralKnown) pluralText = `<span style="color:var(--text3);">未收錄</span>（來自單字庫，還沒補複數形）`;
+  else if (h.plural === null) pluralText = `<span style="color:var(--text3);">無複數形</span>（不可數／通常不用複數）`;
+  else pluralText = `<strong class="noun-art die">die</strong> <strong>${escHtml(h.plural)}</strong>${h.verify ? ' ⚠️' : ''}`;
+  return `<div class="noun-card">
+    <div class="noun-headline">
+      <span class="noun-art ${escAttr(h.article)}">${escHtml(h.article)}</span>
+      <span style="font-weight:700;">${escHtml(h.word)}</span>
+      <button class="speak-btn-inline" data-say="${escAttr(say)}" onclick="speakNoun(this)" title="唸單數與複數">🔊</button>
+    </div>
+    <div class="noun-row"><span class="noun-row-label">中文</span><span>${escHtml(h.meaning)}</span></div>
+    <div class="noun-row"><span class="noun-row-label">複數</span><span>${pluralText}</span></div>
+    ${h.matchedByPlural ? `<div class="pr-notes" style="margin-top:8px;">你查的是複數形，這是它的單數原形。</div>` : ''}
+    ${h.verify && h.plural ? `<div class="pr-notes" style="margin-top:8px;">⚠️ 這個複數形我沒有百分之百把握，建議跟老師核對過再背。</div>` : ''}
+    ${h.note ? `<div class="pr-notes" style="margin-top:8px;">💡 ${escHtml(h.note)}</div>` : ''}
+    <div class="noun-tags">
+      ${h.topic ? `<span class="tag tag-de">${escHtml(h.topic)}</span>` : ''}
+      ${h.srcLabel ? `<span class="tag tag-amber">${escHtml(h.srcLabel)}</span>` : ''}
+      <span class="tag tag-green">${escHtml(h.source)}</span>
+    </div>
+    ${renderCardTable({ article: h.article, word: h.word, pos: '' })}
+  </div>`;
+}
+function renderNounGuessCard(raw, g) {
+  const word = capFirst(raw.replace(/^(der|die|das)\s+/i, ''));
+  const meta = NOUN_CONF_META[g.conf];
+  // 低信心度不下結論：只講傾向，並明確說規則靠不住
+  const headline = g.conf === 'low'
+    ? `<span style="font-size:20px; font-weight:700; color:var(--text2);">？ ${escHtml(word)}</span>`
+    : `<span class="noun-art ${escAttr(g.gender)}" style="opacity:.75;">${escHtml(g.gender)}?</span>
+       <span style="font-weight:700;">${escHtml(word)}</span>`;
+  const verdict = g.conf === 'low'
+    ? `規則<strong>無法可靠判斷</strong>這個字的性別。${escHtml(g.label)}只有微弱傾向（${escHtml(g.gender)}），反例太多，請直接查字典或問老師。`
+    : `依<strong>${escHtml(g.label)}</strong>推測是 <strong>${escHtml(g.gender)}</strong>。`;
+  return `<div class="noun-card guess">
+    <div class="noun-headline">${headline}
+      <span class="tag tag-amber" style="align-self:center;">推測</span>
+    </div>
+    <div class="noun-row"><span class="noun-row-label">依據</span><span>${verdict}</span></div>
+    <div class="noun-row"><span class="noun-row-label">信心度</span><span style="color:${meta.color}; font-weight:600;">${escHtml(meta.label)}</span></div>
+    ${g.note ? `<div class="pr-notes" style="margin-top:8px;">💡 ${escHtml(g.note)}</div>` : ''}
+    <div class="pr-notes" style="margin-top:8px;">這個字不在字典裡，以上是<strong>字尾規則推測、不是查到的事實</strong>，請先不要當成正確答案背。複數形無法用規則可靠推出，所以這裡不顯示。</div>
+  </div>`;
+}
+
+// 字尾規則速查表（把上面的規則陣列直接渲染出來，不另外手打一份，避免兩邊不一致）
+function renderNounRuleTables() {
+  const el = document.getElementById('noun-rule-tables');
+  if (!el) return;
+  const groups = { high: [], mid: [], low: [] };
+  NOUN_GENDER_RULES.forEach(r => groups[r.conf].push(r));
+  el.innerHTML = ['high','mid','low'].map(conf => `<div class="case-table-wrap"><table class="case-table">
+    <caption>${escHtml(NOUN_CONF_META[conf].label)}${conf === 'low' ? '（只給提示，不下結論）' : ''}</caption>
+    <thead><tr><th>字尾</th><th>性別</th><th>備註</th></tr></thead>
+    <tbody>${groups[conf].map(r => `<tr>
+      <td>-${escHtml(r.suffix)}</td>
+      <td><strong class="noun-art ${escAttr(r.gender)}">${escHtml(r.gender)}</strong></td>
+      <td style="font-size:11px;">${escHtml(r.note || '')}</td>
+    </tr>`).join('')}</tbody>
+  </table></div>`).join('') +
+  `<div class="case-table-wrap"><table class="case-table">
+    <caption>其他規則</caption>
+    <thead><tr><th>規則</th><th>性別</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>Ge- 前綴</td><td><strong class="noun-art das">das</strong></td><td style="font-size:11px;">das Gewitter、das Geschäft；例外 der Gedanke、die Geschichte</td></tr>
+      <tr><td>動詞名詞化</td><td><strong class="noun-art das">das</strong></td><td style="font-size:11px;">das Essen、das Singen、das Schwimmen</td></tr>
+      <tr><td>星期／月份／季節／方位</td><td><strong class="noun-art der">der</strong></td><td style="font-size:11px;">der Montag、der Juli、der Winter、der Norden</td></tr>
+      <tr><td>單音節具體名詞</td><td>—</td><td style="font-size:11px;">無法判斷：der Tisch／das Haus／die Zeit 各佔一個</td></tr>
+    </tbody>
+  </table></div>`;
+}
+// 依主題瀏覽
+function renderNounTopicChips() {
+  const el = document.getElementById('noun-topic-row');
+  if (!el || typeof GERMAN_NOUNS === 'undefined') return;
+  const used = new Set(GERMAN_NOUNS.map(n => n.topic));
+  const topics = (typeof GERMAN_NOUN_TOPICS !== 'undefined' ? GERMAN_NOUN_TOPICS : [...used]).filter(t => used.has(t));
+  el.innerHTML = `<button class="filter-chip ${nounTopic === 'all' ? 'active' : ''}" data-topic="all" onclick="setNounTopic(this)">全部</button>` +
+    topics.map(t => `<button class="filter-chip ${nounTopic === t ? 'active' : ''}" data-topic="${escAttr(t)}" onclick="setNounTopic(this)">${escHtml(t)}</button>`).join('');
+}
+function setNounTopic(el) {
+  nounTopic = el.dataset.topic;
+  document.querySelectorAll('#noun-topic-row .filter-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderNounTopicList();
+}
+function renderNounTopicList() {
+  const el = document.getElementById('noun-topic-list');
+  if (!el) return;
+  if (typeof GERMAN_NOUNS === 'undefined' || GERMAN_NOUNS.length === 0) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🔍</div><div class="empty-state-text">尚無名詞字典資料</div></div>`;
+    return;
+  }
+  const list = nounTopic === 'all' ? GERMAN_NOUNS : GERMAN_NOUNS.filter(n => n.topic === nounTopic);
+  const groups = {};
+  list.forEach(n => { (groups[n.topic] = groups[n.topic] || []).push(n); });
+  el.innerHTML = Object.keys(groups).map(topic => `<div class="pr-card">
+    <div class="pr-title">${escHtml(topic)}（${groups[topic].length}）</div>
+    ${groups[topic].map(n => {
+      const say = n.article + ' ' + n.word + (n.plural ? ', die ' + n.plural : '');
+      const pl = n.plural === null ? '<span style="color:var(--text3);">無複數</span>'
+        : `die ${escHtml(n.plural)}${n.verify ? ' ⚠️' : ''}`;
+      return `<div style="padding:8px 0; border-top:1px solid var(--border); display:flex; align-items:center; gap:8px;">
+        <div style="flex:1;">
+          <div style="font-size:14px;">
+            <strong class="noun-art ${escAttr(n.article)}">${escHtml(n.article)}</strong>
+            <strong>${escHtml(n.word)}</strong>
+            <span style="color:var(--text2);"> — ${escHtml(n.meaning)}</span>
+          </div>
+          <div style="font-size:12px; color:var(--text3); margin-top:2px;">複數：${pl}</div>
+        </div>
+        <button class="speak-btn-inline" data-say="${escAttr(say)}" onclick="speakNoun(this)">🔊</button>
+      </div>`;
+    }).join('')}
+  </div>`).join('');
+}
+function renderNounLookupUI() {
+  const total = document.getElementById('noun-total');
+  if (total) total.textContent = nounDictSize();
+  renderNounHistory();
+  renderNounRuleTables();
+  renderNounTopicChips();
+  renderNounTopicList();
+}
+document.getElementById('noun-input').addEventListener('keydown', e => { if (e.key === 'Enter') doNounLookup(); });
+
 function renderPronunciation() {
   const el = document.getElementById('pronunciation-list');
   el.innerHTML = GERMAN_PRONUNCIATION.map(pr => `<div class="pr-card">
@@ -1140,6 +1522,7 @@ function renderPossessive() {
 //   資料庫一個欄位都不用加（零儲存）。
 // - 動詞六人稱：沒有規則可算（不規則動詞太多），所以才需要 conjugation 欄位；
 //   沒有這個欄位的動詞就不顯示表格，不會壞掉。
+// v2.3.0：名詞查詢的結果卡也共用 renderCardTable，不另外寫一份四格表。
 // ============================================================
 const CONJ_PERSONS = ['ich', 'du', 'er/sie/es', 'wir', 'ihr', 'sie/Sie'];
 // 定冠詞四格：陽性 der→den→dem→des／陰性 die→die→der→der／中性 das→das→dem→des／複數 die→die→den→der
@@ -1205,6 +1588,8 @@ const GERMAN_VERB_CONJUGATIONS = [
   { infinitive: 'machen', meaning: '做', forms: { 'ich':'mache','du':'machst','er/sie/es':'macht','wir':'machen','ihr':'macht','sie/Sie':'machen' } },
   { infinitive: 'sehen', meaning: '看見', forms: { 'ich':'sehe','du':'siehst','er/sie/es':'sieht','wir':'sehen','ihr':'seht','sie/Sie':'sehen' } },
   { infinitive: 'sprechen', meaning: '說', forms: { 'ich':'spreche','du':'sprichst','er/sie/es':'spricht','wir':'sprechen','ihr':'sprecht','sie/Sie':'sprechen' } },
+  { infinitive: 'nehmen', meaning: '拿、取', forms: { 'ich':'nehme','du':'nimmst','er/sie/es':'nimmt','wir':'nehmen','ihr':'nehmt','sie/Sie':'nehmen' } },
+  { infinitive: 'geben', meaning: '給', forms: { 'ich':'gebe','du':'gibst','er/sie/es':'gibt','wir':'geben','ihr':'gebt','sie/Sie':'geben' } },
   { infinitive: 'lesen', meaning: '讀', forms: { 'ich':'lese','du':'liest','er/sie/es':'liest','wir':'lesen','ihr':'lest','sie/Sie':'lesen' } },
   { infinitive: 'essen', meaning: '吃', forms: { 'ich':'esse','du':'isst','er/sie/es':'isst','wir':'essen','ihr':'esst','sie/Sie':'essen' } },
   { infinitive: 'fahren', meaning: '開車、搭乘', forms: { 'ich':'fahre','du':'fährst','er/sie/es':'fährt','wir':'fahren','ihr':'fahrt','sie/Sie':'fahren' } },
@@ -1650,6 +2035,9 @@ function initSettings() {
   const lastSync = Number(localStorage.getItem('lr_lastsync') || 0);
   if (lastSync) setSyncStatus('上次同步：' + new Date(lastSync).toLocaleString('zh-TW'));
   document.getElementById('settings-de-count').textContent = `共 ${GERMAN_VOCABULARY.length} 個`;
+  const needVerify = (typeof GERMAN_NOUNS !== 'undefined') ? GERMAN_NOUNS.filter(n => n.verify).length : 0;
+  document.getElementById('settings-noun-count').textContent =
+    `共 ${nounDictSize()} 個（含性別與複數${needVerify ? `；${needVerify} 個複數形待老師核對` : ''}）`;
   document.getElementById('settings-grammar-count').textContent = `共 ${GERMAN_GRAMMAR.length} 條`;
   document.getElementById('settings-pr-count').textContent = `${GERMAN_PRONUNCIATION.length} 條發音規則・${GERMAN_SENTENCES.length} 個句型`;
   const pool = conjugationPool();
@@ -1679,7 +2067,7 @@ function resetAllSchedule() {
   reviewSchedule = {}; saveData(); showToast('複習排程已清除');
 }
 function exportData() {
-  const obj = { exportDate: new Date().toISOString(), version: '2.2.9', app: 'german', reviewSchedule, grammarStats, todayStats, inboxItems };
+  const obj = { exportDate: new Date().toISOString(), version: '2.3.0', app: 'german', reviewSchedule, grammarStats, todayStats, inboxItems };
   const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
