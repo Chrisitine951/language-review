@@ -10886,6 +10886,20 @@
       ],
       "summary": "de-（向下/分派）＋ leg（挑選/指派）＋ -ate（動詞字尾），字面意思是「把任務挑選並分派下去」，引申為「委派、授權」。",
       "savedAt": "2026-10-01T08:02:27.293Z"
+    },
+    {
+      "id": "ulkmupaext03",
+      "word": "troop",
+      "parts": [
+        {
+          "type": "root",
+          "text": "troop",
+          "meaning": "軍隊、群體",
+          "grimmNote": "對應 Germanic 源頭，保留雙子音結構與唇音 p"
+        }
+      ],
+      "summary": "troop 作為獨立字根，原始意義指成群結隊的人或軍隊。",
+      "savedAt": "2026-10-01T08:43:47.748Z"
     }
   ],
   "userRoots": []
