@@ -10840,6 +10840,26 @@
       ],
       "summary": "steer 原意為引導或掌舵，保留原始字根演變而來。",
       "savedAt": "2026-10-01T05:13:46.141Z"
+    },
+    {
+      "id": "ulkmup8soz31",
+      "word": "retreat",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常見字首 re-，表示回來、向後。"
+        },
+        {
+          "type": "root",
+          "text": "treat",
+          "meaning": "拉、拖、處理",
+          "grimmNote": "源自古印歐語帶有「拖曳、拉」意思的字根，字首 t 經由舌音互換 d/t/s 相關演變，基本核心為拉著不放或往後拉。"
+        }
+      ],
+      "summary": "re-（回來、向後）加上 treat（拉），字面上的意思是「往後拉、撤退」。",
+      "savedAt": "2026-10-01T07:58:30.255Z"
     }
   ],
   "userRoots": []
