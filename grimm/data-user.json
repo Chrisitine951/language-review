@@ -10900,6 +10900,26 @@
       ],
       "summary": "troop 作為獨立字根，原始意義指成群結隊的人或軍隊。",
       "savedAt": "2026-10-01T08:43:47.748Z"
+    },
+    {
+      "id": "ulkmupamb4a4",
+      "word": "mansion",
+      "parts": [
+        {
+          "type": "root",
+          "text": "man",
+          "meaning": "留在某處、居住",
+          "grimmNote": "源自印歐語系字根 *men-（停留、居住），鼻音互換 n / m 的延伸"
+        },
+        {
+          "type": "suffix",
+          "text": "sion",
+          "meaning": "名詞字尾（表場所、狀態），由動詞字尾 -tion 演變而來",
+          "grimmNote": "舌音互換 d / t / s 與鼻音互換的結合，構成表場所的字尾"
+        }
+      ],
+      "summary": "mansion 由表示「停留、居住」的字根 man 加上名詞字尾 sion 組合而成，原本指「停留或居住的地方」，演變至今成為氣派的「大宅邸」。",
+      "savedAt": "2026-10-01T08:49:31.594Z"
     }
   ],
   "userRoots": []
