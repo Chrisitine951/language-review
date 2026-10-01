@@ -10746,6 +10746,32 @@
       ],
       "summary": "「maiden」由表示少女的核心語根「maid」加上指小與名詞字尾「-en」組合而成，原意即為「小女孩、年輕未婚女子」。",
       "savedAt": "2026-09-29T10:23:50.115Z"
+    },
+    {
+      "id": "ulkmup03jrv2",
+      "word": "appetite",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ap-",
+          "meaning": "朝向、向著（ad- 的變體，因雙子音規則加強語氣）",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音沒有實質意義，真正字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "pet",
+          "meaning": "追求、尋求、前往",
+          "grimmNote": "唇音互換 b / p / f / v / w：源自古印歐語字根 *pet-（奔跑、飛翔、追求），與单词 pace、feather 同源。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ite",
+          "meaning": "名詞字尾（表狀態、性質）",
+          "grimmNote": "母音通轉 a / e / i / o / u / y：母音變體形成名詞字尾，構成抽象名詞。"
+        }
+      ],
+      "summary": "appetite 由加強語氣的前綴 ap- 結合代表「追求」的字根 pet，再加上名詞字尾 -ity 變體组成，字面意思就是「朝向某物一直追求」，引申為對食物或欲望的「食慾、胃口」。",
+      "savedAt": "2026-10-01T03:55:00.187Z"
     }
   ],
   "userRoots": []
