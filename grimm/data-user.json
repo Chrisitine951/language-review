@@ -10920,6 +10920,26 @@
       ],
       "summary": "mansion 由表示「停留、居住」的字根 man 加上名詞字尾 sion 組合而成，原本指「停留或居住的地方」，演變至今成為氣派的「大宅邸」。",
       "savedAt": "2026-10-01T08:49:31.594Z"
+    },
+    {
+      "id": "ulkmuphob0e1",
+      "word": "absent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ab",
+          "meaning": "分離、離開",
+          "grimmNote": "常用字首 ab-，表示分離或離開"
+        },
+        {
+          "type": "root",
+          "text": "sent",
+          "meaning": "存在、在場（源自動詞 to be）",
+          "grimmNote": "由源自「存在」的字根轉換而來，t 與 d 屬於舌音互換"
+        }
+      ],
+      "summary": "absent 由表「分離」的字首 ab- 加上表示「存在」的字根組成，字面意思就是「離開現場、不在場」。",
+      "savedAt": "2026-10-01T12:07:02.078Z"
     }
   ],
   "userRoots": []
