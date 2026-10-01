@@ -10826,6 +10826,20 @@
       ],
       "summary": "de-（去除、向下）加上 cipher（密碼），字面意思就是「去除密碼」，也就是「破譯、解密」。",
       "savedAt": "2026-10-01T04:47:25.351Z"
+    },
+    {
+      "id": "ulkmup2wucd1",
+      "word": "steer",
+      "parts": [
+        {
+          "type": "root",
+          "text": "steer",
+          "meaning": "掌舵、駕駛",
+          "grimmNote": "由原始印歐語字根衍生，字尾的 er 表動作的人或物"
+        }
+      ],
+      "summary": "steer 原意為引導或掌舵，保留原始字根演變而來。",
+      "savedAt": "2026-10-01T05:13:46.141Z"
     }
   ],
   "userRoots": []
