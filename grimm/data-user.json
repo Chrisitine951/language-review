@@ -10772,6 +10772,26 @@
       ],
       "summary": "appetite 由加強語氣的前綴 ap- 結合代表「追求」的字根 pet，再加上名詞字尾 -ity 變體组成，字面意思就是「朝向某物一直追求」，引申為對食物或欲望的「食慾、胃口」。",
       "savedAt": "2026-10-01T03:55:00.187Z"
+    },
+    {
+      "id": "ulkmup04mez3",
+      "word": "distress",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "dis-",
+          "meaning": "分離、離開、否定",
+          "grimmNote": "常用字首 dis- 代表分離、否定"
+        },
+        {
+          "type": "root",
+          "text": "tress",
+          "meaning": "緊繃、壓力、痛苦",
+          "grimmNote": "其中的 t 與 s 屬於「舌音互換 d / t / s」，其核心字根與 string（拉緊、繫緊）同源，原本指「緊緊綁住、束縛」"
+        }
+      ],
+      "summary": "dis-（分離、打破）加上 tress（繫緊、束縛），原意是「打破束縛的繩索」，後來演變成身心被緊緊困住、動彈不得的「壓力與痛苦」。",
+      "savedAt": "2026-10-01T03:55:50.267Z"
     }
   ],
   "userRoots": []
