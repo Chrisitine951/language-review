@@ -10960,6 +10960,26 @@
       ],
       "summary": "plummet 由表示鉛錘的字根與表小的字尾組成，原本指「小鉛錘」，用來測量深淺或垂直落下，因此引申為「暴跌、急速下墜」。",
       "savedAt": "2026-10-01T12:10:21.884Z"
+    },
+    {
+      "id": "ulkmuplcvc11",
+      "word": "plummet",
+      "parts": [
+        {
+          "type": "root",
+          "text": "plumm",
+          "meaning": "鉛錘、直立",
+          "grimmNote": "源自拉丁語 plumbum（鉛），經由唇音互換 b/p，b 轉為 p 形成 plumm"
+        },
+        {
+          "type": "suffix",
+          "text": "-et",
+          "meaning": "小（指小字尾）",
+          "grimmNote": "常見指小字尾，表示「小的東西」"
+        }
+      ],
+      "summary": "plummet 從表「鉛錘」的字根演變而來，加上指小字尾後，形容像鉛錘一樣筆直、快速地下墜。",
+      "savedAt": "2026-10-01T13:50:07.009Z"
     }
   ],
   "userRoots": []
