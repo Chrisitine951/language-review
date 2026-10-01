@@ -10860,6 +10860,32 @@
       ],
       "summary": "re-（回來、向後）加上 treat（拉），字面上的意思是「往後拉、撤退」。",
       "savedAt": "2026-10-01T07:58:30.255Z"
+    },
+    {
+      "id": "ulkmup8xrvh2",
+      "word": "delegate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下、離開",
+          "grimmNote": "常見字首 de-，表示向下或分離。"
+        },
+        {
+          "type": "root",
+          "text": "leg",
+          "meaning": "收集、挑選、說話",
+          "grimmNote": "源自古印歐語，與 legal、lecture 同源，基本義為「分配、挑選任務」"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "動詞或形容詞字尾",
+          "grimmNote": "常見動詞字尾，表示「使成為…」"
+        }
+      ],
+      "summary": "de-（向下/分派）＋ leg（挑選/指派）＋ -ate（動詞字尾），字面意思是「把任務挑選並分派下去」，引申為「委派、授權」。",
+      "savedAt": "2026-10-01T08:02:27.293Z"
     }
   ],
   "userRoots": []
