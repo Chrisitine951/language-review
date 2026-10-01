@@ -10806,6 +10806,26 @@
       ],
       "summary": "swamp 從與水、潮濕相關的原始語根演變而來，本義指充滿水分的低濕之地。",
       "savedAt": "2026-10-01T04:00:09.658Z"
+    },
+    {
+      "id": "ulkmup1yylj1",
+      "word": "decipher",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下、離開、去除",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "cipher",
+          "meaning": "密碼、數字零",
+          "grimmNote": "cipher 源自阿拉伯文 sifr（零、空白），經轉音演變為表示密碼與編解碼的字根。"
+        }
+      ],
+      "summary": "de-（去除、向下）加上 cipher（密碼），字面意思就是「去除密碼」，也就是「破譯、解密」。",
+      "savedAt": "2026-10-01T04:47:25.351Z"
     }
   ],
   "userRoots": []
