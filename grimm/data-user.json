@@ -11000,6 +11000,20 @@
       ],
       "summary": "carriage 由表示承載的字根 carri 加上名詞字尾 -age 組成，原本指「搬運、運費」，後來演變為專指載人的「馬車」及現今的「車廂」。",
       "savedAt": "2026-10-02T10:58:59.918Z"
+    },
+    {
+      "id": "ulkmuqzl75k1",
+      "word": "vent",
+      "parts": [
+        {
+          "type": "root",
+          "text": "vent",
+          "meaning": "風、出口、發洩",
+          "grimmNote": "屬於原始字根，與風（wind）同源，透過唇音互換 v/w 衍生出 vent（通風口、發洩）"
+        }
+      ],
+      "summary": "vent 作為字根直接代表風或出口，原意為流通空氣，進而引申為情感的「發洩」。",
+      "savedAt": "2026-10-02T13:16:16.376Z"
     }
   ],
   "userRoots": []
