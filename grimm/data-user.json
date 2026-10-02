@@ -11028,6 +11028,26 @@
       ],
       "summary": "raid 是由 ride（騎馬、奔馳）經母音通轉衍生而來的同族字，本義為騎馬衝過去，進而演變為「突襲、襲擊」。",
       "savedAt": "2026-10-02T15:08:32.014Z"
+    },
+    {
+      "id": "ulkmur4k9n91",
+      "word": "perish",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "per",
+          "meaning": "徹底、完全（源自穿透、向前）",
+          "grimmNote": "ex- / per- 等方向性字首，表示動作的徹底完成"
+        },
+        {
+          "type": "root",
+          "text": "ish",
+          "meaning": "去、走、消失（源自古印歐語字根，與-ine / exire 相通）",
+          "grimmNote": "母音通轉與字尾演變，表示走向盡頭或死亡"
+        }
+      ],
+      "summary": "per-（徹底）加上表示行走的字根演變，代表「走到盡頭、徹底消失」即為死亡或滅亡。",
+      "savedAt": "2026-10-02T15:35:31.029Z"
     }
   ],
   "userRoots": []
