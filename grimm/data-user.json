@@ -11048,6 +11048,26 @@
       ],
       "summary": "per-（徹底）加上表示行走的字根演變，代表「走到盡頭、徹底消失」即為死亡或滅亡。",
       "savedAt": "2026-10-02T15:35:31.029Z"
+    },
+    {
+      "id": "ulkmur57ch12",
+      "word": "cushion",
+      "parts": [
+        {
+          "type": "root",
+          "text": "cush",
+          "meaning": "墊子、軟墊",
+          "grimmNote": "喉音互換 c / k ↔ h 的變體，源自古法語 coissin，與拉丁文 coxa（大腿、臀部）同源，指坐下時接觸的部位"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾，表動作或結果",
+          "grimmNote": "常見名詞字尾"
+        }
+      ],
+      "summary": "cushion 由表示臀部或座位的字根 cush 加上名詞字尾 -ion 組成，原意指「坐墊」。",
+      "savedAt": "2026-10-02T15:53:27.781Z"
     }
   ],
   "userRoots": []
