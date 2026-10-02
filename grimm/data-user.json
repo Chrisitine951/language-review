@@ -11068,6 +11068,32 @@
       ],
       "summary": "cushion 由表示臀部或座位的字根 cush 加上名詞字尾 -ion 組成，原意指「坐墊」。",
       "savedAt": "2026-10-02T15:53:27.781Z"
+    },
+    {
+      "id": "ulkmur5of1n3",
+      "word": "intuition",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "in-＝在內、進入"
+        },
+        {
+          "type": "root",
+          "text": "tuit",
+          "meaning": "看守、保護、教導",
+          "grimmNote": "源自拉丁文 tueri（看守、保護），其中的 t 與舌音互換 d、s 有關"
+        },
+        {
+          "type": "suffix",
+          "text": "-ion",
+          "meaning": "名詞字尾",
+          "grimmNote": "複合名詞字尾，表狀態或性質"
+        }
+      ],
+      "summary": "字根 tuit 代表「看守、保護」，加上表示「在內」的字首 in-，意指內心在看守、察覺，演變為「直覺」。",
+      "savedAt": "2026-10-02T16:06:44.267Z"
     }
   ],
   "userRoots": []
