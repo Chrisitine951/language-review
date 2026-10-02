@@ -10980,6 +10980,26 @@
       ],
       "summary": "plummet 從表「鉛錘」的字根演變而來，加上指小字尾後，形容像鉛錘一樣筆直、快速地下墜。",
       "savedAt": "2026-10-01T13:50:07.009Z"
+    },
+    {
+      "id": "ulkmuquonv21",
+      "word": "carriage",
+      "parts": [
+        {
+          "type": "root",
+          "text": "carri",
+          "meaning": "承載、車子",
+          "grimmNote": "源自 carry（搬運、承載），其中的 r 與流音互換有關，基本字義為「載運」"
+        },
+        {
+          "type": "suffix",
+          "text": "age",
+          "meaning": "名詞字尾，表集合名詞或場所、費用",
+          "grimmNote": "常見名詞字尾 -age，組合後表示「用來載運的東西、馬車或運費」"
+        }
+      ],
+      "summary": "carriage 由表示承載的字根 carri 加上名詞字尾 -age 組成，原本指「搬運、運費」，後來演變為專指載人的「馬車」及現今的「車廂」。",
+      "savedAt": "2026-10-02T10:58:59.918Z"
     }
   ],
   "userRoots": []
