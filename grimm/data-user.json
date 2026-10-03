@@ -11302,6 +11302,26 @@
       ],
       "summary": "fraud 由表示動作方向的字首 f 與代表剝削欺騙的字根 raud 組合而成，核心意涵為透過啃咬或侵吞來達到欺騙的目的。",
       "savedAt": "2026-10-03T16:41:20.736Z"
+    },
+    {
+      "id": "ulkmusmlhdn7",
+      "word": "stipulate",
+      "parts": [
+        {
+          "type": "root",
+          "text": "stip",
+          "meaning": "硬枝、稻草、合約條款",
+          "grimmNote": "對應古印歐語的 st-（站立、直立、堅固），利用舌音互換 d/t/s，與 staff（棍棒）同源，指古代立約時交付的一根象徵性小木棒（stipula）。"
+        },
+        {
+          "type": "suffix",
+          "text": "ulate",
+          "meaning": "動詞字尾，表示「做成…、使成為」",
+          "grimmNote": "-ate 為常見的動詞或形容詞字尾，用以將名詞字根轉化為動作。"
+        }
+      ],
+      "summary": "stipulate（規定、訂定合約）源自古人用一根象徵性的小木棒（stipula）來立約的習俗，字根 stip- 表示堅固的枝條或合約條款，加上動詞字尾 -ulate，字面意思就是「立下條款」。",
+      "savedAt": "2026-10-03T16:48:06.971Z"
     }
   ],
   "userRoots": []
