@@ -11182,6 +11182,26 @@
       ],
       "summary": "字首 pa-（朝向、向前）結合字根 rade（行進、排列），合起來就是「整齊排列向前行進」，演變為遊行、閱兵的 parade。",
       "savedAt": "2026-10-03T12:59:52.378Z"
+    },
+    {
+      "id": "ulkmusix9df2",
+      "word": "default",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de",
+          "meaning": "向下；分離、離開",
+          "grimmNote": "常見字首 de-，表示向下或離開"
+        },
+        {
+          "type": "root",
+          "text": "fault",
+          "meaning": "錯誤、缺點；過失",
+          "grimmNote": "源自拉丁語 fallere（欺騙、犯錯），其中的 l 與 u 經由母音通轉與流音變化演變而來"
+        }
+      ],
+      "summary": "de-（向下、離開）結合表示過失的字根 fault，原本指「因疏忽而離開應盡的義務」，演變成現代的「預設值、缺省或過失」。",
+      "savedAt": "2026-10-03T15:05:18.003Z"
     }
   ],
   "userRoots": []
