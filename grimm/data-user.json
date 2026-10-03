@@ -11202,6 +11202,26 @@
       ],
       "summary": "de-（向下、離開）結合表示過失的字根 fault，原本指「因疏忽而離開應盡的義務」，演變成現代的「預設值、缺省或過失」。",
       "savedAt": "2026-10-03T15:05:18.003Z"
+    },
+    {
+      "id": "ulkmusiyl783",
+      "word": "condemn",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con-",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 come 的字首，在此表示加強語氣或共同的意思"
+        },
+        {
+          "type": "root",
+          "text": "demn",
+          "meaning": "宣判、損害、懲罰",
+          "grimmNote": "核心字根來自拉丁文 damnare（損害、宣判罪行），其中 m 與 n 屬於鼻音互換"
+        }
+      ],
+      "summary": "con-（一起、共同）加上表宣判與懲罰的字根，共同組成「宣判有罪、嚴厲譴責」的 condemn。",
+      "savedAt": "2026-10-03T15:06:19.988Z"
     }
   ],
   "userRoots": []
