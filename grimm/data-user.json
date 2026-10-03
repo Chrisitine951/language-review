@@ -11094,6 +11094,26 @@
       ],
       "summary": "字根 tuit 代表「看守、保護」，加上表示「在內」的字首 in-，意指內心在看守、察覺，演變為「直覺」。",
       "savedAt": "2026-10-02T16:06:44.267Z"
+    },
+    {
+      "id": "ulkmuryb3ff1",
+      "word": "burden",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "bur",
+          "meaning": "搬運、負擔",
+          "grimmNote": "源自古英文 bera，唇音互換 b / p / f / v / w，與 bear（承擔）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "den",
+          "meaning": "名詞字尾（表物或狀態）",
+          "grimmNote": "舌音互換 d / t / s 與母音通轉的綜合變化，用來構成名詞"
+        }
+      ],
+      "summary": "burden 由表示「承擔」的字根加上名詞字尾組成，字面意思就是「被扛在身上的重擔」。",
+      "savedAt": "2026-10-03T05:28:11.547Z"
     }
   ],
   "userRoots": []
