@@ -11162,6 +11162,26 @@
       ],
       "summary": "decim（十分之一）加上 -ation（名詞字尾），字面意思是「殺害十分之一的人」，現代引申為「大屠殺、大量毀滅」。",
       "savedAt": "2026-10-03T06:27:42.372Z"
+    },
+    {
+      "id": "ulkmusefyka1",
+      "word": "parade",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pa",
+          "meaning": "向前、朝向",
+          "grimmNote": "源自前綴ad-的變體，經過母音通轉與子音assimilation"
+        },
+        {
+          "type": "root",
+          "text": "rade",
+          "meaning": "走、行進、隊伍",
+          "grimmNote": "源自拉丁語L. *parare*（準備、排列），透過唇音互換與母音通轉演變而來"
+        }
+      ],
+      "summary": "字首 pa-（朝向、向前）結合字根 rade（行進、排列），合起來就是「整齊排列向前行進」，演變為遊行、閱兵的 parade。",
+      "savedAt": "2026-10-03T12:59:52.378Z"
     }
   ],
   "userRoots": []
