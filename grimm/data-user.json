@@ -11322,6 +11322,26 @@
       ],
       "summary": "stipulate（規定、訂定合約）源自古人用一根象徵性的小木棒（stipula）來立約的習俗，字根 stip- 表示堅固的枝條或合約條款，加上動詞字尾 -ulate，字面意思就是「立下條款」。",
       "savedAt": "2026-10-03T16:48:06.971Z"
+    },
+    {
+      "id": "ulkmusmmoy08",
+      "word": "mutual",
+      "parts": [
+        {
+          "type": "root",
+          "text": "mut",
+          "meaning": "改變、交換",
+          "grimmNote": "源自古印歐語根，核心概念為交換或改變。"
+        },
+        {
+          "type": "suffix",
+          "text": "ual",
+          "meaning": "形容詞字尾，表示「具有…性質的」；其中的 -al 為形容詞字尾",
+          "grimmNote": "-al 是常見的形容詞字尾，母音通轉 u/a 形成複合字尾 -ual"
+        }
+      ],
+      "summary": "mutual 由表示「改變、交換」的字根 mut 加上形容詞字尾 -ual 組成，本義為彼此互相交換、共同承擔，引申為「相互的、共同的」。",
+      "savedAt": "2026-10-03T16:49:03.432Z"
     }
   ],
   "userRoots": []
