@@ -11282,6 +11282,26 @@
       ],
       "summary": "re-（回來、再次）加上 cruit（成長、長大），字面意思就是「讓某人再次生長／使壯大」，引申為招募新血、補充兵源。爐邊",
       "savedAt": "2026-10-03T16:36:47.281Z"
+    },
+    {
+      "id": "ulkmusmcrxc5",
+      "word": "fraud",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "f",
+          "meaning": "加強語氣、朝向",
+          "grimmNote": "唇音互換 b / p / f / v / w 與字首簡化"
+        },
+        {
+          "type": "root",
+          "text": "raud",
+          "meaning": "啃咬、剝削、欺騙",
+          "grimmNote": "舌音互換 d / t / s 與母音通轉"
+        }
+      ],
+      "summary": "fraud 由表示動作方向的字首 f 與代表剝削欺騙的字根 raud 組合而成，核心意涵為透過啃咬或侵吞來達到欺騙的目的。",
+      "savedAt": "2026-10-03T16:41:20.736Z"
     }
   ],
   "userRoots": []
