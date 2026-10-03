@@ -11142,6 +11142,26 @@
       ],
       "summary": "freight 作為獨立的名詞與動詞使用，保留了古老日耳曼語系中關於「載運貨物」的原始字根。",
       "savedAt": "2026-10-03T06:22:25.302Z"
+    },
+    {
+      "id": "ulkmus0fmp02",
+      "word": "decimation",
+      "parts": [
+        {
+          "type": "root",
+          "text": "decim",
+          "meaning": "十分之一；十分之一的數量",
+          "grimmNote": "源自拉丁字根 deci-（十），利用舌音互換 d/t（十的古老發音關係）與母音通轉 e/i，指古代羅馬軍隊處決十分之一叛軍的刑罰。"
+        },
+        {
+          "type": "suffix",
+          "text": "ation",
+          "meaning": "名詞字尾（表動作或過程）",
+          "grimmNote": "複合字尾 -ate（動詞化）加上 -ion（名詞字尾），合起來表示「進行…的動作或過程」。"
+        }
+      ],
+      "summary": "decim（十分之一）加上 -ation（名詞字尾），字面意思是「殺害十分之一的人」，現代引申為「大屠殺、大量毀滅」。",
+      "savedAt": "2026-10-03T06:27:42.372Z"
     }
   ],
   "userRoots": []
