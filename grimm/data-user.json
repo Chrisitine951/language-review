@@ -11568,6 +11568,26 @@
       ],
       "summary": "memorandum 從「記憶 (mor)」出發，字尾加上表示應當被注意的事物，演變為「備忘錄、記事本」的意思。",
       "savedAt": "2026-10-04T13:18:33.546Z"
+    },
+    {
+      "id": "ulkmutunik66",
+      "word": "arthritis",
+      "parts": [
+        {
+          "type": "root",
+          "text": "arthr",
+          "meaning": "關節",
+          "grimmNote": "源自古印歐語字根，原意為「接合、樞紐」"
+        },
+        {
+          "type": "suffix",
+          "text": "itis",
+          "meaning": "發炎（醫學字尾）",
+          "grimmNote": "希臘語源的醫學專用字尾，表示某個部位的發炎疾病"
+        }
+      ],
+      "summary": "「arthritis」由表示關節的字根 arthr 與表示發炎的醫學字尾 itis 組合而成，字面意思就是「關節發炎」。",
+      "savedAt": "2026-10-04T13:21:24.918Z"
     }
   ],
   "userRoots": []
