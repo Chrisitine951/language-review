@@ -11456,6 +11456,32 @@
       ],
       "summary": "inflection 由字首 in-（進入）加上代表彎曲的字根 flect，再接名詞字尾 -ion 組成，字面上的意思就是「向內彎曲」或語調、詞形的「轉折」。",
       "savedAt": "2026-10-04T05:56:43.246Z"
+    },
+    {
+      "id": "ulkmutru0pt1",
+      "word": "reptile",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常見字首，表示動作的回溯或重複"
+        },
+        {
+          "type": "root",
+          "text": "pt",
+          "meaning": "爬行",
+          "grimmNote": "源自古印歐語字根，保留核心子音 p 與 t"
+        },
+        {
+          "type": "suffix",
+          "text": "-ile",
+          "meaning": "形容詞字尾，帶有傾向或性質",
+          "grimmNote": "形容詞字尾，用以構成描述性質的單字"
+        }
+      ],
+      "summary": "reptile 由表示回溯的字首 re- 與代表爬行的字根 pt 加上形容詞字尾 -ile 組成，形容動物貼地爬行的特性。",
+      "savedAt": "2026-10-04T12:02:29.537Z"
     }
   ],
   "userRoots": []
