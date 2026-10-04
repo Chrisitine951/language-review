@@ -11370,6 +11370,26 @@
       ],
       "summary": "bureau 從原本指「粗毛呢布」的單字，演變為鋪著這種布的「寫字桌」，最終用來代指辦公的「局、處」單位。",
       "savedAt": "2026-10-04T05:28:42.548Z"
+    },
+    {
+      "id": "ulkmutduuaj3",
+      "word": "terrify",
+      "parts": [
+        {
+          "type": "root",
+          "text": "terr",
+          "meaning": "恐懼、發抖",
+          "grimmNote": "源自古印歐語，與拉丁語 terrere（使驚恐）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "ify",
+          "meaning": "使…（動詞字尾，源自 facere「做、使」）",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "terr（恐懼）加上 -ify（使成為），字面意思就是「使產生恐懼」，也就是「恐嚇、把…嚇壞」。",
+      "savedAt": "2026-10-04T05:31:13.243Z"
     }
   ],
   "userRoots": []
