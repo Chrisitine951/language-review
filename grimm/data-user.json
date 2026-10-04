@@ -11516,6 +11516,32 @@
       ],
       "summary": "grocery 由表示「大批的」字根 groc（源自 gross）加上表示地方的字尾 -ery 組成，原本指批發商，後來演變成販售食品與日用品的雜貨店。",
       "savedAt": "2026-10-04T12:15:19.059Z"
+    },
+    {
+      "id": "ulkmuttxg004",
+      "word": "exquisite",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ex",
+          "meaning": "向外",
+          "grimmNote": "常見字首 ex-（出去、向外）"
+        },
+        {
+          "type": "root",
+          "text": "quis",
+          "meaning": "尋求、尋找",
+          "grimmNote": "源自拉丁字根，對應 seek / quest，其中喉音互換 k/q"
+        },
+        {
+          "type": "suffix",
+          "text": "ite",
+          "meaning": "形容詞字尾，表示被動或狀態",
+          "grimmNote": "複合字尾，表已達成的狀態"
+        }
+      ],
+      "summary": "exquisite 由表示「向外」的字首 ex- 加上代表「尋求」的字根組合而成，字面意思是「被精心尋求出來的」，因此引申為「精緻的、高雅的」。",
+      "savedAt": "2026-10-04T13:01:08.545Z"
     }
   ],
   "userRoots": []
