@@ -11342,6 +11342,20 @@
       ],
       "summary": "mutual 由表示「改變、交換」的字根 mut 加上形容詞字尾 -ual 組成，本義為彼此互相交換、共同承擔，引申為「相互的、共同的」。",
       "savedAt": "2026-10-03T16:49:03.432Z"
+    },
+    {
+      "id": "ulkmutdnxu11",
+      "word": "shelf",
+      "parts": [
+        {
+          "type": "root",
+          "text": "shelf",
+          "meaning": "架子、擱板",
+          "grimmNote": "唇音互換 b / p / f / v / w 與喉音弱化 c / k ↔ h，保留原始表示「突出、板狀」的字根"
+        }
+      ],
+      "summary": "shelf 是一個保留原始發音的日耳曼語源單字，原意指像岩架一樣突出的板狀物。",
+      "savedAt": "2026-10-04T05:25:51.241Z"
     }
   ],
   "userRoots": []
