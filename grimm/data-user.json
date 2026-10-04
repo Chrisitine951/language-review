@@ -11390,6 +11390,26 @@
       ],
       "summary": "terr（恐懼）加上 -ify（使成為），字面意思就是「使產生恐懼」，也就是「恐嚇、把…嚇壞」。",
       "savedAt": "2026-10-04T05:31:13.243Z"
+    },
+    {
+      "id": "ulkmutek7i21",
+      "word": "incline",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字首，表示進入或向內。"
+        },
+        {
+          "type": "root",
+          "text": "cline",
+          "meaning": "傾斜、彎曲",
+          "grimmNote": "源自古印歐語系，喉音互換 k/c 的概念，與 lean（傾斜）為同源字。"
+        }
+      ],
+      "summary": "字首 in-（進入）加上表示「傾斜」的字根 cline，合起來就是指身體或心智「向內傾斜」，引申為傾向、斜坡或意向。",
+      "savedAt": "2026-10-04T05:50:56.762Z"
     }
   ],
   "userRoots": []
