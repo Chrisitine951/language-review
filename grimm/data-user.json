@@ -11588,6 +11588,26 @@
       ],
       "summary": "「arthritis」由表示關節的字根 arthr 與表示發炎的醫學字尾 itis 組合而成，字面意思就是「關節發炎」。",
       "savedAt": "2026-10-04T13:21:24.918Z"
+    },
+    {
+      "id": "ulkmutuy61k7",
+      "word": "resort",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常見字首，表示返回或重複的動作"
+        },
+        {
+          "type": "root",
+          "text": "sort",
+          "meaning": "種類、分類；把…分類",
+          "grimmNote": "源自古印歐語，核心意義為「分開、排列」"
+        }
+      ],
+      "summary": "re-（再次、回來）加上 sort（分類），原本指「再次把東西分門別類、尋找歸屬」，引申為「尋求庇護、常去的地方（度假勝地）」或「訴諸、依靠」。",
+      "savedAt": "2026-10-04T13:29:41.912Z"
     }
   ],
   "userRoots": []
