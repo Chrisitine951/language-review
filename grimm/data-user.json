@@ -11430,6 +11430,32 @@
       ],
       "summary": "supper 由表示「在下方/底下」的字根與名詞字尾組成，原始意指太陽下山、夜幕低垂時分所享用的當天最後一餐。",
       "savedAt": "2026-10-04T05:55:48.278Z"
+    },
+    {
+      "id": "ulkmutermum3",
+      "word": "inflection",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字首 in- 表示在內、進入。"
+        },
+        {
+          "type": "root",
+          "text": "flect",
+          "meaning": "彎曲、折",
+          "grimmNote": "其中的 f 與 l 涉及唇音互換與流音互換；與源自同一古老語源的字根相通。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ion",
+          "meaning": "名詞字尾（表動作或狀態）",
+          "grimmNote": "名詞字尾，將動詞轉化為名詞。"
+        }
+      ],
+      "summary": "inflection 由字首 in-（進入）加上代表彎曲的字根 flect，再接名詞字尾 -ion 組成，字面上的意思就是「向內彎曲」或語調、詞形的「轉折」。",
+      "savedAt": "2026-10-04T05:56:43.246Z"
     }
   ],
   "userRoots": []
