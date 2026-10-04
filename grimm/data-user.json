@@ -11496,6 +11496,26 @@
       ],
       "summary": "「oar」為原始印歐語字根，直接演變為現代英語中表示划船工具的「槳」。",
       "savedAt": "2026-10-04T12:06:49.400Z"
+    },
+    {
+      "id": "ulkmutsaihe3",
+      "word": "grocery",
+      "parts": [
+        {
+          "type": "root",
+          "text": "groc",
+          "meaning": "大、粗、全面（源自 gross）",
+          "grimmNote": "喉音互換 g / k / c，與 gross（大的、批發的）同源，指大批採購的物品"
+        },
+        {
+          "type": "suffix",
+          "text": "ery",
+          "meaning": "地方；集體名詞（名詞字尾）",
+          "grimmNote": "-ery 常用於表示場所或集合名詞，此處指「賣大批日用品的地方」"
+        }
+      ],
+      "summary": "grocery 由表示「大批的」字根 groc（源自 gross）加上表示地方的字尾 -ery 組成，原本指批發商，後來演變成販售食品與日用品的雜貨店。",
+      "savedAt": "2026-10-04T12:15:19.059Z"
     }
   ],
   "userRoots": []
