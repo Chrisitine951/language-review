@@ -11542,6 +11542,32 @@
       ],
       "summary": "exquisite 由表示「向外」的字首 ex- 加上代表「尋求」的字根組合而成，字面意思是「被精心尋求出來的」，因此引申為「精緻的、高雅的」。",
       "savedAt": "2026-10-04T13:01:08.545Z"
+    },
+    {
+      "id": "ulkmutujubu5",
+      "word": "memorandum",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "me",
+          "meaning": "加強語氣",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "mor",
+          "meaning": "記憶、心智",
+          "grimmNote": "對應古印歐語字根 (m-r)，與 memory、mind 同源，運用鼻音互換與母音通轉"
+        },
+        {
+          "type": "suffix",
+          "text": "andum",
+          "meaning": "地方；或表「應當被…的事物」（中性名詞字尾）",
+          "grimmNote": "-um 為名詞字尾（地方或事物），-and- 為分詞尾"
+        }
+      ],
+      "summary": "memorandum 從「記憶 (mor)」出發，字尾加上表示應當被注意的事物，演變為「備忘錄、記事本」的意思。",
+      "savedAt": "2026-10-04T13:18:33.546Z"
     }
   ],
   "userRoots": []
