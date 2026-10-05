@@ -11828,6 +11828,32 @@
       ],
       "summary": "legacy 由表示「挑選、指定」的字根 leg 加上名詞字尾 -acy 構成，字面意思是「被指定留給後代的事物」，即為「遺產、傳統」。",
       "savedAt": "2026-10-05T14:25:30.176Z"
+    },
+    {
+      "id": "ulkmuvcgxre8",
+      "word": "consensus",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 come 的字首 con-（一起、共同）"
+        },
+        {
+          "type": "root",
+          "text": "sens",
+          "meaning": "感覺、意識",
+          "grimmNote": "源自拉丁文 sentire（感覺），其中的 t 經由舌音互換 d/t/s 轉成 s"
+        },
+        {
+          "type": "suffix",
+          "text": "us",
+          "meaning": "名詞字尾",
+          "grimmNote": "表名詞的字尾"
+        }
+      ],
+      "summary": "字首 con-（一起）加上字根 sens（感覺），共同形成「大家感覺一致、意見相同」的共識（consensus）。",
+      "savedAt": "2026-10-05T14:27:57.290Z"
     }
   ],
   "userRoots": []
