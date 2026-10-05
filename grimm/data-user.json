@@ -11702,6 +11702,32 @@
       ],
       "summary": "「storey」由表示「建造、結構」的字根 stor 加上名詞字尾 -ey 組成，原本指房屋的一層結構，後來演變為樓層的意思。",
       "savedAt": "2026-10-05T12:02:45.233Z"
+    },
+    {
+      "id": "ulkmuv86oyf2",
+      "word": "nourish",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "n",
+          "meaning": "進入、加強語氣",
+          "grimmNote": "鼻音與動詞前綴變化，此處與字根結合"
+        },
+        {
+          "type": "root",
+          "text": "our",
+          "meaning": "餵養、滋養",
+          "grimmNote": "源自古印歐語，與 food / feed 等字的唇音互換與母音通轉相關"
+        },
+        {
+          "type": "suffix",
+          "text": "ish",
+          "meaning": "動詞字尾（使成為、表動作）",
+          "grimmNote": "常用動詞字尾，表使具有某種狀態"
+        }
+      ],
+      "summary": "nourish 由表示動作的字首與核心語義「餵養」的字根組成，意為使長大、滋養。",
+      "savedAt": "2026-10-05T12:28:00.855Z"
     }
   ],
   "userRoots": []
