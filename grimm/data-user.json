@@ -11728,6 +11728,32 @@
       ],
       "summary": "nourish 由表示動作的字首與核心語義「餵養」的字根組成，意為使長大、滋養。",
       "savedAt": "2026-10-05T12:28:00.855Z"
+    },
+    {
+      "id": "ulkmuv9vj263",
+      "word": "aggravate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ag-",
+          "meaning": "朝向、加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音（g）只是加強語氣、沒有實質意義，真正的字根從後面開始"
+        },
+        {
+          "type": "root",
+          "text": "grav",
+          "meaning": "重的",
+          "grimmNote": "核心字根，源自代表沉重、嚴重的語源"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "動詞字尾，使成為…",
+          "grimmNote": "常見的動詞或形容詞字尾"
+        }
+      ],
+      "summary": "aggravate 由加強語氣字首 ag- 與表示「重的」的字根 grav 結合，字面意思就是「使變得更重、更嚴重」，進而演變為「惹惱、惡化」。",
+      "savedAt": "2026-10-05T13:15:19.230Z"
     }
   ],
   "userRoots": []
