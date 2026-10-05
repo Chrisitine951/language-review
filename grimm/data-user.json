@@ -11648,6 +11648,26 @@
       ],
       "summary": "stipulate（規定、明定）源自古代交易或立約時，雙方會折斷一根樹枝或稻草（stip）作為信物的動作，演變至今成為法律與合約中「明文規定、講好條件」的意思。",
       "savedAt": "2026-10-04T16:01:17.088Z"
+    },
+    {
+      "id": "ulkmuumjvhz1",
+      "word": "overlook",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "over",
+          "meaning": "在…之上、超越",
+          "grimmNote": "源自古英文副詞與介系詞，表示空間上的位置或超越"
+        },
+        {
+          "type": "root",
+          "text": "look",
+          "meaning": "看、注視",
+          "grimmNote": "基本動詞，原意為用眼睛看"
+        }
+      ],
+      "summary": "over（在…之上）加上 look（看），字面意思就是「從上方看過去」，因此衍生出「俯瞰」或因居高臨下而「忽略、沒注意到」的意思。",
+      "savedAt": "2026-10-05T02:22:24.311Z"
     }
   ],
   "userRoots": []
