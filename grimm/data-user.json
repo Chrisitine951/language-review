@@ -11754,6 +11754,26 @@
       ],
       "summary": "aggravate 由加強語氣字首 ag- 與表示「重的」的字根 grav 結合，字面意思就是「使變得更重、更嚴重」，進而演變為「惹惱、惡化」。",
       "savedAt": "2026-10-05T13:15:19.230Z"
+    },
+    {
+      "id": "ulkmuvaj3lo4",
+      "word": "devour",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de",
+          "meaning": "向下、離開",
+          "grimmNote": "常見字首 de-，表示向下或完全"
+        },
+        {
+          "type": "root",
+          "text": "vour",
+          "meaning": "吞吃、吃",
+          "grimmNote": "源自古印歐語，其中 v 與 b 屬於「唇音互換 b / p / f / v / w」，與代表 bite（咬）或 food 的字源家族相通"
+        }
+      ],
+      "summary": "de-（向下、完全）加上表示吞吃的字根 vour，字面上的意思就是「完全吞下去」，也就是「狼吞虎咽、吞食」的意思。",
+      "savedAt": "2026-10-05T13:33:38.940Z"
     }
   ],
   "userRoots": []
