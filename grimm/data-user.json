@@ -11854,6 +11854,32 @@
       ],
       "summary": "字首 con-（一起）加上字根 sens（感覺），共同形成「大家感覺一致、意見相同」的共識（consensus）。",
       "savedAt": "2026-10-05T14:27:57.290Z"
+    },
+    {
+      "id": "ulkmuvcnpqz9",
+      "word": "harness",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "h-",
+          "meaning": "向下；朝向",
+          "grimmNote": "源自 ob- 的喉音弱化與簡化，表朝向、扣上"
+        },
+        {
+          "type": "root",
+          "text": "ar-",
+          "meaning": "固定、裝配",
+          "grimmNote": "流音 r 的運用與結構簡化"
+        },
+        {
+          "type": "suffix",
+          "text": "-ness",
+          "meaning": "名詞字尾（狀態、物）",
+          "grimmNote": "表狀態或器具的名詞字尾"
+        }
+      ],
+      "summary": "harness 原意為「朝向固定、裝配」，演變為馬具、裝備，並引申為動詞「利用、駕馭」。",
+      "savedAt": "2026-10-05T14:33:13.499Z"
     }
   ],
   "userRoots": []
