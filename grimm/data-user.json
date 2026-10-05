@@ -11808,6 +11808,26 @@
       ],
       "summary": "illusion 由表示「進入」的字首 il- 結合表「玩耍、幻影」的字根組成，字面意思就是「進入遊戲或被戲弄之中」，演變為現代的「幻覺、錯覺」。",
       "savedAt": "2026-10-05T14:24:15.880Z"
+    },
+    {
+      "id": "ulkmuvcds8w7",
+      "word": "legacy",
+      "parts": [
+        {
+          "type": "root",
+          "text": "leg",
+          "meaning": "收集；挑選；說話",
+          "grimmNote": "源自古印歐語字根，原意為聚集或指定（與 collect、lect 同源）"
+        },
+        {
+          "type": "suffix",
+          "text": "acy",
+          "meaning": "名詞字尾（表性質、狀態或集合體）",
+          "grimmNote": "由形容詞字尾 -ate/ic 轉化而來的複合名詞字尾，用來指「被指定或繼承下來的事物、遺產」"
+        }
+      ],
+      "summary": "legacy 由表示「挑選、指定」的字根 leg 加上名詞字尾 -acy 構成，字面意思是「被指定留給後代的事物」，即為「遺產、傳統」。",
+      "savedAt": "2026-10-05T14:25:30.176Z"
     }
   ],
   "userRoots": []
