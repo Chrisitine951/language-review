@@ -11900,6 +11900,26 @@
       ],
       "summary": "hectic 源自古希臘語的百人/百般，字面意為「千頭萬緒、忙亂的」，透過喉音弱化與形容詞字尾演變而來。",
       "savedAt": "2026-10-05T14:39:09.191Z"
+    },
+    {
+      "id": "ulkmuvd5ej7b",
+      "word": "blade",
+      "parts": [
+        {
+          "type": "root",
+          "text": "blad",
+          "meaning": "寬而平坦的東西、葉片、刀刃",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "名詞字尾",
+          "grimmNote": "母音通轉與字尾結構"
+        }
+      ],
+      "summary": "blade 從表示平坦、葉片的原始字根演變而來，加上字尾 e 形成指稱「刀刃、葉片」的名詞。",
+      "savedAt": "2026-10-05T14:46:58.771Z"
     }
   ],
   "userRoots": []
