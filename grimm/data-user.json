@@ -11788,6 +11788,26 @@
       ],
       "summary": "lick 是直接保留原始喉音 k 的單字，以擬聲方式表示用舌頭舔的動作。",
       "savedAt": "2026-10-05T13:59:29.833Z"
+    },
+    {
+      "id": "ulkmuvcc6x46",
+      "word": "illusion",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "il",
+          "meaning": "進入；向內（in- 遇到 l 雙子音同化）",
+          "grimmNote": "in-＝在內、進入；因遇到 l 而同化為 il-，形成雙子音規則，第二個 l 僅為結構強化"
+        },
+        {
+          "type": "root",
+          "text": "lusion",
+          "meaning": "玩耍、戲弄、幻影",
+          "grimmNote": "源自拉丁文 ludere（玩耍、嬉戲），d 經由舌音互換轉為 s，母音 u 與 io 依母音通轉"
+        }
+      ],
+      "summary": "illusion 由表示「進入」的字首 il- 結合表「玩耍、幻影」的字根組成，字面意思就是「進入遊戲或被戲弄之中」，演變為現代的「幻覺、錯覺」。",
+      "savedAt": "2026-10-05T14:24:15.880Z"
     }
   ],
   "userRoots": []
