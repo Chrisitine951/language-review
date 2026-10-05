@@ -11880,6 +11880,26 @@
       ],
       "summary": "harness 原意為「朝向固定、裝配」，演變為馬具、裝備，並引申為動詞「利用、駕馭」。",
       "savedAt": "2026-10-05T14:33:13.499Z"
+    },
+    {
+      "id": "ulkmuvcvc7ba",
+      "word": "hectic",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "hec",
+          "meaning": "百、許多",
+          "grimmNote": "喉音弱化 c / k ↔ h：源自古印歐語的 *k-（表示百或眾多）在英文中弱化成了 h"
+        },
+        {
+          "type": "suffix",
+          "text": "tic",
+          "meaning": "…的（形容詞字尾）",
+          "grimmNote": "母音通轉 i/e 與子音 t 的組合，構成形容詞，表示具有某種狀態"
+        }
+      ],
+      "summary": "hectic 源自古希臘語的百人/百般，字面意為「千頭萬緒、忙亂的」，透過喉音弱化與形容詞字尾演變而來。",
+      "savedAt": "2026-10-05T14:39:09.191Z"
     }
   ],
   "userRoots": []
