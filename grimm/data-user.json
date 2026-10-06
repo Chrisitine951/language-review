@@ -11980,6 +11980,38 @@
       ],
       "summary": "「acquaintance」由加強語氣字首「ac-」、核心字根「quaint」（源自「知道、認識」）與名詞字尾「-ance」組成，字面意思就是「互相知道、認識的狀態」，也就是「熟人、相識」。",
       "savedAt": "2026-10-06T06:24:55.580Z"
+    },
+    {
+      "id": "ulkmuwgzp5m1",
+      "word": "magnificent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "mag",
+          "meaning": "大、偉大",
+          "grimmNote": "源自字根 mag-（大），與 major 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "ni",
+          "meaning": "字尾連接音",
+          "grimmNote": "鼻音互換或母音通轉產生的連接音節"
+        },
+        {
+          "type": "root",
+          "text": "fic",
+          "meaning": "做、製作（來自 fac/fec）",
+          "grimmNote": "喉音互換：c 與其他喉音 k/g 相關，與 factory 的 fac（做）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "ent",
+          "meaning": "形容詞字尾（具備…性質的）",
+          "grimmNote": "標準形容詞字尾"
+        }
+      ],
+      "summary": "由代表「大」的字根加上「做、製造」組合而成，字面意思就是「做得很大、氣勢宏偉」，用來形容壯麗、宏偉的景象或卓越的事物。",
+      "savedAt": "2026-10-06T09:22:17.242Z"
     }
   ],
   "userRoots": []
