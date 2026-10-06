@@ -11954,6 +11954,32 @@
       ],
       "summary": "affair 由加強語氣字首 af- 與表示「做、事務」的字根 fair 結合而成，字面意思就是「去做的具體事情、事務」。",
       "savedAt": "2026-10-06T06:15:35.487Z"
+    },
+    {
+      "id": "ulkmuwanlzw2",
+      "word": "acquaintance",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ac-",
+          "meaning": "朝向、加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音沒有實質意義，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "quaint",
+          "meaning": "古雅的、奇特的、熟悉的",
+          "grimmNote": "源自拉丁語 cognoscere（知道、認識），經過喉音互換與母音通轉演變而來。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ance",
+          "meaning": "名詞字尾（表性質或狀態）",
+          "grimmNote": "常見的名詞字尾，用以將動詞或形容詞轉化為抽象名詞。"
+        }
+      ],
+      "summary": "「acquaintance」由加強語氣字首「ac-」、核心字根「quaint」（源自「知道、認識」）與名詞字尾「-ance」組成，字面意思就是「互相知道、認識的狀態」，也就是「熟人、相識」。",
+      "savedAt": "2026-10-06T06:24:55.580Z"
     }
   ],
   "userRoots": []
