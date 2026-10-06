@@ -11934,6 +11934,26 @@
       ],
       "summary": "tyre 從古代表示「束縛、綁帶」的字根演變而來，透過母音通轉，最終指稱包覆車輪的外胎。",
       "savedAt": "2026-10-05T14:55:03.031Z"
+    },
+    {
+      "id": "ulkmuwabltr1",
+      "word": "affair",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "af-",
+          "meaning": "加強語氣（ad- 的變體）",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音只是加強語氣、沒有實質意義，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "fair",
+          "meaning": "事情、做、發生（源自拉丁語 facere「做」的相關衍生，字根 r/f 轉換）",
+          "grimmNote": "唇音互換 b / p / f / v / w：此處 f 與 facere 的 c/f 演變有關，表達「所做之事、事務」。"
+        }
+      ],
+      "summary": "affair 由加強語氣字首 af- 與表示「做、事務」的字根 fair 結合而成，字面意思就是「去做的具體事情、事務」。",
+      "savedAt": "2026-10-06T06:15:35.487Z"
     }
   ],
   "userRoots": []
