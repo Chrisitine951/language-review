@@ -12032,6 +12032,32 @@
       ],
       "summary": "stat（站立、保持不動）加上 ic（…的），組合起來就是保持靜止、呆滯的「靜態的」。",
       "savedAt": "2026-10-06T09:24:38.101Z"
+    },
+    {
+      "id": "ulkmuwh88du3",
+      "word": "composition",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "com",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 com-（一起、共同，源自 come），在此表示共同。"
+        },
+        {
+          "type": "prefix",
+          "text": "pos",
+          "meaning": "放置、擺放",
+          "grimmNote": "源自拉丁字根 ponere / posit-（放置），其中鼻音 m 與 n 鼻音互換（pon- 變 pos-）。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ition",
+          "meaning": "名詞字尾（表動作或狀態）",
+          "grimmNote": "由動詞字尾 -ate / -ite 衍生出的複合名詞字尾，母音 i 與 o 經由母音通轉變化。"
+        }
+      ],
+      "summary": "com-（一起）加上 pos（放置）與名詞字尾，字面意思是「放在一起」，演變為現代的「組成、構圖、作文」。",
+      "savedAt": "2026-10-06T09:28:55.410Z"
     }
   ],
   "userRoots": []
