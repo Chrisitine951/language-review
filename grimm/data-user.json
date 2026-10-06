@@ -12124,6 +12124,32 @@
       ],
       "summary": "calamity 由表示方向的字首與核心災難字根組合而成，最終演變為形容大災難、不幸的名詞。",
       "savedAt": "2026-10-06T14:04:25.517Z"
+    },
+    {
+      "id": "ulkmuwu50x92",
+      "word": "contention",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "con-＝一起、共同（源自 come）"
+        },
+        {
+          "type": "root",
+          "text": "tent",
+          "meaning": "伸展、努力爭取",
+          "grimmNote": "源自拉丁字根 tendere（伸展、拉緊），d 依舌音互換 d / t / s 轉成 t，並套用雙子音規則（tt 結構，看第一個 t 之前）"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾（動作或狀態）",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "con-（共同）加上 tent（伸展、努力爭取）與名詞字尾 -ion，字面意思是「大家一起伸展、拉扯去爭取」，演變為「爭奪、論爭」的意思。",
+      "savedAt": "2026-10-06T15:30:20.782Z"
     }
   ],
   "userRoots": []
