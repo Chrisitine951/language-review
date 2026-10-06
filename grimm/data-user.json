@@ -12058,6 +12058,26 @@
       ],
       "summary": "com-（一起）加上 pos（放置）與名詞字尾，字面意思是「放在一起」，演變為現代的「組成、構圖、作文」。",
       "savedAt": "2026-10-06T09:28:55.410Z"
+    },
+    {
+      "id": "ulkmuwpbp971",
+      "word": "fountain",
+      "parts": [
+        {
+          "type": "root",
+          "text": "fount",
+          "meaning": "泉水、源頭",
+          "grimmNote": "源自拉丁文 fons（泉水），字根對應到與流動、湧出有關的字源"
+        },
+        {
+          "type": "suffix",
+          "text": "ain",
+          "meaning": "名詞字尾（表場所或事物）",
+          "grimmNote": "母音通轉與字尾演變，用來構成名詞「泉水、噴泉」"
+        }
+      ],
+      "summary": "fountain 由表示泉水的字根 fount 加上名詞字尾 -ain 構成，字面意思就是「湧出泉水的地方」。",
+      "savedAt": "2026-10-06T13:15:34.171Z"
     }
   ],
   "userRoots": []
