@@ -12078,6 +12078,26 @@
       ],
       "summary": "fountain 由表示泉水的字根 fount 加上名詞字尾 -ain 構成，字面意思就是「湧出泉水的地方」。",
       "savedAt": "2026-10-06T13:15:34.171Z"
+    },
+    {
+      "id": "ulkmuwpox5s2",
+      "word": "submerge",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "sub",
+          "meaning": "向下",
+          "grimmNote": "源自 ob- / oc- 的變體，意思是向下"
+        },
+        {
+          "type": "root",
+          "text": "merge",
+          "meaning": "浸泡、沒入",
+          "grimmNote": "源自古印歐語根，與merse（浸沒）同源，g與s屬於舌音互換"
+        }
+      ],
+      "summary": "sub-（向下）加上 merge（浸泡、沒入），合起來就是向下浸入水中，即「淹沒、沉入」的意思。",
+      "savedAt": "2026-10-06T13:25:50.944Z"
     }
   ],
   "userRoots": []
