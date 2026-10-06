@@ -12098,6 +12098,32 @@
       ],
       "summary": "sub-（向下）加上 merge（浸泡、沒入），合起來就是向下浸入水中，即「淹沒、沉入」的意思。",
       "savedAt": "2026-10-06T13:25:50.944Z"
+    },
+    {
+      "id": "ulkmuwr2j3h1",
+      "word": "calamity",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "c",
+          "meaning": "向下；朝向",
+          "grimmNote": "源自 ob- / oc- 的變體，表示方向"
+        },
+        {
+          "type": "root",
+          "text": "alam",
+          "meaning": "打擊、災難、蘆葦（源於風吹倒蘆葦之意）",
+          "grimmNote": "核心語義源遠流長"
+        },
+        {
+          "type": "suffix",
+          "text": "ity",
+          "meaning": "名詞字尾，表性質或狀態",
+          "grimmNote": "常見的名詞字尾"
+        }
+      ],
+      "summary": "calamity 由表示方向的字首與核心災難字根組合而成，最終演變為形容大災難、不幸的名詞。",
+      "savedAt": "2026-10-06T14:04:25.517Z"
     }
   ],
   "userRoots": []
