@@ -12150,6 +12150,32 @@
       ],
       "summary": "con-（共同）加上 tent（伸展、努力爭取）與名詞字尾 -ion，字面意思是「大家一起伸展、拉扯去爭取」，演變為「爭奪、論爭」的意思。",
       "savedAt": "2026-10-06T15:30:20.782Z"
+    },
+    {
+      "id": "ulkmuxp39735",
+      "word": "indignity",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "否定、不",
+          "grimmNote": "常用字首 in- 表否定"
+        },
+        {
+          "type": "root",
+          "text": "dign",
+          "meaning": "價值、尊嚴",
+          "grimmNote": "源自古印歐語字根，與 decg/decet（合宜、尊貴）透過喉音互換 g 相關"
+        },
+        {
+          "type": "suffix",
+          "text": "-ity",
+          "meaning": "名詞字尾，表性質或狀態",
+          "grimmNote": "常見名詞字尾 -ity"
+        }
+      ],
+      "summary": "由表否定的字首 in- 加上表示「尊嚴、價值」的字根 dign，再結合名詞字尾 -ity 組成，字面意思就是「失去尊嚴、侮辱」。",
+      "savedAt": "2026-10-07T05:56:46.287Z"
     }
   ],
   "userRoots": []
