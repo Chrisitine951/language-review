@@ -12328,6 +12328,26 @@
       ],
       "summary": "「eminent」由表示「向外」的字首 e- 結合意為「突出、山峰」的字根 min，再加上形容詞字尾 -ent 組成，字面上的意思就是「向外突出的」，引申為「顯赫的、傑出的」。",
       "savedAt": "2026-10-07T15:19:21.438Z"
+    },
+    {
+      "id": "ulkmuy97eba7",
+      "word": "bachelor",
+      "parts": [
+        {
+          "type": "root",
+          "text": "bachel",
+          "meaning": "小牛、年輕人",
+          "grimmNote": "源自原始印歐語，經由唇音互換與母音通轉演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "or",
+          "meaning": "...的人（名詞字尾）",
+          "grimmNote": "表示人或身份的常見名詞字尾"
+        }
+      ],
+      "summary": "bachelor 原意指「小牛」或「年輕人」，後來指年輕的騎士、未婚男子，最終演變成今日的「單身漢」。",
+      "savedAt": "2026-10-07T15:19:51.862Z"
     }
   ],
   "userRoots": []
