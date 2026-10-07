@@ -12256,6 +12256,32 @@
       ],
       "summary": "splendid 由加強語氣的 s- 結合表示發光的字根 plend，再加上形容詞字尾 -id 構成，字面意思就是「散發光芒的、燦爛的」。",
       "savedAt": "2026-10-07T11:48:47.884Z"
+    },
+    {
+      "id": "ulkmuy1roki4",
+      "word": "pessimistic",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pess",
+          "meaning": "壞、低、向下",
+          "grimmNote": "唇音互換 b / p / f / v / w，源自基礎字 bad 的字根變體，表示往下、不好"
+        },
+        {
+          "type": "suffix",
+          "text": "im",
+          "meaning": "最高級或加強語氣變化",
+          "grimmNote": "母音通轉與鼻音變化，用以加強程度"
+        },
+        {
+          "type": "suffix",
+          "text": "istic",
+          "meaning": "...的（形容詞字尾，表傾向）",
+          "grimmNote": "複合形容詞字尾 -ist（人）加 -ic（…的）"
+        }
+      ],
+      "summary": "pessimistic 由表示「壞、低」的字根加上形容詞字尾組成，字面意思就是「抱持最壞打算的」，引申為「悲觀的」。",
+      "savedAt": "2026-10-07T11:51:41.346Z"
     }
   ],
   "userRoots": []
