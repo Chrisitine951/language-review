@@ -12230,6 +12230,32 @@
       ],
       "summary": "「glow」是源自原始印歐語系的單字，透過喉音互換保留了與發光、閃爍相關的古老音韻，直接演變為現代表示發光、白熱的意思。",
       "savedAt": "2026-10-07T11:47:11.959Z"
+    },
+    {
+      "id": "ulkmuy1nyq43",
+      "word": "splendid",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "s-",
+          "meaning": "加強語氣",
+          "grimmNote": "字首 s- 常作為加強語氣或維持音節結構使用"
+        },
+        {
+          "type": "root",
+          "text": "plend",
+          "meaning": "發光、照耀",
+          "grimmNote": "字根 plend 衍生自古印歐語，與 flame 等字同源"
+        },
+        {
+          "type": "suffix",
+          "text": "-id",
+          "meaning": "形容詞字尾，表狀態或性質",
+          "grimmNote": "常用形容詞字尾 -id，表示具備某種狀態"
+        }
+      ],
+      "summary": "splendid 由加強語氣的 s- 結合表示發光的字根 plend，再加上形容詞字尾 -id 構成，字面意思就是「散發光芒的、燦爛的」。",
+      "savedAt": "2026-10-07T11:48:47.884Z"
     }
   ],
   "userRoots": []
