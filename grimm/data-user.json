@@ -12282,6 +12282,26 @@
       ],
       "summary": "pessimistic 由表示「壞、低」的字根加上形容詞字尾組成，字面意思就是「抱持最壞打算的」，引申為「悲觀的」。",
       "savedAt": "2026-10-07T11:51:41.346Z"
+    },
+    {
+      "id": "ulkmuy6alol5",
+      "word": "balcony",
+      "parts": [
+        {
+          "type": "root",
+          "text": "balc",
+          "meaning": "架子、橫梁、突出部",
+          "grimmNote": "對應到英文的 balk（大梁、阻礙），唇音互換 b / p / f / v / w 與喉音互換 g / k / c 的概念，指建築物向外突出的結構。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ony",
+          "meaning": "名詞字尾（表場所或性質）",
+          "grimmNote": "母音通轉與常見名詞字尾的組合，用來構成指稱特定建築構造的名詞。"
+        }
+      ],
+      "summary": "balcony（陽台）源自古代代表「大梁或突出物」的字根，加上名詞字尾，指建築物外側突出的平台結構。",
+      "savedAt": "2026-10-07T13:58:22.535Z"
     }
   ],
   "userRoots": []
