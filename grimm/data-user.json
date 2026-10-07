@@ -12302,6 +12302,32 @@
       ],
       "summary": "balcony（陽台）源自古代代表「大梁或突出物」的字根，加上名詞字尾，指建築物外側突出的平台結構。",
       "savedAt": "2026-10-07T13:58:22.535Z"
+    },
+    {
+      "id": "ulkmuy96qu66",
+      "word": "eminent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "e",
+          "meaning": "出去、向外",
+          "grimmNote": "ex- / e-＝出去、向外（尾音簡化）"
+        },
+        {
+          "type": "root",
+          "text": "min",
+          "meaning": "突出、山峰",
+          "grimmNote": "源自古印歐語，與 mountain（山）同源，m 與 n 屬於鼻音互換，i 與 ou 屬於母音通轉"
+        },
+        {
+          "type": "suffix",
+          "text": "ent",
+          "meaning": "形容詞字尾，表狀態",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "「eminent」由表示「向外」的字首 e- 結合意為「突出、山峰」的字根 min，再加上形容詞字尾 -ent 組成，字面上的意思就是「向外突出的」，引申為「顯赫的、傑出的」。",
+      "savedAt": "2026-10-07T15:19:21.438Z"
     }
   ],
   "userRoots": []
