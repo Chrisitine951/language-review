@@ -12202,6 +12202,20 @@
       ],
       "summary": "由否定字首 in- 加上表示「尊貴、價值」的字根 dign，再結合名詞字尾 -ity 組成，字面上的意思就是「失去尊貴、不名譽、侮辱」。",
       "savedAt": "2026-10-07T08:15:22.414Z"
+    },
+    {
+      "id": "ulkmuy1jbh51",
+      "word": "margin",
+      "parts": [
+        {
+          "type": "root",
+          "text": "margin",
+          "meaning": "邊緣、頁邊",
+          "grimmNote": "包含鼻音互換 n/m 及喉音 g 的原始字根結構"
+        }
+      ],
+      "summary": "margin 源自古印歐語字根，保留了代表邊緣與界線的原意，演變出現代的「邊緣、頁邊」之意。",
+      "savedAt": "2026-10-07T11:45:11.129Z"
     }
   ],
   "userRoots": []
