@@ -12176,6 +12176,32 @@
       ],
       "summary": "由表否定的字首 in- 加上表示「尊嚴、價值」的字根 dign，再結合名詞字尾 -ity 組成，字面意思就是「失去尊嚴、侮辱」。",
       "savedAt": "2026-10-07T05:56:46.287Z"
+    },
+    {
+      "id": "ulkmuxu1hym1",
+      "word": "indignity",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "否定、不",
+          "grimmNote": "in-＝否定，表示「不」"
+        },
+        {
+          "type": "root",
+          "text": "dign",
+          "meaning": "值得、尊貴、價值",
+          "grimmNote": "源自拉丁文 dignus（值得的），對應英文的 decent、worthy"
+        },
+        {
+          "type": "suffix",
+          "text": "-ity",
+          "meaning": "名詞字尾，表性質或狀態",
+          "grimmNote": "-ity＝名詞字尾，用來構成抽象名詞"
+        }
+      ],
+      "summary": "由否定字首 in- 加上表示「尊貴、價值」的字根 dign，再結合名詞字尾 -ity 組成，字面上的意思就是「失去尊貴、不名譽、侮辱」。",
+      "savedAt": "2026-10-07T08:15:22.414Z"
     }
   ],
   "userRoots": []
