@@ -12368,6 +12368,32 @@
       ],
       "summary": "friction 由表摩擦的字根 fric 加上名詞字尾 -tion 構成，字面意思就是「摩擦的狀態」。",
       "savedAt": "2026-10-07T15:54:45.491Z"
+    },
+    {
+      "id": "ulkmuybdq4p9",
+      "word": "obesity",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ob",
+          "meaning": "向下；朝向",
+          "grimmNote": "常見字首 ob-，表示朝向或向下"
+        },
+        {
+          "type": "root",
+          "text": "es",
+          "meaning": "吃",
+          "grimmNote": "源自古印歐語字根 ed-（吃），舌音互換 d 轉為 s"
+        },
+        {
+          "type": "suffix",
+          "text": "ity",
+          "meaning": "名詞字尾，表性質或狀態",
+          "grimmNote": "複合名詞字尾 -ity，構成抽象名詞"
+        }
+      ],
+      "summary": "obesity（肥胖）由表「朝向、加強」的字首 ob- 結合表「吃」的字根（es 來自 ed-），再加上名詞字尾 -ity 組成，字面意思就是「過度進食造成的狀態」。",
+      "savedAt": "2026-10-07T16:20:46.346Z"
     }
   ],
   "userRoots": []
