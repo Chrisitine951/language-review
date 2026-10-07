@@ -12348,6 +12348,26 @@
       ],
       "summary": "bachelor 原意指「小牛」或「年輕人」，後來指年輕的騎士、未婚男子，最終演變成今日的「單身漢」。",
       "savedAt": "2026-10-07T15:19:51.862Z"
+    },
+    {
+      "id": "ulkmuyag9rn8",
+      "word": "friction",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "fric",
+          "meaning": "摩擦、擦",
+          "grimmNote": "使用唇音互換 b / p / f / v / w，源自古印歐語帶有「磨損、擦拭」意義的字根（對應到如 break 的子音變體）"
+        },
+        {
+          "type": "suffix",
+          "text": "tion",
+          "meaning": "名詞字尾，表動作或狀態",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "friction 由表摩擦的字根 fric 加上名詞字尾 -tion 構成，字面意思就是「摩擦的狀態」。",
+      "savedAt": "2026-10-07T15:54:45.491Z"
     }
   ],
   "userRoots": []
