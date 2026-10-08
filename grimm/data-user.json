@@ -12460,6 +12460,20 @@
       ],
       "summary": "pyramid（金字塔）源自希臘文，原本指「像火一樣尖的建築」，由表示「火/尖」的字根與幾何形體字尾組合而成。",
       "savedAt": "2026-10-08T12:59:38.106Z"
+    },
+    {
+      "id": "ulkmuzkuueh1",
+      "word": "grant",
+      "parts": [
+        {
+          "type": "root",
+          "text": "grant",
+          "meaning": "給予、同意",
+          "grimmNote": "字根直接對應古法語 granter、拉丁文 credere（相信、託付），其中 d/t 舌音互換"
+        }
+      ],
+      "summary": "grant 源自古法語與拉丁文，核心概念是「相信並給予信任、託付」，演變為給予或同意。",
+      "savedAt": "2026-10-08T13:33:47.753Z"
     }
   ],
   "userRoots": []
