@@ -12414,6 +12414,32 @@
       ],
       "summary": "shiver 由核心字根 shiv（顫抖）加上代表動作反覆的字尾 -er 組成，意指身體不斷地發抖。",
       "savedAt": "2026-10-08T02:19:10.345Z"
+    },
+    {
+      "id": "ulkmuzg63kn1",
+      "word": "semantic",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "se-",
+          "meaning": "分離、離開",
+          "grimmNote": "使用常見字首 se-（分離、離開），表示將事物抽離或區分開來。"
+        },
+        {
+          "type": "root",
+          "text": "mant",
+          "meaning": "標記、記號、思考、意圖",
+          "grimmNote": "源自印歐語根，透過喉音互換與舌音互換（d/t/s）演變而來，與mind（心智）同源，本義為「心中的標記或意義」。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ic",
+          "meaning": "…的（形容詞字尾）",
+          "grimmNote": "常見形容詞字尾 -al / -ic，用以形成性質或關於…的形容詞。"
+        }
+      ],
+      "summary": "semantic（語義的）由表「分離」的字首 se- 結合源自心智與標記的字根 mant，再加上形容詞字尾 -ic 組成，原意是將語言符號背後的「標記與心智意圖」抽離出來探討，因此引申為「語義的」。",
+      "savedAt": "2026-10-08T11:22:34.775Z"
     }
   ],
   "userRoots": []
