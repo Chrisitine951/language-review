@@ -12474,6 +12474,26 @@
       ],
       "summary": "grant 源自古法語與拉丁文，核心概念是「相信並給予信任、託付」，演變為給予或同意。",
       "savedAt": "2026-10-08T13:33:47.753Z"
+    },
+    {
+      "id": "ulkmuzmjg502",
+      "word": "regard",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常見字首，表示回頭或再次。"
+        },
+        {
+          "type": "root",
+          "text": "gard",
+          "meaning": "看、保護、防守",
+          "grimmNote": "源自日耳曼語族，與 ward（守衛）同源，其中的 w 依照唇音互換 b / p / f / v / w 規則轉為 g（喉音與唇音的字源流變），原意為「注視、看守」。"
+        }
+      ],
+      "summary": "re-（再次）加上 gard（看守），字面意思是「再次回頭去看」，演變為「看待、尊敬、關於」。",
+      "savedAt": "2026-10-08T14:20:55.284Z"
     }
   ],
   "userRoots": []
