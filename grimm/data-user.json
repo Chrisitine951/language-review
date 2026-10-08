@@ -12394,6 +12394,26 @@
       ],
       "summary": "obesity（肥胖）由表「朝向、加強」的字首 ob- 結合表「吃」的字根（es 來自 ed-），再加上名詞字尾 -ity 組成，字面意思就是「過度進食造成的狀態」。",
       "savedAt": "2026-10-07T16:20:46.346Z"
+    },
+    {
+      "id": "ulkmuywr9u11",
+      "word": "shiver",
+      "parts": [
+        {
+          "type": "root",
+          "text": "shiv",
+          "meaning": "顫抖、發抖",
+          "grimmNote": "核心字根，代表發抖的動作"
+        },
+        {
+          "type": "suffix",
+          "text": "er",
+          "meaning": "表動作反覆或名詞（人/物）",
+          "grimmNote": "-er 表動作反覆，使顫抖連續發生"
+        }
+      ],
+      "summary": "shiver 由核心字根 shiv（顫抖）加上代表動作反覆的字尾 -er 組成，意指身體不斷地發抖。",
+      "savedAt": "2026-10-08T02:19:10.345Z"
     }
   ],
   "userRoots": []
