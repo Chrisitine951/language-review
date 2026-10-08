@@ -12440,6 +12440,26 @@
       ],
       "summary": "semantic（語義的）由表「分離」的字首 se- 結合源自心智與標記的字根 mant，再加上形容詞字尾 -ic 組成，原意是將語言符號背後的「標記與心智意圖」抽離出來探討，因此引申為「語義的」。",
       "savedAt": "2026-10-08T11:22:34.775Z"
+    },
+    {
+      "id": "ulkmuzjmwvu1",
+      "word": "pyramid",
+      "parts": [
+        {
+          "type": "root",
+          "text": "pyr",
+          "meaning": "火；尖端",
+          "grimmNote": "源自古希臘語 pyr（火），因形似火焰的尖頂而得名"
+        },
+        {
+          "type": "suffix",
+          "text": "amid",
+          "meaning": "中間的（源自古希臘語 mesos 的變體或與之相關的幾何字尾）",
+          "grimmNote": "母音通轉：i 與 a 互換；舌音互換：t 轉 d"
+        }
+      ],
+      "summary": "pyramid（金字塔）源自希臘文，原本指「像火一樣尖的建築」，由表示「火/尖」的字根與幾何形體字尾組合而成。",
+      "savedAt": "2026-10-08T12:59:38.106Z"
     }
   ],
   "userRoots": []
