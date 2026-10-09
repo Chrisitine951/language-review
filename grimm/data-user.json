@@ -12520,6 +12520,26 @@
       ],
       "summary": "camouflage 由表示「共同」的字首 cam- 與表示「隱藏」的字根結合，字面意思就是「大家一起隱藏起來」，演變為現代的「偽裝」。",
       "savedAt": "2026-10-09T04:08:02.061Z"
+    },
+    {
+      "id": "ulkmv0gax0e2",
+      "word": "transmit",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "trans",
+          "meaning": "跨越、穿過",
+          "grimmNote": "常見字首，表示 across / through"
+        },
+        {
+          "type": "root",
+          "text": "mit",
+          "meaning": "送、發",
+          "grimmNote": "源自古印歐語，經舌音互換 d/t/s 衍生（如 send 的同源概念）"
+        }
+      ],
+      "summary": "字首 trans-（跨越、穿過）加上字根 mit（送），組合起來就是「跨越過去送出去」，也就是傳送、發射的意思。",
+      "savedAt": "2026-10-09T04:14:05.726Z"
     }
   ],
   "userRoots": []
