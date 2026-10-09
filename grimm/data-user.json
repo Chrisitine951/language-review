@@ -12566,6 +12566,32 @@
       ],
       "summary": "「voucher」由表示動作方向的 v 結合表示聲明與憑證的 ouch 字根，再加上表示事物的 -er 字尾組合而成，原意為「用來作證或憑藉的票券」。",
       "savedAt": "2026-10-09T04:35:30.626Z"
+    },
+    {
+      "id": "ulkmv15nfmn1",
+      "word": "recession",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常用字首 re-（再次、回來）"
+        },
+        {
+          "type": "root",
+          "text": "cess",
+          "meaning": "走、移動（源自 cedere）",
+          "grimmNote": "由源自 cedere 的字根演變而來，其中 d / t / s 屬於舌音互換"
+        },
+        {
+          "type": "suffix",
+          "text": "-ion",
+          "meaning": "名詞字尾（表動作或狀態）",
+          "grimmNote": "常見名詞字尾 -ion"
+        }
+      ],
+      "summary": "recession 由表示「回來」的字首 re- 與表示「走」的字根 cess 結合，字面意思是「走回來、退回去」，引申為經濟或局勢的「衰退、不景氣」。",
+      "savedAt": "2026-10-09T16:03:40.127Z"
     }
   ],
   "userRoots": []
