@@ -12494,6 +12494,32 @@
       ],
       "summary": "re-（再次）加上 gard（看守），字面意思是「再次回頭去看」，演變為「看待、尊敬、關於」。",
       "savedAt": "2026-10-08T14:20:55.284Z"
+    },
+    {
+      "id": "ulkmv0g34el1",
+      "word": "camouflage",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "cam",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 com-（一起、共同），因語音同化變體為 cam-"
+        },
+        {
+          "type": "root",
+          "text": "ouflag",
+          "meaning": "隱藏、煙幕",
+          "grimmNote": "字根內部發生喉音互換 g / k / c，且母音通調"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "名詞字尾",
+          "grimmNote": "結尾的無聲 e，作為名詞字尾構成 camouflage（偽裝）"
+        }
+      ],
+      "summary": "camouflage 由表示「共同」的字首 cam- 與表示「隱藏」的字根結合，字面意思就是「大家一起隱藏起來」，演變為現代的「偽裝」。",
+      "savedAt": "2026-10-09T04:08:02.061Z"
     }
   ],
   "userRoots": []
