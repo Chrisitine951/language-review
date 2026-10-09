@@ -12540,6 +12540,32 @@
       ],
       "summary": "字首 trans-（跨越、穿過）加上字根 mit（送），組合起來就是「跨越過去送出去」，也就是傳送、發射的意思。",
       "savedAt": "2026-10-09T04:14:05.726Z"
+    },
+    {
+      "id": "ulkmv0h2gg23",
+      "word": "voucher",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "v",
+          "meaning": "朝向；去做",
+          "grimmNote": "唇音互換 b / p / f / v / w，此處作為前綴變體指向動作方向"
+        },
+        {
+          "type": "root",
+          "text": "ouch",
+          "meaning": "聲明、宣告；憑證",
+          "grimmNote": "源自古法語 oucher（證明、喚起），對應拉丁文 vocare（呼喊、呼叫）之喉音與唇音轉變"
+        },
+        {
+          "type": "suffix",
+          "text": "er",
+          "meaning": "物（名詞字尾）",
+          "grimmNote": "常用字尾 -er＝人、物，此處指「用來證明或憑藉的物（憑證、折價券）」"
+        }
+      ],
+      "summary": "「voucher」由表示動作方向的 v 結合表示聲明與憑證的 ouch 字根，再加上表示事物的 -er 字尾組合而成，原意為「用來作證或憑藉的票券」。",
+      "savedAt": "2026-10-09T04:35:30.626Z"
     }
   ],
   "userRoots": []
