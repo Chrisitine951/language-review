@@ -12592,6 +12592,26 @@
       ],
       "summary": "recession 由表示「回來」的字首 re- 與表示「走」的字根 cess 結合，字面意思是「走回來、退回去」，引申為經濟或局勢的「衰退、不景氣」。",
       "savedAt": "2026-10-09T16:03:40.127Z"
+    },
+    {
+      "id": "ulkmv1wyi3q1",
+      "word": "immense",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "im-",
+          "meaning": "在內、進入（源自 in-，因配合 m 而轉化）",
+          "grimmNote": "in- 遇雙唇音或鼻音時 assimilation 變體為 im-"
+        },
+        {
+          "type": "root",
+          "text": "mense",
+          "meaning": "測量、衡量",
+          "grimmNote": "源自原始印歐語 meə-（測量），與 meter、measure 同源"
+        }
+      ],
+      "summary": "字首 im-（進入）加上表示測量的字根 mense，字面意思就是「無法被測量的、大到超出極限的」，因此演變為「巨大的、無邊無際的」。",
+      "savedAt": "2026-10-10T04:48:06.182Z"
     }
   ],
   "userRoots": []
