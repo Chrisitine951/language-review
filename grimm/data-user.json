@@ -12638,6 +12638,32 @@
       ],
       "summary": "penetrate 由表示「進入」的字首與核心字根結合動詞字尾組成，字面意義為「深入內部並穿透」。",
       "savedAt": "2026-10-10T12:06:09.383Z"
+    },
+    {
+      "id": "ulkmv2cn5u62",
+      "word": "impetus",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "im-",
+          "meaning": "在內、進入",
+          "grimmNote": "in- 變體，因後面接 p 而同化為 im-"
+        },
+        {
+          "type": "root",
+          "text": "pet",
+          "meaning": "追求、奔跑、尋求",
+          "grimmNote": "源自 pet- / petere，其中 t 對應舌音互換"
+        },
+        {
+          "type": "suffix",
+          "text": "-us",
+          "meaning": "名詞字尾",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "im-（進入）加上 pet（奔跑、追求），字面意思是「跑進去、衝進去」，演變為推動力、衝勁。",
+      "savedAt": "2026-10-10T12:07:10.926Z"
     }
   ],
   "userRoots": []
