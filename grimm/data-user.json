@@ -12684,6 +12684,26 @@
       ],
       "summary": "sober 由表示分離的字首與表示沉重的字根組成，字面意思即為「脫離沉重狀態、恢復清醒」，引申為沒喝醉的、嚴肅的。",
       "savedAt": "2026-10-10T12:13:48.595Z"
+    },
+    {
+      "id": "ulkmv2cxevn4",
+      "word": "symptom",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "sym",
+          "meaning": "共同、一起",
+          "grimmNote": "com- / con- 的變體，鼻音互換 m 與 n"
+        },
+        {
+          "type": "root",
+          "text": "ptom",
+          "meaning": "落下、發生",
+          "grimmNote": "源自希臘文字根 ptō-（落下），唇音互換與母音通轉"
+        }
+      ],
+      "summary": "sym-（共同）加上 -ptom（落下、發生），字面意思是「事情共同降臨在身上」，引申為疾病的「症狀」。",
+      "savedAt": "2026-10-10T12:15:09.203Z"
     }
   ],
   "userRoots": []
