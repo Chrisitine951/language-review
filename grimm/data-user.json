@@ -12704,6 +12704,32 @@
       ],
       "summary": "sym-（共同）加上 -ptom（落下、發生），字面意思是「事情共同降臨在身上」，引申為疾病的「症狀」。",
       "savedAt": "2026-10-10T12:15:09.203Z"
+    },
+    {
+      "id": "ulkmv2g14sr2",
+      "word": "reluctant",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "回、向後",
+          "grimmNote": "常見字首，表「再次、重複、回來」"
+        },
+        {
+          "type": "root",
+          "text": "luct",
+          "meaning": "掙扎、對抗",
+          "grimmNote": "源自古印歐語，其中的 l 與 r 屬於流音互換，且母音由 o/u 通轉"
+        },
+        {
+          "type": "suffix",
+          "text": "-ant",
+          "meaning": "…的（形容詞字尾）",
+          "grimmNote": "表性質的形容詞字尾"
+        }
+      ],
+      "summary": "re-（向後）加上表掙扎的字根 luct 與形容詞字尾 -ant，合起來就是「向後掙扎、抗拒」，引申為「勉強的、不情願的」。",
+      "savedAt": "2026-10-10T13:42:01.611Z"
     }
   ],
   "userRoots": []
