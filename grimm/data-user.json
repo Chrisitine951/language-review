@@ -12612,6 +12612,32 @@
       ],
       "summary": "字首 im-（進入）加上表示測量的字根 mense，字面意思就是「無法被測量的、大到超出極限的」，因此演變為「巨大的、無邊無際的」。",
       "savedAt": "2026-10-10T04:48:06.182Z"
+    },
+    {
+      "id": "ulkmv2clucn1",
+      "word": "penetrate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pe",
+          "meaning": "進入、穿透",
+          "grimmNote": "in- 轉音成 pe-，鼻音互換 n/m 後的變體，表示進入、深入"
+        },
+        {
+          "type": "root",
+          "text": "netr",
+          "meaning": "穿透、刺",
+          "grimmNote": "核心語義源自內部與穿刺，與 penetrate 的動作核心相關"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾，表動作化、令其如何",
+          "grimmNote": "常見動詞字尾，將字根轉化為具體動作"
+        }
+      ],
+      "summary": "penetrate 由表示「進入」的字首與核心字根結合動詞字尾組成，字面意義為「深入內部並穿透」。",
+      "savedAt": "2026-10-10T12:06:09.383Z"
     }
   ],
   "userRoots": []
