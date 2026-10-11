@@ -12894,6 +12894,32 @@
       ],
       "summary": "modest 由表示「尺度、分寸」的字根 mod 加上形容詞字尾組成，字面上的意思是「拿捏得剛剛好、不超過尺度」，因此引申為「謙虛的、適度的」。",
       "savedAt": "2026-10-11T14:10:43.262Z"
+    },
+    {
+      "id": "ulkmv3yhoo17",
+      "word": "meteorite",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "mete",
+          "meaning": "提升、上升",
+          "grimmNote": "源自字尾變化與母音通轉 e/o，與 up、high 同源，指自天而降"
+        },
+        {
+          "type": "root",
+          "text": "or",
+          "meaning": "流星、空氣中的懸浮物",
+          "grimmNote": "喉音與流音變化，指空中物體"
+        },
+        {
+          "type": "suffix",
+          "text": "ite",
+          "meaning": "小東西、石塊（表名詞字尾）",
+          "grimmNote": "指小型石塊"
+        }
+      ],
+      "summary": "meteorite 由表示「天空中」的字首與表示「小石塊」的字尾組成，字面意思就是「墜落到地面的天上小石塊（隕石）」。",
+      "savedAt": "2026-10-11T15:06:33.121Z"
     }
   ],
   "userRoots": []
