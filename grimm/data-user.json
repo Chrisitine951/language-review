@@ -12808,6 +12808,26 @@
       ],
       "summary": "ob-（朝向）加上 trudere（推，經舌音互換為 trus）再接 -ive（形容詞字尾），字面意思是「朝著別人猛推、硬擠的」，因此引申為「突出的、強加於人的、惹人厭的」。",
       "savedAt": "2026-10-11T13:41:39.751Z"
+    },
+    {
+      "id": "ulkmv3vq02d3",
+      "word": "nuisance",
+      "parts": [
+        {
+          "type": "root",
+          "text": "nuis",
+          "meaning": "傷害、討厭的事物",
+          "grimmNote": "源自拉丁文 nocere（傷害），其中母音 u 與 o 透過母音通轉相互替換，而 s 與 c/t 透過舌音互換轉變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "ance",
+          "meaning": "名詞字尾，表性質或狀態",
+          "grimmNote": "常見名詞字尾，用來構成抽象名詞"
+        }
+      ],
+      "summary": "nuisance 由表示「傷害」的字根 nuis 加上名詞字尾 ance 組成，字面意思就是「造成傷害或討厭的事物」。",
+      "savedAt": "2026-10-11T13:49:02.293Z"
     }
   ],
   "userRoots": []
