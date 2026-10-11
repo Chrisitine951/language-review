@@ -12828,6 +12828,32 @@
       ],
       "summary": "nuisance 由表示「傷害」的字根 nuis 加上名詞字尾 ance 組成，字面意思就是「造成傷害或討厭的事物」。",
       "savedAt": "2026-10-11T13:49:02.293Z"
+    },
+    {
+      "id": "ulkmv3vt9kw4",
+      "word": "sprinkle",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "s",
+          "meaning": "加強語氣、散開",
+          "grimmNote": "字首 s- 常作為加強語氣或表方向散開"
+        },
+        {
+          "type": "root",
+          "text": "prink",
+          "meaning": "裝飾、點綴",
+          "grimmNote": "源自日耳曼語族，表細小或裝飾的動作"
+        },
+        {
+          "type": "suffix",
+          "text": "le",
+          "meaning": "小、反覆動作（動詞字尾）",
+          "grimmNote": "流音與小化字尾，表示重複、細微的小動作"
+        }
+      ],
+      "summary": "sprinkle 由表散開的 s- 結合表示點綴的 prink，再加上表反覆小動作的 -le 字尾，字面意思就是「不斷細小地撒落、灑水」。",
+      "savedAt": "2026-10-11T13:51:34.592Z"
     }
   ],
   "userRoots": []
