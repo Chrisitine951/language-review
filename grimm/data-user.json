@@ -12782,6 +12782,32 @@
       ],
       "summary": "「postulate」由表示朝向的字首 pos-（源自 ob-）與表示「舉起、提出」的字根 tulat 結合，字面意思是「把主張或假設提出來供人討論」。",
       "savedAt": "2026-10-11T12:17:49.925Z"
+    },
+    {
+      "id": "ulkmv3vgilj2",
+      "word": "obtrusive",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ob",
+          "meaning": "向下；朝向",
+          "grimmNote": "常見字首 ob- 表示朝向或加強方向"
+        },
+        {
+          "type": "root",
+          "text": "trus",
+          "meaning": "推、擠、衝",
+          "grimmNote": "源自拉丁語 trudere（推），根據舌音互換 d 轉為 s，變成 trus"
+        },
+        {
+          "type": "suffix",
+          "text": "ive",
+          "meaning": "多（形容詞字尾）",
+          "grimmNote": "形容詞字尾 -ous 的變體，表示具備某種性質"
+        }
+      ],
+      "summary": "ob-（朝向）加上 trudere（推，經舌音互換為 trus）再接 -ive（形容詞字尾），字面意思是「朝著別人猛推、硬擠的」，因此引申為「突出的、強加於人的、惹人厭的」。",
+      "savedAt": "2026-10-11T13:41:39.751Z"
     }
   ],
   "userRoots": []
