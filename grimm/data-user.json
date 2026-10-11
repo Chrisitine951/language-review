@@ -12730,6 +12730,32 @@
       ],
       "summary": "re-（向後）加上表掙扎的字根 luct 與形容詞字尾 -ant，合起來就是「向後掙扎、抗拒」，引申為「勉強的、不情願的」。",
       "savedAt": "2026-10-10T13:42:01.611Z"
+    },
+    {
+      "id": "ulkmv3qbajs1",
+      "word": "intimate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "在內、進入",
+          "grimmNote": "常見字首，表示「在內、進入」"
+        },
+        {
+          "type": "root",
+          "text": "tim",
+          "meaning": "最裡面的、深處的",
+          "grimmNote": "源自古印歐語，與 superlative 最高級字尾有關，代表最深處、最核心"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "形容詞或動詞字尾",
+          "grimmNote": "常見字尾，用來構成形容詞或動詞"
+        }
+      ],
+      "summary": "intimate 由表示「在內」的字首 in- 加上代表「最深處」的字根 tim 以及形容詞字尾 -ate 組成，字面上的意思就是「進入最深處的、極度私密的」。",
+      "savedAt": "2026-10-11T11:17:37.960Z"
     }
   ],
   "userRoots": []
