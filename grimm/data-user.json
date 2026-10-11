@@ -12756,6 +12756,32 @@
       ],
       "summary": "intimate 由表示「在內」的字首 in- 加上代表「最深處」的字根 tim 以及形容詞字尾 -ate 組成，字面上的意思就是「進入最深處的、極度私密的」。",
       "savedAt": "2026-10-11T11:17:37.960Z"
+    },
+    {
+      "id": "ulkmv3sgpk51",
+      "word": "postulate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pos-",
+          "meaning": "向前、朝向（源自 ob- 經由同化作用變成 pos-）",
+          "grimmNote": "ob- / oc-＝向下；朝向，b 因同化轉為 p"
+        },
+        {
+          "type": "root",
+          "text": "tulat",
+          "meaning": "帶、舉起（來自動詞 tollere 的過去分詞基底 tul-，加上形容詞/動詞字尾）",
+          "grimmNote": "母音通轉 a / e / i / o / u / y，這裡 o 通轉為 u"
+        },
+        {
+          "type": "suffix",
+          "text": "-e",
+          "meaning": "動詞字尾（使成為…）",
+          "grimmNote": "無實質字義的字尾"
+        }
+      ],
+      "summary": "「postulate」由表示朝向的字首 pos-（源自 ob-）與表示「舉起、提出」的字根 tulat 結合，字面意思是「把主張或假設提出來供人討論」。",
+      "savedAt": "2026-10-11T12:17:49.925Z"
     }
   ],
   "userRoots": []
