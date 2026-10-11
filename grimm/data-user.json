@@ -12854,6 +12854,26 @@
       ],
       "summary": "sprinkle 由表散開的 s- 結合表示點綴的 prink，再加上表反覆小動作的 -le 字尾，字面意思就是「不斷細小地撒落、灑水」。",
       "savedAt": "2026-10-11T13:51:34.592Z"
+    },
+    {
+      "id": "ulkmv3w39ia5",
+      "word": "obsess",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ob-",
+          "meaning": "朝向、向著；向下",
+          "grimmNote": "常用的複合字首 ob-，表朝向或針對。"
+        },
+        {
+          "type": "root",
+          "text": "sess",
+          "meaning": "坐",
+          "grimmNote": "雙子音規則（結構）：ss 中第二個 s 只是加強語氣，字根實際為 ses。源自古印歐語系表示「坐」的字根，經舌音互換 d/t/s（sede/sedere 變為 sess）"
+        }
+      ],
+      "summary": "ob-（朝向、針對）加上 sess（坐），原本意思是「坐在某人或某事上面、陰魂不散地纏著」，演變為現代的「使著迷、纏繞、常常想起」。",
+      "savedAt": "2026-10-11T13:59:21.058Z"
     }
   ],
   "userRoots": []
