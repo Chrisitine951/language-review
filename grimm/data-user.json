@@ -13000,6 +13000,26 @@
       ],
       "summary": "embroider 由表示動作化的字首 em- 結合表示刺繡與編織的字根 broider 組成，字面意思就是「用線編織、加以刺繡裝飾」。",
       "savedAt": "2026-10-12T10:03:14.023Z"
+    },
+    {
+      "id": "ulkmv5357mq2",
+      "word": "brochure",
+      "parts": [
+        {
+          "type": "root",
+          "text": "broch",
+          "meaning": "小樹枝、捲曲物",
+          "grimmNote": "源自古印歐語，與 branch（樹枝）同源，本義指「彎曲的枝條」或「捲起之物」"
+        },
+        {
+          "type": "suffix",
+          "text": "-ure",
+          "meaning": "名詞字尾，表結果或物體",
+          "grimmNote": "名詞字尾，將動詞或字根轉化為具體名詞"
+        }
+      ],
+      "summary": "brochure 的核心字根源自表示「彎曲、樹枝」的語源，原本指「捲起來的東西」，後來引申為「折疊成冊的小冊子」。",
+      "savedAt": "2026-10-12T10:04:35.427Z"
     }
   ],
   "userRoots": []
