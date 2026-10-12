@@ -12960,6 +12960,26 @@
       ],
       "summary": "veterinary（獸醫的）由表示「老練、經驗」的字根 veter 加上形容詞字尾组成，最初指照料老弱或工作動物的人，後來專指獸醫。",
       "savedAt": "2026-10-12T07:15:36.048Z"
+    },
+    {
+      "id": "ulkmv4x6c912",
+      "word": "veterinary",
+      "parts": [
+        {
+          "type": "root",
+          "text": "veter",
+          "meaning": "老、年長、經驗豐富",
+          "grimmNote": "源自古印歐語字根，與 veteran（老兵）同源，本義指「有經驗的、年老的動物」"
+        },
+        {
+          "type": "suffix",
+          "text": "inary",
+          "meaning": "……的（形容詞字尾，複合自 -in- 與表示地方/性質的 -ary）",
+          "grimmNote": "複合字尾 -inary，其中包含表名詞或地方的字尾 -ary"
+        }
+      ],
+      "summary": "veterinary（獸醫的）由表示「老練、經驗」的字根 veter 加上形容詞字尾组成，最初指照料老弱或工作動物的人，後來專指獸醫。",
+      "savedAt": "2026-10-12T07:17:30.374Z"
     }
   ],
   "userRoots": []
