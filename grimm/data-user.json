@@ -12980,6 +12980,26 @@
       ],
       "summary": "veterinary（獸醫的）由表示「老練、經驗」的字根 veter 加上形容詞字尾组成，最初指照料老弱或工作動物的人，後來專指獸醫。",
       "savedAt": "2026-10-12T07:17:30.374Z"
+    },
+    {
+      "id": "ulkmv533gtj1",
+      "word": "embroider",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "em-",
+          "meaning": "動作化、令其如何",
+          "grimmNote": "常見字首 en- 因後方接雙唇音 b 而同化變形成 em-，表動作化"
+        },
+        {
+          "type": "root",
+          "text": "broider",
+          "meaning": "刺繡、裝飾",
+          "grimmNote": "源自古法語 broider（刺繡），與 braid（編織）同源，其中的 b/p 唇音互換，oi 與 ai 母音通轉"
+        }
+      ],
+      "summary": "embroider 由表示動作化的字首 em- 結合表示刺繡與編織的字根 broider 組成，字面意思就是「用線編織、加以刺繡裝飾」。",
+      "savedAt": "2026-10-12T10:03:14.023Z"
     }
   ],
   "userRoots": []
