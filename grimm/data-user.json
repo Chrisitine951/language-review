@@ -13098,6 +13098,26 @@
       ],
       "summary": "ab-（離開）加上 ort（出生），字面意思是「使未出生而離開」，引申為流產或墮胎。",
       "savedAt": "2026-10-13T12:59:10.780Z"
+    },
+    {
+      "id": "ulkmv6ph88g3",
+      "word": "torture",
+      "parts": [
+        {
+          "type": "root",
+          "text": "tort",
+          "meaning": "扭轉、折磨",
+          "grimmNote": "源自原始印歐語字根，原意為「扭轉」"
+        },
+        {
+          "type": "suffix",
+          "text": "ure",
+          "meaning": "名詞字尾，表動作的結果或狀態",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "「torture」由表示扭轉的字根 tort 加上名詞字尾 ure 組成，字面上的意思就是「把身體或心靈扭轉過去」，也就是折磨、拷問。",
+      "savedAt": "2026-10-13T13:17:33.808Z"
     }
   ],
   "userRoots": []
