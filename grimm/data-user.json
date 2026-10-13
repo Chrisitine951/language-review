@@ -13072,6 +13072,32 @@
       ],
       "summary": "augment 由加強語氣字首 au- 結合表「增加」的字根 g 與名詞字尾 -ment 組成，字面上的意思就是「使之不斷長大、增加」。",
       "savedAt": "2026-10-13T12:53:52.960Z"
+    },
+    {
+      "id": "ulkmv6otl4s2",
+      "word": "abortion",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ab",
+          "meaning": "分離、離開",
+          "grimmNote": "常見字首 ab-，表示分離、離開。"
+        },
+        {
+          "type": "root",
+          "text": "ort",
+          "meaning": "出生、升起",
+          "grimmNote": "源自拉丁語 ortus（升起、出生），與 0（origin）同源。"
+        },
+        {
+          "type": "suffix",
+          "text": "ion",
+          "meaning": "名詞字尾",
+          "grimmNote": "標準名詞字尾，表示動作或狀態。"
+        }
+      ],
+      "summary": "ab-（離開）加上 ort（出生），字面意思是「使未出生而離開」，引申為流產或墮胎。",
+      "savedAt": "2026-10-13T12:59:10.780Z"
     }
   ],
   "userRoots": []
