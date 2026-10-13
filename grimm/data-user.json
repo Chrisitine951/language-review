@@ -13020,6 +13020,32 @@
       ],
       "summary": "brochure 的核心字根源自表示「彎曲、樹枝」的語源，原本指「捲起來的東西」，後來引申為「折疊成冊的小冊子」。",
       "savedAt": "2026-10-12T10:04:35.427Z"
+    },
+    {
+      "id": "ulkmv6h8doc1",
+      "word": "apathetic",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "a-",
+          "meaning": "無、不、否定",
+          "grimmNote": "表示否定或缺乏的字首（源自古希臘文否定字首 a-）"
+        },
+        {
+          "type": "root",
+          "text": "path",
+          "meaning": "感受、情感、痛苦",
+          "grimmNote": "核心字根，對應古希臘文 pathos（情感/痛苦），經由喉音與塞音的自然演變保留至今"
+        },
+        {
+          "type": "suffix",
+          "text": "-etic",
+          "meaning": "形容詞字尾（由 -et 小 + -ic 形容詞字尾複合而成）",
+          "grimmNote": "母音通轉 e/i 替換，加上形容詞字尾表示「具備某種性質的」"
+        }
+      ],
+      "summary": "a-（無）加上 path（感受）與 -etic（形容詞字尾），字面意思就是「沒有感受的、麻木的」，也就是現在的「冷漠的、無動於衷的」。",
+      "savedAt": "2026-10-13T09:26:44.030Z"
     }
   ],
   "userRoots": []
