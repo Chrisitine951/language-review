@@ -13046,6 +13046,32 @@
       ],
       "summary": "a-（無）加上 path（感受）與 -etic（形容詞字尾），字面意思就是「沒有感受的、麻木的」，也就是現在的「冷漠的、無動於衷的」。",
       "savedAt": "2026-10-13T09:26:44.030Z"
+    },
+    {
+      "id": "ulkmv6omrwg1",
+      "word": "augment",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "au",
+          "meaning": "加強語氣",
+          "grimmNote": "a＋重複子音的變體，此處 au- 表加強語氣"
+        },
+        {
+          "type": "root",
+          "text": "g",
+          "meaning": "增加、生長",
+          "grimmNote": "源自喉音 g/k/c 族群，保留原始字根音"
+        },
+        {
+          "type": "suffix",
+          "text": "ment",
+          "meaning": "名詞字尾（表動作或結果）",
+          "grimmNote": "常見名詞字尾，由動詞衍生而來"
+        }
+      ],
+      "summary": "augment 由加強語氣字首 au- 結合表「增加」的字根 g 與名詞字尾 -ment 組成，字面上的意思就是「使之不斷長大、增加」。",
+      "savedAt": "2026-10-13T12:53:52.960Z"
     }
   ],
   "userRoots": []
