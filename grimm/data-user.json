@@ -13284,6 +13284,26 @@
       ],
       "summary": "「hatch」是經由喉音弱化規則演變而來的單字，原始意義帶有生出、產生的概念。",
       "savedAt": "2026-10-15T10:23:47.881Z"
+    },
+    {
+      "id": "ulkmv9e831g3",
+      "word": "reckless",
+      "parts": [
+        {
+          "type": "root",
+          "text": "reck",
+          "meaning": "注意、顧慮、照顧",
+          "grimmNote": "源自古英文 reccan，本義為關心、注意"
+        },
+        {
+          "type": "suffix",
+          "text": "-less",
+          "meaning": "無、缺乏（形容詞字尾）",
+          "grimmNote": "表示否定或缺乏的形容詞字尾"
+        }
+      ],
+      "summary": "reck（注意、顧慮）加上 -less（無），字面意思就是「毫不在乎的、不顧後果的」，演變為現代的「輕率的、魯莽的」。",
+      "savedAt": "2026-10-15T10:25:49.924Z"
     }
   ],
   "userRoots": []
