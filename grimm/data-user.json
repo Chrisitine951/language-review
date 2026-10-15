@@ -13158,6 +13158,32 @@
       ],
       "summary": "單字 assert 由加強語氣字首 as- 與意指「放置、插入」的字根 sert 組合而成，字面原意為「用力插入/堅決主張」。",
       "savedAt": "2026-10-15T02:45:21.646Z"
+    },
+    {
+      "id": "ulkmv90fjb61",
+      "word": "amphibian",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "am",
+          "meaning": "雙、兩者",
+          "grimmNote": "源自 ambi-（兩者），鼻音m保留原意"
+        },
+        {
+          "type": "root",
+          "text": "phi",
+          "meaning": "生命、水",
+          "grimmNote": "喉音弱化 c / k ↔ h 或源自古希臘語 bios（生命）的變體，與水（bio/phys）相關"
+        },
+        {
+          "type": "suffix",
+          "text": "bian",
+          "meaning": "形容詞字尾，屬於…的",
+          "grimmNote": "由 -ic 與 -an 複合而成的形容詞字尾，指屬於水生與陸生兩棲的動物"
+        }
+      ],
+      "summary": "amphibian（兩棲動物）由表示「兩者」的字首與代表「生命/水」的字根組合而成，意指能在水陸兩種環境生存的生物。",
+      "savedAt": "2026-10-15T03:59:42.978Z"
     }
   ],
   "userRoots": []
