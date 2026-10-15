@@ -13396,6 +13396,32 @@
       ],
       "summary": "charter 由表示「紙張、圖表」的字根 chart 加上名詞字尾 -er 構成，原本指寫在紙上的正式授權文件，演變為「憲章、特許狀」或「包租（船、機）」。",
       "savedAt": "2026-10-15T10:40:02.014Z"
+    },
+    {
+      "id": "ulkmv9esluz8",
+      "word": "adverse",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ad-",
+          "meaning": "朝向、向著；此處為加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 ad- 加強語氣，真正的字根從後面開始"
+        },
+        {
+          "type": "root",
+          "text": "vers",
+          "meaning": "轉、轉向",
+          "grimmNote": "源自古印歐語，舌音互換 d / t / s 與唇音互換規則的變體，表示「轉動、方向」"
+        },
+        {
+          "type": "suffix",
+          "text": "-e",
+          "meaning": "形容詞字尾",
+          "grimmNote": "母音通轉與字尾結構變化"
+        }
+      ],
+      "summary": "adverse 由加強語氣字首 ad- 與表示「轉向」的字根 vers 結合而成，字面意思就是「轉向對立面」，因此衍生出「不利的、相反的」之意。",
+      "savedAt": "2026-10-15T10:41:47.435Z"
     }
   ],
   "userRoots": []
