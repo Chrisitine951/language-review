@@ -13462,6 +13462,32 @@
       ],
       "summary": "字首 f- 加強語氣，核心字根 erment 代表沸騰與發酵，經由唇音與舌音的轉化演變而來。",
       "savedAt": "2026-10-15T15:29:32.187Z"
+    },
+    {
+      "id": "ulkmv9p5znr2",
+      "word": "improvise",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "im-",
+          "meaning": "在內、進入（in- 的變體）",
+          "grimmNote": "in- 遇到唇音 m 時，n 鼻音互換成 m，變成 im-"
+        },
+        {
+          "type": "root",
+          "text": "prov",
+          "meaning": "看、預視、提供",
+          "grimmNote": "源自拉丁字根 providere，其中的 v 屬於唇音互換 b/p/f/v/w 家族"
+        },
+        {
+          "type": "suffix",
+          "text": "-ise",
+          "meaning": "動詞字尾，使成為…",
+          "grimmNote": "表動作的字尾，與 -ize 同源，s 與 t/d 舌音互換相關"
+        }
+      ],
+      "summary": "im-（進入）加上 prov（看/預視）與動詞字尾 -ise，字面意思是「事先沒有看過、沒有準備就直接上場」，演變為「即興表演、臨場發揮」。",
+      "savedAt": "2026-10-15T15:32:08.007Z"
     }
   ],
   "userRoots": []
