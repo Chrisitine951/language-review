@@ -13204,6 +13204,32 @@
       ],
       "summary": "字首 post（在…之後）加上字根 pone（放置），意思就是「把事情放在後面」，也就是「延期、擱置」。",
       "savedAt": "2026-10-15T04:09:44.011Z"
+    },
+    {
+      "id": "ulkmv94q0m01",
+      "word": "epidemic",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "epi",
+          "meaning": "在…之上、到達",
+          "grimmNote": "源自字首 ex-（出去、向外），經母音通轉與子音變化衍生而來"
+        },
+        {
+          "type": "root",
+          "text": "dem",
+          "meaning": "人民、群眾",
+          "grimmNote": "源自古印歐語，意指「人民」（如 democracy 中的 dem）"
+        },
+        {
+          "type": "suffix",
+          "text": "ic",
+          "meaning": "…的（形容詞字尾）",
+          "grimmNote": "常見形容詞字尾"
+        }
+      ],
+      "summary": "由表「在…之上」的字首 epi- 結合表「人民」的字根 dem，再加上形容詞字尾 -ic 組成，字面意思是「在人民之中傳播的」，用來形容傳染病「流行性的」。",
+      "savedAt": "2026-10-15T05:59:50.424Z"
     }
   ],
   "userRoots": []
