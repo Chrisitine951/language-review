@@ -13184,6 +13184,26 @@
       ],
       "summary": "amphibian（兩棲動物）由表示「兩者」的字首與代表「生命/水」的字根組合而成，意指能在水陸兩種環境生存的生物。",
       "savedAt": "2026-10-15T03:59:42.978Z"
+    },
+    {
+      "id": "ulkmv90sf2j2",
+      "word": "postpone",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "post",
+          "meaning": "在…之後、向後",
+          "grimmNote": "源自介系詞字根 post（在…後面）"
+        },
+        {
+          "type": "root",
+          "text": "pone",
+          "meaning": "放置、擺放",
+          "grimmNote": "源自印歐語系字根，意指放置（與 position、place 同源）"
+        }
+      ],
+      "summary": "字首 post（在…之後）加上字根 pone（放置），意思就是「把事情放在後面」，也就是「延期、擱置」。",
+      "savedAt": "2026-10-15T04:09:44.011Z"
     }
   ],
   "userRoots": []
