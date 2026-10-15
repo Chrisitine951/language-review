@@ -13422,6 +13422,26 @@
       ],
       "summary": "adverse 由加強語氣字首 ad- 與表示「轉向」的字根 vers 結合而成，字面意思就是「轉向對立面」，因此衍生出「不利的、相反的」之意。",
       "savedAt": "2026-10-15T10:41:47.435Z"
+    },
+    {
+      "id": "ulkmv9f2hh89",
+      "word": "erupt",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "e-",
+          "meaning": "出去、向外",
+          "grimmNote": "使用常見字首 e-（源自 ex-），表示向外。"
+        },
+        {
+          "type": "root",
+          "text": "rupt",
+          "meaning": "打破、破裂",
+          "grimmNote": "核心字根 rupt，其中 p 屬於唇音互換 b / p / f / v / w 家族，與其他表示「破裂」的字根（如 break）相通。"
+        }
+      ],
+      "summary": "由表「向外」的字首 e- 加上表「打破」的字根 rupt 組成，字面意思就是「向外打破」，引申為火山或情緒的「爆發」。",
+      "savedAt": "2026-10-15T10:49:28.316Z"
     }
   ],
   "userRoots": []
