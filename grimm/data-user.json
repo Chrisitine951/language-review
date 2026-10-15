@@ -13442,6 +13442,26 @@
       ],
       "summary": "由表「向外」的字首 e- 加上表「打破」的字根 rupt 組成，字面意思就是「向外打破」，引申為火山或情緒的「爆發」。",
       "savedAt": "2026-10-15T10:49:28.316Z"
+    },
+    {
+      "id": "ulkmv9p2nff1",
+      "word": "ferment",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "f",
+          "meaning": "加強語氣",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "erment",
+          "meaning": "沸騰、發酵",
+          "grimmNote": "源自古印歐語字根，與 fervere（沸騰）同源，f 與 v 屬於「唇音互換 b / p / f / v / w」，t 與 d 屬於「舌音互換 d / t / s」"
+        }
+      ],
+      "summary": "字首 f- 加強語氣，核心字根 erment 代表沸騰與發酵，經由唇音與舌音的轉化演變而來。",
+      "savedAt": "2026-10-15T15:29:32.187Z"
     }
   ],
   "userRoots": []
