@@ -13514,6 +13514,32 @@
       ],
       "summary": "de-（去除）加上 terg（擦拭）與 -ent（物），字面意思就是「用來把髒污擦掉的東西」，也就是洗滌劑、清潔劑。",
       "savedAt": "2026-10-15T15:35:17.022Z"
+    },
+    {
+      "id": "ulkmv9pfuoq4",
+      "word": "eloquence",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "e-",
+          "meaning": "出去、向外",
+          "grimmNote": "ex- 的變體，表示向外"
+        },
+        {
+          "type": "root",
+          "text": "loqu",
+          "meaning": "說、話",
+          "grimmNote": "源自印歐語系詞根，與 speak 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "-ence",
+          "meaning": "名詞字尾，表性質或狀態",
+          "grimmNote": "由形容詞字尾 -ent 衍生而來的名詞字尾"
+        }
+      ],
+      "summary": "由表「向外」的字首 e- 加上表「說」的字根 loqu，以及名詞字尾 -ence 組成，字面意思就是「把話說出去、口才流利」，引申為雄辯、口才。",
+      "savedAt": "2026-10-15T15:39:48.122Z"
     }
   ],
   "userRoots": []
