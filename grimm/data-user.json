@@ -13540,6 +13540,32 @@
       ],
       "summary": "由表「向外」的字首 e- 加上表「說」的字根 loqu，以及名詞字尾 -ence 組成，字面意思就是「把話說出去、口才流利」，引申為雄辯、口才。",
       "savedAt": "2026-10-15T15:39:48.122Z"
+    },
+    {
+      "id": "ulkmv9pkfrt5",
+      "word": "adjacent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ad",
+          "meaning": "朝向、向",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 ad- 表示朝向，真正的字根從後面開始"
+        },
+        {
+          "type": "root",
+          "text": "jac",
+          "meaning": "躺、投、擲",
+          "grimmNote": "源自拉丁語 jacere（躺、投擲）"
+        },
+        {
+          "type": "suffix",
+          "text": "ent",
+          "meaning": "形容詞字尾（正在…的）",
+          "grimmNote": "常見的形容詞字尾，表示狀態"
+        }
+      ],
+      "summary": "由表「朝向」的字首 ad- 加上表示「躺」的字根 jac，以及形容詞字尾 -ent 組成，字面意思是「躺在旁邊的」，引申為「鄰近的、毗連的」。",
+      "savedAt": "2026-10-15T15:43:22.073Z"
     }
   ],
   "userRoots": []
