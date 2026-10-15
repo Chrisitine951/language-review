@@ -13118,6 +13118,26 @@
       ],
       "summary": "「torture」由表示扭轉的字根 tort 加上名詞字尾 ure 組成，字面上的意思就是「把身體或心靈扭轉過去」，也就是折磨、拷問。",
       "savedAt": "2026-10-13T13:17:33.808Z"
+    },
+    {
+      "id": "ulkmv8xivvr1",
+      "word": "tenant",
+      "parts": [
+        {
+          "type": "root",
+          "text": "ten",
+          "meaning": "拿住、持有",
+          "grimmNote": "源自印歐語系字根，意為保持、握住"
+        },
+        {
+          "type": "suffix",
+          "text": "ant",
+          "meaning": "人（表主動或狀態的字尾，源自形容詞/名詞字尾）",
+          "grimmNote": "對應 -ent/-ant，表示「正在做某事的人」"
+        }
+      ],
+      "summary": "tenant（房客）由字根「ten（拿住、佔有）」加上表人的字尾組成，字面意思就是「佔有土地或房屋並拿住（付租）的人」。",
+      "savedAt": "2026-10-15T02:38:20.391Z"
     }
   ],
   "userRoots": []
