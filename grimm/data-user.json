@@ -13488,6 +13488,32 @@
       ],
       "summary": "im-（進入）加上 prov（看/預視）與動詞字尾 -ise，字面意思是「事先沒有看過、沒有準備就直接上場」，演變為「即興表演、臨場發揮」。",
       "savedAt": "2026-10-15T15:32:08.007Z"
+    },
+    {
+      "id": "ulkmv9pa1i53",
+      "word": "detergent",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下、離開、去除",
+          "grimmNote": "常見字首，表示去除、向下或否定"
+        },
+        {
+          "type": "root",
+          "text": "terg",
+          "meaning": "擦、擦拭、擦掉",
+          "grimmNote": "源自拉丁語 tergere（擦拭），其中的 g 屬於喉音互換的一員"
+        },
+        {
+          "type": "suffix",
+          "text": "-ent",
+          "meaning": "…的（形容詞字尾，轉為名詞指「劑」）",
+          "grimmNote": "常用形容詞與名詞字尾，表狀態或具此功能的人事物"
+        }
+      ],
+      "summary": "de-（去除）加上 terg（擦拭）與 -ent（物），字面意思就是「用來把髒污擦掉的東西」，也就是洗滌劑、清潔劑。",
+      "savedAt": "2026-10-15T15:35:17.022Z"
     }
   ],
   "userRoots": []
