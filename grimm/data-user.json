@@ -13304,6 +13304,32 @@
       ],
       "summary": "reck（注意、顧慮）加上 -less（無），字面意思就是「毫不在乎的、不顧後果的」，演變為現代的「輕率的、魯莽的」。",
       "savedAt": "2026-10-15T10:25:49.924Z"
+    },
+    {
+      "id": "ulkmv9ekoja4",
+      "word": "antenna",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "an",
+          "meaning": "向內、在…之上",
+          "grimmNote": "常見字首 in-/an- 表示方向或位置"
+        },
+        {
+          "type": "root",
+          "text": "ten",
+          "meaning": "伸展、延伸",
+          "grimmNote": "源自印歐语系字根，與 tend（延伸）、thin（薄/長）同源，母音 e/i 通轉"
+        },
+        {
+          "type": "suffix",
+          "text": "na",
+          "meaning": "名詞字尾",
+          "grimmNote": "陰性名詞字尾，用以形成具體事物的名稱"
+        }
+      ],
+      "summary": "antenna 的字源本義是昆蟲向外「伸展」出去的觸角，由表示方向的字首加上表示伸展的字根組合而成。",
+      "savedAt": "2026-10-15T10:35:37.654Z"
     }
   ],
   "userRoots": []
