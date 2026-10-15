@@ -13376,6 +13376,26 @@
       ],
       "summary": "chancellor 由代表「隔著格子、欄杆辦公的人」演變而來，原本指法院裡隔著柵欄處理公務的官員，後來成為總理或大學校長的稱呼。",
       "savedAt": "2026-10-15T10:38:12.858Z"
+    },
+    {
+      "id": "ulkmv9eqcim7",
+      "word": "charter",
+      "parts": [
+        {
+          "type": "root",
+          "text": "chart",
+          "meaning": "地圖、圖表；授權狀",
+          "grimmNote": "源自希臘文 chartis（紙張、草紙），字根原義指「紙片、寫字的地方」，字尾的 t 與 d 屬於舌音互換"
+        },
+        {
+          "type": "suffix",
+          "text": "er",
+          "meaning": "名詞字尾，表事物或工具",
+          "grimmNote": "-er 表人或物，此處指「載有特權或條文的正式紙張／憲章」"
+        }
+      ],
+      "summary": "charter 由表示「紙張、圖表」的字根 chart 加上名詞字尾 -er 構成，原本指寫在紙上的正式授權文件，演變為「憲章、特許狀」或「包租（船、機）」。",
+      "savedAt": "2026-10-15T10:40:02.014Z"
     }
   ],
   "userRoots": []
