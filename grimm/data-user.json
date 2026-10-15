@@ -13350,6 +13350,32 @@
       ],
       "summary": "「cradle」由表示支撐的字根與指小字尾結合，字面意思就是「小型的支撐物」，後來演變為嬰兒睡的「搖籃」。",
       "savedAt": "2026-10-15T10:36:35.809Z"
+    },
+    {
+      "id": "ulkmv9eo0ai6",
+      "word": "chancellor",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "chan",
+          "meaning": "前、交叉",
+          "grimmNote": "源自拉丁字根前綴 cancelli（格子、欄杆），源於喉音互換與母音通轉。"
+        },
+        {
+          "type": "suffix",
+          "text": "cell",
+          "meaning": "小房間、格子",
+          "grimmNote": "字根 cell 意指格子或小房間，帶有 diminutive 指小詞尾的變化。"
+        },
+        {
+          "type": "suffix",
+          "text": "or",
+          "meaning": "...的人",
+          "grimmNote": "名詞字尾，表示人或物。"
+        }
+      ],
+      "summary": "chancellor 由代表「隔著格子、欄杆辦公的人」演變而來，原本指法院裡隔著柵欄處理公務的官員，後來成為總理或大學校長的稱呼。",
+      "savedAt": "2026-10-15T10:38:12.858Z"
     }
   ],
   "userRoots": []
