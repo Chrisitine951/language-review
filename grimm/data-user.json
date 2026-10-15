@@ -13244,6 +13244,32 @@
       ],
       "summary": "stigma 原意為用尖銳物刺在皮膚上的烙印，後來演變為負面標籤與恥辱的含義。",
       "savedAt": "2026-10-15T06:48:04.963Z"
+    },
+    {
+      "id": "ulkmv9e39v31",
+      "word": "commercial",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "com-",
+          "meaning": "一起、共同",
+          "grimmNote": "常見字首，源自 come，表示一起、共同。"
+        },
+        {
+          "type": "root",
+          "text": "merc",
+          "meaning": "貨物、交易、賺錢",
+          "grimmNote": "源自古印歐語，與 market、merchant 同源。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ial",
+          "meaning": "形容詞字尾（由 -y / -ous 等與 -al 複合而成）",
+          "grimmNote": "複合字尾，-i- 為母音通轉或連結母音，-al 表示形容詞「關於…的」。"
+        }
+      ],
+      "summary": "com-（一起、共同）加上 merc（貨物、交易）與形容詞字尾 -ial，合起來就是「大家一起進行商業交易的」，即「商業的」。",
+      "savedAt": "2026-10-15T10:22:05.487Z"
     }
   ],
   "userRoots": []
