@@ -13566,6 +13566,26 @@
       ],
       "summary": "由表「朝向」的字首 ad- 加上表示「躺」的字根 jac，以及形容詞字尾 -ent 組成，字面意思是「躺在旁邊的」，引申為「鄰近的、毗連的」。",
       "savedAt": "2026-10-15T15:43:22.073Z"
+    },
+    {
+      "id": "ulkmva9luk71",
+      "word": "sluggish",
+      "parts": [
+        {
+          "type": "root",
+          "text": "slugg",
+          "meaning": "動作遲緩、像蛞蝓一樣",
+          "grimmNote": "源自 slug（蛞蝓），其中的 g 屬於喉音互換 g / k / c，流音 l 則是流音互換 l / r"
+        },
+        {
+          "type": "suffix",
+          "text": "ish",
+          "meaning": "有…傾向的（形容詞字尾）",
+          "grimmNote": "常用形容詞字尾，表具有某種特質"
+        }
+      ],
+      "summary": "sluggish 由表示「蛞蝓」的 slug 加上形容詞字尾 -ish 組成，字面意思就是「像蛞蝓一樣慢吞吞的、遲鈍的」。",
+      "savedAt": "2026-10-16T01:04:20.215Z"
     }
   ],
   "userRoots": []
