@@ -13652,6 +13652,20 @@
       ],
       "summary": "strenuous 由表示「拉緊、使勁」的字根 stren 加上表示「多…的」形容詞字尾 -ous 組成，意指充滿力量、需要用力拉緊的，也就是「費力的、繁重的」。",
       "savedAt": "2026-10-17T10:15:38.288Z"
+    },
+    {
+      "id": "ulkmvcb8gfo1",
+      "word": "lumber",
+      "parts": [
+        {
+          "type": "root",
+          "text": "lumber",
+          "meaning": "笨重地移動；木材",
+          "grimmNote": "流音互換 l / r 與母音通轉"
+        }
+      ],
+      "summary": "lumber 原意指重物移動時發出的沉重響聲，後來衍生指粗重笨拙的「木材」。",
+      "savedAt": "2026-10-17T11:25:26.964Z"
     }
   ],
   "userRoots": []
