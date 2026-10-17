@@ -13706,6 +13706,26 @@
       ],
       "summary": "wedge 直接源自古代日耳曼語系，本意指尖銳的木塊或金屬塊，透過敲擊來劈開物體或固定位置。",
       "savedAt": "2026-10-17T12:07:18.555Z"
+    },
+    {
+      "id": "ulkmvccse623",
+      "word": "erode",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "e-",
+          "meaning": "出去、向外",
+          "grimmNote": "常見字首，表示動作向外延伸。"
+        },
+        {
+          "type": "root",
+          "text": "rode",
+          "meaning": "啃、咬、侵蝕",
+          "grimmNote": "源自拉丁語 radere（刮、擦），其中的母音 o 與 a 依照「母音通轉 a / e / i / o / u / y」互換，而 d 與 t / s 屬於「舌音互換 d / t / s」。"
+        }
+      ],
+      "summary": "erode 由表示「向外」的字首 e- 加上表示「啃、咬、刮」的字根組合而成，字面意思就是「向外啃蝕／侵蝕」。",
+      "savedAt": "2026-10-17T12:08:56.762Z"
     }
   ],
   "userRoots": []
