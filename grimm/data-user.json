@@ -13586,6 +13586,32 @@
       ],
       "summary": "sluggish 由表示「蛞蝓」的 slug 加上形容詞字尾 -ish 組成，字面意思就是「像蛞蝓一樣慢吞吞的、遲鈍的」。",
       "savedAt": "2026-10-16T01:04:20.215Z"
+    },
+    {
+      "id": "ulkmvc36hx41",
+      "word": "implement",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "im-",
+          "meaning": "在內、進入",
+          "grimmNote": "in- 遇到 p 時為了發音順暢同化為 im-（在內、進入）"
+        },
+        {
+          "type": "root",
+          "text": "ple",
+          "meaning": "滿的、填滿",
+          "grimmNote": "源自古印歐語字根 *plē-（滿），與 full、complete 同源，其中的 p 與 f 屬於唇音互換 b / p / f / v / w"
+        },
+        {
+          "type": "suffix",
+          "text": "-ment",
+          "meaning": "名詞字尾（表工具或結果）",
+          "grimmNote": "由動詞字尾 -ate 衍生或直接轉化的名詞字尾"
+        }
+      ],
+      "summary": "im-（進入）加上 ple（填滿）再接 -ment（名詞字尾），字面意思就是「把東西填進去、裝滿」，引申為「實施、執行」。",
+      "savedAt": "2026-10-17T07:39:58.648Z"
     }
   ],
   "userRoots": []
