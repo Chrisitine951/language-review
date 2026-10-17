@@ -13666,6 +13666,32 @@
       ],
       "summary": "lumber 原意指重物移動時發出的沉重響聲，後來衍生指粗重笨拙的「木材」。",
       "savedAt": "2026-10-17T11:25:26.964Z"
+    },
+    {
+      "id": "ulkmvcchavj1",
+      "word": "deviate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "離開、分離",
+          "grimmNote": "常見字首 ab- / se- / dis- / de-＝分離、離開、否定"
+        },
+        {
+          "type": "root",
+          "text": "vi",
+          "meaning": "道路、路徑",
+          "grimmNote": "源自古印歐語字根 *wegh-，唇音互換 b / p / f / v / w，與 via（道路）、way 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "-ate",
+          "meaning": "動詞字尾，使...",
+          "grimmNote": "常見動詞或形容詞字尾 -ate"
+        }
+      ],
+      "summary": "de-（離開）加上 vi（道路），字面意思是「偏離道路」，引申為「deviate（背離、偏離）」。",
+      "savedAt": "2026-10-17T12:00:19.279Z"
     }
   ],
   "userRoots": []
