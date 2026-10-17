@@ -13612,6 +13612,26 @@
       ],
       "summary": "im-（進入）加上 ple（填滿）再接 -ment（名詞字尾），字面意思就是「把東西填進去、裝滿」，引申為「實施、執行」。",
       "savedAt": "2026-10-17T07:39:58.648Z"
+    },
+    {
+      "id": "ulkmvc378qg2",
+      "word": "dilemma",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "di",
+          "meaning": "雙、兩個",
+          "grimmNote": "源自古印歐語的數字「二」，對應到英文的 two"
+        },
+        {
+          "type": "root",
+          "text": "lemma",
+          "meaning": "前提、主題、議論",
+          "grimmNote": "源自希臘語，本義是「抓取、接受的東西、題目」"
+        }
+      ],
+      "summary": "di-（二）加上 lemma（前提/議論），字面意思就是「面臨兩個左右為難的前提或選擇」，演變為今日的「困境、進退兩難」。",
+      "savedAt": "2026-10-17T07:40:33.400Z"
     }
   ],
   "userRoots": []
