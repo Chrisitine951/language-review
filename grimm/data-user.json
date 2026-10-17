@@ -13692,6 +13692,20 @@
       ],
       "summary": "de-（離開）加上 vi（道路），字面意思是「偏離道路」，引申為「deviate（背離、偏離）」。",
       "savedAt": "2026-10-17T12:00:19.279Z"
+    },
+    {
+      "id": "ulkmvccqae32",
+      "word": "wedge",
+      "parts": [
+        {
+          "type": "root",
+          "text": "wedge",
+          "meaning": "楔子、夾緊",
+          "grimmNote": "原始日耳曼語根，對應喉音互換 g/k/c，與古英文的 secg（短劍）及現代德語的 Keil（楔子）同源"
+        }
+      ],
+      "summary": "wedge 直接源自古代日耳曼語系，本意指尖銳的木塊或金屬塊，透過敲擊來劈開物體或固定位置。",
+      "savedAt": "2026-10-17T12:07:18.555Z"
     }
   ],
   "userRoots": []
