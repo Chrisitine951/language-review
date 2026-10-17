@@ -13632,6 +13632,26 @@
       ],
       "summary": "di-（二）加上 lemma（前提/議論），字面意思就是「面臨兩個左右為難的前提或選擇」，演變為今日的「困境、進退兩難」。",
       "savedAt": "2026-10-17T07:40:33.400Z"
+    },
+    {
+      "id": "ulkmvc8qofk1",
+      "word": "strenuous",
+      "parts": [
+        {
+          "type": "root",
+          "text": "stren",
+          "meaning": "拉緊、使勁",
+          "grimmNote": "源自印歐語根 *ster-（僵硬、拉緊），字根內 s、t、r 皆保留原始結構"
+        },
+        {
+          "type": "suffix",
+          "text": "uous",
+          "meaning": "多…的（形容詞字尾）",
+          "grimmNote": "-ous 為常見形容詞字尾，表示充滿某種特質"
+        }
+      ],
+      "summary": "strenuous 由表示「拉緊、使勁」的字根 stren 加上表示「多…的」形容詞字尾 -ous 組成，意指充滿力量、需要用力拉緊的，也就是「費力的、繁重的」。",
+      "savedAt": "2026-10-17T10:15:38.288Z"
     }
   ],
   "userRoots": []
