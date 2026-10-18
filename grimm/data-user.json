@@ -13812,6 +13812,32 @@
       ],
       "summary": "farewell 由 far（前進、行進，運用唇音互換與母音通轉）與 well（好）組合而成，字面意思就是「祝你前進一切順利」，也就是「再見」。",
       "savedAt": "2026-10-18T03:07:41.103Z"
+    },
+    {
+      "id": "ulkmvd92lwp5",
+      "word": "nostalgia",
+      "parts": [
+        {
+          "type": "root",
+          "text": "nost",
+          "meaning": "家、返回",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "alg",
+          "meaning": "痛、痛苦",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ia",
+          "meaning": "名詞字尾，表狀態或疾病",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "nostalgia 由表「家」的 nost 與表「痛」的 alg 結合再加上名詞字尾 -ia，字面上的意思是「回家的痛」，也就是思鄉病或懷舊之情。",
+      "savedAt": "2026-10-18T03:12:41.065Z"
     }
   ],
   "userRoots": []
