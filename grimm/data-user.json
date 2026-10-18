@@ -14170,6 +14170,20 @@
       ],
       "summary": "manifest 由「手 (man)」加上「抓得牢牢的 (fest)」，字面意思是「親手抓到、清清楚楚地顯現出來」。",
       "savedAt": "2026-10-18T04:33:23.655Z"
+    },
+    {
+      "id": "ulkmvdc3t70m",
+      "word": "arid",
+      "parts": [
+        {
+          "type": "root",
+          "text": "arid",
+          "meaning": "乾旱的、枯燥的",
+          "grimmNote": "符合原始字根結構"
+        }
+      ],
+      "summary": "arid 直接作為基本字根，表示乾燥、枯燥的狀態。",
+      "savedAt": "2026-10-18T04:37:36.012Z"
     }
   ],
   "userRoots": []
