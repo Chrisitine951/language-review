@@ -14460,6 +14460,26 @@
       ],
       "summary": "con-（共同）加上 vey（攜帶），合起來就是把東西共同帶往某處，即「運送、傳達」。",
       "savedAt": "2026-10-18T13:06:10.176Z"
+    },
+    {
+      "id": "ulkmvdufnsh7",
+      "word": "reproach",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常見字首，表示返回或重複動作"
+        },
+        {
+          "type": "root",
+          "text": "proach",
+          "meaning": "接近、靠近",
+          "grimmNote": "其中 p 與 b 透過「唇音互換 b / p / f / v / w」演變而來，字根原意為面對或靠近"
+        }
+      ],
+      "summary": "reproach 由表「再次」的字首 re- 與表「接近」的字根 proach 組成，原意為再次靠近並面對面指責，演變為責備、譴責。",
+      "savedAt": "2026-10-18T13:10:41.970Z"
     }
   ],
   "userRoots": []
