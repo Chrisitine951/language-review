@@ -13772,6 +13772,26 @@
       ],
       "summary": "vigor（精力）加上形容詞字尾 -ous（多），組合成 vigorous，意思就是「充滿精力的、強健的」。",
       "savedAt": "2026-10-18T03:05:38.779Z"
+    },
+    {
+      "id": "ulkmvd8vlz13",
+      "word": "spoil",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "s",
+          "meaning": "加強語氣或維持結構",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "poil",
+          "meaning": "弄壞、破壞",
+          "grimmNote": "源自拉丁語 spolium（戰利品、掠奪物），其中唇音互換 p 保持不變"
+        }
+      ],
+      "summary": "「spoil」由加強語氣字首 s 加上表示掠奪、剝奪的字根 poil 組成，原本指剝奪戰利品，後來引申為使東西變壞或寵壞。",
+      "savedAt": "2026-10-18T03:07:14.557Z"
     }
   ],
   "userRoots": []
