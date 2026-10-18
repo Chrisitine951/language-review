@@ -13752,6 +13752,26 @@
       ],
       "summary": "masquerade 由加強語氣字首、表「尋找」的字根與名詞字尾組成，原意為尋求掩護或偽裝，演變為化妝舞會或偽裝。",
       "savedAt": "2026-10-18T03:04:56.431Z"
+    },
+    {
+      "id": "ulkmvd8tk2j2",
+      "word": "vigorous",
+      "parts": [
+        {
+          "type": "root",
+          "text": "vigor",
+          "meaning": "精力、活力",
+          "grimmNote": "源自原始印歐語字根 *weg-（強壯、活躍），其中喉音 g 來自同一組兄弟姊妹音"
+        },
+        {
+          "type": "suffix",
+          "text": "-ous",
+          "meaning": "多（形容詞字尾）",
+          "grimmNote": "形容詞字尾，表示「充滿...的」"
+        }
+      ],
+      "summary": "vigor（精力）加上形容詞字尾 -ous（多），組合成 vigorous，意思就是「充滿精力的、強健的」。",
+      "savedAt": "2026-10-18T03:05:38.779Z"
     }
   ],
   "userRoots": []
