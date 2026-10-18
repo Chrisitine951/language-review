@@ -14016,6 +14016,26 @@
       ],
       "summary": "alleviage 由加強語氣字首 al- 結合代表「輕」的字根 lev 與動詞字尾 -ate 組成，字面上的意思是「使之變輕」，引申為減輕、緩和。",
       "savedAt": "2026-10-18T04:19:30.343Z"
+    },
+    {
+      "id": "ulkmvdbhqyee",
+      "word": "debris",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de",
+          "meaning": "分離、離開",
+          "grimmNote": "常見字首 dis- / de- 表示分離或離開"
+        },
+        {
+          "type": "root",
+          "text": "bris",
+          "meaning": "破碎、壓碎",
+          "grimmNote": "母音通轉 i/e 與唇音/舌音變化，源自表示打破的古印歐語根"
+        }
+      ],
+      "summary": "de-（分離、離開）加上表示破碎的字根 bris，合起來指原本完整物體破裂後散落的「碎片」或「殘骸」。",
+      "savedAt": "2026-10-18T04:20:26.678Z"
     }
   ],
   "userRoots": []
