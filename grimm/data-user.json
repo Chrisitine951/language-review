@@ -14554,6 +14554,26 @@
       ],
       "summary": "vessel 由表示容器的字根結合指小字尾 -el 構成，字面意思就是「小容器」或引申為裝載貨物的「船隻、血管」。",
       "savedAt": "2026-10-18T13:57:47.107Z"
+    },
+    {
+      "id": "ulkmvdxmtz7c",
+      "word": "turmoil",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "tur",
+          "meaning": "扭轉、旋轉",
+          "grimmNote": "源自原始印歐語根轉音與結構，與 turn 同源"
+        },
+        {
+          "type": "suffix",
+          "text": "moil",
+          "meaning": "動亂、騷動",
+          "grimmNote": "字尾衍生名詞，表狀態或情況"
+        }
+      ],
+      "summary": "turmoil 由表示旋轉的字根與名詞字尾組成，原意為像旋風般在內部攪動，引申為「動亂、騷動」。",
+      "savedAt": "2026-10-18T14:40:15.427Z"
     }
   ],
   "userRoots": []
