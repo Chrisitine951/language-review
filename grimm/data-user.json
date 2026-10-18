@@ -14104,6 +14104,26 @@
       ],
       "summary": "「steep」是一個保留原始古音的單字，直接源自日耳曼語族，本義指地形像懸崖一樣陡峭高聳。",
       "savedAt": "2026-10-18T04:28:06.790Z"
+    },
+    {
+      "id": "ulkmvdbv43sj",
+      "word": "manual",
+      "parts": [
+        {
+          "type": "root",
+          "text": "man",
+          "meaning": "手",
+          "grimmNote": "源自古印歐語，表示「手」的字根"
+        },
+        {
+          "type": "suffix",
+          "text": "ual",
+          "meaning": "形容詞字尾，表「關於…的」",
+          "grimmNote": "-al 為常見的形容詞字尾"
+        }
+      ],
+      "summary": "manual 由表示「手」的字根 man 加上形容詞字尾 -al 組成，字面意思是「手的、用手操作的」。",
+      "savedAt": "2026-10-18T04:30:50.249Z"
     }
   ],
   "userRoots": []
