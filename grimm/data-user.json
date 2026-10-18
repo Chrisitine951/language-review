@@ -14680,6 +14680,26 @@
       ],
       "summary": "mitigate 由表「使、送」的前綴與表動詞的字尾組成，字面上有「送出、使緩和」之意。",
       "savedAt": "2026-10-18T16:26:39.943Z"
+    },
+    {
+      "id": "ulkmve1frhji",
+      "word": "mitigate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "mit",
+          "meaning": "使、送（源自拉丁語 mittere，轉音自字根 ag-／ig- 的變體，或相關動作字根）",
+          "grimmNote": "源自拉丁字根 mit-（送、發動）"
+        },
+        {
+          "type": "suffix",
+          "text": "igate",
+          "meaning": "動詞字尾（由 -ig- 結合動詞字尾 -ate 形成，-ig- 來自 ag- 做、驅使）",
+          "grimmNote": "-ate 為動詞字尾，中間的 ig 透過母音通轉與子音變化連結"
+        }
+      ],
+      "summary": "mitigate 由字根 mit（送／推動）與 igate（驅使、使之發生）組成，字面意思是「推動使之緩和」，演變為減輕、使平息的意思。",
+      "savedAt": "2026-10-18T16:26:44.072Z"
     }
   ],
   "userRoots": []
