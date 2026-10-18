@@ -14198,6 +14198,32 @@
       ],
       "summary": "purse 由古法語代表皮革袋子的 bursa 經由唇音互換轉變而來，最終演變成現代英文的「錢包」。",
       "savedAt": "2026-10-18T04:38:25.973Z"
+    },
+    {
+      "id": "ulkmvdc9q2wo",
+      "word": "oblige",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ob-",
+          "meaning": "朝向、向著",
+          "grimmNote": "常見字首，表示朝向或針對"
+        },
+        {
+          "type": "root",
+          "text": "lig",
+          "meaning": "綁、繫",
+          "grimmNote": "源自古印歐語，與 ligament（韌帶）同源，母音 i 經過通轉變化"
+        },
+        {
+          "type": "suffix",
+          "text": "-e",
+          "meaning": "動詞字尾",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "ob-（朝向、向著）加上 -lig（綁、繫），字面意思就是「把某人綁繫在一起」，引申為束縛、強迫，最後演變成「使感激、施恩惠而讓人願意效勞（oblige）」的意思。",
+      "savedAt": "2026-10-18T04:42:11.912Z"
     }
   ],
   "userRoots": []
