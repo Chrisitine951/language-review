@@ -14036,6 +14036,26 @@
       ],
       "summary": "de-（分離、離開）加上表示破碎的字根 bris，合起來指原本完整物體破裂後散落的「碎片」或「殘骸」。",
       "savedAt": "2026-10-18T04:20:26.678Z"
+    },
+    {
+      "id": "ulkmvdbo8kwf",
+      "word": "billiards",
+      "parts": [
+        {
+          "type": "root",
+          "text": "bill",
+          "meaning": "木棒、球桿",
+          "grimmNote": "源自日耳曼語支的棒子、棍子意義"
+        },
+        {
+          "type": "suffix",
+          "text": "iards",
+          "meaning": "名詞字尾（複數/集合名詞）",
+          "grimmNote": "母音通轉與複數名詞結尾變化"
+        }
+      ],
+      "summary": "billiards（撞球）源自棍棒（bill）的延伸，指用球桿擊球的遊戲。",
+      "savedAt": "2026-10-18T04:25:29.456Z"
     }
   ],
   "userRoots": []
