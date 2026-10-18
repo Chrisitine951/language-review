@@ -13838,6 +13838,26 @@
       ],
       "summary": "nostalgia 由表「家」的 nost 與表「痛」的 alg 結合再加上名詞字尾 -ia，字面上的意思是「回家的痛」，也就是思鄉病或懷舊之情。",
       "savedAt": "2026-10-18T03:12:41.065Z"
+    },
+    {
+      "id": "ulkmvd9f9066",
+      "word": "parliament",
+      "parts": [
+        {
+          "type": "root",
+          "text": "parl",
+          "meaning": "說話、談判",
+          "grimmNote": "源自拉丁語 parabolare（說話、講道），經由古法語演變而來"
+        },
+        {
+          "type": "suffix",
+          "text": "iament",
+          "meaning": "名詞字尾，表場所、行動或過程（由 -ment 演變，源自實質意義的 suffix）",
+          "grimmNote": "母音通轉 e / a，結尾的 -ment 表行為或結果"
+        }
+      ],
+      "summary": "parliament（議會）的字根來自表示「說話、談判」的 parl，加上名詞字尾組合而成，字面意思就是「大家聚在一起說話、談判的地方」。",
+      "savedAt": "2026-10-18T03:22:30.870Z"
     }
   ],
   "userRoots": []
