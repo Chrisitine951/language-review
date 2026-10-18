@@ -13858,6 +13858,32 @@
       ],
       "summary": "parliament（議會）的字根來自表示「說話、談判」的 parl，加上名詞字尾組合而成，字面意思就是「大家聚在一起說話、談判的地方」。",
       "savedAt": "2026-10-18T03:22:30.870Z"
+    },
+    {
+      "id": "ulkmvdam1v07",
+      "word": "merchandise",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "mer",
+          "meaning": "與商業、貿易相關的詞源（源自貨物、市場）",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "chand",
+          "meaning": "交易、購買、商品（與 market 同源，喉音 g/k/c 轉舌音 d/t/s）",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "ise",
+          "meaning": "名詞/動詞字尾，表行為或狀態",
+          "grimmNote": ""
+        }
+      ],
+      "summary": "merchandise 由表示商業的字根加上商品與字尾組成，意指「商品、買賣」。",
+      "savedAt": "2026-10-18T03:55:47.820Z"
     }
   ],
   "userRoots": []
