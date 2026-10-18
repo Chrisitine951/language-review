@@ -14224,6 +14224,26 @@
       ],
       "summary": "ob-（朝向、向著）加上 -lig（綁、繫），字面意思就是「把某人綁繫在一起」，引申為束縛、強迫，最後演變成「使感激、施恩惠而讓人願意效勞（oblige）」的意思。",
       "savedAt": "2026-10-18T04:42:11.912Z"
+    },
+    {
+      "id": "ulkmvdg2o7sp",
+      "word": "hasten",
+      "parts": [
+        {
+          "type": "root",
+          "text": "hast",
+          "meaning": "快速、急迫",
+          "grimmNote": "對應到源自古日耳曼語的字根，與 hurry 或古字 celer（c/k 弱化成 h）概念相通"
+        },
+        {
+          "type": "suffix",
+          "text": "en",
+          "meaning": "動詞字尾，表動作化、令其如何",
+          "grimmNote": "en- / -en 用於形容詞或名詞轉動詞，意為「使變得…」"
+        }
+      ],
+      "summary": "hasten 由表示「快速」的字根 hast 加上動詞字尾 -en 組成，意思就是「使加快、加速」。",
+      "savedAt": "2026-10-18T06:28:41.368Z"
     }
   ],
   "userRoots": []
