@@ -14786,6 +14786,32 @@
       ],
       "summary": "由表示向前的字首 pro- 與表示底部的字根 found（源自 fund）結合，字面意為「向前深入到底部」，引申為「深奧的、深厚的」。",
       "savedAt": "2026-10-18T16:44:20.485Z"
+    },
+    {
+      "id": "ulkmve232xun",
+      "word": "conspiracy",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "常見字首 con-（源自 come），表示共同、一起。"
+        },
+        {
+          "type": "root",
+          "text": "spir",
+          "meaning": "呼吸、吹氣",
+          "grimmNote": "核心字根 spir 源自呼吸，衍生出 breathe、spirit 等字。"
+        },
+        {
+          "type": "suffix",
+          "text": "acy",
+          "meaning": "名詞字尾，表狀態或性質",
+          "grimmNote": "由名詞字尾 -acy 結合而成，用來構成抽象名詞。"
+        }
+      ],
+      "summary": "conspiracy 由表示「一起」的字首 con- 結合代表「呼吸」的字根 spir，再加上名詞字尾 -acy 組成，原意為「眾人聚在一起竊竊私語、呼吸相聞」，引申為「陰謀、共謀」。",
+      "savedAt": "2026-10-18T16:44:52.002Z"
     }
   ],
   "userRoots": []
