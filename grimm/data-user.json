@@ -13950,6 +13950,32 @@
       ],
       "summary": "potent 由表示「力量」的字根 pot 加上形容詞字尾 ent 組成，字面上的意思就是「具有力量的、強大的」。",
       "savedAt": "2026-10-18T04:06:16.313Z"
+    },
+    {
+      "id": "ulkmvdbe0dyb",
+      "word": "discrimination",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "dis",
+          "meaning": "分離、離開、否定",
+          "grimmNote": "常用字首 dis- 表示分離或向不同方向展開"
+        },
+        {
+          "type": "root",
+          "text": "crimin",
+          "meaning": "區分、挑選、罪行",
+          "grimmNote": "源自拉丁字根 crim-，字尾 -in 經母音通轉及子音變化，核心意義為「劃分界線、加以區別」"
+        },
+        {
+          "type": "suffix",
+          "text": "ation",
+          "meaning": "名詞字尾，表狀態或行為過程",
+          "grimmNote": "複合字尾 -ate（動詞字尾）加上 -ion（名詞字尾）之組合"
+        }
+      ],
+      "summary": "dis-（分離）加上 -crimin（區分、辨別）再接名詞字尾 -ation，字面意思就是「將事物分開、加以區別」，引申為「區別待遇、歧視」。",
+      "savedAt": "2026-10-18T04:17:32.278Z"
     }
   ],
   "userRoots": []
