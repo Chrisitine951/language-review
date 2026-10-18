@@ -14244,6 +14244,26 @@
       ],
       "summary": "hasten 由表示「快速」的字根 hast 加上動詞字尾 -en 組成，意思就是「使加快、加速」。",
       "savedAt": "2026-10-18T06:28:41.368Z"
+    },
+    {
+      "id": "ulkmvdg8ka5q",
+      "word": "fuss",
+      "parts": [
+        {
+          "type": "root",
+          "text": "fus",
+          "meaning": "大驚小怪、小題大作、煩擾",
+          "grimmNote": "對應古諾斯語 fúsa 等源頭，基本語音核心為 f-s"
+        },
+        {
+          "type": "suffix",
+          "text": "s",
+          "meaning": "雙子音結構",
+          "grimmNote": "雙子音規則：單字裡的 ss，第二個子音不具意義，只是加強語氣或維持音節結構"
+        }
+      ],
+      "summary": "fuss 由核心字根 fus（煩擾、激動）加上雙子音規則的結尾 s 組成，原意指無謂的忙亂與小題大作。",
+      "savedAt": "2026-10-18T06:33:16.205Z"
     }
   ],
   "userRoots": []
