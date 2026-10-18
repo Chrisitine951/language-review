@@ -14614,6 +14614,26 @@
       ],
       "summary": "destination 由表示向下的字首 de- 結合意為站立、固定的字根 stin（與 stand 同源），再加上複合名詞字尾 -ation 組成，字面意思是「被固定下來、人或物最終到達並停留的地方」，即「目的地」。",
       "savedAt": "2026-10-18T15:09:27.508Z"
+    },
+    {
+      "id": "ulkmve13cy7f",
+      "word": "vulgar",
+      "parts": [
+        {
+          "type": "root",
+          "text": "vulg",
+          "meaning": "平民、大眾、群眾",
+          "grimmNote": "對應原始印歐語字根，原意指成群的動物或人群"
+        },
+        {
+          "type": "suffix",
+          "text": "ar",
+          "meaning": "…的（形容詞字尾）",
+          "grimmNote": "表形容詞字尾，將名詞轉為形容詞"
+        }
+      ],
+      "summary": "從代表「群眾、平民」的字根 vulg 加上形容詞字尾 ar 組合而成，原意為「屬於平民大眾的」，後來引申為「粗俗的、通俗的」。",
+      "savedAt": "2026-10-18T16:17:05.359Z"
     }
   ],
   "userRoots": []
