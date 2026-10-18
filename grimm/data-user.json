@@ -14514,6 +14514,26 @@
       ],
       "summary": "「harass」源自表示「抓住、掠奪」的古老字根（k 弱化為 h），加上表示朝向與加強語氣的字首變化，字面意思就是「不斷去抓、激怒或侵擾別人」。",
       "savedAt": "2026-10-18T13:42:34.231Z"
+    },
+    {
+      "id": "ulkmvdvuxwfa",
+      "word": "retrieve",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "re-",
+          "meaning": "再次、重複、回來",
+          "grimmNote": "常見字首 re-，表示再次、回來。"
+        },
+        {
+          "type": "root",
+          "text": "trieve",
+          "meaning": "找回、尋獲",
+          "grimmNote": "源自古法語 troduire/trover（尋找、發現），其中的 v 與唇音互換 b/p/f/v/w 有關，字根核心在於「去尋找並帶回來」。"
+        }
+      ],
+      "summary": "由字首 re-（回來）加上表示尋找的字根 trieve 組成，字面意思就是「找回來、取回」。",
+      "savedAt": "2026-10-18T13:50:34.527Z"
     }
   ],
   "userRoots": []
