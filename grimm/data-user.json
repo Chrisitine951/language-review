@@ -13884,6 +13884,26 @@
       ],
       "summary": "merchandise 由表示商業的字根加上商品與字尾組成，意指「商品、買賣」。",
       "savedAt": "2026-10-18T03:55:47.820Z"
+    },
+    {
+      "id": "ulkmvdat5es8",
+      "word": "fragile",
+      "parts": [
+        {
+          "type": "root",
+          "text": "frag",
+          "meaning": "破碎、打破",
+          "grimmNote": "使用喉音互換 g / k / c，源自古印歐語根，與 break 的唇音互換 f/b 相關"
+        },
+        {
+          "type": "suffix",
+          "text": "ile",
+          "meaning": "可以被…的（形容詞字尾）",
+          "grimmNote": "母音通轉 i/e，表示性質與狀態"
+        }
+      ],
+      "summary": "fragile 由表示「破碎」的字根與表示「可以被…的」字尾組成，字面意思就是「可以被打破的、易碎的」。",
+      "savedAt": "2026-10-18T04:01:19.012Z"
     }
   ],
   "userRoots": []
