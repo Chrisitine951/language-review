@@ -13990,6 +13990,32 @@
       ],
       "summary": "shrink 作為原始日耳曼語源的單字，直接保留了表示「收縮、乾癟」的基礎字根結構。",
       "savedAt": "2026-10-18T04:18:37.547Z"
+    },
+    {
+      "id": "ulkmvdbgjhjd",
+      "word": "alleviate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "al",
+          "meaning": "加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個子音 al- 只是加強語氣，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "lev",
+          "meaning": "輕、舉起",
+          "grimmNote": "對應源自拉丁文的輕（light）概念，流音 l 與 r 相關"
+        },
+        {
+          "type": "suffix",
+          "text": "iate",
+          "meaning": "動詞字尾，使...",
+          "grimmNote": "常見複合動詞字尾 -ate"
+        }
+      ],
+      "summary": "alleviage 由加強語氣字首 al- 結合代表「輕」的字根 lev 與動詞字尾 -ate 組成，字面上的意思是「使之變輕」，引申為減輕、緩和。",
+      "savedAt": "2026-10-18T04:19:30.343Z"
     }
   ],
   "userRoots": []
