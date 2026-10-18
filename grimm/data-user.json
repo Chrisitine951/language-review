@@ -13904,6 +13904,32 @@
       ],
       "summary": "fragile 由表示「破碎」的字根與表示「可以被…的」字尾組成，字面意思就是「可以被打破的、易碎的」。",
       "savedAt": "2026-10-18T04:01:19.012Z"
+    },
+    {
+      "id": "ulkmvdax4bg9",
+      "word": "excursion",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "ex-",
+          "meaning": "出去、向外",
+          "grimmNote": "常見字首，表示動作的方向朝外。"
+        },
+        {
+          "type": "root",
+          "text": "curs",
+          "meaning": "跑、流動",
+          "grimmNote": "源自拉丁語字根，屬於 run 的同源字；其中的 s 是由舌音互換或字根變化而來。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ion",
+          "meaning": "名詞字尾，表狀態或動作過程",
+          "grimmNote": "常見名詞字尾，將動詞或字根轉化為抽象名詞。"
+        }
+      ],
+      "summary": "ex-（向外）加上 curs（跑）與名詞字尾 -ion，字面意思就是「向外跑出去」，引申為「遠足、短途旅行、遠征」。",
+      "savedAt": "2026-10-18T04:04:24.220Z"
     }
   ],
   "userRoots": []
