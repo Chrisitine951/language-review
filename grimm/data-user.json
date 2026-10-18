@@ -14290,6 +14290,32 @@
       ],
       "summary": "saturate 由表示「朝向」的字首與表示「滿的」字根組合而成，字面意思就是「使完全裝滿、浸透」。",
       "savedAt": "2026-10-18T06:47:53.116Z"
+    },
+    {
+      "id": "ulkmvdr662s1",
+      "word": "indulge",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in",
+          "meaning": "在內、進入",
+          "grimmNote": "in-＝在內、進入"
+        },
+        {
+          "type": "root",
+          "text": "dulg",
+          "meaning": "縱容、沉溺",
+          "grimmNote": "喉音互換 g / k / c：與古印歐語根 *dlk-（保留或延伸）相關，其中喉音 g 對應基本音"
+        },
+        {
+          "type": "suffix",
+          "text": "e",
+          "meaning": "動詞字尾",
+          "grimmNote": "無實質意義的字尾，用於構成動詞"
+        }
+      ],
+      "summary": "由表「進入」的 in- 結合表示「縱容、沉溺」的字根 dulg 構成，字面意思就是「陷入其中、沉溺於…」。",
+      "savedAt": "2026-10-18T11:39:20.260Z"
     }
   ],
   "userRoots": []
