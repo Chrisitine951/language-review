@@ -14336,6 +14336,26 @@
       ],
       "summary": "boycott 原本指對抗一個名叫 Boycott 的地主（拒絕與其合作），其姓氏源自「住在男孩小屋裡的人」，透過歷史事件轉化為「抵制、杯葛」的意思。",
       "savedAt": "2026-10-18T12:25:19.614Z"
+    },
+    {
+      "id": "ulkmvdsxfnj2",
+      "word": "disgust",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "dis",
+          "meaning": "分離、離開、否定",
+          "grimmNote": "常見字首 dis-，表示分離或否定"
+        },
+        {
+          "type": "root",
+          "text": "gust",
+          "meaning": "口味、滋味",
+          "grimmNote": "源自古印歐語字根，與 gustus（味覺）同源，喉音 g 與拉丁語 gustare 有關"
+        }
+      ],
+      "summary": "dis-（否定、壞的）加上表示「味道、口味」的字根 gust，組合起來就是「嚐起來味道不好、讓人倒胃口」，進而引申為「厭惡、反感」。",
+      "savedAt": "2026-10-18T12:28:31.999Z"
     }
   ],
   "userRoots": []
