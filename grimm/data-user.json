@@ -13976,6 +13976,20 @@
       ],
       "summary": "dis-（分離）加上 -crimin（區分、辨別）再接名詞字尾 -ation，字面意思就是「將事物分開、加以區別」，引申為「區別待遇、歧視」。",
       "savedAt": "2026-10-18T04:17:32.278Z"
+    },
+    {
+      "id": "ulkmvdbfeqzc",
+      "word": "shrink",
+      "parts": [
+        {
+          "type": "root",
+          "text": "shrink",
+          "meaning": "收縮、退縮",
+          "grimmNote": "原始日耳曼語根，保留了喉音 k 與流音 r 的結構"
+        }
+      ],
+      "summary": "shrink 作為原始日耳曼語源的單字，直接保留了表示「收縮、乾癟」的基礎字根結構。",
+      "savedAt": "2026-10-18T04:18:37.547Z"
     }
   ],
   "userRoots": []
