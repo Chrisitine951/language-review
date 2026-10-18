@@ -13792,6 +13792,26 @@
       ],
       "summary": "「spoil」由加強語氣字首 s 加上表示掠奪、剝奪的字根 poil 組成，原本指剝奪戰利品，後來引申為使東西變壞或寵壞。",
       "savedAt": "2026-10-18T03:07:14.557Z"
+    },
+    {
+      "id": "ulkmvd8w6gf4",
+      "word": "farewell",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "fare",
+          "meaning": "前進、旅行、遭遇",
+          "grimmNote": "源自古英文 faran（前進、行走），其中的 f 與 w 相關，表示行進的動作。"
+        },
+        {
+          "type": "suffix",
+          "text": "well",
+          "meaning": "好、平安",
+          "grimmNote": "源自副詞 well，與 far 結合表示「祝你一路順風、平安」。"
+        }
+      ],
+      "summary": "farewell 由 far（前進、行進，運用唇音互換與母音通轉）與 well（好）組合而成，字面意思就是「祝你前進一切順利」，也就是「再見」。",
+      "savedAt": "2026-10-18T03:07:41.103Z"
     }
   ],
   "userRoots": []
