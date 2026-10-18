@@ -14574,6 +14574,20 @@
       ],
       "summary": "turmoil 由表示旋轉的字根與名詞字尾組成，原意為像旋風般在內部攪動，引申為「動亂、騷動」。",
       "savedAt": "2026-10-18T14:40:15.427Z"
+    },
+    {
+      "id": "ulkmvdyke9fd",
+      "word": "plaster",
+      "parts": [
+        {
+          "type": "root",
+          "text": "plaster",
+          "meaning": "膏藥、石膏",
+          "grimmNote": "字根直接對應原始印歐語字根，具備唇音 p 與流音 l 的組合，本義指「被黏貼、塗抹的物質」"
+        }
+      ],
+      "summary": "plaster 由原始字根演變而來，本義指黏貼或塗抹在身上的膏藥或建築用的石膏。",
+      "savedAt": "2026-10-18T15:06:21.363Z"
     }
   ],
   "userRoots": []
