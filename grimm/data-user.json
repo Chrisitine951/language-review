@@ -14588,6 +14588,32 @@
       ],
       "summary": "plaster 由原始字根演變而來，本義指黏貼或塗抹在身上的膏藥或建築用的石膏。",
       "savedAt": "2026-10-18T15:06:21.363Z"
+    },
+    {
+      "id": "ulkmvdyodw4e",
+      "word": "destination",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "de-",
+          "meaning": "向下；加強語氣",
+          "grimmNote": "常見字首，表示向下或加強語氣。"
+        },
+        {
+          "type": "root",
+          "text": "stin",
+          "meaning": "站立、固定",
+          "grimmNote": "源自印歐語根，與 stand 同源（舌音互換 d ↔ t 轉變）。"
+        },
+        {
+          "type": "suffix",
+          "text": "-ation",
+          "meaning": "名詞字尾（表動作或結果、地方）",
+          "grimmNote": "由動詞字尾 -ate 結合名詞字尾 -ion 複合而成，表示「……的地方或狀態」。"
+        }
+      ],
+      "summary": "destination 由表示向下的字首 de- 結合意為站立、固定的字根 stin（與 stand 同源），再加上複合名詞字尾 -ation 組成，字面意思是「被固定下來、人或物最終到達並停留的地方」，即「目的地」。",
+      "savedAt": "2026-10-18T15:09:27.508Z"
     }
   ],
   "userRoots": []
