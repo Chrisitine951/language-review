@@ -14766,6 +14766,26 @@
       ],
       "summary": "en-（動作化）加上 dow（給予），意思就是「賦予、捐贈、資助」，讓某人擁有某物。",
       "savedAt": "2026-10-18T16:39:22.671Z"
+    },
+    {
+      "id": "ulkmve22emdm",
+      "word": "profound",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "pro-",
+          "meaning": "向前、在前",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "found",
+          "meaning": "底部、深處",
+          "grimmNote": "由 fund 透過「母音通轉 u / ou」變化而來，原意指基底或深處"
+        }
+      ],
+      "summary": "由表示向前的字首 pro- 與表示底部的字根 found（源自 fund）結合，字面意為「向前深入到底部」，引申為「深奧的、深厚的」。",
+      "savedAt": "2026-10-18T16:44:20.485Z"
     }
   ],
   "userRoots": []
