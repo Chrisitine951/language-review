@@ -13930,6 +13930,26 @@
       ],
       "summary": "ex-（向外）加上 curs（跑）與名詞字尾 -ion，字面意思就是「向外跑出去」，引申為「遠足、短途旅行、遠征」。",
       "savedAt": "2026-10-18T04:04:24.220Z"
+    },
+    {
+      "id": "ulkmvdazit5a",
+      "word": "potent",
+      "parts": [
+        {
+          "type": "root",
+          "text": "pot",
+          "meaning": "有力的、能幹的",
+          "grimmNote": "源自原始印歐語字根 *pot-（主人、有力量的），對應到拉丁文 potis（有能力的）"
+        },
+        {
+          "type": "suffix",
+          "text": "ent",
+          "meaning": "形容詞字尾，表「正在…的、具備…性質的」",
+          "grimmNote": "由源自動詞分詞的字尾 -ent 演變而來，用以構成形容詞"
+        }
+      ],
+      "summary": "potent 由表示「力量」的字根 pot 加上形容詞字尾 ent 組成，字面上的意思就是「具有力量的、強大的」。",
+      "savedAt": "2026-10-18T04:06:16.313Z"
     }
   ],
   "userRoots": []
