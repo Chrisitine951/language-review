@@ -14316,6 +14316,26 @@
       ],
       "summary": "由表「進入」的 in- 結合表示「縱容、沉溺」的字根 dulg 構成，字面意思就是「陷入其中、沉溺於…」。",
       "savedAt": "2026-10-18T11:39:20.260Z"
+    },
+    {
+      "id": "ulkmvdstb7i1",
+      "word": "boycott",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "boy",
+          "meaning": "小男孩、男子",
+          "grimmNote": ""
+        },
+        {
+          "type": "root",
+          "text": "cott",
+          "meaning": "小屋、茅草屋",
+          "grimmNote": "雙子音規則（結構）：tt 中第二個 t 只是維持音節結構，真正的字根核心為 cot (小屋)"
+        }
+      ],
+      "summary": "boycott 原本指對抗一個名叫 Boycott 的地主（拒絕與其合作），其姓氏源自「住在男孩小屋裡的人」，透過歷史事件轉化為「抵制、杯葛」的意思。",
+      "savedAt": "2026-10-18T12:25:19.614Z"
     }
   ],
   "userRoots": []
