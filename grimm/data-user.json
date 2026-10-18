@@ -14388,6 +14388,32 @@
       ],
       "summary": "empirical 由表示進入的字首 em- 結合代表試驗的字根 pir，再加上形容詞字尾 -ic 與 -al 構成，字面意思就是「進入嘗試、透過經驗與實驗得來的」。",
       "savedAt": "2026-10-18T12:29:13.634Z"
+    },
+    {
+      "id": "ulkmvdsyltl4",
+      "word": "empirical",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "em-",
+          "meaning": "在內、進入",
+          "grimmNote": "en- / em-＝動作化、令其如何（源自在內）"
+        },
+        {
+          "type": "root",
+          "text": "pir",
+          "meaning": "嘗試、試驗、危險",
+          "grimmNote": "源自古印歐語字根，與 try 的轉音親戚有關"
+        },
+        {
+          "type": "suffix",
+          "text": "-ical",
+          "meaning": "形容詞字尾，…的",
+          "grimmNote": "由名词字尾 -ic 加上形容詞字尾 -al 複合而成"
+        }
+      ],
+      "summary": "empirical（經驗主義的）是由表示「進入」的字首 em- 結合表示「嘗試、試驗」的字根 pir，再加上形容詞字尾 -ical 組成，字面意思是「進入嘗試與實際經驗之中的」。",
+      "savedAt": "2026-10-18T12:29:26.649Z"
     }
   ],
   "userRoots": []
