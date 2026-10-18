@@ -14720,6 +14720,32 @@
       ],
       "summary": "municipal 由表示「職責」與「拿取/承擔」的字根組合，指承擔公共職責的地方，加上形容詞字尾 -al 形成「市政的」。",
       "savedAt": "2026-10-18T16:34:42.308Z"
+    },
+    {
+      "id": "ulkmve1uvt2k",
+      "word": "invalid",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "in-",
+          "meaning": "否定、不",
+          "grimmNote": "常用字首，表示否定或相反意義。"
+        },
+        {
+          "type": "root",
+          "text": "val",
+          "meaning": "強壯、有價值、有效",
+          "grimmNote": "源自拉丁語 valere（強壯、有價值），字根中的 v 與唇音互換 b/p/f/v/w 相關。"
+        },
+        {
+          "type": "suffix",
+          "text": "-id",
+          "meaning": "形容詞字尾，表狀態",
+          "grimmNote": "構成形容詞，表示具備某种性質或狀態。"
+        }
+      ],
+      "summary": "invalid 由否定字首 in- 加上表示強壯與價值的字根 val，再搭配形容詞字尾 -id 組成，字面上的意思就是「沒有效力的、無價值的」。",
+      "savedAt": "2026-10-18T16:38:29.510Z"
     }
   ],
   "userRoots": []
