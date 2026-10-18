@@ -13726,6 +13726,32 @@
       ],
       "summary": "erode 由表示「向外」的字首 e- 加上表示「啃、咬、刮」的字根組合而成，字面意思就是「向外啃蝕／侵蝕」。",
       "savedAt": "2026-10-17T12:08:56.762Z"
+    },
+    {
+      "id": "ulkmvd8sne71",
+      "word": "masquerade",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "mas-",
+          "meaning": "加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：字首 ma- 加上重複子音 s，此處 a 與第一個 s 僅為加強語氣，真正的字根從後方開始"
+        },
+        {
+          "type": "root",
+          "text": "quer",
+          "meaning": "尋找、追求",
+          "grimmNote": "喉音互換 g / k / c 與流音等變化，對應拉丁語系字根 quir/quer（尋找），此處指尋求隱蔽或掩飾"
+        },
+        {
+          "type": "suffix",
+          "text": "-ade",
+          "meaning": "名詞字尾（動作或結果）",
+          "grimmNote": "源自法語及拉丁語的複合名詞字尾 -ata/-ade，用來形成表示行為、集會或狀態的名詞"
+        }
+      ],
+      "summary": "masquerade 由加強語氣字首、表「尋找」的字根與名詞字尾組成，原意為尋求掩護或偽裝，演變為化妝舞會或偽裝。",
+      "savedAt": "2026-10-18T03:04:56.431Z"
     }
   ],
   "userRoots": []
