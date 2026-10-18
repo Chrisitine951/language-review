@@ -14480,6 +14480,20 @@
       ],
       "summary": "reproach 由表「再次」的字首 re- 與表「接近」的字根 proach 組成，原意為再次靠近並面對面指責，演變為責備、譴責。",
       "savedAt": "2026-10-18T13:10:41.970Z"
+    },
+    {
+      "id": "ulkmvdux61s8",
+      "word": "dredge",
+      "parts": [
+        {
+          "type": "root",
+          "text": "dredge",
+          "meaning": "用挖泥機疏浚、撈取",
+          "grimmNote": "保留原始印歐語根，其中的 d 經過舌音互換可對應至其他語言的相關字詞"
+        }
+      ],
+      "summary": "dredge 是保留完整的古代語根的單字，原意指自水底撈取或清除泥沙。",
+      "savedAt": "2026-10-18T13:24:18.784Z"
     }
   ],
   "userRoots": []
