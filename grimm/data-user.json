@@ -14056,6 +14056,26 @@
       ],
       "summary": "billiards（撞球）源自棍棒（bill）的延伸，指用球桿擊球的遊戲。",
       "savedAt": "2026-10-18T04:25:29.456Z"
+    },
+    {
+      "id": "ulkmvdbqnvkg",
+      "word": "plague",
+      "parts": [
+        {
+          "type": "root",
+          "text": "plag",
+          "meaning": "打擊、苦惱、災禍",
+          "grimmNote": "對應唇音互換 p/b 以及喉音互換 g/k，原始字根與 strike（打擊）同源"
+        },
+        {
+          "type": "suffix",
+          "text": "ue",
+          "meaning": "名詞字尾",
+          "grimmNote": "母音通轉與字尾結構成分"
+        }
+      ],
+      "summary": "plague（瘟疫、災禍）源自表示「打擊、重擊」的古老字根，字尾加上 -ue 形成名詞，指帶來毀滅性打擊的災難。",
+      "savedAt": "2026-10-18T04:27:22.592Z"
     }
   ],
   "userRoots": []
