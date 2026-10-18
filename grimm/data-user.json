@@ -14076,6 +14076,20 @@
       ],
       "summary": "plague（瘟疫、災禍）源自表示「打擊、重擊」的古老字根，字尾加上 -ue 形成名詞，指帶來毀滅性打擊的災難。",
       "savedAt": "2026-10-18T04:27:22.592Z"
+    },
+    {
+      "id": "ulkmvdbr47qh",
+      "word": "clause",
+      "parts": [
+        {
+          "type": "root",
+          "text": "clause",
+          "meaning": "子句；條款",
+          "grimmNote": "源自拉丁語 claudere（關閉、封閉），字根為 claud-/clus-，其中喉音 g/k/c 互換且 d/t/s 舌音互換，指契約或文章中被「關」起來的一段文字或條款。"
+        }
+      ],
+      "summary": "「clause」源自拉丁語的「關閉」，原本指被隔開、封閉起來的文字段落，演變為合約中的「條款」或文法中的「子句」。",
+      "savedAt": "2026-10-18T04:27:43.766Z"
     }
   ],
   "userRoots": []
