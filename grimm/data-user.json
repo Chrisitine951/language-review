@@ -14660,6 +14660,26 @@
       ],
       "summary": "con-（共同）加上代表接觸的字根 tamin 與動詞字尾 -ate，組合起來就是「大家一起接觸、沾染」，演變成今天的「污染、弄髒」。",
       "savedAt": "2026-10-18T16:24:26.877Z"
+    },
+    {
+      "id": "ulkmve1foavh",
+      "word": "mitigate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "mit-",
+          "meaning": "使、送",
+          "grimmNote": ""
+        },
+        {
+          "type": "suffix",
+          "text": "-igate",
+          "meaning": "動詞字尾（由 -ag- 轉音及擴展而來）",
+          "grimmNote": "母音通轉 a / e / i / o / u / y 與喉音互換"
+        }
+      ],
+      "summary": "mitigate 由表「使、送」的前綴與表動詞的字尾組成，字面上有「送出、使緩和」之意。",
+      "savedAt": "2026-10-18T16:26:39.943Z"
     }
   ],
   "userRoots": []
