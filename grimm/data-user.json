@@ -14440,6 +14440,26 @@
       ],
       "summary": "由表「向外」的字首 extra- 結合表「漫遊」的字根 vag 組成，字面意思是「漫遊到界線之外的」，引申為「揮霍無度的、奢侈的」。",
       "savedAt": "2026-10-18T12:32:11.843Z"
+    },
+    {
+      "id": "ulkmvdu9u2o6",
+      "word": "convey",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "常用字首 com- / con- 代表一起、共同（源自 come）。"
+        },
+        {
+          "type": "root",
+          "text": "vey",
+          "meaning": "攜帶、載運",
+          "grimmNote": "源自古印歐語根，其中的 v 與其他語言的 b/p/f（唇音互換 b / p / f / v / w）或流音互換有關，在此表示運送、帶領的意思。"
+        }
+      ],
+      "summary": "con-（共同）加上 vey（攜帶），合起來就是把東西共同帶往某處，即「運送、傳達」。",
+      "savedAt": "2026-10-18T13:06:10.176Z"
     }
   ],
   "userRoots": []
