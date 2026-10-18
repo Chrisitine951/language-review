@@ -14746,6 +14746,26 @@
       ],
       "summary": "invalid 由否定字首 in- 加上表示強壯與價值的字根 val，再搭配形容詞字尾 -id 組成，字面上的意思就是「沒有效力的、無價值的」。",
       "savedAt": "2026-10-18T16:38:29.510Z"
+    },
+    {
+      "id": "ulkmve1w0trl",
+      "word": "endow",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "en-",
+          "meaning": "動作化、令其如何",
+          "grimmNote": "常用字首 en-，表示進入某種狀態或動作化"
+        },
+        {
+          "type": "root",
+          "text": "dow",
+          "meaning": "給予、賦予",
+          "grimmNote": "源自古印歐語的 give 相關字根，經由母音通轉與子音演變而來"
+        }
+      ],
+      "summary": "en-（動作化）加上 dow（給予），意思就是「賦予、捐贈、資助」，讓某人擁有某物。",
+      "savedAt": "2026-10-18T16:39:22.671Z"
     }
   ],
   "userRoots": []
