@@ -14124,6 +14124,26 @@
       ],
       "summary": "manual 由表示「手」的字根 man 加上形容詞字尾 -al 組成，字面意思是「手的、用手操作的」。",
       "savedAt": "2026-10-18T04:30:50.249Z"
+    },
+    {
+      "id": "ulkmvdbxjqsk",
+      "word": "confine",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "共同、一起",
+          "grimmNote": "常見字首 com- / con-＝一起、共同（源自 come）"
+        },
+        {
+          "type": "root",
+          "text": "fine",
+          "meaning": "界線、限制",
+          "grimmNote": "母音通轉 e/i，源自表示邊界、終點的古印歐語字根"
+        }
+      ],
+      "summary": "字首 con-（一起）加上表示界線的字根 fine，合起來就是「把大家圍在一起、劃定界線」，演變為限制、禁錮的意思。",
+      "savedAt": "2026-10-18T04:32:43.828Z"
     }
   ],
   "userRoots": []
