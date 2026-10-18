@@ -14534,6 +14534,26 @@
       ],
       "summary": "由字首 re-（回來）加上表示尋找的字根 trieve 組成，字面意思就是「找回來、取回」。",
       "savedAt": "2026-10-18T13:50:34.527Z"
+    },
+    {
+      "id": "ulkmvdw47ojb",
+      "word": "vessel",
+      "parts": [
+        {
+          "type": "root",
+          "text": "vess",
+          "meaning": "容器、船隻",
+          "grimmNote": "唇音互換 b / p / f / v / w，源自古代表示「皮囊、容器」的字根（對應到 b/p 類的字，如 bucket/vat 等演變）"
+        },
+        {
+          "type": "suffix",
+          "text": "el",
+          "meaning": "小（指小詞尾，表示小的容器或船隻）",
+          "grimmNote": "-et / -let / -el＝小，構成指小名詞字尾"
+        }
+      ],
+      "summary": "vessel 由表示容器的字根結合指小字尾 -el 構成，字面意思就是「小容器」或引申為裝載貨物的「船隻、血管」。",
+      "savedAt": "2026-10-18T13:57:47.107Z"
     }
   ],
   "userRoots": []
