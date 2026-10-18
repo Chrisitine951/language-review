@@ -14634,6 +14634,32 @@
       ],
       "summary": "從代表「群眾、平民」的字根 vulg 加上形容詞字尾 ar 組合而成，原意為「屬於平民大眾的」，後來引申為「粗俗的、通俗的」。",
       "savedAt": "2026-10-18T16:17:05.359Z"
+    },
+    {
+      "id": "ulkmve1ctmlg",
+      "word": "contaminate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "con",
+          "meaning": "一起、共同",
+          "grimmNote": "源自 com- / con-（一起、共同），這裡的 n 與 m 屬於鼻音互換家族"
+        },
+        {
+          "type": "root",
+          "text": "tamin",
+          "meaning": "接觸、觸摸",
+          "grimmNote": "源自拉丁字根，核心意涵為接觸與沾染"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾，使…",
+          "grimmNote": "常見的動詞字尾，表示使成為某種狀態"
+        }
+      ],
+      "summary": "con-（共同）加上代表接觸的字根 tamin 與動詞字尾 -ate，組合起來就是「大家一起接觸、沾染」，演變成今天的「污染、弄髒」。",
+      "savedAt": "2026-10-18T16:24:26.877Z"
     }
   ],
   "userRoots": []
