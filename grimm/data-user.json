@@ -14700,6 +14700,26 @@
       ],
       "summary": "mitigate 由字根 mit（送／推動）與 igate（驅使、使之發生）組成，字面意思是「推動使之緩和」，演變為減輕、使平息的意思。",
       "savedAt": "2026-10-18T16:26:44.072Z"
+    },
+    {
+      "id": "ulkmve1q0hwj",
+      "word": "municipal",
+      "parts": [
+        {
+          "type": "root",
+          "text": "municip",
+          "meaning": "市政的、城市的",
+          "grimmNote": "源自拉丁語 municipium，由 munus（職責、任務）與 capere（拿取、承擔）組合而成，指承擔公務的地方"
+        },
+        {
+          "type": "suffix",
+          "text": "-al",
+          "meaning": "形容詞字尾，表「關於…的」",
+          "grimmNote": "形容詞字尾 -al，用以將名詞轉為形容詞"
+        }
+      ],
+      "summary": "municipal 由表示「職責」與「拿取/承擔」的字根組合，指承擔公共職責的地方，加上形容詞字尾 -al 形成「市政的」。",
+      "savedAt": "2026-10-18T16:34:42.308Z"
     }
   ],
   "userRoots": []
