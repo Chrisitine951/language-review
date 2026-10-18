@@ -14264,6 +14264,32 @@
       ],
       "summary": "fuss 由核心字根 fus（煩擾、激動）加上雙子音規則的結尾 s 組成，原意指無謂的忙亂與小題大作。",
       "savedAt": "2026-10-18T06:33:16.205Z"
+    },
+    {
+      "id": "ulkmvdgrcwsr",
+      "word": "saturate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "sa",
+          "meaning": "向下；朝向",
+          "grimmNote": "源自 ob- 經由語音同化與簡化成為 sa-（朝向、充滿）"
+        },
+        {
+          "type": "root",
+          "text": "tur",
+          "meaning": "滿的",
+          "grimmNote": "源自古印歐語字根，與 full、total 同源，代表「裝滿、飽和」"
+        },
+        {
+          "type": "suffix",
+          "text": "ate",
+          "meaning": "動詞字尾，使成為…",
+          "grimmNote": "-ate＝動詞或形容詞字尾，用來構成動詞「使飽和」"
+        }
+      ],
+      "summary": "saturate 由表示「朝向」的字首與表示「滿的」字根組合而成，字面意思就是「使完全裝滿、浸透」。",
+      "savedAt": "2026-10-18T06:47:53.116Z"
     }
   ],
   "userRoots": []
