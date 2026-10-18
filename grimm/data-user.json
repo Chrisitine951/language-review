@@ -14184,6 +14184,20 @@
       ],
       "summary": "arid 直接作為基本字根，表示乾燥、枯燥的狀態。",
       "savedAt": "2026-10-18T04:37:36.012Z"
+    },
+    {
+      "id": "ulkmvdc4vqtn",
+      "word": "purse",
+      "parts": [
+        {
+          "type": "root",
+          "text": "purse",
+          "meaning": "錢包、小袋子",
+          "grimmNote": "源自古法語 bursa（皮革製的小袋子、錢包），其中的 b 經由唇音互換 b / p 轉變成 p，演變為英文的 purse。"
+        }
+      ],
+      "summary": "purse 由古法語代表皮革袋子的 bursa 經由唇音互換轉變而來，最終演變成現代英文的「錢包」。",
+      "savedAt": "2026-10-18T04:38:25.973Z"
     }
   ],
   "userRoots": []
