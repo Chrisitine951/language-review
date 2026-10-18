@@ -14356,6 +14356,38 @@
       ],
       "summary": "dis-（否定、壞的）加上表示「味道、口味」的字根 gust，組合起來就是「嚐起來味道不好、讓人倒胃口」，進而引申為「厭惡、反感」。",
       "savedAt": "2026-10-18T12:28:31.999Z"
+    },
+    {
+      "id": "ulkmvdsybs23",
+      "word": "empirical",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "em",
+          "meaning": "在內、進入",
+          "grimmNote": "en- / em-＝動作化、令其如何（在此轉為 en- 的變體）"
+        },
+        {
+          "type": "root",
+          "text": "pir",
+          "meaning": "嘗試、試驗",
+          "grimmNote": "源自古印歐語，與 try 透過母音通轉與子音對應相關"
+        },
+        {
+          "type": "suffix",
+          "text": "ic",
+          "meaning": "…的",
+          "grimmNote": "-ic 為形容詞字尾"
+        },
+        {
+          "type": "suffix",
+          "text": "al",
+          "meaning": "的",
+          "grimmNote": "-al＝形容詞字尾"
+        }
+      ],
+      "summary": "empirical 由表示進入的字首 em- 結合代表試驗的字根 pir，再加上形容詞字尾 -ic 與 -al 構成，字面意思就是「進入嘗試、透過經驗與實驗得來的」。",
+      "savedAt": "2026-10-18T12:29:13.634Z"
     }
   ],
   "userRoots": []
