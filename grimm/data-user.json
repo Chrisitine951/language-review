@@ -14414,6 +14414,32 @@
       ],
       "summary": "empirical（經驗主義的）是由表示「進入」的字首 em- 結合表示「嘗試、試驗」的字根 pir，再加上形容詞字尾 -ical 組成，字面意思是「進入嘗試與實際經驗之中的」。",
       "savedAt": "2026-10-18T12:29:26.649Z"
+    },
+    {
+      "id": "ulkmvdt25ab5",
+      "word": "extravagant",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "extra",
+          "meaning": "向外、超出",
+          "grimmNote": "源自常用字首 ex-（出去、向外），經母音通轉與變體形成 extra（額外、超出）"
+        },
+        {
+          "type": "root",
+          "text": "vag",
+          "meaning": "漫遊、走動",
+          "grimmNote": "源自印歐語根，意指 wandering（漫遊）"
+        },
+        {
+          "type": "suffix",
+          "text": "ant",
+          "meaning": "形容詞字尾、表…的",
+          "grimmNote": "源自形容詞字尾，構成具有該性質的狀態"
+        }
+      ],
+      "summary": "由表「向外」的字首 extra- 結合表「漫遊」的字根 vag 組成，字面意思是「漫遊到界線之外的」，引申為「揮霍無度的、奢侈的」。",
+      "savedAt": "2026-10-18T12:32:11.843Z"
     }
   ],
   "userRoots": []
