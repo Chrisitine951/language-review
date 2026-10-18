@@ -14144,6 +14144,32 @@
       ],
       "summary": "字首 con-（一起）加上表示界線的字根 fine，合起來就是「把大家圍在一起、劃定界線」，演變為限制、禁錮的意思。",
       "savedAt": "2026-10-18T04:32:43.828Z"
+    },
+    {
+      "id": "ulkmvdbyeh3l",
+      "word": "manifest",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "man",
+          "meaning": "手",
+          "grimmNote": "源自手（manus），鼻音互換或直接使用手部字根"
+        },
+        {
+          "type": "root",
+          "text": "i",
+          "meaning": "母音通轉",
+          "grimmNote": "母音通轉 a / e / i / o / u / y，用於連接字根與字尾"
+        },
+        {
+          "type": "suffix",
+          "text": "fest",
+          "meaning": "打、擊；抓住",
+          "grimmNote": "fest 源自 hit / fast（抓緊），唇音互換 f / p 與舌音互換 d / t，意指「用手抓得牢牢的、明白顯露出來」"
+        }
+      ],
+      "summary": "manifest 由「手 (man)」加上「抓得牢牢的 (fest)」，字面意思是「親手抓到、清清楚楚地顯現出來」。",
+      "savedAt": "2026-10-18T04:33:23.655Z"
     }
   ],
   "userRoots": []
