@@ -14866,6 +14866,26 @@
       ],
       "summary": "sprint 是一個源自日耳曼語族的單字，原本就代表快速移動或跳躍，透過舌音的演變保留至今，專指短距離的全力衝刺。",
       "savedAt": "2026-10-26T12:46:57.965Z"
+    },
+    {
+      "id": "ulkmvp95i7b3",
+      "word": "breaststroke",
+      "parts": [
+        {
+          "type": "root",
+          "text": "breast",
+          "meaning": "胸部、乳房",
+          "grimmNote": "源自日耳曼語族，b維持原音，st對應舌音互換"
+        },
+        {
+          "type": "root",
+          "text": "stroke",
+          "meaning": "擊、劃、游水動作",
+          "grimmNote": "源自日耳曼語族，str組合為流音與舌音結構，表示手部揮動或划水的動作"
+        }
+      ],
+      "summary": "「breast」（胸部）與「stroke」（划水、擊打）組合而成，字面意思就是「用胸部划水」，也就是游泳中的「蛙式」。",
+      "savedAt": "2026-10-26T12:48:10.343Z"
     }
   ],
   "userRoots": []
