@@ -14812,6 +14812,26 @@
       ],
       "summary": "conspiracy 由表示「一起」的字首 con- 結合代表「呼吸」的字根 spir，再加上名詞字尾 -acy 組成，原意為「眾人聚在一起竊竊私語、呼吸相聞」，引申為「陰謀、共謀」。",
       "savedAt": "2026-10-18T16:44:52.002Z"
+    },
+    {
+      "id": "ulkmvoxvnir1",
+      "word": "possess",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "po-",
+          "meaning": "向下、朝向",
+          "grimmNote": "源自 ob- 經由唇音互換 b→p 與同化作用"
+        },
+        {
+          "type": "root",
+          "text": "ssess",
+          "meaning": "坐、坐在上",
+          "grimmNote": "雙子音規則：ss 的第二個 s 為結構重複，字根本體為 ses，透過舌音互換與母音通轉對應到 sit（坐）"
+        }
+      ],
+      "summary": "possess 由前綴 po-（朝向）與字根 ssess（坐）組成，字面意思就是「坐在上面、佔據」，引申為「擁有、持有」。",
+      "savedAt": "2026-10-26T07:32:34.901Z"
     }
   ],
   "userRoots": []
