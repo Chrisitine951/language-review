@@ -14832,6 +14832,26 @@
       ],
       "summary": "possess 由前綴 po-（朝向）與字根 ssess（坐）組成，字面意思就是「坐在上面、佔據」，引申為「擁有、持有」。",
       "savedAt": "2026-10-26T07:32:34.901Z"
+    },
+    {
+      "id": "ulkmvp7xxeq1",
+      "word": "bargain",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "bar",
+          "meaning": "木棒、橫木",
+          "grimmNote": "源自原始日耳曼語，指用來關門的木栓或橫木。"
+        },
+        {
+          "type": "suffix",
+          "text": "-gain",
+          "meaning": "取得、獲得",
+          "grimmNote": "透過喉音互換與母音通轉演變而來，與 gain（獲得）同源，字面意思是「用木棒劃分界線或談妥條件而取得」"
+        }
+      ],
+      "summary": "bargain（討價還價／買賣）由 bar（木棒、橫木）加上表示取得的 -gain 組成，最初源自古代用木棒劃定交易或標記的習俗。",
+      "savedAt": "2026-10-26T12:14:17.188Z"
     }
   ],
   "userRoots": []
