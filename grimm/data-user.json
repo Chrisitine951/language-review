@@ -14886,6 +14886,32 @@
       ],
       "summary": "「breast」（胸部）與「stroke」（划水、擊打）組合而成，字面意思就是「用胸部划水」，也就是游泳中的「蛙式」。",
       "savedAt": "2026-10-26T12:48:10.343Z"
+    },
+    {
+      "id": "ulkmvxmehiy1",
+      "word": "kaleidoscope",
+      "parts": [
+        {
+          "type": "root",
+          "text": "kal",
+          "meaning": "美麗的",
+          "grimmNote": "源自希臘語 kalos（美麗的），對應喉音互換 k 與 h 的遠親（如 heal 的概念）"
+        },
+        {
+          "type": "root",
+          "text": "eido",
+          "meaning": "形狀、影像、看見",
+          "grimmNote": "源自希臘語 eidos（形狀、外貌），母音通轉 e/o 變化"
+        },
+        {
+          "type": "suffix",
+          "text": "scope",
+          "meaning": "看、觀察的儀器",
+          "grimmNote": "源自希臘語 skopein（觀察），與英文 spy 同源"
+        }
+      ],
+      "summary": "「kaleidoscope」由「美麗（kal）」、「形狀（eido）」與「觀看（scope）」組合而成，意即「觀看美麗形狀的儀器」，也就是我們說的萬花筒。",
+      "savedAt": "2026-11-01T09:21:13.786Z"
     }
   ],
   "userRoots": []
