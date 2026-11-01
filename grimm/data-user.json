@@ -14952,6 +14952,32 @@
       ],
       "summary": "「extravagant」由表示「向外的 (extra)」與表示「漫遊的 (vag)」以及形容詞字尾組成，字面意思就是「漫遊到界線外面去了」，因此引申為揮霍無度、過度奢華、不切實際。",
       "savedAt": "2026-11-01T13:23:22.270Z"
+    },
+    {
+      "id": "ulkmvxvbsqs5",
+      "word": "manifest",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "man",
+          "meaning": "手",
+          "grimmNote": "源自 manus（手），對應 manus 中的 m 與 n。"
+        },
+        {
+          "type": "suffix",
+          "text": "i",
+          "meaning": "母音連接字尾",
+          "grimmNote": "母音通轉 a / e / i / o / u / y：此處作為詞幹與字尾間的連接母音。"
+        },
+        {
+          "type": "root",
+          "text": "fest",
+          "meaning": "抓住、握住",
+          "grimmNote": "源自拉丁語 fendere / festus（握住、抓住），其中 f 屬於唇音互換 b / p / f / v / w，t 屬於舌音互換 d / t / s。"
+        }
+      ],
+      "summary": "「manifest」字面意思是「用手抓在手上」，因此引申為「清楚顯示、明白呈現」。",
+      "savedAt": "2026-11-01T13:31:04.902Z"
     }
   ],
   "userRoots": []
