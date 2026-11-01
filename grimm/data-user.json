@@ -14926,6 +14926,32 @@
       ],
       "summary": "strand 原意指長條狀的東西，如繩子的「一股」或延伸的「海濱」，源自表示延伸的古老字根。",
       "savedAt": "2026-11-01T13:21:39.439Z"
+    },
+    {
+      "id": "ulkmvxv1vry4",
+      "word": "extravagant",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "extra",
+          "meaning": "向外、超出",
+          "grimmNote": "源自常用字首 ex-（出去、向外），結合比較級字尾變化而來，原意為在外面、超越。"
+        },
+        {
+          "type": "root",
+          "text": "vag",
+          "meaning": "行走、漫遊",
+          "grimmNote": "源自拉丁語字根 vagari（漫遊、流浪），與英文 vagabond 同源。"
+        },
+        {
+          "type": "suffix",
+          "text": "ant",
+          "meaning": "形容詞字尾、多…的",
+          "grimmNote": "源自形容詞字尾 -ant（表狀態、具有…性質的）。"
+        }
+      ],
+      "summary": "「extravagant」由表示「向外的 (extra)」與表示「漫遊的 (vag)」以及形容詞字尾組成，字面意思就是「漫遊到界線外面去了」，因此引申為揮霍無度、過度奢華、不切實際。",
+      "savedAt": "2026-11-01T13:23:22.270Z"
     }
   ],
   "userRoots": []
