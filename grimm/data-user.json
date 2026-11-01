@@ -14912,6 +14912,20 @@
       ],
       "summary": "「kaleidoscope」由「美麗（kal）」、「形狀（eido）」與「觀看（scope）」組合而成，意即「觀看美麗形狀的儀器」，也就是我們說的萬花筒。",
       "savedAt": "2026-11-01T09:21:13.786Z"
+    },
+    {
+      "id": "ulkmvxuzofj3",
+      "word": "strand",
+      "parts": [
+        {
+          "type": "root",
+          "text": "strand",
+          "meaning": "海濱、岸；線、股",
+          "grimmNote": "對應日耳曼語族核心字根，與 street（街道）來自同一組舌音互換（d / t / s）的「延伸、長條」概念"
+        }
+      ],
+      "summary": "strand 原意指長條狀的東西，如繩子的「一股」或延伸的「海濱」，源自表示延伸的古老字根。",
+      "savedAt": "2026-11-01T13:21:39.439Z"
     }
   ],
   "userRoots": []
