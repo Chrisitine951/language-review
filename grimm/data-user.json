@@ -14998,6 +14998,26 @@
       ],
       "summary": "speculate 由表示「看」的字根 spec 加上動詞字尾 -ulate 構成，字面上的意思是「在心中觀看、反覆思索」，進而衍生出「推測、投機」的意思。",
       "savedAt": "2026-11-07T12:48:08.188Z"
+    },
+    {
+      "id": "ulkmw6j880w1",
+      "word": "specimen",
+      "parts": [
+        {
+          "type": "root",
+          "text": "spec",
+          "meaning": "看、觀察",
+          "grimmNote": "源自印歐語系字根，對應到英文的 spy 或 look，喉音 g/k/c 相關轉音變化"
+        },
+        {
+          "type": "suffix",
+          "text": "imen",
+          "meaning": "名詞字尾，表事物或工具",
+          "grimmNote": "母音通轉 e/i 與鼻音 m 的組合，用來構成具體名詞"
+        }
+      ],
+      "summary": "specimen 由表示「看」的字根 spec 加上名詞字尾 imen 組合而成，字面上的意思就是「被拿來觀察的樣本或標本」。",
+      "savedAt": "2026-11-07T15:02:18.272Z"
     }
   ],
   "userRoots": []
