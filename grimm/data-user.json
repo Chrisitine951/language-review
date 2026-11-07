@@ -14978,6 +14978,26 @@
       ],
       "summary": "「manifest」字面意思是「用手抓在手上」，因此引申為「清楚顯示、明白呈現」。",
       "savedAt": "2026-11-01T13:31:04.902Z"
+    },
+    {
+      "id": "ulkmw6efoje1",
+      "word": "speculate",
+      "parts": [
+        {
+          "type": "root",
+          "text": "spec",
+          "meaning": "看、觀察",
+          "grimmNote": "對應基本字根，屬於喉音與其他基礎變化，意指「看」"
+        },
+        {
+          "type": "suffix",
+          "text": "ulate",
+          "meaning": "動詞字尾，表「做出…的動作、使成為」",
+          "grimmNote": "由複合字尾組成，-ate 表動詞或形容詞字尾"
+        }
+      ],
+      "summary": "speculate 由表示「看」的字根 spec 加上動詞字尾 -ulate 構成，字面上的意思是「在心中觀看、反覆思索」，進而衍生出「推測、投機」的意思。",
+      "savedAt": "2026-11-07T12:48:08.188Z"
     }
   ],
   "userRoots": []
