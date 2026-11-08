@@ -15018,6 +15018,32 @@
       ],
       "summary": "specimen 由表示「看」的字根 spec 加上名詞字尾 imen 組合而成，字面上的意思就是「被拿來觀察的樣本或標本」。",
       "savedAt": "2026-11-07T15:02:18.272Z"
+    },
+    {
+      "id": "ulkmw83ymjw1",
+      "word": "alleviate",
+      "parts": [
+        {
+          "type": "prefix",
+          "text": "al",
+          "meaning": "加強語氣",
+          "grimmNote": "a＋重複子音＝加強語氣（結構）：開頭的 a 與第一個重複子音（al-）無實質意義，真正的字根從後面開始。"
+        },
+        {
+          "type": "root",
+          "text": "lev",
+          "meaning": "輕、舉起",
+          "grimmNote": "唇音互換 b / p / f / v / w：源自表示「輕（light）」或「舉起」的字根，與 lift 同源，v 與 f/p 互換。"
+        },
+        {
+          "type": "suffix",
+          "text": "iate",
+          "meaning": "動詞字尾，使...",
+          "grimmNote": "常用字尾，由 -ic/-id 與動詞結尾組合而成，表動作化。"
+        }
+      ],
+      "summary": "alleviated 源自「使變輕」的字根，加上加強語氣字首，字面意思就是「減輕、使負擔變輕」。",
+      "savedAt": "2026-11-08T17:30:28.652Z"
     }
   ],
   "userRoots": []
